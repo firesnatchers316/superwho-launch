@@ -893,7 +893,7 @@
         <div class="wow-item">
           <div class="badge" style="background:var(--green)">Starting now</div>
           <h3>A test run on Dr. Gina's reels</h3>
-          <p>Got your Dr. Gina reel, the one with the hook and caption from your own social system. Send one or two of her raw videos and we'll turn them into reels the same way, so you can judge the result yourself.</p>
+          <p>Got your Dr. Gina reel, the one with the hook and caption from your own social system. We're pulling from Dr. Gina's Drive for the test reels and we'll turn them into reels the same way, so you can judge the result yourself.</p>
         </div>
         <div class="wow-item">
           <div class="badge">Coming next</div>
@@ -964,12 +964,12 @@
 
       <div class="need">
         <input type="checkbox" id="n5" data-need="5" aria-describedby="n5text">
-        <label class="need-text" id="n5text" for="n5"><span class="num">5.</span>Send one or two of Dr. Gina's raw videos for the test edit (we already have the reel you sent). Add the handoff from your system when it's ready.</label>
+        <label class="need-text" id="n5text" for="n5"><span class="num">5.</span>Add the handoff from your system (Envaios) when it's ready.</label>
         <div class="extra">
           <label class="drop">
             <input type="file" id="n5files" accept="video/*,audio/*,image/*,.mp4,.mov,.m4v,.pdf" multiple>
             <strong>Choose files</strong>
-            <span class="hint" style="margin:0">One or two raw videos, plus the handoff when ready.</span>
+            <span class="hint" style="margin:0">The Envaios handoff, when it's ready.</span>
           </label>
           <div class="fname" id="n5names"></div>
         </div>
@@ -1336,7 +1336,7 @@
           persist();
           uploadNeedFiles(list);
         });
-        // Item 5's videos go to Drive one at a time, as uploads tagged to the checklist item.
+        // Item 5's handoff files go to Drive one at a time, as uploads tagged to the checklist item.
         async function uploadNeedFiles(list) {
           if (!SUBMIT_URL || !list.length) return;
           var sent = 0, failed = [];
@@ -1345,7 +1345,7 @@
             $("n5names").textContent = "Uploading " + (i + 1) + " of " + list.length + ": " + f.name + "…";
             try {
               var data = await blobToB64(f);
-              await queue({ kind: "upload", context: "Checklist item 5: Dr. Gina video and copy", filename: f.name, mimeType: f.type || "application/octet-stream", data: data });
+              await queue({ kind: "upload", context: "Checklist item 5: Envaios handoff", filename: f.name, mimeType: f.type || "application/octet-stream", data: data });
               sent++;
             } catch (e) { failed.push(f.name); }
           }
