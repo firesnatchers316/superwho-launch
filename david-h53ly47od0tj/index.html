@@ -1025,10 +1025,10 @@
       </div>
 
       <div id="thanks" class="thanks" hidden role="status" aria-live="polite" tabindex="-1">
-        <p class="kicker green">Saved</p>
-        <h2>Thank you, David.</h2>
+        <p class="kicker green">Got it</p>
+        <h2 id="receiptLine">Got it, we'll get back to you shortly</h2>
         <div class="echo" id="echo"></div>
-        <p class="talk-copy">It's saved for Jim.</p>
+        <div class="echo" id="teamUpdate" hidden></div>
         <button class="btn btn-o" id="again" type="button">Add something else</button>
       </div>
     </div>
@@ -1084,6 +1084,54 @@
       var PENDING_KEY = "david-launch-pending";
 
       function $(id) { return document.getElementById(id); }
+
+
+      function clockTime(d) {
+        return (d || new Date()).toLocaleTimeString("en-US", {
+          timeZone: "America/New_York",
+          hour: "numeric",
+          minute: "2-digit"
+        });
+      }
+      function receiptText(d) {
+        return "Got it, " + clockTime(d) + ", we'll get back to you shortly";
+      }
+      // Poll only when the new script returns an id, so an older /exec
+      // never treats a status check as a saved "other" note.
+      function watchReply(id, onReady) {
+        if (!SUBMIT_URL || !id) return;
+        var tries = 0, max = 100;
+        function tick() {
+          tries++;
+          post({ action: "status", key: SHARED_KEY, id: id }).then(function (j) {
+            if (!j || !j.ok) return;
+            if (j.progress && $("teamUpdate") && $("thanks") && !$("thanks").hidden) {
+              $("teamUpdate").hidden = false;
+              $("teamUpdate").textContent = j.progress;
+            }
+            if (j.status === "ready" && j.summary) {
+              if (typeof onReady === "function") onReady(j);
+              else if ($("teamUpdate")) {
+                $("teamUpdate").hidden = false;
+                $("teamUpdate").replaceChildren(escNodeSafe("From the team", j.summary));
+              }
+              return;
+            }
+            if (tries < max) setTimeout(tick, 3000);
+          }).catch(function () { /* older script or a network blip: stop */ });
+        }
+        setTimeout(tick, 2000);
+      }
+      function escNodeSafe(label, text) {
+        var wrap = document.createElement("div");
+        var lbl = document.createElement("span");
+        lbl.className = "lbl";
+        lbl.textContent = label;
+        wrap.appendChild(lbl);
+        wrap.appendChild(document.createTextNode(text));
+        return wrap;
+      }
+
 
       function load(key, fallback) {
         try {
@@ -1160,7 +1208,7 @@
       function send(payload, el, okText) {
         return queue(payload).then(function (res) {
           flash(el, res && res.local ? "Saved on this device" : (okText || "Saved"));
-          return true;
+          return res || true;
         }).catch(function () {
           flash(el, "Saved on this device. We'll send it when you're back online.");
           return false;
@@ -1382,11 +1430,20 @@
           payload.page = location.href;
           payload.sentAt = new Date().toISOString();
           try {
-            await queue(payload, true); // errors show on screen, so he retries himself
+            var result = await queue(payload, true); // errors show on screen, so he retries himself
             $("echo").replaceChildren(echoNode);
+            $("receiptLine").textContent = receiptText();
+            if ($("teamUpdate")) { $("teamUpdate").hidden = true; $("teamUpdate").replaceChildren(); }
+            if (window.swLog) swLog("submitted");
             $("form").hidden = true;
             $("thanks").hidden = false;
             $("thanks").focus();
+            if (result && result.id) {
+              watchReply(result.id, function (j) {
+                $("teamUpdate").hidden = false;
+                $("teamUpdate").replaceChildren(escNodeSafe("From the team", j.summary));
+              });
+            }
           } catch (e) {
             showErr("That didn't go through. Please try again.");
           } finally {
@@ -1399,9 +1456,11 @@
         $("again").addEventListener("click", function () {
           $("thanks").hidden = true;
           $("form").hidden = false;
+          if ($("teamUpdate")) { $("teamUpdate").hidden = true; $("teamUpdate").replaceChildren(); }
         });
 
         $("t-type").addEventListener("click", function () {
+          if (window.swLog) swLog("reply_started");
           var on = $("t-type").getAttribute("aria-selected") === "true";
           $("t-type").setAttribute("aria-selected", on ? "false" : "true");
           $("t-upload").setAttribute("aria-selected", "false");
@@ -1410,6 +1469,7 @@
           hideErr();
         });
         $("t-upload").addEventListener("click", function () {
+          if (window.swLog) swLog("reply_started");
           var on = $("t-upload").getAttribute("aria-selected") === "true";
           $("t-upload").setAttribute("aria-selected", on ? "false" : "true");
           $("t-type").setAttribute("aria-selected", "false");
@@ -1491,6 +1551,7 @@
         }
         function stopRec() { clearInterval(tick); if (rec && rec.state !== "inactive") rec.stop(); }
         $("recBtn").addEventListener("click", function () {
+          if (window.swLog) swLog("reply_started");
           (rec && rec.state === "recording") ? stopRec() : startRec();
         });
         $("redo").addEventListener("click", function () {
@@ -1536,7 +1597,22 @@
           $("mtext").value = "";
           send({ kind: "message", thread: "David launch thread", from: "David", text: text, sentAt: new Date().toISOString() }, $("mSaved"), "Sent")
             .then(function (ok) {
-              meta.textContent = "David · " + (!SUBMIT_URL ? "Saved on this device" : ok ? "Sent to the team" : "Saved on this device, will retry");
+              if (ok && window.swLog) swLog("submitted");
+              meta.textContent = "David · " + (!SUBMIT_URL ? "Saved on this device" : ok ? receiptText() : "Saved on this device, will retry");
+              if (ok && ok.id) {
+                watchReply(ok.id, function (j) {
+                  var team = document.createElement("div");
+                  team.className = "bubble";
+                  var tp = document.createElement("p");
+                  tp.textContent = j.summary;
+                  var tm = document.createElement("div");
+                  tm.className = "meta";
+                  tm.textContent = "SuperWho · " + receiptText();
+                  team.appendChild(tp);
+                  team.appendChild(tm);
+                  $("thread").appendChild(team);
+                });
+              }
             });
         });
       })();
@@ -1650,6 +1726,7 @@
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
   else boot();
 })();
+
   </script>
 </body>
 </html>
