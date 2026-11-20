@@ -1176,6 +1176,111 @@
       .mic-pulse .pulse, .dots span, .talk-btn { animation: none; }
       .sa-row { opacity: 1; transform: none; transition: none; }
     }
+
+    /* —— Engagement: talk box stands out —— */
+    .talk-glow {
+      --glow-rgb: 251, 191, 36;
+      scroll-margin-top: 16px;
+      position: relative;
+      border-color: rgba(var(--glow-rgb), 0.45);
+      box-shadow:
+        0 0 0 1px rgba(var(--glow-rgb), 0.28),
+        0 0 22px rgba(var(--glow-rgb), 0.28),
+        0 0 48px rgba(var(--glow-rgb), 0.14);
+      animation: talk-glow-pulse 3.8s ease-in-out infinite;
+    }
+    @keyframes talk-glow-pulse {
+      0%, 100% {
+        box-shadow:
+          0 0 0 1px rgba(var(--glow-rgb), 0.22),
+          0 0 18px rgba(var(--glow-rgb), 0.22),
+          0 0 40px rgba(var(--glow-rgb), 0.10);
+      }
+      50% {
+        box-shadow:
+          0 0 0 2px rgba(var(--glow-rgb), 0.5),
+          0 0 28px rgba(var(--glow-rgb), 0.4),
+          0 0 64px rgba(var(--glow-rgb), 0.2);
+      }
+    }
+    .msg-fab {
+      position: fixed;
+      right: max(16px, env(safe-area-inset-right, 0px));
+      bottom: max(16px, env(safe-area-inset-bottom, 0px));
+      z-index: 80;
+      min-height: 48px;
+      padding: 12px 18px;
+      border: 0;
+      border-radius: 999px;
+      background: var(--amber);
+      color: #0B0B0B;
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .msg-fab[hidden] { display: none !important; }
+    @media (prefers-reduced-motion: reduce) {
+      .talk-glow { animation: none; }
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    #screen-home .talk-glow {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 20px 16px 18px;
+      margin: 4px 0 16px;
+      width: 100%;
+    }
+    #screen-home .talk-glow .home-main {
+      flex: 0 0 auto;
+      padding: 8px 0 4px;
+    }
+    .talk-heading {
+      margin: 0 0 6px;
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      text-align: center;
+      line-height: 1.15;
+    }
+    .talk-fast {
+      margin: 0 0 8px;
+      font-size: 17px;
+      line-height: 1.4;
+      color: var(--muted);
+      text-align: center;
+    }
+    .rosa-modes {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-top: 8px;
+    }
+    .talk-mode-btn {
+      width: 100%;
+      min-height: 56px;
+      border-radius: 16px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    #home-type-panel { margin-top: 12px; }
+    #home-type-panel .primary { width: 100%; margin-top: 10px; }
   </style>
 </head>
 <body>
@@ -1310,18 +1415,29 @@
         <strong id="request-card-state">In progress</strong>
         <span class="request-stay">Leave this open or come back anytime, and it'll be right here.</span>
       </button>
-      <div class="home-main">
-        <div class="talk-wrap">
-          <span class="ring r2" aria-hidden="true"></span>
-          <span class="ring" aria-hidden="true"></span>
-          <button class="talk-btn" type="button" id="talk-btn" aria-label="Talk">
-            <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
-              <path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/>
-            </svg>
-            <span class="talk-label">Talk</span>
-          </button>
+      <div class="talk-glow" id="talk" tabindex="-1">
+        <h2 class="talk-heading">Talk to us here</h2>
+        <p class="talk-fast">We answer fast — usually within a minute.</p>
+        <div class="home-main">
+          <div class="talk-wrap">
+            <span class="ring r2" aria-hidden="true"></span>
+            <span class="ring" aria-hidden="true"></span>
+            <button class="talk-btn" type="button" id="talk-btn" aria-label="Talk">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+                <path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/>
+              </svg>
+              <span class="talk-label">Talk</span>
+            </button>
+          </div>
         </div>
-        <p class="tell-me">Tell me what to update.</p>
+        <div class="talk-modes rosa-modes">
+          <button class="secondary talk-mode-btn" type="button" id="type-home-btn">Type a message</button>
+        </div>
+        <div class="type-box" id="home-type-panel" hidden>
+          <label class="sr-only" for="home-type-input">Your message</label>
+          <textarea id="home-type-input" rows="3" placeholder="Type what you want to update…"></textarea>
+          <button class="primary" type="button" id="home-type-send">Send</button>
+        </div>
       </div>
       <div class="tiles">
         <button class="tile" type="button" id="tile-timesheet">
@@ -2363,6 +2479,28 @@
         if (window.swLog) swLog("talk_started");
         showScreen("listening");
       });
+
+      (function homeType() {
+        var typeHomeBtn = document.getElementById("type-home-btn");
+        var homeTypePanel = document.getElementById("home-type-panel");
+        var homeTypeInput = document.getElementById("home-type-input");
+        var homeTypeSend = document.getElementById("home-type-send");
+        if (!typeHomeBtn || !homeTypePanel || !homeTypeInput || !homeTypeSend) return;
+        typeHomeBtn.addEventListener("click", function () {
+          var opening = homeTypePanel.hidden;
+          homeTypePanel.hidden = !opening;
+          if (opening) {
+            if (window.swLog) swLog("talk_started");
+            homeTypeInput.focus();
+          }
+        });
+        homeTypeSend.addEventListener("click", function () {
+          var text = (homeTypeInput.value || "").trim();
+          if (!text) { homeTypeInput.focus(); return; }
+          if (typeInput) typeInput.value = text;
+          startRequest(text);
+        });
+      })();
       if (requestCard) requestCard.addEventListener("click", function () { showScreen("working"); });
       document.getElementById("tile-timesheet").addEventListener("click", function () {
         if (getRequestId()) showScreen("working");
@@ -2603,6 +2741,62 @@
   else boot();
 })();
 
+  </script>
+
+  <button class="msg-fab" id="msg-fab" type="button" hidden>Message us</button>
+  <script>
+  (function () {
+    var box = document.getElementById("talk");
+    var btn = document.getElementById("msg-fab");
+    if (!box || !btn) return;
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    function pageBlocksFab() {
+      var html = document.documentElement;
+      if (html.classList.contains("is-welcome") || html.classList.contains("is-working")) return true;
+      var welcome = document.getElementById("welcome") || document.getElementById("screen-welcome");
+      if (welcome && welcome.classList.contains("is-on")) return true;
+      var work = document.getElementById("work-screen");
+      if (work) {
+        var ds = window.getComputedStyle(work).display;
+        if (ds && ds !== "none") return true;
+      }
+      return false;
+    }
+    function setFab(show) {
+      btn.hidden = !(show && !pageBlocksFab());
+    }
+    setFab(false);
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (entries) {
+        setFab(!(entries[0] && entries[0].isIntersecting));
+      }, { threshold: 0.28, rootMargin: "-10px" });
+      io.observe(box);
+    } else {
+      setFab(true);
+    }
+    if (window.MutationObserver) {
+      new MutationObserver(function () {
+        var visible = box.getBoundingClientRect().height > 0 && (function () {
+          var r = box.getBoundingClientRect();
+          return r.bottom > 40 && r.top < (window.innerHeight - 40);
+        })();
+        setFab(!visible);
+      }).observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
+    }
+    btn.addEventListener("click", function () {
+      if (typeof window.showScreen === "function" && document.getElementById("screen-home")) {
+        var home = document.getElementById("screen-home");
+        if (home && !home.classList.contains("is-on")) window.showScreen("home");
+      }
+      box.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" });
+      window.setTimeout(function () {
+        var focusEl = document.getElementById("talk-btn")
+          || document.getElementById("type-input")
+          || box;
+        if (focusEl && focusEl.focus) focusEl.focus();
+      }, reduce ? 0 : 420);
+    });
+  })();
   </script>
 </body>
 </html>

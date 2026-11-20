@@ -1046,6 +1046,56 @@
     @media (prefers-reduced-motion: reduce) {
       .talk-btn { transition: none; }
     }
+
+    /* —— Engagement: talk box stands out —— */
+    .talk-glow {
+      --glow-rgb: 251, 191, 36;
+      scroll-margin-top: 16px;
+      position: relative;
+      border-color: rgba(var(--glow-rgb), 0.45);
+      box-shadow:
+        0 0 0 1px rgba(var(--glow-rgb), 0.28),
+        0 0 22px rgba(var(--glow-rgb), 0.28),
+        0 0 48px rgba(var(--glow-rgb), 0.14);
+      animation: talk-glow-pulse 3.8s ease-in-out infinite;
+    }
+    @keyframes talk-glow-pulse {
+      0%, 100% {
+        box-shadow:
+          0 0 0 1px rgba(var(--glow-rgb), 0.22),
+          0 0 18px rgba(var(--glow-rgb), 0.22),
+          0 0 40px rgba(var(--glow-rgb), 0.10);
+      }
+      50% {
+        box-shadow:
+          0 0 0 2px rgba(var(--glow-rgb), 0.5),
+          0 0 28px rgba(var(--glow-rgb), 0.4),
+          0 0 64px rgba(var(--glow-rgb), 0.2);
+      }
+    }
+    .msg-fab {
+      position: fixed;
+      right: max(16px, env(safe-area-inset-right, 0px));
+      bottom: max(16px, env(safe-area-inset-bottom, 0px));
+      z-index: 80;
+      min-height: 48px;
+      padding: 12px 18px;
+      border: 0;
+      border-radius: 999px;
+      background: var(--amber);
+      color: #0B0B0B;
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .msg-fab[hidden] { display: none !important; }
+    @media (prefers-reduced-motion: reduce) {
+      .talk-glow { animation: none; }
+    }
   </style>
 </head>
 <body>
@@ -1129,6 +1179,42 @@
       <span class="request-stay">Leave this open or come back anytime, and it'll be right here.</span>
     </button>
 
+    <section class="section" id="talk" aria-labelledby="ask-title" tabindex="-1">
+      <p class="section-label">Talk to us here</p>
+      <div class="help-card talk-glow">
+        <div class="help-form" id="help-form">
+          <h2 class="section-title" id="ask-title">Talk to us here</h2>
+          <p class="section-lead">We answer fast — usually within a minute.</p>
+
+          <div class="talk-wrap">
+            <span class="ring r2" aria-hidden="true"></span>
+            <span class="ring" aria-hidden="true"></span>
+            <button class="talk-btn" type="button" id="talk-btn" aria-label="Talk">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+                <path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/>
+              </svg>
+              <span class="talk-label" id="talk-label">Talk</span>
+            </button>
+          </div>
+          <p class="tell-me" id="tell-me">Tell me what you need.</p>
+
+          <div class="type-box">
+            <label for="type-input">Or type it here.</label>
+            <textarea id="type-input" rows="3" placeholder="Type a question or a request…"></textarea>
+          </div>
+
+          <div class="help-actions">
+            <label class="secondary upload-btn" for="upload-input">Photo</label>
+            <input id="upload-input" type="file" accept="image/*" multiple>
+            <button class="primary" type="button" id="send-btn">Send</button>
+          </div>
+          <div class="previews" id="previews" hidden></div>
+          <p class="help-hint" id="help-hint" hidden></p>
+        </div>
+
+      </div>
+    </section>
+
     <section class="section" aria-labelledby="listings-title">
       <p class="section-label">Your home</p>
       <h2 class="section-title" id="listings-title">One house, several listings</h2>
@@ -1159,42 +1245,6 @@
           <p class="bless-note">More of every booking stays with you, and each BlessBNB stay helps support missionaries around the world.</p>
         </div>
       </article>
-    </section>
-
-    <section class="section" aria-labelledby="ask-title">
-      <p class="section-label">Ask for help</p>
-      <div class="help-card">
-        <div class="help-form" id="help-form">
-          <h2 class="section-title" id="ask-title">Talk, type, or send a photo</h2>
-          <p class="section-lead">A question, a repair, new pictures — anything you need. Send it here, and we’ll get back to you on this page.</p>
-
-          <div class="talk-wrap">
-            <span class="ring r2" aria-hidden="true"></span>
-            <span class="ring" aria-hidden="true"></span>
-            <button class="talk-btn" type="button" id="talk-btn" aria-label="Talk">
-              <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
-                <path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/>
-              </svg>
-              <span class="talk-label" id="talk-label">Talk</span>
-            </button>
-          </div>
-          <p class="tell-me" id="tell-me">Tell me what you need.</p>
-
-          <div class="type-box">
-            <label for="type-input">Or type it here.</label>
-            <textarea id="type-input" rows="3" placeholder="Type a question or a request…"></textarea>
-          </div>
-
-          <div class="help-actions">
-            <label class="secondary upload-btn" for="upload-input">Add photos</label>
-            <input id="upload-input" type="file" accept="image/*" multiple>
-            <button class="primary" type="button" id="send-btn">Send</button>
-          </div>
-          <div class="previews" id="previews" hidden></div>
-          <p class="help-hint" id="help-hint" hidden></p>
-        </div>
-
-      </div>
     </section>
 
     <section class="section" aria-labelledby="plan-title">
@@ -2148,6 +2198,62 @@
   else boot();
 })();
 
+  </script>
+
+  <button class="msg-fab" id="msg-fab" type="button" hidden>Message us</button>
+  <script>
+  (function () {
+    var box = document.getElementById("talk");
+    var btn = document.getElementById("msg-fab");
+    if (!box || !btn) return;
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    function pageBlocksFab() {
+      var html = document.documentElement;
+      if (html.classList.contains("is-welcome") || html.classList.contains("is-working")) return true;
+      var welcome = document.getElementById("welcome") || document.getElementById("screen-welcome");
+      if (welcome && welcome.classList.contains("is-on")) return true;
+      var work = document.getElementById("work-screen");
+      if (work) {
+        var ds = window.getComputedStyle(work).display;
+        if (ds && ds !== "none") return true;
+      }
+      return false;
+    }
+    function setFab(show) {
+      btn.hidden = !(show && !pageBlocksFab());
+    }
+    setFab(false);
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (entries) {
+        setFab(!(entries[0] && entries[0].isIntersecting));
+      }, { threshold: 0.28, rootMargin: "-10px" });
+      io.observe(box);
+    } else {
+      setFab(true);
+    }
+    if (window.MutationObserver) {
+      new MutationObserver(function () {
+        var visible = box.getBoundingClientRect().height > 0 && (function () {
+          var r = box.getBoundingClientRect();
+          return r.bottom > 40 && r.top < (window.innerHeight - 40);
+        })();
+        setFab(!visible);
+      }).observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
+    }
+    btn.addEventListener("click", function () {
+      if (typeof window.showScreen === "function" && document.getElementById("screen-home")) {
+        var home = document.getElementById("screen-home");
+        if (home && !home.classList.contains("is-on")) window.showScreen("home");
+      }
+      box.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" });
+      window.setTimeout(function () {
+        var focusEl = document.getElementById("talk-btn")
+          || document.getElementById("type-input")
+          || box;
+        if (focusEl && focusEl.focus) focusEl.focus();
+      }, reduce ? 0 : 420);
+    });
+  })();
   </script>
 </body>
 </html>
