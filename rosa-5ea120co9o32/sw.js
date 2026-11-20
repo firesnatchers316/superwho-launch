@@ -1,4 +1,4 @@
-const CACHE = "my-superwho-v14";
+const CACHE = "my-superwho-v15";
 const PRECACHE = [
   "./",
   "./index.html",
@@ -22,6 +22,17 @@ self.addEventListener("activate", (event) => {
 
 self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
+  // Pages: network first, so a fix reaches Rosa on the very next open; cache only when offline.
+  if (event.request.mode === "navigate") {
+    event.respondWith(
+      fetch(event.request).then((res) => {
+        const copy = res.clone();
+        if (res.ok) caches.open(CACHE).then((cache) => cache.put("./index.html", copy));
+        return res;
+      }).catch(() => caches.match(event.request).then((c) => c || caches.match("./index.html")))
+    );
+    return;
+  }
   event.respondWith(
     caches.match(event.request).then((cached) => {
       if (cached) return cached;

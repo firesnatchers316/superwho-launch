@@ -935,6 +935,7 @@
     .photo-choice { display: none; }
     .photo-choice.is-ready { display: block; }
 
+    .work-error .work-retry { display: block; width: 100%; max-width: 320px; margin: 12px auto 0; }
     .work-error {
       margin: 18px 0 0;
       font-size: 18px;
@@ -2214,10 +2215,20 @@
         });
       }
 
+      /* sw-scrollfix-2026-11-20: never hang. If Safari (or a weak connection) blocks or stalls
+         the request, fail after a timeout so the page can show a friendly retry. */
+      function swFetch(url, opts) {
+        var big = opts && typeof opts.body === "string" && opts.body.length > 200000;
+        if (typeof AbortController === "undefined") return fetch(url, opts);
+        var ctl = new AbortController();
+        setTimeout(function () { try { ctl.abort(); } catch (e) {} }, big ? 90000 : 25000);
+        return fetch(url, Object.assign({}, opts, { signal: ctl.signal }));
+      }
+
       function api(action, fields) {
         if (!SUBMIT_URL) return Promise.reject(new Error("no url"));
         const payload = Object.assign({ action: action, key: APP_KEY }, fields || {});
-        return fetch(SUBMIT_URL, {
+        return swFetch(SUBMIT_URL, {
           method: "POST",
           headers: { "Content-Type": "text/plain;charset=utf-8" },
           body: JSON.stringify(payload),
@@ -2282,11 +2293,19 @@
         }
       }
 
-      function showWorkError(msg) {
+      function showWorkError(msg, retry) {
         if (!workError) return;
         if (msg) {
           workError.hidden = false;
           workError.textContent = msg;
+          if (typeof retry === "function") {
+            var rb = document.createElement("button");
+            rb.type = "button";
+            rb.className = "secondary work-retry";
+            rb.textContent = "Try again";
+            rb.addEventListener("click", function () { showWorkError(""); retry(); });
+            workError.appendChild(rb);
+          }
         } else {
           workError.hidden = true;
           workError.textContent = "";
@@ -2340,11 +2359,19 @@
         updateRequestCard();
       }
 
+      var pollFails = 0;
       function pollOnce() {
         const id = getRequestId();
         if (!id || !SUBMIT_URL) return;
-        api("status", { id: id }).then(handleStatus).catch(function () {
+        api("status", { id: id }).then(function (j) {
+          if (pollFails >= 3) showWorkError("");
+          pollFails = 0;
+          handleStatus(j);
+        }).catch(function () {
           /* keep waiting; the next tick will try again */
+          pollFails++;
+          var onWork = screens.working && screens.working.classList.contains("is-on");
+          if (pollFails === 3 && onWork) showWorkError("Having trouble reaching us right now. We’ll keep checking.");
         });
       }
 
@@ -2397,7 +2424,8 @@
           if (window.swLog) swLog("submitted");
           startPoll();
         }).catch(function () {
-          showWorkError("I couldn’t send that. Go back and try again.");
+          if (typeInput && !typeInput.value) typeInput.value = text;
+          showWorkError("That didn’t go through. Your connection or Safari’s privacy settings may have blocked it. Your note is saved.", function () { if (typeInput && typeInput.value === text) typeInput.value = ""; startRequest(text); });
         });
       }
 
