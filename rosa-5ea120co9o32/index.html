@@ -380,6 +380,11 @@
       color: var(--ink);
     }
     .secondary:active { background: var(--card); }
+    #screen-working .back-page {
+      width: 100%;
+      margin: 0 0 10px;
+      align-self: stretch;
+    }
 
     /* —— Listening —— */
     .listen-main {
@@ -1334,7 +1339,7 @@
 
     <!-- 3. Working -->
     <section class="screen" id="screen-working" data-screen="working">
-      <button class="back" type="button" data-go="home">← Back</button>
+      <button class="secondary back-page" type="button" data-go="home" id="work-back">Back to my page</button>
       <div class="work-main">
         <div class="dots" id="work-dots" aria-hidden="true"><span></span><span></span><span></span></div>
         <h1 id="work-progress">Got it! Working on it…</h1>
