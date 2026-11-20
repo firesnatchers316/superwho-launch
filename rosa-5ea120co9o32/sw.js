@@ -1,4 +1,4 @@
-const CACHE = "my-superwho-v2";
+const CACHE = "my-superwho-v4";
 const PRECACHE = [
   "./",
   "./index.html",
@@ -30,6 +30,35 @@ self.addEventListener("fetch", (event) => {
         if (res.ok) caches.open(CACHE).then((cache) => cache.put(event.request, copy));
         return res;
       }).catch(() => caches.match("./index.html"));
+    })
+  );
+});
+
+self.addEventListener("push", (event) => {
+  let data = {};
+  try { data = event.data ? event.data.json() : {}; } catch (e) {}
+  const title = data.title || "My SuperWho";
+  const body = data.body || "";
+  const url = data.url || "./?src=push";
+  event.waitUntil(
+    self.registration.showNotification(title, {
+      body: body,
+      data: { url: url }
+    })
+  );
+});
+
+self.addEventListener("notificationclick", (event) => {
+  event.notification.close();
+  let url = (event.notification.data && event.notification.data.url) || "./?src=push";
+  event.waitUntil(
+    self.clients.matchAll({ type: "window", includeUncontrolled: true }).then((windows) => {
+      for (const w of windows) {
+        if (w.url && "focus" in w) {
+          return w.focus();
+        }
+      }
+      if (self.clients.openWindow) return self.clients.openWindow(url);
     })
   );
 });
