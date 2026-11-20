@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>
+    (function () {
+      try {
+        if (!localStorage.getItem("chrisWelcomeSeen")) {
+          document.documentElement.classList.add("is-welcome");
+        }
+      } catch (e) {}
+    })();
+  </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#0B1A2E">
@@ -814,9 +823,238 @@
     @media (prefers-reduced-motion: reduce) {
       .recbtn.on { animation: none; }
     }
+
+    html.is-welcome,
+    html.is-welcome body {
+      overflow: hidden;
+      height: 100%;
+    }
+    html.is-welcome body {
+      padding: 0;
+    }
+    html.is-welcome .wrap,
+    html.is-welcome footer { display: none; }
+
+    .welcome {
+      display: none;
+      flex-direction: column;
+      max-width: 680px;
+      margin: 0 auto;
+      min-height: 100svh;
+      padding: 20px 20px 36px;
+      padding-top: max(20px, env(safe-area-inset-top, 0px));
+      padding-left: max(20px, env(safe-area-inset-left, 0px));
+      padding-right: max(20px, env(safe-area-inset-right, 0px));
+      padding-bottom: max(36px, env(safe-area-inset-bottom, 0px));
+      overflow-y: auto;
+    }
+    html.is-welcome .welcome,
+    .welcome.is-on {
+      display: flex;
+    }
+    .welcome-brand {
+      margin: 0;
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: var(--cyan);
+      text-transform: uppercase;
+    }
+    .welcome-brand-sub {
+      margin: 4px 0 0;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .welcome-title {
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin: 22px 0 2px;
+      text-wrap: balance;
+    }
+    .welcome-title:focus { outline: none; }
+    .welcome-now {
+      margin: 0 0 14px;
+      font-size: 22px;
+      font-weight: 650;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      color: var(--amber);
+    }
+    .welcome-copy {
+      margin: 0 0 10px;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.45;
+      color: var(--ink);
+    }
+    .welcome-copy + .welcome-copy { margin-bottom: 20px; }
+    .welcome-talk {
+      appearance: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 64px;
+      margin: 4px 0 28px;
+      padding: 14px 18px;
+      border: 0;
+      border-radius: 14px;
+      background: var(--blue);
+      color: #fff;
+      font-family: var(--sans);
+      font-size: 18px;
+      font-weight: 650;
+      line-height: 1.25;
+      text-align: center;
+      text-wrap: balance;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      box-shadow: 0 0 0 8px rgba(61, 107, 255, 0.18);
+    }
+    .welcome-talk:active { filter: brightness(0.95); }
+    .welcome-asked {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 20px 16px 16px;
+      margin: 0 0 20px;
+    }
+    .welcome-asked h2 {
+      margin: 0 0 14px;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.25;
+      text-wrap: balance;
+    }
+    .welcome-asked ol {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .welcome-asked li {
+      margin: 0 0 14px;
+      padding: 0 0 14px;
+      border-bottom: 1px solid var(--line);
+    }
+    .welcome-asked li:last-of-type {
+      margin-bottom: 12px;
+    }
+    .welcome-asked .ask {
+      display: block;
+      font-size: 16px;
+      font-weight: 650;
+      line-height: 1.35;
+      color: var(--ink);
+    }
+    .welcome-asked .help {
+      display: block;
+      margin-top: 4px;
+      font-size: 16px;
+      line-height: 1.4;
+      color: var(--muted);
+    }
+    .welcome-faster {
+      margin: 0;
+      font-size: 17px;
+      font-weight: 650;
+      line-height: 1.4;
+    }
+    .welcome-faster a {
+      color: var(--cyan);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .welcome-see {
+      appearance: none;
+      display: block;
+      width: 100%;
+      margin: 0 0 8px;
+      padding: 12px 8px;
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      font-family: var(--sans);
+      font-size: 17px;
+      font-weight: 500;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .welcome-see:active { color: var(--ink); }
+    .what-link {
+      appearance: none;
+      display: block;
+      margin: 8px 0 0;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      font-family: var(--sans);
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      cursor: pointer;
+    }
+    .what-link:active { color: var(--ink); }
+
   </style>
 </head>
 <body>
+
+  <div class="welcome" id="welcome" role="dialog" aria-modal="true" aria-labelledby="welcome-title" aria-describedby="welcome-desc">
+    <p class="welcome-brand">SuperWho</p>
+    <p class="welcome-brand-sub">for The Millionaire In Me</p>
+    <h1 class="welcome-title" id="welcome-title" tabindex="-1">This should be easier.</h1>
+    <p class="welcome-now">Now it is.</p>
+    <div id="welcome-desc">
+      <p class="welcome-copy">You're accountable for every client's CRM, outreach, website and ads, and the social team waits on you before anything posts.</p>
+      <p class="welcome-copy">We're taking that off your plate: one place to see each client, and your raw videos turned into posts you just approve.</p>
+    </div>
+    <button class="welcome-talk" type="button" id="welcome-talk">Just talk to us: what's in your way?</button>
+
+    <div class="welcome-asked" id="welcome-asked">
+      <h2>Here's what we asked for, and how we'll make it easy.</h2>
+      <ol>
+        <li>
+          <span class="ask">Invite us as an admin to Dr. Gina's Skool group.</span>
+          <span class="help">Add firesnatchers316@gmail.com, and we can start on posts, comments, and edits right away.</span>
+        </li>
+        <li>
+          <span class="ask">Invite the same address to Jill Wade's Skool group, or tell us when she's created it.</span>
+          <span class="help">We can build that group from her Google Drive once we have access.</span>
+        </li>
+        <li>
+          <span class="ask">Share Jill's Google Drive folder with us.</span>
+          <span class="help">Share it with that same address, and we can use what's already there.</span>
+        </li>
+        <li>
+          <span class="ask">Approve linking Dr. Gina's Instagram to The Prevent Clinic Page.</span>
+          <span class="help">If you don't control that portfolio, just tell us who does, and we can take the next step.</span>
+        </li>
+        <li>
+          <span class="ask">Send 1–2 raw videos.</span>
+          <span class="help">We already have your Dr. Gina reel and will turn it into a test. If you have one more raw video, send it and we'll handle the rest.</span>
+        </li>
+        <li>
+          <span class="ask">Add the handoff from your system (Envaios) when it's ready.</span>
+          <span class="help">When that handoff is ready, add it here and we can connect SuperWho to the system you already use.</span>
+        </li>
+        <li>
+          <span class="ask">How do you want to review content before it posts?</span>
+          <span class="help">Just say how you like to review, and we'll set it up.</span>
+        </li>
+      </ol>
+      <p class="welcome-faster"><a href="#talk" id="welcome-faster">Know a faster way? Just tell us.</a></p>
+    </div>
+
+    <button class="welcome-see" type="button" id="welcome-see">See your page</button>
+  </div>
 
   <div class="wrap">
     <div class="brandbar">
@@ -835,6 +1073,7 @@
       <div class="brand">SuperWho for The Millionaire In Me</div>
       <div class="prepared">Prepared for Chris · FireSnatchers</div>
     </header>
+    <button class="what-link" type="button" id="what-is-this">What is this?</button>
 
     <h1>Chris, more gets done, and less of it runs through you.</h1>
     <p class="lead">That's what SuperWho is for. It's being built around your objective: becoming the go-to fractional COO for the Scaling.com community. Your first look opens Tuesday, and some of it starts today.</p>
@@ -921,62 +1160,6 @@
       </div>
     </div>
 
-    <div class="card" id="needs">
-      <p class="kicker muted">What we need from you</p>
-      <h2>Five things that get us moving today</h2>
-      <p class="lead" style="margin:0 0 14px">Each one unlocks something above. Check them off as you go. Your progress is saved.</p>
-      <div class="email-row">
-        <span>Use this address:</span>
-        <button type="button" class="chip js-copy" data-email="firesnatchers316@gmail.com" aria-label="Copy firesnatchers316@gmail.com">
-          <span class="addr">firesnatchers316@gmail.com</span>
-          <span class="state">Copy</span>
-        </button>
-      </div>
-      <p class="save-note" id="needsSaved" aria-live="polite"></p>
-
-      <label class="need">
-        <input type="checkbox" id="n1" data-need="1">
-        <span class="need-text"><span class="num">1.</span>Invite firesnatchers316@gmail.com as an admin to Dr. Gina's Skool group.</span>
-      </label>
-
-      <div class="need">
-        <input type="checkbox" id="n2" data-need="2">
-        <label class="need-text" for="n2"><span class="num">2.</span>Invite the same address to Jill Wade's Skool group, or tell us when she's created it.</label>
-        <div class="extra">
-          <label class="sr-only" for="n2note">Note about Jill Wade's Skool group</label>
-          <input type="text" id="n2note" data-need-field="2" placeholder="If she hasn't yet, tell us when">
-        </div>
-      </div>
-
-      <label class="need">
-        <input type="checkbox" id="n3" data-need="3">
-        <span class="need-text"><span class="num">3.</span>Share Jill's Google Drive folder with firesnatchers316@gmail.com.</span>
-      </label>
-
-      <div class="need">
-        <input type="checkbox" id="n4" data-need="4">
-        <label class="need-text" for="n4"><span class="num">4.</span>Approve linking Dr. Gina's Instagram to The Prevent Clinic Page. Whoever has full control of the "Dr. Gina Pritchard, DNP,ACNP" business portfolio has to do this. If that isn't you, tell us who it is.</label>
-        <div class="extra">
-          <label class="sr-only" for="n4who">Who has control of the portfolio, if not you</label>
-          <input type="text" id="n4who" data-need-field="4" placeholder="If that isn't you, tell us who it is">
-        </div>
-      </div>
-
-      <div class="need">
-        <input type="checkbox" id="n5" data-need="5" aria-describedby="n5text">
-        <label class="need-text" id="n5text" for="n5"><span class="num">5.</span>Add the handoff from your system (Envaios) when it's ready.</label>
-        <div class="extra">
-          <label class="drop">
-            <input type="file" id="n5files" accept="video/*,audio/*,image/*,.mp4,.mov,.m4v,.pdf" multiple>
-            <strong>Choose files</strong>
-            <span class="hint" style="margin:0">The Envaios handoff, when it's ready.</span>
-          </label>
-          <div class="fname" id="n5names"></div>
-        </div>
-      </div>
-
-    </div>
-
     <div class="card" id="questions">
       <p class="kicker muted">One quick question</p>
       <h2>So nothing posts that you haven't seen the way you want</h2>
@@ -1045,6 +1228,62 @@
         <p class="talk-copy">It's saved for Jim.</p>
         <button class="btn btn-o" id="again" type="button">Add something else</button>
       </div>
+    </div>
+
+    <div class="card" id="needs">
+      <p class="kicker muted">Optional next steps</p>
+      <h2>Five things that get us moving</h2>
+      <p class="lead" style="margin:0 0 14px">Each one unlocks something above. Check them off as you go. Your progress is saved.</p>
+      <div class="email-row">
+        <span>Use this address:</span>
+        <button type="button" class="chip js-copy" data-email="firesnatchers316@gmail.com" aria-label="Copy firesnatchers316@gmail.com">
+          <span class="addr">firesnatchers316@gmail.com</span>
+          <span class="state">Copy</span>
+        </button>
+      </div>
+      <p class="save-note" id="needsSaved" aria-live="polite"></p>
+
+      <label class="need">
+        <input type="checkbox" id="n1" data-need="1">
+        <span class="need-text"><span class="num">1.</span>Invite firesnatchers316@gmail.com as an admin to Dr. Gina's Skool group.</span>
+      </label>
+
+      <div class="need">
+        <input type="checkbox" id="n2" data-need="2">
+        <label class="need-text" for="n2"><span class="num">2.</span>Invite the same address to Jill Wade's Skool group, or tell us when she's created it.</label>
+        <div class="extra">
+          <label class="sr-only" for="n2note">Note about Jill Wade's Skool group</label>
+          <input type="text" id="n2note" data-need-field="2" placeholder="If she hasn't yet, tell us when">
+        </div>
+      </div>
+
+      <label class="need">
+        <input type="checkbox" id="n3" data-need="3">
+        <span class="need-text"><span class="num">3.</span>Share Jill's Google Drive folder with firesnatchers316@gmail.com.</span>
+      </label>
+
+      <div class="need">
+        <input type="checkbox" id="n4" data-need="4">
+        <label class="need-text" for="n4"><span class="num">4.</span>Approve linking Dr. Gina's Instagram to The Prevent Clinic Page. Whoever has full control of the "Dr. Gina Pritchard, DNP,ACNP" business portfolio has to do this. If that isn't you, tell us who it is.</label>
+        <div class="extra">
+          <label class="sr-only" for="n4who">Who has control of the portfolio, if not you</label>
+          <input type="text" id="n4who" data-need-field="4" placeholder="If that isn't you, tell us who it is">
+        </div>
+      </div>
+
+      <div class="need">
+        <input type="checkbox" id="n5" data-need="5" aria-describedby="n5text">
+        <label class="need-text" id="n5text" for="n5"><span class="num">5.</span>Add the handoff from your system (Envaios) when it's ready.</label>
+        <div class="extra">
+          <label class="drop">
+            <input type="file" id="n5files" accept="video/*,audio/*,image/*,.mp4,.mov,.m4v,.pdf" multiple>
+            <strong>Choose files</strong>
+            <span class="hint" style="margin:0">The Envaios handoff, when it's ready.</span>
+          </label>
+          <div class="fname" id="n5names"></div>
+        </div>
+      </div>
+
     </div>
 
     <div class="card" id="messages">
@@ -1512,7 +1751,9 @@
         }
         function stopRec() { clearInterval(tick); if (rec && rec.state !== "inactive") rec.stop(); }
         $("recBtn").addEventListener("click", function () {
-          (rec && rec.state === "recording") ? stopRec() : startRec();
+          var starting = !(rec && rec.state === "recording");
+          if (starting && window.swLog) swLog("talk_started");
+          starting ? startRec() : stopRec();
         });
         $("redo").addEventListener("click", function () {
           voiceBlob = null;
@@ -1563,6 +1804,72 @@
       })();
 
       retryPending();
+    })();
+  </script>
+  <script>
+    (function () {
+      var WELCOME_KEY = "chrisWelcomeSeen";
+      var welcome = document.getElementById("welcome");
+      var welcomeTitle = document.getElementById("welcome-title");
+      var welcomeSee = document.getElementById("welcome-see");
+      var welcomeTalk = document.getElementById("welcome-talk");
+      var welcomeFaster = document.getElementById("welcome-faster");
+      var whatLink = document.getElementById("what-is-this");
+      var wrap = document.querySelector(".wrap");
+      var talkCard = document.getElementById("talk");
+      var recBtn = document.getElementById("recBtn");
+      var welcomeReturnTo = null;
+
+      function welcomeOpen() {
+        document.documentElement.classList.add("is-welcome");
+        if (welcome) {
+          welcome.classList.add("is-on");
+          welcome.removeAttribute("hidden");
+        }
+        if (wrap) wrap.setAttribute("inert", "");
+        setTimeout(function () { (welcomeTitle || welcomeTalk || welcomeSee).focus(); }, 0);
+      }
+
+      function welcomeClose() {
+        try { localStorage.setItem(WELCOME_KEY, "1"); } catch (e) {}
+        if (window.swLog) swLog("welcome_seen");
+        document.documentElement.classList.remove("is-welcome");
+        if (welcome) welcome.classList.remove("is-on");
+        if (wrap) wrap.removeAttribute("inert");
+        var back = welcomeReturnTo;
+        welcomeReturnTo = null;
+        if (back && typeof back.focus === "function") back.focus();
+      }
+
+      function goToTalk(event) {
+        if (event) event.preventDefault();
+        welcomeClose();
+        if (talkCard && talkCard.scrollIntoView) {
+          talkCard.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+        setTimeout(function () {
+          if (recBtn && !recBtn.disabled) recBtn.focus();
+        }, 300);
+      }
+
+      if (welcomeSee) welcomeSee.addEventListener("click", function () { welcomeClose(); });
+      if (welcomeTalk) welcomeTalk.addEventListener("click", goToTalk);
+      if (welcomeFaster) welcomeFaster.addEventListener("click", goToTalk);
+      if (whatLink) whatLink.addEventListener("click", function () {
+        welcomeReturnTo = whatLink;
+        welcomeOpen();
+      });
+      document.addEventListener("keydown", function (event) {
+        if (event.key !== "Escape") return;
+        if (!document.documentElement.classList.contains("is-welcome")) return;
+        event.preventDefault();
+        welcomeClose();
+      });
+
+      if (document.documentElement.classList.contains("is-welcome")) {
+        if (wrap) wrap.setAttribute("inert", "");
+        setTimeout(function () { (welcomeTitle || welcomeTalk || welcomeSee).focus(); }, 0);
+      }
     })();
   </script>
   <script>
