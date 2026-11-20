@@ -1,7 +1,7 @@
 {
   "name": "My SuperWho",
   "short_name": "My SuperWho",
-  "description": "Nichelle's SuperWho. A private page for her Montgomery short-term rentals.",
+  "description": "Nichelle's SuperWho. A private page for her Montgomery home.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
