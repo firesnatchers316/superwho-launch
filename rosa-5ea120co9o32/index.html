@@ -1799,7 +1799,7 @@
 
   <script>
     window.SW_ENGAGEMENT = {
-      url: "",
+      url: "https://script.google.com/macros/s/AKfycbxfpzhcEMOe9N7ZnR9-9wCls10IWkyVtjQ9-1z72g52Df_Pl9gvCYppLCsIUO6EsVqb/exec",
       key: "fHzBG7o0ldvqUmahLsCItPYLtSn1PxVa",
       page: "rosa",
       slug: "rosa-5ea120co9o32"
@@ -1860,11 +1860,17 @@
     }
     if (onceKey && sent[dedupe]) return;
     sent[dedupe] = 1;
+    var slug = SLUG;
+    try {
+      if (new URLSearchParams(location.search).get("selftest") === "1") {
+        slug = SLUG ? SLUG + "__selftest" : "selftest";
+      }
+    } catch (e) {}
     var body = JSON.stringify({
       key: KEY,
       action: "log",
       page: PAGE,
-      slug: SLUG,
+      slug: slug,
       event: event,
       time: new Date().toISOString(),
       device: deviceId(),
