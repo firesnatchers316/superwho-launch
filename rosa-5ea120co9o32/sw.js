@@ -1,4 +1,4 @@
-const CACHE = "my-superwho-v16";
+const CACHE = "my-superwho-v17";
 const PRECACHE = [
   "./",
   "./index.html",
