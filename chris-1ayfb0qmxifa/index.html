@@ -2123,6 +2123,35 @@
       })();
 
       retryPending();
+
+      // Page-open alert: at most one tiny POST per 10 minutes per device. Sends only the action,
+      // the page key and the page path; no text, ids or device info. Fails silently.
+      // ?selftest=1 sends test:true (validated, no alert). Automated browsers are skipped.
+      (function openPing() {
+        try {
+          if (!SUBMIT_URL) return;
+          var selftest = /(?:^|[?&])selftest=1(?:&|$)/.test(location.search);
+          if (!selftest && navigator.webdriver) return;
+          var OPEN_KEY = "chris_open_ping_at";
+          var now = Date.now();
+          if (!selftest) {
+            var last = 0;
+            try { last = Number(localStorage.getItem(OPEN_KEY)) || 0; } catch (e) {}
+            if (last && now >= last && now - last < 10 * 60 * 1000) return;
+            try { localStorage.setItem(OPEN_KEY, String(now)); } catch (e) {}
+          }
+          var body = { action: "open", key: SHARED_KEY, page: location.pathname };
+          if (selftest) body.test = true;
+          fetch(SUBMIT_URL, {
+            method: "POST",
+            mode: "no-cors",
+            keepalive: true,
+            credentials: "omit",
+            headers: { "Content-Type": "text/plain;charset=utf-8" },
+            body: JSON.stringify(body)
+          }).catch(function () {});
+        } catch (e) {}
+      })();
     })();
   </script>
   <script>
