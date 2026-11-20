@@ -833,6 +833,75 @@
       .recbtn.on { animation: none; }
     }
   
+
+    /* —— Engagement: talk box stands out —— */
+    .talk-glow {
+      --glow-rgb: 79, 208, 255;
+      scroll-margin-top: 16px;
+      position: relative;
+      border-color: rgba(var(--glow-rgb), 0.45);
+      box-shadow:
+        0 0 0 1px rgba(var(--glow-rgb), 0.28),
+        0 0 22px rgba(var(--glow-rgb), 0.28),
+        0 0 48px rgba(var(--glow-rgb), 0.14);
+      animation: talk-glow-pulse 3.8s ease-in-out infinite;
+    }
+    @keyframes talk-glow-pulse {
+      0%, 100% {
+        box-shadow:
+          0 0 0 1px rgba(var(--glow-rgb), 0.22),
+          0 0 18px rgba(var(--glow-rgb), 0.22),
+          0 0 40px rgba(var(--glow-rgb), 0.10);
+      }
+      50% {
+        box-shadow:
+          0 0 0 2px rgba(var(--glow-rgb), 0.5),
+          0 0 28px rgba(var(--glow-rgb), 0.4),
+          0 0 64px rgba(var(--glow-rgb), 0.2);
+      }
+    }
+    .talk-modes {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+      margin: 0 0 16px;
+    }
+    .talk-modes .alt-tab,
+    .talk-mode-btn {
+      appearance: none;
+      min-height: 56px;
+      padding: 12px 8px;
+      border-radius: 14px;
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .msg-fab {
+      position: fixed;
+      right: max(16px, env(safe-area-inset-right, 0px));
+      bottom: max(16px, env(safe-area-inset-bottom, 0px));
+      z-index: 80;
+      min-height: 48px;
+      padding: 12px 18px;
+      border: 0;
+      border-radius: 999px;
+      background: var(--blue);
+      color: #040814;
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .msg-fab[hidden] { display: none !important; }
+    @media (prefers-reduced-motion: reduce) {
+      .talk-glow { animation: none; }
+    }
   </style>
 </head>
 <body>
@@ -879,6 +948,90 @@
         <span class="target-time">9:00 AM ET</span>
       </p>
     </div>
+
+    <div class="card talk-glow" id="talk" tabindex="-1">
+      <h2>Talk to us here</h2>
+      <p class="talk-copy">We answer fast — usually within a minute.</p>
+
+      <div id="form">
+        <div class="alts talk-modes" role="tablist" aria-label="Ways to reply">
+          <button class="alt-tab" role="tab" id="t-voice" aria-controls="p-voice" aria-selected="true" type="button">Voice</button>
+          <button class="alt-tab" role="tab" id="t-type" aria-controls="p-type" aria-selected="false" type="button">Type</button>
+          <button class="alt-tab" role="tab" id="t-upload" aria-controls="p-upload" aria-selected="false" type="button">Photo</button>
+        </div>
+
+        <div class="panel" role="tabpanel" id="p-voice" aria-labelledby="t-voice">
+        <div class="rec">
+          <button class="recbtn" id="recBtn" type="button" aria-live="polite" aria-labelledby="talkLabel">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3Zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2Z"/></svg>
+            <span id="recLabel">Just talk</span>
+          </button>
+          <p id="talkLabel" class="talk-copy" style="margin:0">Tell us what you want built.</p>
+          <div class="timer" id="timer" aria-live="off"></div>
+          <audio id="playback" controls hidden></audio>
+          <p class="hint" id="recHint" style="margin:0">Talk as long as you like. Tap again to stop, listen back, then send.</p>
+        </div>
+        <div class="row" id="recActions" hidden>
+          <button class="btn btn-o" id="redo" type="button">Re-record</button>
+          <button class="btn" id="sendVoice" type="button">Send voice note</button>
+        </div>
+        </div>
+
+        <div class="sms-row" hidden>
+          <a class="btn btn-o btn-sms js-sms" href="#"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H8l-4 4V6a2 2 0 0 1 2-2Zm3 6v2h2v-2H7Zm4 0v2h2v-2h-2Zm4 0v2h2v-2h-2Z"/></svg><span>Or text Jim</span></a>
+        </div>
+
+        <div class="panel" role="tabpanel" id="p-type" aria-labelledby="t-type" hidden>
+          <label class="sr-only" for="msg">Your message</label>
+          <textarea id="msg" placeholder="Type here, or use the microphone on your phone's keyboard."></textarea>
+          <div class="row"><button class="btn" id="sendText" type="button">Send</button></div>
+        </div>
+
+        <div class="panel" role="tabpanel" id="p-upload" aria-labelledby="t-upload" hidden>
+          <label class="drop">
+            <input type="file" id="file" accept="audio/*,video/*,image/*,.m4a,.mp3,.wav,.aac,.pdf">
+            <strong>Choose a file</strong>
+            <span class="hint" style="margin:0">A voice memo, video, image, or PDF.</span>
+          </label>
+          <div class="fname" id="fname"></div>
+          <div class="row"><button class="btn" id="sendFile" type="button" disabled>Upload</button></div>
+        </div>
+
+        <div class="err" id="err" role="alert" hidden></div>
+      </div>
+
+      <div id="thanks" class="thanks" hidden role="status" aria-live="polite" tabindex="-1">
+        <p class="kicker green">Got it</p>
+        <h2 id="receiptLine">Got it, we'll get back to you shortly</h2>
+        <div class="echo" id="echo"></div>
+        <div class="echo" id="teamUpdate" hidden></div>
+        <button class="btn btn-o" id="again" type="button">Add something else</button>
+      </div>
+    </div>
+
+    <div class="card" id="messages">
+      <p class="kicker muted">Messages</p>
+      <h2>A shared thread, open now</h2>
+      <p class="lead" style="margin:0 0 14px">Open now, before your first look. David, Jim, and SuperWho can talk here.</p>
+      <div class="people" aria-label="People in this thread">
+        <span class="person"><span class="av c">D</span>David</span>
+        <span class="person"><span class="av j">J</span>Jim</span>
+        <span class="person"><span class="av s">S</span>SuperWho</span>
+      </div>
+      <div class="thread" id="thread">
+        <p class="thread-empty" id="threadEmpty">No messages yet. When you write one, it's saved for the team.</p>
+      </div>
+      <form class="composer" id="composer">
+        <label class="sr-only" for="mtext">Write a message</label>
+        <textarea id="mtext" rows="2" placeholder="Write a message"></textarea>
+        <button class="btn" type="submit" id="msend">Send</button>
+      </form>
+      <p class="save-note" id="mSaved" aria-live="polite"></p>
+      <div class="sms-row" hidden>
+        <a class="btn btn-o btn-sms js-sms" href="#"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H8l-4 4V6a2 2 0 0 1 2-2Zm3 6v2h2v-2H7Zm4 0v2h2v-2h-2Zm4 0v2h2v-2h-2Z"/></svg><span>Rather text? Text Jim</span></a>
+      </div>
+    </div>
+  </div>
 
     <div class="card" id="firstlook">
       <p class="kicker">Wednesday, 9:00 AM</p>
@@ -974,88 +1127,6 @@
         </label>
       </div>
     </div>
-
-    <div class="card" id="talk">
-      <p class="kicker amber">Talk to us</p>
-      <h2>Just talk. Tell us what you want built.</h2>
-      <p class="talk-copy">Say it the way you'd say it to Jim. Everything is transcribed and saved, and we take it from there.</p>
-
-      <div id="form">
-        <div class="rec">
-          <button class="recbtn" id="recBtn" type="button" aria-live="polite" aria-labelledby="talkLabel">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3Zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2Z"/></svg>
-            <span id="recLabel">Just talk</span>
-          </button>
-          <p id="talkLabel" class="talk-copy" style="margin:0">Tell us what you want built.</p>
-          <div class="timer" id="timer" aria-live="off"></div>
-          <audio id="playback" controls hidden></audio>
-          <p class="hint" id="recHint" style="margin:0">Talk as long as you like. Tap again to stop, listen back, then send.</p>
-        </div>
-        <div class="row" id="recActions" hidden>
-          <button class="btn btn-o" id="redo" type="button">Re-record</button>
-          <button class="btn" id="sendVoice" type="button">Send voice note</button>
-        </div>
-
-        <div class="alts" role="tablist" aria-label="Other ways to reply">
-          <button class="alt-tab" role="tab" id="t-type" aria-controls="p-type" aria-selected="false" type="button">Type a message</button>
-          <button class="alt-tab" role="tab" id="t-upload" aria-controls="p-upload" aria-selected="false" type="button">Upload a file</button>
-        </div>
-
-        <div class="sms-row" hidden>
-          <a class="btn btn-o btn-sms js-sms" href="#"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H8l-4 4V6a2 2 0 0 1 2-2Zm3 6v2h2v-2H7Zm4 0v2h2v-2h-2Zm4 0v2h2v-2h-2Z"/></svg><span>Or text Jim</span></a>
-        </div>
-
-        <div class="panel" role="tabpanel" id="p-type" aria-labelledby="t-type" hidden>
-          <label class="sr-only" for="msg">Your message</label>
-          <textarea id="msg" placeholder="Type here, or use the microphone on your phone's keyboard."></textarea>
-          <div class="row"><button class="btn" id="sendText" type="button">Send</button></div>
-        </div>
-
-        <div class="panel" role="tabpanel" id="p-upload" aria-labelledby="t-upload" hidden>
-          <label class="drop">
-            <input type="file" id="file" accept="audio/*,video/*,image/*,.m4a,.mp3,.wav,.aac,.pdf">
-            <strong>Choose a file</strong>
-            <span class="hint" style="margin:0">A voice memo, video, image, or PDF.</span>
-          </label>
-          <div class="fname" id="fname"></div>
-          <div class="row"><button class="btn" id="sendFile" type="button" disabled>Upload</button></div>
-        </div>
-
-        <div class="err" id="err" role="alert" hidden></div>
-      </div>
-
-      <div id="thanks" class="thanks" hidden role="status" aria-live="polite" tabindex="-1">
-        <p class="kicker green">Got it</p>
-        <h2 id="receiptLine">Got it, we'll get back to you shortly</h2>
-        <div class="echo" id="echo"></div>
-        <div class="echo" id="teamUpdate" hidden></div>
-        <button class="btn btn-o" id="again" type="button">Add something else</button>
-      </div>
-    </div>
-
-    <div class="card" id="messages">
-      <p class="kicker muted">Messages</p>
-      <h2>A shared thread, open now</h2>
-      <p class="lead" style="margin:0 0 14px">Open now, before your first look. David, Jim, and SuperWho can talk here.</p>
-      <div class="people" aria-label="People in this thread">
-        <span class="person"><span class="av c">D</span>David</span>
-        <span class="person"><span class="av j">J</span>Jim</span>
-        <span class="person"><span class="av s">S</span>SuperWho</span>
-      </div>
-      <div class="thread" id="thread">
-        <p class="thread-empty" id="threadEmpty">No messages yet. When you write one, it's saved for the team.</p>
-      </div>
-      <form class="composer" id="composer">
-        <label class="sr-only" for="mtext">Write a message</label>
-        <textarea id="mtext" rows="2" placeholder="Write a message"></textarea>
-        <button class="btn" type="submit" id="msend">Send</button>
-      </form>
-      <p class="save-note" id="mSaved" aria-live="polite"></p>
-      <div class="sms-row" hidden>
-        <a class="btn btn-o btn-sms js-sms" href="#"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H8l-4 4V6a2 2 0 0 1 2-2Zm3 6v2h2v-2H7Zm4 0v2h2v-2h-2Zm4 0v2h2v-2h-2Z"/></svg><span>Rather text? Text Jim</span></a>
-      </div>
-    </div>
-  </div>
 
   <footer>
     <strong>SuperWho</strong> · FireSnatchers
@@ -1459,23 +1530,28 @@
           if ($("teamUpdate")) { $("teamUpdate").hidden = true; $("teamUpdate").replaceChildren(); }
         });
 
-        $("t-type").addEventListener("click", function () {
-          if (window.swLog) swLog("reply_started");
-          var on = $("t-type").getAttribute("aria-selected") === "true";
-          $("t-type").setAttribute("aria-selected", on ? "false" : "true");
-          $("t-upload").setAttribute("aria-selected", "false");
-          $("p-type").hidden = on;
-          $("p-upload").hidden = true;
+        function setTalkMode(mode) {
+          var modes = ["voice", "type", "upload"];
+          modes.forEach(function (m) {
+            var tab = $("t-" + m);
+            var panel = $("p-" + m);
+            if (tab) tab.setAttribute("aria-selected", m === mode ? "true" : "false");
+            if (panel) panel.hidden = m !== mode;
+          });
           hideErr();
-        });
-        $("t-upload").addEventListener("click", function () {
-          if (window.swLog) swLog("reply_started");
-          var on = $("t-upload").getAttribute("aria-selected") === "true";
-          $("t-upload").setAttribute("aria-selected", on ? "false" : "true");
-          $("t-type").setAttribute("aria-selected", "false");
-          $("p-upload").hidden = on;
-          $("p-type").hidden = true;
-          hideErr();
+        }
+        setTalkMode("voice");
+        ["voice", "type", "upload"].forEach(function (mode) {
+          var tab = $("t-" + mode);
+          if (!tab) return;
+          tab.addEventListener("click", function () {
+            if (window.swLog) swLog("reply_started");
+            setTalkMode(mode);
+            if (mode === "type") {
+              var msg = $("msg");
+              if (msg) msg.focus();
+            }
+          });
         });
 
         $("sendText").addEventListener("click", function () {
@@ -1618,6 +1694,56 @@
       })();
 
       retryPending();
+
+      (function messageFab() {
+        var box = document.getElementById("talk");
+        var btn = document.getElementById("msg-fab");
+        if (!box || !btn) return;
+        var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        function pageBlocksFab() {
+          var html = document.documentElement;
+          if (html.classList.contains("is-welcome") || html.classList.contains("is-working")) return true;
+          var welcome = document.getElementById("welcome") || document.getElementById("screen-welcome");
+          if (welcome && welcome.classList.contains("is-on")) return true;
+          var work = document.getElementById("work-screen");
+          if (work) {
+            var ds = window.getComputedStyle(work).display;
+            if (ds && ds !== "none") return true;
+          }
+          return false;
+        }
+        function setFab(show) {
+          var on = !!show && !pageBlocksFab();
+          btn.hidden = !on;
+        }
+        setFab(false);
+        if ("IntersectionObserver" in window) {
+          var io = new IntersectionObserver(function (entries) {
+            setFab(!(entries[0] && entries[0].isIntersecting));
+          }, { threshold: 0.28, rootMargin: "-10px" });
+          io.observe(box);
+        } else {
+          setFab(true);
+        }
+        if (window.MutationObserver) {
+          var mo = new MutationObserver(function () { setFab(btn.hidden === false || !pageBlocksFab()); });
+          mo.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
+        }
+        btn.addEventListener("click", function () {
+          if (typeof window.showScreen === "function" && document.getElementById("screen-home")) {
+            var home = document.getElementById("screen-home");
+            if (home && !home.classList.contains("is-on")) window.showScreen("home");
+          }
+          box.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" });
+          window.setTimeout(function () {
+            var focusEl = document.getElementById("recBtn")
+              || document.getElementById("talk-btn")
+              || document.getElementById("type-input")
+              || box;
+            if (focusEl && focusEl.focus) focusEl.focus();
+          }, reduce ? 0 : 420);
+        });
+      })();
     })();
   </script>
   <script>
@@ -1728,5 +1854,6 @@
 })();
 
   </script>
+  <button class="msg-fab" id="msg-fab" type="button" hidden>Message us</button>
 </body>
 </html>
