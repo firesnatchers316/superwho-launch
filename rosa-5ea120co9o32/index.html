@@ -474,14 +474,18 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       text-align: center;
-      padding: 24px 8px 80px;
+      padding: 8px 0 12px;
+      width: 100%;
     }
     .dots {
       display: flex;
       gap: 10px;
       margin-bottom: 28px;
+    }
+    .dots[hidden], .work-ready[hidden], .work-mini-sheet[hidden], .request-card[hidden] {
+      display: none !important;
     }
     .dots span {
       width: 12px;
@@ -505,14 +509,202 @@
       text-wrap: balance;
       max-width: 18ch;
     }
-    .work-hint {
-      margin: 16px 0 0;
+    .work-hint, .work-stay {
+      margin: 12px 0 0;
       font-size: 16px;
       font-weight: 400;
       line-height: 1.4;
       color: var(--muted);
       text-align: center;
-      max-width: 24ch;
+      max-width: 28ch;
+    }
+    .work-main h1.is-ready {
+      color: var(--cream);
+    }
+
+    .happen {
+      width: 100%;
+      margin: 22px 0 0;
+      padding: 16px 16px 14px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+      text-align: left;
+    }
+    .happen-title {
+      margin: 0 0 12px;
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: var(--cyan);
+    }
+    .happen-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .happen-list li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: 17px;
+      line-height: 1.4;
+      color: var(--ink);
+      padding: 8px 0;
+      border-top: 1px solid var(--line);
+    }
+    .happen-list li:first-child { border-top: 0; padding-top: 0; }
+    .happen-mark {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      margin-top: 1px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1;
+    }
+    .happen-list li.is-done { color: var(--cream); }
+    .happen-list li.is-done .happen-mark {
+      background: rgba(34, 197, 94, 0.18);
+      color: #86efac;
+    }
+    .happen-list li.is-now { color: var(--ink); }
+    .happen-list li.is-now .happen-mark {
+      background: rgba(251, 191, 36, 0.16);
+      color: var(--amber);
+      animation: pulse-mark 1.4s ease-in-out infinite;
+    }
+    @keyframes pulse-mark {
+      0%, 100% { opacity: 0.55; transform: scale(0.92); }
+      50% { opacity: 1; transform: scale(1); }
+    }
+    .work-mini-sheet {
+      margin: 12px 0 2px;
+      background: #fff;
+      color: #1a1a1a;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+      font-size: 12px;
+      line-height: 1.3;
+    }
+    .work-mini-sheet[hidden] { display: none; }
+    .wms-top {
+      background: #1d4f73;
+      color: #fff;
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      padding: 8px 12px;
+    }
+    .wms-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 7px 12px;
+      border-top: 1px solid #eef2f5;
+      opacity: 0.22;
+    }
+    .wms-row.is-on { opacity: 1; }
+    @keyframes wms-fill {
+      0%, 12% { opacity: 0.22; }
+      18%, 100% { opacity: 1; }
+    }
+    .work-mini-sheet.is-run .wms-row:nth-child(2) { animation: wms-fill 4.8s ease-in-out infinite; }
+    .work-mini-sheet.is-run .wms-row:nth-child(3) { animation: wms-fill 4.8s ease-in-out 0.7s infinite; }
+    .work-mini-sheet.is-run .wms-row:nth-child(4) { animation: wms-fill 4.8s ease-in-out 1.4s infinite; }
+    @media (prefers-reduced-motion: reduce) {
+      .happen-list li.is-now .happen-mark { animation: none; }
+      .work-mini-sheet.is-run .wms-row { animation: none; opacity: 1; }
+    }
+
+    .work-ready {
+      width: 100%;
+      margin: 18px 0 0;
+      text-align: left;
+    }
+    .work-ready[hidden] { display: none; }
+    .work-ready .summary {
+      margin: 0 0 12px;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+    .work-ready .sheet-frame { margin: 0 0 16px; }
+    .work-ready .primary { width: 100%; }
+    .work-reply {
+      margin: 16px 0 0;
+      padding: 14px 14px 16px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+    }
+    .work-reply label {
+      display: block;
+      font-size: 17px;
+      font-weight: 600;
+      margin: 0 0 8px;
+    }
+    .work-reply textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #100e0c;
+      color: var(--ink);
+      font-size: 17px;
+      line-height: 1.4;
+      padding: 12px 14px;
+      resize: vertical;
+      outline: none;
+    }
+    .work-reply textarea:focus { border-color: var(--amber); }
+    .work-reply .secondary { width: 100%; margin-top: 10px; }
+
+    .request-card {
+      display: none;
+      width: 100%;
+      margin: 14px 0 4px;
+      padding: 14px 16px 16px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+      text-align: left;
+      color: inherit;
+    }
+    .request-card.is-on { display: block; }
+    .request-card .request-label {
+      display: block;
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: 4px;
+    }
+    .request-card strong {
+      display: block;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+    }
+    .request-card.is-ready strong { color: var(--amber); }
+    .request-card .request-stay {
+      display: block;
+      margin-top: 8px;
+      font-size: 16px;
+      line-height: 1.4;
+      color: var(--muted);
     }
 
     /* —— Check —— */
@@ -1065,6 +1257,11 @@
         </button>
         <h1 class="hello">Hi Rosa</h1>
       </div>
+      <button class="request-card" type="button" id="request-card" hidden>
+        <span class="request-label">Your request</span>
+        <strong id="request-card-state">In progress</strong>
+        <span class="request-stay">Leave this open or come back anytime, and it'll be right here.</span>
+      </button>
       <div class="home-main">
         <div class="talk-wrap">
           <span class="ring r2" aria-hidden="true"></span>
@@ -1137,10 +1334,33 @@
 
     <!-- 3. Working -->
     <section class="screen" id="screen-working" data-screen="working">
+      <button class="back" type="button" data-go="home">← Back</button>
       <div class="work-main">
-        <div class="dots" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="dots" id="work-dots" aria-hidden="true"><span></span><span></span><span></span></div>
         <h1 id="work-progress">Got it! Working on it…</h1>
-        <p class="work-hint">You can close the app. I’ll keep it ready.</p>
+        <p class="work-stay">Leave this open or come back anytime, and it'll be right here.</p>
+        <div class="happen" id="happen">
+          <h2 class="happen-title">What's happening</h2>
+          <ol class="happen-list" id="happen-list"></ol>
+          <div class="work-mini-sheet" id="happen-wait" hidden>
+            <div class="wms-top">Rosa — Weekly timesheet</div>
+            <div class="wms-row">Mon · 10:00–12:00<span>2.00</span></div>
+            <div class="wms-row">Tue · 10:00–12:00<span>2.00</span></div>
+            <div class="wms-row">Wed · 10:00–12:00<span>2.00</span></div>
+          </div>
+        </div>
+        <div class="work-ready" id="work-ready" hidden>
+          <p class="summary" id="work-summary"></p>
+          <div class="sheet-frame">
+            <img id="work-image" alt="Your timesheet." width="1260" height="627">
+          </div>
+          <button class="primary is-good" type="button" id="work-looks-good">Looks good</button>
+          <div class="work-reply">
+            <label for="work-reply-input">Reply or ask for a change</label>
+            <textarea id="work-reply-input" rows="3" placeholder="Tell me what to change…"></textarea>
+            <button class="secondary" type="button" id="work-reply-btn">Send</button>
+          </div>
+        </div>
         <p class="work-error" id="work-error" hidden></p>
       </div>
     </section>
@@ -1192,7 +1412,7 @@
       var RESULT_KEY = "rosaPendingResult";
       var WELCOME_KEY = "rosaWelcomeSeen";
       var DEFAULT_PROGRESS = "Got it! Working on it…";
-      var POLL_MS = 3000;
+      var POLL_MS = 10000;
       if (/^https?:\/\/(127\.0\.0\.1|localhost)\b/.test(SUBMIT_URL)) POLL_MS = 400;
 
       const screens = {
@@ -1230,10 +1450,13 @@
         try { return localStorage.getItem(REQUEST_KEY) || ""; } catch (e) { return ""; }
       }
       function setRequestId(id) {
+        var prev = getRequestId();
         try {
           if (id) localStorage.setItem(REQUEST_KEY, id);
           else localStorage.removeItem(REQUEST_KEY);
         } catch (e) {}
+        if (!id) setStepState(null);
+        else if (id !== prev) setStepState({ id: id, steps: stepsFor(id) });
       }
       function getSavedResult() {
         try { return JSON.parse(localStorage.getItem(RESULT_KEY) || "null"); } catch (e) { return null; }
@@ -1323,6 +1546,158 @@
         workProgress.textContent = text || DEFAULT_PROGRESS;
       }
 
+      var STEPS_KEY = "rosaProgressSteps";
+      var SENT_STEP = "Sent to your SuperWho";
+      var WAIT_STEP = "Your helper is picking this up… (usually a few minutes)";
+      var happenList = document.getElementById("happen-list");
+      var happenWait = document.getElementById("happen-wait");
+      var workReady = document.getElementById("work-ready");
+      var workSummary = document.getElementById("work-summary");
+      var workImage = document.getElementById("work-image");
+      var workDots = document.getElementById("work-dots");
+      var requestCard = document.getElementById("request-card");
+      var requestCardState = document.getElementById("request-card-state");
+
+      function getStepState() {
+        try { return JSON.parse(localStorage.getItem(STEPS_KEY) || "null"); } catch (e) { return null; }
+      }
+      function setStepState(obj) {
+        try {
+          if (obj) localStorage.setItem(STEPS_KEY, JSON.stringify(obj));
+          else localStorage.removeItem(STEPS_KEY);
+        } catch (e) {}
+      }
+      function stepsFor(id) {
+        var st = getStepState();
+        if (st && st.id === id && Array.isArray(st.steps)) return st.steps.slice();
+        return [];
+      }
+      function saveSteps(id, steps) {
+        if (!id) return;
+        setStepState({ id: id, steps: steps });
+      }
+      function parseProgressLines(text) {
+        text = String(text || "").trim();
+        if (!text) return [];
+        if (text.charAt(0) === "[") {
+          try {
+            var arr = JSON.parse(text);
+            if (Array.isArray(arr)) {
+              return arr.map(function (s) { return String(s || "").trim(); }).filter(Boolean);
+            }
+          } catch (e) {}
+        }
+        return text.split(/\n+| \u2022 | \| /).map(function (s) { return s.trim(); }).filter(Boolean);
+      }
+      function isHeadlineProgress(line) {
+        var n = String(line || "").trim().toLowerCase().replace(/[….]+$/g, "");
+        var head = DEFAULT_PROGRESS.toLowerCase().replace(/[….]+$/g, "");
+        return n === head || n === "got it! working on it" || n === "i’m on it" || n === "i'm on it";
+      }
+      function mergeSteps(id, incoming) {
+        var steps = stepsFor(id);
+        incoming.forEach(function (line) {
+          if (!line || isHeadlineProgress(line)) return;
+          if (line === SENT_STEP || line === WAIT_STEP) return;
+          if (steps.indexOf(line) === -1) steps.push(line);
+        });
+        saveSteps(id, steps);
+        return steps;
+      }
+      function renderHappen(opts) {
+        opts = opts || {};
+        var id = getRequestId();
+        var ready = !!opts.ready;
+        var steps = stepsFor(id);
+        var items = [{ text: SENT_STEP, state: "done" }];
+        if (!steps.length && !ready) {
+          items.push({ text: WAIT_STEP, state: "now" });
+        } else {
+          steps.forEach(function (line, i) {
+            var last = i === steps.length - 1;
+            items.push({ text: line, state: ready || !last ? "done" : "now" });
+          });
+          if (ready && items.length === 1) {
+            items.push({ text: "Your timesheet is ready", state: "done" });
+          }
+        }
+        if (happenList) {
+          happenList.innerHTML = "";
+          items.forEach(function (item) {
+            var li = document.createElement("li");
+            li.className = item.state === "done" ? "is-done" : "is-now";
+            var mark = document.createElement("span");
+            mark.className = "happen-mark";
+            mark.setAttribute("aria-hidden", "true");
+            mark.textContent = item.state === "done" ? "✓" : "•";
+            var span = document.createElement("span");
+            span.textContent = item.state === "done" && item.text === SENT_STEP ? (SENT_STEP + " ✓").replace(" ✓ ✓", " ✓") : item.text;
+            // SENT_STEP already gets a mark; don't duplicate the word check in the sentence except we want "Sent to your SuperWho ✓" as specified
+            if (item.text === SENT_STEP) span.textContent = SENT_STEP + " ✓";
+            li.appendChild(mark);
+            li.appendChild(span);
+            happenList.appendChild(li);
+          });
+        }
+        var waiting = !ready && !steps.length;
+        if (happenWait) {
+          happenWait.hidden = !waiting;
+          happenWait.classList.toggle("is-run", waiting && !prefersReducedMotion());
+        }
+      }
+      function showWorkWaiting() {
+        if (workProgress) {
+          workProgress.textContent = DEFAULT_PROGRESS;
+          workProgress.classList.remove("is-ready");
+        }
+        if (workDots) workDots.hidden = false;
+        if (workReady) workReady.hidden = true;
+        renderHappen({ ready: false });
+      }
+      function fillReadySummary(el, text) {
+        if (!el) return;
+        el.innerHTML = "";
+        String(text || "").replace(/\\n/g, "\n").split("\n").forEach(function (line, i) {
+          if (i) el.appendChild(document.createElement("br"));
+          el.appendChild(document.createTextNode(line));
+        });
+      }
+      function showWorkDone(result) {
+        result = result || getSavedResult() || {};
+        if (workProgress) {
+          workProgress.textContent = "It's ready.";
+          workProgress.classList.add("is-ready");
+        }
+        if (workDots) workDots.hidden = true;
+        if (workReady) workReady.hidden = false;
+        fillReadySummary(workSummary, result.summary || "");
+        if (workImage) {
+          if (result.image) {
+            workImage.src = result.image;
+            workImage.hidden = false;
+            workImage.parentElement.hidden = false;
+          } else {
+            workImage.hidden = true;
+            if (workImage.parentElement) workImage.parentElement.hidden = true;
+          }
+        }
+        renderHappen({ ready: true });
+      }
+      function updateRequestCard() {
+        if (!requestCard) return;
+        var id = getRequestId();
+        if (!id) {
+          requestCard.hidden = true;
+          requestCard.classList.remove("is-on", "is-ready");
+          return;
+        }
+        var cached = getSavedResult();
+        var ready = !!(cached && cached.summary);
+        requestCard.hidden = false;
+        requestCard.classList.add("is-on");
+        requestCard.classList.toggle("is-ready", ready);
+        if (requestCardState) requestCardState.textContent = ready ? "Ready" : "In progress";
+      }
 
       var HOME_OPENS_KEY = "rosaHomeOpens";
       var PUSH_ON_KEY = "rosaPushOn";
@@ -1569,7 +1944,7 @@
         if (!result) return;
         if (result.summary) {
           checkSummary.innerHTML = "";
-          String(result.summary).split("\n").forEach(function (line, i) {
+          String(result.summary).replace(/\\n/g, "\n").split("\n").forEach(function (line, i) {
             if (i) checkSummary.appendChild(document.createElement("br"));
             checkSummary.appendChild(document.createTextNode(line));
           });
@@ -1587,19 +1962,24 @@
 
       function handleStatus(j) {
         if (!j || !j.status) return;
-        if (j.progress) setProgress(j.progress);
+        if (j.progress) mergeSteps(j.id || getRequestId(), parseProgressLines(j.progress));
         if (j.status === "ready") {
           setSavedResult({ summary: j.summary || "", image: j.image || "" });
           applyResult(j);
           stopPoll();
-          showScreen("check");
+          if (screens.working && screens.working.classList.contains("is-on")) showWorkDone(j);
+          // If she's on home (or elsewhere), leave her there; the request card updates.
         } else if (j.status === "approved") {
           setRequestId("");
           setSavedResult(null);
           changeMode = false;
           stopPoll();
           showScreen("saved");
+        } else {
+          setSavedResult(null);
+          if (screens.working && screens.working.classList.contains("is-on")) showWorkWaiting();
         }
+        updateRequestCard();
       }
 
       function pollOnce() {
@@ -1613,7 +1993,7 @@
       function startPoll() {
         stopPoll();
         showWorkError("");
-        if (workProgress && !workProgress.textContent) setProgress(DEFAULT_PROGRESS);
+        showWorkWaiting();
         pollOnce();
         pollTimer = setInterval(pollOnce, POLL_MS);
       }
@@ -1627,7 +2007,8 @@
 
       function startRequest(text) {
         skipAutoPoll = true;
-        setProgress(DEFAULT_PROGRESS);
+        setSavedResult(null);
+        showWorkWaiting();
         showScreen("working");
         skipAutoPoll = false;
         if (!SUBMIT_URL) {
@@ -1666,14 +2047,28 @@
         if (name === "home") {
           bumpHomeOpens();
           maybeShowRemindButton();
+          updateRequestCard();
+          if (SUBMIT_URL && getRequestId()) pollOnce();
         }
         if (name === "listening") startListening();
+        if (name === "home") updateRequestCard();
         if (name === "working") {
-          if (!workProgress.textContent || workProgress.textContent === "I’m on it.") setProgress(DEFAULT_PROGRESS);
-          if (SUBMIT_URL && getRequestId() && !skipAutoPoll) startPoll();
-          else if (!SUBMIT_URL) {
-            stopPoll();
-            workTimer = setTimeout(function () { showScreen("check"); }, 1800);
+          var cached = getSavedResult();
+          if (cached && cached.summary) {
+            showWorkDone(cached);
+            if (SUBMIT_URL && getRequestId() && !skipAutoPoll) pollOnce();
+          } else {
+            showWorkWaiting();
+            if (SUBMIT_URL && getRequestId() && !skipAutoPoll) startPoll();
+            else if (!SUBMIT_URL) {
+              stopPoll();
+              workTimer = setTimeout(function () {
+                var demo = { summary: "This week: 12 hours, $312.\nStatus: Pending.", image: checkImage ? checkImage.src : "" };
+                setSavedResult(demo);
+                showWorkDone(demo);
+                updateRequestCard();
+              }, 1800);
+            }
           }
         }
         if (name === "check") applyResult(getSavedResult());
@@ -1684,21 +2079,14 @@
       }
 
       function resumePending() {
-        if (!SUBMIT_URL) return false;
         const id = getRequestId();
         if (!id || !getPhoto()) return false;
-        const cached = getSavedResult();
-        if (cached && cached.summary) {
-          applyResult(cached);
-          showScreen("check");
-          api("status", { id: id }).then(handleStatus).catch(function () {});
-          return true;
-        }
         showScreen("working");
         return true;
       }
 
       window.showScreen = showScreen;
+      window.pollOnce = pollOnce;
 
       document.querySelectorAll(".photo-choice").forEach(function (btn) {
         btn.addEventListener("click", function () {
@@ -1726,8 +2114,10 @@
         if (window.swLog) swLog("talk_started");
         showScreen("listening");
       });
+      if (requestCard) requestCard.addEventListener("click", function () { showScreen("working"); });
       document.getElementById("tile-timesheet").addEventListener("click", function () {
-        showScreen("check");
+        if (getRequestId()) showScreen("working");
+        else showScreen("check");
       });
       document.getElementById("tile-book").addEventListener("click", function (e) {
         e.preventDefault();
@@ -1741,20 +2131,66 @@
         }
         startRequest(text);
       });
-      document.getElementById("looks-good").addEventListener("click", function () {
+      function approveRequest() {
         const id = getRequestId();
         if (SUBMIT_URL && id) {
           api("approve", { id: id }).then(function () {
             setRequestId("");
             setSavedResult(null);
             changeMode = false;
+            updateRequestCard();
             showScreen("saved");
           }).catch(function () {
             showScreen("saved");
           });
           return;
         }
+        setRequestId("");
+        setSavedResult(null);
+        updateRequestCard();
         showScreen("saved");
+      }
+      document.getElementById("looks-good").addEventListener("click", approveRequest);
+      var workLooksGood = document.getElementById("work-looks-good");
+      if (workLooksGood) workLooksGood.addEventListener("click", approveRequest);
+      var workReplyBtn = document.getElementById("work-reply-btn");
+      var workReplyInput = document.getElementById("work-reply-input");
+      function sendWorkReply() {
+        var text = (workReplyInput && workReplyInput.value || "").trim();
+        if (!text) {
+          if (workReplyInput) workReplyInput.focus();
+          return;
+        }
+        var id = getRequestId();
+        changeMode = true;
+        if (workReplyInput) workReplyInput.value = "";
+        if (!SUBMIT_URL) {
+          mergeSteps(id, ["Got your note. I'll make that change…"]);
+          setSavedResult(null);
+          showWorkWaiting();
+          return;
+        }
+        if (!id) {
+          startRequest(text);
+          return;
+        }
+        api("change", { id: id, text: text }).then(function (j) {
+          if (j.id) setRequestId(j.id);
+          changeMode = false;
+          mergeSteps(getRequestId(), ["Got your note. I'll make that change…"]);
+          setSavedResult(null);
+          showWorkWaiting();
+          startPoll();
+        }).catch(function () {
+          showWorkError("I couldn’t send that. Please try again.");
+        });
+      }
+      if (workReplyBtn) workReplyBtn.addEventListener("click", sendWorkReply);
+      if (workReplyInput) workReplyInput.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" && !e.shiftKey) {
+          e.preventDefault();
+          sendWorkReply();
+        }
       });
       document.getElementById("change-it").addEventListener("click", function () {
         changeMode = true;
