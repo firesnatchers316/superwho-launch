@@ -1147,7 +1147,7 @@
       <div class="happen" id="happen">
         <h2 class="happen-title">What's happening</h2>
         <div class="happen-time" id="happen-time">
-          <p class="happen-time-label" id="happen-time-label">Started just now · about 7 min left</p>
+          <p class="happen-time-label" id="happen-time-label">Started just now · about 2 min left</p>
           <div class="happen-bar" id="happen-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Time progress">
             <span class="happen-bar-fill" id="happen-bar-fill"></span>
           </div>
@@ -1325,11 +1325,12 @@
       var META_KEY = "nichelleRequestMeta";
       var DEFAULT_PROGRESS = "Got it! Working on it…";
       var SENT_STEP = "Sent to your SuperWho";
-      var WAIT_STEP = "Your helper is picking this up… (usually a few minutes)";
+      var sendFailed = false;
+      var WAIT_STEP = "Your helper is on it (usually about a minute)";
       var READY_STEP = "Your update is ready";
       var POLL_MS = 10000;
       if (/^https?:\/\/(127\.0\.0\.1|localhost)\b/.test(SUBMIT_URL)) POLL_MS = 400;
-      var ESTIMATE_MS = 7 * 60 * 1000;
+      var ESTIMATE_MS = 2 * 60 * 1000;
 
       const talkBtn = document.getElementById("talk-btn");
       const talkLabel = document.getElementById("talk-label");
@@ -1644,9 +1645,12 @@
         var id = getRequestId();
         var ready = !!opts.ready;
         var steps = stepsFor(id);
-        var items = [{ text: SENT_STEP, state: "done" }];
+        var items = [];
+        if (!sendFailed) {
+          items.push({ text: SENT_STEP, state: "done" });
+        }
         if (!steps.length && !ready) {
-          items.push({ text: WAIT_STEP, state: "now" });
+          if (!sendFailed) items.push({ text: WAIT_STEP, state: "now" });
         } else {
           steps.forEach(function (line, i) {
             var last = i === steps.length - 1;
@@ -1776,7 +1780,7 @@
           var mins = elapsed < 45000 ? 0 : Math.max(1, Math.round(elapsed / 60000));
           text = mins === 0 ? "Done in less than a min" : ("Done in " + minWord(mins));
         } else if (overtime) {
-          text = "Taking a little longer, still working";
+          text = "Taking a bit longer, still working";
         } else {
           var ago = Math.floor(elapsed / 60000);
           var left = Math.max(1, Math.ceil((ESTIMATE_MS - elapsed) / 60000));
@@ -1968,6 +1972,7 @@
         return ((typeInput && typeInput.value) || "").trim();
       }
       function startRequest(text, photos) {
+        sendFailed = false;
         skipAutoPoll = true;
         setSavedResult(null);
         showWorkWaiting();
@@ -2009,6 +2014,8 @@
           if (window.swLog) swLog("submitted");
           startPoll();
         }).catch(function () {
+          sendFailed = true;
+          renderHappen({ ready: false });
           if (typeInput && !typeInput.value) typeInput.value = text;
           showWorkError("That didn’t go through. Your connection or Safari’s privacy settings may have blocked it. Your note is saved.", function () { if (typeInput && typeInput.value === text) typeInput.value = ""; startRequest(text, photos); });
         });
