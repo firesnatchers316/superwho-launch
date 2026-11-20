@@ -85,6 +85,10 @@
       --safe-b: env(safe-area-inset-bottom, 0px);
       --safe-l: env(safe-area-inset-left, 0px);
       --safe-r: env(safe-area-inset-right, 0px);
+      --vh: 100vh;
+      --vh: 100dvh;
+      --vh: 100svh;
+      --btn-clear: max(120px, calc(var(--safe-b) + 96px));
     }
 
     * { box-sizing: border-box; }
@@ -101,7 +105,7 @@
     }
 
     body {
-      min-height: 100svh;
+      min-height: var(--vh);
       overflow-x: hidden;
     }
 
@@ -130,19 +134,19 @@
     .app {
       max-width: 430px;
       margin: 0 auto;
-      min-height: calc(100svh - 36px);
+      min-height: var(--vh);
       padding: 0 22px;
       padding-left: max(22px, var(--safe-l));
       padding-right: max(22px, var(--safe-r));
-      padding-bottom: max(24px, var(--safe-b));
+      padding-bottom: 0;
     }
 
     .screen {
       display: none;
       flex-direction: column;
-      min-height: calc(100svh - 36px);
+      min-height: var(--vh);
       padding-top: 18px;
-      padding-bottom: 8px;
+      padding-bottom: var(--btn-clear);
     }
     .screen.is-on { display: flex; }
 
@@ -651,7 +655,8 @@
     .photo-choice:active { transform: scale(0.97); }
 
     .upload-btn {
-      margin-top: auto;
+      margin-top: 8px;
+      margin-bottom: 0;
       cursor: pointer;
       display: flex;
       align-items: center;
