@@ -1,0 +1,11 @@
+{
+  "name": "My SuperWho",
+  "short_name": "My SuperWho",
+  "description": "Nichelle's SuperWho. A private page for her Montgomery short-term rentals.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0B0B0B",
+  "theme_color": "#0B0B0B"
+}
