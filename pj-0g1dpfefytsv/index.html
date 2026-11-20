@@ -1762,6 +1762,35 @@
           }, reduce ? 0 : 420);
         });
       })();
+
+      /* page-open ping: at most one POST per load, throttled to once per 10
+         minutes per device via localStorage. No personal data. Fails silently
+         if the inbox has not been updated yet. Skipped for ?test, ?notrack,
+         ?preview, ?selftest=1, and automated browsers. */
+      (function openPing(){
+        try {
+          var q = new URLSearchParams(location.search);
+          if (q.has("test") || q.has("notrack") || q.has("preview") || q.get("selftest") === "1") return;
+          if (navigator.webdriver || /HeadlessChrome/.test(navigator.userAgent || "")) return;
+          if (!SUBMIT_URL || !SHARED_KEY) return;
+          var storeKey = "swPageOpenAt-pj";
+          var now = Date.now();
+          try {
+            var last = parseInt(localStorage.getItem(storeKey) || "0", 10);
+            if (last && (now - last) < 10 * 60 * 1000) return;
+            localStorage.setItem(storeKey, String(now));
+          } catch (e) {}
+          fetch(SUBMIT_URL, {
+            method: "POST",
+            mode: "no-cors",
+            keepalive: true,
+            credentials: "omit",
+            headers: { "Content-Type": "text/plain;charset=utf-8" },
+            body: JSON.stringify({ key: SHARED_KEY, action: "open", page: location.pathname + location.hash })
+          }).catch(function () {});
+        } catch (e) {}
+      })();
+
     })();
   </script>
   <script>
