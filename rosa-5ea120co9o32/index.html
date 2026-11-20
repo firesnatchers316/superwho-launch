@@ -631,6 +631,57 @@
       .work-mini-sheet.is-run .wms-row { animation: none; opacity: 1; }
     }
 
+
+    .happen-time {
+      margin: 0 0 12px;
+    }
+    .happen-time-label {
+      margin: 0 0 8px;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.35;
+      color: var(--ink);
+    }
+    .happen-bar {
+      height: 10px;
+      border-radius: 999px;
+      background: rgba(247, 241, 232, 0.12);
+      border: 1px solid var(--line);
+      overflow: hidden;
+    }
+    .happen-bar-fill {
+      display: block;
+      height: 100%;
+      width: 100%;
+      border-radius: inherit;
+      background: var(--amber);
+      transform: scaleX(0);
+      transform-origin: left center;
+      transition: transform 0.7s ease, background-color 0.35s ease;
+      will-change: transform;
+    }
+    .happen-bar.is-done .happen-bar-fill {
+      background: #22C55E;
+    }
+    .happen-bar.is-late .happen-bar-fill {
+      animation: happen-bar-pulse 1.8s ease-in-out infinite;
+    }
+    @keyframes happen-bar-pulse {
+      0%, 100% { opacity: 0.5; }
+      50% { opacity: 1; }
+    }
+    .happen-checked {
+      margin: 10px 0 0;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 1.3;
+      color: var(--muted);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .happen-bar-fill { transition: none; }
+      .happen-bar.is-late .happen-bar-fill { animation: none; opacity: 1; }
+    }
+
     .work-ready {
       width: 100%;
       margin: 18px 0 0;
@@ -1148,7 +1199,7 @@
         <h1 class="screen-title">This should be easier.</h1>
         <p class="welcome-now">Now it is.</p>
         <p class="welcome-lead">Your timesheet for Dr.&nbsp;Gina is important. It has to get done. It takes you about 20 minutes. Now you just talk, and it takes about 2 minutes.</p>
-        <div class="sheet-anim" id="sheet-anim" aria-label="A timesheet filling in for Monday through Saturday.">
+        <div class="sheet-anim" id="sheet-anim" aria-label="A timesheet filling in for Monday through Friday.">
           <div class="sa-top">
             <div class="sa-title">Rosa — Weekly timesheet</div>
             <div class="sa-flags">
@@ -1156,7 +1207,7 @@
               <div class="sa-status"><em>Status</em><span>Pending</span></div>
             </div>
           </div>
-          <div class="sa-meta">Week of Nov 16–21, 2026</div>
+          <div class="sa-meta">Week of Nov 16–20, 2026</div>
           <div class="sa-rows" id="sa-rows">
             <div class="sa-row" data-row="0">
               <div class="sa-row-top">
@@ -1193,14 +1244,6 @@
             <div class="sa-row" data-row="4">
               <div class="sa-row-top">
                 <span class="sa-day">Fri</span>
-                <span class="sa-time">10:00–12:00</span>
-                <span class="sa-hrs">2.00</span>
-              </div>
-              <div class="sa-work">Availability for incoming client calls</div>
-            </div>
-            <div class="sa-row" data-row="5">
-              <div class="sa-row-top">
-                <span class="sa-day">Sat</span>
                 <span class="sa-time">10:00–12:00</span>
                 <span class="sa-hrs">2.00</span>
               </div>
@@ -1346,6 +1389,12 @@
         <p class="work-stay">Leave this open or come back anytime, and it'll be right here.</p>
         <div class="happen" id="happen">
           <h2 class="happen-title">What's happening</h2>
+          <div class="happen-time" id="happen-time">
+            <p class="happen-time-label" id="happen-time-label">Started just now · about 12 min left</p>
+            <div class="happen-bar" id="happen-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Time progress">
+              <span class="happen-bar-fill" id="happen-bar-fill"></span>
+            </div>
+          </div>
           <ol class="happen-list" id="happen-list"></ol>
           <div class="work-mini-sheet" id="happen-wait" hidden>
             <div class="wms-top">Rosa — Weekly timesheet</div>
@@ -1353,6 +1402,7 @@
             <div class="wms-row">Tue · 10:00–12:00<span>2.00</span></div>
             <div class="wms-row">Wed · 10:00–12:00<span>2.00</span></div>
           </div>
+          <p class="happen-checked" id="happen-checked">Last checked just now</p>
         </div>
         <div class="work-ready" id="work-ready" hidden>
           <p class="summary" id="work-summary"></p>
@@ -1420,6 +1470,11 @@
       var POLL_MS = 10000;
       if (/^https?:\/\/(127\.0\.0\.1|localhost)\b/.test(SUBMIT_URL)) POLL_MS = 400;
 
+      var ESTIMATE_MS = 12 * 60 * 1000;
+      var META_KEY = "rosaRequestMeta";
+      var timeTimer = null;
+      var lastCheckedAt = 0;
+
       const screens = {
         welcome: document.getElementById("screen-welcome"),
         picker: document.getElementById("screen-picker"),
@@ -1460,8 +1515,12 @@
           if (id) localStorage.setItem(REQUEST_KEY, id);
           else localStorage.removeItem(REQUEST_KEY);
         } catch (e) {}
-        if (!id) setStepState(null);
-        else if (id !== prev) setStepState({ id: id, steps: stepsFor(id) });
+        if (!id) {
+          setStepState(null);
+          setMeta(null);
+        } else if (id !== prev) {
+          setStepState({ id: id, steps: stepsFor(id) });
+        }
       }
       function getSavedResult() {
         try { return JSON.parse(localStorage.getItem(RESULT_KEY) || "null"); } catch (e) { return null; }
@@ -1501,10 +1560,11 @@
       }
 
       function showSheetFinal() {
-        document.querySelectorAll("#sa-rows .sa-row").forEach(function (row) {
+        var rows = document.querySelectorAll("#sa-rows .sa-row");
+        rows.forEach(function (row) {
           row.classList.add("is-on");
         });
-        setSheetTotals(6);
+        setSheetTotals(rows.length);
       }
 
       function stopSheetAnim() {
@@ -1650,6 +1710,165 @@
           happenWait.classList.toggle("is-run", waiting && !prefersReducedMotion());
         }
       }
+
+      function getMeta() {
+        try { return JSON.parse(localStorage.getItem(META_KEY) || "null"); } catch (e) { return null; }
+      }
+      function setMeta(obj) {
+        try {
+          if (obj) localStorage.setItem(META_KEY, JSON.stringify(obj));
+          else localStorage.removeItem(META_KEY);
+        } catch (e) {}
+      }
+      function parseStamp(s) {
+        if (s == null || s === "") return 0;
+        if (typeof s === "number" && isFinite(s)) return s < 1e12 ? Math.round(s * 1000) : s;
+        var t = String(s).trim();
+        if (/^\d{11,16}$/.test(t)) {
+          var n = Number(t);
+          return n < 1e12 ? n * 1000 : n;
+        }
+        // Already has a zone or Z: trust Date.parse.
+        if (/[zZ]$/.test(t) || /[+-]\d{2}:?\d{2}$/.test(t)) {
+          var zoned = Date.parse(t);
+          return isNaN(zoned) ? 0 : zoned;
+        }
+        var wall = t.replace(" ", "T");
+        var m = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})(?::(\d{2}))?$/.exec(wall);
+        if (m) {
+          var y = +m[1], mo = +m[2], d = +m[3], h = +m[4], mi = +m[5], se = +(m[6] || 0);
+          function nyParts(ms) {
+            var parts = new Intl.DateTimeFormat("en-US", {
+              timeZone: "America/New_York", hour12: false, hourCycle: "h23",
+              year: "numeric", month: "2-digit", day: "2-digit",
+              hour: "2-digit", minute: "2-digit", second: "2-digit"
+            }).formatToParts(new Date(ms));
+            var g = {};
+            parts.forEach(function (p) { g[p.type] = p.value; });
+            var hour = g.hour === "24" ? 0 : parseInt(g.hour, 10);
+            return {
+              y: +g.year, mo: +g.month, d: +g.day,
+              h: hour, mi: +g.minute, se: +g.second
+            };
+          }
+          function asUtc(yy, mmo, dd, hh, mmi, ss) {
+            return Date.UTC(yy, mmo - 1, dd, hh, mmi, ss);
+          }
+          // Interpret the wall clock in America/New_York by guessing UTC
+          // then correcting by the zone offset at that instant.
+          var guess = asUtc(y, mo, d, h, mi, se);
+          var ny = nyParts(guess);
+          var offset = asUtc(ny.y, ny.mo, ny.d, ny.h, ny.mi, ny.se) - guess;
+          var ms = guess - offset;
+          ny = nyParts(ms);
+          if (ny.y !== y || ny.mo !== mo || ny.d !== d || ny.h !== h || ny.mi !== mi || ny.se !== se) {
+            offset = asUtc(ny.y, ny.mo, ny.d, ny.h, ny.mi, ny.se) - ms;
+            ms = guess - offset;
+          }
+          return ms;
+        }
+        var parsed = Date.parse(t);
+        return isNaN(parsed) ? 0 : parsed;
+      }
+
+      function rememberTimes(j) {
+        j = j || {};
+        var id = j.id || getRequestId();
+        if (!id) return getMeta();
+        var meta = getMeta() || {};
+        if (meta.id && meta.id !== id) meta = {};
+        meta.id = id;
+        var created = parseStamp(j.createdMs != null ? j.createdMs : j.created);
+        var updated = parseStamp(j.updatedMs != null ? j.updatedMs : j.updated);
+        if (created) meta.created = created;
+        if (!meta.created) meta.created = Date.now();
+        if (updated) meta.updated = updated;
+        else if (!meta.updated) meta.updated = meta.created;
+        if (j.status === "ready") {
+          if (!meta.readyAt) meta.readyAt = updated || Date.now();
+        } else if (j.status === "change") {
+          meta.readyAt = 0;
+          meta.cycleStart = updated || Date.now();
+        }
+        if (!meta.cycleStart) meta.cycleStart = meta.created;
+        setMeta(meta);
+        return meta;
+      }
+      function workStartMs() {
+        var meta = getMeta() || {};
+        return meta.cycleStart || meta.created || Date.now();
+      }
+      function barPercent(elapsed, steps, ready, overtime) {
+        if (ready) return 100;
+        var timePct = Math.max(0, elapsed / ESTIMATE_MS);
+        var stepFloor = steps > 0 ? (1 - Math.pow(0.72, steps)) : 0;
+        var pct = Math.max(timePct, stepFloor);
+        if (overtime) return Math.min(96, Math.max(0.94, pct) * 100);
+        return Math.min(94, pct * 100);
+      }
+      function minWord(n) {
+        return n === 1 ? "1 min" : (n + " min");
+      }
+      function updateHappenTime(opts) {
+        opts = opts || {};
+        var label = document.getElementById("happen-time-label");
+        var bar = document.getElementById("happen-bar");
+        var fill = document.getElementById("happen-bar-fill");
+        var checked = document.getElementById("happen-checked");
+        var ready = !!opts.ready;
+        var meta = getMeta() || {};
+        var start = workStartMs();
+        var now = Date.now();
+        var end = ready ? (meta.readyAt || meta.updated || now) : now;
+        var elapsed = Math.max(0, end - start);
+        var overtime = !ready && elapsed >= ESTIMATE_MS;
+        var steps = (stepsFor(getRequestId()) || []).length;
+        var pct = barPercent(elapsed, steps, ready, overtime);
+        var text;
+        if (ready) {
+          var mins = elapsed < 45000 ? 0 : Math.max(1, Math.round(elapsed / 60000));
+          text = mins === 0 ? "Done in less than a min" : ("Done in " + minWord(mins));
+        } else if (overtime) {
+          text = "Taking a little longer, still working";
+        } else {
+          var ago = Math.floor(elapsed / 60000);
+          var left = Math.max(1, Math.ceil((ESTIMATE_MS - elapsed) / 60000));
+          var startBit = ago < 1 ? "Started just now" : ("Started " + minWord(ago) + " ago");
+          text = startBit + " · about " + minWord(left) + " left";
+        }
+        if (label) label.textContent = text;
+        if (bar) {
+          bar.classList.toggle("is-done", ready);
+          bar.classList.toggle("is-late", overtime && !ready);
+          bar.setAttribute("aria-valuenow", String(Math.round(pct)));
+          bar.setAttribute("aria-label", text);
+        }
+        if (fill) fill.style.transform = "scaleX(" + (Math.max(0, Math.min(100, pct)) / 100) + ")";
+        if (checked) {
+          if (!lastCheckedAt) checked.textContent = "Last checked just now";
+          else {
+            var since = now - lastCheckedAt;
+            checked.textContent = since < 8000 ? "Last checked just now" : "Last checked a few seconds ago";
+          }
+        }
+      }
+      function markChecked() {
+        lastCheckedAt = Date.now();
+        var checked = document.getElementById("happen-checked");
+        if (checked) checked.textContent = "Last checked just now";
+      }
+      function startTimeTicker() {
+        if (timeTimer) clearInterval(timeTimer);
+        updateHappenTime({ ready: !!(getSavedResult() && getSavedResult().summary) && !!(document.getElementById("work-ready") && !document.getElementById("work-ready").hidden) });
+        timeTimer = setInterval(function () {
+          var readyEl = document.getElementById("work-ready");
+          updateHappenTime({ ready: !!(readyEl && !readyEl.hidden) });
+        }, 1000);
+      }
+      function stopTimeTicker() {
+        if (timeTimer) { clearInterval(timeTimer); timeTimer = null; }
+      }
+
       function showWorkWaiting() {
         if (workProgress) {
           workProgress.textContent = DEFAULT_PROGRESS;
@@ -1658,6 +1877,8 @@
         if (workDots) workDots.hidden = false;
         if (workReady) workReady.hidden = true;
         renderHappen({ ready: false });
+        updateHappenTime({ ready: false });
+        startTimeTicker();
       }
       function fillReadySummary(el, text) {
         if (!el) return;
@@ -1687,6 +1908,8 @@
           }
         }
         renderHappen({ ready: true });
+        updateHappenTime({ ready: true });
+        startTimeTicker();
       }
       function updateRequestCard() {
         if (!requestCard) return;
@@ -1967,22 +2190,27 @@
 
       function handleStatus(j) {
         if (!j || !j.status) return;
+        rememberTimes(j);
+        markChecked();
         if (j.progress) mergeSteps(j.id || getRequestId(), parseProgressLines(j.progress));
         if (j.status === "ready") {
           setSavedResult({ summary: j.summary || "", image: j.image || "" });
           applyResult(j);
           stopPoll();
           if (screens.working && screens.working.classList.contains("is-on")) showWorkDone(j);
+          else updateHappenTime({ ready: true });
           // If she's on home (or elsewhere), leave her there; the request card updates.
         } else if (j.status === "approved") {
           setRequestId("");
           setSavedResult(null);
           changeMode = false;
           stopPoll();
+          stopTimeTicker();
           showScreen("saved");
         } else {
           setSavedResult(null);
           if (screens.working && screens.working.classList.contains("is-on")) showWorkWaiting();
+          else updateHappenTime({ ready: false });
         }
         updateRequestCard();
       }
@@ -2026,6 +2254,20 @@
         if (action === "change") fields.id = pendingId;
         api(action, fields).then(function (j) {
           if (j.id) setRequestId(j.id);
+          rememberTimes({
+            id: j.id || getRequestId(),
+            status: j.status || (action === "change" ? "change" : "new"),
+            created: j.created || Date.now(),
+            updated: j.updated || Date.now()
+          });
+          if (action === "change") {
+            var meta = getMeta() || {};
+            meta.cycleStart = Date.now();
+            meta.readyAt = 0;
+            setMeta(meta);
+          }
+          markChecked();
+          updateHappenTime({ ready: false });
           changeMode = false;
           if (window.swLog) swLog("submitted");
           startPoll();
@@ -2057,6 +2299,7 @@
         }
         if (name === "listening") startListening();
         if (name === "home") updateRequestCard();
+        if (name !== "working") stopTimeTicker();
         if (name === "working") {
           var cached = getSavedResult();
           if (cached && cached.summary) {
@@ -2092,6 +2335,7 @@
 
       window.showScreen = showScreen;
       window.pollOnce = pollOnce;
+      window.updateHappenTime = updateHappenTime;
 
       document.querySelectorAll(".photo-choice").forEach(function (btn) {
         btn.addEventListener("click", function () {
