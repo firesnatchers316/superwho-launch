@@ -650,10 +650,6 @@
       border-color: #2A4A7A;
     }
 
-    .sms-row { margin-top: 14px; max-width: 420px; }
-    .sms-row[hidden] { display: none; }
-    .btn-sms { width: 100%; gap: 8px; text-decoration: none; }
-    .btn-sms svg { width: 18px; height: 18px; }
 
     .alts {
       display: grid;
@@ -783,6 +779,49 @@
       margin-top: 6px;
     }
 
+    /* reply box: receipts, progress and our replies in the thread */
+    .bubble.them {
+      align-self: flex-start;
+      background: #143055;
+      border: 1px solid var(--line);
+      border-radius: 12px 12px 12px 4px;
+    }
+    .bubble .who {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    .bubble p + p { margin-top: 8px; }
+    .bubble .meta.receipt { color: #A7F3D0; }
+    .bubble .meta.local { color: var(--amber); }
+    .progress-line {
+      align-self: flex-start;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--muted);
+      padding-left: 2px;
+    }
+    .progress-line .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+      flex: none;
+    }
+    .receipt-line {
+      color: #A7F3D0;
+      font-size: 15px;
+      margin: 0 0 14px;
+    }
+    .receipt-line.local { color: var(--amber); }
+    .receipt-line a { color: var(--cyan); }
+
     .composer {
       display: grid;
       grid-template-columns: 1fr auto;
@@ -824,11 +863,100 @@
       .recbtn.on { animation: none; }
     }
 
-    html.is-welcome,
-    html.is-welcome body {
-      overflow: hidden;
-      height: 100%;
+    /* ===== Reply section standard: soft glow, big type, voice + photo, floating "Message us" ===== */
+    #replyZone.reply-glow {
+      border-color: rgba(61, 107, 255, 0.5);
+      box-shadow: 0 0 0 1px rgba(61, 107, 255, 0.22), 0 0 18px rgba(61, 107, 255, 0.18);
+      animation: replyGlow 3.6s ease-in-out infinite;
     }
+    @keyframes replyGlow {
+      0%, 100% { box-shadow: 0 0 0 1px rgba(61, 107, 255, 0.22), 0 0 16px rgba(61, 107, 255, 0.16); }
+      50%      { box-shadow: 0 0 0 2px rgba(34, 211, 238, 0.26), 0 0 34px rgba(61, 107, 255, 0.32); }
+    }
+    #talk h2 { font-size: 27px; margin-bottom: 8px; }
+    #talk .talk-lead { font-size: 18px; line-height: 1.5; color: var(--ink); margin: 0 0 22px; }
+    #messages textarea { font-size: 19px; line-height: 1.5; min-height: 96px; }
+    #talk .btn, #messages .composer .btn { min-height: 58px; font-size: 18px; border-radius: 12px; padding: 0 22px; }
+    #talk .recbtn { font-size: 18px; }
+    #talk #talkLabel { font-size: 17px; color: var(--ink); }
+    #talk .hint { font-size: 14px; }
+    #talk .alts { grid-template-columns: 1fr 1fr; gap: 10px; }
+    #talk .alt-tab {
+      min-height: 58px;
+      font-size: 17px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border-radius: 12px;
+    }
+    #talk .alt-tab svg { width: 22px; height: 22px; flex: none; }
+    #talk .alt-tab.alt-photo { border-color: var(--cyan); }
+    #talk .alt-tab:focus-visible, .fab:focus-visible { outline: 3px solid var(--cyan); outline-offset: 2px; }
+    #talk .receipt-line { font-size: 17px; }
+    /* Messages thread continues inside the same glowing reply area */
+    .thread-part {
+      margin-top: 26px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+      scroll-margin-top: 16px;
+    }
+    .thread-sub {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      line-height: 1.3;
+      margin: 0 0 10px;
+    }
+
+    .fab {
+      position: fixed;
+      right: max(16px, env(safe-area-inset-right, 0px));
+      bottom: max(16px, env(safe-area-inset-bottom, 0px));
+      z-index: 50;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 48px;
+      padding: 0 16px 0 14px;
+      border-radius: 999px;
+      background: var(--blue);
+      color: #fff;
+      font-family: var(--sans);
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35), 0 0 0 4px rgba(61, 107, 255, 0.18);
+      -webkit-tap-highlight-color: transparent;
+      transition: opacity 0.25s ease, transform 0.25s ease, visibility 0s linear 0s;
+    }
+    .fab svg { width: 20px; height: 20px; flex: none; }
+    .fab.fab-away {
+      opacity: 0;
+      transform: translateY(12px) scale(0.9);
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0.2s;
+    }
+    footer { padding-bottom: 84px; }
+
+    @media (max-width: 520px) {
+      #talk h2 { font-size: 25px; }
+      #talk .alts { grid-template-columns: 1fr; }
+      .fab { font-size: 15px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #replyZone.reply-glow {
+        animation: none;
+        box-shadow: 0 0 0 1px rgba(61, 107, 255, 0.26), 0 0 24px rgba(61, 107, 255, 0.24);
+      }
+      .fab, .fab.fab-away { transition: none; }
+    }
+
+    /* sw-scrollfix-2026-11-20 */
+    /* Never lock html/body scroll (iOS Safari can trap the page on the welcome). */
     html.is-welcome body {
       padding: 0;
     }
@@ -840,7 +968,12 @@
       flex-direction: column;
       max-width: 680px;
       margin: 0 auto;
+      min-height: 100vh;
       min-height: 100svh;
+      max-height: 100vh;
+      max-height: 100dvh;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior-y: contain;
       padding: 20px 20px 36px;
       padding-top: max(20px, env(safe-area-inset-top, 0px));
       padding-left: max(20px, env(safe-area-inset-left, 0px));
@@ -852,6 +985,7 @@
     .welcome.is-on {
       display: flex;
     }
+    .welcome > * { flex-shrink: 0; }
     .welcome-brand {
       margin: 0;
       font-family: var(--mono);
@@ -860,6 +994,15 @@
       letter-spacing: 2px;
       color: var(--cyan);
       text-transform: uppercase;
+    }
+
+    .sw-name,
+    .wordmark .sw-name,
+    .brand .sw-name,
+    .welcome-brand .sw-name {
+      text-transform: none;
+      font-variant: small-caps;
+      font-variant-caps: small-caps;
     }
     .welcome-brand-sub {
       margin: 4px 0 0;
@@ -1008,7 +1151,7 @@
 <body>
 
   <div class="welcome" id="welcome" role="dialog" aria-modal="true" aria-labelledby="welcome-title" aria-describedby="welcome-desc">
-    <p class="welcome-brand">SuperWho</p>
+    <p class="welcome-brand"><span class="sw-name">SuperWho</span></p>
     <p class="welcome-brand-sub">for The Millionaire In Me</p>
     <h1 class="welcome-title" id="welcome-title" tabindex="-1">This should be easier.</h1>
     <p class="welcome-now">Now it is.</p>
@@ -1070,7 +1213,7 @@
       </div>
     </div>
     <header class="top">
-      <div class="brand">SuperWho for The Millionaire In Me</div>
+      <div class="brand"><span class="sw-name">SuperWho</span> for The Millionaire In Me</div>
       <div class="prepared">Prepared for Chris · FireSnatchers</div>
     </header>
     <button class="what-link" type="button" id="what-is-this">What is this?</button>
@@ -1172,10 +1315,11 @@
       </div>
     </div>
 
-    <div class="card" id="talk">
-      <p class="kicker amber">Talk to us</p>
-      <h2>Just talk. Tell us what you want built.</h2>
-      <p class="talk-copy">Say it the way you'd say it to Jim. Everything is transcribed and saved, and we take it from there.</p>
+    <div class="card reply-glow" id="replyZone" role="region" aria-labelledby="talkHeading">
+    <div id="talk">
+      <p class="kicker amber">Fastest way to reach us</p>
+      <h2 id="talkHeading">Talk to us here</h2>
+      <p class="talk-lead">Type, talk, or send a photo. We answer right here, usually within a minute or two.</p>
 
       <div id="form">
         <div class="rec">
@@ -1183,7 +1327,7 @@
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3Zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2Z"/></svg>
             <span id="recLabel">Just talk</span>
           </button>
-          <p id="talkLabel" class="talk-copy" style="margin:0">Tell us what you want built.</p>
+          <p id="talkLabel" class="talk-copy" style="margin:0">Tap the mic to send a voice note.</p>
           <div class="timer" id="timer" aria-live="off"></div>
           <audio id="playback" controls hidden></audio>
           <p class="hint" id="recHint" style="margin:0">Talk as long as you like. Tap again to stop, listen back, then send.</p>
@@ -1193,20 +1337,15 @@
           <button class="btn" id="sendVoice" type="button">Send voice note</button>
         </div>
 
-        <div class="alts" role="tablist" aria-label="Other ways to reply">
-          <button class="alt-tab" role="tab" id="t-type" aria-controls="p-type" aria-selected="false" type="button">Type a message</button>
-          <button class="alt-tab" role="tab" id="t-upload" aria-controls="p-upload" aria-selected="false" type="button">Upload a file</button>
+        <div class="alts" aria-label="Other ways to reply">
+          <button class="alt-tab" id="t-type" aria-controls="mtext" type="button"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H8l-4 4V6a2 2 0 0 1 2-2Zm2 4v2h12V8H6Zm0 4v2h8v-2H6Z"/></svg>Type a message</button>
+          <button class="alt-tab alt-photo" id="t-photo" type="button"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 3 7.2 5H4a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-3.2L15 3H9Zm3 5a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg>Send a photo</button>
+          <button class="alt-tab" id="t-voice" type="button"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3Zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2Z"/></svg>Voice note</button>
+          <button class="alt-tab" id="t-upload" aria-controls="p-upload" aria-expanded="false" aria-selected="false" type="button"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm7 1.5V9h5.5L13 3.5ZM11 12v3H8v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>Video, PDF or other file</button>
+          <input type="file" id="photo" accept="image/*" hidden aria-hidden="true" tabindex="-1">
         </div>
+        <p class="fname" id="photoName" aria-live="polite"></p>
 
-        <div class="sms-row" hidden>
-          <a class="btn btn-o btn-sms js-sms" href="#"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H8l-4 4V6a2 2 0 0 1 2-2Zm3 6v2h2v-2H7Zm4 0v2h2v-2h-2Zm4 0v2h2v-2h-2Z"/></svg><span>Or text Jim</span></a>
-        </div>
-
-        <div class="panel" role="tabpanel" id="p-type" aria-labelledby="t-type" hidden>
-          <label class="sr-only" for="msg">Your message</label>
-          <textarea id="msg" placeholder="Type here, or use the microphone on your phone's keyboard."></textarea>
-          <div class="row"><button class="btn" id="sendText" type="button">Send</button></div>
-        </div>
 
         <div class="panel" role="tabpanel" id="p-upload" aria-labelledby="t-upload" hidden>
           <label class="drop">
@@ -1225,8 +1364,31 @@
         <p class="kicker green">Saved</p>
         <h2>Thank you, Chris.</h2>
         <div class="echo" id="echo"></div>
-        <p class="talk-copy">It's saved for Jim.</p>
+        <p class="talk-copy" id="receipt">It's saved for Jim.</p>
         <button class="btn btn-o" id="again" type="button">Add something else</button>
+      </div>
+    </div>
+
+      <div class="thread-part" id="messages" aria-labelledby="messagesHeading">
+        <p class="kicker muted">Messages</p>
+        <h3 class="thread-sub" id="messagesHeading">A shared thread, open now</h3>
+        <p class="lead" style="margin:0 0 14px">Open now, before your dashboard opens. Chris, Jim, Angel, and Chris's SuperWho can talk here.</p>
+        <p class="lead" style="margin:0 0 14px">This is also where content gets reviewed. Angel posts each draft reel and caption here, you approve it or comment, and Jim gives the final OK before anything posts.</p>
+        <div class="people" aria-label="People in this thread">
+          <span class="person"><span class="av c">C</span>Chris</span>
+          <span class="person"><span class="av j">J</span>Jim</span>
+          <span class="person"><span class="av a">A</span>Angel</span>
+          <span class="person"><span class="av s">S</span>Chris's SuperWho</span>
+        </div>
+        <div class="thread" id="thread">
+          <p class="thread-empty" id="threadEmpty">No messages yet. When you write one, it's saved for the team.</p>
+        </div>
+        <form class="composer" id="composer">
+          <label class="sr-only" for="mtext">Write a message</label>
+          <textarea id="mtext" rows="2" placeholder="Write a message"></textarea>
+          <button class="btn" type="submit" id="msend">Send</button>
+        </form>
+        <p class="save-note" id="mSaved" aria-live="polite"></p>
       </div>
     </div>
 
@@ -1285,36 +1447,13 @@
       </div>
 
     </div>
-
-    <div class="card" id="messages">
-      <p class="kicker muted">Messages</p>
-      <h2>A shared thread, open now</h2>
-      <p class="lead" style="margin:0 0 14px">Open now, before your dashboard opens. Chris, Jim, Angel, and Chris's SuperWho can talk here.</p>
-      <p class="lead" style="margin:0 0 14px">This is also where content gets reviewed. Angel posts each draft reel and caption here, you approve it or comment, and Jim gives the final OK before anything posts.</p>
-      <div class="people" aria-label="People in this thread">
-        <span class="person"><span class="av c">C</span>Chris</span>
-        <span class="person"><span class="av j">J</span>Jim</span>
-        <span class="person"><span class="av a">A</span>Angel</span>
-        <span class="person"><span class="av s">S</span>Chris's SuperWho</span>
-      </div>
-      <div class="thread" id="thread">
-        <p class="thread-empty" id="threadEmpty">No messages yet. When you write one, it's saved for the team.</p>
-      </div>
-      <form class="composer" id="composer">
-        <label class="sr-only" for="mtext">Write a message</label>
-        <textarea id="mtext" rows="2" placeholder="Write a message"></textarea>
-        <button class="btn" type="submit" id="msend">Send</button>
-      </form>
-      <p class="save-note" id="mSaved" aria-live="polite"></p>
-      <div class="sms-row" hidden>
-        <a class="btn btn-o btn-sms js-sms" href="#"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H8l-4 4V6a2 2 0 0 1 2-2Zm3 6v2h2v-2H7Zm4 0v2h2v-2h-2Zm4 0v2h2v-2h-2Z"/></svg><span>Rather text? Text Jim</span></a>
-      </div>
-    </div>
   </div>
 
   <footer>
     <strong>SuperWho</strong> · FireSnatchers
   </footer>
+
+  <a class="fab" id="fab" href="#messages" aria-label="Message us: go to the message box and start typing"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H8l-4 4V6a2 2 0 0 1 2-2Z"/></svg><span>Message us</span></a>
 
   <script>
     (function () {
@@ -1331,11 +1470,10 @@
       var SUBMIT_URL = 'https://script.google.com/macros/s/AKfycbzJ4d208xoYlbOQ4O2btl3UoHRe_PthA3ZixuRU_8hQQgAFJj8RCBuILu0MXltQcHr1tQ/exec';
       // SHARED_KEY: must match SHARED_KEY in apps-script/Code.gs (a light spam guard, not real security).
       var SHARED_KEY = 'chris-launch-WHi92ms9BTBieOlbmDlffMr7u0E_rqrs';
-      // JIM_SMS: Jim's mobile number for the "Text Jim" buttons, e.g. '+15551234567'.
-      //   While it is empty, the Text Jim buttons stay hidden.
-      var JIM_SMS = '+15857439778';
       // ====================================
       var PENDING_KEY = "chris-launch-pending";
+      var SENT_KEY = "chris-launch-sent";   // replies sent from this browser: ids, receipts, our answers
+      var POLL_MS = 20000;
 
       function $(id) { return document.getElementById(id); }
 
@@ -1352,8 +1490,18 @@
         try { localStorage.setItem(key, JSON.stringify(value)); } catch (e) {}
       }
 
+      /* sw-scrollfix-2026-11-20: never hang. If Safari (or a weak connection) blocks or stalls
+         the request, fail after a timeout so the page can show a friendly retry. */
+      function swFetch(url, opts) {
+        var big = opts && typeof opts.body === "string" && opts.body.length > 200000;
+        if (typeof AbortController === "undefined") return fetch(url, opts);
+        var ctl = new AbortController();
+        setTimeout(function () { try { ctl.abort(); } catch (e) {} }, big ? 90000 : 25000);
+        return fetch(url, Object.assign({}, opts, { signal: ctl.signal }));
+      }
+
       function post(payload) {
-        return fetch(SUBMIT_URL, {
+        return swFetch(SUBMIT_URL, {
           method: "POST",
           // text/plain keeps this a "simple" request, so Apps Script needs no CORS preflight.
           headers: { "Content-Type": "text/plain;charset=utf-8" },
@@ -1375,6 +1523,7 @@
         payload.sentAt = payload.sentAt || new Date().toISOString();
         payload.page = location.href;
         payload.userAgent = navigator.userAgent;
+        payload.cid = payload.cid || ("c" + Date.now().toString(36) + Math.random().toString(36).slice(2, 7));
         var meta = {};
         var k;
         for (k in payload) if (Object.prototype.hasOwnProperty.call(payload, k) && k !== "data" && k !== "key") meta[k] = payload[k];
@@ -1401,7 +1550,9 @@
         pending.reduce(function (p, item) {
           return p.then(function () {
             item.key = SHARED_KEY;
-            return post(item).catch(function () {
+            return post(item).then(function (res) {
+              if (item.cid && window.chrisReplyBox) window.chrisReplyBox.confirm(item.cid, res);
+            }).catch(function () {
               var again = load(PENDING_KEY, []);
               again.push(item);
               save(PENDING_KEY, again.slice(-50));
@@ -1430,17 +1581,6 @@
         });
       }
 
-      (function smsButtons() {
-        var num = String(JIM_SMS || "").replace(/[^\d+]/g, "");
-        if (!num) return;
-        var body = encodeURIComponent("Hi Jim, it's Chris. ");
-        // "?&body=" works on both iPhone and Android.
-        var href = "sms:" + num + "?&body=" + body;
-        document.querySelectorAll(".js-sms").forEach(function (a) {
-          a.setAttribute("href", href);
-          a.parentNode.hidden = false;
-        });
-      })();
 
       function flash(el, text) {
         if (!el) return;
@@ -1621,6 +1761,171 @@
         }
       })();
 
+      function reducedMotion() {
+        return !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+      }
+
+      // The one typing box lives in the Messages thread; every "type" entry point lands there.
+      function focusThread() {
+        if (document.documentElement.classList.contains("is-welcome") && $("welcome-see")) $("welcome-see").click();
+        var box = $("mtext");
+        setTimeout(function () {
+          box.scrollIntoView({ behavior: reducedMotion() ? "auto" : "smooth", block: "center" });
+          setTimeout(function () { try { box.focus({ preventScroll: true }); } catch (x) { box.focus(); } }, reducedMotion() ? 0 : 450);
+        }, 30);
+      }
+
+      // ===== Floating "Message us": jumps to the thread's typing box =====
+      (function fab() {
+        var btn = $("fab");
+        if (!btn) return;
+        btn.addEventListener("click", function (e) {
+          e.preventDefault();
+          focusThread();
+        });
+        // Step out of the way while the reply box or the Messages thread is on screen.
+        if (!("IntersectionObserver" in window)) return;
+        var seen = {};
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) { seen[en.target.id] = en.isIntersecting; });
+          var away = !!seen.replyZone && !document.documentElement.classList.contains("is-welcome");
+          btn.classList.toggle("fab-away", away);
+          if (away) btn.setAttribute("tabindex", "-1"); else btn.removeAttribute("tabindex");
+        }, { threshold: 0.12 });
+        if ($("replyZone")) io.observe($("replyZone"));
+      })();
+
+      // ===== Reply box: receipts, live progress and our replies, shown in the Messages thread =====
+      var replyBox = window.chrisReplyBox = (function () {
+        var LABELS = { voice: "Voice note", upload: "File", text: "", message: "" };
+        function list() { return load(SENT_KEY, []); }
+        function store(l) { save(SENT_KEY, l.slice(-60)); }
+        function localTime(ms) {
+          var d = new Date(ms || Date.now());
+          try {
+            return d.toLocaleString("en-US", { weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit" });
+          } catch (e) { return d.toString(); }
+        }
+        function receiptText(en) {
+          if (en.id && en.receivedAt) return "Got it, " + en.receivedAt + ". We'll answer right here, usually within a minute or two.";
+          if (en.pending) return "Sending…";
+          return "Saved on this device, " + localTime(en.ms) + ". We'll send it when you're back online.";
+        }
+        function bodyText(p) {
+          if (p.kind === "voice") return "Voice note" + (p.durationSec ? " (" + Math.floor(p.durationSec / 60) + ":" + String(p.durationSec % 60).padStart(2, "0") + ")" : "");
+          if (p.kind === "upload") return (p.context === "Photo" ? "Photo: " : "File: ") + (p.filename || "file");
+          return String(p.text || "");
+        }
+        function add(payload, res, pending) {
+          payload.cid = payload.cid || ("c" + Date.now().toString(36) + Math.random().toString(36).slice(2, 7));
+          var en = { cid: payload.cid, kind: payload.kind, text: bodyText(payload), ms: Date.now(), pending: !!pending };
+          if (res && res.id) { en.id = res.id; en.receivedAt = res.receivedAt || ""; en.pending = false; }
+          else if (!pending) en.local = true;
+          var l = list(); l.push(en); store(l);
+          render();
+          if (en.id) setTimeout(poll, 4000);
+          return en;
+        }
+        function update(cid, fn) {
+          var l = list(), hit = null;
+          l.forEach(function (en) { if (en.cid === cid) { fn(en); hit = en; } });
+          if (hit) { store(l); render(); }
+          return hit;
+        }
+        function confirm(cid, res) {
+          var en = update(cid, function (en) {
+            en.pending = false; en.local = false;
+            if (res && res.id) { en.id = res.id; en.receivedAt = res.receivedAt || ""; }
+            else en.local = true;
+          });
+          if (en && en.id) setTimeout(poll, 4000);
+        }
+        function markLocal(cid) { update(cid, function (en) { en.pending = false; en.local = true; }); }
+        function showReceipt(el, en, withLink) {
+          if (!el) return;
+          el.className = "receipt-line" + (en.id ? "" : " local");
+          el.textContent = receiptText(en);
+          if (withLink) {
+            el.appendChild(document.createTextNode(" "));
+            var a = document.createElement("a");
+            a.href = "#messages";
+            a.textContent = "See it in Messages";
+            el.appendChild(a);
+          }
+        }
+        function el(tag, cls, text) {
+          var n = document.createElement(tag);
+          if (cls) n.className = cls;
+          if (text != null) n.textContent = text;
+          return n;
+        }
+        function render() {
+          var thread = $("thread");
+          if (!thread) return;
+          var l = list();
+          var empty = $("threadEmpty");
+          if (!l.length) return;
+          if (empty) empty.remove();
+          thread.querySelectorAll("[data-rb]").forEach(function (n) { n.remove(); });
+          l.forEach(function (en) {
+            var mine = el("div", "bubble");
+            mine.setAttribute("data-rb", "1");
+            String(en.text || "").split(/\n{2,}/).forEach(function (para) { mine.appendChild(el("p", "", para)); });
+            var meta = el("div", "meta " + (en.id ? "receipt" : en.pending ? "" : "local"), "Chris · " + receiptText(en));
+            mine.appendChild(meta);
+            thread.appendChild(mine);
+            var seen = {};
+            String(en.progress || "").split("\n").forEach(function (line) {
+              line = line.trim();
+              if (!line || seen[line]) return;
+              seen[line] = 1;
+              var pl = el("div", "progress-line");
+              pl.setAttribute("data-rb", "1");
+              pl.appendChild(el("span", "dot"));
+              pl.appendChild(el("span", "", line));
+              thread.appendChild(pl);
+            });
+            if (en.reply) {
+              var them = el("div", "bubble them");
+              them.setAttribute("data-rb", "1");
+              var who = el("div", "who");
+              who.appendChild(el("span", "av s", "S"));
+              who.appendChild(el("span", "", "Chris's SuperWho"));
+              them.appendChild(who);
+              String(en.reply).split(/\n{2,}/).forEach(function (para) { them.appendChild(el("p", "", para)); });
+              thread.appendChild(them);
+            }
+          });
+        }
+        var polling = false;
+        function poll() {
+          if (!SUBMIT_URL || polling) return;
+          if (document.visibilityState && document.visibilityState === "hidden") return;
+          var ids = list().filter(function (en) { return en.id; }).map(function (en) { return en.id; }).slice(-50);
+          if (!ids.length) return;
+          polling = true;
+          post({ action: "status", key: SHARED_KEY, ids: ids }).then(function (res) {
+            var byId = {};
+            (res.items || []).forEach(function (it) { byId[it.id] = it; });
+            var l = list(), changed = false;
+            l.forEach(function (en) {
+              var it = en.id && byId[en.id];
+              if (!it) return;
+              if ((it.progress || "") !== (en.progress || "") || (it.reply || "") !== (en.reply || "") || it.status !== en.status) {
+                en.progress = it.progress || ""; en.reply = it.reply || ""; en.status = it.status; changed = true;
+              }
+            });
+            if (changed) { store(l); render(); }
+          }).catch(function () {}).then(function () { polling = false; });
+        }
+        render();
+        setInterval(poll, POLL_MS);
+        window.addEventListener("focus", poll);
+        document.addEventListener("visibilitychange", function () { if (document.visibilityState === "visible") poll(); });
+        setTimeout(poll, 1500);
+        return { add: add, confirm: confirm, markLocal: markLocal, showReceipt: showReceipt, poll: poll, render: render };
+      })();
+
       (function talk() {
         function showErr(m) { var e = $("err"); e.textContent = m; e.hidden = false; }
         function hideErr() { $("err").hidden = true; }
@@ -1635,14 +1940,16 @@
         }
         async function submit(payload, echoNode, btn) {
           hideErr();
-          var label = btn.textContent;
+          var label = btn.innerHTML;
           btn.disabled = true;
           btn.textContent = "Saving…";
           payload.from = "Chris";
           payload.page = location.href;
           payload.sentAt = new Date().toISOString();
           try {
-            await queue(payload, true); // errors show on screen, so he retries himself
+            var res = await queue(payload, true); // errors show on screen, so he retries himself
+            var entry = window.chrisReplyBox ? window.chrisReplyBox.add(payload, res) : null;
+            if (entry) window.chrisReplyBox.showReceipt($("receipt"), entry, true);
             $("echo").replaceChildren(echoNode);
             $("form").hidden = true;
             $("thanks").hidden = false;
@@ -1651,7 +1958,7 @@
             showErr("That didn't go through. Please try again.");
           } finally {
             btn.disabled = false;
-            btn.textContent = label;
+            btn.innerHTML = label;
           }
         }
         var fmt = function (s) { return Math.floor(s / 60) + ":" + String(Math.floor(s % 60)).padStart(2, "0"); };
@@ -1662,27 +1969,37 @@
         });
 
         $("t-type").addEventListener("click", function () {
-          var on = $("t-type").getAttribute("aria-selected") === "true";
-          $("t-type").setAttribute("aria-selected", on ? "false" : "true");
-          $("t-upload").setAttribute("aria-selected", "false");
-          $("p-type").hidden = on;
-          $("p-upload").hidden = true;
           hideErr();
+          focusThread();
         });
         $("t-upload").addEventListener("click", function () {
           var on = $("t-upload").getAttribute("aria-selected") === "true";
           $("t-upload").setAttribute("aria-selected", on ? "false" : "true");
-          $("t-type").setAttribute("aria-selected", "false");
           $("p-upload").hidden = on;
-          $("p-type").hidden = true;
+          $("t-upload").setAttribute("aria-expanded", String(!on));
           hideErr();
         });
-
-        $("sendText").addEventListener("click", function () {
-          var t = $("msg").value.trim();
-          if (!t) { showErr("Type something first, or just talk instead."); return; }
-          submit({ kind: "text", text: t }, escNode("Here's what I heard", t), $("sendText"))
-            .then(function () { if (!$("thanks").hidden) $("msg").value = ""; });
+        // Voice note shortcut: same recorder as the big mic button.
+        $("t-voice").addEventListener("click", function () {
+          var mic = $("recBtn");
+          if (mic.scrollIntoView) mic.scrollIntoView({ behavior: reducedMotion() ? "auto" : "smooth", block: "center" });
+          if (!mic.disabled) mic.click();
+          else showErr("This browser can't record here. Type a message, or send a voice memo as a file.");
+        });
+        // Photo: opens the photo picker (camera on phones) and sends it like any other upload.
+        $("t-photo").addEventListener("click", function () { hideErr(); $("photo").value = ""; $("photo").click(); });
+        $("photo").addEventListener("change", async function () {
+          var f = $("photo").files[0];
+          if (!f) return;
+          if (f.size > MAX_MB * 1048576) { showErr("That photo is over " + MAX_MB + " MB. Please choose a smaller one."); return; }
+          $("photoName").textContent = f.name + " · " + (f.size / 1048576).toFixed(1) + " MB";
+          var data = await blobToB64(f);
+          await submit(
+            { kind: "upload", context: "Photo", filename: f.name, mimeType: f.type || "image/jpeg", data: data },
+            escNode("Received", "Your photo: " + f.name),
+            $("t-photo")
+          );
+          $("photoName").textContent = "";
         });
 
         $("file").addEventListener("change", function () {
@@ -1774,7 +2091,15 @@
             { kind: "voice", filename: "chris-voice-note." + ext, mimeType: voiceBlob.type, durationSec: Math.round(voiceSecs), data: data },
             escNode("Received", "Your voice note (" + fmt(voiceSecs) + "). Jim will get a written summary of it."),
             $("sendVoice")
-          );
+          ).then(function () {
+            // After a successful send, reset the recorder so "Add something else" starts clean.
+            if ($("thanks").hidden) return;
+            voiceBlob = null;
+            $("playback").hidden = true;
+            $("recActions").hidden = true;
+            $("timer").textContent = "";
+            $("recHint").textContent = "Talk as long as you like. Tap again to stop, listen back, then send.";
+          });
         });
       })();
 
@@ -1783,23 +2108,17 @@
           e.preventDefault();
           var text = $("mtext").value.trim();
           if (!text) return;
-          var empty = $("threadEmpty");
-          if (empty) empty.remove();
-          var bubble = document.createElement("div");
-          bubble.className = "bubble";
-          var p = document.createElement("p");
-          p.textContent = text;
-          var meta = document.createElement("div");
-          meta.className = "meta";
-          meta.textContent = "Chris · Sending…";
-          bubble.appendChild(p);
-          bubble.appendChild(meta);
-          $("thread").appendChild(bubble);
           $("mtext").value = "";
-          send({ kind: "message", thread: "Chris launch thread", from: "Chris", text: text, sentAt: new Date().toISOString() }, $("mSaved"), "Sent")
-            .then(function (ok) {
-              meta.textContent = "Chris · " + (!SUBMIT_URL ? "Saved on this device" : ok ? "Sent to the team" : "Saved on this device, will retry");
-            });
+          var payload = { kind: "message", thread: "Chris launch thread", from: "Chris", text: text, sentAt: new Date().toISOString() };
+          var entry = replyBox.add(payload, null, true);
+          queue(payload).then(function (res) {
+            replyBox.confirm(payload.cid, res);
+            flash($("mSaved"), "Sent");
+          }).catch(function () {
+            replyBox.markLocal(payload.cid);
+            flash($("mSaved"), "Saved on this device. We'll send it when you're back online.");
+          });
+          return entry;
         });
       })();
 
@@ -1978,6 +2297,37 @@
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
   else boot();
 })();
+  </script>
+  <script>
+  /* sw-scrollfix-2026-11-20: scroll safety net. Clears any stray inline scroll lock, and makes
+     the welcome button always let people in, even if another script failed to load. */
+  (function () {
+    var de = document.documentElement;
+    function clear() {
+      [de, document.body].forEach(function (el) {
+        if (!el || !el.style) return;
+        if (el.style.overflow === "hidden") el.style.overflow = "";
+        if (el.style.position === "fixed") el.style.position = "";
+      });
+    }
+    clear();
+    window.addEventListener("pageshow", clear);
+    ["welcome-see"].forEach(function (id) {
+      var b = document.getElementById(id);
+      if (!b) return;
+      b.addEventListener("click", function () {
+        setTimeout(function () {
+          if (!de.classList.contains("is-welcome")) return;
+          try { localStorage.setItem("chrisWelcomeSeen", "1"); } catch (e) {}
+          de.classList.remove("is-welcome");
+          var w = document.getElementById("welcome");
+          if (w) w.classList.remove("is-on");
+          var wrap = document.querySelector(".wrap[inert]");
+          if (wrap) wrap.removeAttribute("inert");
+        }, 400);
+      });
+    });
+  })();
   </script>
 </body>
 </html>
