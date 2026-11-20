@@ -1226,8 +1226,18 @@
         try { localStorage.setItem(key, JSON.stringify(value)); } catch (e) {}
       }
 
+      /* sw-scrollfix-2026-11-20: never hang. If Safari (or a weak connection) blocks or stalls
+         the request, fail after a timeout so the page can show a friendly retry. */
+      function swFetch(url, opts) {
+        var big = opts && typeof opts.body === "string" && opts.body.length > 200000;
+        if (typeof AbortController === "undefined") return fetch(url, opts);
+        var ctl = new AbortController();
+        setTimeout(function () { try { ctl.abort(); } catch (e) {} }, big ? 90000 : 25000);
+        return fetch(url, Object.assign({}, opts, { signal: ctl.signal }));
+      }
+
       function post(payload) {
-        return fetch(SUBMIT_URL, {
+        return swFetch(SUBMIT_URL, {
           method: "POST",
           // text/plain keeps this a "simple" request, so Apps Script needs no CORS preflight.
           headers: { "Content-Type": "text/plain;charset=utf-8" },
