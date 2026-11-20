@@ -171,6 +171,15 @@
       color: var(--cyan);
     }
 
+    .sw-name,
+    .wordmark .sw-name,
+    .brand .sw-name,
+    .welcome-brand .sw-name {
+      text-transform: none;
+      font-variant: small-caps;
+      font-variant-caps: small-caps;
+    }
+
     .hello {
       font-size: 40px;
       font-weight: 700;
@@ -1290,7 +1299,7 @@
     <section class="screen" id="screen-welcome" data-screen="welcome">
       <div class="wordmark">
         <img src="assets/icon.svg" alt="">
-        <span>My SuperWho</span>
+        <span>My <span class="sw-name">SuperWho</span></span>
       </div>
       <div class="welcome-main">
         <div class="welcome-mosaic" id="welcome-mosaic" aria-hidden="true">
@@ -1402,7 +1411,7 @@
     <section class="screen is-on" id="screen-home" data-screen="home">
       <div class="wordmark">
         <img src="assets/icon.svg" alt="">
-        <span>My SuperWho</span>
+        <span>My <span class="sw-name">SuperWho</span></span>
       </div>
       <div class="hello-row">
         <button class="avatar-btn" type="button" id="avatar-btn" hidden aria-label="Change your photo">
