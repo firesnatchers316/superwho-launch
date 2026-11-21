@@ -1,9 +1,25 @@
-const CACHE = "my-superwho-v18";
+const CACHE = "my-superwho-v19";
 const PRECACHE = [
   "./",
   "./index.html",
   "./manifest.json",
-  "./assets/icon.svg"
+  "./assets/icon-192.png",
+  "./assets/icon-512.png",
+  "./assets/apple-touch-icon.png",
+  "./assets/week-2026-11-16.png",
+  "./assets/profile/rosa-1.jpg",
+  "./assets/profile/rosa-2.jpg",
+  "./assets/profile/rosa-3.jpg",
+  "./assets/profile/rosa-4.jpg",
+  "./assets/profile/rosa-5.jpg",
+  "./assets/profile/rosa-6.jpg",
+  "./fonts/SchibstedGrotesk-Regular.ttf",
+  "./fonts/SchibstedGrotesk-Medium.ttf",
+  "./fonts/SchibstedGrotesk-SemiBold.ttf",
+  "./fonts/SchibstedGrotesk-Bold.ttf",
+  "./fonts/IBMPlexMono-Regular.ttf",
+  "./fonts/IBMPlexMono-Medium.ttf",
+  "./fonts/IBMPlexMono-SemiBold.ttf"
 ];
 
 self.addEventListener("install", (event) => {
