@@ -1146,6 +1146,70 @@
     }
     .what-link:active { color: var(--ink); }
 
+
+    /* Skool invite box (staged 2026-11-22; not live until published) */
+    #skoolInvite { scroll-margin-top: 16px; }
+    #skoolInvite .skool-lead {
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--ink);
+      margin: 0 0 16px;
+    }
+    #skoolInvite .email-row { margin: 0 0 16px; }
+    #skoolInvite .tap-next {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin: 0 0 8px;
+    }
+    #skoolInvite .tap-next[hidden] { display: none; }
+    #skoolInvite .chip.is-next,
+    #skoolInvite .btn.is-next {
+      box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.28), 0 0 18px rgba(61, 107, 255, 0.3);
+      animation: replyGlow 3.6s ease-in-out infinite;
+      border-color: rgba(34, 211, 238, 0.55);
+    }
+    #skoolInvite .skool-steps {
+      margin: 0 0 14px;
+      padding: 0 0 0 22px;
+    }
+    #skoolInvite .skool-steps li {
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--ink);
+      margin: 0 0 10px;
+      padding-left: 4px;
+    }
+    #skoolInvite .skool-steps li:last-child { margin-bottom: 0; }
+    #skoolInvite .skool-note {
+      font-size: 14px;
+      line-height: 1.45;
+      color: var(--muted);
+      margin: 0 0 18px;
+    }
+    #skoolInvite #skoolDone {
+      width: 100%;
+      min-height: 58px;
+      font-size: 18px;
+      border-radius: 12px;
+    }
+    #skoolInvite.is-done.reply-glow,
+    #skoolInvite.is-done {
+      animation: none;
+      box-shadow: none;
+      border-color: transparent;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      #skoolInvite .chip.is-next,
+      #skoolInvite .btn.is-next {
+        animation: none;
+        box-shadow: 0 0 0 2px rgba(61, 107, 255, 0.26), 0 0 16px rgba(61, 107, 255, 0.2);
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -1166,15 +1230,15 @@
       <ol>
         <li>
           <span class="ask">Invite us as an admin to Dr. Gina's Skool group.</span>
-          <span class="help">Add firesnatchers316@gmail.com, and we can start on posts, comments, and edits right away.</span>
+          <span class="help">Add team@superwho.io, and we can start on posts, comments, and edits right away.</span>
         </li>
         <li>
-          <span class="ask">Invite the same address to Jill Wade's Skool group, or tell us when she's created it.</span>
+          <span class="ask">Invite team@superwho.io to Jill Wade's Skool group, or tell us when she's created it.</span>
           <span class="help">We can build that group from her Google Drive once we have access.</span>
         </li>
         <li>
           <span class="ask">Share Jill's Google Drive folder with us.</span>
-          <span class="help">Share it with that same address, and we can use what's already there.</span>
+          <span class="help">Share it with firesnatchers316@gmail.com, and we can use what's already there.</span>
         </li>
         <li>
           <span class="ask">Approve linking Dr. Gina's Instagram to The Prevent Clinic Page.</span>
@@ -1220,6 +1284,29 @@
 
     <h1>Chris, more gets done, and less of it runs through you.</h1>
     <p class="lead">That's what SuperWho is for. It's being built around your objective: becoming the go-to fractional COO for the Scaling.com community. Your first look opens Tuesday, and some of it starts today.</p>
+
+    <div class="card reply-glow" id="skoolInvite" role="region" aria-labelledby="skoolHeading">
+      <p class="kicker amber">Do this first</p>
+      <h2 id="skoolHeading">Hand off Jill's Skool group</h2>
+      <p class="skool-lead">SuperWho handles posts, member questions, and engagement, so you don't have to.</p>
+      <p class="tap-next" id="skoolTapHint">Tap here next</p>
+      <div class="email-row">
+        <span>Invite this address as an admin</span>
+        <button type="button" class="chip js-copy is-next" id="skoolCopy" data-email="team@superwho.io" aria-label="Copy team@superwho.io">
+          <span class="addr">team@superwho.io</span>
+          <span class="state">Copy</span>
+        </button>
+      </div>
+      <ol class="skool-steps">
+        <li>In Jill's Skool group, tap Settings, then open the Invite tab.</li>
+        <li>Paste team@superwho.io in the Email address field and tap Send.</li>
+        <li>After SuperWho joins, open the Members tab.</li>
+        <li>Tap Membership Settings next to their name and change the Role to Admin.</li>
+      </ol>
+      <p class="skool-note">We'll join from the invite email. Once we show up in Members, set the role to Admin, then tap the button below.</p>
+      <button class="btn" type="button" id="skoolDone">Done, I sent it</button>
+      <p class="save-note" id="skoolSaved" aria-live="polite"></p>
+    </div>
 
     <div class="card" id="launch">
       <div class="count-head">
@@ -1397,7 +1484,14 @@
       <h2>Five things that get us moving</h2>
       <p class="lead" style="margin:0 0 14px">Each one unlocks something above. Check them off as you go. Your progress is saved.</p>
       <div class="email-row">
-        <span>Use this address:</span>
+        <span>For Skool groups:</span>
+        <button type="button" class="chip js-copy" data-email="team@superwho.io" aria-label="Copy team@superwho.io">
+          <span class="addr">team@superwho.io</span>
+          <span class="state">Copy</span>
+        </button>
+      </div>
+      <div class="email-row">
+        <span>For Google Drive:</span>
         <button type="button" class="chip js-copy" data-email="firesnatchers316@gmail.com" aria-label="Copy firesnatchers316@gmail.com">
           <span class="addr">firesnatchers316@gmail.com</span>
           <span class="state">Copy</span>
@@ -1407,12 +1501,12 @@
 
       <label class="need">
         <input type="checkbox" id="n1" data-need="1">
-        <span class="need-text"><span class="num">1.</span>Invite firesnatchers316@gmail.com as an admin to Dr. Gina's Skool group.</span>
+        <span class="need-text"><span class="num">1.</span>Invite team@superwho.io as an admin to Dr. Gina's Skool group.</span>
       </label>
 
       <div class="need">
         <input type="checkbox" id="n2" data-need="2">
-        <label class="need-text" for="n2"><span class="num">2.</span>Invite the same address to Jill Wade's Skool group, or tell us when she's created it.</label>
+        <label class="need-text" for="n2"><span class="num">2.</span>Invite team@superwho.io to Jill Wade's Skool group, or tell us when she's created it.</label>
         <div class="extra">
           <label class="sr-only" for="n2note">Note about Jill Wade's Skool group</label>
           <input type="text" id="n2note" data-need-field="2" placeholder="If she hasn't yet, tell us when">
@@ -1651,6 +1745,70 @@
         });
       });
 
+      (function skoolInvite() {
+        var KEY = "chris-launch-skool-invite";
+        var box = $("skoolInvite");
+        var copyBtn = $("skoolCopy");
+        var doneBtn = $("skoolDone");
+        var hint = $("skoolTapHint");
+        var saved = $("skoolSaved");
+        if (!box || !copyBtn || !doneBtn) return;
+        var state = load(KEY, {});
+
+        function showDone(okText) {
+          box.classList.remove("reply-glow");
+          box.classList.add("is-done");
+          copyBtn.classList.remove("is-next");
+          doneBtn.classList.remove("is-next");
+          if (hint) hint.hidden = true;
+          doneBtn.disabled = true;
+          doneBtn.textContent = "Invite sent";
+          if (saved) {
+            clearTimeout(saved._t);
+            saved.textContent = okText || "Got it. We'll take it from here.";
+          }
+        }
+
+        function pointTo(el) {
+          copyBtn.classList.toggle("is-next", el === copyBtn);
+          doneBtn.classList.toggle("is-next", el === doneBtn);
+          if (hint) hint.hidden = !el;
+        }
+
+        if (state.done) {
+          showDone("You already marked this done. We'll take it from here.");
+          return;
+        }
+
+        pointTo(copyBtn);
+        copyBtn.addEventListener("click", function () {
+          pointTo(doneBtn);
+        });
+
+        doneBtn.addEventListener("click", function () {
+          if (doneBtn.disabled) return;
+          doneBtn.disabled = true;
+          queue({
+            kind: "message",
+            thread: "Chris launch thread",
+            from: "Chris",
+            text: "Done: I invited team@superwho.io to Jill's Skool group as an admin.",
+            sentAt: new Date().toISOString()
+          }).then(function (res) {
+            state.done = true;
+            state.at = new Date().toISOString();
+            save(KEY, state);
+            showDone(res && res.local ? "Saved on this device. We'll send it when you're back online." : "Got it. We'll take it from here.");
+          }).catch(function () {
+            state.done = true;
+            state.at = new Date().toISOString();
+            save(KEY, state);
+            showDone("Saved on this device. We'll send it when you're back online.");
+          });
+        });
+      })();
+
+
       (function needs() {
         var state = load(NEEDS_KEY, {});
         var NEED_LABELS = {};
@@ -1788,11 +1946,12 @@
         var seen = {};
         var io = new IntersectionObserver(function (entries) {
           entries.forEach(function (en) { seen[en.target.id] = en.isIntersecting; });
-          var away = !!seen.replyZone && !document.documentElement.classList.contains("is-welcome");
+          var away = (!!seen.replyZone || !!seen.skoolInvite) && !document.documentElement.classList.contains("is-welcome");
           btn.classList.toggle("fab-away", away);
           if (away) btn.setAttribute("tabindex", "-1"); else btn.removeAttribute("tabindex");
         }, { threshold: 0.12 });
         if ($("replyZone")) io.observe($("replyZone"));
+        if ($("skoolInvite")) io.observe($("skoolInvite"));
       })();
 
       // ===== Reply box: receipts, live progress and our replies, shown in the Messages thread =====
