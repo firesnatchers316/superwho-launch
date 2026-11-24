@@ -16,7 +16,7 @@
   <meta name="color-scheme" content="dark">
   <meta name="robots" content="noindex,nofollow">
   <meta name="robots" content="noindex, nofollow, noarchive">
-  <meta name="description" content="Chris's SuperWho launch page: more results, less of your time. Your first look opens Tuesday.">
+  <meta name="description" content="Chris's SuperWho launch page: more results, less of your time. Reels, Skool help, and a working reply box are ready now.">
   <title>Chris · SuperWho</title>
   <style>
     @font-face {
@@ -1283,7 +1283,7 @@
     <button class="what-link" type="button" id="what-is-this">What is this?</button>
 
     <h1>Chris, more gets done, and less of it runs through you.</h1>
-    <p class="lead">That's what SuperWho is for. It's being built around your objective: becoming the go-to fractional COO for the Scaling.com community. Your first look opens Tuesday, and some of it starts today.</p>
+    <p class="lead">That's what SuperWho is for. It's being built around your objective: becoming the go-to fractional COO for the Scaling.com community. Dr. Gina's four reels are ready for your review, your Skool SuperWho is ready to start, and you can talk with us here now.</p>
 
     <div class="card reply-glow" id="skoolInvite" role="region" aria-labelledby="skoolHeading">
       <p class="kicker amber">Do this first</p>
@@ -1309,26 +1309,35 @@
     </div>
 
     <div class="card" id="launch">
-      <div class="count-head">
-        <p class="kicker" style="margin:0">Until your first look</p>
-        <h2>Your SuperWho dashboard</h2>
+      <p class="kicker green">Ready for you now</p>
+      <h2>More of the work is already off your plate</h2>
+      <div class="wow">
+        <div class="wow-item">
+          <div class="badge" style="background:var(--green)">Ready now</div>
+          <h3>Dr. Gina's four reels</h3>
+          <p>Four reels, built from her own Houston footage by the social media SuperWho we designed for you, are done and coming to you for review.</p>
+        </div>
+        <div class="wow-item">
+          <div class="badge" style="background:var(--green)">Ready now</div>
+          <h3>Your Skool groups, handled</h3>
+          <p>Posts, member questions, and engagement get handled so you don't have to. Your Skool management SuperWho is ready to begin building your page for Dr. Jill and to manage for Dr. Gina.</p>
+        </div>
+        <div class="wow-item">
+          <div class="badge" style="background:var(--green)">Ready now</div>
+          <h3>Reply box and messages</h3>
+          <p>The reply box and messages thread work now. Type, talk, or send a photo, and we answer right here.</p>
+        </div>
+        <div class="wow-item">
+          <div class="badge">Up next</div>
+          <h3>Real numbers, then your dashboard</h3>
+          <p>Next we connect Dr. Gina's real Instagram and Facebook numbers once the accounts are linked. Your dashboard follows.</p>
+        </div>
       </div>
-      <div class="ticks" aria-hidden="true">
-        <div class="tick"><div class="tick-num" id="d">00</div><div class="tick-label">Days</div></div>
-        <div class="tick"><div class="tick-num" id="h">00</div><div class="tick-label">Hours</div></div>
-        <div class="tick"><div class="tick-num" id="m">00</div><div class="tick-label">Mins</div></div>
-        <div class="tick"><div class="tick-num" id="s">00</div><div class="tick-label">Secs</div></div>
-      </div>
-      <p class="sr-only" id="countLive" aria-live="polite"></p>
-      <p class="target">
-        <strong>Your dashboard opens</strong>
-        <span class="target-date">Tuesday, November 24, 2026</span>
-        <span class="target-time">6:00 PM ET</span>
-      </p>
+      <p class="sr-only" id="countLive" aria-live="polite">Dr. Gina's four reels are ready for your review. Posts, member questions, and engagement in your Skool groups get handled so you don't have to. Your Skool management SuperWho is ready to begin building your page for Dr. Jill and to manage for Dr. Gina. The reply box and messages thread work now. Your dashboard follows once Dr. Gina's real Instagram and Facebook numbers are connected.</p>
     </div>
 
     <div class="card" id="firstlook">
-      <p class="kicker">Tuesday, 6:00 PM</p>
+      <p class="kicker">What's ahead</p>
       <h2>What your first ten minutes should feel like</h2>
       <div class="wow">
         <div class="wow-item">
@@ -1459,7 +1468,7 @@
       <div class="thread-part" id="messages" aria-labelledby="messagesHeading">
         <p class="kicker muted">Messages</p>
         <h3 class="thread-sub" id="messagesHeading">A shared thread, open now</h3>
-        <p class="lead" style="margin:0 0 14px">Open now, before your dashboard opens. Chris, Jim, Angel, and Chris's SuperWho can talk here.</p>
+        <p class="lead" style="margin:0 0 14px">The messages thread works now. Chris, Jim, Angel, and Chris's SuperWho can talk here.</p>
         <p class="lead" style="margin:0 0 14px">This is also where content gets reviewed. Angel posts each draft reel and caption here, you approve it or comment, and Jim gives the final OK before anything posts.</p>
         <div class="people" aria-label="People in this thread">
           <span class="person"><span class="av c">C</span>Chris</span>
@@ -1551,7 +1560,6 @@
 
   <script>
     (function () {
-      var TARGET = new Date("2026-11-24T18:00:00-05:00");
       var EMAIL = "firesnatchers316@gmail.com";
       var NEEDS_KEY = "chris-launch-needs";
       var QUESTIONS_KEY = "chris-launch-questions";
@@ -1682,36 +1690,6 @@
         clearTimeout(el._t);
         el._t = setTimeout(function () { el.textContent = ""; }, 2500);
       }
-
-      function pad(n) {
-        n = Math.max(0, n);
-        return (n < 10 ? "0" : "") + n;
-      }
-
-      (function countdown() {
-        var dEl = $("d"), hEl = $("h"), mEl = $("m"), sEl = $("s"), live = $("countLive");
-        var lastSpoken = "";
-        function tick() {
-          var diff = TARGET.getTime() - Date.now();
-          if (diff < 0) diff = 0;
-          var sec = Math.floor(diff / 1000);
-          var days = Math.floor(sec / 86400); sec -= days * 86400;
-          var hours = Math.floor(sec / 3600); sec -= hours * 3600;
-          var mins = Math.floor(sec / 60); sec -= mins * 60;
-          dEl.textContent = pad(days);
-          hEl.textContent = pad(hours);
-          mEl.textContent = pad(mins);
-          sEl.textContent = pad(sec);
-          var spoken = days + " days, " + hours + " hours, " + mins + " minutes remaining until your dashboard opens on Tuesday, November 24, 2026, 6:00 PM ET.";
-          if (diff === 0) spoken = "Your dashboard is open.";
-          if (spoken !== lastSpoken && (lastSpoken === "" || sec === 0)) {
-            live.textContent = spoken;
-            lastSpoken = spoken;
-          }
-        }
-        tick();
-        setInterval(tick, 1000);
-      })();
 
       document.querySelectorAll(".js-copy").forEach(function (btn) {
         btn.addEventListener("click", function () {
