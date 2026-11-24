@@ -446,7 +446,7 @@
     function whoFail() {
       if (!whoVid || whoVid.dataset.failed) return;
       whoVid.dataset.failed = "1";
-      whoVid.hidden = true;
+      whoVid.hidden = true; whoVid.classList.add("gone"); whoVid.removeAttribute("src"); whoVid.load();
       var fb = $("whoFb"); if (!fb) return; fb.hidden = false;
       var img = fb.querySelector("img");
       var pool = [];
