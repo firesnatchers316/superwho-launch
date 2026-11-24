@@ -93,6 +93,7 @@
     .src-line { font-size: 13px; color: var(--muted); margin: 12px 0 0; }
     .who-player { margin-top: 8px; border-radius: 16px; overflow: hidden; background: #111; border: 1px solid var(--line); }
     .who-player video { width: 100%; height: auto; display: block; aspect-ratio: 16/9; background: #000; }
+    .who-player video.gone, .who-player video[hidden] { display: none !important; height: 0; }
     .who-player .note { padding: 12px 16px 16px; font-size: 14px; color: var(--muted); margin: 0; }
     .vembeds { display: grid; gap: 14px; margin-top: 18px; }
     @media (min-width: 860px) { .vembeds { grid-template-columns: 1fr 1fr; } .revs { grid-template-columns: 1fr 1fr; } }
