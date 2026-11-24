@@ -1,0 +1,42 @@
+{
+  "updated": "Tue, Nov 24 · 4:02 PM ET",
+  "now": "Building your draft",
+  "steps": [
+    {
+      "state": "done",
+      "when": "Fri, Nov 20",
+      "title": "Your answers are in",
+      "text": "Simple, clean and easy to use. Booking that shows your real availability. Built for corporate clients. Your photo and video work up front. Your reviews in one place."
+    },
+    {
+      "state": "done",
+      "when": "Fri, Nov 20",
+      "title": "Your gallery link is in",
+      "text": "Your SmugMug portraits. Thank you. More photos are welcome anytime below."
+    },
+    {
+      "state": "done",
+      "when": "Done",
+      "title": "Your brand is in hand",
+      "text": "The Agostini wordmark, the black-and-white look and the city photo from pjagostini.com. Nothing to send."
+    },
+    {
+      "state": "now",
+      "when": "Now",
+      "title": "Building your draft",
+      "text": "Shaping the page around corporate, medical and dental, and restaurant clients, with booking and your best work up front."
+    },
+    {
+      "state": "next",
+      "when": "Next",
+      "title": "Your draft, ready to see",
+      "text": "Turn on updates below and your phone tells you the moment it's ready. Nothing goes live until you say so."
+    },
+    {
+      "state": "later",
+      "when": "After",
+      "title": "Live, then sharper",
+      "text": "When you say go, it goes live. Real visits then show what people came for, and the page keeps improving."
+    }
+  ]
+}
