@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#25331F">
   <meta name="color-scheme" content="light">
   <meta name="robots" content="noindex, nofollow, noarchive">
-  <meta name="description" content="A private SuperWho sample for Big South Lawn: a job starts, your SuperWho Smart Page builds the bid, you approve it, and it goes to the crew and the customer. Stand-in data only.">
+  <meta name="description" content="A private SuperWho sample for Big South Lawn: a job starts, your SuperWho Smart Page builds the bid, you approve it, and it goes to the crew and the customer. Sample numbers only.">
   <title>SuperWho sample · Big South Lawn</title>
   <script>
     /* Working name. Jim is choosing the final name — change only this string. */
@@ -423,7 +423,7 @@
   </style>
 </head>
 <body>
-  <div class="sample-bar"><b>SuperWho sample</b> — fictional jobs and prices. Not a live bid. Nothing is sent.</div>
+  <div class="sample-bar"><b>SuperWho sample</b> — fictional jobs and prices. Sample numbers only. Not a live bid. Nothing is sent.</div>
 
   <div class="app">
     <div class="brand-row">
@@ -471,7 +471,7 @@
           <button type="button" class="play" id="btn-play" aria-pressed="false" aria-label="Play the sample voice note">Play</button>
           <div class="voice-meta">
             <p>Voice note attached <span class="attach-badge">Attached</span></p>
-            <p class="voice-time" id="voice-time">About 20 seconds · explaining why · stand-in recording</p>
+            <p class="voice-time" id="voice-time">About 20 seconds · explaining why · sample recording</p>
           </div>
         </div>
       </div>
@@ -874,7 +874,7 @@
         window.speechSynthesis.cancel();
         btn.setAttribute("aria-pressed", "false");
         btn.textContent = "Play";
-        time.textContent = "About 20 seconds · stand-in recording";
+        time.textContent = "About 20 seconds · sample recording";
         return;
       }
       window.speechSynthesis.cancel();
@@ -883,11 +883,11 @@
       u.onend = function () {
         btn.setAttribute("aria-pressed", "false");
         btn.textContent = "Play";
-        time.textContent = "About 20 seconds · stand-in recording";
+        time.textContent = "About 20 seconds · sample recording";
       };
       btn.setAttribute("aria-pressed", "true");
       btn.textContent = "Stop";
-      time.textContent = "Playing a stand-in reading of the sample note…";
+      time.textContent = "Playing a sample reading of the note…";
       window.speechSynthesis.speak(u);
     }
 
