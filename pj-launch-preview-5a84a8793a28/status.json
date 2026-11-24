@@ -1,6 +1,6 @@
 {
-  "updated": "Tue, Nov 24 · 4:13 PM ET",
-  "now": "Building your first look",
+  "updated": "Tue, Nov 24 · 4:22 PM ET",
+  "now": "Your first look is built",
   "launch": {
     "label": "Your first look opens",
     "due": "2026-11-25T09:00:00-05:00",
@@ -29,20 +29,19 @@
       "text": "We pulled the Agostini wordmark, the black-and-white look and the city photo from pjagostini.com. Nothing for you to send."
     },
     {
-      "state": "now",
+      "state": "done",
       "by": "By us",
-      "when": "Now",
-      "title": "Building your first look",
-      "due": "2026-11-25T09:00:00-05:00",
-      "text": "Shaping the page around corporate, medical and dental, and restaurant clients, with booking and your best work up front."
+      "when": "Tue, Nov 24",
+      "title": "Your first look, built",
+      "text": "Built around corporate, medical and dental, and restaurant clients, with your gallery photos and booking up front. Spots waiting on you are clearly marked."
     },
     {
-      "state": "next",
+      "state": "now",
       "by": "By us",
       "when": "Wed, Nov 25 · 9:00 AM ET",
       "title": "Your first look",
       "due": "2026-11-25T09:00:00-05:00",
-      "text": "You see the Smart Page built on top of your site. Your site stays as it is. Nothing goes live until you say so."
+      "text": "Opens Wednesday at 9:00 AM ET. Tap around your draft and tell us what to change. Your site stays as it is. Nothing goes live until you say so."
     },
     {
       "state": "later",
@@ -79,9 +78,15 @@
       "jump": "needs"
     },
     {
-      "who": "From us",
-      "title": "Your first look",
-      "due": "2026-11-25T09:00:00-05:00"
+      "who": "From you",
+      "title": "Your feedback on the first look",
+      "due": "",
+      "jump": "talk"
     }
-  ]
+  ],
+  "firstLook": {
+    "url": "first-look/",
+    "label": "See your first look",
+    "text": "Your Smart Page draft, built from your answers and your gallery. Tap around, then tell us what to change."
+  }
 }
