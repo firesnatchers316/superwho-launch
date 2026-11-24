@@ -1323,12 +1323,12 @@
       <p class="target">
         <strong>Your dashboard opens</strong>
         <span class="target-date">Tuesday, November 24, 2026</span>
-        <span class="target-time">9:00 AM ET</span>
+        <span class="target-time">6:00 PM ET</span>
       </p>
     </div>
 
     <div class="card" id="firstlook">
-      <p class="kicker">Tuesday, 9:00 AM</p>
+      <p class="kicker">Tuesday, 6:00 PM</p>
       <h2>What your first ten minutes should feel like</h2>
       <div class="wow">
         <div class="wow-item">
@@ -1551,7 +1551,7 @@
 
   <script>
     (function () {
-      var TARGET = new Date("2026-11-24T09:00:00-05:00");
+      var TARGET = new Date("2026-11-24T18:00:00-05:00");
       var EMAIL = "firesnatchers316@gmail.com";
       var NEEDS_KEY = "chris-launch-needs";
       var QUESTIONS_KEY = "chris-launch-questions";
@@ -1702,7 +1702,7 @@
           hEl.textContent = pad(hours);
           mEl.textContent = pad(mins);
           sEl.textContent = pad(sec);
-          var spoken = days + " days, " + hours + " hours, " + mins + " minutes remaining until your dashboard opens on Tuesday, November 24, 2026, 9:00 AM ET.";
+          var spoken = days + " days, " + hours + " hours, " + mins + " minutes remaining until your dashboard opens on Tuesday, November 24, 2026, 6:00 PM ET.";
           if (diff === 0) spoken = "Your dashboard is open.";
           if (spoken !== lastSpoken && (lastSpoken === "" || sec === 0)) {
             live.textContent = spoken;
