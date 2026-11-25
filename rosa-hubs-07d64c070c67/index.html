@@ -797,6 +797,9 @@
       .sw-ring, .sw-ring.outer, .sw-orbit-dots { animation-duration: 30s !important; }
     }
     .sw-live-stage:has(.sw-play-overlay:not([hidden])) .sw-caption-box { opacity: 0; }
+    .sw-stage-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.22; z-index: 0; pointer-events: none; filter: saturate(0.8); }
+    .sw-live-stage::after { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: radial-gradient(circle at 50% 38%, rgba(7,16,28,0.25), rgba(7,16,28,0.85) 70%); }
+    .sw-live-stage > .sw-now-stage, .sw-live-stage > .sw-caption-box { position: relative; z-index: 2; }
   </style>
 </head>
 <body>
@@ -849,17 +852,18 @@
             <span class="sw-agent-av" aria-hidden="true">H</span>
             <span class="sw-agent-name">Hope</span>
             <span class="sw-agent-role">Opportunity Hubs SuperWho</span>
-            <span class="sw-agent-pill">1:23</span>
+            <span class="sw-agent-pill">1:30</span>
           </button>
           <button type="button" class="sw-agent" id="btnGracePlay" data-agent="grace" aria-pressed="false">
             <span class="sw-agent-av" aria-hidden="true">G</span>
             <span class="sw-agent-name">Grace</span>
             <span class="sw-agent-role">EA SuperWho for Diallo Smith</span>
-            <span class="sw-agent-pill">1:28</span>
+            <span class="sw-agent-pill">1:27</span>
           </button>
         </div>
         <div class="sw-live-stage" id="swLiveStage">
           <audio id="swAudio" preload="metadata" playsinline></audio>
+          <img class="sw-stage-photo" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-b64="img/durfee-hall.b64" data-mime="image/jpeg" alt="" aria-hidden="true">
           <div class="sw-now-stage">
             <div class="sw-now-av-wrap" id="swNowWrap" data-agent="hope">
               <div class="sw-now-glow" id="swNowGlow" aria-hidden="true"></div>
@@ -881,7 +885,7 @@
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
             </span>
             <span class="sw-play-label" id="swPlayLabel">Tap a teammate to listen</span>
-            <span class="sw-play-sub">Hope 1:23 · Grace 1:28 · with captions</span>
+            <span class="sw-play-sub">Hope 1:30 · Grace 1:27 · with captions</span>
           </button>
         </div>
       </div>
@@ -1244,10 +1248,10 @@
         <span class="pill sky">Hope + Grace, together</span>
       </div>
       <p class="sec-sub">
-        If you’d like it, we’ll build an executive dashboard that puts every responsibility in one place for you and Diallo. The agents we add talk to each other across the platform, so everything is managed from one place. Hope doesn’t sleep, so the work keeps moving around the clock toward your biggest goals while you’re out in the community. You’d each get a short report at the start and end of every day. <br><br><strong>Rosa, what’s been weighing on you most lately? Tell us, and we’ll take it off your plate.</strong>
+        If you’d like it, we’ll build an executive dashboard that puts every responsibility in one place for you and Diallo. The agents we add talk to each other across the platform, so everything is managed from one place. Hope doesn’t sleep, so the work keeps moving around the clock toward your biggest goals while you’re out in the community. You’d each get a short report at the start and end of every day. <br><br><strong>So Rosa, is there anything we left out? Anything at all that would take something off your plate, or off Diallo’s? Just tell us. We’re here for you.</strong>
       </p>
       <div class="close-actions">
-        <button type="button" class="btn" id="btnAnythingElse">Tell us what’s weighing on you</button>
+        <button type="button" class="btn" id="btnAnythingElse">Tell us what we left out</button>
         <button type="button" class="btn secondary" id="btnEaInterest">I’d like Grace for Diallo</button>
       </div>
     </section>
@@ -1698,7 +1702,7 @@
     document.getElementById("btnAnythingElse").addEventListener("click", function () {
       prefillClose(
         "Anything else",
-        "What’s been weighing on me most lately: ",
+        "Something that would take things off my plate: ",
         "tap_anything_else"
       );
     });

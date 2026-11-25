@@ -1,6 +1,6 @@
 {
  "hope": {
-  "duration": 82.745625,
+  "duration": 90.414375,
   "cues": [
    {
     "i": 1,
@@ -59,8 +59,8 @@
     "speaker": "Hope",
     "voice": "en-US-AvaMultilingualNeural",
     "start": 70.705,
-    "end": 82.146,
-    "text": "Now, I'd love for you to meet my teammate, Grace. She's the Executive Assistant SuperWho we'd build for Diallo Smith. Between the two of us, we've got you covered. Grace?"
+    "end": 89.814,
+    "text": "Before I hand you over, Rosa, is there anything I didn't mention that would make your days at the hubs easier? I'd really love to hear it. Now, let me introduce my teammate, Grace. She's the Executive Assistant SuperWho we'd build for Diallo Smith, and between the two of us, we've got you covered. Grace?"
    }
   ],
   "words": [
@@ -79,14 +79,14 @@
     "cue": 1
    },
    {
-    "start": 1.1,
+    "start": 1.18,
     "end": 1.22,
     "word": "Rosa!",
     "speaker": "Hope",
     "cue": 1
    },
    {
-    "start": 1.94,
+    "start": 1.96,
     "end": 2.08,
     "word": "I'm",
     "speaker": "Hope",
@@ -100,7 +100,7 @@
     "cue": 1
    },
    {
-    "start": 2.7,
+    "start": 2.68,
     "end": 2.76,
     "word": "and",
     "speaker": "Hope",
@@ -136,13 +136,13 @@
    },
    {
     "start": 3.94,
-    "end": 4.18,
+    "end": 4.2,
     "word": "finally",
     "speaker": "Hope",
     "cue": 1
    },
    {
-    "start": 4.18,
+    "start": 4.2,
     "end": 4.48,
     "word": "meet",
     "speaker": "Hope",
@@ -150,7 +150,7 @@
    },
    {
     "start": 4.48,
-    "end": 4.74,
+    "end": 4.72,
     "word": "you.",
     "speaker": "Hope",
     "cue": 1
@@ -171,13 +171,13 @@
    },
    {
     "start": 5.52,
-    "end": 6.05,
+    "end": 6.1,
     "word": "SuperWho.",
     "speaker": "Hope",
     "cue": 1
    },
    {
-    "start": 6.64,
+    "start": 6.74,
     "end": 6.8,
     "word": "Jim",
     "speaker": "Hope",
@@ -240,7 +240,7 @@
     "cue": 1
    },
    {
-    "start": 9.2,
+    "start": 9.26,
     "end": 9.56,
     "word": "and",
     "speaker": "Hope",
@@ -303,35 +303,35 @@
     "cue": 1
    },
    {
-    "start": 12.26,
-    "end": 12.54,
+    "start": 12.38,
+    "end": 12.5,
     "word": "I",
     "speaker": "Hope",
     "cue": 2
    },
    {
-    "start": 12.54,
-    "end": 12.76,
+    "start": 12.38,
+    "end": 12.5,
     "word": "know",
     "speaker": "Hope",
     "cue": 2
    },
    {
-    "start": 12.76,
-    "end": 13.0,
+    "start": 12.26,
+    "end": 12.96,
     "word": "you've",
     "speaker": "Hope",
     "cue": 2
    },
    {
-    "start": 13.0,
-    "end": 13.16,
+    "start": 12.96,
+    "end": 13.14,
     "word": "got",
     "speaker": "Hope",
     "cue": 2
    },
    {
-    "start": 13.16,
+    "start": 13.14,
     "end": 13.38,
     "word": "a",
     "speaker": "Hope",
@@ -380,35 +380,35 @@
     "cue": 2
    },
    {
-    "start": 15.16,
+    "start": 15.18,
     "end": 15.28,
     "word": "The",
     "speaker": "Hope",
     "cue": 2
    },
    {
-    "start": 15.28,
-    "end": 15.68,
+    "start": 15.29,
+    "end": 15.46,
     "word": "Durfee",
     "speaker": "Hope",
     "cue": 2
    },
    {
-    "start": 15.68,
-    "end": 16.08,
+    "start": 15.66,
+    "end": 16.14,
     "word": "Innovation",
     "speaker": "Hope",
     "cue": 2
    },
    {
-    "start": 16.08,
-    "end": 16.74,
+    "start": 16.14,
+    "end": 16.72,
     "word": "Society",
     "speaker": "Hope",
     "cue": 2
    },
    {
-    "start": 16.74,
+    "start": 16.72,
     "end": 17.14,
     "word": "welcomed",
     "speaker": "Hope",
@@ -464,7 +464,7 @@
     "cue": 2
    },
    {
-    "start": 20.27,
+    "start": 20.32,
     "end": 20.64,
     "word": "and",
     "speaker": "Hope",
@@ -486,13 +486,13 @@
    },
    {
     "start": 21.26,
-    "end": 21.6,
+    "end": 21.62,
     "word": "Detroit",
     "speaker": "Hope",
     "cue": 2
    },
    {
-    "start": 21.6,
+    "start": 21.62,
     "end": 22.14,
     "word": "has",
     "speaker": "Hope",
@@ -542,13 +542,13 @@
    },
    {
     "start": 23.38,
-    "end": 23.82,
+    "end": 23.84,
     "word": "side.",
     "speaker": "Hope",
     "cue": 2
    },
    {
-    "start": 24.28,
+    "start": 24.3,
     "end": 24.58,
     "word": "That's",
     "speaker": "Hope",
@@ -556,20 +556,20 @@
    },
    {
     "start": 24.58,
-    "end": 24.8,
+    "end": 24.82,
     "word": "two",
     "speaker": "Hope",
     "cue": 2
    },
    {
-    "start": 24.8,
-    "end": 25.18,
+    "start": 24.82,
+    "end": 25.2,
     "word": "buildings,",
     "speaker": "Hope",
     "cue": 2
    },
    {
-    "start": 25.48,
+    "start": 25.5,
     "end": 25.5,
     "word": "a",
     "speaker": "Hope",
@@ -612,20 +612,20 @@
    },
    {
     "start": 26.9,
-    "end": 27.1,
+    "end": 27.12,
     "word": "a",
     "speaker": "Hope",
     "cue": 2
    },
    {
-    "start": 27.1,
-    "end": 27.28,
+    "start": 27.12,
+    "end": 27.3,
     "word": "lot",
     "speaker": "Hope",
     "cue": 2
    },
    {
-    "start": 27.28,
+    "start": 27.3,
     "end": 27.42,
     "word": "of",
     "speaker": "Hope",
@@ -633,13 +633,13 @@
    },
    {
     "start": 27.42,
-    "end": 27.58,
+    "end": 27.6,
     "word": "people",
     "speaker": "Hope",
     "cue": 2
    },
    {
-    "start": 27.58,
+    "start": 27.6,
     "end": 27.92,
     "word": "counting",
     "speaker": "Hope",
@@ -751,14 +751,14 @@
     "cue": 3
    },
    {
-    "start": 33.01,
-    "end": 33.13,
+    "start": 32.81,
+    "end": 33.11,
     "word": "so",
     "speaker": "Hope",
     "cue": 3
    },
    {
-    "start": 33.13,
+    "start": 33.11,
     "end": 33.27,
     "word": "you're",
     "speaker": "Hope",
@@ -766,13 +766,13 @@
    },
    {
     "start": 33.27,
-    "end": 33.47,
+    "end": 33.45,
     "word": "not",
     "speaker": "Hope",
     "cue": 3
    },
    {
-    "start": 33.47,
+    "start": 33.45,
     "end": 33.69,
     "word": "digging",
     "speaker": "Hope",
@@ -808,13 +808,13 @@
    },
    {
     "start": 35.71,
-    "end": 36.43,
+    "end": 36.45,
     "word": "spreadsheets",
     "speaker": "Hope",
     "cue": 3
    },
    {
-    "start": 36.43,
+    "start": 36.45,
     "end": 36.93,
     "word": "just",
     "speaker": "Hope",
@@ -850,14 +850,14 @@
    },
    {
     "start": 37.73,
-    "end": 37.87,
+    "end": 37.89,
     "word": "going",
     "speaker": "Hope",
     "cue": 3
    },
    {
-    "start": 37.87,
-    "end": 38.23,
+    "start": 37.89,
+    "end": 38.25,
     "word": "on.",
     "speaker": "Hope",
     "cue": 3
@@ -934,20 +934,20 @@
    },
    {
     "start": 40.83,
-    "end": 41.09,
+    "end": 41.07,
     "word": "won't",
     "speaker": "Hope",
     "cue": 3
    },
    {
-    "start": 41.09,
-    "end": 41.39,
+    "start": 41.07,
+    "end": 41.41,
     "word": "lock,",
     "speaker": "Hope",
     "cue": 3
    },
    {
-    "start": 41.83,
+    "start": 41.79,
     "end": 42.07,
     "word": "it",
     "speaker": "Hope",
@@ -969,126 +969,126 @@
    },
    {
     "start": 42.45,
-    "end": 42.75,
+    "end": 42.77,
     "word": "lost",
     "speaker": "Hope",
     "cue": 3
    },
    {
-    "start": 42.75,
-    "end": 43.11,
+    "start": 42.77,
+    "end": 43.13,
     "word": "anymore.",
     "speaker": "Hope",
     "cue": 3
    },
    {
-    "start": 43.75,
-    "end": 43.97,
+    "start": 43.17,
+    "end": 43.51,
     "word": "You'll",
     "speaker": "Hope",
     "cue": 3
    },
    {
-    "start": 43.97,
-    "end": 44.23,
+    "start": 43.55,
+    "end": 43.9,
     "word": "see",
     "speaker": "Hope",
     "cue": 3
    },
    {
-    "start": 44.23,
-    "end": 44.51,
+    "start": 43.93,
+    "end": 44.28,
     "word": "what's",
     "speaker": "Hope",
     "cue": 3
    },
    {
-    "start": 44.51,
-    "end": 44.91,
+    "start": 44.32,
+    "end": 44.66,
     "word": "open,",
     "speaker": "Hope",
     "cue": 3
    },
    {
-    "start": 45.37,
-    "end": 45.61,
+    "start": 44.7,
+    "end": 45.05,
     "word": "what's",
     "speaker": "Hope",
     "cue": 3
    },
    {
-    "start": 45.61,
-    "end": 45.73,
+    "start": 45.09,
+    "end": 45.43,
     "word": "in",
     "speaker": "Hope",
     "cue": 3
    },
    {
-    "start": 45.73,
-    "end": 46.15,
+    "start": 45.47,
+    "end": 45.81,
     "word": "progress,",
     "speaker": "Hope",
     "cue": 3
    },
    {
-    "start": 46.45,
-    "end": 46.55,
+    "start": 45.85,
+    "end": 46.2,
     "word": "and",
     "speaker": "Hope",
     "cue": 3
    },
    {
-    "start": 46.55,
-    "end": 46.85,
+    "start": 46.24,
+    "end": 46.58,
     "word": "what's",
     "speaker": "Hope",
     "cue": 3
    },
    {
-    "start": 46.85,
-    "end": 47.15,
+    "start": 46.62,
+    "end": 46.97,
     "word": "done,",
     "speaker": "Hope",
     "cue": 3
    },
    {
-    "start": 47.15,
-    "end": 47.71,
+    "start": 47.0,
+    "end": 47.35,
     "word": "across",
     "speaker": "Hope",
     "cue": 3
    },
    {
-    "start": 47.71,
-    "end": 48.03,
+    "start": 47.39,
+    "end": 47.73,
     "word": "both",
     "speaker": "Hope",
     "cue": 3
    },
    {
-    "start": 48.03,
-    "end": 48.43,
+    "start": 47.77,
+    "end": 48.12,
     "word": "buildings,",
     "speaker": "Hope",
     "cue": 3
    },
    {
-    "start": 48.43,
-    "end": 48.73,
+    "start": 48.15,
+    "end": 48.5,
     "word": "at",
     "speaker": "Hope",
     "cue": 3
    },
    {
-    "start": 48.73,
-    "end": 48.83,
+    "start": 48.54,
+    "end": 48.88,
     "word": "a",
     "speaker": "Hope",
     "cue": 3
    },
    {
-    "start": 48.83,
-    "end": 49.07,
+    "start": 48.92,
+    "end": 49.27,
     "word": "glance.",
     "speaker": "Hope",
     "cue": 3
@@ -1557,210 +1557,385 @@
    },
    {
     "start": 70.7,
-    "end": 71.1,
-    "word": "Now,",
+    "end": 71.16,
+    "word": "Before",
     "speaker": "Hope",
     "cue": 6
    },
    {
-    "start": 71.3,
-    "end": 71.5,
+    "start": 71.16,
+    "end": 71.34,
+    "word": "I",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 71.34,
+    "end": 71.54,
+    "word": "hand",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 71.54,
+    "end": 71.72,
+    "word": "you",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 71.72,
+    "end": 72.04,
+    "word": "over,",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 72.39,
+    "end": 72.48,
+    "word": "Rosa,",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 73.2,
+    "end": 73.34,
+    "word": "is",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 73.34,
+    "end": 73.48,
+    "word": "there",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 73.48,
+    "end": 73.84,
+    "word": "anything",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 73.84,
+    "end": 74.08,
+    "word": "I",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 74.08,
+    "end": 74.3,
+    "word": "didn't",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 74.3,
+    "end": 74.56,
+    "word": "mention",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 74.56,
+    "end": 74.74,
+    "word": "that",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 74.74,
+    "end": 74.84,
+    "word": "would",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 74.84,
+    "end": 74.96,
+    "word": "make",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 74.96,
+    "end": 75.14,
+    "word": "your",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 75.14,
+    "end": 75.36,
+    "word": "days",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 75.36,
+    "end": 75.56,
+    "word": "at",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 75.56,
+    "end": 75.68,
+    "word": "the",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 75.68,
+    "end": 75.98,
+    "word": "hubs",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 75.98,
+    "end": 76.2,
+    "word": "easier?",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 76.86,
+    "end": 77.16,
     "word": "I'd",
     "speaker": "Hope",
     "cue": 6
    },
    {
-    "start": 71.5,
-    "end": 71.64,
+    "start": 77.16,
+    "end": 77.54,
+    "word": "really",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 77.54,
+    "end": 77.92,
     "word": "love",
     "speaker": "Hope",
     "cue": 6
    },
    {
-    "start": 71.64,
-    "end": 71.84,
-    "word": "for",
-    "speaker": "Hope",
-    "cue": 6
-   },
-   {
-    "start": 71.84,
-    "end": 71.98,
-    "word": "you",
-    "speaker": "Hope",
-    "cue": 6
-   },
-   {
-    "start": 71.98,
-    "end": 72.14,
+    "start": 77.92,
+    "end": 78.12,
     "word": "to",
     "speaker": "Hope",
     "cue": 6
    },
    {
-    "start": 72.14,
-    "end": 72.28,
-    "word": "meet",
+    "start": 78.12,
+    "end": 78.28,
+    "word": "hear",
     "speaker": "Hope",
     "cue": 6
    },
    {
-    "start": 72.28,
-    "end": 72.48,
+    "start": 78.28,
+    "end": 78.58,
+    "word": "it.",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 79.06,
+    "end": 79.12,
+    "word": "Now,",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 79.26,
+    "end": 79.4,
+    "word": "let",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 79.4,
+    "end": 79.5,
+    "word": "me",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 79.5,
+    "end": 79.86,
+    "word": "introduce",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 79.86,
+    "end": 80.16,
     "word": "my",
     "speaker": "Hope",
     "cue": 6
    },
    {
-    "start": 72.48,
-    "end": 72.9,
+    "start": 80.16,
+    "end": 80.58,
     "word": "teammate,",
     "speaker": "Hope",
     "cue": 6
    },
    {
-    "start": 73.12,
-    "end": 73.26,
+    "start": 80.92,
+    "end": 80.98,
     "word": "Grace.",
     "speaker": "Hope",
     "cue": 6
    },
    {
-    "start": 73.98,
-    "end": 74.4,
+    "start": 81.7,
+    "end": 82.1,
     "word": "She's",
     "speaker": "Hope",
     "cue": 6
    },
    {
-    "start": 74.4,
-    "end": 74.52,
+    "start": 82.1,
+    "end": 82.22,
     "word": "the",
     "speaker": "Hope",
     "cue": 6
    },
    {
-    "start": 74.52,
-    "end": 74.94,
+    "start": 82.22,
+    "end": 82.62,
     "word": "Executive",
     "speaker": "Hope",
     "cue": 6
    },
    {
-    "start": 74.94,
-    "end": 75.38,
+    "start": 82.62,
+    "end": 83.04,
     "word": "Assistant",
     "speaker": "Hope",
     "cue": 6
    },
    {
-    "start": 75.43,
-    "end": 75.84,
+    "start": 83.09,
+    "end": 83.52,
     "word": "SuperWho",
     "speaker": "Hope",
     "cue": 6
    },
    {
-    "start": 76.3,
-    "end": 76.53,
+    "start": 84.0,
+    "end": 84.2,
     "word": "we'd",
     "speaker": "Hope",
     "cue": 6
    },
    {
-    "start": 76.53,
-    "end": 76.74,
+    "start": 84.2,
+    "end": 84.42,
     "word": "build",
     "speaker": "Hope",
     "cue": 6
    },
    {
-    "start": 76.74,
-    "end": 76.96,
+    "start": 84.42,
+    "end": 84.62,
     "word": "for",
     "speaker": "Hope",
     "cue": 6
    },
    {
-    "start": 76.96,
-    "end": 77.34,
+    "start": 84.62,
+    "end": 84.96,
     "word": "Diallo",
     "speaker": "Hope",
     "cue": 6
    },
    {
-    "start": 77.34,
-    "end": 77.66,
-    "word": "Smith.",
+    "start": 84.96,
+    "end": 85.28,
+    "word": "Smith,",
     "speaker": "Hope",
     "cue": 6
    },
    {
-    "start": 78.53,
-    "end": 78.6,
-    "word": "Between",
+    "start": 85.86,
+    "end": 86.02,
+    "word": "and",
     "speaker": "Hope",
     "cue": 6
    },
    {
-    "start": 78.6,
-    "end": 78.76,
+    "start": 86.02,
+    "end": 86.36,
+    "word": "between",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 86.36,
+    "end": 86.52,
     "word": "the",
     "speaker": "Hope",
     "cue": 6
    },
    {
-    "start": 78.76,
-    "end": 78.94,
+    "start": 86.52,
+    "end": 86.66,
     "word": "two",
     "speaker": "Hope",
     "cue": 6
    },
    {
-    "start": 78.94,
-    "end": 79.08,
+    "start": 86.66,
+    "end": 86.78,
     "word": "of",
     "speaker": "Hope",
     "cue": 6
    },
    {
-    "start": 79.08,
-    "end": 79.36,
+    "start": 86.78,
+    "end": 87.08,
     "word": "us,",
     "speaker": "Hope",
     "cue": 6
    },
    {
-    "start": 79.82,
-    "end": 80.0,
+    "start": 87.52,
+    "end": 87.7,
     "word": "we've",
     "speaker": "Hope",
     "cue": 6
    },
    {
-    "start": 80.0,
-    "end": 80.1,
+    "start": 87.7,
+    "end": 87.8,
     "word": "got",
     "speaker": "Hope",
     "cue": 6
    },
    {
-    "start": 80.1,
-    "end": 80.28,
+    "start": 87.8,
+    "end": 87.94,
     "word": "you",
     "speaker": "Hope",
     "cue": 6
    },
    {
-    "start": 80.28,
-    "end": 80.6,
+    "start": 87.94,
+    "end": 88.26,
     "word": "covered.",
     "speaker": "Hope",
     "cue": 6
    },
    {
-    "start": 81.24,
-    "end": 81.42,
+    "start": 88.9,
+    "end": 89.1,
     "word": "Grace?",
     "speaker": "Hope",
     "cue": 6
@@ -1779,12 +1954,12 @@
      "word": "there,"
     },
     {
-     "start": 1.1,
+     "start": 1.18,
      "end": 1.22,
      "word": "Rosa!"
     },
     {
-     "start": 1.94,
+     "start": 1.96,
      "end": 2.08,
      "word": "I'm"
     },
@@ -1794,7 +1969,7 @@
      "word": "Hope,"
     },
     {
-     "start": 2.7,
+     "start": 2.68,
      "end": 2.76,
      "word": "and"
     },
@@ -1820,17 +1995,17 @@
     },
     {
      "start": 3.94,
-     "end": 4.18,
+     "end": 4.2,
      "word": "finally"
     },
     {
-     "start": 4.18,
+     "start": 4.2,
      "end": 4.48,
      "word": "meet"
     },
     {
      "start": 4.48,
-     "end": 4.74,
+     "end": 4.72,
      "word": "you."
     },
     {
@@ -1845,11 +2020,11 @@
     },
     {
      "start": 5.52,
-     "end": 6.05,
+     "end": 6.1,
      "word": "SuperWho."
     },
     {
-     "start": 6.64,
+     "start": 6.74,
      "end": 6.8,
      "word": "Jim"
     },
@@ -1894,7 +2069,7 @@
      "word": "you,"
     },
     {
-     "start": 9.2,
+     "start": 9.26,
      "end": 9.56,
      "word": "and"
     },
@@ -1941,27 +2116,27 @@
    ],
    "2": [
     {
-     "start": 12.26,
-     "end": 12.54,
+     "start": 12.38,
+     "end": 12.5,
      "word": "I"
     },
     {
-     "start": 12.54,
-     "end": 12.76,
+     "start": 12.38,
+     "end": 12.5,
      "word": "know"
     },
     {
-     "start": 12.76,
-     "end": 13.0,
+     "start": 12.26,
+     "end": 12.96,
      "word": "you've"
     },
     {
-     "start": 13.0,
-     "end": 13.16,
+     "start": 12.96,
+     "end": 13.14,
      "word": "got"
     },
     {
-     "start": 13.16,
+     "start": 13.14,
      "end": 13.38,
      "word": "a"
     },
@@ -1996,27 +2171,27 @@
      "word": "now."
     },
     {
-     "start": 15.16,
+     "start": 15.18,
      "end": 15.28,
      "word": "The"
     },
     {
-     "start": 15.28,
-     "end": 15.68,
+     "start": 15.29,
+     "end": 15.46,
      "word": "Durfee"
     },
     {
-     "start": 15.68,
-     "end": 16.08,
+     "start": 15.66,
+     "end": 16.14,
      "word": "Innovation"
     },
     {
-     "start": 16.08,
-     "end": 16.74,
+     "start": 16.14,
+     "end": 16.72,
      "word": "Society"
     },
     {
-     "start": 16.74,
+     "start": 16.72,
      "end": 17.14,
      "word": "welcomed"
     },
@@ -2056,7 +2231,7 @@
      "word": "year,"
     },
     {
-     "start": 20.27,
+     "start": 20.32,
      "end": 20.64,
      "word": "and"
     },
@@ -2072,11 +2247,11 @@
     },
     {
      "start": 21.26,
-     "end": 21.6,
+     "end": 21.62,
      "word": "Detroit"
     },
     {
-     "start": 21.6,
+     "start": 21.62,
      "end": 22.14,
      "word": "has"
     },
@@ -2112,26 +2287,26 @@
     },
     {
      "start": 23.38,
-     "end": 23.82,
+     "end": 23.84,
      "word": "side."
     },
     {
-     "start": 24.28,
+     "start": 24.3,
      "end": 24.58,
      "word": "That's"
     },
     {
      "start": 24.58,
-     "end": 24.8,
+     "end": 24.82,
      "word": "two"
     },
     {
-     "start": 24.8,
-     "end": 25.18,
+     "start": 24.82,
+     "end": 25.2,
      "word": "buildings,"
     },
     {
-     "start": 25.48,
+     "start": 25.5,
      "end": 25.5,
      "word": "a"
     },
@@ -2162,26 +2337,26 @@
     },
     {
      "start": 26.9,
-     "end": 27.1,
+     "end": 27.12,
      "word": "a"
     },
     {
-     "start": 27.1,
-     "end": 27.28,
+     "start": 27.12,
+     "end": 27.3,
      "word": "lot"
     },
     {
-     "start": 27.28,
+     "start": 27.3,
      "end": 27.42,
      "word": "of"
     },
     {
      "start": 27.42,
-     "end": 27.58,
+     "end": 27.6,
      "word": "people"
     },
     {
-     "start": 27.58,
+     "start": 27.6,
      "end": 27.92,
      "word": "counting"
     },
@@ -2263,22 +2438,22 @@
      "word": "place,"
     },
     {
-     "start": 33.01,
-     "end": 33.13,
+     "start": 32.81,
+     "end": 33.11,
      "word": "so"
     },
     {
-     "start": 33.13,
+     "start": 33.11,
      "end": 33.27,
      "word": "you're"
     },
     {
      "start": 33.27,
-     "end": 33.47,
+     "end": 33.45,
      "word": "not"
     },
     {
-     "start": 33.47,
+     "start": 33.45,
      "end": 33.69,
      "word": "digging"
     },
@@ -2304,11 +2479,11 @@
     },
     {
      "start": 35.71,
-     "end": 36.43,
+     "end": 36.45,
      "word": "spreadsheets"
     },
     {
-     "start": 36.43,
+     "start": 36.45,
      "end": 36.93,
      "word": "just"
     },
@@ -2334,12 +2509,12 @@
     },
     {
      "start": 37.73,
-     "end": 37.87,
+     "end": 37.89,
      "word": "going"
     },
     {
-     "start": 37.87,
-     "end": 38.23,
+     "start": 37.89,
+     "end": 38.25,
      "word": "on."
     },
     {
@@ -2394,16 +2569,16 @@
     },
     {
      "start": 40.83,
-     "end": 41.09,
+     "end": 41.07,
      "word": "won't"
     },
     {
-     "start": 41.09,
-     "end": 41.39,
+     "start": 41.07,
+     "end": 41.41,
      "word": "lock,"
     },
     {
-     "start": 41.83,
+     "start": 41.79,
      "end": 42.07,
      "word": "it"
     },
@@ -2419,92 +2594,92 @@
     },
     {
      "start": 42.45,
-     "end": 42.75,
+     "end": 42.77,
      "word": "lost"
     },
     {
-     "start": 42.75,
-     "end": 43.11,
+     "start": 42.77,
+     "end": 43.13,
      "word": "anymore."
     },
     {
-     "start": 43.75,
-     "end": 43.97,
+     "start": 43.17,
+     "end": 43.51,
      "word": "You'll"
     },
     {
-     "start": 43.97,
-     "end": 44.23,
+     "start": 43.55,
+     "end": 43.9,
      "word": "see"
     },
     {
-     "start": 44.23,
-     "end": 44.51,
+     "start": 43.93,
+     "end": 44.28,
      "word": "what's"
     },
     {
-     "start": 44.51,
-     "end": 44.91,
+     "start": 44.32,
+     "end": 44.66,
      "word": "open,"
     },
     {
-     "start": 45.37,
-     "end": 45.61,
+     "start": 44.7,
+     "end": 45.05,
      "word": "what's"
     },
     {
-     "start": 45.61,
-     "end": 45.73,
+     "start": 45.09,
+     "end": 45.43,
      "word": "in"
     },
     {
-     "start": 45.73,
-     "end": 46.15,
+     "start": 45.47,
+     "end": 45.81,
      "word": "progress,"
     },
     {
-     "start": 46.45,
-     "end": 46.55,
+     "start": 45.85,
+     "end": 46.2,
      "word": "and"
     },
     {
-     "start": 46.55,
-     "end": 46.85,
+     "start": 46.24,
+     "end": 46.58,
      "word": "what's"
     },
     {
-     "start": 46.85,
-     "end": 47.15,
+     "start": 46.62,
+     "end": 46.97,
      "word": "done,"
     },
     {
-     "start": 47.15,
-     "end": 47.71,
+     "start": 47.0,
+     "end": 47.35,
      "word": "across"
     },
     {
-     "start": 47.71,
-     "end": 48.03,
+     "start": 47.39,
+     "end": 47.73,
      "word": "both"
     },
     {
-     "start": 48.03,
-     "end": 48.43,
+     "start": 47.77,
+     "end": 48.12,
      "word": "buildings,"
     },
     {
-     "start": 48.43,
-     "end": 48.73,
+     "start": 48.15,
+     "end": 48.5,
      "word": "at"
     },
     {
-     "start": 48.73,
-     "end": 48.83,
+     "start": 48.54,
+     "end": 48.88,
      "word": "a"
     },
     {
-     "start": 48.83,
-     "end": 49.07,
+     "start": 48.92,
+     "end": 49.27,
      "word": "glance."
     }
    ],
@@ -2845,160 +3020,285 @@
    "6": [
     {
      "start": 70.7,
-     "end": 71.1,
-     "word": "Now,"
+     "end": 71.16,
+     "word": "Before"
     },
     {
-     "start": 71.3,
-     "end": 71.5,
+     "start": 71.16,
+     "end": 71.34,
+     "word": "I"
+    },
+    {
+     "start": 71.34,
+     "end": 71.54,
+     "word": "hand"
+    },
+    {
+     "start": 71.54,
+     "end": 71.72,
+     "word": "you"
+    },
+    {
+     "start": 71.72,
+     "end": 72.04,
+     "word": "over,"
+    },
+    {
+     "start": 72.39,
+     "end": 72.48,
+     "word": "Rosa,"
+    },
+    {
+     "start": 73.2,
+     "end": 73.34,
+     "word": "is"
+    },
+    {
+     "start": 73.34,
+     "end": 73.48,
+     "word": "there"
+    },
+    {
+     "start": 73.48,
+     "end": 73.84,
+     "word": "anything"
+    },
+    {
+     "start": 73.84,
+     "end": 74.08,
+     "word": "I"
+    },
+    {
+     "start": 74.08,
+     "end": 74.3,
+     "word": "didn't"
+    },
+    {
+     "start": 74.3,
+     "end": 74.56,
+     "word": "mention"
+    },
+    {
+     "start": 74.56,
+     "end": 74.74,
+     "word": "that"
+    },
+    {
+     "start": 74.74,
+     "end": 74.84,
+     "word": "would"
+    },
+    {
+     "start": 74.84,
+     "end": 74.96,
+     "word": "make"
+    },
+    {
+     "start": 74.96,
+     "end": 75.14,
+     "word": "your"
+    },
+    {
+     "start": 75.14,
+     "end": 75.36,
+     "word": "days"
+    },
+    {
+     "start": 75.36,
+     "end": 75.56,
+     "word": "at"
+    },
+    {
+     "start": 75.56,
+     "end": 75.68,
+     "word": "the"
+    },
+    {
+     "start": 75.68,
+     "end": 75.98,
+     "word": "hubs"
+    },
+    {
+     "start": 75.98,
+     "end": 76.2,
+     "word": "easier?"
+    },
+    {
+     "start": 76.86,
+     "end": 77.16,
      "word": "I'd"
     },
     {
-     "start": 71.5,
-     "end": 71.64,
+     "start": 77.16,
+     "end": 77.54,
+     "word": "really"
+    },
+    {
+     "start": 77.54,
+     "end": 77.92,
      "word": "love"
     },
     {
-     "start": 71.64,
-     "end": 71.84,
-     "word": "for"
-    },
-    {
-     "start": 71.84,
-     "end": 71.98,
-     "word": "you"
-    },
-    {
-     "start": 71.98,
-     "end": 72.14,
+     "start": 77.92,
+     "end": 78.12,
      "word": "to"
     },
     {
-     "start": 72.14,
-     "end": 72.28,
-     "word": "meet"
+     "start": 78.12,
+     "end": 78.28,
+     "word": "hear"
     },
     {
-     "start": 72.28,
-     "end": 72.48,
+     "start": 78.28,
+     "end": 78.58,
+     "word": "it."
+    },
+    {
+     "start": 79.06,
+     "end": 79.12,
+     "word": "Now,"
+    },
+    {
+     "start": 79.26,
+     "end": 79.4,
+     "word": "let"
+    },
+    {
+     "start": 79.4,
+     "end": 79.5,
+     "word": "me"
+    },
+    {
+     "start": 79.5,
+     "end": 79.86,
+     "word": "introduce"
+    },
+    {
+     "start": 79.86,
+     "end": 80.16,
      "word": "my"
     },
     {
-     "start": 72.48,
-     "end": 72.9,
+     "start": 80.16,
+     "end": 80.58,
      "word": "teammate,"
     },
     {
-     "start": 73.12,
-     "end": 73.26,
+     "start": 80.92,
+     "end": 80.98,
      "word": "Grace."
     },
     {
-     "start": 73.98,
-     "end": 74.4,
+     "start": 81.7,
+     "end": 82.1,
      "word": "She's"
     },
     {
-     "start": 74.4,
-     "end": 74.52,
+     "start": 82.1,
+     "end": 82.22,
      "word": "the"
     },
     {
-     "start": 74.52,
-     "end": 74.94,
+     "start": 82.22,
+     "end": 82.62,
      "word": "Executive"
     },
     {
-     "start": 74.94,
-     "end": 75.38,
+     "start": 82.62,
+     "end": 83.04,
      "word": "Assistant"
     },
     {
-     "start": 75.43,
-     "end": 75.84,
+     "start": 83.09,
+     "end": 83.52,
      "word": "SuperWho"
     },
     {
-     "start": 76.3,
-     "end": 76.53,
+     "start": 84.0,
+     "end": 84.2,
      "word": "we'd"
     },
     {
-     "start": 76.53,
-     "end": 76.74,
+     "start": 84.2,
+     "end": 84.42,
      "word": "build"
     },
     {
-     "start": 76.74,
-     "end": 76.96,
+     "start": 84.42,
+     "end": 84.62,
      "word": "for"
     },
     {
-     "start": 76.96,
-     "end": 77.34,
+     "start": 84.62,
+     "end": 84.96,
      "word": "Diallo"
     },
     {
-     "start": 77.34,
-     "end": 77.66,
-     "word": "Smith."
+     "start": 84.96,
+     "end": 85.28,
+     "word": "Smith,"
     },
     {
-     "start": 78.53,
-     "end": 78.6,
-     "word": "Between"
+     "start": 85.86,
+     "end": 86.02,
+     "word": "and"
     },
     {
-     "start": 78.6,
-     "end": 78.76,
+     "start": 86.02,
+     "end": 86.36,
+     "word": "between"
+    },
+    {
+     "start": 86.36,
+     "end": 86.52,
      "word": "the"
     },
     {
-     "start": 78.76,
-     "end": 78.94,
+     "start": 86.52,
+     "end": 86.66,
      "word": "two"
     },
     {
-     "start": 78.94,
-     "end": 79.08,
+     "start": 86.66,
+     "end": 86.78,
      "word": "of"
     },
     {
-     "start": 79.08,
-     "end": 79.36,
+     "start": 86.78,
+     "end": 87.08,
      "word": "us,"
     },
     {
-     "start": 79.82,
-     "end": 80.0,
+     "start": 87.52,
+     "end": 87.7,
      "word": "we've"
     },
     {
-     "start": 80.0,
-     "end": 80.1,
+     "start": 87.7,
+     "end": 87.8,
      "word": "got"
     },
     {
-     "start": 80.1,
-     "end": 80.28,
+     "start": 87.8,
+     "end": 87.94,
      "word": "you"
     },
     {
-     "start": 80.28,
-     "end": 80.6,
+     "start": 87.94,
+     "end": 88.26,
      "word": "covered."
     },
     {
-     "start": 81.24,
-     "end": 81.42,
+     "start": 88.9,
+     "end": 89.1,
      "word": "Grace?"
     }
    ]
   },
-  "transcript": "Hi there, Rosa! I'm Hope, and I'm so glad to finally meet you. I'm your SuperWho. Jim and his team built me just for you, and for the work you're doing at Life Remodeled. I know you've got a lot on your plate right now. The Durfee Innovation Society welcomed more than twenty-three thousand Detroiters last year, and now Anchor Detroit has opened its doors on the east side. That's two buildings, a whole lot of partners, and a lot of people counting on you. So here's how I can help. I keep both hubs in one place, so you're not digging through texts, emails, and spreadsheets just to find out what's going on. When a partner reports a leak or a door that won't lock, it doesn't get lost anymore. You'll see what's open, what's in progress, and what's done, across both buildings, at a glance. I'll also keep the calendar straight, so the gym, the auditorium, and the classrooms never get double booked. And when you need to reach every partner, you write the notice once, and you can actually see who's read it. The best part? It's all free for you to use right now, so you can try it out and see how it fits the way you work. Now, I'd love for you to meet my teammate, Grace. She's the Executive Assistant SuperWho we'd build for Diallo Smith. Between the two of us, we've got you covered. Grace?"
+  "transcript": "Hi there, Rosa! I'm Hope, and I'm so glad to finally meet you. I'm your SuperWho. Jim and his team built me just for you, and for the work you're doing at Life Remodeled. I know you've got a lot on your plate right now. The Durfee Innovation Society welcomed more than twenty-three thousand Detroiters last year, and now Anchor Detroit has opened its doors on the east side. That's two buildings, a whole lot of partners, and a lot of people counting on you. So here's how I can help. I keep both hubs in one place, so you're not digging through texts, emails, and spreadsheets just to find out what's going on. When a partner reports a leak or a door that won't lock, it doesn't get lost anymore. You'll see what's open, what's in progress, and what's done, across both buildings, at a glance. I'll also keep the calendar straight, so the gym, the auditorium, and the classrooms never get double booked. And when you need to reach every partner, you write the notice once, and you can actually see who's read it. The best part? It's all free for you to use right now, so you can try it out and see how it fits the way you work. Before I hand you over, Rosa, is there anything I didn't mention that would make your days at the hubs easier? I'd really love to hear it. Now, let me introduce my teammate, Grace. She's the Executive Assistant SuperWho we'd build for Diallo Smith, and between the two of us, we've got you covered. Grace?"
  },
  "grace": {
-  "duration": 87.517125,
+  "duration": 87.2336875,
   "cues": [
    {
     "i": 1,
@@ -3057,20 +3357,20 @@
     "speaker": "Grace",
     "voice": "en-US-EmmaMultilingualNeural",
     "start": 76.583,
-    "end": 86.917,
-    "text": "Did we leave anything out? You can ask us anything, anytime. And Rosa, what's been weighing on you most lately? Tell us, and we'll take it off your plate."
+    "end": 86.634,
+    "text": "So Rosa, is there anything we left out? Anything at all that would take something off your plate, or off Diallo's? Just tell us. We're here for you."
    }
   ],
   "words": [
    {
     "start": 0.0,
-    "end": 0.4,
+    "end": 0.42,
     "word": "Thanks,",
     "speaker": "Grace",
     "cue": 1
    },
    {
-    "start": 0.4,
+    "start": 0.42,
     "end": 0.78,
     "word": "Hope!",
     "speaker": "Grace",
@@ -3099,13 +3399,13 @@
    },
    {
     "start": 2.28,
-    "end": 2.54,
+    "end": 2.52,
     "word": "Grace,",
     "speaker": "Grace",
     "cue": 1
    },
    {
-    "start": 2.98,
+    "start": 3.0,
     "end": 3.04,
     "word": "and",
     "speaker": "Grace",
@@ -3148,7 +3448,7 @@
    },
    {
     "start": 4.14,
-    "end": 4.44,
+    "end": 4.46,
     "word": "you.",
     "speaker": "Grace",
     "cue": 1
@@ -3169,21 +3469,21 @@
    },
    {
     "start": 5.2,
-    "end": 5.68,
+    "end": 5.62,
     "word": "Executive",
     "speaker": "Grace",
     "cue": 1
    },
    {
-    "start": 5.68,
-    "end": 6.18,
+    "start": 5.62,
+    "end": 6.16,
     "word": "Assistant",
     "speaker": "Grace",
     "cue": 1
    },
    {
-    "start": 6.22,
-    "end": 6.59,
+    "start": 6.2,
+    "end": 6.58,
     "word": "SuperWho",
     "speaker": "Grace",
     "cue": 1
@@ -3589,7 +3889,7 @@
    },
    {
     "start": 28.32,
-    "end": 28.66,
+    "end": 28.64,
     "word": "numbers,",
     "speaker": "Grace",
     "cue": 3
@@ -3652,20 +3952,20 @@
    },
    {
     "start": 31.36,
-    "end": 31.66,
+    "end": 31.64,
     "word": "social",
     "speaker": "Grace",
     "cue": 3
    },
    {
-    "start": 31.66,
-    "end": 31.94,
+    "start": 31.64,
+    "end": 31.96,
     "word": "media",
     "speaker": "Grace",
     "cue": 3
    },
    {
-    "start": 31.94,
+    "start": 31.96,
     "end": 32.22,
     "word": "on",
     "speaker": "Grace",
@@ -3694,13 +3994,13 @@
    },
    {
     "start": 34.52,
-    "end": 34.74,
+    "end": 34.72,
     "word": "LinkedIn,",
     "speaker": "Grace",
     "cue": 3
    },
    {
-    "start": 35.1,
+    "start": 35.12,
     "end": 35.5,
     "word": "TikTok,",
     "speaker": "Grace",
@@ -3715,7 +4015,7 @@
    },
    {
     "start": 35.94,
-    "end": 36.22,
+    "end": 36.2,
     "word": "YouTube.",
     "speaker": "Grace",
     "cue": 3
@@ -3778,20 +4078,20 @@
    },
    {
     "start": 38.3,
-    "end": 38.52,
+    "end": 38.5,
     "word": "next",
     "speaker": "Grace",
     "cue": 3
    },
    {
-    "start": 38.52,
+    "start": 38.5,
     "end": 39.14,
     "word": "location,",
     "speaker": "Grace",
     "cue": 3
    },
    {
-    "start": 39.6,
+    "start": 39.62,
     "end": 39.76,
     "word": "I'll",
     "speaker": "Grace",
@@ -3799,13 +4099,13 @@
    },
    {
     "start": 39.76,
-    "end": 40.02,
+    "end": 40.0,
     "word": "handle",
     "speaker": "Grace",
     "cue": 3
    },
    {
-    "start": 40.02,
+    "start": 40.0,
     "end": 40.22,
     "word": "the",
     "speaker": "Grace",
@@ -3826,7 +4126,7 @@
     "cue": 3
    },
    {
-    "start": 41.64,
+    "start": 41.56,
     "end": 41.72,
     "word": "plus",
     "speaker": "Grace",
@@ -3834,20 +4134,20 @@
    },
    {
     "start": 41.72,
-    "end": 42.22,
+    "end": 42.18,
     "word": "community",
     "speaker": "Grace",
     "cue": 3
    },
    {
-    "start": 42.22,
-    "end": 42.72,
+    "start": 42.18,
+    "end": 42.74,
     "word": "outreach",
     "speaker": "Grace",
     "cue": 3
    },
    {
-    "start": 42.72,
+    "start": 42.74,
     "end": 43.02,
     "word": "and",
     "speaker": "Grace",
@@ -3897,427 +4197,427 @@
    },
    {
     "start": 46.18,
-    "end": 46.44,
+    "end": 54.16,
     "word": "for",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 46.44,
-    "end": 46.66,
+    "start": 54.16,
+    "end": 54.36,
     "word": "both",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 46.66,
-    "end": 46.84,
+    "start": 54.36,
+    "end": 54.82,
     "word": "of",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 46.84,
-    "end": 47.14,
+    "start": 54.82,
+    "end": 55.42,
     "word": "you.",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 47.62,
-    "end": 47.96,
+    "start": 55.44,
+    "end": 55.6,
     "word": "Everything",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 47.96,
-    "end": 48.32,
+    "start": 55.62,
+    "end": 55.78,
     "word": "lives",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 48.32,
-    "end": 48.6,
+    "start": 55.8,
+    "end": 55.96,
     "word": "in",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 48.6,
-    "end": 48.8,
+    "start": 55.98,
+    "end": 56.14,
     "word": "one",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 48.8,
-    "end": 49.32,
+    "start": 56.16,
+    "end": 56.32,
     "word": "executive",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 49.32,
-    "end": 49.98,
+    "start": 56.34,
+    "end": 56.5,
     "word": "dashboard,",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 50.38,
-    "end": 50.52,
+    "start": 56.51,
+    "end": 56.68,
     "word": "and",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 50.52,
-    "end": 50.7,
+    "start": 56.69,
+    "end": 56.86,
     "word": "Hope",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 50.7,
-    "end": 50.84,
+    "start": 56.87,
+    "end": 57.03,
     "word": "and",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 50.84,
-    "end": 51.02,
+    "start": 57.05,
+    "end": 57.21,
     "word": "I",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 51.02,
-    "end": 51.2,
+    "start": 57.23,
+    "end": 57.39,
     "word": "talk",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 51.2,
-    "end": 51.44,
+    "start": 57.41,
+    "end": 57.57,
     "word": "to",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 51.44,
-    "end": 51.62,
+    "start": 57.59,
+    "end": 57.75,
     "word": "each",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 51.62,
-    "end": 51.86,
+    "start": 57.77,
+    "end": 57.93,
     "word": "other,",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 52.2,
-    "end": 52.42,
+    "start": 57.95,
+    "end": 58.11,
     "word": "so",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 52.42,
-    "end": 52.74,
+    "start": 58.13,
+    "end": 58.29,
     "word": "nothing",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 52.74,
-    "end": 53.1,
+    "start": 58.31,
+    "end": 58.47,
     "word": "slips",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 53.1,
-    "end": 53.52,
+    "start": 58.49,
+    "end": 58.65,
     "word": "between",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 53.52,
-    "end": 53.72,
+    "start": 58.66,
+    "end": 58.83,
     "word": "the",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 53.72,
-    "end": 53.9,
+    "start": 58.84,
+    "end": 59.01,
     "word": "hubs",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 53.9,
-    "end": 54.14,
+    "start": 59.02,
+    "end": 59.18,
     "word": "and",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 54.14,
-    "end": 54.28,
+    "start": 59.2,
+    "end": 59.36,
     "word": "the",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 54.28,
-    "end": 54.48,
+    "start": 59.38,
+    "end": 59.54,
     "word": "front",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 54.48,
-    "end": 54.9,
+    "start": 59.56,
+    "end": 59.72,
     "word": "office.",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 55.52,
-    "end": 55.68,
+    "start": 59.74,
+    "end": 59.9,
     "word": "We",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 55.68,
-    "end": 55.96,
+    "start": 59.92,
+    "end": 60.08,
     "word": "don't",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 55.96,
-    "end": 56.28,
+    "start": 60.1,
+    "end": 60.26,
     "word": "sleep,",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 56.54,
-    "end": 56.78,
+    "start": 60.28,
+    "end": 60.44,
     "word": "so",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 56.78,
-    "end": 56.92,
+    "start": 60.46,
+    "end": 60.62,
     "word": "the",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 56.92,
-    "end": 57.14,
+    "start": 60.64,
+    "end": 60.8,
     "word": "work",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 57.14,
-    "end": 57.42,
+    "start": 60.81,
+    "end": 60.98,
     "word": "keeps",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 57.42,
-    "end": 57.8,
+    "start": 60.99,
+    "end": 61.15,
     "word": "moving",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 57.8,
-    "end": 58.08,
+    "start": 61.17,
+    "end": 61.33,
     "word": "while",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 58.08,
-    "end": 58.26,
+    "start": 61.35,
+    "end": 61.51,
     "word": "you're",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 58.26,
-    "end": 58.42,
+    "start": 61.53,
+    "end": 61.69,
     "word": "out",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 58.42,
-    "end": 58.58,
+    "start": 61.71,
+    "end": 61.87,
     "word": "in",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 58.58,
-    "end": 58.7,
+    "start": 61.89,
+    "end": 62.05,
     "word": "the",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 58.7,
-    "end": 59.12,
+    "start": 62.07,
+    "end": 62.23,
     "word": "community.",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 59.78,
-    "end": 59.9,
+    "start": 62.25,
+    "end": 62.41,
     "word": "And",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 59.9,
-    "end": 60.2,
+    "start": 62.43,
+    "end": 62.59,
     "word": "every",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 60.2,
-    "end": 60.56,
+    "start": 62.61,
+    "end": 62.77,
     "word": "morning",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 60.56,
-    "end": 60.8,
+    "start": 62.79,
+    "end": 62.95,
     "word": "and",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 60.8,
-    "end": 61.12,
+    "start": 62.96,
+    "end": 63.13,
     "word": "every",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 61.12,
-    "end": 61.54,
+    "start": 63.14,
+    "end": 63.3,
     "word": "evening,",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 61.92,
-    "end": 62.12,
+    "start": 63.32,
+    "end": 63.48,
     "word": "you'll",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 62.12,
-    "end": 62.28,
+    "start": 63.5,
+    "end": 63.66,
     "word": "each",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 62.28,
-    "end": 62.48,
+    "start": 63.68,
+    "end": 63.84,
     "word": "get",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 62.48,
-    "end": 62.66,
+    "start": 63.86,
+    "end": 64.02,
     "word": "a",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 62.66,
-    "end": 62.84,
+    "start": 64.04,
+    "end": 64.2,
     "word": "short",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 62.84,
-    "end": 63.32,
+    "start": 64.22,
+    "end": 64.38,
     "word": "report,",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 63.68,
-    "end": 63.86,
+    "start": 64.4,
+    "end": 64.56,
     "word": "so",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 63.86,
-    "end": 64.0,
+    "start": 64.58,
+    "end": 64.74,
     "word": "you",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 64.0,
-    "end": 64.34,
+    "start": 64.76,
+    "end": 64.92,
     "word": "always",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 64.34,
-    "end": 64.58,
+    "start": 64.94,
+    "end": 65.1,
     "word": "know",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 64.58,
-    "end": 64.76,
+    "start": 65.11,
+    "end": 65.28,
     "word": "where",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 64.76,
-    "end": 64.98,
+    "start": 65.29,
+    "end": 65.45,
     "word": "things",
     "speaker": "Grace",
     "cue": 4
    },
    {
-    "start": 64.98,
-    "end": 65.42,
+    "start": 65.47,
+    "end": 65.63,
     "word": "stand.",
     "speaker": "Grace",
     "cue": 4
@@ -4345,13 +4645,13 @@
    },
    {
     "start": 67.06,
-    "end": 67.34,
+    "end": 67.32,
     "word": "fraction",
     "speaker": "Grace",
     "cue": 5
    },
    {
-    "start": 67.34,
+    "start": 67.32,
     "end": 67.68,
     "word": "of",
     "speaker": "Grace",
@@ -4359,13 +4659,13 @@
    },
    {
     "start": 67.68,
-    "end": 67.86,
+    "end": 67.84,
     "word": "what",
     "speaker": "Grace",
     "cue": 5
    },
    {
-    "start": 67.86,
+    "start": 67.84,
     "end": 68.06,
     "word": "you'd",
     "speaker": "Grace",
@@ -4407,7 +4707,7 @@
     "cue": 5
    },
    {
-    "start": 69.66,
+    "start": 69.74,
     "end": 69.88,
     "word": "and",
     "speaker": "Grace",
@@ -4415,13 +4715,13 @@
    },
    {
     "start": 69.88,
-    "end": 70.26,
+    "end": 70.24,
     "word": "Jim's",
     "speaker": "Grace",
     "cue": 5
    },
    {
-    "start": 70.26,
+    "start": 70.24,
     "end": 70.4,
     "word": "years",
     "speaker": "Grace",
@@ -4429,13 +4729,13 @@
    },
    {
     "start": 70.4,
-    "end": 70.66,
+    "end": 70.68,
     "word": "in",
     "speaker": "Grace",
     "cue": 5
    },
    {
-    "start": 70.66,
+    "start": 70.68,
     "end": 70.94,
     "word": "banking",
     "speaker": "Grace",
@@ -4450,13 +4750,13 @@
    },
    {
     "start": 71.24,
-    "end": 71.6,
+    "end": 71.62,
     "word": "business",
     "speaker": "Grace",
     "cue": 5
    },
    {
-    "start": 71.6,
+    "start": 71.62,
     "end": 71.9,
     "word": "are",
     "speaker": "Grace",
@@ -4464,13 +4764,13 @@
    },
    {
     "start": 71.9,
-    "end": 72.1,
+    "end": 72.08,
     "word": "built",
     "speaker": "Grace",
     "cue": 5
    },
    {
-    "start": 72.1,
+    "start": 72.08,
     "end": 72.38,
     "word": "right",
     "speaker": "Grace",
@@ -4534,20 +4834,20 @@
    },
    {
     "start": 74.48,
-    "end": 74.92,
+    "end": 74.94,
     "word": "smarter",
     "speaker": "Grace",
     "cue": 5
    },
    {
-    "start": 74.92,
-    "end": 75.32,
+    "start": 74.94,
+    "end": 75.34,
     "word": "every",
     "speaker": "Grace",
     "cue": 5
    },
    {
-    "start": 75.32,
+    "start": 75.34,
     "end": 75.64,
     "word": "day.",
     "speaker": "Grace",
@@ -4555,204 +4855,197 @@
    },
    {
     "start": 76.58,
-    "end": 76.84,
-    "word": "Did",
+    "end": 76.92,
+    "word": "So",
     "speaker": "Grace",
     "cue": 6
    },
    {
-    "start": 76.84,
-    "end": 77.02,
-    "word": "we",
-    "speaker": "Grace",
-    "cue": 6
-   },
-   {
-    "start": 77.02,
-    "end": 77.22,
-    "word": "leave",
-    "speaker": "Grace",
-    "cue": 6
-   },
-   {
-    "start": 77.22,
-    "end": 77.62,
-    "word": "anything",
-    "speaker": "Grace",
-    "cue": 6
-   },
-   {
-    "start": 77.62,
-    "end": 78.0,
-    "word": "out?",
-    "speaker": "Grace",
-    "cue": 6
-   },
-   {
-    "start": 78.58,
-    "end": 78.66,
-    "word": "You",
-    "speaker": "Grace",
-    "cue": 6
-   },
-   {
-    "start": 78.66,
-    "end": 78.82,
-    "word": "can",
-    "speaker": "Grace",
-    "cue": 6
-   },
-   {
-    "start": 78.82,
-    "end": 79.08,
-    "word": "ask",
-    "speaker": "Grace",
-    "cue": 6
-   },
-   {
-    "start": 79.08,
-    "end": 79.26,
-    "word": "us",
-    "speaker": "Grace",
-    "cue": 6
-   },
-   {
-    "start": 79.26,
-    "end": 79.74,
-    "word": "anything,",
-    "speaker": "Grace",
-    "cue": 6
-   },
-   {
-    "start": 79.98,
-    "end": 80.32,
-    "word": "anytime.",
-    "speaker": "Grace",
-    "cue": 6
-   },
-   {
-    "start": 81.1,
-    "end": 81.22,
-    "word": "And",
-    "speaker": "Grace",
-    "cue": 6
-   },
-   {
-    "start": 81.22,
-    "end": 81.52,
+    "start": 76.92,
+    "end": 77.3,
     "word": "Rosa,",
     "speaker": "Grace",
     "cue": 6
    },
    {
-    "start": 82.14,
-    "end": 82.36,
-    "word": "what's",
+    "start": 77.74,
+    "end": 77.9,
+    "word": "is",
     "speaker": "Grace",
     "cue": 6
    },
    {
-    "start": 82.36,
-    "end": 82.5,
-    "word": "been",
+    "start": 77.9,
+    "end": 78.06,
+    "word": "there",
     "speaker": "Grace",
     "cue": 6
    },
    {
-    "start": 82.5,
-    "end": 82.72,
-    "word": "weighing",
+    "start": 78.06,
+    "end": 78.4,
+    "word": "anything",
     "speaker": "Grace",
     "cue": 6
    },
    {
-    "start": 82.72,
-    "end": 82.94,
-    "word": "on",
+    "start": 78.4,
+    "end": 78.68,
+    "word": "we",
     "speaker": "Grace",
     "cue": 6
    },
    {
-    "start": 82.94,
-    "end": 83.1,
-    "word": "you",
+    "start": 78.84,
+    "end": 78.92,
+    "word": "left",
     "speaker": "Grace",
     "cue": 6
    },
    {
-    "start": 83.1,
-    "end": 83.3,
-    "word": "most",
+    "start": 78.92,
+    "end": 79.28,
+    "word": "out?",
     "speaker": "Grace",
     "cue": 6
    },
    {
-    "start": 83.3,
-    "end": 83.72,
-    "word": "lately?",
+    "start": 79.8,
+    "end": 80.1,
+    "word": "Anything",
     "speaker": "Grace",
     "cue": 6
    },
    {
-    "start": 84.34,
-    "end": 84.48,
-    "word": "Tell",
+    "start": 80.1,
+    "end": 80.34,
+    "word": "at",
     "speaker": "Grace",
     "cue": 6
    },
    {
-    "start": 84.48,
-    "end": 84.78,
-    "word": "us,",
+    "start": 80.34,
+    "end": 80.54,
+    "word": "all",
     "speaker": "Grace",
     "cue": 6
    },
    {
-    "start": 85.0,
-    "end": 85.12,
-    "word": "and",
+    "start": 80.54,
+    "end": 80.7,
+    "word": "that",
     "speaker": "Grace",
     "cue": 6
    },
    {
-    "start": 85.12,
-    "end": 85.32,
-    "word": "we'll",
+    "start": 80.7,
+    "end": 80.86,
+    "word": "would",
     "speaker": "Grace",
     "cue": 6
    },
    {
-    "start": 85.32,
-    "end": 85.48,
+    "start": 80.86,
+    "end": 81.06,
     "word": "take",
     "speaker": "Grace",
     "cue": 6
    },
    {
-    "start": 85.48,
-    "end": 85.62,
-    "word": "it",
+    "start": 81.06,
+    "end": 81.38,
+    "word": "something",
     "speaker": "Grace",
     "cue": 6
    },
    {
-    "start": 85.62,
-    "end": 85.78,
+    "start": 81.38,
+    "end": 81.64,
     "word": "off",
     "speaker": "Grace",
     "cue": 6
    },
    {
-    "start": 85.78,
-    "end": 85.98,
+    "start": 81.64,
+    "end": 81.84,
     "word": "your",
     "speaker": "Grace",
     "cue": 6
    },
    {
-    "start": 85.98,
-    "end": 86.26,
-    "word": "plate.",
+    "start": 81.84,
+    "end": 82.18,
+    "word": "plate,",
+    "speaker": "Grace",
+    "cue": 6
+   },
+   {
+    "start": 82.21,
+    "end": 82.48,
+    "word": "or",
+    "speaker": "Grace",
+    "cue": 6
+   },
+   {
+    "start": 82.51,
+    "end": 82.78,
+    "word": "off",
+    "speaker": "Grace",
+    "cue": 6
+   },
+   {
+    "start": 82.81,
+    "end": 83.08,
+    "word": "Diallo's?",
+    "speaker": "Grace",
+    "cue": 6
+   },
+   {
+    "start": 83.38,
+    "end": 83.94,
+    "word": "Just",
+    "speaker": "Grace",
+    "cue": 6
+   },
+   {
+    "start": 83.94,
+    "end": 84.5,
+    "word": "tell",
+    "speaker": "Grace",
+    "cue": 6
+   },
+   {
+    "start": 84.5,
+    "end": 84.82,
+    "word": "us.",
+    "speaker": "Grace",
+    "cue": 6
+   },
+   {
+    "start": 85.38,
+    "end": 85.52,
+    "word": "We're",
+    "speaker": "Grace",
+    "cue": 6
+   },
+   {
+    "start": 85.52,
+    "end": 85.68,
+    "word": "here",
+    "speaker": "Grace",
+    "cue": 6
+   },
+   {
+    "start": 85.68,
+    "end": 85.92,
+    "word": "for",
+    "speaker": "Grace",
+    "cue": 6
+   },
+   {
+    "start": 85.92,
+    "end": 86.18,
+    "word": "you.",
     "speaker": "Grace",
     "cue": 6
    }
@@ -4761,11 +5054,11 @@
    "1": [
     {
      "start": 0.0,
-     "end": 0.4,
+     "end": 0.42,
      "word": "Thanks,"
     },
     {
-     "start": 0.4,
+     "start": 0.42,
      "end": 0.78,
      "word": "Hope!"
     },
@@ -4786,11 +5079,11 @@
     },
     {
      "start": 2.28,
-     "end": 2.54,
+     "end": 2.52,
      "word": "Grace,"
     },
     {
-     "start": 2.98,
+     "start": 3.0,
      "end": 3.04,
      "word": "and"
     },
@@ -4821,7 +5114,7 @@
     },
     {
      "start": 4.14,
-     "end": 4.44,
+     "end": 4.46,
      "word": "you."
     },
     {
@@ -4836,17 +5129,17 @@
     },
     {
      "start": 5.2,
-     "end": 5.68,
+     "end": 5.62,
      "word": "Executive"
     },
     {
-     "start": 5.68,
-     "end": 6.18,
+     "start": 5.62,
+     "end": 6.16,
      "word": "Assistant"
     },
     {
-     "start": 6.22,
-     "end": 6.59,
+     "start": 6.2,
+     "end": 6.58,
      "word": "SuperWho"
     },
     {
@@ -5140,7 +5433,7 @@
     },
     {
      "start": 28.32,
-     "end": 28.66,
+     "end": 28.64,
      "word": "numbers,"
     },
     {
@@ -5185,16 +5478,16 @@
     },
     {
      "start": 31.36,
-     "end": 31.66,
+     "end": 31.64,
      "word": "social"
     },
     {
-     "start": 31.66,
-     "end": 31.94,
+     "start": 31.64,
+     "end": 31.96,
      "word": "media"
     },
     {
-     "start": 31.94,
+     "start": 31.96,
      "end": 32.22,
      "word": "on"
     },
@@ -5215,11 +5508,11 @@
     },
     {
      "start": 34.52,
-     "end": 34.74,
+     "end": 34.72,
      "word": "LinkedIn,"
     },
     {
-     "start": 35.1,
+     "start": 35.12,
      "end": 35.5,
      "word": "TikTok,"
     },
@@ -5230,7 +5523,7 @@
     },
     {
      "start": 35.94,
-     "end": 36.22,
+     "end": 36.2,
      "word": "YouTube."
     },
     {
@@ -5275,26 +5568,26 @@
     },
     {
      "start": 38.3,
-     "end": 38.52,
+     "end": 38.5,
      "word": "next"
     },
     {
-     "start": 38.52,
+     "start": 38.5,
      "end": 39.14,
      "word": "location,"
     },
     {
-     "start": 39.6,
+     "start": 39.62,
      "end": 39.76,
      "word": "I'll"
     },
     {
      "start": 39.76,
-     "end": 40.02,
+     "end": 40.0,
      "word": "handle"
     },
     {
-     "start": 40.02,
+     "start": 40.0,
      "end": 40.22,
      "word": "the"
     },
@@ -5309,22 +5602,22 @@
      "word": "research,"
     },
     {
-     "start": 41.64,
+     "start": 41.56,
      "end": 41.72,
      "word": "plus"
     },
     {
      "start": 41.72,
-     "end": 42.22,
+     "end": 42.18,
      "word": "community"
     },
     {
-     "start": 42.22,
-     "end": 42.72,
+     "start": 42.18,
+     "end": 42.74,
      "word": "outreach"
     },
     {
-     "start": 42.72,
+     "start": 42.74,
      "end": 43.02,
      "word": "and"
     },
@@ -5362,307 +5655,307 @@
     },
     {
      "start": 46.18,
-     "end": 46.44,
+     "end": 54.16,
      "word": "for"
     },
     {
-     "start": 46.44,
-     "end": 46.66,
+     "start": 54.16,
+     "end": 54.36,
      "word": "both"
     },
     {
-     "start": 46.66,
-     "end": 46.84,
+     "start": 54.36,
+     "end": 54.82,
      "word": "of"
     },
     {
-     "start": 46.84,
-     "end": 47.14,
+     "start": 54.82,
+     "end": 55.42,
      "word": "you."
     },
     {
-     "start": 47.62,
-     "end": 47.96,
+     "start": 55.44,
+     "end": 55.6,
      "word": "Everything"
     },
     {
-     "start": 47.96,
-     "end": 48.32,
+     "start": 55.62,
+     "end": 55.78,
      "word": "lives"
     },
     {
-     "start": 48.32,
-     "end": 48.6,
+     "start": 55.8,
+     "end": 55.96,
      "word": "in"
     },
     {
-     "start": 48.6,
-     "end": 48.8,
+     "start": 55.98,
+     "end": 56.14,
      "word": "one"
     },
     {
-     "start": 48.8,
-     "end": 49.32,
+     "start": 56.16,
+     "end": 56.32,
      "word": "executive"
     },
     {
-     "start": 49.32,
-     "end": 49.98,
+     "start": 56.34,
+     "end": 56.5,
      "word": "dashboard,"
     },
     {
-     "start": 50.38,
-     "end": 50.52,
+     "start": 56.51,
+     "end": 56.68,
      "word": "and"
     },
     {
-     "start": 50.52,
-     "end": 50.7,
+     "start": 56.69,
+     "end": 56.86,
      "word": "Hope"
     },
     {
-     "start": 50.7,
-     "end": 50.84,
+     "start": 56.87,
+     "end": 57.03,
      "word": "and"
     },
     {
-     "start": 50.84,
-     "end": 51.02,
+     "start": 57.05,
+     "end": 57.21,
      "word": "I"
     },
     {
-     "start": 51.02,
-     "end": 51.2,
+     "start": 57.23,
+     "end": 57.39,
      "word": "talk"
     },
     {
-     "start": 51.2,
-     "end": 51.44,
+     "start": 57.41,
+     "end": 57.57,
      "word": "to"
     },
     {
-     "start": 51.44,
-     "end": 51.62,
+     "start": 57.59,
+     "end": 57.75,
      "word": "each"
     },
     {
-     "start": 51.62,
-     "end": 51.86,
+     "start": 57.77,
+     "end": 57.93,
      "word": "other,"
     },
     {
-     "start": 52.2,
-     "end": 52.42,
+     "start": 57.95,
+     "end": 58.11,
      "word": "so"
     },
     {
-     "start": 52.42,
-     "end": 52.74,
+     "start": 58.13,
+     "end": 58.29,
      "word": "nothing"
     },
     {
-     "start": 52.74,
-     "end": 53.1,
+     "start": 58.31,
+     "end": 58.47,
      "word": "slips"
     },
     {
-     "start": 53.1,
-     "end": 53.52,
+     "start": 58.49,
+     "end": 58.65,
      "word": "between"
     },
     {
-     "start": 53.52,
-     "end": 53.72,
+     "start": 58.66,
+     "end": 58.83,
      "word": "the"
     },
     {
-     "start": 53.72,
-     "end": 53.9,
+     "start": 58.84,
+     "end": 59.01,
      "word": "hubs"
     },
     {
-     "start": 53.9,
-     "end": 54.14,
+     "start": 59.02,
+     "end": 59.18,
      "word": "and"
     },
     {
-     "start": 54.14,
-     "end": 54.28,
+     "start": 59.2,
+     "end": 59.36,
      "word": "the"
     },
     {
-     "start": 54.28,
-     "end": 54.48,
+     "start": 59.38,
+     "end": 59.54,
      "word": "front"
     },
     {
-     "start": 54.48,
-     "end": 54.9,
+     "start": 59.56,
+     "end": 59.72,
      "word": "office."
     },
     {
-     "start": 55.52,
-     "end": 55.68,
+     "start": 59.74,
+     "end": 59.9,
      "word": "We"
     },
     {
-     "start": 55.68,
-     "end": 55.96,
+     "start": 59.92,
+     "end": 60.08,
      "word": "don't"
     },
     {
-     "start": 55.96,
-     "end": 56.28,
+     "start": 60.1,
+     "end": 60.26,
      "word": "sleep,"
     },
     {
-     "start": 56.54,
-     "end": 56.78,
+     "start": 60.28,
+     "end": 60.44,
      "word": "so"
     },
     {
-     "start": 56.78,
-     "end": 56.92,
+     "start": 60.46,
+     "end": 60.62,
      "word": "the"
     },
     {
-     "start": 56.92,
-     "end": 57.14,
+     "start": 60.64,
+     "end": 60.8,
      "word": "work"
     },
     {
-     "start": 57.14,
-     "end": 57.42,
+     "start": 60.81,
+     "end": 60.98,
      "word": "keeps"
     },
     {
-     "start": 57.42,
-     "end": 57.8,
+     "start": 60.99,
+     "end": 61.15,
      "word": "moving"
     },
     {
-     "start": 57.8,
-     "end": 58.08,
+     "start": 61.17,
+     "end": 61.33,
      "word": "while"
     },
     {
-     "start": 58.08,
-     "end": 58.26,
+     "start": 61.35,
+     "end": 61.51,
      "word": "you're"
     },
     {
-     "start": 58.26,
-     "end": 58.42,
+     "start": 61.53,
+     "end": 61.69,
      "word": "out"
     },
     {
-     "start": 58.42,
-     "end": 58.58,
+     "start": 61.71,
+     "end": 61.87,
      "word": "in"
     },
     {
-     "start": 58.58,
-     "end": 58.7,
+     "start": 61.89,
+     "end": 62.05,
      "word": "the"
     },
     {
-     "start": 58.7,
-     "end": 59.12,
+     "start": 62.07,
+     "end": 62.23,
      "word": "community."
     },
     {
-     "start": 59.78,
-     "end": 59.9,
+     "start": 62.25,
+     "end": 62.41,
      "word": "And"
     },
     {
-     "start": 59.9,
-     "end": 60.2,
+     "start": 62.43,
+     "end": 62.59,
      "word": "every"
     },
     {
-     "start": 60.2,
-     "end": 60.56,
+     "start": 62.61,
+     "end": 62.77,
      "word": "morning"
     },
     {
-     "start": 60.56,
-     "end": 60.8,
+     "start": 62.79,
+     "end": 62.95,
      "word": "and"
     },
     {
-     "start": 60.8,
-     "end": 61.12,
+     "start": 62.96,
+     "end": 63.13,
      "word": "every"
     },
     {
-     "start": 61.12,
-     "end": 61.54,
+     "start": 63.14,
+     "end": 63.3,
      "word": "evening,"
     },
     {
-     "start": 61.92,
-     "end": 62.12,
+     "start": 63.32,
+     "end": 63.48,
      "word": "you'll"
     },
     {
-     "start": 62.12,
-     "end": 62.28,
+     "start": 63.5,
+     "end": 63.66,
      "word": "each"
     },
     {
-     "start": 62.28,
-     "end": 62.48,
+     "start": 63.68,
+     "end": 63.84,
      "word": "get"
     },
     {
-     "start": 62.48,
-     "end": 62.66,
+     "start": 63.86,
+     "end": 64.02,
      "word": "a"
     },
     {
-     "start": 62.66,
-     "end": 62.84,
+     "start": 64.04,
+     "end": 64.2,
      "word": "short"
     },
     {
-     "start": 62.84,
-     "end": 63.32,
+     "start": 64.22,
+     "end": 64.38,
      "word": "report,"
     },
     {
-     "start": 63.68,
-     "end": 63.86,
+     "start": 64.4,
+     "end": 64.56,
      "word": "so"
     },
     {
-     "start": 63.86,
-     "end": 64.0,
+     "start": 64.58,
+     "end": 64.74,
      "word": "you"
     },
     {
-     "start": 64.0,
-     "end": 64.34,
+     "start": 64.76,
+     "end": 64.92,
      "word": "always"
     },
     {
-     "start": 64.34,
-     "end": 64.58,
+     "start": 64.94,
+     "end": 65.1,
      "word": "know"
     },
     {
-     "start": 64.58,
-     "end": 64.76,
+     "start": 65.11,
+     "end": 65.28,
      "word": "where"
     },
     {
-     "start": 64.76,
-     "end": 64.98,
+     "start": 65.29,
+     "end": 65.45,
      "word": "things"
     },
     {
-     "start": 64.98,
-     "end": 65.42,
+     "start": 65.47,
+     "end": 65.63,
      "word": "stand."
     }
    ],
@@ -5684,21 +5977,21 @@
     },
     {
      "start": 67.06,
-     "end": 67.34,
+     "end": 67.32,
      "word": "fraction"
     },
     {
-     "start": 67.34,
+     "start": 67.32,
      "end": 67.68,
      "word": "of"
     },
     {
      "start": 67.68,
-     "end": 67.86,
+     "end": 67.84,
      "word": "what"
     },
     {
-     "start": 67.86,
+     "start": 67.84,
      "end": 68.06,
      "word": "you'd"
     },
@@ -5728,27 +6021,27 @@
      "word": "assistant,"
     },
     {
-     "start": 69.66,
+     "start": 69.74,
      "end": 69.88,
      "word": "and"
     },
     {
      "start": 69.88,
-     "end": 70.26,
+     "end": 70.24,
      "word": "Jim's"
     },
     {
-     "start": 70.26,
+     "start": 70.24,
      "end": 70.4,
      "word": "years"
     },
     {
      "start": 70.4,
-     "end": 70.66,
+     "end": 70.68,
      "word": "in"
     },
     {
-     "start": 70.66,
+     "start": 70.68,
      "end": 70.94,
      "word": "banking"
     },
@@ -5759,21 +6052,21 @@
     },
     {
      "start": 71.24,
-     "end": 71.6,
+     "end": 71.62,
      "word": "business"
     },
     {
-     "start": 71.6,
+     "start": 71.62,
      "end": 71.9,
      "word": "are"
     },
     {
      "start": 71.9,
-     "end": 72.1,
+     "end": 72.08,
      "word": "built"
     },
     {
-     "start": 72.1,
+     "start": 72.08,
      "end": 72.38,
      "word": "right"
     },
@@ -5819,16 +6112,16 @@
     },
     {
      "start": 74.48,
-     "end": 74.92,
+     "end": 74.94,
      "word": "smarter"
     },
     {
-     "start": 74.92,
-     "end": 75.32,
+     "start": 74.94,
+     "end": 75.34,
      "word": "every"
     },
     {
-     "start": 75.32,
+     "start": 75.34,
      "end": 75.64,
      "word": "day."
     }
@@ -5836,151 +6129,146 @@
    "6": [
     {
      "start": 76.58,
-     "end": 76.84,
-     "word": "Did"
+     "end": 76.92,
+     "word": "So"
     },
     {
-     "start": 76.84,
-     "end": 77.02,
-     "word": "we"
-    },
-    {
-     "start": 77.02,
-     "end": 77.22,
-     "word": "leave"
-    },
-    {
-     "start": 77.22,
-     "end": 77.62,
-     "word": "anything"
-    },
-    {
-     "start": 77.62,
-     "end": 78.0,
-     "word": "out?"
-    },
-    {
-     "start": 78.58,
-     "end": 78.66,
-     "word": "You"
-    },
-    {
-     "start": 78.66,
-     "end": 78.82,
-     "word": "can"
-    },
-    {
-     "start": 78.82,
-     "end": 79.08,
-     "word": "ask"
-    },
-    {
-     "start": 79.08,
-     "end": 79.26,
-     "word": "us"
-    },
-    {
-     "start": 79.26,
-     "end": 79.74,
-     "word": "anything,"
-    },
-    {
-     "start": 79.98,
-     "end": 80.32,
-     "word": "anytime."
-    },
-    {
-     "start": 81.1,
-     "end": 81.22,
-     "word": "And"
-    },
-    {
-     "start": 81.22,
-     "end": 81.52,
+     "start": 76.92,
+     "end": 77.3,
      "word": "Rosa,"
     },
     {
-     "start": 82.14,
-     "end": 82.36,
-     "word": "what's"
+     "start": 77.74,
+     "end": 77.9,
+     "word": "is"
     },
     {
-     "start": 82.36,
-     "end": 82.5,
-     "word": "been"
+     "start": 77.9,
+     "end": 78.06,
+     "word": "there"
     },
     {
-     "start": 82.5,
-     "end": 82.72,
-     "word": "weighing"
+     "start": 78.06,
+     "end": 78.4,
+     "word": "anything"
     },
     {
-     "start": 82.72,
-     "end": 82.94,
-     "word": "on"
+     "start": 78.4,
+     "end": 78.68,
+     "word": "we"
     },
     {
-     "start": 82.94,
-     "end": 83.1,
-     "word": "you"
+     "start": 78.84,
+     "end": 78.92,
+     "word": "left"
     },
     {
-     "start": 83.1,
-     "end": 83.3,
-     "word": "most"
+     "start": 78.92,
+     "end": 79.28,
+     "word": "out?"
     },
     {
-     "start": 83.3,
-     "end": 83.72,
-     "word": "lately?"
+     "start": 79.8,
+     "end": 80.1,
+     "word": "Anything"
     },
     {
-     "start": 84.34,
-     "end": 84.48,
-     "word": "Tell"
+     "start": 80.1,
+     "end": 80.34,
+     "word": "at"
     },
     {
-     "start": 84.48,
-     "end": 84.78,
-     "word": "us,"
+     "start": 80.34,
+     "end": 80.54,
+     "word": "all"
     },
     {
-     "start": 85.0,
-     "end": 85.12,
-     "word": "and"
+     "start": 80.54,
+     "end": 80.7,
+     "word": "that"
     },
     {
-     "start": 85.12,
-     "end": 85.32,
-     "word": "we'll"
+     "start": 80.7,
+     "end": 80.86,
+     "word": "would"
     },
     {
-     "start": 85.32,
-     "end": 85.48,
+     "start": 80.86,
+     "end": 81.06,
      "word": "take"
     },
     {
-     "start": 85.48,
-     "end": 85.62,
-     "word": "it"
+     "start": 81.06,
+     "end": 81.38,
+     "word": "something"
     },
     {
-     "start": 85.62,
-     "end": 85.78,
+     "start": 81.38,
+     "end": 81.64,
      "word": "off"
     },
     {
-     "start": 85.78,
-     "end": 85.98,
+     "start": 81.64,
+     "end": 81.84,
      "word": "your"
     },
     {
-     "start": 85.98,
-     "end": 86.26,
-     "word": "plate."
+     "start": 81.84,
+     "end": 82.18,
+     "word": "plate,"
+    },
+    {
+     "start": 82.21,
+     "end": 82.48,
+     "word": "or"
+    },
+    {
+     "start": 82.51,
+     "end": 82.78,
+     "word": "off"
+    },
+    {
+     "start": 82.81,
+     "end": 83.08,
+     "word": "Diallo's?"
+    },
+    {
+     "start": 83.38,
+     "end": 83.94,
+     "word": "Just"
+    },
+    {
+     "start": 83.94,
+     "end": 84.5,
+     "word": "tell"
+    },
+    {
+     "start": 84.5,
+     "end": 84.82,
+     "word": "us."
+    },
+    {
+     "start": 85.38,
+     "end": 85.52,
+     "word": "We're"
+    },
+    {
+     "start": 85.52,
+     "end": 85.68,
+     "word": "here"
+    },
+    {
+     "start": 85.68,
+     "end": 85.92,
+     "word": "for"
+    },
+    {
+     "start": 85.92,
+     "end": 86.18,
+     "word": "you."
     }
    ]
   },
-  "transcript": "Thanks, Hope! Hi Rosa, I'm Grace, and I'm really happy to meet you. I'm the Executive Assistant SuperWho for Diallo Smith. Leading Life Remodeled means Diallo's day gets pulled in a hundred directions. So I'd take the busy work off his desk. I'd manage his calendar and scheduling, book his flights, handle texts and voicemail, draft his emails, and keep his inbox under control. I can also pull together reports, keep an eye on the numbers, keep your Google Drive organized, and run your social media on Instagram, Facebook, X, LinkedIn, TikTok, and YouTube. And when it's time to look at the next location, I'll handle the market research, plus community outreach and partner relationships. Here's what that means for both of you. Everything lives in one executive dashboard, and Hope and I talk to each other, so nothing slips between the hubs and the front office. We don't sleep, so the work keeps moving while you're out in the community. And every morning and every evening, you'll each get a short report, so you always know where things stand. It costs a fraction of what you'd pay to hire an assistant, and Jim's years in banking and business are built right into how we work. We get a little smarter every day. Did we leave anything out? You can ask us anything, anytime. And Rosa, what's been weighing on you most lately? Tell us, and we'll take it off your plate."
+  "transcript": "Thanks, Hope! Hi Rosa, I'm Grace, and I'm really happy to meet you. I'm the Executive Assistant SuperWho for Diallo Smith. Leading Life Remodeled means Diallo's day gets pulled in a hundred directions. So I'd take the busy work off his desk. I'd manage his calendar and scheduling, book his flights, handle texts and voicemail, draft his emails, and keep his inbox under control. I can also pull together reports, keep an eye on the numbers, keep your Google Drive organized, and run your social media on Instagram, Facebook, X, LinkedIn, TikTok, and YouTube. And when it's time to look at the next location, I'll handle the market research, plus community outreach and partner relationships. Here's what that means for both of you. Everything lives in one executive dashboard, and Hope and I talk to each other, so nothing slips between the hubs and the front office. We don't sleep, so the work keeps moving while you're out in the community. And every morning and every evening, you'll each get a short report, so you always know where things stand. It costs a fraction of what you'd pay to hire an assistant, and Jim's years in banking and business are built right into how we work. We get a little smarter every day. So Rosa, is there anything we left out? Anything at all that would take something off your plate, or off Diallo's? Just tell us. We're here for you."
  }
 }
