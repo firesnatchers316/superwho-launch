@@ -240,7 +240,7 @@
       background: radial-gradient(circle, rgba(52, 211, 153, 0.45), transparent 70%);
       opacity: var(--sw-glow-op, 0.45);
       transform: scale(var(--sw-glow-scale, 1));
-      transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+      transition: none;
     }
     .sw-now-ripple {
       position: absolute;
@@ -251,10 +251,10 @@
       pointer-events: none;
     }
     .sw-now-ripple.is-on {
-      animation: sw-ripple 3.2s ease-out forwards;
+      animation: sw-ripple 4.5s ease-out forwards;
     }
     @keyframes sw-ripple {
-      0% { transform: scale(1); opacity: 0.32; }
+      0% { transform: scale(1); opacity: 0.18; }
       100% { transform: scale(1.55); opacity: 0; }
     }
     .sw-now-av {
@@ -766,8 +766,8 @@
     .sw-now-av-wrap { width: 168px !important; height: 168px !important; --lvl: 0; --ring: #2BC46E; --ring2: rgba(43,196,110,0.35); }
     .sw-now-av-wrap[data-agent="grace"] { --ring: #FDDD08; --ring2: rgba(253,221,8,0.35); }
     .sw-now-av { width: 86px !important; height: 86px !important; font-size: 34px !important; }
-    .sw-ring-scale { position: absolute; inset: 0; border-radius: 50%; transform: scale(calc(0.98 + var(--lvl) * 0.04)); transition: transform 0.25s ease-out; pointer-events: none; }
-    .sw-ring-scale.b { transform: scale(calc(1.0 + var(--lvl) * 0.05)); }
+    .sw-ring-scale { position: absolute; inset: 0; border-radius: 50%; transform: scale(calc(0.99 + var(--lvl) * 0.02)); pointer-events: none; }
+    .sw-ring-scale.b { transform: scale(calc(1.0 + var(--lvl) * 0.025)); }
     .sw-ring { position: absolute; inset: 0; border-radius: 50%; opacity: 0.55;
       background: conic-gradient(from 0deg, var(--ring) 0deg 70deg, transparent 70deg 120deg, var(--ring) 120deg 190deg, transparent 190deg 240deg, var(--ring) 240deg 310deg, transparent 310deg 360deg);
       -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 4px), #000 calc(100% - 4px));
@@ -1732,14 +1732,14 @@
       var AGENTS = {
         hope: {
           src: "hope.mp3",
-          chunks: ["hope-1.b64", "hope-2.b64"],
+          chunks: ["hope-1.b64?v=6", "hope-2.b64?v=6"],
           letter: "H",
           who: "Hope · Your SuperWho for Life Remodeled",
           idle: "Tap Hope or Grace to hear them introduce each other. About a minute each — no need to play to use the demo."
         },
         grace: {
           src: "grace.mp3",
-          chunks: ["grace-1.b64", "grace-2.b64"],
+          chunks: ["grace-1.b64?v=6", "grace-2.b64?v=6"],
           letter: "G",
           who: "Grace · EA SuperWho for Diallo Smith",
           idle: "Tap Grace to hear what she can do for Diallo, and for you."
@@ -1754,8 +1754,8 @@
       var rafId = 0;
       var smoothLevel = 0.14;
       var REDUCED = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      // One full turn: idle inner 40s, outer 55s, dots 36s; speaking inner 16s, outer 20s, dots 14s.
-      var SPIN = { idle: [360 / 40, -360 / 55, 360 / 36], talk: [360 / 16, -360 / 20, 360 / 14] };
+      // One full turn: idle inner 45s, outer 60s, dots 45s; speaking inner 30s, outer 40s, dots 30s (1.5x).
+      var SPIN = { idle: [360 / 45, -360 / 60, 360 / 45], talk: [360 / 30, -360 / 40, 360 / 30] };
       var rot = [0, 0, 0], spd = SPIN.idle.slice(), lastSpin = 0;
       var ringEls = [nowWrap.querySelector(".sw-ring:not(.outer)"), nowWrap.querySelector(".sw-ring.outer"), nowWrap.querySelector(".sw-orbit-dots")];
       var rotVars = ["--rotA", "--rotB", "--rotC"];
@@ -1764,7 +1764,7 @@
         lastSpin = ts;
         if (!REDUCED && !document.hidden) {
           var target = nowWrap.classList.contains("is-speaking") ? SPIN.talk : SPIN.idle;
-          var k = 1 - Math.exp(-dt / 1.2);
+          var k = 1 - Math.exp(-dt / 2.0);
           for (var i = 0; i < 3; i++) {
             spd[i] += (target[i] - spd[i]) * k;
             rot[i] = (rot[i] + spd[i] * dt) % 360;
@@ -1777,10 +1777,10 @@
       var rippleIdx = 0;
       var lastRipple = 0;
 
-      fetch("team-cues.json", { cache: "force-cache" }).then(function (r) {
+      fetch("team-cues.json?v=6", { cache: "no-cache" }).then(function (r) {
         return r.ok ? r.json() : null;
       }).then(function (d) { if (d) TEAM = d; }).catch(function () {});
-      fetch("team-envelopes.json", { cache: "force-cache" }).then(function (r) {
+      fetch("team-envelopes.json?v=6", { cache: "no-cache" }).then(function (r) {
         return r.ok ? r.json() : null;
       }).then(function (d) { if (d) ENVS = d; }).catch(function () {});
 
@@ -1854,13 +1854,13 @@
         if (!current || audio.paused) { rafId = 0; nowWrap.classList.remove("is-speaking"); nowWrap.style.setProperty("--lvl", "0"); return; }
         var t = audio.currentTime || 0;
         var level = envLevel(current, t);
-        smoothLevel = smoothLevel + (level - smoothLevel) * 0.05;
-        nowAv.style.setProperty("--sw-breathe", (1 + smoothLevel * 0.035).toFixed(3));
-        nowGlow.style.setProperty("--sw-glow-op", (0.4 + smoothLevel * 0.4).toFixed(3));
-        nowGlow.style.setProperty("--sw-glow-scale", (1 + smoothLevel * 0.1).toFixed(3));
+        smoothLevel = smoothLevel + (level - smoothLevel) * 0.02;
+        nowAv.style.setProperty("--sw-breathe", (1 + smoothLevel * 0.02).toFixed(3));
+        nowGlow.style.setProperty("--sw-glow-op", (0.5 + smoothLevel * 0.15).toFixed(3));
+        nowGlow.style.setProperty("--sw-glow-scale", (1 + smoothLevel * 0.05).toFixed(3));
         nowWrap.style.setProperty("--lvl", smoothLevel.toFixed(3));
         nowWrap.classList.add("is-speaking");
-        if (!REDUCED && smoothLevel > 0.35 && t - lastRipple > 2.4 && ripples.length) {
+        if (!REDUCED && smoothLevel > 0.35 && t - lastRipple > 4.5 && ripples.length) {
           var r = ripples[rippleIdx % ripples.length];
           r.classList.remove("is-on");
           void r.offsetWidth;
@@ -1884,7 +1884,7 @@
         var files = (meta && meta.chunks) || [];
         if (files.length) {
           return Promise.all(files.map(function (f) {
-            return fetch(f, { cache: "force-cache" }).then(function (r) {
+            return fetch(f, { cache: "no-cache" }).then(function (r) {
               if (!r.ok) throw new Error("missing " + f);
               return r.text();
             });
@@ -1988,7 +1988,7 @@
     function load(el) {
       var f = el.getAttribute("data-b64"); if (!f) return;
       var mime = el.getAttribute("data-mime") || "image/jpeg";
-      if (!cache[f]) cache[f] = fetch(f, { cache: "force-cache" }).then(function (r) { if (!r.ok) throw 0; return r.text(); });
+      if (!cache[f]) cache[f] = fetch(f + "?v=6", { cache: "no-cache" }).then(function (r) { if (!r.ok) throw 0; return r.text(); });
       cache[f].then(function (b) { el.src = "data:" + mime + ";base64," + b.replace(/\s+/g, ""); el.removeAttribute("data-b64"); }).catch(function () {});
     }
     var imgs = [].slice.call(document.querySelectorAll("img[data-b64]"));
