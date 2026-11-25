@@ -1,5 +1,5 @@
 {
-  "duration": 163.678958,
+  "duration": 195.674417,
   "words": [
     {
       "start": 0.0,
@@ -38,13 +38,13 @@
     },
     {
       "start": 2.2,
-      "end": 2.46,
+      "end": 2.48,
       "word": "social",
       "speaker": "Maya",
       "cue": 1
     },
     {
-      "start": 2.46,
+      "start": 2.48,
       "end": 2.8,
       "word": "media",
       "speaker": "Maya",
@@ -220,13 +220,13 @@
     },
     {
       "start": 9.54,
-      "end": 9.96,
+      "end": 9.94,
       "word": "capacity",
       "speaker": "Maya",
       "cue": 1
     },
     {
-      "start": 9.96,
+      "start": 9.94,
       "end": 10.22,
       "word": "for",
       "speaker": "Maya",
@@ -325,13 +325,13 @@
     },
     {
       "start": 13.98,
-      "end": 14.44,
+      "end": 14.46,
       "word": "and",
       "speaker": "Maya",
       "cue": 2
     },
     {
-      "start": 14.44,
+      "start": 14.46,
       "end": 14.7,
       "word": "post",
       "speaker": "Maya",
@@ -374,13 +374,13 @@
     },
     {
       "start": 16.56,
-      "end": 17.0,
+      "end": 16.98,
       "word": "cadence",
       "speaker": "Maya",
       "cue": 2
     },
     {
-      "start": 17.0,
+      "start": 16.98,
       "end": 17.14,
       "word": "you",
       "speaker": "Maya",
@@ -660,7 +660,7 @@
       "cue": 3
     },
     {
-      "start": 31.68,
+      "start": 31.66,
       "end": 31.8,
       "word": "And",
       "speaker": "Maya",
@@ -899,13 +899,13 @@
     },
     {
       "start": 42.44,
-      "end": 42.9,
+      "end": 42.88,
       "word": "managing",
       "speaker": "Reed",
       "cue": 5
     },
     {
-      "start": 42.9,
+      "start": 42.88,
       "end": 43.28,
       "word": "Dr.",
       "speaker": "Reed",
@@ -926,7 +926,7 @@
       "cue": 5
     },
     {
-      "start": 44.36,
+      "start": 44.38,
       "end": 44.72,
       "word": "developing",
       "speaker": "Reed",
@@ -968,7 +968,7 @@
       "cue": 5
     },
     {
-      "start": 47.12,
+      "start": 47.1,
       "end": 47.44,
       "word": "managing",
       "speaker": "Reed",
@@ -1122,7 +1122,7 @@
       "cue": 5
     },
     {
-      "start": 54.54,
+      "start": 54.52,
       "end": 54.74,
       "word": "The",
       "speaker": "Reed",
@@ -1410,20 +1410,20 @@
     },
     {
       "start": 66.52,
-      "end": 66.7,
+      "end": 66.72,
       "word": "of",
       "speaker": "Reed",
       "cue": 7
     },
     {
-      "start": 66.7,
+      "start": 66.72,
       "end": 67.0,
       "word": "staff.",
       "speaker": "Reed",
       "cue": 7
     },
     {
-      "start": 67.6,
+      "start": 67.62,
       "end": 67.94,
       "word": "Olivia,",
       "speaker": "Reed",
@@ -1451,8 +1451,8 @@
       "cue": 7
     },
     {
-      "start": 69.46,
-      "end": 69.74,
+      "start": 69.44,
+      "end": 69.76,
       "word": "Thanks,",
       "speaker": "Olivia",
       "cue": 8
@@ -1592,20 +1592,20 @@
     },
     {
       "start": 78.3,
-      "end": 78.64,
+      "end": 78.66,
       "word": "dashboard",
       "speaker": "Olivia",
       "cue": 8
     },
     {
-      "start": 78.64,
-      "end": 78.96,
+      "start": 78.66,
+      "end": 78.98,
       "word": "is",
       "speaker": "Olivia",
       "cue": 8
     },
     {
-      "start": 78.96,
+      "start": 78.98,
       "end": 79.16,
       "word": "getting",
       "speaker": "Olivia",
@@ -1620,14 +1620,14 @@
     },
     {
       "start": 79.44,
-      "end": 79.7,
+      "end": 79.72,
       "word": "final",
       "speaker": "Olivia",
       "cue": 8
     },
     {
-      "start": 79.7,
-      "end": 80.18,
+      "start": 79.72,
+      "end": 80.2,
       "word": "updates.",
       "speaker": "Olivia",
       "cue": 8
@@ -1738,7 +1738,7 @@
       "cue": 8
     },
     {
-      "start": 86.72,
+      "start": 86.48,
       "end": 87.04,
       "word": "Once",
       "speaker": "Olivia",
@@ -1759,21 +1759,21 @@
       "cue": 8
     },
     {
-      "start": 88.04,
-      "end": 88.1,
+      "start": 88.02,
+      "end": 88.12,
       "word": "the",
       "speaker": "Olivia",
       "cue": 8
     },
     {
-      "start": 88.1,
-      "end": 88.44,
+      "start": 88.12,
+      "end": 88.42,
       "word": "dashboard",
       "speaker": "Olivia",
       "cue": 8
     },
     {
-      "start": 88.44,
+      "start": 88.42,
       "end": 88.72,
       "word": "will",
       "speaker": "Olivia",
@@ -1788,13 +1788,13 @@
     },
     {
       "start": 88.92,
-      "end": 89.24,
+      "end": 89.22,
       "word": "live",
       "speaker": "Olivia",
       "cue": 8
     },
     {
-      "start": 89.24,
+      "start": 89.22,
       "end": 89.7,
       "word": "so",
       "speaker": "Olivia",
@@ -1823,13 +1823,13 @@
     },
     {
       "start": 90.2,
-      "end": 90.56,
+      "end": 90.54,
       "word": "results",
       "speaker": "Olivia",
       "cue": 8
     },
     {
-      "start": 90.56,
+      "start": 90.54,
       "end": 90.92,
       "word": "across",
       "speaker": "Olivia",
@@ -1851,20 +1851,20 @@
     },
     {
       "start": 91.36,
-      "end": 91.84,
+      "end": 91.82,
       "word": "activities",
       "speaker": "Olivia",
       "cue": 8
     },
     {
-      "start": 91.84,
-      "end": 92.12,
+      "start": 91.82,
+      "end": 92.1,
       "word": "in",
       "speaker": "Olivia",
       "cue": 8
     },
     {
-      "start": 92.12,
+      "start": 92.1,
       "end": 92.32,
       "word": "one",
       "speaker": "Olivia",
@@ -1872,1456 +1872,1974 @@
     },
     {
       "start": 92.32,
-      "end": 92.74,
+      "end": 92.72,
       "word": "place.",
       "speaker": "Olivia",
       "cue": 8
     },
     {
-      "start": 93.5,
-      "end": 93.6,
-      "word": "I'm",
+      "start": 93.48,
+      "end": 93.54,
+      "word": "A",
       "speaker": "Olivia",
       "cue": 9
     },
     {
-      "start": 93.6,
-      "end": 93.72,
-      "word": "ready",
+      "start": 93.54,
+      "end": 93.74,
+      "word": "key",
       "speaker": "Olivia",
       "cue": 9
     },
     {
-      "start": 93.72,
+      "start": 93.74,
       "end": 93.94,
-      "word": "to",
+      "word": "part",
       "speaker": "Olivia",
       "cue": 9
     },
     {
       "start": 93.94,
-      "end": 94.08,
-      "word": "help",
+      "end": 94.06,
+      "word": "of",
       "speaker": "Olivia",
       "cue": 9
     },
     {
-      "start": 94.08,
-      "end": 94.24,
+      "start": 94.06,
+      "end": 94.22,
+      "word": "my",
+      "speaker": "Olivia",
+      "cue": 9
+    },
+    {
+      "start": 94.22,
+      "end": 94.48,
+      "word": "job",
+      "speaker": "Olivia",
+      "cue": 9
+    },
+    {
+      "start": 94.48,
+      "end": 94.7,
+      "word": "is",
+      "speaker": "Olivia",
+      "cue": 9
+    },
+    {
+      "start": 94.7,
+      "end": 95.12,
+      "word": "organizing",
+      "speaker": "Olivia",
+      "cue": 9
+    },
+    {
+      "start": 95.12,
+      "end": 95.44,
+      "word": "your",
+      "speaker": "Olivia",
+      "cue": 9
+    },
+    {
+      "start": 95.44,
+      "end": 95.68,
+      "word": "team",
+      "speaker": "Olivia",
+      "cue": 9
+    },
+    {
+      "start": 95.68,
+      "end": 95.84,
+      "word": "of",
+      "speaker": "Olivia",
+      "cue": 9
+    },
+    {
+      "start": 95.84,
+      "end": 96.1,
+      "word": "AI",
+      "speaker": "Olivia",
+      "cue": 9
+    },
+    {
+      "start": 96.1,
+      "end": 96.46,
+      "word": "super",
+      "speaker": "Olivia",
+      "cue": 9
+    },
+    {
+      "start": 96.46,
+      "end": 96.84,
+      "word": "-whos",
+      "speaker": "Olivia",
+      "cue": 9
+    },
+    {
+      "start": 96.84,
+      "end": 97.32,
+      "word": "so",
+      "speaker": "Olivia",
+      "cue": 9
+    },
+    {
+      "start": 97.32,
+      "end": 97.46,
       "word": "you",
       "speaker": "Olivia",
       "cue": 9
     },
     {
-      "start": 94.24,
-      "end": 94.52,
-      "word": "manage",
+      "start": 97.46,
+      "end": 97.66,
+      "word": "don't",
       "speaker": "Olivia",
       "cue": 9
     },
     {
-      "start": 94.52,
-      "end": 94.76,
-      "word": "your",
+      "start": 97.66,
+      "end": 97.84,
+      "word": "have",
       "speaker": "Olivia",
       "cue": 9
     },
     {
-      "start": 94.76,
-      "end": 95.1,
-      "word": "team,",
+      "start": 97.84,
+      "end": 97.98,
+      "word": "to",
       "speaker": "Olivia",
       "cue": 9
     },
     {
-      "start": 95.48,
-      "end": 95.66,
-      "word": "organize",
+      "start": 97.98,
+      "end": 98.1,
+      "word": "be",
       "speaker": "Olivia",
       "cue": 9
     },
     {
-      "start": 95.66,
-      "end": 95.98,
-      "word": "your",
+      "start": 98.1,
+      "end": 98.24,
+      "word": "in",
       "speaker": "Olivia",
       "cue": 9
     },
     {
-      "start": 95.98,
-      "end": 96.32,
-      "word": "calendar,",
+      "start": 98.24,
+      "end": 98.36,
+      "word": "the",
       "speaker": "Olivia",
       "cue": 9
     },
     {
-      "start": 96.74,
-      "end": 96.92,
+      "start": 98.36,
+      "end": 98.66,
+      "word": "weeds",
+      "speaker": "Olivia",
+      "cue": 9
+    },
+    {
+      "start": 98.66,
+      "end": 99.18,
       "word": "and",
       "speaker": "Olivia",
       "cue": 9
     },
     {
-      "start": 96.92,
-      "end": 97.12,
+      "start": 99.18,
+      "end": 99.66,
+      "word": "organizing",
+      "speaker": "Olivia",
+      "cue": 9
+    },
+    {
+      "start": 99.66,
+      "end": 99.94,
+      "word": "your",
+      "speaker": "Olivia",
+      "cue": 9
+    },
+    {
+      "start": 99.94,
+      "end": 100.24,
+      "word": "human",
+      "speaker": "Olivia",
+      "cue": 9
+    },
+    {
+      "start": 100.24,
+      "end": 100.6,
+      "word": "super",
+      "speaker": "Olivia",
+      "cue": 9
+    },
+    {
+      "start": 100.6,
+      "end": 100.76,
+      "word": "-who",
+      "speaker": "Olivia",
+      "cue": 9
+    },
+    {
+      "start": 100.76,
+      "end": 101.08,
+      "word": "team",
+      "speaker": "Olivia",
+      "cue": 9
+    },
+    {
+      "start": 101.08,
+      "end": 101.26,
+      "word": "and",
+      "speaker": "Olivia",
+      "cue": 9
+    },
+    {
+      "start": 101.26,
+      "end": 101.5,
+      "word": "helping",
+      "speaker": "Olivia",
+      "cue": 9
+    },
+    {
+      "start": 101.5,
+      "end": 101.74,
+      "word": "them",
+      "speaker": "Olivia",
+      "cue": 9
+    },
+    {
+      "start": 101.74,
+      "end": 101.98,
+      "word": "stay",
+      "speaker": "Olivia",
+      "cue": 9
+    },
+    {
+      "start": 101.98,
+      "end": 102.52,
+      "word": "organized.",
+      "speaker": "Olivia",
+      "cue": 9
+    },
+    {
+      "start": 103.54,
+      "end": 103.82,
+      "word": "You",
+      "speaker": "Olivia",
+      "cue": 9
+    },
+    {
+      "start": 103.82,
+      "end": 104.16,
+      "word": "oversee",
+      "speaker": "Olivia",
+      "cue": 9
+    },
+    {
+      "start": 104.16,
+      "end": 104.4,
+      "word": "the",
+      "speaker": "Olivia",
+      "cue": 9
+    },
+    {
+      "start": 104.4,
+      "end": 104.72,
+      "word": "work.",
+      "speaker": "Olivia",
+      "cue": 9
+    },
+    {
+      "start": 105.78,
+      "end": 105.9,
+      "word": "I",
+      "speaker": "Olivia",
+      "cue": 9
+    },
+    {
+      "start": 105.9,
+      "end": 106.08,
       "word": "keep",
       "speaker": "Olivia",
       "cue": 9
     },
     {
-      "start": 97.12,
-      "end": 97.3,
-      "word": "your",
+      "start": 106.08,
+      "end": 106.36,
+      "word": "things",
       "speaker": "Olivia",
       "cue": 9
     },
     {
-      "start": 97.3,
-      "end": 97.48,
-      "word": "main",
+      "start": 106.36,
+      "end": 106.72,
+      "word": "moving",
       "speaker": "Olivia",
       "cue": 9
     },
     {
-      "start": 97.48,
-      "end": 98.0,
-      "word": "objectives",
-      "speaker": "Olivia",
-      "cue": 9
-    },
-    {
-      "start": 98.0,
-      "end": 98.26,
-      "word": "as",
-      "speaker": "Olivia",
-      "cue": 9
-    },
-    {
-      "start": 98.26,
-      "end": 98.44,
-      "word": "a",
-      "speaker": "Olivia",
-      "cue": 9
-    },
-    {
-      "start": 98.44,
-      "end": 98.94,
-      "word": "fractional",
-      "speaker": "Olivia",
-      "cue": 9
-    },
-    {
-      "start": 98.94,
-      "end": 99.28,
-      "word": "COO",
-      "speaker": "Olivia",
-      "cue": 9
-    },
-    {
-      "start": 99.28,
-      "end": 99.52,
-      "word": "in",
-      "speaker": "Olivia",
-      "cue": 9
-    },
-    {
-      "start": 99.52,
-      "end": 99.74,
-      "word": "one",
-      "speaker": "Olivia",
-      "cue": 9
-    },
-    {
-      "start": 99.74,
-      "end": 100.14,
-      "word": "place,",
-      "speaker": "Olivia",
-      "cue": 9
-    },
-    {
-      "start": 100.48,
-      "end": 100.7,
-      "word": "building",
-      "speaker": "Olivia",
-      "cue": 9
-    },
-    {
-      "start": 100.7,
-      "end": 100.94,
-      "word": "your",
-      "speaker": "Olivia",
-      "cue": 9
-    },
-    {
-      "start": 100.94,
-      "end": 101.4,
-      "word": "portfolio,",
-      "speaker": "Olivia",
-      "cue": 9
-    },
-    {
-      "start": 101.94,
-      "end": 102.22,
-      "word": "adding",
-      "speaker": "Olivia",
-      "cue": 9
-    },
-    {
-      "start": 102.22,
-      "end": 102.58,
-      "word": "human",
-      "speaker": "Olivia",
-      "cue": 9
-    },
-    {
-      "start": 102.58,
-      "end": 102.94,
-      "word": "super",
-      "speaker": "Olivia",
-      "cue": 9
-    },
-    {
-      "start": 102.94,
-      "end": 103.14,
-      "word": "-whos",
-      "speaker": "Olivia",
-      "cue": 9
-    },
-    {
-      "start": 103.14,
-      "end": 103.32,
-      "word": "to",
-      "speaker": "Olivia",
-      "cue": 9
-    },
-    {
-      "start": 103.32,
-      "end": 103.46,
-      "word": "your",
-      "speaker": "Olivia",
-      "cue": 9
-    },
-    {
-      "start": 103.46,
-      "end": 103.82,
-      "word": "team,",
-      "speaker": "Olivia",
-      "cue": 9
-    },
-    {
-      "start": 104.06,
-      "end": 104.24,
+      "start": 106.72,
+      "end": 107.14,
       "word": "and",
       "speaker": "Olivia",
       "cue": 9
     },
     {
-      "start": 104.24,
-      "end": 104.68,
-      "word": "coordinating",
-      "speaker": "Olivia",
-      "cue": 9
-    },
-    {
-      "start": 104.68,
-      "end": 104.94,
-      "word": "the",
-      "speaker": "Olivia",
-      "cue": 9
-    },
-    {
-      "start": 104.94,
-      "end": 105.26,
-      "word": "work",
-      "speaker": "Olivia",
-      "cue": 9
-    },
-    {
-      "start": 105.26,
-      "end": 105.74,
-      "word": "across",
-      "speaker": "Olivia",
-      "cue": 9
-    },
-    {
-      "start": 105.74,
-      "end": 106.16,
-      "word": "everything",
-      "speaker": "Olivia",
-      "cue": 9
-    },
-    {
-      "start": 106.16,
-      "end": 106.4,
-      "word": "you",
-      "speaker": "Olivia",
-      "cue": 9
-    },
-    {
-      "start": 106.4,
-      "end": 106.78,
-      "word": "do.",
-      "speaker": "Olivia",
-      "cue": 9
-    },
-    {
-      "start": 107.18,
-      "end": 107.42,
-      "word": "That",
-      "speaker": "Olivia",
-      "cue": 10
-    },
-    {
-      "start": 107.42,
-      "end": 107.8,
-      "word": "includes",
-      "speaker": "Olivia",
-      "cue": 10
-    },
-    {
-      "start": 107.8,
-      "end": 108.26,
-      "word": "Rana's",
-      "speaker": "Olivia",
-      "cue": 10
-    },
-    {
-      "start": 108.26,
-      "end": 108.48,
-      "word": "work",
-      "speaker": "Olivia",
-      "cue": 10
-    },
-    {
-      "start": 108.48,
-      "end": 108.74,
-      "word": "through",
-      "speaker": "Olivia",
-      "cue": 10
-    },
-    {
-      "start": 108.74,
-      "end": 109.08,
-      "word": "Sozo",
-      "speaker": "Olivia",
-      "cue": 10
-    },
-    {
-      "start": 109.08,
-      "end": 109.48,
-      "word": "marketing,",
-      "speaker": "Olivia",
-      "cue": 10
-    },
-    {
-      "start": 109.9,
-      "end": 110.02,
-      "word": "the",
-      "speaker": "Olivia",
-      "cue": 10
-    },
-    {
-      "start": 110.02,
-      "end": 110.62,
-      "word": "CRM",
-      "speaker": "Olivia",
-      "cue": 10
-    },
-    {
-      "start": 110.62,
-      "end": 111.12,
-      "word": "AEO",
-      "speaker": "Olivia",
-      "cue": 10
-    },
-    {
-      "start": 111.12,
-      "end": 111.52,
-      "word": "and",
-      "speaker": "Olivia",
-      "cue": 10
-    },
-    {
-      "start": 111.52,
-      "end": 111.96,
-      "word": "GEO,",
-      "speaker": "Olivia",
-      "cue": 10
-    },
-    {
-      "start": 112.34,
-      "end": 112.6,
-      "word": "and",
-      "speaker": "Olivia",
-      "cue": 10
-    },
-    {
-      "start": 112.6,
-      "end": 112.84,
-      "word": "Google",
-      "speaker": "Olivia",
-      "cue": 10
-    },
-    {
-      "start": 112.84,
-      "end": 113.26,
-      "word": "Ads,",
-      "speaker": "Olivia",
-      "cue": 10
-    },
-    {
-      "start": 113.52,
-      "end": 113.74,
-      "word": "plus",
-      "speaker": "Olivia",
-      "cue": 10
-    },
-    {
-      "start": 113.74,
-      "end": 114.06,
-      "word": "social",
-      "speaker": "Olivia",
-      "cue": 10
-    },
-    {
-      "start": 114.06,
-      "end": 114.48,
-      "word": "media,",
-      "speaker": "Olivia",
-      "cue": 10
-    },
-    {
-      "start": 114.48,
-      "end": 115.28,
-      "word": "outreach",
-      "speaker": "Olivia",
-      "cue": 10
-    },
-    {
-      "start": 115.28,
-      "end": 115.52,
-      "word": "for",
-      "speaker": "Olivia",
-      "cue": 10
-    },
-    {
-      "start": 115.52,
-      "end": 115.7,
-      "word": "all",
-      "speaker": "Olivia",
-      "cue": 10
-    },
-    {
-      "start": 115.7,
-      "end": 115.84,
-      "word": "the",
-      "speaker": "Olivia",
-      "cue": 10
-    },
-    {
-      "start": 115.84,
-      "end": 116.24,
-      "word": "companies",
-      "speaker": "Olivia",
-      "cue": 10
-    },
-    {
-      "start": 116.24,
-      "end": 116.8,
-      "word": "and",
-      "speaker": "Olivia",
-      "cue": 10
-    },
-    {
-      "start": 116.8,
-      "end": 117.18,
-      "word": "Facebook",
-      "speaker": "Olivia",
-      "cue": 10
-    },
-    {
-      "start": 117.18,
-      "end": 117.64,
-      "word": "ads.",
-      "speaker": "Olivia",
-      "cue": 10
-    },
-    {
-      "start": 118.82,
-      "end": 118.82,
+      "start": 107.14,
+      "end": 107.28,
       "word": "I",
       "speaker": "Olivia",
-      "cue": 10
+      "cue": 9
     },
     {
-      "start": 118.82,
-      "end": 119.0,
-      "word": "move",
+      "start": 107.28,
+      "end": 107.44,
+      "word": "make",
+      "speaker": "Olivia",
+      "cue": 9
+    },
+    {
+      "start": 107.44,
+      "end": 108.18,
+      "word": "recommendations",
+      "speaker": "Olivia",
+      "cue": 9
+    },
+    {
+      "start": 108.84,
+      "end": 109.12,
+      "word": "that",
       "speaker": "Olivia",
       "cue": 10
     },
     {
-      "start": 119.0,
-      "end": 119.28,
+      "start": 109.12,
+      "end": 109.5,
+      "word": "stretches",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 109.5,
+      "end": 109.86,
+      "word": "across",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 109.86,
+      "end": 110.1,
+      "word": "the",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 110.1,
+      "end": 110.32,
+      "word": "five",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 110.32,
+      "end": 110.62,
       "word": "things",
       "speaker": "Olivia",
       "cue": 10
     },
     {
-      "start": 119.28,
-      "end": 119.54,
-      "word": "across",
+      "start": 110.62,
+      "end": 110.78,
+      "word": "you",
       "speaker": "Olivia",
       "cue": 10
     },
     {
-      "start": 119.54,
-      "end": 120.18,
-      "word": "platforms",
+      "start": 110.78,
+      "end": 110.96,
+      "word": "do",
       "speaker": "Olivia",
       "cue": 10
     },
     {
-      "start": 120.18,
-      "end": 120.74,
+      "start": 110.96,
+      "end": 111.34,
+      "word": "inside",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 111.34,
+      "end": 111.58,
+      "word": "these",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 111.58,
+      "end": 112.02,
+      "word": "companies",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 112.02,
+      "end": 112.32,
+      "word": "as",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 112.32,
+      "end": 112.46,
+      "word": "a",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 112.46,
+      "end": 113.0,
+      "word": "fractional",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 113.0,
+      "end": 113.46,
+      "word": "COO.",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 114.44,
+      "end": 114.82,
+      "word": "Website",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 114.82,
+      "end": 115.48,
+      "word": "optimization,",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 115.92,
+      "end": 116.66,
+      "word": "AEO,",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 117.24,
+      "end": 117.38,
       "word": "and",
       "speaker": "Olivia",
       "cue": 10
     },
     {
-      "start": 120.74,
-      "end": 120.88,
-      "word": "I",
+      "start": 117.38,
+      "end": 117.5,
+      "word": "the",
       "speaker": "Olivia",
       "cue": 10
     },
     {
-      "start": 120.88,
-      "end": 121.28,
-      "word": "organize",
+      "start": 117.5,
+      "end": 118.82,
+      "word": "GEO.",
       "speaker": "Olivia",
       "cue": 10
     },
     {
-      "start": 121.28,
-      "end": 121.54,
-      "word": "your",
+      "start": 119.2,
+      "end": 119.76,
+      "word": "CRM",
       "speaker": "Olivia",
       "cue": 10
     },
     {
-      "start": 121.54,
-      "end": 121.8,
-      "word": "AI",
+      "start": 119.76,
+      "end": 120.06,
+      "word": "management",
       "speaker": "Olivia",
       "cue": 10
     },
     {
-      "start": 121.8,
-      "end": 122.16,
-      "word": "super",
-      "speaker": "Olivia",
-      "cue": 10
-    },
-    {
-      "start": 122.16,
-      "end": 122.46,
-      "word": "-whos",
-      "speaker": "Olivia",
-      "cue": 10
-    },
-    {
-      "start": 122.46,
-      "end": 122.72,
+      "start": 120.06,
+      "end": 120.44,
       "word": "and",
       "speaker": "Olivia",
       "cue": 10
     },
     {
-      "start": 122.72,
-      "end": 122.88,
-      "word": "your",
+      "start": 120.44,
+      "end": 120.86,
+      "word": "marketing,",
       "speaker": "Olivia",
       "cue": 10
     },
     {
-      "start": 122.88,
-      "end": 123.16,
+      "start": 121.18,
+      "end": 121.5,
+      "word": "including",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 121.5,
+      "end": 122.0,
+      "word": "Rana's",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 122.0,
+      "end": 122.2,
+      "word": "work",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 122.2,
+      "end": 122.48,
+      "word": "through",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 122.48,
+      "end": 122.78,
+      "word": "Sozo",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 122.78,
+      "end": 123.26,
+      "word": "marketing.",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 124.46,
+      "end": 124.5,
+      "word": "Paid",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 124.5,
+      "end": 125.06,
+      "word": "advertising,",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 125.56,
+      "end": 125.68,
+      "word": "Google",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 125.68,
+      "end": 126.1,
+      "word": "ads,",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 126.74,
+      "end": 126.74,
+      "word": "Facebook",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 126.74,
+      "end": 127.14,
+      "word": "ads,",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 127.46,
+      "end": 127.58,
+      "word": "and",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 127.58,
+      "end": 127.82,
+      "word": "LinkedIn",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 127.82,
+      "end": 128.38,
+      "word": "ads.",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 129.6,
+      "end": 129.68,
+      "word": "Social",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 129.68,
+      "end": 130.0,
+      "word": "media",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 130.0,
+      "end": 130.48,
+      "word": "marketing,",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 130.94,
+      "end": 131.34,
+      "word": "Instagram,",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 131.76,
+      "end": 132.02,
+      "word": "Facebook,",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 132.48,
+      "end": 132.9,
+      "word": "TikTok,",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 133.26,
+      "end": 133.46,
+      "word": "YouTube,",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 133.9,
+      "end": 134.04,
+      "word": "and",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 134.04,
+      "end": 134.34,
+      "word": "LinkedIn.",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 135.52,
+      "end": 135.64,
+      "word": "And",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 135.64,
+      "end": 136.02,
+      "word": "outreach.",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 137.18,
+      "end": 137.36,
+      "word": "Your",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 137.36,
+      "end": 137.68,
       "word": "human",
       "speaker": "Olivia",
       "cue": 10
     },
     {
-      "start": 123.16,
-      "end": 123.5,
+      "start": 137.68,
+      "end": 138.0,
       "word": "super",
       "speaker": "Olivia",
       "cue": 10
     },
     {
-      "start": 123.5,
-      "end": 123.92,
-      "word": "-whos.",
+      "start": 138.0,
+      "end": 138.28,
+      "word": "-whos",
       "speaker": "Olivia",
       "cue": 10
     },
     {
-      "start": 124.4,
-      "end": 124.7,
+      "start": 138.28,
+      "end": 138.58,
+      "word": "and",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 138.58,
+      "end": 138.74,
+      "word": "your",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 138.74,
+      "end": 138.98,
+      "word": "AI",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 138.98,
+      "end": 139.36,
+      "word": "super",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 139.36,
+      "end": 139.56,
+      "word": "-whos",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 139.56,
+      "end": 140.0,
+      "word": "oversee",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 140.0,
+      "end": 140.28,
+      "word": "those",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 140.28,
+      "end": 140.68,
+      "word": "areas",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 140.68,
+      "end": 141.18,
+      "word": "so",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 141.18,
+      "end": 141.36,
+      "word": "you",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 141.36,
+      "end": 141.5,
+      "word": "don't",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 141.5,
+      "end": 141.72,
+      "word": "have",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 141.72,
+      "end": 141.84,
+      "word": "to",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 141.84,
+      "end": 141.98,
+      "word": "do",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 141.98,
+      "end": 142.14,
+      "word": "that",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 142.14,
+      "end": 142.34,
+      "word": "work",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 142.34,
+      "end": 142.82,
+      "word": "yourself.",
+      "speaker": "Olivia",
+      "cue": 10
+    },
+    {
+      "start": 143.48,
+      "end": 143.62,
+      "word": "I'm",
+      "speaker": "Olivia",
+      "cue": 11
+    },
+    {
+      "start": 143.62,
+      "end": 143.88,
+      "word": "also",
+      "speaker": "Olivia",
+      "cue": 11
+    },
+    {
+      "start": 143.88,
+      "end": 144.04,
+      "word": "ready",
+      "speaker": "Olivia",
+      "cue": 11
+    },
+    {
+      "start": 144.04,
+      "end": 144.24,
+      "word": "to",
+      "speaker": "Olivia",
+      "cue": 11
+    },
+    {
+      "start": 144.24,
+      "end": 144.4,
+      "word": "help",
+      "speaker": "Olivia",
+      "cue": 11
+    },
+    {
+      "start": 144.4,
+      "end": 144.58,
+      "word": "you",
+      "speaker": "Olivia",
+      "cue": 11
+    },
+    {
+      "start": 144.58,
+      "end": 144.96,
+      "word": "organize",
+      "speaker": "Olivia",
+      "cue": 11
+    },
+    {
+      "start": 144.96,
+      "end": 145.22,
+      "word": "your",
+      "speaker": "Olivia",
+      "cue": 11
+    },
+    {
+      "start": 145.22,
+      "end": 145.6,
+      "word": "calendar.",
+      "speaker": "Olivia",
+      "cue": 11
+    },
+    {
+      "start": 146.7,
+      "end": 146.94,
       "word": "Every",
       "speaker": "Olivia",
       "cue": 11
     },
     {
-      "start": 124.7,
-      "end": 125.08,
+      "start": 146.94,
+      "end": 147.3,
       "word": "morning,",
       "speaker": "Olivia",
       "cue": 11
     },
     {
-      "start": 125.42,
-      "end": 125.5,
+      "start": 147.62,
+      "end": 147.74,
       "word": "I'll",
       "speaker": "Olivia",
       "cue": 11
     },
     {
-      "start": 125.5,
-      "end": 125.6,
+      "start": 147.74,
+      "end": 147.86,
       "word": "give",
       "speaker": "Olivia",
       "cue": 11
     },
     {
-      "start": 125.6,
-      "end": 125.78,
+      "start": 147.86,
+      "end": 148.02,
       "word": "you",
       "speaker": "Olivia",
       "cue": 11
     },
     {
-      "start": 125.78,
-      "end": 125.92,
+      "start": 148.02,
+      "end": 148.18,
       "word": "a",
       "speaker": "Olivia",
       "cue": 11
     },
     {
-      "start": 125.92,
-      "end": 126.2,
+      "start": 148.18,
+      "end": 148.44,
       "word": "brief",
       "speaker": "Olivia",
       "cue": 11
     },
     {
-      "start": 126.2,
-      "end": 126.7,
+      "start": 148.44,
+      "end": 148.94,
       "word": "what",
       "speaker": "Olivia",
       "cue": 11
     },
     {
-      "start": 126.7,
-      "end": 126.86,
+      "start": 148.94,
+      "end": 149.1,
       "word": "I",
       "speaker": "Olivia",
       "cue": 11
     },
     {
-      "start": 126.86,
-      "end": 127.0,
+      "start": 149.1,
+      "end": 149.24,
       "word": "and",
       "speaker": "Olivia",
       "cue": 11
     },
     {
-      "start": 127.0,
-      "end": 127.1,
+      "start": 149.24,
+      "end": 149.36,
       "word": "the",
       "speaker": "Olivia",
       "cue": 11
     },
     {
-      "start": 127.1,
-      "end": 127.28,
+      "start": 149.36,
+      "end": 149.54,
       "word": "rest",
       "speaker": "Olivia",
       "cue": 11
     },
     {
-      "start": 127.28,
-      "end": 127.46,
+      "start": 149.54,
+      "end": 149.72,
       "word": "of",
       "speaker": "Olivia",
       "cue": 11
     },
     {
-      "start": 127.46,
-      "end": 127.6,
+      "start": 149.72,
+      "end": 149.84,
       "word": "the",
       "speaker": "Olivia",
       "cue": 11
     },
     {
-      "start": 127.6,
-      "end": 127.8,
+      "start": 149.84,
+      "end": 150.06,
       "word": "team",
       "speaker": "Olivia",
       "cue": 11
     },
     {
-      "start": 127.8,
-      "end": 128.04,
+      "start": 150.06,
+      "end": 150.3,
       "word": "got",
       "speaker": "Olivia",
       "cue": 11
     },
     {
-      "start": 128.04,
-      "end": 128.34,
+      "start": 150.3,
+      "end": 150.56,
       "word": "done",
       "speaker": "Olivia",
       "cue": 11
     },
     {
-      "start": 128.34,
-      "end": 128.7,
+      "start": 150.56,
+      "end": 150.94,
       "word": "overnight",
       "speaker": "Olivia",
       "cue": 11
     },
     {
-      "start": 128.7,
-      "end": 128.98,
+      "start": 150.94,
+      "end": 151.22,
       "word": "while",
       "speaker": "Olivia",
       "cue": 11
     },
     {
-      "start": 128.98,
-      "end": 129.12,
+      "start": 151.22,
+      "end": 151.38,
       "word": "you",
       "speaker": "Olivia",
       "cue": 11
     },
     {
-      "start": 129.12,
-      "end": 129.26,
+      "start": 151.38,
+      "end": 151.5,
       "word": "were",
       "speaker": "Olivia",
       "cue": 11
     },
     {
-      "start": 129.26,
-      "end": 129.56,
+      "start": 151.5,
+      "end": 151.8,
       "word": "sleeping",
       "speaker": "Olivia",
       "cue": 11
     },
     {
-      "start": 129.56,
-      "end": 130.16,
+      "start": 151.8,
+      "end": 152.4,
       "word": "and",
       "speaker": "Olivia",
       "cue": 11
     },
     {
-      "start": 130.16,
-      "end": 130.42,
+      "start": 152.4,
+      "end": 152.66,
       "word": "what's",
       "speaker": "Olivia",
       "cue": 11
     },
     {
-      "start": 130.42,
-      "end": 130.56,
+      "start": 152.66,
+      "end": 152.82,
       "word": "on",
       "speaker": "Olivia",
       "cue": 11
     },
     {
-      "start": 130.56,
-      "end": 130.9,
+      "start": 152.82,
+      "end": 153.14,
       "word": "today.",
       "speaker": "Olivia",
       "cue": 11
     },
     {
-      "start": 131.84,
-      "end": 132.18,
+      "start": 154.14,
+      "end": 154.42,
       "word": "Every",
       "speaker": "Olivia",
       "cue": 11
     },
     {
-      "start": 132.18,
-      "end": 132.56,
+      "start": 154.42,
+      "end": 154.8,
       "word": "evening,",
       "speaker": "Olivia",
       "cue": 11
     },
     {
-      "start": 132.82,
-      "end": 132.94,
+      "start": 155.06,
+      "end": 155.18,
       "word": "I'll",
       "speaker": "Olivia",
       "cue": 11
     },
     {
-      "start": 132.94,
-      "end": 133.1,
+      "start": 155.18,
+      "end": 155.34,
       "word": "tell",
       "speaker": "Olivia",
       "cue": 11
     },
     {
-      "start": 133.1,
-      "end": 133.26,
+      "start": 155.34,
+      "end": 155.5,
       "word": "you",
       "speaker": "Olivia",
       "cue": 11
     },
     {
-      "start": 133.26,
-      "end": 133.4,
+      "start": 155.5,
+      "end": 155.64,
       "word": "what",
       "speaker": "Olivia",
       "cue": 11
     },
     {
-      "start": 133.4,
-      "end": 133.5,
+      "start": 155.64,
+      "end": 155.76,
       "word": "we",
       "speaker": "Olivia",
       "cue": 11
     },
     {
-      "start": 133.5,
-      "end": 133.7,
+      "start": 155.76,
+      "end": 155.94,
       "word": "got",
       "speaker": "Olivia",
       "cue": 11
     },
     {
-      "start": 133.7,
-      "end": 133.94,
+      "start": 155.94,
+      "end": 156.2,
       "word": "done",
       "speaker": "Olivia",
       "cue": 11
     },
     {
-      "start": 133.94,
-      "end": 134.26,
+      "start": 156.2,
+      "end": 156.52,
       "word": "today",
       "speaker": "Olivia",
       "cue": 11
     },
     {
-      "start": 134.26,
-      "end": 134.66,
+      "start": 156.52,
+      "end": 156.9,
       "word": "and",
       "speaker": "Olivia",
       "cue": 11
     },
     {
-      "start": 134.66,
-      "end": 134.92,
+      "start": 156.9,
+      "end": 157.16,
       "word": "what's",
       "speaker": "Olivia",
       "cue": 11
     },
     {
-      "start": 134.92,
-      "end": 135.06,
+      "start": 157.16,
+      "end": 157.3,
       "word": "on",
       "speaker": "Olivia",
       "cue": 11
     },
     {
-      "start": 135.06,
-      "end": 135.44,
+      "start": 157.3,
+      "end": 157.64,
       "word": "tomorrow.",
       "speaker": "Olivia",
       "cue": 11
     },
     {
-      "start": 136.0,
-      "end": 136.22,
+      "start": 158.3,
+      "end": 158.46,
       "word": "We",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 136.22,
-      "end": 136.38,
+      "start": 158.46,
+      "end": 158.64,
       "word": "want",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 136.38,
-      "end": 136.54,
+      "start": 158.64,
+      "end": 158.78,
       "word": "to",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 136.54,
-      "end": 136.74,
+      "start": 158.78,
+      "end": 158.98,
       "word": "build",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 136.74,
-      "end": 137.22,
+      "start": 158.98,
+      "end": 159.48,
       "word": "momentum",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 137.22,
-      "end": 137.5,
+      "start": 159.48,
+      "end": 159.74,
       "word": "as",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 137.5,
-      "end": 137.8,
+      "start": 159.74,
+      "end": 160.06,
       "word": "Dr.",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 138.24,
-      "end": 138.24,
+      "start": 160.44,
+      "end": 160.5,
       "word": "Benjamin",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 138.24,
-      "end": 138.58,
+      "start": 160.5,
+      "end": 160.82,
       "word": "Hardy",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 138.58,
-      "end": 138.96,
+      "start": 160.82,
+      "end": 161.2,
       "word": "and",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 138.96,
-      "end": 139.14,
+      "start": 161.2,
+      "end": 161.38,
       "word": "his",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 139.14,
-      "end": 139.36,
+      "start": 161.38,
+      "end": 161.6,
       "word": "team",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 139.36,
-      "end": 139.66,
+      "start": 161.6,
+      "end": 161.92,
       "word": "market",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 139.66,
-      "end": 139.92,
+      "start": 161.92,
+      "end": 162.16,
       "word": "the",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 139.92,
-      "end": 140.16,
+      "start": 162.16,
+      "end": 162.42,
       "word": "launch",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 140.16,
-      "end": 140.32,
+      "start": 162.42,
+      "end": 162.56,
       "word": "of",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 140.32,
-      "end": 140.44,
+      "start": 162.56,
+      "end": 162.7,
       "word": "their",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 140.44,
-      "end": 140.78,
+      "start": 162.7,
+      "end": 163.06,
       "word": "book,",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 140.78,
-      "end": 141.26,
+      "start": 163.38,
+      "end": 163.52,
       "word": "Power",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 141.26,
-      "end": 141.56,
+      "start": 163.52,
+      "end": 163.8,
       "word": "Law",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 141.56,
-      "end": 142.06,
+      "start": 163.8,
+      "end": 164.26,
       "word": "Strategy,",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 142.52,
-      "end": 142.72,
+      "start": 164.76,
+      "end": 164.98,
       "word": "coming",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 142.72,
-      "end": 143.16,
+      "start": 164.98,
+      "end": 165.4,
       "word": "January",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 143.16,
-      "end": 144.36,
+      "start": 165.4,
+      "end": 166.58,
       "word": "26th,",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 144.42,
-      "end": 145.3,
+      "start": 166.64,
+      "end": 167.48,
       "word": "2027.",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 146.34,
-      "end": 146.46,
+      "start": 168.44,
+      "end": 168.7,
       "word": "With",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 146.46,
-      "end": 146.62,
+      "start": 168.7,
+      "end": 168.86,
       "word": "you",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 146.62,
-      "end": 146.8,
+      "start": 168.86,
+      "end": 169.04,
       "word": "set",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 146.8,
-      "end": 146.94,
+      "start": 169.04,
+      "end": 169.2,
       "word": "up",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 146.94,
-      "end": 147.08,
+      "start": 169.2,
+      "end": 169.32,
       "word": "in",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 147.08,
-      "end": 147.22,
+      "start": 169.32,
+      "end": 169.5,
       "word": "your",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 147.22,
-      "end": 147.72,
+      "start": 169.5,
+      "end": 169.98,
       "word": "dashboard,",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 148.08,
-      "end": 148.14,
+      "start": 169.98,
+      "end": 170.38,
       "word": "the",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 148.14,
-      "end": 148.4,
+      "start": 170.38,
+      "end": 170.66,
       "word": "people",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 148.4,
-      "end": 148.84,
+      "start": 170.66,
+      "end": 171.08,
       "word": "already",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 148.84,
-      "end": 149.26,
+      "start": 171.08,
+      "end": 171.5,
       "word": "nurtured",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 149.26,
-      "end": 149.44,
+      "start": 171.5,
+      "end": 171.7,
       "word": "with",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 149.44,
-      "end": 149.64,
+      "start": 171.7,
+      "end": 171.88,
       "word": "that",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 149.64,
-      "end": 150.14,
+      "start": 171.88,
+      "end": 172.38,
       "word": "mindset",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 150.14,
-      "end": 150.6,
+      "start": 172.38,
+      "end": 172.86,
       "word": "who",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 150.6,
-      "end": 150.72,
+      "start": 172.86,
+      "end": 172.98,
       "word": "are",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 150.72,
-      "end": 150.96,
+      "start": 172.98,
+      "end": 173.22,
       "word": "looking",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 150.96,
-      "end": 151.24,
+      "start": 173.22,
+      "end": 173.48,
       "word": "for",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 151.24,
-      "end": 151.42,
+      "start": 173.48,
+      "end": 173.66,
       "word": "a",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 151.42,
-      "end": 151.9,
+      "start": 173.66,
+      "end": 174.14,
       "word": "fractional",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 151.9,
-      "end": 152.36,
+      "start": 174.14,
+      "end": 174.58,
       "word": "COO",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 152.36,
-      "end": 152.84,
+      "start": 174.58,
+      "end": 175.08,
       "word": "can",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 152.84,
-      "end": 153.08,
+      "start": 175.08,
+      "end": 175.32,
       "word": "see",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 153.08,
-      "end": 153.26,
+      "start": 175.32,
+      "end": 175.52,
       "word": "you",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 153.26,
-      "end": 153.44,
+      "start": 175.52,
+      "end": 175.68,
       "word": "as",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 153.44,
-      "end": 153.6,
+      "start": 175.68,
+      "end": 175.86,
       "word": "the",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 153.6,
-      "end": 153.86,
+      "start": 175.86,
+      "end": 176.08,
       "word": "answer",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 153.86,
-      "end": 154.1,
+      "start": 176.08,
+      "end": 176.34,
       "word": "to",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 154.1,
-      "end": 154.24,
+      "start": 176.34,
+      "end": 176.48,
       "word": "their",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 154.24,
-      "end": 154.66,
+      "start": 176.48,
+      "end": 176.88,
       "word": "problems",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 154.66,
-      "end": 154.94,
+      "start": 176.88,
+      "end": 177.2,
       "word": "and",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 154.94,
-      "end": 155.1,
+      "start": 177.2,
+      "end": 177.34,
       "word": "their",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 155.1,
-      "end": 155.42,
+      "start": 177.34,
+      "end": 177.66,
       "word": "prayers",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 155.42,
-      "end": 155.96,
+      "start": 177.66,
+      "end": 178.2,
       "word": "and",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 155.96,
-      "end": 156.08,
+      "start": 178.2,
+      "end": 178.34,
       "word": "the",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 156.08,
-      "end": 156.44,
+      "start": 178.34,
+      "end": 178.66,
       "word": "solution",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 156.44,
-      "end": 156.76,
+      "start": 178.66,
+      "end": 179.0,
       "word": "for",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 156.76,
-      "end": 156.92,
+      "start": 179.0,
+      "end": 179.18,
       "word": "their",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 156.92,
-      "end": 157.26,
+      "start": 179.18,
+      "end": 179.6,
       "word": "growth.",
       "speaker": "Olivia",
       "cue": 12
     },
     {
-      "start": 157.96,
-      "end": 158.12,
-      "word": "I'm",
+      "start": 180.2,
+      "end": 180.48,
+      "word": "That's",
       "speaker": "Olivia",
       "cue": 13
     },
     {
-      "start": 158.12,
-      "end": 158.24,
-      "word": "here",
+      "start": 180.48,
+      "end": 180.58,
+      "word": "how",
       "speaker": "Olivia",
       "cue": 13
     },
     {
-      "start": 158.24,
-      "end": 158.4,
-      "word": "to",
+      "start": 180.58,
+      "end": 180.7,
+      "word": "we",
       "speaker": "Olivia",
       "cue": 13
     },
     {
-      "start": 158.4,
-      "end": 158.58,
-      "word": "take",
+      "start": 180.7,
+      "end": 180.88,
+      "word": "grow",
       "speaker": "Olivia",
       "cue": 13
     },
     {
-      "start": 158.58,
-      "end": 158.82,
-      "word": "more",
-      "speaker": "Olivia",
-      "cue": 13
-    },
-    {
-      "start": 158.82,
-      "end": 159.0,
-      "word": "off",
-      "speaker": "Olivia",
-      "cue": 13
-    },
-    {
-      "start": 159.0,
-      "end": 159.14,
+      "start": 180.88,
+      "end": 181.08,
       "word": "your",
       "speaker": "Olivia",
       "cue": 13
     },
     {
-      "start": 159.14,
-      "end": 159.5,
-      "word": "plate",
+      "start": 181.08,
+      "end": 181.5,
+      "word": "business,",
       "speaker": "Olivia",
       "cue": 13
     },
     {
-      "start": 159.5,
-      "end": 159.9,
-      "word": "and",
+      "start": 181.86,
+      "end": 182.08,
+      "word": "paying",
       "speaker": "Olivia",
       "cue": 13
     },
     {
-      "start": 159.9,
-      "end": 160.02,
-      "word": "to",
+      "start": 182.08,
+      "end": 182.28,
+      "word": "your",
       "speaker": "Olivia",
       "cue": 13
     },
     {
-      "start": 160.02,
-      "end": 160.16,
-      "word": "help",
+      "start": 182.28,
+      "end": 182.56,
+      "word": "staff",
       "speaker": "Olivia",
       "cue": 13
     },
     {
-      "start": 160.16,
-      "end": 160.34,
-      "word": "you",
+      "start": 182.56,
+      "end": 182.9,
+      "word": "well",
       "speaker": "Olivia",
       "cue": 13
     },
     {
-      "start": 160.34,
-      "end": 160.68,
-      "word": "organize",
+      "start": 182.9,
+      "end": 183.34,
+      "word": "so",
       "speaker": "Olivia",
       "cue": 13
     },
     {
-      "start": 160.68,
-      "end": 161.1,
-      "word": "all",
+      "start": 183.34,
+      "end": 183.52,
+      "word": "they're",
       "speaker": "Olivia",
       "cue": 13
     },
     {
-      "start": 161.1,
-      "end": 161.22,
-      "word": "of",
+      "start": 183.52,
+      "end": 183.86,
+      "word": "rewarded",
       "speaker": "Olivia",
       "cue": 13
     },
     {
-      "start": 161.22,
-      "end": 161.36,
-      "word": "this",
-      "speaker": "Olivia",
-      "cue": 13
-    },
-    {
-      "start": 161.36,
-      "end": 161.6,
+      "start": 183.86,
+      "end": 184.12,
       "word": "for",
       "speaker": "Olivia",
       "cue": 13
     },
     {
-      "start": 161.6,
-      "end": 161.92,
-      "word": "amazing",
+      "start": 184.12,
+      "end": 184.56,
+      "word": "exceptional",
       "speaker": "Olivia",
       "cue": 13
     },
     {
-      "start": 161.92,
-      "end": 162.34,
+      "start": 184.56,
+      "end": 185.02,
+      "word": "work",
+      "speaker": "Olivia",
+      "cue": 13
+    },
+    {
+      "start": 185.02,
+      "end": 185.52,
+      "word": "so",
+      "speaker": "Olivia",
+      "cue": 13
+    },
+    {
+      "start": 185.52,
+      "end": 185.9,
+      "word": "clients",
+      "speaker": "Olivia",
+      "cue": 13
+    },
+    {
+      "start": 185.9,
+      "end": 186.12,
+      "word": "get",
+      "speaker": "Olivia",
+      "cue": 13
+    },
+    {
+      "start": 186.12,
+      "end": 186.28,
+      "word": "the",
+      "speaker": "Olivia",
+      "cue": 13
+    },
+    {
+      "start": 186.28,
+      "end": 186.62,
+      "word": "results",
+      "speaker": "Olivia",
+      "cue": 13
+    },
+    {
+      "start": 186.62,
+      "end": 186.9,
+      "word": "they're",
+      "speaker": "Olivia",
+      "cue": 13
+    },
+    {
+      "start": 186.9,
+      "end": 187.1,
+      "word": "looking",
+      "speaker": "Olivia",
+      "cue": 13
+    },
+    {
+      "start": 187.1,
+      "end": 187.52,
+      "word": "for",
+      "speaker": "Olivia",
+      "cue": 13
+    },
+    {
+      "start": 187.52,
+      "end": 188.0,
+      "word": "and",
+      "speaker": "Olivia",
+      "cue": 13
+    },
+    {
+      "start": 188.0,
+      "end": 188.2,
+      "word": "want",
+      "speaker": "Olivia",
+      "cue": 13
+    },
+    {
+      "start": 188.2,
+      "end": 188.34,
+      "word": "to",
+      "speaker": "Olivia",
+      "cue": 13
+    },
+    {
+      "start": 188.34,
+      "end": 188.58,
+      "word": "renew",
+      "speaker": "Olivia",
+      "cue": 13
+    },
+    {
+      "start": 188.58,
+      "end": 188.78,
+      "word": "and",
+      "speaker": "Olivia",
+      "cue": 13
+    },
+    {
+      "start": 188.78,
+      "end": 189.14,
+      "word": "refer.",
+      "speaker": "Olivia",
+      "cue": 13
+    },
+    {
+      "start": 190.2,
+      "end": 190.4,
+      "word": "I'm",
+      "speaker": "Olivia",
+      "cue": 13
+    },
+    {
+      "start": 190.4,
+      "end": 190.52,
+      "word": "here",
+      "speaker": "Olivia",
+      "cue": 13
+    },
+    {
+      "start": 190.52,
+      "end": 190.68,
+      "word": "to",
+      "speaker": "Olivia",
+      "cue": 13
+    },
+    {
+      "start": 190.68,
+      "end": 190.86,
+      "word": "take",
+      "speaker": "Olivia",
+      "cue": 13
+    },
+    {
+      "start": 190.86,
+      "end": 191.12,
+      "word": "more",
+      "speaker": "Olivia",
+      "cue": 13
+    },
+    {
+      "start": 191.12,
+      "end": 191.28,
+      "word": "off",
+      "speaker": "Olivia",
+      "cue": 13
+    },
+    {
+      "start": 191.28,
+      "end": 191.44,
+      "word": "your",
+      "speaker": "Olivia",
+      "cue": 13
+    },
+    {
+      "start": 191.44,
+      "end": 191.78,
+      "word": "plate",
+      "speaker": "Olivia",
+      "cue": 13
+    },
+    {
+      "start": 191.78,
+      "end": 192.2,
+      "word": "and",
+      "speaker": "Olivia",
+      "cue": 13
+    },
+    {
+      "start": 192.2,
+      "end": 192.3,
+      "word": "to",
+      "speaker": "Olivia",
+      "cue": 13
+    },
+    {
+      "start": 192.3,
+      "end": 192.44,
+      "word": "help",
+      "speaker": "Olivia",
+      "cue": 13
+    },
+    {
+      "start": 192.44,
+      "end": 192.62,
+      "word": "you",
+      "speaker": "Olivia",
+      "cue": 13
+    },
+    {
+      "start": 192.62,
+      "end": 192.96,
+      "word": "organize",
+      "speaker": "Olivia",
+      "cue": 13
+    },
+    {
+      "start": 192.96,
+      "end": 193.38,
+      "word": "all",
+      "speaker": "Olivia",
+      "cue": 13
+    },
+    {
+      "start": 193.38,
+      "end": 193.5,
+      "word": "of",
+      "speaker": "Olivia",
+      "cue": 13
+    },
+    {
+      "start": 193.5,
+      "end": 193.62,
+      "word": "this",
+      "speaker": "Olivia",
+      "cue": 13
+    },
+    {
+      "start": 193.62,
+      "end": 193.82,
+      "word": "for",
+      "speaker": "Olivia",
+      "cue": 13
+    },
+    {
+      "start": 193.82,
+      "end": 194.02,
+      "word": "that",
+      "speaker": "Olivia",
+      "cue": 13
+    },
+    {
+      "start": 194.02,
+      "end": 194.36,
       "word": "growth.",
       "speaker": "Olivia",
       "cue": 13
@@ -3356,11 +3874,11 @@
       },
       {
         "start": 2.2,
-        "end": 2.46,
+        "end": 2.48,
         "word": "social"
       },
       {
-        "start": 2.46,
+        "start": 2.48,
         "end": 2.8,
         "word": "media"
       },
@@ -3486,11 +4004,11 @@
       },
       {
         "start": 9.54,
-        "end": 9.96,
+        "end": 9.94,
         "word": "capacity"
       },
       {
-        "start": 9.96,
+        "start": 9.94,
         "end": 10.22,
         "word": "for"
       },
@@ -3563,11 +4081,11 @@
       },
       {
         "start": 13.98,
-        "end": 14.44,
+        "end": 14.46,
         "word": "and"
       },
       {
-        "start": 14.44,
+        "start": 14.46,
         "end": 14.7,
         "word": "post"
       },
@@ -3598,11 +4116,11 @@
       },
       {
         "start": 16.56,
-        "end": 17.0,
+        "end": 16.98,
         "word": "cadence"
       },
       {
-        "start": 17.0,
+        "start": 16.98,
         "end": 17.14,
         "word": "you"
       },
@@ -3806,7 +4324,7 @@
     ],
     "4": [
       {
-        "start": 31.68,
+        "start": 31.66,
         "end": 31.8,
         "word": "And"
       },
@@ -3979,11 +4497,11 @@
       },
       {
         "start": 42.44,
-        "end": 42.9,
+        "end": 42.88,
         "word": "managing"
       },
       {
-        "start": 42.9,
+        "start": 42.88,
         "end": 43.28,
         "word": "Dr."
       },
@@ -3998,7 +4516,7 @@
         "word": "group,"
       },
       {
-        "start": 44.36,
+        "start": 44.38,
         "end": 44.72,
         "word": "developing"
       },
@@ -4028,7 +4546,7 @@
         "word": "group,"
       },
       {
-        "start": 47.12,
+        "start": 47.1,
         "end": 47.44,
         "word": "managing"
       },
@@ -4140,7 +4658,7 @@
     ],
     "6": [
       {
-        "start": 54.54,
+        "start": 54.52,
         "end": 54.74,
         "word": "The"
       },
@@ -4348,16 +4866,16 @@
       },
       {
         "start": 66.52,
-        "end": 66.7,
+        "end": 66.72,
         "word": "of"
       },
       {
-        "start": 66.7,
+        "start": 66.72,
         "end": 67.0,
         "word": "staff."
       },
       {
-        "start": 67.6,
+        "start": 67.62,
         "end": 67.94,
         "word": "Olivia,"
       },
@@ -4379,8 +4897,8 @@
     ],
     "8": [
       {
-        "start": 69.46,
-        "end": 69.74,
+        "start": 69.44,
+        "end": 69.76,
         "word": "Thanks,"
       },
       {
@@ -4480,16 +4998,16 @@
       },
       {
         "start": 78.3,
-        "end": 78.64,
+        "end": 78.66,
         "word": "dashboard"
       },
       {
-        "start": 78.64,
-        "end": 78.96,
+        "start": 78.66,
+        "end": 78.98,
         "word": "is"
       },
       {
-        "start": 78.96,
+        "start": 78.98,
         "end": 79.16,
         "word": "getting"
       },
@@ -4500,12 +5018,12 @@
       },
       {
         "start": 79.44,
-        "end": 79.7,
+        "end": 79.72,
         "word": "final"
       },
       {
-        "start": 79.7,
-        "end": 80.18,
+        "start": 79.72,
+        "end": 80.2,
         "word": "updates."
       },
       {
@@ -4584,7 +5102,7 @@
         "word": "side."
       },
       {
-        "start": 86.72,
+        "start": 86.48,
         "end": 87.04,
         "word": "Once"
       },
@@ -4599,17 +5117,17 @@
         "word": "done,"
       },
       {
-        "start": 88.04,
-        "end": 88.1,
+        "start": 88.02,
+        "end": 88.12,
         "word": "the"
       },
       {
-        "start": 88.1,
-        "end": 88.44,
+        "start": 88.12,
+        "end": 88.42,
         "word": "dashboard"
       },
       {
-        "start": 88.44,
+        "start": 88.42,
         "end": 88.72,
         "word": "will"
       },
@@ -4620,11 +5138,11 @@
       },
       {
         "start": 88.92,
-        "end": 89.24,
+        "end": 89.22,
         "word": "live"
       },
       {
-        "start": 89.24,
+        "start": 89.22,
         "end": 89.7,
         "word": "so"
       },
@@ -4645,11 +5163,11 @@
       },
       {
         "start": 90.2,
-        "end": 90.56,
+        "end": 90.54,
         "word": "results"
       },
       {
-        "start": 90.56,
+        "start": 90.54,
         "end": 90.92,
         "word": "across"
       },
@@ -4665,1070 +5183,1440 @@
       },
       {
         "start": 91.36,
-        "end": 91.84,
+        "end": 91.82,
         "word": "activities"
       },
       {
-        "start": 91.84,
-        "end": 92.12,
+        "start": 91.82,
+        "end": 92.1,
         "word": "in"
       },
       {
-        "start": 92.12,
+        "start": 92.1,
         "end": 92.32,
         "word": "one"
       },
       {
         "start": 92.32,
-        "end": 92.74,
+        "end": 92.72,
         "word": "place."
       }
     ],
     "9": [
       {
-        "start": 93.5,
-        "end": 93.6,
-        "word": "I'm"
+        "start": 93.48,
+        "end": 93.54,
+        "word": "A"
       },
       {
-        "start": 93.6,
-        "end": 93.72,
-        "word": "ready"
+        "start": 93.54,
+        "end": 93.74,
+        "word": "key"
       },
       {
-        "start": 93.72,
+        "start": 93.74,
         "end": 93.94,
-        "word": "to"
+        "word": "part"
       },
       {
         "start": 93.94,
-        "end": 94.08,
-        "word": "help"
+        "end": 94.06,
+        "word": "of"
       },
       {
-        "start": 94.08,
-        "end": 94.24,
-        "word": "you"
+        "start": 94.06,
+        "end": 94.22,
+        "word": "my"
       },
       {
-        "start": 94.24,
-        "end": 94.52,
-        "word": "manage"
+        "start": 94.22,
+        "end": 94.48,
+        "word": "job"
       },
       {
-        "start": 94.52,
-        "end": 94.76,
+        "start": 94.48,
+        "end": 94.7,
+        "word": "is"
+      },
+      {
+        "start": 94.7,
+        "end": 95.12,
+        "word": "organizing"
+      },
+      {
+        "start": 95.12,
+        "end": 95.44,
         "word": "your"
       },
       {
-        "start": 94.76,
-        "end": 95.1,
-        "word": "team,"
+        "start": 95.44,
+        "end": 95.68,
+        "word": "team"
       },
       {
-        "start": 95.48,
-        "end": 95.66,
-        "word": "organize"
+        "start": 95.68,
+        "end": 95.84,
+        "word": "of"
       },
       {
-        "start": 95.66,
-        "end": 95.98,
-        "word": "your"
+        "start": 95.84,
+        "end": 96.1,
+        "word": "AI"
       },
       {
-        "start": 95.98,
-        "end": 96.32,
-        "word": "calendar,"
-      },
-      {
-        "start": 96.74,
-        "end": 96.92,
-        "word": "and"
-      },
-      {
-        "start": 96.92,
-        "end": 97.12,
-        "word": "keep"
-      },
-      {
-        "start": 97.12,
-        "end": 97.3,
-        "word": "your"
-      },
-      {
-        "start": 97.3,
-        "end": 97.48,
-        "word": "main"
-      },
-      {
-        "start": 97.48,
-        "end": 98.0,
-        "word": "objectives"
-      },
-      {
-        "start": 98.0,
-        "end": 98.26,
-        "word": "as"
-      },
-      {
-        "start": 98.26,
-        "end": 98.44,
-        "word": "a"
-      },
-      {
-        "start": 98.44,
-        "end": 98.94,
-        "word": "fractional"
-      },
-      {
-        "start": 98.94,
-        "end": 99.28,
-        "word": "COO"
-      },
-      {
-        "start": 99.28,
-        "end": 99.52,
-        "word": "in"
-      },
-      {
-        "start": 99.52,
-        "end": 99.74,
-        "word": "one"
-      },
-      {
-        "start": 99.74,
-        "end": 100.14,
-        "word": "place,"
-      },
-      {
-        "start": 100.48,
-        "end": 100.7,
-        "word": "building"
-      },
-      {
-        "start": 100.7,
-        "end": 100.94,
-        "word": "your"
-      },
-      {
-        "start": 100.94,
-        "end": 101.4,
-        "word": "portfolio,"
-      },
-      {
-        "start": 101.94,
-        "end": 102.22,
-        "word": "adding"
-      },
-      {
-        "start": 102.22,
-        "end": 102.58,
-        "word": "human"
-      },
-      {
-        "start": 102.58,
-        "end": 102.94,
+        "start": 96.1,
+        "end": 96.46,
         "word": "super"
       },
       {
-        "start": 102.94,
-        "end": 103.14,
+        "start": 96.46,
+        "end": 96.84,
         "word": "-whos"
       },
       {
-        "start": 103.14,
-        "end": 103.32,
-        "word": "to"
+        "start": 96.84,
+        "end": 97.32,
+        "word": "so"
       },
       {
-        "start": 103.32,
-        "end": 103.46,
-        "word": "your"
-      },
-      {
-        "start": 103.46,
-        "end": 103.82,
-        "word": "team,"
-      },
-      {
-        "start": 104.06,
-        "end": 104.24,
-        "word": "and"
-      },
-      {
-        "start": 104.24,
-        "end": 104.68,
-        "word": "coordinating"
-      },
-      {
-        "start": 104.68,
-        "end": 104.94,
-        "word": "the"
-      },
-      {
-        "start": 104.94,
-        "end": 105.26,
-        "word": "work"
-      },
-      {
-        "start": 105.26,
-        "end": 105.74,
-        "word": "across"
-      },
-      {
-        "start": 105.74,
-        "end": 106.16,
-        "word": "everything"
-      },
-      {
-        "start": 106.16,
-        "end": 106.4,
+        "start": 97.32,
+        "end": 97.46,
         "word": "you"
       },
       {
-        "start": 106.4,
-        "end": 106.78,
-        "word": "do."
+        "start": 97.46,
+        "end": 97.66,
+        "word": "don't"
+      },
+      {
+        "start": 97.66,
+        "end": 97.84,
+        "word": "have"
+      },
+      {
+        "start": 97.84,
+        "end": 97.98,
+        "word": "to"
+      },
+      {
+        "start": 97.98,
+        "end": 98.1,
+        "word": "be"
+      },
+      {
+        "start": 98.1,
+        "end": 98.24,
+        "word": "in"
+      },
+      {
+        "start": 98.24,
+        "end": 98.36,
+        "word": "the"
+      },
+      {
+        "start": 98.36,
+        "end": 98.66,
+        "word": "weeds"
+      },
+      {
+        "start": 98.66,
+        "end": 99.18,
+        "word": "and"
+      },
+      {
+        "start": 99.18,
+        "end": 99.66,
+        "word": "organizing"
+      },
+      {
+        "start": 99.66,
+        "end": 99.94,
+        "word": "your"
+      },
+      {
+        "start": 99.94,
+        "end": 100.24,
+        "word": "human"
+      },
+      {
+        "start": 100.24,
+        "end": 100.6,
+        "word": "super"
+      },
+      {
+        "start": 100.6,
+        "end": 100.76,
+        "word": "-who"
+      },
+      {
+        "start": 100.76,
+        "end": 101.08,
+        "word": "team"
+      },
+      {
+        "start": 101.08,
+        "end": 101.26,
+        "word": "and"
+      },
+      {
+        "start": 101.26,
+        "end": 101.5,
+        "word": "helping"
+      },
+      {
+        "start": 101.5,
+        "end": 101.74,
+        "word": "them"
+      },
+      {
+        "start": 101.74,
+        "end": 101.98,
+        "word": "stay"
+      },
+      {
+        "start": 101.98,
+        "end": 102.52,
+        "word": "organized."
+      },
+      {
+        "start": 103.54,
+        "end": 103.82,
+        "word": "You"
+      },
+      {
+        "start": 103.82,
+        "end": 104.16,
+        "word": "oversee"
+      },
+      {
+        "start": 104.16,
+        "end": 104.4,
+        "word": "the"
+      },
+      {
+        "start": 104.4,
+        "end": 104.72,
+        "word": "work."
+      },
+      {
+        "start": 105.78,
+        "end": 105.9,
+        "word": "I"
+      },
+      {
+        "start": 105.9,
+        "end": 106.08,
+        "word": "keep"
+      },
+      {
+        "start": 106.08,
+        "end": 106.36,
+        "word": "things"
+      },
+      {
+        "start": 106.36,
+        "end": 106.72,
+        "word": "moving"
+      },
+      {
+        "start": 106.72,
+        "end": 107.14,
+        "word": "and"
+      },
+      {
+        "start": 107.14,
+        "end": 107.28,
+        "word": "I"
+      },
+      {
+        "start": 107.28,
+        "end": 107.44,
+        "word": "make"
+      },
+      {
+        "start": 107.44,
+        "end": 108.18,
+        "word": "recommendations"
       }
     ],
     "10": [
       {
-        "start": 107.18,
-        "end": 107.42,
-        "word": "That"
+        "start": 108.84,
+        "end": 109.12,
+        "word": "that"
       },
       {
-        "start": 107.42,
-        "end": 107.8,
-        "word": "includes"
+        "start": 109.12,
+        "end": 109.5,
+        "word": "stretches"
       },
       {
-        "start": 107.8,
-        "end": 108.26,
-        "word": "Rana's"
-      },
-      {
-        "start": 108.26,
-        "end": 108.48,
-        "word": "work"
-      },
-      {
-        "start": 108.48,
-        "end": 108.74,
-        "word": "through"
-      },
-      {
-        "start": 108.74,
-        "end": 109.08,
-        "word": "Sozo"
-      },
-      {
-        "start": 109.08,
-        "end": 109.48,
-        "word": "marketing,"
-      },
-      {
-        "start": 109.9,
-        "end": 110.02,
-        "word": "the"
-      },
-      {
-        "start": 110.02,
-        "end": 110.62,
-        "word": "CRM"
-      },
-      {
-        "start": 110.62,
-        "end": 111.12,
-        "word": "AEO"
-      },
-      {
-        "start": 111.12,
-        "end": 111.52,
-        "word": "and"
-      },
-      {
-        "start": 111.52,
-        "end": 111.96,
-        "word": "GEO,"
-      },
-      {
-        "start": 112.34,
-        "end": 112.6,
-        "word": "and"
-      },
-      {
-        "start": 112.6,
-        "end": 112.84,
-        "word": "Google"
-      },
-      {
-        "start": 112.84,
-        "end": 113.26,
-        "word": "Ads,"
-      },
-      {
-        "start": 113.52,
-        "end": 113.74,
-        "word": "plus"
-      },
-      {
-        "start": 113.74,
-        "end": 114.06,
-        "word": "social"
-      },
-      {
-        "start": 114.06,
-        "end": 114.48,
-        "word": "media,"
-      },
-      {
-        "start": 114.48,
-        "end": 115.28,
-        "word": "outreach"
-      },
-      {
-        "start": 115.28,
-        "end": 115.52,
-        "word": "for"
-      },
-      {
-        "start": 115.52,
-        "end": 115.7,
-        "word": "all"
-      },
-      {
-        "start": 115.7,
-        "end": 115.84,
-        "word": "the"
-      },
-      {
-        "start": 115.84,
-        "end": 116.24,
-        "word": "companies"
-      },
-      {
-        "start": 116.24,
-        "end": 116.8,
-        "word": "and"
-      },
-      {
-        "start": 116.8,
-        "end": 117.18,
-        "word": "Facebook"
-      },
-      {
-        "start": 117.18,
-        "end": 117.64,
-        "word": "ads."
-      },
-      {
-        "start": 118.82,
-        "end": 118.82,
-        "word": "I"
-      },
-      {
-        "start": 118.82,
-        "end": 119.0,
-        "word": "move"
-      },
-      {
-        "start": 119.0,
-        "end": 119.28,
-        "word": "things"
-      },
-      {
-        "start": 119.28,
-        "end": 119.54,
+        "start": 109.5,
+        "end": 109.86,
         "word": "across"
       },
       {
-        "start": 119.54,
-        "end": 120.18,
-        "word": "platforms"
+        "start": 109.86,
+        "end": 110.1,
+        "word": "the"
       },
       {
-        "start": 120.18,
-        "end": 120.74,
+        "start": 110.1,
+        "end": 110.32,
+        "word": "five"
+      },
+      {
+        "start": 110.32,
+        "end": 110.62,
+        "word": "things"
+      },
+      {
+        "start": 110.62,
+        "end": 110.78,
+        "word": "you"
+      },
+      {
+        "start": 110.78,
+        "end": 110.96,
+        "word": "do"
+      },
+      {
+        "start": 110.96,
+        "end": 111.34,
+        "word": "inside"
+      },
+      {
+        "start": 111.34,
+        "end": 111.58,
+        "word": "these"
+      },
+      {
+        "start": 111.58,
+        "end": 112.02,
+        "word": "companies"
+      },
+      {
+        "start": 112.02,
+        "end": 112.32,
+        "word": "as"
+      },
+      {
+        "start": 112.32,
+        "end": 112.46,
+        "word": "a"
+      },
+      {
+        "start": 112.46,
+        "end": 113.0,
+        "word": "fractional"
+      },
+      {
+        "start": 113.0,
+        "end": 113.46,
+        "word": "COO."
+      },
+      {
+        "start": 114.44,
+        "end": 114.82,
+        "word": "Website"
+      },
+      {
+        "start": 114.82,
+        "end": 115.48,
+        "word": "optimization,"
+      },
+      {
+        "start": 115.92,
+        "end": 116.66,
+        "word": "AEO,"
+      },
+      {
+        "start": 117.24,
+        "end": 117.38,
         "word": "and"
       },
       {
-        "start": 120.74,
-        "end": 120.88,
-        "word": "I"
+        "start": 117.38,
+        "end": 117.5,
+        "word": "the"
       },
       {
-        "start": 120.88,
-        "end": 121.28,
-        "word": "organize"
+        "start": 117.5,
+        "end": 118.82,
+        "word": "GEO."
       },
       {
-        "start": 121.28,
-        "end": 121.54,
-        "word": "your"
+        "start": 119.2,
+        "end": 119.76,
+        "word": "CRM"
       },
       {
-        "start": 121.54,
-        "end": 121.8,
-        "word": "AI"
+        "start": 119.76,
+        "end": 120.06,
+        "word": "management"
       },
       {
-        "start": 121.8,
-        "end": 122.16,
-        "word": "super"
-      },
-      {
-        "start": 122.16,
-        "end": 122.46,
-        "word": "-whos"
-      },
-      {
-        "start": 122.46,
-        "end": 122.72,
+        "start": 120.06,
+        "end": 120.44,
         "word": "and"
       },
       {
-        "start": 122.72,
-        "end": 122.88,
-        "word": "your"
+        "start": 120.44,
+        "end": 120.86,
+        "word": "marketing,"
       },
       {
-        "start": 122.88,
-        "end": 123.16,
+        "start": 121.18,
+        "end": 121.5,
+        "word": "including"
+      },
+      {
+        "start": 121.5,
+        "end": 122.0,
+        "word": "Rana's"
+      },
+      {
+        "start": 122.0,
+        "end": 122.2,
+        "word": "work"
+      },
+      {
+        "start": 122.2,
+        "end": 122.48,
+        "word": "through"
+      },
+      {
+        "start": 122.48,
+        "end": 122.78,
+        "word": "Sozo"
+      },
+      {
+        "start": 122.78,
+        "end": 123.26,
+        "word": "marketing."
+      },
+      {
+        "start": 124.46,
+        "end": 124.5,
+        "word": "Paid"
+      },
+      {
+        "start": 124.5,
+        "end": 125.06,
+        "word": "advertising,"
+      },
+      {
+        "start": 125.56,
+        "end": 125.68,
+        "word": "Google"
+      },
+      {
+        "start": 125.68,
+        "end": 126.1,
+        "word": "ads,"
+      },
+      {
+        "start": 126.74,
+        "end": 126.74,
+        "word": "Facebook"
+      },
+      {
+        "start": 126.74,
+        "end": 127.14,
+        "word": "ads,"
+      },
+      {
+        "start": 127.46,
+        "end": 127.58,
+        "word": "and"
+      },
+      {
+        "start": 127.58,
+        "end": 127.82,
+        "word": "LinkedIn"
+      },
+      {
+        "start": 127.82,
+        "end": 128.38,
+        "word": "ads."
+      },
+      {
+        "start": 129.6,
+        "end": 129.68,
+        "word": "Social"
+      },
+      {
+        "start": 129.68,
+        "end": 130.0,
+        "word": "media"
+      },
+      {
+        "start": 130.0,
+        "end": 130.48,
+        "word": "marketing,"
+      },
+      {
+        "start": 130.94,
+        "end": 131.34,
+        "word": "Instagram,"
+      },
+      {
+        "start": 131.76,
+        "end": 132.02,
+        "word": "Facebook,"
+      },
+      {
+        "start": 132.48,
+        "end": 132.9,
+        "word": "TikTok,"
+      },
+      {
+        "start": 133.26,
+        "end": 133.46,
+        "word": "YouTube,"
+      },
+      {
+        "start": 133.9,
+        "end": 134.04,
+        "word": "and"
+      },
+      {
+        "start": 134.04,
+        "end": 134.34,
+        "word": "LinkedIn."
+      },
+      {
+        "start": 135.52,
+        "end": 135.64,
+        "word": "And"
+      },
+      {
+        "start": 135.64,
+        "end": 136.02,
+        "word": "outreach."
+      },
+      {
+        "start": 137.18,
+        "end": 137.36,
+        "word": "Your"
+      },
+      {
+        "start": 137.36,
+        "end": 137.68,
         "word": "human"
       },
       {
-        "start": 123.16,
-        "end": 123.5,
+        "start": 137.68,
+        "end": 138.0,
         "word": "super"
       },
       {
-        "start": 123.5,
-        "end": 123.92,
-        "word": "-whos."
+        "start": 138.0,
+        "end": 138.28,
+        "word": "-whos"
+      },
+      {
+        "start": 138.28,
+        "end": 138.58,
+        "word": "and"
+      },
+      {
+        "start": 138.58,
+        "end": 138.74,
+        "word": "your"
+      },
+      {
+        "start": 138.74,
+        "end": 138.98,
+        "word": "AI"
+      },
+      {
+        "start": 138.98,
+        "end": 139.36,
+        "word": "super"
+      },
+      {
+        "start": 139.36,
+        "end": 139.56,
+        "word": "-whos"
+      },
+      {
+        "start": 139.56,
+        "end": 140.0,
+        "word": "oversee"
+      },
+      {
+        "start": 140.0,
+        "end": 140.28,
+        "word": "those"
+      },
+      {
+        "start": 140.28,
+        "end": 140.68,
+        "word": "areas"
+      },
+      {
+        "start": 140.68,
+        "end": 141.18,
+        "word": "so"
+      },
+      {
+        "start": 141.18,
+        "end": 141.36,
+        "word": "you"
+      },
+      {
+        "start": 141.36,
+        "end": 141.5,
+        "word": "don't"
+      },
+      {
+        "start": 141.5,
+        "end": 141.72,
+        "word": "have"
+      },
+      {
+        "start": 141.72,
+        "end": 141.84,
+        "word": "to"
+      },
+      {
+        "start": 141.84,
+        "end": 141.98,
+        "word": "do"
+      },
+      {
+        "start": 141.98,
+        "end": 142.14,
+        "word": "that"
+      },
+      {
+        "start": 142.14,
+        "end": 142.34,
+        "word": "work"
+      },
+      {
+        "start": 142.34,
+        "end": 142.82,
+        "word": "yourself."
       }
     ],
     "11": [
       {
-        "start": 124.4,
-        "end": 124.7,
+        "start": 143.48,
+        "end": 143.62,
+        "word": "I'm"
+      },
+      {
+        "start": 143.62,
+        "end": 143.88,
+        "word": "also"
+      },
+      {
+        "start": 143.88,
+        "end": 144.04,
+        "word": "ready"
+      },
+      {
+        "start": 144.04,
+        "end": 144.24,
+        "word": "to"
+      },
+      {
+        "start": 144.24,
+        "end": 144.4,
+        "word": "help"
+      },
+      {
+        "start": 144.4,
+        "end": 144.58,
+        "word": "you"
+      },
+      {
+        "start": 144.58,
+        "end": 144.96,
+        "word": "organize"
+      },
+      {
+        "start": 144.96,
+        "end": 145.22,
+        "word": "your"
+      },
+      {
+        "start": 145.22,
+        "end": 145.6,
+        "word": "calendar."
+      },
+      {
+        "start": 146.7,
+        "end": 146.94,
         "word": "Every"
       },
       {
-        "start": 124.7,
-        "end": 125.08,
+        "start": 146.94,
+        "end": 147.3,
         "word": "morning,"
       },
       {
-        "start": 125.42,
-        "end": 125.5,
+        "start": 147.62,
+        "end": 147.74,
         "word": "I'll"
       },
       {
-        "start": 125.5,
-        "end": 125.6,
+        "start": 147.74,
+        "end": 147.86,
         "word": "give"
       },
       {
-        "start": 125.6,
-        "end": 125.78,
+        "start": 147.86,
+        "end": 148.02,
         "word": "you"
       },
       {
-        "start": 125.78,
-        "end": 125.92,
+        "start": 148.02,
+        "end": 148.18,
         "word": "a"
       },
       {
-        "start": 125.92,
-        "end": 126.2,
+        "start": 148.18,
+        "end": 148.44,
         "word": "brief"
       },
       {
-        "start": 126.2,
-        "end": 126.7,
+        "start": 148.44,
+        "end": 148.94,
         "word": "what"
       },
       {
-        "start": 126.7,
-        "end": 126.86,
+        "start": 148.94,
+        "end": 149.1,
         "word": "I"
       },
       {
-        "start": 126.86,
-        "end": 127.0,
+        "start": 149.1,
+        "end": 149.24,
         "word": "and"
       },
       {
-        "start": 127.0,
-        "end": 127.1,
+        "start": 149.24,
+        "end": 149.36,
         "word": "the"
       },
       {
-        "start": 127.1,
-        "end": 127.28,
+        "start": 149.36,
+        "end": 149.54,
         "word": "rest"
       },
       {
-        "start": 127.28,
-        "end": 127.46,
+        "start": 149.54,
+        "end": 149.72,
         "word": "of"
       },
       {
-        "start": 127.46,
-        "end": 127.6,
+        "start": 149.72,
+        "end": 149.84,
         "word": "the"
       },
       {
-        "start": 127.6,
-        "end": 127.8,
+        "start": 149.84,
+        "end": 150.06,
         "word": "team"
       },
       {
-        "start": 127.8,
-        "end": 128.04,
+        "start": 150.06,
+        "end": 150.3,
         "word": "got"
       },
       {
-        "start": 128.04,
-        "end": 128.34,
+        "start": 150.3,
+        "end": 150.56,
         "word": "done"
       },
       {
-        "start": 128.34,
-        "end": 128.7,
+        "start": 150.56,
+        "end": 150.94,
         "word": "overnight"
       },
       {
-        "start": 128.7,
-        "end": 128.98,
+        "start": 150.94,
+        "end": 151.22,
         "word": "while"
       },
       {
-        "start": 128.98,
-        "end": 129.12,
+        "start": 151.22,
+        "end": 151.38,
         "word": "you"
       },
       {
-        "start": 129.12,
-        "end": 129.26,
+        "start": 151.38,
+        "end": 151.5,
         "word": "were"
       },
       {
-        "start": 129.26,
-        "end": 129.56,
+        "start": 151.5,
+        "end": 151.8,
         "word": "sleeping"
       },
       {
-        "start": 129.56,
-        "end": 130.16,
+        "start": 151.8,
+        "end": 152.4,
         "word": "and"
       },
       {
-        "start": 130.16,
-        "end": 130.42,
+        "start": 152.4,
+        "end": 152.66,
         "word": "what's"
       },
       {
-        "start": 130.42,
-        "end": 130.56,
+        "start": 152.66,
+        "end": 152.82,
         "word": "on"
       },
       {
-        "start": 130.56,
-        "end": 130.9,
+        "start": 152.82,
+        "end": 153.14,
         "word": "today."
       },
       {
-        "start": 131.84,
-        "end": 132.18,
+        "start": 154.14,
+        "end": 154.42,
         "word": "Every"
       },
       {
-        "start": 132.18,
-        "end": 132.56,
+        "start": 154.42,
+        "end": 154.8,
         "word": "evening,"
       },
       {
-        "start": 132.82,
-        "end": 132.94,
+        "start": 155.06,
+        "end": 155.18,
         "word": "I'll"
       },
       {
-        "start": 132.94,
-        "end": 133.1,
+        "start": 155.18,
+        "end": 155.34,
         "word": "tell"
       },
       {
-        "start": 133.1,
-        "end": 133.26,
+        "start": 155.34,
+        "end": 155.5,
         "word": "you"
       },
       {
-        "start": 133.26,
-        "end": 133.4,
+        "start": 155.5,
+        "end": 155.64,
         "word": "what"
       },
       {
-        "start": 133.4,
-        "end": 133.5,
+        "start": 155.64,
+        "end": 155.76,
         "word": "we"
       },
       {
-        "start": 133.5,
-        "end": 133.7,
+        "start": 155.76,
+        "end": 155.94,
         "word": "got"
       },
       {
-        "start": 133.7,
-        "end": 133.94,
+        "start": 155.94,
+        "end": 156.2,
         "word": "done"
       },
       {
-        "start": 133.94,
-        "end": 134.26,
+        "start": 156.2,
+        "end": 156.52,
         "word": "today"
       },
       {
-        "start": 134.26,
-        "end": 134.66,
+        "start": 156.52,
+        "end": 156.9,
         "word": "and"
       },
       {
-        "start": 134.66,
-        "end": 134.92,
+        "start": 156.9,
+        "end": 157.16,
         "word": "what's"
       },
       {
-        "start": 134.92,
-        "end": 135.06,
+        "start": 157.16,
+        "end": 157.3,
         "word": "on"
       },
       {
-        "start": 135.06,
-        "end": 135.44,
+        "start": 157.3,
+        "end": 157.64,
         "word": "tomorrow."
       }
     ],
     "12": [
       {
-        "start": 136.0,
-        "end": 136.22,
+        "start": 158.3,
+        "end": 158.46,
         "word": "We"
       },
       {
-        "start": 136.22,
-        "end": 136.38,
+        "start": 158.46,
+        "end": 158.64,
         "word": "want"
       },
       {
-        "start": 136.38,
-        "end": 136.54,
+        "start": 158.64,
+        "end": 158.78,
         "word": "to"
       },
       {
-        "start": 136.54,
-        "end": 136.74,
+        "start": 158.78,
+        "end": 158.98,
         "word": "build"
       },
       {
-        "start": 136.74,
-        "end": 137.22,
+        "start": 158.98,
+        "end": 159.48,
         "word": "momentum"
       },
       {
-        "start": 137.22,
-        "end": 137.5,
+        "start": 159.48,
+        "end": 159.74,
         "word": "as"
       },
       {
-        "start": 137.5,
-        "end": 137.8,
+        "start": 159.74,
+        "end": 160.06,
         "word": "Dr."
       },
       {
-        "start": 138.24,
-        "end": 138.24,
+        "start": 160.44,
+        "end": 160.5,
         "word": "Benjamin"
       },
       {
-        "start": 138.24,
-        "end": 138.58,
+        "start": 160.5,
+        "end": 160.82,
         "word": "Hardy"
       },
       {
-        "start": 138.58,
-        "end": 138.96,
+        "start": 160.82,
+        "end": 161.2,
         "word": "and"
       },
       {
-        "start": 138.96,
-        "end": 139.14,
+        "start": 161.2,
+        "end": 161.38,
         "word": "his"
       },
       {
-        "start": 139.14,
-        "end": 139.36,
+        "start": 161.38,
+        "end": 161.6,
         "word": "team"
       },
       {
-        "start": 139.36,
-        "end": 139.66,
+        "start": 161.6,
+        "end": 161.92,
         "word": "market"
       },
       {
-        "start": 139.66,
-        "end": 139.92,
+        "start": 161.92,
+        "end": 162.16,
         "word": "the"
       },
       {
-        "start": 139.92,
-        "end": 140.16,
+        "start": 162.16,
+        "end": 162.42,
         "word": "launch"
       },
       {
-        "start": 140.16,
-        "end": 140.32,
+        "start": 162.42,
+        "end": 162.56,
         "word": "of"
       },
       {
-        "start": 140.32,
-        "end": 140.44,
+        "start": 162.56,
+        "end": 162.7,
         "word": "their"
       },
       {
-        "start": 140.44,
-        "end": 140.78,
+        "start": 162.7,
+        "end": 163.06,
         "word": "book,"
       },
       {
-        "start": 140.78,
-        "end": 141.26,
+        "start": 163.38,
+        "end": 163.52,
         "word": "Power"
       },
       {
-        "start": 141.26,
-        "end": 141.56,
+        "start": 163.52,
+        "end": 163.8,
         "word": "Law"
       },
       {
-        "start": 141.56,
-        "end": 142.06,
+        "start": 163.8,
+        "end": 164.26,
         "word": "Strategy,"
       },
       {
-        "start": 142.52,
-        "end": 142.72,
+        "start": 164.76,
+        "end": 164.98,
         "word": "coming"
       },
       {
-        "start": 142.72,
-        "end": 143.16,
+        "start": 164.98,
+        "end": 165.4,
         "word": "January"
       },
       {
-        "start": 143.16,
-        "end": 144.36,
+        "start": 165.4,
+        "end": 166.58,
         "word": "26th,"
       },
       {
-        "start": 144.42,
-        "end": 145.3,
+        "start": 166.64,
+        "end": 167.48,
         "word": "2027."
       },
       {
-        "start": 146.34,
-        "end": 146.46,
+        "start": 168.44,
+        "end": 168.7,
         "word": "With"
       },
       {
-        "start": 146.46,
-        "end": 146.62,
+        "start": 168.7,
+        "end": 168.86,
         "word": "you"
       },
       {
-        "start": 146.62,
-        "end": 146.8,
+        "start": 168.86,
+        "end": 169.04,
         "word": "set"
       },
       {
-        "start": 146.8,
-        "end": 146.94,
+        "start": 169.04,
+        "end": 169.2,
         "word": "up"
       },
       {
-        "start": 146.94,
-        "end": 147.08,
+        "start": 169.2,
+        "end": 169.32,
         "word": "in"
       },
       {
-        "start": 147.08,
-        "end": 147.22,
+        "start": 169.32,
+        "end": 169.5,
         "word": "your"
       },
       {
-        "start": 147.22,
-        "end": 147.72,
+        "start": 169.5,
+        "end": 169.98,
         "word": "dashboard,"
       },
       {
-        "start": 148.08,
-        "end": 148.14,
+        "start": 169.98,
+        "end": 170.38,
         "word": "the"
       },
       {
-        "start": 148.14,
-        "end": 148.4,
+        "start": 170.38,
+        "end": 170.66,
         "word": "people"
       },
       {
-        "start": 148.4,
-        "end": 148.84,
+        "start": 170.66,
+        "end": 171.08,
         "word": "already"
       },
       {
-        "start": 148.84,
-        "end": 149.26,
+        "start": 171.08,
+        "end": 171.5,
         "word": "nurtured"
       },
       {
-        "start": 149.26,
-        "end": 149.44,
+        "start": 171.5,
+        "end": 171.7,
         "word": "with"
       },
       {
-        "start": 149.44,
-        "end": 149.64,
+        "start": 171.7,
+        "end": 171.88,
         "word": "that"
       },
       {
-        "start": 149.64,
-        "end": 150.14,
+        "start": 171.88,
+        "end": 172.38,
         "word": "mindset"
       },
       {
-        "start": 150.14,
-        "end": 150.6,
+        "start": 172.38,
+        "end": 172.86,
         "word": "who"
       },
       {
-        "start": 150.6,
-        "end": 150.72,
+        "start": 172.86,
+        "end": 172.98,
         "word": "are"
       },
       {
-        "start": 150.72,
-        "end": 150.96,
+        "start": 172.98,
+        "end": 173.22,
         "word": "looking"
       },
       {
-        "start": 150.96,
-        "end": 151.24,
+        "start": 173.22,
+        "end": 173.48,
         "word": "for"
       },
       {
-        "start": 151.24,
-        "end": 151.42,
+        "start": 173.48,
+        "end": 173.66,
         "word": "a"
       },
       {
-        "start": 151.42,
-        "end": 151.9,
+        "start": 173.66,
+        "end": 174.14,
         "word": "fractional"
       },
       {
-        "start": 151.9,
-        "end": 152.36,
+        "start": 174.14,
+        "end": 174.58,
         "word": "COO"
       },
       {
-        "start": 152.36,
-        "end": 152.84,
+        "start": 174.58,
+        "end": 175.08,
         "word": "can"
       },
       {
-        "start": 152.84,
-        "end": 153.08,
+        "start": 175.08,
+        "end": 175.32,
         "word": "see"
       },
       {
-        "start": 153.08,
-        "end": 153.26,
+        "start": 175.32,
+        "end": 175.52,
         "word": "you"
       },
       {
-        "start": 153.26,
-        "end": 153.44,
+        "start": 175.52,
+        "end": 175.68,
         "word": "as"
       },
       {
-        "start": 153.44,
-        "end": 153.6,
+        "start": 175.68,
+        "end": 175.86,
         "word": "the"
       },
       {
-        "start": 153.6,
-        "end": 153.86,
+        "start": 175.86,
+        "end": 176.08,
         "word": "answer"
       },
       {
-        "start": 153.86,
-        "end": 154.1,
+        "start": 176.08,
+        "end": 176.34,
         "word": "to"
       },
       {
-        "start": 154.1,
-        "end": 154.24,
+        "start": 176.34,
+        "end": 176.48,
         "word": "their"
       },
       {
-        "start": 154.24,
-        "end": 154.66,
+        "start": 176.48,
+        "end": 176.88,
         "word": "problems"
       },
       {
-        "start": 154.66,
-        "end": 154.94,
+        "start": 176.88,
+        "end": 177.2,
         "word": "and"
       },
       {
-        "start": 154.94,
-        "end": 155.1,
+        "start": 177.2,
+        "end": 177.34,
         "word": "their"
       },
       {
-        "start": 155.1,
-        "end": 155.42,
+        "start": 177.34,
+        "end": 177.66,
         "word": "prayers"
       },
       {
-        "start": 155.42,
-        "end": 155.96,
+        "start": 177.66,
+        "end": 178.2,
         "word": "and"
       },
       {
-        "start": 155.96,
-        "end": 156.08,
+        "start": 178.2,
+        "end": 178.34,
         "word": "the"
       },
       {
-        "start": 156.08,
-        "end": 156.44,
+        "start": 178.34,
+        "end": 178.66,
         "word": "solution"
       },
       {
-        "start": 156.44,
-        "end": 156.76,
+        "start": 178.66,
+        "end": 179.0,
         "word": "for"
       },
       {
-        "start": 156.76,
-        "end": 156.92,
+        "start": 179.0,
+        "end": 179.18,
         "word": "their"
       },
       {
-        "start": 156.92,
-        "end": 157.26,
+        "start": 179.18,
+        "end": 179.6,
         "word": "growth."
       }
     ],
     "13": [
       {
-        "start": 157.96,
-        "end": 158.12,
-        "word": "I'm"
+        "start": 180.2,
+        "end": 180.48,
+        "word": "That's"
       },
       {
-        "start": 158.12,
-        "end": 158.24,
-        "word": "here"
+        "start": 180.48,
+        "end": 180.58,
+        "word": "how"
       },
       {
-        "start": 158.24,
-        "end": 158.4,
-        "word": "to"
+        "start": 180.58,
+        "end": 180.7,
+        "word": "we"
       },
       {
-        "start": 158.4,
-        "end": 158.58,
-        "word": "take"
+        "start": 180.7,
+        "end": 180.88,
+        "word": "grow"
       },
       {
-        "start": 158.58,
-        "end": 158.82,
-        "word": "more"
-      },
-      {
-        "start": 158.82,
-        "end": 159.0,
-        "word": "off"
-      },
-      {
-        "start": 159.0,
-        "end": 159.14,
+        "start": 180.88,
+        "end": 181.08,
         "word": "your"
       },
       {
-        "start": 159.14,
-        "end": 159.5,
-        "word": "plate"
+        "start": 181.08,
+        "end": 181.5,
+        "word": "business,"
       },
       {
-        "start": 159.5,
-        "end": 159.9,
-        "word": "and"
+        "start": 181.86,
+        "end": 182.08,
+        "word": "paying"
       },
       {
-        "start": 159.9,
-        "end": 160.02,
-        "word": "to"
+        "start": 182.08,
+        "end": 182.28,
+        "word": "your"
       },
       {
-        "start": 160.02,
-        "end": 160.16,
-        "word": "help"
+        "start": 182.28,
+        "end": 182.56,
+        "word": "staff"
       },
       {
-        "start": 160.16,
-        "end": 160.34,
-        "word": "you"
+        "start": 182.56,
+        "end": 182.9,
+        "word": "well"
       },
       {
-        "start": 160.34,
-        "end": 160.68,
-        "word": "organize"
+        "start": 182.9,
+        "end": 183.34,
+        "word": "so"
       },
       {
-        "start": 160.68,
-        "end": 161.1,
-        "word": "all"
+        "start": 183.34,
+        "end": 183.52,
+        "word": "they're"
       },
       {
-        "start": 161.1,
-        "end": 161.22,
-        "word": "of"
+        "start": 183.52,
+        "end": 183.86,
+        "word": "rewarded"
       },
       {
-        "start": 161.22,
-        "end": 161.36,
-        "word": "this"
-      },
-      {
-        "start": 161.36,
-        "end": 161.6,
+        "start": 183.86,
+        "end": 184.12,
         "word": "for"
       },
       {
-        "start": 161.6,
-        "end": 161.92,
-        "word": "amazing"
+        "start": 184.12,
+        "end": 184.56,
+        "word": "exceptional"
       },
       {
-        "start": 161.92,
-        "end": 162.34,
+        "start": 184.56,
+        "end": 185.02,
+        "word": "work"
+      },
+      {
+        "start": 185.02,
+        "end": 185.52,
+        "word": "so"
+      },
+      {
+        "start": 185.52,
+        "end": 185.9,
+        "word": "clients"
+      },
+      {
+        "start": 185.9,
+        "end": 186.12,
+        "word": "get"
+      },
+      {
+        "start": 186.12,
+        "end": 186.28,
+        "word": "the"
+      },
+      {
+        "start": 186.28,
+        "end": 186.62,
+        "word": "results"
+      },
+      {
+        "start": 186.62,
+        "end": 186.9,
+        "word": "they're"
+      },
+      {
+        "start": 186.9,
+        "end": 187.1,
+        "word": "looking"
+      },
+      {
+        "start": 187.1,
+        "end": 187.52,
+        "word": "for"
+      },
+      {
+        "start": 187.52,
+        "end": 188.0,
+        "word": "and"
+      },
+      {
+        "start": 188.0,
+        "end": 188.2,
+        "word": "want"
+      },
+      {
+        "start": 188.2,
+        "end": 188.34,
+        "word": "to"
+      },
+      {
+        "start": 188.34,
+        "end": 188.58,
+        "word": "renew"
+      },
+      {
+        "start": 188.58,
+        "end": 188.78,
+        "word": "and"
+      },
+      {
+        "start": 188.78,
+        "end": 189.14,
+        "word": "refer."
+      },
+      {
+        "start": 190.2,
+        "end": 190.4,
+        "word": "I'm"
+      },
+      {
+        "start": 190.4,
+        "end": 190.52,
+        "word": "here"
+      },
+      {
+        "start": 190.52,
+        "end": 190.68,
+        "word": "to"
+      },
+      {
+        "start": 190.68,
+        "end": 190.86,
+        "word": "take"
+      },
+      {
+        "start": 190.86,
+        "end": 191.12,
+        "word": "more"
+      },
+      {
+        "start": 191.12,
+        "end": 191.28,
+        "word": "off"
+      },
+      {
+        "start": 191.28,
+        "end": 191.44,
+        "word": "your"
+      },
+      {
+        "start": 191.44,
+        "end": 191.78,
+        "word": "plate"
+      },
+      {
+        "start": 191.78,
+        "end": 192.2,
+        "word": "and"
+      },
+      {
+        "start": 192.2,
+        "end": 192.3,
+        "word": "to"
+      },
+      {
+        "start": 192.3,
+        "end": 192.44,
+        "word": "help"
+      },
+      {
+        "start": 192.44,
+        "end": 192.62,
+        "word": "you"
+      },
+      {
+        "start": 192.62,
+        "end": 192.96,
+        "word": "organize"
+      },
+      {
+        "start": 192.96,
+        "end": 193.38,
+        "word": "all"
+      },
+      {
+        "start": 193.38,
+        "end": 193.5,
+        "word": "of"
+      },
+      {
+        "start": 193.5,
+        "end": 193.62,
+        "word": "this"
+      },
+      {
+        "start": 193.62,
+        "end": 193.82,
+        "word": "for"
+      },
+      {
+        "start": 193.82,
+        "end": 194.02,
+        "word": "that"
+      },
+      {
+        "start": 194.02,
+        "end": 194.36,
         "word": "growth."
       }
     ]
   },
-  "transcript": "Hey Chris, I'm Maya, your social media super -who. Jim and his team developed me for you, so more of this work can come off your plate and you have more capacity for the work only you can do. I'm built and ready to create content and post on every platform on whatever cadence you need, viral, nurture, educate, or conversion, and on your schedule. I also provide the reports and analytics so you can see what's working. We've already made four reels from Dr. Gina's Houston footage and they're ready for your review. And now I want you to meet my teammate, Reed. He's going to be running your school groups. Reed? Thanks, Maya. Hey Chris, I'm Reed, your school management super -who. I'm ready to begin managing Dr. Gina's group, developing and managing Dr. Jill's group, managing your own group, and new client groups as they come in. Posts, member questions, and engagement so you don't have to. The reply box and messages thread on your page are ready as well. You can type, talk, or send a photo, and the team answers right there. And the one who keeps all of us working together is Olivia, your chief of staff. Olivia, take it away. Thanks, Reed. Hey Chris, I'm Olivia, your chief of staff super -who. I'm waiting in your dashboard. Your super -who dashboard is getting its final updates. Facebook for the Prevent Clinic is already connected and Instagram is next on our side. Once that's done, the dashboard will be live so you can see results across all your activities in one place. I'm ready to help you manage your team, organize your calendar, and keep your main objectives as a fractional COO in one place, building your portfolio, adding human super -whos to your team, and coordinating the work across everything you do. That includes Rana's work through Sozo marketing, the CRM AEO and GEO, and Google Ads, plus social media, outreach for all the companies and Facebook ads. I move things across platforms and I organize your AI super -whos and your human super -whos. Every morning, I'll give you a brief what I and the rest of the team got done overnight while you were sleeping and what's on today. Every evening, I'll tell you what we got done today and what's on tomorrow. We want to build momentum as Dr. Benjamin Hardy and his team market the launch of their book, Power Law Strategy, coming January 26th, 2027. With you set up in your dashboard, the people already nurtured with that mindset who are looking for a fractional COO can see you as the answer to their problems and their prayers and the solution for their growth. I'm here to take more off your plate and to help you organize all of this for amazing growth."
+  "transcript": "Hey Chris, I'm Maya, your social media super -who. Jim and his team developed me for you, so more of this work can come off your plate and you have more capacity for the work only you can do. I'm built and ready to create content and post on every platform on whatever cadence you need, viral, nurture, educate, or conversion, and on your schedule. I also provide the reports and analytics so you can see what's working. We've already made four reels from Dr. Gina's Houston footage and they're ready for your review. And now I want you to meet my teammate, Reed. He's going to be running your school groups. Reed? Thanks, Maya. Hey Chris, I'm Reed, your school management super -who. I'm ready to begin managing Dr. Gina's group, developing and managing Dr. Jill's group, managing your own group, and new client groups as they come in. Posts, member questions, and engagement so you don't have to. The reply box and messages thread on your page are ready as well. You can type, talk, or send a photo, and the team answers right there. And the one who keeps all of us working together is Olivia, your chief of staff. Olivia, take it away. Thanks, Reed. Hey Chris, I'm Olivia, your chief of staff super -who. I'm waiting in your dashboard. Your super -who dashboard is getting its final updates. Facebook for the Prevent Clinic is already connected and Instagram is next on our side. Once that's done, the dashboard will be live so you can see results across all your activities in one place. A key part of my job is organizing your team of AI super -whos so you don't have to be in the weeds and organizing your human super -who team and helping them stay organized. You oversee the work. I keep things moving and I make recommendations that stretches across the five things you do inside these companies as a fractional COO. Website optimization, AEO, and the GEO. CRM management and marketing, including Rana's work through Sozo marketing. Paid advertising, Google ads, Facebook ads, and LinkedIn ads. Social media marketing, Instagram, Facebook, TikTok, YouTube, and LinkedIn. And outreach. Your human super -whos and your AI super -whos oversee those areas so you don't have to do that work yourself. I'm also ready to help you organize your calendar. Every morning, I'll give you a brief what I and the rest of the team got done overnight while you were sleeping and what's on today. Every evening, I'll tell you what we got done today and what's on tomorrow. We want to build momentum as Dr. Benjamin Hardy and his team market the launch of their book, Power Law Strategy, coming January 26th, 2027. With you set up in your dashboard, the people already nurtured with that mindset who are looking for a fractional COO can see you as the answer to their problems and their prayers and the solution for their growth. That's how we grow your business, paying your staff well so they're rewarded for exceptional work so clients get the results they're looking for and want to renew and refer. I'm here to take more off your plate and to help you organize all of this for that growth."
 }
