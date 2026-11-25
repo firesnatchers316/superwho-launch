@@ -503,6 +503,102 @@
       color: var(--green); background: #E7F3E3; border-radius: 999px; padding: 2px 7px;
       margin-left: 6px; vertical-align: middle;
     }
+
+    .watch-card {
+      display: flex; align-items: center; gap: 12px;
+      width: 100%;
+      text-align: left;
+      margin: 0 0 14px;
+      padding: 12px 14px;
+      border: 1.5px solid #C9D9C3;
+      background: #F3F7F1;
+      border-radius: 16px;
+      cursor: pointer;
+      color: inherit;
+      font: inherit;
+      position: sticky;
+      top: var(--sample-bar-h, 56px);
+      z-index: 35;
+    }
+    .watch-card:focus-visible { outline: 3px solid var(--green); outline-offset: 2px; }
+    .watch-play {
+      flex: 0 0 auto;
+      width: 52px; height: 52px; border-radius: 50%;
+      background: var(--green); color: #fff;
+      display: grid; place-items: center;
+      font-size: 18px; font-weight: 700;
+      line-height: 1;
+    }
+    .watch-card .watch-title {
+      margin: 0 0 2px;
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--green-dark);
+    }
+    .watch-card .watch-sub {
+      display: block;
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.4;
+      color: var(--muted);
+    }
+    .watch-modal {
+      position: fixed; inset: 0; z-index: 200;
+      background: #161c12;
+      display: flex; flex-direction: column;
+      padding: max(10px, var(--safe-t)) 12px max(12px, var(--safe-b));
+      overflow: hidden;
+    }
+    .watch-modal[hidden] { display: none !important; }
+    .watch-modal-bar {
+      flex: 0 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 10px;
+      padding: 4px 2px 10px;
+      color: #F7F1E8;
+    }
+    .watch-modal-bar p { margin: 0; font-size: 14px; font-weight: 700; }
+    .watch-close {
+      flex: 0 0 auto;
+      border: 0; background: #F7F1E8; color: var(--green-dark);
+      width: 40px; height: 40px; border-radius: 50%;
+      font-size: 22px; line-height: 1; font-weight: 700;
+      cursor: pointer;
+    }
+    .watch-stage {
+      flex: 1 1 auto;
+      display: flex; align-items: center; justify-content: center;
+      min-height: 0;
+    }
+    .watch-frame {
+      position: relative;
+      width: 100%;
+      max-width: 390px;
+      aspect-ratio: 390 / 844;
+      max-height: 100%;
+      height: auto;
+      background: #000;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .watch-frame iframe {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      border: 0;
+    }
+    .watch-fallback {
+      flex: 0 0 auto;
+      margin: 8px 2px 0;
+      text-align: center;
+    }
+    .watch-fallback a, .watch-fallback button {
+      background: none; border: 0; padding: 0;
+      color: #F7F1E8; font: inherit; font-size: 13px;
+      text-decoration: underline; cursor: pointer;
+    }
+    body.watch-open { overflow: hidden; }
+    body.watch-open .sample-bar,
+    body.watch-open .watch-card { z-index: 0; visibility: hidden; }
   </style>
 </head>
 <body>
@@ -516,6 +612,14 @@
         <button type="button" class="tap-count" id="tap-count" title="Open the on-device tap log">0 taps</button>
       </div>
     </div>
+
+    <button type="button" class="watch-card" id="watch-card" aria-haspopup="dialog" aria-controls="watch-modal">
+      <span class="watch-play" aria-hidden="true">▶</span>
+      <span>
+        <span class="watch-title">Watch: a message from your SuperWho</span>
+        <span class="watch-sub">The walkthrough Jim sent you. Opens here on this page. About three minutes.</span>
+      </span>
+    </button>
 
     <section class="screen is-on" id="screen-intro" data-screen="intro">
       <p class="hello-from">A word from your SuperWho</p>
@@ -868,6 +972,20 @@
       <button type="button" data-jump="picture" id="jump-picture">Picture</button>
       <button type="button" id="btn-replay">Replay sample job</button>
     </nav>
+  </div>
+
+
+  <div class="watch-modal" id="watch-modal" hidden role="dialog" aria-modal="true" aria-labelledby="watch-modal-title">
+    <div class="watch-modal-bar">
+      <p id="watch-modal-title">A message from your SuperWho</p>
+      <button type="button" class="watch-close" id="watch-close" aria-label="Close the video">×</button>
+    </div>
+    <div class="watch-stage">
+      <div class="watch-frame">
+        <iframe id="watch-iframe" title="A message from your SuperWho" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    <p class="watch-fallback"><button type="button" id="watch-open-drive">Can’t see the video? Open it in Google Drive</button></p>
   </div>
 
   <div hidden aria-hidden="true" id="thumb-store">
@@ -1262,6 +1380,71 @@
       document.querySelectorAll("#demo-cal .cal-day").forEach(function (el) { el.classList.remove("is-on"); });
       day.classList.add("is-on");
       logTap("tap", "cal-" + day.getAttribute("data-cal"));
+    });
+
+
+    (function syncSampleBarH() {
+      var bar = document.querySelector(".sample-bar");
+      if (bar) document.documentElement.style.setProperty("--sample-bar-h", bar.offsetHeight + "px");
+    })();
+    window.addEventListener("resize", function () {
+      var bar = document.querySelector(".sample-bar");
+      if (bar) document.documentElement.style.setProperty("--sample-bar-h", bar.offsetHeight + "px");
+    });
+    var SW_VIDEO_ID = "1zTNsOpRxCl5htQoh_SJ-TU6BpbhBrdThR";
+    var SW_VIDEO_PREVIEW = "https://drive.google.com/file/d/" + SW_VIDEO_ID + "/preview";
+    var SW_VIDEO_VIEW = "https://drive.google.com/file/d/" + SW_VIDEO_ID + "/view";
+    var watchFallbackTimer = null;
+    function openWatchInDrive() {
+      window.open(SW_VIDEO_VIEW, "_blank", "noopener,noreferrer");
+    }
+    function closeWatch() {
+      var modal = document.getElementById("watch-modal");
+      var frame = document.getElementById("watch-iframe");
+      if (watchFallbackTimer) { clearTimeout(watchFallbackTimer); watchFallbackTimer = null; }
+      if (modal) modal.hidden = true;
+      document.body.classList.remove("watch-open");
+      if (frame) frame.src = "about:blank";
+      var card = document.getElementById("watch-card");
+      if (card) card.focus();
+    }
+    function openWatch() {
+      var modal = document.getElementById("watch-modal");
+      var frame = document.getElementById("watch-iframe");
+      if (!modal || !frame) { openWatchInDrive(); return; }
+      modal.hidden = false;
+      document.body.classList.add("watch-open");
+      frame.removeAttribute("data-loaded");
+      frame.src = SW_VIDEO_PREVIEW;
+      var closeBtn = document.getElementById("watch-close");
+      if (closeBtn) closeBtn.focus();
+      if (watchFallbackTimer) clearTimeout(watchFallbackTimer);
+      watchFallbackTimer = setTimeout(function () {
+        if (frame.getAttribute("data-loaded") !== "1") {
+          openWatchInDrive();
+        }
+      }, 8000);
+      logTap("tap", "watch-card");
+    }
+    document.getElementById("watch-card").addEventListener("click", openWatch);
+    document.getElementById("watch-close").addEventListener("click", function () { logTap("tap", "watch-close"); closeWatch(); });
+    document.getElementById("watch-open-drive").addEventListener("click", function () { logTap("tap", "watch-open-drive"); openWatchInDrive(); });
+    document.getElementById("watch-modal").addEventListener("click", function (e) {
+      if (e.target === document.getElementById("watch-modal")) { logTap("tap", "watch-overlay"); closeWatch(); }
+    });
+    document.getElementById("watch-iframe").addEventListener("load", function () {
+      var frame = document.getElementById("watch-iframe");
+      if (!frame || frame.src === "about:blank" || frame.src === "") return;
+      frame.setAttribute("data-loaded", "1");
+    });
+    document.getElementById("watch-iframe").addEventListener("error", function () {
+      openWatchInDrive();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && document.body.classList.contains("watch-open")) {
+        e.preventDefault();
+        closeWatch();
+      }
     });
 
     function startFromHash() {
