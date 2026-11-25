@@ -1,0 +1,92 @@
+{
+  "updated": "Tue, Nov 24 · 4:22 PM ET",
+  "now": "Your first look is built",
+  "launch": {
+    "label": "Your first look opens",
+    "due": "2026-11-25T09:00:00-05:00",
+    "text": "Wednesday, November 25, 2026 · 9:00 AM ET"
+  },
+  "steps": [
+    {
+      "state": "done",
+      "by": "From you",
+      "when": "Fri, Nov 20 · 9:00 AM ET",
+      "title": "Your answers",
+      "text": "Simple, clean and easy to use. Booking that shows your real availability. Built for corporate clients. Your photo and video work up front. Your reviews in one place."
+    },
+    {
+      "state": "done",
+      "by": "From you",
+      "when": "Fri, Nov 20 · 8:54 AM ET",
+      "title": "Your gallery link",
+      "text": "Your SmugMug portraits gallery. No photo uploads yet, and we still need a photo of you."
+    },
+    {
+      "state": "done",
+      "by": "By us",
+      "when": "Thu, Nov 19",
+      "title": "Your brand",
+      "text": "We pulled the Agostini wordmark, the black-and-white look and the city photo from pjagostini.com. Nothing for you to send."
+    },
+    {
+      "state": "done",
+      "by": "By us",
+      "when": "Tue, Nov 24",
+      "title": "Your first look, built",
+      "text": "Built around corporate, medical and dental, and restaurant clients, with your gallery photos and booking up front. Spots waiting on you are clearly marked."
+    },
+    {
+      "state": "now",
+      "by": "By us",
+      "when": "Wed, Nov 25 · 9:00 AM ET",
+      "title": "Your first look",
+      "due": "2026-11-25T09:00:00-05:00",
+      "text": "Opens Wednesday at 9:00 AM ET. Tap around your draft and tell us what to change. Your site stays as it is. Nothing goes live until you say so."
+    },
+    {
+      "state": "later",
+      "by": "You decide",
+      "when": "No date yet",
+      "title": "Live, then sharper",
+      "text": "When you say go, it goes live. Real visits then show what people came for, and the page keeps improving."
+    }
+  ],
+  "needed": [
+    {
+      "who": "From you",
+      "title": "Your video work (a link)",
+      "due": "",
+      "jump": "q1"
+    },
+    {
+      "who": "From you",
+      "title": "Reviews that aren't on Google",
+      "due": "",
+      "jump": "q2"
+    },
+    {
+      "who": "From you",
+      "title": "Which calendar you book from",
+      "due": "",
+      "jump": "q3"
+    },
+    {
+      "who": "From you",
+      "title": "A photo of you, and more photos",
+      "due": "",
+      "asked": "Asked Fri, Nov 20",
+      "jump": "needs"
+    },
+    {
+      "who": "From you",
+      "title": "Your feedback on the first look",
+      "due": "",
+      "jump": "talk"
+    }
+  ],
+  "firstLook": {
+    "url": "first-look/",
+    "label": "See your first look",
+    "text": "Your Smart Page draft, built from your answers and your gallery. Tap around, then tell us what to change."
+  }
+}
