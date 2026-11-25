@@ -1989,6 +1989,7 @@
     .sw-else-status:empty { display: none; }
 
   
+
     .sw-illos {
       width: 100%;
       max-width: 340px;
@@ -1999,7 +2000,7 @@
       position: relative;
     }
     .sw-illos[data-active]:not([data-active=""]) {
-      height: 148px;
+      height: 164px;
       opacity: 1;
       margin: 2px 0 4px;
     }
@@ -2010,7 +2011,7 @@
       background: var(--card);
       border: 1px solid var(--line);
       border-radius: 12px;
-      padding: 10px 12px;
+      padding: 9px 11px 8px;
       overflow: hidden;
     }
     .sw-illo.is-on { display: block; }
@@ -2021,85 +2022,14 @@
       letter-spacing: 1px;
       text-transform: uppercase;
       color: #FBBF24;
-      margin: 0 0 8px;
-    }
-    .sw-illo-cal {
-      transform-origin: 50% 50%;
-    }
-    .sw-illo.is-run[data-illo="calendar"] .sw-illo-cal {
-      animation: swIlloSpinIn 0.7s cubic-bezier(.2,1.1,.3,1) both;
-    }
-    @keyframes swIlloSpinIn {
-      from { opacity: 0; transform: rotate(-18deg) scale(.86); }
-      to { opacity: 1; transform: rotate(0) scale(1); }
-    }
-    .sw-illo-cal-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--ink, #E8EEF7);
-      margin-bottom: 6px;
-    }
-    .sw-illo-cal-head span { font-family: var(--mono); font-size: 10px; color: var(--muted); font-weight: 600; }
-    .sw-illo-events { display: flex; flex-direction: column; gap: 4px; }
-    .sw-illo-event {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      background: #102033;
-      border-radius: 7px;
-      padding: 4px 8px;
-      font-size: 11px;
-      color: #D7E3F2;
-      opacity: 0;
-      transform: translateX(16px);
-    }
-    .sw-illo-event i {
-      width: 6px; height: 6px; border-radius: 50%; flex: 0 0 6px;
-      background: #22D3EE;
-    }
-    .sw-illo-event:nth-child(2) i { background: #22C55E; }
-    .sw-illo-event:nth-child(3) i { background: #FBBF24; }
-    .sw-illo.is-run[data-illo="calendar"] .sw-illo-event:nth-child(1) { animation: swIlloSlideIn .45s .35s ease-out both; }
-    .sw-illo.is-run[data-illo="calendar"] .sw-illo-event:nth-child(2) { animation: swIlloSlideIn .45s .7s ease-out both; }
-    .sw-illo.is-run[data-illo="calendar"] .sw-illo-event:nth-child(3) { animation: swIlloSlideIn .45s 1.05s ease-out both; }
-    @keyframes swIlloSlideIn {
-      from { opacity: 0; transform: translateX(18px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
-    .sw-illo-tasks { display: flex; flex-direction: column; gap: 6px; }
-    .sw-illo-task {
-      display: flex; align-items: center; gap: 8px;
-      font-size: 12px; color: #D7E3F2;
-    }
-    .sw-illo-box {
-      width: 16px; height: 16px; flex: 0 0 16px;
-      border: 1.5px solid #FBBF24; border-radius: 4px;
-      position: relative; background: #0B1A2E;
-    }
-    .sw-illo-box::after {
-      content: "";
-      position: absolute; left: 3px; top: 0px;
-      width: 7px; height: 11px;
-      border-right: 2px solid #FBBF24;
-      border-bottom: 2px solid #FBBF24;
-      transform: rotate(40deg) scale(0);
-      transform-origin: center;
-    }
-    .sw-illo.is-run[data-illo="tasks"] .sw-illo-task:nth-child(1) .sw-illo-box::after { animation: swIlloTick .35s .25s ease-out forwards; }
-    .sw-illo.is-run[data-illo="tasks"] .sw-illo-task:nth-child(2) .sw-illo-box::after { animation: swIlloTick .35s .9s ease-out forwards; }
-    .sw-illo.is-run[data-illo="tasks"] .sw-illo-task:nth-child(3) .sw-illo-box::after { animation: swIlloTick .35s 1.55s ease-out forwards; }
-    @keyframes swIlloTick {
-      from { transform: rotate(40deg) scale(0); }
-      to { transform: rotate(40deg) scale(1); }
+      margin: 0 0 7px;
     }
     .sw-illo-dash {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 6px;
+      gap: 5px;
     }
+    .sw-illo-dash .sw-illo-tile:nth-child(5) { grid-column: 1 / -1; }
     .sw-illo-tile {
       background: #102033;
       border-radius: 8px;
@@ -2127,41 +2057,214 @@
       border-radius: inherit;
       background: linear-gradient(90deg, #22D3EE, #FBBF24);
     }
-    .sw-illo.is-run[data-illo="dashboard"] .sw-illo-tile:nth-child(1) .sw-illo-bar > span { animation: swIlloFill 1.1s .15s ease-out forwards; --w: 78%; }
-    .sw-illo.is-run[data-illo="dashboard"] .sw-illo-tile:nth-child(2) .sw-illo-bar > span { animation: swIlloFill 1.1s .4s ease-out forwards; --w: 54%; }
-    .sw-illo.is-run[data-illo="dashboard"] .sw-illo-tile:nth-child(3) .sw-illo-bar > span { animation: swIlloFill 1.2s .65s ease-out forwards; --w: 86%; }
-    .sw-illo.is-run[data-illo="dashboard"] .sw-illo-tile:nth-child(4) .sw-illo-bar > span { animation: swIlloFill 1.2s .9s ease-out forwards; --w: 70%; }
-    .sw-illo[data-illo="dashboard"].is-results .sw-illo-tile:nth-child(1) .sw-illo-bar > span { --w: 92%; }
-    .sw-illo[data-illo="dashboard"].is-results .sw-illo-tile:nth-child(2) .sw-illo-bar > span { --w: 80%; }
-    .sw-illo[data-illo="dashboard"].is-results .sw-illo-tile:nth-child(3) .sw-illo-bar > span { --w: 96%; }
-    .sw-illo[data-illo="dashboard"].is-results .sw-illo-tile:nth-child(4) .sw-illo-bar > span { --w: 88%; }
+    .sw-illo.is-run[data-illo="dashboard"] .sw-illo-tile:nth-child(1) .sw-illo-bar > span { animation: swIlloFill 1s .12s ease-out forwards; --w: 74%; }
+    .sw-illo.is-run[data-illo="dashboard"] .sw-illo-tile:nth-child(2) .sw-illo-bar > span { animation: swIlloFill 1s .28s ease-out forwards; --w: 68%; }
+    .sw-illo.is-run[data-illo="dashboard"] .sw-illo-tile:nth-child(3) .sw-illo-bar > span { animation: swIlloFill 1s .44s ease-out forwards; --w: 80%; }
+    .sw-illo.is-run[data-illo="dashboard"] .sw-illo-tile:nth-child(4) .sw-illo-bar > span { animation: swIlloFill 1s .6s ease-out forwards; --w: 62%; }
+    .sw-illo.is-run[data-illo="dashboard"] .sw-illo-tile:nth-child(5) .sw-illo-bar > span { animation: swIlloFill 1s .76s ease-out forwards; --w: 70%; }
+    .sw-illo[data-illo="dashboard"].is-results .sw-illo-bar > span { --w: 90%; }
     @keyframes swIlloFill { from { width: 0; } to { width: var(--w); } }
-    .sw-illo-msgs { position: relative; height: 92px; }
+
+    .sw-illo-org { text-align: center; }
+    .sw-illo-node {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      color: #E8EEF7;
+      background: #102033;
+      border: 1px solid #1E3A54;
+      border-radius: 8px;
+      padding: 4px 9px;
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    .sw-illo-chris { font-size: 12px; }
+    .sw-illo-olivia {
+      border-color: #FBBF24;
+      color: #FBBF24;
+      margin: 5px 0 6px;
+    }
+    .sw-illo-stem {
+      width: 2px; height: 8px; margin: 2px auto 0;
+      background: #FBBF24;
+      opacity: 0;
+    }
+    .sw-illo-branches { display: flex; justify-content: center; gap: 10px; }
+    .sw-illo-ai { color: #22D3EE; border-color: #155E75; }
+    .sw-illo-hum { color: #86EFAC; border-color: #166534; }
+    .sw-illo.is-run[data-illo="org"] .sw-illo-chris { animation: swIlloPop .4s .05s ease-out both; }
+    .sw-illo.is-run[data-illo="org"] .sw-illo-stem { animation: swIlloPop .3s .25s ease-out both; }
+    .sw-illo.is-run[data-illo="org"] .sw-illo-olivia { animation: swIlloPop .4s .4s ease-out both; }
+    .sw-illo.is-run[data-illo="org"] .sw-illo-ai { animation: swIlloPop .4s .7s ease-out both; }
+    .sw-illo.is-run[data-illo="org"] .sw-illo-hum { animation: swIlloPop .4s .9s ease-out both; }
+    @keyframes swIlloPop {
+      from { opacity: 0; transform: translateY(8px) scale(.96); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    .sw-illo-over { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+    .sw-illo-over-col {
+      background: #102033;
+      border: 1px solid #1E3A54;
+      border-radius: 8px;
+      padding: 7px 8px;
+      min-width: 0;
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    .sw-illo-over-col.is-oli { border-color: #FBBF24; }
+    .sw-illo-over-col b {
+      display: block;
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+    .sw-illo-over-col.is-oli b { color: #FBBF24; }
+    .sw-illo-over-col span { display: block; font-size: 11px; color: #D7E3F2; line-height: 1.35; }
+    .sw-illo.is-run[data-illo="oversee"] .sw-illo-over-col:first-child { animation: swIlloPop .4s .1s ease-out both; }
+    .sw-illo.is-run[data-illo="oversee"] .sw-illo-over-col.is-oli { animation: swIlloPop .4s .45s ease-out both; }
+
+    .sw-illo-areas {
+      list-style: none; margin: 0; padding: 0;
+      display: flex; flex-direction: column; gap: 3px;
+    }
+    .sw-illo-areas li {
+      display: flex; align-items: baseline; gap: 7px;
+      font-size: 11px; color: #8BA0B8;
+      background: #0E1C2C;
+      border: 1px solid #1A3148;
+      border-radius: 7px;
+      padding: 3px 8px;
+      min-width: 0;
+    }
+    .sw-illo-areas li b { flex: 0 0 auto; font-size: 11px; color: #9FB4C9; }
+    .sw-illo-areas li em {
+      font-style: normal; font-size: 10px; color: #6E849C;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .sw-illo-area-on {
+      border-color: #FBBF24;
+      background: #18283A;
+      color: #E8EEF7;
+      box-shadow: 0 0 0 1px rgba(251,191,36,.2);
+    }
+    .sw-illo-area-on b { color: #FBBF24; }
+    .sw-illos[data-lit="1"] [data-area="1"],
+    .sw-illos[data-lit="2"] [data-area="1"],
+    .sw-illos[data-lit="2"] [data-area="2"],
+    .sw-illos[data-lit="3"] [data-area="1"],
+    .sw-illos[data-lit="3"] [data-area="2"],
+    .sw-illos[data-lit="3"] [data-area="3"],
+    .sw-illos[data-lit="4"] [data-area="1"],
+    .sw-illos[data-lit="4"] [data-area="2"],
+    .sw-illos[data-lit="4"] [data-area="3"],
+    .sw-illos[data-lit="4"] [data-area="4"],
+    .sw-illos[data-lit="5"] [data-area] { border-color: #FBBF24; background: #18283A; color: #E8EEF7; box-shadow: 0 0 0 1px rgba(251,191,36,.2); }
+    .sw-illos[data-lit="1"] [data-area="1"] b,
+    .sw-illos[data-lit="2"] [data-area="1"] b,
+    .sw-illos[data-lit="2"] [data-area="2"] b,
+    .sw-illos[data-lit="3"] [data-area="1"] b,
+    .sw-illos[data-lit="3"] [data-area="2"] b,
+    .sw-illos[data-lit="3"] [data-area="3"] b,
+    .sw-illos[data-lit="4"] [data-area="1"] b,
+    .sw-illos[data-lit="4"] [data-area="2"] b,
+    .sw-illos[data-lit="4"] [data-area="3"] b,
+    .sw-illos[data-lit="4"] [data-area="4"] b,
+    .sw-illos[data-lit="5"] [data-area] b { color: #FBBF24; }
+
+    .sw-illo-cal-head {
+      display: flex; justify-content: space-between; align-items: baseline;
+      font-size: 12px; font-weight: 700; color: #E8EEF7; margin-bottom: 6px;
+    }
+    .sw-illo-cal-head span { font-family: var(--mono); font-size: 10px; color: var(--muted); font-weight: 600; }
+    .sw-illo-events { display: flex; flex-direction: column; gap: 4px; }
+    .sw-illo-event {
+      display: flex; align-items: center; gap: 8px;
+      background: #102033; border-radius: 7px; padding: 4px 8px;
+      font-size: 11px; color: #D7E3F2; opacity: 0; transform: translateX(16px);
+    }
+    .sw-illo-event i { width: 6px; height: 6px; border-radius: 50%; flex: 0 0 6px; background: #22D3EE; }
+    .sw-illo-event:nth-child(2) i { background: #22C55E; }
+    .sw-illo-event:nth-child(3) i { background: #FBBF24; }
+    .sw-illo.is-run[data-illo="calendar"] .sw-illo-cal { animation: swIlloPop .5s ease-out both; }
+    .sw-illo.is-run[data-illo="calendar"] .sw-illo-event:nth-child(1) { animation: swIlloSlideIn .4s .3s ease-out both; }
+    .sw-illo.is-run[data-illo="calendar"] .sw-illo-event:nth-child(2) { animation: swIlloSlideIn .4s .6s ease-out both; }
+    .sw-illo.is-run[data-illo="calendar"] .sw-illo-event:nth-child(3) { animation: swIlloSlideIn .4s .9s ease-out both; }
+    @keyframes swIlloSlideIn {
+      from { opacity: 0; transform: translateX(18px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    .sw-illo-msgs { position: relative; height: 96px; }
     .sw-illo-msg {
       position: absolute; left: 0; right: 0;
       display: flex; align-items: center; gap: 8px;
       background: #102033; border-radius: 8px;
-      padding: 5px 8px; font-size: 11px; color: #D7E3F2;
-      opacity: 0;
+      padding: 5px 8px; font-size: 11px; color: #D7E3F2; opacity: 0;
     }
-    .sw-illo-msg em { font-style: normal; color: #FBBF24; font-weight: 700; font-size: 10px; min-width: 44px; font-family: var(--mono); }
-    .sw-illo.is-run[data-illo="inbox"] .sw-illo-msg:nth-child(1) { animation: swIlloMsgIn .45s .1s ease-out both, swIlloSort1 .6s 1.5s ease-in-out forwards; top: 0; }
-    .sw-illo.is-run[data-illo="inbox"] .sw-illo-msg:nth-child(2) { animation: swIlloMsgIn .45s .35s ease-out both, swIlloSort2 .6s 1.5s ease-in-out forwards; top: 26px; }
-    .sw-illo.is-run[data-illo="inbox"] .sw-illo-msg:nth-child(3) { animation: swIlloMsgIn .45s .6s ease-out both, swIlloSort3 .6s 1.5s ease-in-out forwards; top: 52px; }
+    .sw-illo-msg em { font-style: normal; color: #FBBF24; font-weight: 700; font-size: 10px; min-width: 58px; font-family: var(--mono); }
+    .sw-illo.is-run[data-illo="briefs"] .sw-illo-msg:nth-child(1) { animation: swIlloMsgIn .45s .1s ease-out both, swIlloSort1 .55s 1.5s ease-in-out forwards; top: 0; }
+    .sw-illo.is-run[data-illo="briefs"] .sw-illo-msg:nth-child(2) { animation: swIlloMsgIn .45s .35s ease-out both, swIlloSort2 .55s 1.5s ease-in-out forwards; top: 32px; }
+    .sw-illo.is-run[data-illo="briefs"] .sw-illo-msg:nth-child(3) { animation: swIlloMsgIn .45s .6s ease-out both, swIlloSort3 .55s 1.5s ease-in-out forwards; top: 64px; }
     @keyframes swIlloMsgIn { from { opacity: 0; transform: translateX(-14px); } to { opacity: 1; transform: translateX(0); } }
-    @keyframes swIlloSort1 { to { transform: translateY(26px); } }
-    @keyframes swIlloSort2 { to { transform: translateY(26px); } }
-    @keyframes swIlloSort3 { to { transform: translateY(-52px); } }
+    @keyframes swIlloSort1 { to { transform: translateY(32px); } }
+    @keyframes swIlloSort2 { to { transform: translateY(32px); } }
+    @keyframes swIlloSort3 { to { transform: translateY(-64px); } }
+
+    .sw-illo-loop { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+    .sw-illo-loop div {
+      background: #102033;
+      border: 1px solid #1A3148;
+      border-radius: 8px;
+      padding: 8px 8px 7px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #8BA0B8;
+      opacity: .7;
+    }
+    .sw-illo-loop div b {
+      display: block;
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: #6E849C;
+      margin-bottom: 2px;
+    }
+    .sw-illo-g-on { opacity: 1 !important; color: #E8EEF7; border-color: #FBBF24; box-shadow: 0 0 0 1px rgba(251,191,36,.18); }
+    .sw-illo-g-on b { color: #FBBF24; }
+    .sw-illos[data-step="1"] [data-g="1"],
+    .sw-illos[data-step="2"] [data-g="1"],
+    .sw-illos[data-step="2"] [data-g="2"],
+    .sw-illos[data-step="3"] [data-g="1"],
+    .sw-illos[data-step="3"] [data-g="2"],
+    .sw-illos[data-step="3"] [data-g="3"],
+    .sw-illos[data-step="4"] [data-g],
+    .sw-illos[data-step="5"] [data-g] {
+      opacity: 1; color: #E8EEF7; border-color: #FBBF24; box-shadow: 0 0 0 1px rgba(251,191,36,.18);
+    }
+    .sw-illos[data-step="1"] [data-g="1"] b,
+    .sw-illos[data-step="2"] [data-g="1"] b,
+    .sw-illos[data-step="2"] [data-g="2"] b,
+    .sw-illos[data-step="3"] [data-g="1"] b,
+    .sw-illos[data-step="3"] [data-g="2"] b,
+    .sw-illos[data-step="3"] [data-g="3"] b,
+    .sw-illos[data-step="4"] [data-g] b,
+    .sw-illos[data-step="5"] [data-g] b { color: #FBBF24; }
+
     @media (prefers-reduced-motion: reduce) {
-      .sw-illo, .sw-illo * {
-        animation: none !important;
-        transition: none !important;
-      }
-      .sw-illo-cal { opacity: 1; transform: none; }
-      .sw-illo-event { opacity: 1; transform: none; }
-      .sw-illo-box::after { transform: rotate(40deg) scale(1); }
+      .sw-illo, .sw-illo * { animation: none !important; transition: none !important; }
+      .sw-illo-node, .sw-illo-stem, .sw-illo-over-col, .sw-illo-event, .sw-illo-msg, .sw-illo-cal { opacity: 1; transform: none; }
       .sw-illo-bar > span { width: var(--w, 80%); }
-      .sw-illo-msg { opacity: 1; transform: none; }
+      .sw-illos[data-active="areas"] [data-area],
+      .sw-illos[data-active="growth"] [data-g] {
+        opacity: 1; color: #E8EEF7; border-color: #FBBF24; background: #18283A; box-shadow: 0 0 0 1px rgba(251,191,36,.18);
+      }
+      .sw-illos[data-active="areas"] [data-area] b,
+      .sw-illos[data-active="growth"] [data-g] b { color: #FBBF24; }
     }
 
     </style>
@@ -2330,15 +2433,53 @@
           <div class="sw-now-role" id="swNowRole">Social Media SuperWho</div>
         </div>
 
-        <div class="sw-illos" id="swOliviaIllos" data-active="" hidden aria-hidden="true">
+        <div class="sw-illos" id="swOliviaIllos" data-active="" data-lit="0" data-step="0" hidden aria-hidden="true">
           <div class="sw-illo" data-illo="dashboard">
-            <p class="sw-illo-kicker">Your dashboard</p>
+            <p class="sw-illo-kicker">Results across all your activities</p>
             <div class="sw-illo-dash">
-              <div class="sw-illo-tile"><b>Facebook</b><div class="sw-illo-bar"><span></span></div></div>
-              <div class="sw-illo-tile"><b>Instagram</b><div class="sw-illo-bar"><span></span></div></div>
-              <div class="sw-illo-tile"><b>Reach</b><div class="sw-illo-bar"><span></span></div></div>
-              <div class="sw-illo-tile"><b>All activities</b><div class="sw-illo-bar"><span></span></div></div>
+              <div class="sw-illo-tile"><b>Website</b><div class="sw-illo-bar"><span></span></div></div>
+              <div class="sw-illo-tile"><b>CRM & marketing</b><div class="sw-illo-bar"><span></span></div></div>
+              <div class="sw-illo-tile"><b>Paid ads</b><div class="sw-illo-bar"><span></span></div></div>
+              <div class="sw-illo-tile"><b>Social</b><div class="sw-illo-bar"><span></span></div></div>
+              <div class="sw-illo-tile"><b>Outreach</b><div class="sw-illo-bar"><span></span></div></div>
             </div>
+          </div>
+          <div class="sw-illo" data-illo="org">
+            <p class="sw-illo-kicker">Your SuperWho team</p>
+            <div class="sw-illo-org">
+              <div class="sw-illo-node sw-illo-chris">Chris</div>
+              <div class="sw-illo-stem"></div>
+              <div class="sw-illo-node sw-illo-olivia">Olivia · Chief of Staff</div>
+              <div class="sw-illo-stem"></div>
+              <div class="sw-illo-branches">
+                <div class="sw-illo-node sw-illo-ai">AI SuperWhos</div>
+                <div class="sw-illo-node sw-illo-hum">Human SuperWhos</div>
+              </div>
+            </div>
+          </div>
+          <div class="sw-illo" data-illo="oversee">
+            <p class="sw-illo-kicker">You oversee · I keep it moving</p>
+            <div class="sw-illo-over">
+              <div class="sw-illo-over-col">
+                <b>You</b>
+                <span>Oversee the work — you don't have to be in the weeds.</span>
+              </div>
+              <div class="sw-illo-over-col is-oli">
+                <b>Olivia</b>
+                <span>Keep things moving.</span>
+                <span>Make recommendations.</span>
+              </div>
+            </div>
+          </div>
+          <div class="sw-illo" data-illo="areas">
+            <p class="sw-illo-kicker">Five things you do as COO</p>
+            <ol class="sw-illo-areas">
+              <li data-area="1"><b>Website</b> <em>AEO & GEO</em></li>
+              <li data-area="2"><b>CRM & marketing</b> <em>including Sozo</em></li>
+              <li data-area="3"><b>Paid ads</b> <em>Google, Facebook, LinkedIn</em></li>
+              <li data-area="4"><b>Social</b> <em>IG, Facebook, TikTok, YouTube, LinkedIn</em></li>
+              <li data-area="5"><b>Outreach</b></li>
+            </ol>
           </div>
           <div class="sw-illo" data-illo="calendar">
             <p class="sw-illo-kicker">Your calendar</p>
@@ -2347,24 +2488,25 @@
               <div class="sw-illo-events">
                 <div class="sw-illo-event"><i></i>Morning brief</div>
                 <div class="sw-illo-event"><i></i>Client follow-up</div>
-                <div class="sw-illo-event"><i></i>Sozo review</div>
+                <div class="sw-illo-event"><i></i>Team check-in</div>
               </div>
             </div>
           </div>
-          <div class="sw-illo" data-illo="tasks">
-            <p class="sw-illo-kicker">Your objectives</p>
-            <div class="sw-illo-tasks">
-              <div class="sw-illo-task"><span class="sw-illo-box"></span>Build the portfolio</div>
-              <div class="sw-illo-task"><span class="sw-illo-box"></span>Add human SuperWhos</div>
-              <div class="sw-illo-task"><span class="sw-illo-box"></span>Coordinate the work</div>
-            </div>
-          </div>
-          <div class="sw-illo" data-illo="inbox">
+          <div class="sw-illo" data-illo="briefs">
             <p class="sw-illo-kicker">Morning and evening briefs</p>
             <div class="sw-illo-msgs">
               <div class="sw-illo-msg"><em>Today</em> What's on your plate</div>
               <div class="sw-illo-msg"><em>Tonight</em> What the team finished</div>
               <div class="sw-illo-msg"><em>Overnight</em> Done while you slept</div>
+            </div>
+          </div>
+          <div class="sw-illo" data-illo="growth">
+            <p class="sw-illo-kicker">How the business grows</p>
+            <div class="sw-illo-loop">
+              <div data-g="1"><b>1</b>Grow the business</div>
+              <div data-g="2"><b>2</b>Staff rewarded</div>
+              <div data-g="3"><b>3</b>Client results</div>
+              <div data-g="4"><b>4</b>Renew & refer</div>
             </div>
           </div>
         </div>
@@ -3452,7 +3594,7 @@
 
       // ===== Inline Team Video (chunked local asset), Cue Sync, and Agent FAQ Drawer =====
       (function teamExperience() {
-        var CUES = [{"i": 1, "speaker": "Maya", "voice": "en-US-AvaMultilingualNeural", "start": 0.0, "end": 11.672, "text": "Hey Chris. I'm Maya, your Social Media SuperWho. Jim and his team developed me for you, so more of this work can come off your plate, and you have more capacity for the work only you can do."}, {"i": 2, "speaker": "Maya", "voice": "en-US-AvaMultilingualNeural", "start": 12.022, "end": 25.856, "text": "I'm built and ready to create content and post on every platform, on whatever cadence you need: viral, nurture, educate, or conversion, and on your schedule. I also provide the reports and analytics, so you can see what's working."}, {"i": 3, "speaker": "Maya", "voice": "en-US-AvaMultilingualNeural", "start": 26.206, "end": 31.231, "text": "We've already made four reels from Dr. Gina's Houston footage, and they're ready for your review."}, {"i": 4, "speaker": "Maya", "voice": "en-US-AvaMultilingualNeural", "start": 31.581, "end": 36.59, "text": "And now I want you to meet my teammate Reed. He's going to be running your Skool groups. Reed?"}, {"i": 5, "speaker": "Reed", "voice": "en-US-BrianMultilingualNeural", "start": 37.04, "end": 54.236, "text": "Thanks, Maya. Hey Chris, I'm Reed, your Skool Management SuperWho. I'm ready to begin managing Dr. Gina's group, developing and managing Dr. Jill's group, managing your own group, and new client groups as they come in. Posts, member questions, and engagement, so you don't have to."}, {"i": 6, "speaker": "Reed", "voice": "en-US-BrianMultilingualNeural", "start": 54.586, "end": 62.507, "text": "The reply box and messages thread on your page are ready as well. You can type, talk, or send a photo, and the team answers right there."}, {"i": 7, "speaker": "Reed", "voice": "en-US-BrianMultilingualNeural", "start": 62.907, "end": 68.937, "text": "And the one who keeps all of us working together is Olivia, your Chief of Staff. Olivia, take it away."}, {"i": 8, "speaker": "Olivia", "voice": "en-US-JennyNeural", "start": 69.387, "end": 92.977, "text": "Thanks, Reed. Hey Chris, I'm Olivia, your Chief of Staff SuperWho. I'm waiting in your dashboard. Your SuperWho dashboard is getting its final updates. Facebook for The Prevent Clinic is already connected, and Instagram is next on our side. Once that's done, the dashboard will be live, so you can see results across all your activities in one place."}, {"i": 9, "speaker": "Olivia", "voice": "en-US-JennyNeural", "start": 93.377, "end": 106.853, "text": "I'm ready to help you manage your team, organize your calendar, and keep your main objectives as a fractional COO in one place: building your portfolio, adding human SuperWhos to your team, and coordinating the work across everything you do."}, {"i": 10, "speaker": "Olivia", "voice": "en-US-JennyNeural", "start": 107.203, "end": 124.065, "text": "That includes Renan's work through Sozo Marketing: the CRM, AEO and GEO, and Google Ads, plus social media, outreach for all the companies, and Facebook ads. I move things across platforms, and I organize your AI SuperWhos and your human SuperWhos."}, {"i": 11, "speaker": "Olivia", "voice": "en-US-JennyNeural", "start": 124.415, "end": 135.664, "text": "Every morning, I'll give you a brief: what I and the rest of the team got done overnight while you were sleeping, and what's on today. Every evening, I'll tell you what we got done today, and what's on tomorrow."}, {"i": 12, "speaker": "Olivia", "voice": "en-US-JennyNeural", "start": 136.064, "end": 157.508, "text": "We want to build momentum as Dr. Benjamin Hardy and his team market the launch of their book, Power Law Strategy, coming January 26, 2027. With you set up in your dashboard, the people already nurtured with that mindset, who are looking for a fractional COO, can see you as the answer to their problems and their prayers, and the solution for their growth."}, {"i": 13, "speaker": "Olivia", "voice": "en-US-JennyNeural", "start": 157.908, "end": 162.579, "text": "I'm here to take more off your plate, and to help you organize all of this for amazing growth."}];
+        var CUES = [{"i": 1, "speaker": "Maya", "voice": "en-US-AvaMultilingualNeural", "start": 0.0, "end": 11.672, "text": "Hey Chris. I'm Maya, your Social Media SuperWho. Jim and his team developed me for you, so more of this work can come off your plate, and you have more capacity for the work only you can do."}, {"i": 2, "speaker": "Maya", "voice": "en-US-AvaMultilingualNeural", "start": 12.022, "end": 25.856, "text": "I'm built and ready to create content and post on every platform, on whatever cadence you need: viral, nurture, educate, or conversion, and on your schedule. I also provide the reports and analytics, so you can see what's working."}, {"i": 3, "speaker": "Maya", "voice": "en-US-AvaMultilingualNeural", "start": 26.206, "end": 31.231, "text": "We've already made four reels from Dr. Gina's Houston footage, and they're ready for your review."}, {"i": 4, "speaker": "Maya", "voice": "en-US-AvaMultilingualNeural", "start": 31.581, "end": 36.59, "text": "And now I want you to meet my teammate Reed. He's going to be running your Skool groups. Reed?"}, {"i": 5, "speaker": "Reed", "voice": "en-US-BrianMultilingualNeural", "start": 37.04, "end": 54.236, "text": "Thanks, Maya. Hey Chris, I'm Reed, your Skool Management SuperWho. I'm ready to begin managing Dr. Gina's group, developing and managing Dr. Jill's group, managing your own group, and new client groups as they come in. Posts, member questions, and engagement, so you don't have to."}, {"i": 6, "speaker": "Reed", "voice": "en-US-BrianMultilingualNeural", "start": 54.586, "end": 62.507, "text": "The reply box and messages thread on your page are ready as well. You can type, talk, or send a photo, and the team answers right there."}, {"i": 7, "speaker": "Reed", "voice": "en-US-BrianMultilingualNeural", "start": 62.907, "end": 68.937, "text": "And the one who keeps all of us working together is Olivia, your Chief of Staff. Olivia, take it away."}, {"i": 8, "speaker": "Olivia", "voice": "en-US-JennyNeural", "start": 69.387, "end": 92.977, "text": "Thanks, Reed. Hey Chris, I'm Olivia, your Chief of Staff SuperWho. I'm waiting in your dashboard. Your SuperWho dashboard is getting its final updates. Facebook for The Prevent Clinic is already connected, and Instagram is next on our side. Once that's done, the dashboard will be live, so you can see results across all your activities in one place."}, {"i": 9, "speaker": "Olivia", "voice": "en-US-JennyNeural", "start": 93.377, "end": 108.591, "text": "A key part of my job is organizing your team of AI SuperWhos, so you don't have to be in the weeds, and organizing your human SuperWho team and helping them stay organized. You oversee the work. I keep things moving, and I make recommendations."}, {"i": 10, "speaker": "Olivia", "voice": "en-US-JennyNeural", "start": 108.941, "end": 143.072, "text": "That stretches across the five things you do inside these companies as a fractional COO. Website optimization: AEO and GEO. CRM management and marketing, including Renan's work through Sozo Marketing. Paid advertising: Google Ads, Facebook Ads, and LinkedIn Ads. Social media marketing: Instagram, Facebook, TikTok, YouTube, and LinkedIn. And outreach. Your human SuperWhos and your AI SuperWhos oversee those areas, so you don't have to do that work yourself."}, {"i": 11, "speaker": "Olivia", "voice": "en-US-JennyNeural", "start": 143.422, "end": 157.91, "text": "I'm also ready to help you organize your calendar. Every morning, I'll give you a brief: what I and the rest of the team got done overnight while you were sleeping, and what's on today. Every evening, I'll tell you what we got done today, and what's on tomorrow."}, {"i": 12, "speaker": "Olivia", "voice": "en-US-JennyNeural", "start": 158.31, "end": 179.754, "text": "We want to build momentum as Dr. Benjamin Hardy and his team market the launch of their book, Power Law Strategy, coming January 26, 2027. With you set up in your dashboard, the people already nurtured with that mindset, who are looking for a fractional COO, can see you as the answer to their problems and their prayers, and the solution for their growth."}, {"i": 13, "speaker": "Olivia", "voice": "en-US-JennyNeural", "start": 180.154, "end": 194.574, "text": "That's how we grow your business: paying your staff well, so they're rewarded for exceptional work, so clients get the results they're looking for, and want to renew and refer. I'm here to take more off your plate, and to help you organize all of this for that growth."}];
         var ROLES = {
           Maya: "Social Media SuperWho",
           Reed: "Skool Management SuperWho",
@@ -3780,13 +3922,36 @@
           var box = $("swOliviaIllos");
           if (!box) return;
           var id = null;
+          var lit = 0;
+          var step = 0;
           if (speaker === "Olivia") {
-            // Windows taken from Olivia word-cues (Jenny recut).
+            // Windows taken from Olivia word-cues (Jenny COO recut).
             if (t >= 76.06 && t < 93.30) id = "dashboard";
-            else if (t >= 95.40 && t < 99.55) id = "calendar";
-            else if (t >= 99.55 && t < 107.00) id = "tasks";
-            else if (t >= 124.40 && t < 135.70) id = "inbox";
-            else if (t >= 146.34 && t < 157.50) id = "dashboard";
+            else if (t >= 93.48 && t < 103.50) id = "org";
+            else if (t >= 103.50 && t < 108.90) id = "oversee";
+            else if (t >= 108.90 && t < 143.20) id = "areas";
+            else if (t >= 143.48 && t < 146.65) id = "calendar";
+            else if (t >= 146.65 && t < 157.95) id = "briefs";
+            else if (t >= 168.44 && t < 179.80) id = "dashboard";
+            else if (t >= 180.15 && t < 194.80) id = "growth";
+            if (id === "areas") {
+              if (t >= 114.44) lit = 1;
+              if (t >= 119.20) lit = 2;
+              if (t >= 124.46) lit = 3;
+              if (t >= 129.60) lit = 4;
+              if (t >= 135.52) lit = 5;
+            }
+            if (id === "growth") {
+              step = 1;
+              if (t >= 181.86) step = 2;
+              if (t >= 185.02) step = 3;
+              if (t >= 187.52) step = 4;
+              if (t >= 190.20) step = 5;
+            }
+            if (prefersLessMotion) {
+              if (id === "areas") lit = 5;
+              if (id === "growth") step = 5;
+            }
           }
           var prev = box.getAttribute("data-active") || "";
           if (prev !== (id || "")) {
@@ -3803,16 +3968,16 @@
               }
             });
           }
+          box.setAttribute("data-lit", String(lit));
+          box.setAttribute("data-step", String(step));
           if (id === "dashboard") {
             var dash = box.querySelector('.sw-illo[data-illo="dashboard"]');
-            if (dash) dash.classList.toggle("is-results", t >= 88.90 || t >= 146.34);
+            if (dash) dash.classList.toggle("is-results", t >= 88.90 || t >= 168.44);
           }
-          if (!id && !box.hidden) {
-            box.hidden = true;
-          }
+          if (!id && !box.hidden) box.hidden = true;
         }
 
-function syncToTime(t) {
+        function syncToTime(t) {
           var found = -1;
           for (var i = 0; i < CUES.length; i++) {
             if (t >= CUES[i].start - 0.1 && t <= CUES[i].end + 0.4) {
