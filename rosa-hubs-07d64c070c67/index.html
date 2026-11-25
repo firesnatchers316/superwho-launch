@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#08111E">
   <meta name="color-scheme" content="dark">
   <meta name="robots" content="noindex, nofollow, noarchive">
-  <meta name="description" content="SuperWho Opportunity Hubs demo for Rosa — two hubs in one place: tenant directory, announcements, maintenance tracking, room booking, and tenant requests.">
-  <title>Opportunity Hubs · Your SuperWho</title>
+  <meta name="description" content="Hope and Grace, SuperWho agents for Life Remodeled Opportunity Hubs — two hubs in one place: tenants, announcements, maintenance, room booking, and requests.">
+  <title>Opportunity Hubs · Hope &amp; Grace</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -327,6 +327,122 @@
     .sw-play-label { font-weight: 700; font-size: 14px; }
     .sw-play-sub { font-size: 12px; color: var(--muted); }
 
+    .sw-now-av[data-agent="hope"] {
+      background: radial-gradient(circle at 30% 25%, #6EE7B7, #10B981 58%, #065F46);
+      color: #03150F;
+      box-shadow: 0 0 0 2px rgba(52, 211, 153, 0.45), 0 0 26px rgba(52, 211, 153, 0.35);
+    }
+    .sw-now-av[data-agent="grace"] {
+      background: radial-gradient(circle at 30% 25%, #7DD3FC, #0EA5E9 58%, #0C4A6E);
+      color: #02131C;
+      box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.5), 0 0 26px rgba(56, 189, 248, 0.35);
+    }
+    .sw-now-av-wrap[data-agent="grace"] .sw-now-glow {
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.5), transparent 70%);
+    }
+    .sw-now-av-wrap[data-agent="grace"] .sw-now-ripple {
+      border-color: rgba(56, 189, 248, 0.55);
+    }
+    .sw-caption-who[data-speaker="grace"] { color: var(--sky); }
+    .sw-caption-box[data-speaker="grace"] .sw-caption-text .w.is-on {
+      text-shadow: 0 0 10px rgba(56, 189, 248, 0.8);
+    }
+    .sw-roster {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .sw-agent {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1px;
+      text-align: left;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 12px;
+      padding: 10px 12px;
+      color: var(--ink);
+      cursor: pointer;
+      transition: transform 0.2s ease, opacity 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .sw-agent:hover { border-color: var(--line-strong); }
+    .sw-agent:focus-visible { outline: 3px solid var(--emerald); outline-offset: 2px; }
+    .sw-agent[data-agent="grace"]:focus-visible { outline-color: var(--sky); }
+    .sw-agent-av {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+    .sw-agent[data-agent="hope"] .sw-agent-av {
+      background: radial-gradient(circle at 30% 25%, #6EE7B7, #10B981 60%, #065F46);
+      color: #03150F;
+    }
+    .sw-agent[data-agent="grace"] .sw-agent-av {
+      background: radial-gradient(circle at 30% 25%, #7DD3FC, #0EA5E9 60%, #0C4A6E);
+      color: #02131C;
+    }
+    .sw-agent-name { font-weight: 700; font-size: 14px; line-height: 1.2; }
+    .sw-agent-role { font-size: 11.5px; color: var(--muted); }
+    .sw-agent-pill {
+      margin-top: 6px;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 2px 7px;
+    }
+    .sw-roster.is-live .sw-agent { opacity: 0.58; transform: scale(0.98); }
+    .sw-roster.is-live .sw-agent.is-speaking {
+      opacity: 1;
+      transform: scale(1.03);
+      border-color: var(--emerald);
+      box-shadow: 0 0 0 1px rgba(52, 211, 153, 0.35);
+    }
+    .sw-roster.is-live .sw-agent.is-speaking[data-agent="grace"] {
+      border-color: var(--sky);
+      box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.4);
+    }
+    .sw-live-stage {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--line-strong);
+      background: #07101C;
+      min-height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 16px 14px;
+    }
+    .close-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .agent-blurb {
+      font-size: 13.5px;
+      color: var(--muted);
+      line-height: 1.55;
+      margin-bottom: 10px;
+    }
+    .agent-blurb strong { color: var(--ink); font-weight: 650; }
+    @media (prefers-reduced-motion: reduce) {
+      .sw-now-ripple, .sw-now-ripple.is-on { animation: none !important; opacity: 0 !important; }
+      .sw-roster.is-live .sw-agent,
+      .sw-roster.is-live .sw-agent.is-speaking { transition: none; }
+    }
+
+
     /* Hub switcher */
     .hub-bar {
       display: flex;
@@ -600,9 +716,9 @@
     <section class="hero">
       <div>
         <div class="brand-row">
-          <div class="brand-orb" aria-hidden="true">S</div>
+          <div class="brand-orb" aria-hidden="true">H</div>
           <div>
-            <div class="kicker">Your SuperWho · Life Remodeled</div>
+            <div class="kicker">Hope · Your SuperWho for Life Remodeled</div>
             <div class="brand-sub">Prepared for Rosa · Director of Opportunity Hubs</div>
           </div>
         </div>
@@ -619,34 +735,54 @@
 
       <div class="card meet-card" id="meetTeam">
         <div class="meet-head">
-          <span class="kicker">Meet your SuperWho</span>
-          <span class="pill emerald">0:58 walkthrough</span>
+          <span class="kicker">Meet your SuperWho team</span>
+          <span class="pill emerald">Two live agents</span>
         </div>
-        <div class="meet-title">First-person intro for Rosa</div>
+        <div class="meet-title">Hope and Grace</div>
         <p class="meet-quote">
-          “Hi Rosa — I’m your SuperWho, built for Life Remodeled. Jim, your dad, and his team developed me to bring both Opportunity Hubs into one place.”
+          “Hi Rosa — I’m Hope, your SuperWho for Life Remodeled. Jim, your dad, and his team developed me — and my teammate Grace is the Executive Assistant SuperWho for your director.”
         </p>
-        <div class="sw-video-stage" id="swVideoStage">
-          <video id="rosaIntroVideo" playsinline webkit-playsinline preload="metadata" disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback" x-webkit-airplay="deny"></video>
+        <p class="agent-blurb">
+          <strong>Hope</strong> keeps both Opportunity Hubs in one place: tenant directory and announcements, maintenance from submitted to done, the shared calendar and room booking, and the request form. This demo is free to use for now.
+        </p>
+        <p class="agent-blurb">
+          <strong>Grace</strong> is the director’s Executive Assistant SuperWho — calendar and scheduling, flights, texts, email drafts and inbox, reports, monitoring and analytics, Google Drive, social media, voicemail, market research for the next location, outreach, and client relations. Everything sits in one executive dashboard. The agents talk to each other across the platform, work keeps moving around the clock, and you’d get a short report at the start and end of each day. It would cost a fraction of hiring an EA. Jim’s banking and business experience is built into the design, and we get smarter every day.
+        </p>
+        <div class="sw-roster" id="swRoster" role="group" aria-label="SuperWho agents">
+          <button type="button" class="sw-agent" id="btnHopePlay" data-agent="hope" aria-pressed="false">
+            <span class="sw-agent-av" aria-hidden="true">H</span>
+            <span class="sw-agent-name">Hope</span>
+            <span class="sw-agent-role">Opportunity Hubs SuperWho</span>
+            <span class="sw-agent-pill">0:54</span>
+          </button>
+          <button type="button" class="sw-agent" id="btnGracePlay" data-agent="grace" aria-pressed="false">
+            <span class="sw-agent-av" aria-hidden="true">G</span>
+            <span class="sw-agent-name">Grace</span>
+            <span class="sw-agent-role">Executive Assistant SuperWho</span>
+            <span class="sw-agent-pill">1:01</span>
+          </button>
+        </div>
+        <div class="sw-live-stage" id="swLiveStage">
+          <audio id="swAudio" preload="metadata" playsinline></audio>
           <div class="sw-now-stage">
-            <div class="sw-now-av-wrap" id="swNowWrap">
+            <div class="sw-now-av-wrap" id="swNowWrap" data-agent="hope">
               <div class="sw-now-glow" id="swNowGlow" aria-hidden="true"></div>
               <span class="sw-now-ripple" data-r="0" aria-hidden="true"></span>
               <span class="sw-now-ripple" data-r="1" aria-hidden="true"></span>
               <span class="sw-now-ripple" data-r="2" aria-hidden="true"></span>
-              <div class="sw-now-av" id="swNowAv" aria-hidden="true">S</div>
+              <div class="sw-now-av" id="swNowAv" data-agent="hope" aria-hidden="true">H</div>
             </div>
           </div>
-          <div class="sw-caption-box" aria-live="polite">
-            <div class="sw-caption-who" id="swCaptionWho">Your SuperWho · Opportunity Hubs</div>
-            <div class="sw-caption-text" id="swCaptionText">Tap play to hear how both hubs come together in one workspace.</div>
+          <div class="sw-caption-box" id="swCaption" data-speaker="hope" aria-live="polite">
+            <div class="sw-caption-who" id="swCaptionWho" data-speaker="hope">Hope · Your SuperWho for Life Remodeled</div>
+            <div class="sw-caption-text" id="swCaptionText">Tap Hope or Grace to hear them introduce each other. About a minute each — no need to play to use the demo.</div>
           </div>
           <button type="button" class="sw-play-overlay" id="swPlayOverlay">
             <span class="sw-play-circle" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
             </span>
-            <span class="sw-play-label" id="swPlayLabel">Tap to hear your SuperWho</span>
-            <span class="sw-play-sub">About 1 minute · no need to play to use the demo</span>
+            <span class="sw-play-label" id="swPlayLabel">Tap a teammate to listen</span>
+            <span class="sw-play-sub">Hope 0:54 · Grace 1:01 · with captions</span>
           </button>
         </div>
       </div>
@@ -811,6 +947,8 @@
                 <option value="Room Booking">Room Booking</option>
                 <option value="Tenant Message">Tenant Message</option>
                 <option value="Feedback for Jim's team">Feedback for Jim's team</option>
+                <option value="Anything else">Anything else</option>
+                <option value="EA SuperWho interest">EA SuperWho interest</option>
               </select>
             </div>
             <div class="field">
@@ -834,8 +972,22 @@
       </section>
     </main>
 
+    <section class="card" id="secClose" style="margin: 0 0 20px;">
+      <div class="sec-head">
+        <h2>If you’d like it</h2>
+        <span class="pill sky">Hope + Grace, together</span>
+      </div>
+      <p class="sec-sub">
+        We’ll build an executive dashboard that puts every responsibility in one place for Rosa and her director. Agents added for those functions talk to each other across the platform, so you can manage everything from one place. Hope doesn’t sleep, so the work keeps moving around the clock toward the main goals while you’re busy with other things. You’d get a short report at the start and end of each day. An EA SuperWho would cost a fraction of hiring an assistant — and we get smarter every day.
+      </p>
+      <div class="close-actions">
+        <button type="button" class="btn" id="btnAnythingElse">What else would take things off your plate?</button>
+        <button type="button" class="btn secondary" id="btnEaInterest">Interested in an EA SuperWho for the director</button>
+      </div>
+    </section>
+
     <footer>
-      Opportunity Hubs demo · Developed for Rosa by your SuperWho and Jim’s team · Sample data only.
+      Opportunity Hubs demo · Developed for Rosa by Hope and Grace, with Jim’s team · Sample data only.
     </footer>
   </div>
 
@@ -844,10 +996,17 @@
   <script>
     window.SW_TRACK = { page: "rosa", slug: "rosa-hubs-07d64c070c67" };
   </script>
-  <script src="/assets/track.js"></script>
+  <script src="/assets/track.js?v=swtrack1"></script>
   <script>
   (function () {
     "use strict";
+
+    function track(event) {
+      if (typeof window.swTrack === "function") {
+        try { return window.swTrack(event); } catch (err) { return null; }
+      }
+      return null;
+    }
 
     var state = {
       hub: "all",
@@ -1068,6 +1227,7 @@
         btn.classList.add("is-active");
         btn.setAttribute("aria-selected", "true");
         state.hub = btn.getAttribute("data-hub");
+        track(state.hub === "hub1" ? "tap_hub_1" : (state.hub === "hub2" ? "tap_hub_2" : "tap_hub_all"));
         var note = document.getElementById("hubNote");
         if (state.hub === "all") note.textContent = "Showing combined view across Hub 1 and Hub 2";
         else if (state.hub === "hub1") note.textContent = "Filtered to Hub 1 · Original Opportunity Hub";
@@ -1091,6 +1251,7 @@
       if (!btn) return;
       document.getElementById("reqFrom").value = btn.getAttribute("data-from") || "Example tenant A";
       document.getElementById("reqHub").value = btn.getAttribute("data-hub") || "Hub 1 (Original)";
+      track("tap_tenant");
       document.getElementById("request-form").scrollIntoView({ behavior: "smooth", block: "start" });
       setTimeout(function () { document.getElementById("reqText").focus(); }, 300);
     });
@@ -1112,6 +1273,7 @@
         ack: true
       });
       document.getElementById("annText").value = "";
+      track("tap_announcement");
       renderStats();
       renderAnnouncements();
     });
@@ -1136,6 +1298,7 @@
           m.updated = "Just now";
         }
       });
+      track("tap_maintenance");
       renderStats();
       renderMaintenance();
     });
@@ -1159,6 +1322,7 @@
       document.getElementById("bookTitle").value = "";
       msg.style.color = "#86EFAC";
       msg.textContent = "Booked " + room + " (" + slot + ") for " + org + ".";
+      track("tap_booking");
       renderStats();
       renderEvents();
     });
@@ -1167,14 +1331,18 @@
     var jumpBtn = document.getElementById("jumpReqBtn");
     function syncJumpBtn() {
       var formEl = document.getElementById("request-form");
+      var meetEl = document.getElementById("meetTeam");
       var r = formEl ? formEl.getBoundingClientRect() : null;
       var formVisible = r && r.top < window.innerHeight - 80 && r.bottom > 80;
+      var meetR = meetEl ? meetEl.getBoundingClientRect() : null;
+      var meetBlocking = meetR && meetR.bottom > 100 && meetR.top < window.innerHeight * 0.55;
       var nearTop = window.scrollY < 220;
-      jumpBtn.classList.toggle("is-hidden", !!(nearTop || formVisible));
+      jumpBtn.classList.toggle("is-hidden", !!(nearTop || formVisible || meetBlocking));
     }
     window.addEventListener("scroll", syncJumpBtn, { passive: true });
     syncJumpBtn();
     jumpBtn.addEventListener("click", function () {
+      track("tap_request");
       document.getElementById("request-form").scrollIntoView({ behavior: "smooth", block: "start" });
       setTimeout(function () { document.getElementById("reqText").focus(); }, 300);
     });
@@ -1219,6 +1387,7 @@
       reqStatus.className = "status-msg";
 
       var payloadText = "[" + hub + " · " + kind + "] " + details;
+      track("tap_request");
       window.swTalk({
         from: from + " (Opportunity Hubs Demo)",
         text: payloadText
@@ -1251,170 +1420,268 @@
       });
     });
 
+    // Closing controls: anything else + EA interest (prefill form, no sales lead form)
+    function prefillClose(type, details, eventName) {
+      document.getElementById("reqType").value = type;
+      document.getElementById("reqFrom").value = "Rosa";
+      document.getElementById("reqText").value = details;
+      track(eventName);
+      document.getElementById("request-form").scrollIntoView({ behavior: "smooth", block: "start" });
+      setTimeout(function () { document.getElementById("reqText").focus(); }, 300);
+    }
+    document.getElementById("btnAnythingElse").addEventListener("click", function () {
+      prefillClose(
+        "Anything else",
+        "What else would take things off my plate: ",
+        "tap_anything_else"
+      );
+    });
+    document.getElementById("btnEaInterest").addEventListener("click", function () {
+      prefillClose(
+        "EA SuperWho interest",
+        "Interested in an EA SuperWho for the Executive Director — calendar, inbox, travel, reports, and the shared dashboard.",
+        "tap_ea_interest"
+      );
+    });
+
     renderAll();
 
     // Voice walkthrough player (audio-reactive orb + live word cues)
     (function initVoicePlayer() {
-      var video = document.getElementById("rosaIntroVideo");
+      var audio = document.getElementById("swAudio");
       var overlay = document.getElementById("swPlayOverlay");
-      var playLabel = document.getElementById("swPlayLabel");
       var capText = document.getElementById("swCaptionText");
+      var capWho = document.getElementById("swCaptionWho");
+      var capBox = document.getElementById("swCaption");
       var nowAv = document.getElementById("swNowAv");
+      var nowWrap = document.getElementById("swNowWrap");
       var nowGlow = document.getElementById("swNowGlow");
+      var roster = document.getElementById("swRoster");
       var ripples = document.querySelectorAll("#swNowWrap .sw-now-ripple");
-      if (!video || !overlay) return;
+      if (!audio || !overlay) return;
 
-      var CUES = [];
-      var BY_CUE = {};
-      var ENV = null;
-      var videoBlobUrl = null;
-      var videoPromise = null;
-      var lastCueIdx = -1;
+      var AGENTS = {
+        hope: {
+          src: "hope.mp3",
+          chunks: ["hope-1.b64", "hope-2.b64"],
+          letter: "H",
+          who: "Hope · Your SuperWho for Life Remodeled",
+          idle: "Tap Hope or Grace to hear them introduce each other. About a minute each — no need to play to use the demo."
+        },
+        grace: {
+          src: "grace.mp3",
+          chunks: ["grace-1.b64", "grace-2.b64"],
+          letter: "G",
+          who: "Grace · Executive Assistant SuperWho",
+          idle: "Tap Grace to hear what she can do for the Executive Director."
+        }
+      };
+      var TEAM = null;
+      var ENVS = null;
+      var blobCache = {};
+      var current = null;
+      var pendingGrace = false;
+      var completed = { hope: false, grace: false };
       var rafId = 0;
       var smoothLevel = 0.14;
       var rippleIdx = 0;
       var lastRipple = 0;
 
-      fetch("audio-envelope.json", { cache: "force-cache" }).then(function (r) {
+      fetch("team-cues.json", { cache: "force-cache" }).then(function (r) {
         return r.ok ? r.json() : null;
-      }).then(function (d) { if (d) ENV = d; }).catch(function () {});
-
-      fetch("word-cues.json", { cache: "force-cache" }).then(function (r) {
+      }).then(function (d) { if (d) TEAM = d; }).catch(function () {});
+      fetch("team-envelopes.json", { cache: "force-cache" }).then(function (r) {
         return r.ok ? r.json() : null;
-      }).then(function (d) {
-        if (!d) return;
-        if (d.cues) CUES = d.cues;
-        if (d.byCue) BY_CUE = d.byCue;
-      }).catch(function () {});
+      }).then(function (d) { if (d) ENVS = d; }).catch(function () {});
 
-      function b64ToBytes(b64) {
-        var bin = atob(b64);
-        var arr = new Uint8Array(bin.length);
-        for (var i = 0; i < bin.length; i++) arr[i] = bin.charCodeAt(i);
-        return arr;
+      function envLevel(aid, t) {
+        var env = ENVS && ENVS[aid];
+        if (!env || !env.samples || !env.samples.length) return 0.2;
+        var idx = Math.floor((t || 0) * 1000 / (env.hopMs || 20));
+        if (idx < 0) idx = 0;
+        if (idx >= env.samples.length) idx = env.samples.length - 1;
+        return env.samples[idx] / 255;
       }
 
-      function ensureVideoLoaded() {
-        if (videoBlobUrl) return Promise.resolve(videoBlobUrl);
-        if (videoPromise) return videoPromise;
-        var chunks = ["v1.b64", "v2.b64", "v3.b64"];
-        videoPromise = Promise.all(chunks.map(function (c) {
-          return fetch(c, { cache: "force-cache" }).then(function (r) {
-            if (!r.ok) throw new Error("chunk " + c);
-            return r.text();
+      function setSpeaker(aid) {
+        var meta = AGENTS[aid];
+        nowAv.textContent = meta.letter;
+        nowAv.setAttribute("data-agent", aid);
+        nowWrap.setAttribute("data-agent", aid);
+        capWho.textContent = meta.who;
+        capWho.setAttribute("data-speaker", aid);
+        capBox.setAttribute("data-speaker", aid);
+        if (roster) {
+          roster.classList.add("is-live");
+          roster.querySelectorAll(".sw-agent").forEach(function (btn) {
+            var on = btn.getAttribute("data-agent") === aid;
+            btn.classList.toggle("is-speaking", on);
+            btn.setAttribute("aria-pressed", on ? "true" : "false");
           });
-        })).then(function (parts) {
-          var bytes = b64ToBytes(parts.join(""));
-          var blob = new Blob([bytes], { type: "video/mp4" });
-          videoBlobUrl = URL.createObjectURL(blob);
-          video.src = videoBlobUrl;
-          video.load();
-          return videoBlobUrl;
-        }).catch(function () {
-          videoPromise = null;
-          return null;
-        });
-        return videoPromise;
-      }
-
-      function currentLevel() {
-        if (ENV && ENV.samples && ENV.samples.length) {
-          var idx = Math.floor((video.currentTime || 0) * 1000 / (ENV.hopMs || 20));
-          if (idx >= 0 && idx < ENV.samples.length) return ENV.samples[idx] / 255;
-        }
-        return 0.25;
-      }
-
-      function applyGlow(lvl) {
-        if (nowAv) nowAv.style.setProperty("--sw-breathe", (1 + lvl * 0.09).toFixed(4));
-        if (nowGlow) {
-          nowGlow.style.setProperty("--sw-glow-scale", (1 + lvl * 0.35).toFixed(3));
-          nowGlow.style.setProperty("--sw-glow-op", (0.32 + lvl * 0.55).toFixed(3));
-        }
-        var now = performance.now();
-        if (lvl > 0.52 && now - lastRipple > 420 && ripples.length) {
-          var r = ripples[rippleIdx % ripples.length];
-          rippleIdx++;
-          lastRipple = now;
-          r.classList.remove("is-on");
-          void r.offsetWidth;
-          r.classList.add("is-on");
         }
       }
 
-      function renderCueWords(c) {
-        if (!capText) return;
-        var ws = BY_CUE[String(c.i)] || [];
-        if (!ws.length) { capText.textContent = c.text || ""; return; }
-        capText.innerHTML = ws.map(function (w, idx) {
-          return '<span class="w" data-wi="' + idx + '">' + esc(w.word) + '</span>';
-        }).join(" ");
-      }
-
-      function syncToTime(t) {
-        var found = -1;
-        for (var i = 0; i < CUES.length; i++) {
-          if (t >= CUES[i].start - 0.1 && t <= CUES[i].end + 0.4) { found = i; break; }
-        }
-        if (found !== -1 && found !== lastCueIdx) {
-          lastCueIdx = found;
-          renderCueWords(CUES[found]);
-        }
-        if (found !== -1 && capText) {
-          var ws = BY_CUE[String(CUES[found].i)] || [];
-          var spans = capText.querySelectorAll(".w");
-          for (var j = 0; j < spans.length; j++) {
-            spans[j].classList.remove("is-on", "is-past");
-            var w = ws[j];
-            if (!w) continue;
-            if (t >= w.end - 0.02) spans[j].classList.add("is-past");
-            else if (t >= w.start - 0.05) spans[j].classList.add("is-on");
+      function renderCaption(aid, t) {
+        var pack = TEAM && TEAM[aid];
+        var words = pack && pack.words;
+        if (!words || !words.length) {
+          var cues = pack && pack.cues;
+          var line = "";
+          if (cues) {
+            for (var i = 0; i < cues.length; i++) {
+              if (t >= cues[i].start - 0.05 && t <= cues[i].end + 0.15) {
+                line = cues[i].text;
+                break;
+              }
+            }
           }
+          capText.textContent = line || AGENTS[aid].idle;
+          return;
         }
+        var html = [];
+        var windowed = [];
+        var start = 0;
+        for (var w = 0; w < words.length; w++) {
+          if (words[w].end < t - 4.2) start = w + 1;
+        }
+        for (var j = start; j < words.length && words[j].start < t + 3.2; j++) {
+          windowed.push(words[j]);
+        }
+        if (!windowed.length) {
+          capText.textContent = AGENTS[aid].idle;
+          return;
+        }
+        windowed.forEach(function (w) {
+          var cls = "w";
+          if (t >= w.end) cls += " is-past";
+          else if (t >= w.start - 0.04 && t <= w.end + 0.08) cls += " is-on";
+          html.push('<span class="' + cls + '">' + esc(w.word) + "</span>");
+        });
+        capText.innerHTML = html.join(" ");
       }
 
       function voiceFrame() {
-        if (video.paused) { rafId = 0; return; }
-        var lvl = currentLevel();
-        smoothLevel = smoothLevel * 0.72 + lvl * 0.28;
-        applyGlow(smoothLevel);
-        syncToTime(video.currentTime || 0);
+        if (!current || audio.paused) { rafId = 0; return; }
+        var t = audio.currentTime || 0;
+        var level = envLevel(current, t);
+        smoothLevel = smoothLevel + (level - smoothLevel) * 0.28;
+        nowAv.style.setProperty("--sw-breathe", (1 + smoothLevel * 0.08).toFixed(3));
+        nowGlow.style.setProperty("--sw-glow-op", (0.35 + smoothLevel * 0.55).toFixed(3));
+        nowGlow.style.setProperty("--sw-glow-scale", (1 + smoothLevel * 0.22).toFixed(3));
+        if (smoothLevel > 0.42 && t - lastRipple > 0.55 && ripples.length) {
+          var r = ripples[rippleIdx % ripples.length];
+          r.classList.remove("is-on");
+          void r.offsetWidth;
+          r.classList.add("is-on");
+          rippleIdx += 1;
+          lastRipple = t;
+        }
+        renderCaption(current, t);
         rafId = requestAnimationFrame(voiceFrame);
       }
 
-      overlay.addEventListener("click", function (ev) {
-        ev.preventDefault();
-        overlay.hidden = true;
-        if (!videoBlobUrl && capText) capText.textContent = "Loading walkthrough…";
-        ensureVideoLoaded().then(function (url) {
-          if (!url) {
-            overlay.hidden = false;
-            if (capText) capText.textContent = "Couldn't load audio. Tap to try again.";
-            return;
-          }
-          if (video.ended) video.currentTime = 0;
-          video.muted = false;
-          var p = video.play();
-          if (p && p.then) {
-            p.then(function () {
-              if (rafId) cancelAnimationFrame(rafId);
-              rafId = requestAnimationFrame(voiceFrame);
-            }).catch(function () {
-              overlay.hidden = false;
+      function stopCurrent() {
+        pendingGrace = false;
+        if (rafId) { cancelAnimationFrame(rafId); rafId = 0; }
+        try { audio.pause(); } catch (e) {}
+      }
+
+      function ensureAudio(aid) {
+        if (blobCache[aid]) return Promise.resolve(blobCache[aid]);
+        var meta = AGENTS[aid];
+        var files = (meta && meta.chunks) || [];
+        if (files.length) {
+          return Promise.all(files.map(function (f) {
+            return fetch(f, { cache: "force-cache" }).then(function (r) {
+              if (!r.ok) throw new Error("missing " + f);
+              return r.text();
             });
+          })).then(function (parts) {
+            var b64 = parts.join("").replace(/\s+/g, "");
+            var bin = atob(b64);
+            var bytes = new Uint8Array(bin.length);
+            for (var i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+            blobCache[aid] = URL.createObjectURL(new Blob([bytes], { type: "audio/mpeg" }));
+            return blobCache[aid];
+          });
+        }
+        return Promise.resolve(meta.src);
+      }
+
+      function playAgent(aid, fromTap) {
+        var meta = AGENTS[aid];
+        if (!meta) return;
+        pendingGrace = false;
+        if (fromTap) track("tap_play_" + aid);
+        current = aid;
+        setSpeaker(aid);
+        overlay.hidden = true;
+        capText.textContent = "Loading " + (aid === "hope" ? "Hope" : "Grace") + "…";
+        ensureAudio(aid).then(function (url) {
+          if (current !== aid) return;
+          if (audio.getAttribute("data-src") !== url) {
+            audio.src = url;
+            audio.setAttribute("data-src", url);
+            audio.load();
           }
+          var start = function () {
+            try { audio.currentTime = 0; } catch (e) {}
+            audio.muted = false;
+            var p = audio.play();
+            track("play_" + aid);
+            if (p && p.catch) p.catch(function () { overlay.hidden = false; });
+            if (rafId) cancelAnimationFrame(rafId);
+            rafId = requestAnimationFrame(voiceFrame);
+          };
+          if (audio.readyState >= 2) start();
+          else audio.addEventListener("canplay", start, { once: true });
+        }).catch(function () {
+          capText.textContent = "Audio could not load. You can still use the demo below.";
+          overlay.hidden = false;
         });
+      }
+
+      function onEnded() {
+        if (!current) return;
+        var finished = current;
+        track("complete_" + finished);
+        completed[finished] = true;
+        if (rafId) { cancelAnimationFrame(rafId); rafId = 0; }
+        if (roster) {
+          roster.querySelectorAll(".sw-agent").forEach(function (btn) {
+            btn.classList.remove("is-speaking");
+            btn.setAttribute("aria-pressed", "false");
+          });
+        }
+        if (finished === "hope" && !completed.grace) {
+          pendingGrace = true;
+          capText.textContent = "Grace is up next…";
+          setTimeout(function () {
+            if (pendingGrace) playAgent("grace", false);
+          }, 800);
+          return;
+        }
+        current = null;
+        overlay.hidden = false;
+        capText.textContent = AGENTS.hope.idle;
+      }
+
+      audio.addEventListener("ended", onEnded);
+      audio.addEventListener("pause", function () {
+        if (!audio.ended && rafId) { cancelAnimationFrame(rafId); rafId = 0; }
+      });
+      audio.addEventListener("play", function () {
+        if (!rafId) rafId = requestAnimationFrame(voiceFrame);
       });
 
-      video.addEventListener("ended", function () {
-        if (rafId) { cancelAnimationFrame(rafId); rafId = 0; }
-        applyGlow(0.14);
-        overlay.hidden = false;
-        if (playLabel) playLabel.textContent = "Play walkthrough again";
-        lastCueIdx = -1;
+      document.getElementById("btnHopePlay").addEventListener("click", function () {
+        playAgent("hope", true);
       });
-      video.addEventListener("pause", function () {
-        if (!video.ended && rafId) { cancelAnimationFrame(rafId); rafId = 0; }
+      document.getElementById("btnGracePlay").addEventListener("click", function () {
+        playAgent("grace", true);
+      });
+      overlay.addEventListener("click", function () {
+        playAgent(current || "hope", true);
       });
     })();
   })();

@@ -132,6 +132,38 @@
    * already used for page-open beacons. No additional URL or key.
    * Returns a promise of { ok, id, test, status } when readable.
    */
+  window.swTrack = function (event) {
+    if (!URL || !PAGE) return Promise.resolve({ ok: false, skipped: true });
+    var name = String(event || "").toLowerCase().trim();
+    if (!name || name === "open") return Promise.resolve({ ok: false, skipped: true });
+    var test = isTest();
+    var body = JSON.stringify({
+      action: "track",
+      page: PAGE,
+      slug: slug(),
+      event: name,
+      time: new Date().toISOString(),
+      device: deviceId(),
+      ua: uaFamily(),
+      deviceType: deviceType(),
+      referrer: referrerHost(),
+      test: test
+    });
+    return fetch(URL, {
+      method: "POST",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: body,
+      credentials: "omit",
+      redirect: "follow"
+    }).then(function (r) {
+      return r.json().catch(function () { return {}; }).then(function (j) {
+        if (j && j.ok) return j;
+        if (!r.ok) throw new Error((j && j.error) || "track failed");
+        return j && Object.keys(j).length ? j : { ok: true, test: test };
+      });
+    });
+  };
+
   window.swTalk = function (opts) {
     opts = opts || {};
     var text = String(opts.text || "").trim();
