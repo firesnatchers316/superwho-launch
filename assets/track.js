@@ -137,16 +137,22 @@
     var name = String(event || "").toLowerCase().trim();
     if (!name || name === "open") return Promise.resolve({ ok: false, skipped: true });
     var test = isTest();
+    var slug = SLUG;
+    if (test && slug && slug.indexOf("__test") === -1 && slug.indexOf("__selftest") === -1) {
+      slug = slug + "__test";
+    } else if (test && !slug) {
+      slug = "test";
+    }
     var body = JSON.stringify({
       action: "track",
       page: PAGE,
-      slug: slug(),
+      slug: slug,
       event: name,
       time: new Date().toISOString(),
       device: deviceId(),
       ua: uaFamily(),
       deviceType: deviceType(),
-      referrer: referrerHost(),
+      referrer: referrerDomain(),
       test: test
     });
     return fetch(URL, {
