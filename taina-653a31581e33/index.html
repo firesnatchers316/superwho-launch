@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1A120C">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Sazón">
+  <meta name="description" content="Taina's Thanksgiving SuperWho — a cook schedule, shopping list, and recipes for tomorrow's dinner.">
+  <title>Thanksgiving with Sazón</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650;9..144,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #1A120C;
+      --bg-2: #24180F;
+      --card: #2C1E14;
+      --card-2: #352418;
+      --ink: #F7EFE4;
+      --muted: #C4B3A2;
+      --paprika: #E0653A;
+      --paprika-deep: #C24B24;
+      --gold: #E8B84A;
+      --gold-soft: #F3D48A;
+      --sage: #8FBC7A;
+      --sage-ink: #14210F;
+      --line: #4A3426;
+      --line-soft: #3A281E;
+      --danger: #F3A89A;
+      --serif: "Fraunces", "Palatino Linotype", Palatino, Georgia, serif;
+      --sans: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --radius: 18px;
+      --pad: 16px;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.5;
+      -webkit-text-size-adjust: 100%;
+      overflow-x: hidden;
+    }
+    body {
+      min-height: 100vh;
+      background:
+        radial-gradient(1200px 500px at 80% -10%, rgba(224,101,58,0.18), transparent 55%),
+        radial-gradient(800px 400px at -10% 20%, rgba(232,184,74,0.1), transparent 50%),
+        var(--bg);
+      padding: 0 0 calc(108px + env(safe-area-inset-bottom, 0px));
+    }
+    #tonight, #today, #shop, #recipes, #talk, #plan {
+      scroll-margin-top: 12px;
+      scroll-margin-bottom: calc(96px + env(safe-area-inset-bottom, 0px));
+    }
+    img, svg, video, canvas { max-width: 100%; height: auto; display: block; }
+    button, input, textarea, select { font: inherit; max-width: 100%; color: inherit; }
+    h1, h2, h3 { font-family: var(--serif); font-weight: 650; letter-spacing: -0.02em; line-height: 1.2; margin: 0; }
+    p { margin: 0; }
+    a { color: var(--gold-soft); }
+
+    .wrap {
+      width: 100%;
+      max-width: 430px;
+      margin: 0 auto;
+      padding: 0 var(--pad);
+      padding-left: max(var(--pad), env(safe-area-inset-left));
+      padding-right: max(var(--pad), env(safe-area-inset-right));
+    }
+
+    .top {
+      padding-top: max(18px, env(safe-area-inset-top));
+      margin-bottom: 18px;
+    }
+    .brand-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 6px 0 14px;
+    }
+    .av {
+      flex: 0 0 auto;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: radial-gradient(circle at 30% 25%, #F3D48A, #E0653A 55%, #8A2C12);
+      color: #fff;
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 22px;
+      box-shadow: 0 0 0 2px rgba(232,184,74,0.35), 0 8px 20px rgba(0,0,0,0.35);
+    }
+    .brand-kicker {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin: 0 0 2px;
+    }
+    .brand-name { font-family: var(--serif); font-size: 22px; font-weight: 700; }
+    h1 { font-size: 30px; margin: 0 0 10px; }
+    .welcome { color: var(--muted); font-size: 16px; line-height: 1.55; }
+    .welcome strong { color: var(--ink); font-weight: 800; }
+
+    .card {
+      background: linear-gradient(180deg, var(--card-2), var(--card));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px;
+      margin: 0 0 16px;
+    }
+    .card h2 { font-size: 22px; margin: 0 0 8px; }
+    .card .lead { color: var(--muted); font-size: 14.5px; margin: 0 0 14px; }
+
+    .settings {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .field { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+    .field.span { grid-column: 1 / -1; }
+    .field label {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .field input[type="time"],
+    .field input[type="number"],
+    .field input[type="text"],
+    .field textarea {
+      width: 100%;
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px 12px;
+      color: var(--ink);
+      font-size: 16px;
+    }
+    .field input:focus, .field textarea:focus {
+      outline: 2px solid var(--gold);
+      outline-offset: 1px;
+    }
+    .pie-row, .check {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      width: 100%;
+    }
+    .pie-row { align-items: center; padding: 8px 0 2px; }
+    .pie-row label, .check span, .check .txt { flex: 1; min-width: 0; }
+    .pie-row label { font-weight: 700; font-size: 15px; color: var(--ink); text-transform: none; letter-spacing: 0; }
+    input[type="checkbox"] {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 22px;
+      height: 22px;
+      flex: 0 0 22px;
+      margin: 1px 0 0;
+      border: 2px solid var(--gold);
+      border-radius: 6px;
+      background: var(--bg);
+      cursor: pointer;
+      position: relative;
+    }
+    input[type="checkbox"]:checked {
+      background: var(--sage);
+      border-color: var(--sage);
+    }
+    input[type="checkbox"]:checked::after {
+      content: "";
+      position: absolute;
+      left: 6px;
+      top: 2px;
+      width: 6px;
+      height: 11px;
+      border: solid var(--sage-ink);
+      border-width: 0 2.5px 2.5px 0;
+      transform: rotate(45deg);
+    }
+    input[type="checkbox"]:focus-visible { outline: 2px solid var(--gold-soft); outline-offset: 2px; }
+
+    .nav {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 6px;
+      margin: 0 0 16px;
+      padding: 2px 0 2px;
+    }
+    .nav a {
+      text-decoration: none;
+      text-align: center;
+      color: var(--ink);
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 4px;
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    .nav a:hover, .nav a:focus-visible { border-color: var(--gold); color: var(--gold-soft); }
+
+    .stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin: 0 0 12px;
+    }
+    .stat {
+      background: var(--bg);
+      border: 1px solid var(--line-soft);
+      border-radius: 14px;
+      padding: 10px 12px;
+    }
+    .stat b { display: block; font-family: var(--serif); font-size: 18px; font-weight: 700; }
+    .stat span { color: var(--muted); font-size: 12px; font-weight: 700; }
+
+    .warn {
+      background: rgba(224,101,58,0.12);
+      border: 1px solid rgba(224,101,58,0.4);
+      color: var(--ink);
+      border-radius: 14px;
+      padding: 12px 14px;
+      font-size: 14.5px;
+      margin: 0 0 14px;
+    }
+    .warn strong { color: var(--gold-soft); }
+
+    .timeline { position: relative; margin: 4px 0 0; padding: 0 0 0 6px; }
+    .t-item {
+      position: relative;
+      display: grid;
+      grid-template-columns: 22px 1fr;
+      gap: 10px;
+      padding: 0 0 16px 0;
+    }
+    .t-item:last-child { padding-bottom: 0; }
+    .t-item::before {
+      content: "";
+      position: absolute;
+      left: 10px;
+      top: 22px;
+      bottom: 0;
+      width: 2px;
+      background: var(--line);
+    }
+    .t-item:last-child::before { display: none; }
+    .t-item.is-done .txt { opacity: 0.72; text-decoration: line-through; text-decoration-color: rgba(196,179,162,0.6); }
+    .when {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: center;
+      margin: 0 0 4px;
+    }
+    .clock {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--gold-soft);
+    }
+    .badge {
+      display: inline-block;
+      flex: 0 0 auto;
+      white-space: nowrap;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border-radius: 999px;
+      padding: 3px 8px;
+      background: rgba(232,184,74,0.12);
+      color: var(--gold);
+      border: 1px solid rgba(232,184,74,0.28);
+    }
+    .badge.stove { background: rgba(143,188,122,0.12); color: var(--sage); border-color: rgba(143,188,122,0.3); }
+    .badge.prep { background: rgba(247,239,228,0.06); color: var(--muted); border-color: var(--line); }
+    .t-item .txt { color: var(--ink); font-size: 15px; overflow-wrap: anywhere; }
+    .t-item .sub { color: var(--muted); font-size: 13px; margin-top: 2px; }
+
+    .oven-plan {
+      background: var(--bg);
+      border: 1px dashed var(--line);
+      border-radius: 14px;
+      padding: 12px 14px;
+      margin-top: 6px;
+      font-size: 14.5px;
+      color: var(--muted);
+    }
+    .oven-plan b { color: var(--ink); }
+
+    .section-h { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+    .count { color: var(--muted); font-size: 13px; font-weight: 700; }
+
+    .shop-group { margin: 0 0 14px; }
+    .shop-group h3 {
+      font-family: var(--sans);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin: 0 0 8px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--line-soft);
+    }
+    .shop-item, .check-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--line-soft);
+    }
+    .shop-item:last-child, .check-row:last-child { border-bottom: 0; }
+    .shop-item.is-done .name, .check-row.is-done .txt { opacity: 0.65; text-decoration: line-through; text-decoration-color: rgba(196,179,162,0.55); }
+    .shop-item .name { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+    .qty { font-weight: 800; color: var(--gold-soft); margin-right: 4px; }
+
+    details.dish {
+      background: linear-gradient(180deg, var(--card-2), var(--card));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 0;
+      margin: 0 0 12px;
+    }
+    details.dish > summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 650;
+    }
+    details.dish > summary::-webkit-details-marker { display: none; }
+    details.dish > summary::after {
+      content: "+";
+      font-family: var(--sans);
+      font-weight: 800;
+      color: var(--gold);
+      font-size: 22px;
+      line-height: 1;
+    }
+    details.dish[open] > summary::after { content: "–"; }
+    .dish-body { padding: 0 16px 16px; }
+    .dish-meta { color: var(--muted); font-size: 13.5px; margin: 0 0 12px; }
+    .ing, .steps { margin: 0 0 12px; padding: 0; }
+    .ing li, .steps li { margin: 0 0 6px 18px; overflow-wrap: anywhere; }
+    .steps { counter-reset: step; list-style: none; padding: 0; }
+    .steps li {
+      margin: 0 0 10px;
+      padding-left: 32px;
+      position: relative;
+    }
+    .steps li::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--paprika);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+    }
+    .note-field { margin-top: 8px; }
+
+    .talk-card {
+      position: relative;
+      border: 1px solid rgba(232,184,74,0.55);
+      box-shadow: 0 0 0 1px rgba(224,101,58,0.2), 0 0 28px rgba(232,184,74,0.18);
+      animation: talkGlow 2.8s ease-in-out infinite;
+    }
+    @keyframes talkGlow {
+      0%, 100% { box-shadow: 0 0 0 1px rgba(224,101,58,0.25), 0 0 18px rgba(232,184,74,0.14); }
+      50% { box-shadow: 0 0 0 2px rgba(232,184,74,0.55), 0 0 32px rgba(224,101,58,0.28); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .talk-card { animation: none; }
+    }
+    .talk-card h2 { font-size: 24px; }
+    .sw-ask-input {
+      width: 100%;
+      min-height: 112px;
+      resize: vertical;
+      padding: 12px 14px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: var(--bg);
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.4;
+    }
+    .sw-ask-input:focus { outline: 2px solid var(--gold); outline-offset: 1px; }
+    .sw-ask-label {
+      display: block;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+    .sw-ask-btn, .primary-btn {
+      display: block;
+      width: 100%;
+      margin-top: 12px;
+      padding: 14px 16px;
+      border: 0;
+      border-radius: 14px;
+      background: linear-gradient(180deg, #F3B24A, #E8B84A 40%, #C9922A);
+      color: #2A1A08;
+      font-size: 16px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+    .sw-ask-btn:disabled { opacity: 0.65; cursor: wait; }
+    .sw-ask-btn.secondary {
+      background: transparent;
+      color: var(--ink);
+      border: 1px solid var(--line);
+      margin-top: 8px;
+    }
+    .sw-ask-status { min-height: 1.2em; margin: 10px 0 0; color: var(--muted); font-size: 14px; }
+    .sw-ask-status.is-error { color: var(--danger); }
+    .sw-ask-done p { margin: 4px 0 0; font-size: 17px; font-weight: 700; }
+
+    .sw-talk-sticky {
+      position: fixed;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+      z-index: 40;
+      width: calc(100% - 32px);
+      max-width: 398px;
+      padding: 13px 16px;
+      border: 0;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #F3B24A, #E8B84A 40%, #C9922A);
+      color: #2A1A08;
+      font-size: 15px;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+    }
+    .sw-talk-sticky:focus-visible { outline: 3px solid var(--gold-soft); outline-offset: 3px; }
+
+    footer {
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+      padding: 8px 8px 12px;
+    }
+
+    .hidden { display: none !important; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <div class="brand-row">
+        <div class="av" aria-hidden="true">S</div>
+        <div>
+          <p class="brand-kicker">Your SuperWho</p>
+          <div class="brand-name">Sazón</div>
+        </div>
+      </div>
+      <h1>We’ve got Thanksgiving.</h1>
+      <p class="welcome">Hi Taina — I’m <strong>Sazón</strong>, your SuperWho for tomorrow’s dinner. Jim and his team developed me to help you cook this meal with a clear plan, not a pile of tabs. Change the time or the headcount and I’ll redo the schedule and the shopping list.</p>
+    </header>
+
+    <section class="card" id="plan">
+      <h2>Your table</h2>
+      <p class="lead">Thursday, November 26, 2026. Defaults are 4:00 PM for about 12 people — change either one.</p>
+      <div class="settings">
+        <div class="field">
+          <label for="dinnerTime">Dinner time</label>
+          <input type="time" id="dinnerTime" value="16:00" required>
+        </div>
+        <div class="field">
+          <label for="guests">People</label>
+          <input type="number" id="guests" value="12" min="2" max="40" step="1" inputmode="numeric">
+        </div>
+        <div class="field span">
+          <div class="pie-row">
+            <input type="checkbox" id="pieOn" checked>
+            <label for="pieOn">Include pumpkin pie</label>
+          </div>
+        </div>
+      </div>
+      <div class="stats" id="planStats"></div>
+    </section>
+
+    <nav class="nav" aria-label="On this page">
+      <a href="#tonight">Tonight</a>
+      <a href="#today">Thursday</a>
+      <a href="#shop">Shop</a>
+      <a href="#recipes">Recipes</a>
+      <a href="#talk">Talk</a>
+    </nav>
+
+    <section class="card" id="tonight">
+      <div class="section-h">
+        <h2>Wednesday night</h2>
+        <span class="count" id="tonightCount"></span>
+      </div>
+      <p class="lead">A little work tonight makes tomorrow much calmer. The turkey needs a thaw check before anything else.</p>
+      <div id="tonightWarn"></div>
+      <div id="tonightList"></div>
+    </section>
+
+    <section class="card" id="today">
+      <div class="section-h">
+        <h2>Thursday timeline</h2>
+        <span class="count" id="todayCount"></span>
+      </div>
+      <p class="lead">Times count backward from dinner so the turkey, the sides, and the oven all land together.</p>
+      <div class="oven-plan" id="ovenPlan"></div>
+      <div class="timeline" id="todayList"></div>
+    </section>
+
+    <section class="card" id="shop">
+      <div class="section-h">
+        <h2>Shopping list</h2>
+        <span class="count" id="shopCount"></span>
+      </div>
+      <p class="lead">Grouped by store section and scaled to your headcount. Skip anything you already have.</p>
+      <div id="shopList"></div>
+    </section>
+
+    <section id="recipes">
+      <h2 style="font-size:24px;margin:4px 2px 12px">Recipes</h2>
+      <div id="recipeList"></div>
+    </section>
+
+    <section class="card talk-card" id="talk">
+      <h2>Talk to your SuperWho</h2>
+      <p class="lead">A question, a change to the menu, a different rice style — send it here and I’ll help you from there.</p>
+      <form class="sw-ask-form" id="swAskForm">
+        <label class="sw-ask-label" for="swAskInput">Your message</label>
+        <textarea class="sw-ask-input" id="swAskInput" name="message" rows="4" maxlength="4000" required placeholder="Ask Sazón a question or request a change…"></textarea>
+        <button type="submit" class="sw-ask-btn" id="swAskSend">Send</button>
+        <p class="sw-ask-status" id="swAskStatus" role="status" aria-live="polite"></p>
+      </form>
+      <div class="sw-ask-done" id="swAskDone" hidden>
+        <p>Got it — I’ll take a look and help you with that.</p>
+        <button type="button" class="sw-ask-btn secondary" id="swAskAgain">Send another</button>
+      </div>
+    </section>
+
+    <footer>Made for Taina by Sazón, with Jim and the SuperWho team.</footer>
+  </div>
+
+  <button type="button" class="sw-talk-sticky" id="swTalkOpen">Talk to your SuperWho</button>
+
+  <script>window.SW_TRACK = { page: "taina", slug: "taina-653a31581e33" };</script>
+  <script src="/assets/track.js"></script>
+  <script>
+  (function () {
+    var LS = "sw-taina-thanksgiving-v1";
+    var state = {
+      dinner: "16:00",
+      guests: 12,
+      pie: true,
+      candyNote: "",
+      checks: {}
+    };
+
+    function load() {
+      try {
+        var raw = localStorage.getItem(LS);
+        if (!raw) return;
+        var s = JSON.parse(raw);
+        if (s && typeof s === "object") {
+          if (typeof s.dinner === "string" && /^\d{2}:\d{2}$/.test(s.dinner)) state.dinner = s.dinner;
+          if (typeof s.guests === "number" && s.guests >= 2 && s.guests <= 40) state.guests = Math.round(s.guests);
+          if (typeof s.pie === "boolean") state.pie = s.pie;
+          if (typeof s.candyNote === "string") state.candyNote = s.candyNote.slice(0, 200);
+          if (s.checks && typeof s.checks === "object") state.checks = s.checks;
+        }
+      } catch (e) {}
+    }
+    function save() {
+      try { localStorage.setItem(LS, JSON.stringify(state)); } catch (e) {}
+    }
+
+    function turkeyLb(g) { return Math.max(10, Math.round(g * 1.25)); }
+    function roastMin(lb) { return lb * 14; }
+    function fridgeDays(lb) { return Math.ceil(lb / 4.5); }
+    function coldHours(lb) { return Math.round(lb * 0.5 * 10) / 10; }
+
+    function parseHM(s) {
+      var p = String(s || "16:00").split(":");
+      var h = parseInt(p[0], 10), m = parseInt(p[1], 10);
+      if (isNaN(h) || isNaN(m)) return 16 * 60;
+      return Math.max(0, Math.min(23 * 60 + 59, h * 60 + m));
+    }
+    function fmt(mins) {
+      mins = ((mins % 1440) + 1440) % 1440;
+      var h = Math.floor(mins / 60), m = mins % 60;
+      var ap = h >= 12 ? "PM" : "AM";
+      h = h % 12; if (!h) h = 12;
+      return m ? (h + ":" + String(m).padStart(2, "0") + " " + ap) : (h + " " + ap);
+    }
+    function r5(n) { return Math.round(n / 5) * 5; }
+
+    function scale(n12, g) {
+      return Math.max(1, Math.round(n12 * g / 12));
+    }
+    function cups(n12, g) {
+      var n = n12 * g / 12;
+      var q = Math.round(n * 4) / 4;
+      if (q < 0.25) q = 0.25;
+      return formatFrac(q);
+    }
+    function formatFrac(q) {
+      var whole = Math.floor(q + 1e-9);
+      var frac = Math.round((q - whole) * 4);
+      if (frac === 4) { whole += 1; frac = 0; }
+      var map = { 1: "¼", 2: "½", 3: "¾" };
+      if (!whole) return map[frac] || String(q);
+      return frac ? (whole + map[frac]) : String(whole);
+    }
+    function lbs(n12, g, min) {
+      var n = Math.round(n12 * g / 12);
+      if (min && n < min) n = min;
+      return n;
+    }
+
+    function plan() {
+      var g = state.guests;
+      var lb = turkeyLb(g);
+      var roast = roastMin(lb);
+      var rest = 40;
+      var dinner = parseHM(state.dinner);
+      var turkeyOut = r5(dinner - rest);
+      var turkeyIn = r5(turkeyOut - roast);
+      var warmup = r5(turkeyIn - 45);
+      var sidesIn = r5(turkeyOut + 5);
+      var check = r5(turkeyOut - 30);
+      var gravy = r5(turkeyOut + 10);
+      var pies = state.pie ? (g >= 10 ? 2 : 1) : 0;
+      return {
+        g: g, lb: lb, roast: roast, rest: rest, dinner: dinner,
+        turkeyIn: turkeyIn, turkeyOut: turkeyOut, warmup: warmup,
+        sidesIn: sidesIn, check: check, gravy: gravy, pies: pies,
+        fridgeDays: fridgeDays(lb), coldHours: coldHours(lb)
+      };
+    }
+
+    function setCheck(id, on) {
+      if (on) state.checks[id] = true;
+      else delete state.checks[id];
+      save();
+    }
+
+    function checkRow(id, html) {
+      var on = !!state.checks[id];
+      return '<label class="check-row' + (on ? " is-done" : "") + '">' +
+        '<input type="checkbox" data-check="' + id + '"' + (on ? " checked" : "") + ">" +
+        '<span class="txt">' + html + "</span></label>";
+    }
+
+    function tItem(id, clock, badge, badgeClass, title, sub) {
+      var on = !!state.checks[id];
+      var b = badge ? '<span class="badge ' + (badgeClass || "") + '">' + badge + "</span>" : "";
+      return '<div class="t-item' + (on ? " is-done" : "") + '">' +
+        '<input type="checkbox" data-check="' + id + '"' + (on ? " checked" : "") + ">" +
+        "<div><div class=\"when\">" + (clock ? '<span class="clock">' + clock + "</span>" : "") + b + "</div>" +
+        '<div class="txt">' + title + "</div>" +
+        (sub ? '<div class="sub">' + sub + "</div>" : "") +
+        "</div></div>";
+    }
+
+    function renderStats(p) {
+      var hours = Math.floor(p.roast / 60);
+      var mins = p.roast % 60;
+      var roastLabel = hours + " hr" + (mins ? " " + mins + " min" : "");
+      document.getElementById("planStats").innerHTML =
+        '<div class="stat"><b>' + p.lb + " lb turkey</b><span>about 1¼ lb per person</span></div>" +
+        '<div class="stat"><b>' + roastLabel + " roast</b><span>325°F, then 40 min rest</span></div>";
+    }
+
+    function renderTonight(p) {
+      var warn = '<div class="warn"><strong>Thaw check comes first.</strong> A ' + p.lb +
+        "-lb turkey needs about " + p.fridgeDays + " days in the fridge (24 hours per 4–5 lb). " +
+        "If it is still frozen tonight, do not count on the fridge before tomorrow — use the cold-water method: about " +
+        p.coldHours + " hours, in cold water, changing the water every 30 minutes. Never thaw on the counter.</div>";
+      document.getElementById("tonightWarn").innerHTML = warn;
+      var items = [];
+      items.push(checkRow("w-thaw", "<strong>Check the turkey thaw</strong> and start cold-water thawing if it is still frozen."));
+      items.push(checkRow("w-season", "<strong>Season or dry-brine the turkey</strong> and leave it uncovered in the fridge overnight (or after it finishes thawing)."));
+      if (p.pies) {
+        items.push(checkRow("w-pie", "<strong>Bake " + (p.pies === 1 ? "the pumpkin pie" : "the pumpkin pies") + " tonight</strong> so the oven is free tomorrow. Let " + (p.pies === 1 ? "it" : "them") + " cool, then refrigerate."));
+      }
+      items.push(checkRow("w-eggplant", "<strong>Prep the eggplant Parm:</strong> slice, salt, and pat dry. You can bread the slices or assemble the pan tonight and refrigerate."));
+      items.push(checkRow("w-shop", "<strong>Confirm the shopping list</strong> and pick up anything still missing, including sofrito, sazón, and beans if you need them."));
+      document.getElementById("tonightList").innerHTML = items.join("");
+      var ids = ["w-thaw","w-season","w-eggplant","w-shop"].concat(p.pies ? ["w-pie"] : []);
+      var done = ids.filter(function (id) { return state.checks[id]; }).length;
+      document.getElementById("tonightCount").textContent = done + " of " + ids.length + " done";
+    }
+
+    function renderToday(p) {
+      var beansStart = r5(p.turkeyIn + 30);
+      var riceStart = r5(p.dinner - 50);
+      var html = [];
+      html.push(tItem("t-thaw", "Morning", "prep", "prep",
+        "If the turkey is still thawing, finish the cold-water method first.",
+        "Keep it in cold water, changing every 30 minutes, until the meat is pliable and no ice remains in the cavity."));
+      html.push(tItem("t-warmup", fmt(p.warmup), "prep", "prep",
+        "Take the turkey out of the fridge so the chill comes off.",
+        "About 45 minutes on the counter, still on its pan. Heat the oven to 325°F toward the end of this window."));
+      html.push(tItem("t-in", fmt(p.turkeyIn), "Oven", "",
+        "Turkey goes in at 325°F.",
+        p.lb + " lb × 14 minutes = about " + Math.floor(p.roast/60) + " hr " + (p.roast%60) + " min. Breast up, tent loosely with foil if the skin browns too fast."));
+      html.push(tItem("t-beans", fmt(beansStart), "Stove", "stove",
+        "Start the habichuelas and any other stove work.",
+        "The beans can simmer while the turkey roasts. Hold the rice until later so it stays fluffy."));
+      html.push(tItem("t-sidesprep", fmt(r5(p.check - 40)), "prep", "prep",
+        "Assemble mac & cheese, candied yams, and eggplant Parm so they are ready for the oven.",
+        "They wait on the counter (or in the fridge) until the turkey comes out."));
+      html.push(tItem("t-check", fmt(p.check), "Oven", "",
+        "Check the turkey temperature.",
+        "You want 165°F in the thickest part of the thigh, not touching bone. If it is early, give it more time and check again."));
+      html.push(tItem("t-out", fmt(p.turkeyOut), "Oven", "",
+        "Turkey out. Tent with foil and rest 40 minutes.",
+        "This rest is when the other oven dishes bake. Do not skip it — the juices settle, and carving is easier."));
+      html.push(tItem("t-sides", fmt(p.sidesIn), "Oven", "",
+        "Raise the oven to 375°F and bake the sides together.",
+        "Two racks: eggplant Parm and candied yams on the lower rack, mac & cheese above. About 30–40 minutes, until bubbling and browned."));
+      html.push(tItem("t-rice", fmt(riceStart), "Stove", "stove",
+        "Cook the rice and make gravy from the turkey drippings.",
+        "Gravy can start around " + fmt(p.gravy) + ", once the juices have settled in the roasting pan."));
+      html.push(tItem("t-serve", fmt(p.dinner), "Serve", "prep",
+        "Carve the turkey, pull the sides, and bring everything to the table.",
+        p.pies ? "Set the pie out as you sit down so it is not ice-cold when you are ready for dessert." : "Eat well. You did it."));
+      document.getElementById("todayList").innerHTML = html.join("");
+
+      document.getElementById("ovenPlan").innerHTML =
+        "<b>Oven plan.</b> The turkey has the oven from " + fmt(p.turkeyIn) + " to " + fmt(p.turkeyOut) +
+        " at 325°F. While it rests, the oven is free for mac & cheese, candied yams, and eggplant Parm at 375°F (" +
+        fmt(p.sidesIn) + "–" + fmt(p.dinner) + "). Rice and beans stay on the stove, so they never fight for space." +
+        (p.pies ? " Pie is already baked Wednesday night." : "");
+
+      var ids = ["t-thaw","t-warmup","t-in","t-beans","t-sidesprep","t-check","t-out","t-sides","t-rice","t-serve"];
+      var done = ids.filter(function (id) { return state.checks[id]; }).length;
+      document.getElementById("todayCount").textContent = done + " of " + ids.length + " done";
+    }
+
+    function shopItems(p) {
+      var g = p.g;
+      var macaroni = lbs(2, g, 1);
+      var cheese = lbs(2, g, 1);
+      var yams = lbs(6, g, 3);
+      var rice = cups(4, g);
+      var beansCans = scale(3, g);
+      var eggplant = Math.max(2, Math.round(3 * g / 12));
+      var mozzarella = lbs(1.5, g, 1);
+      var marinara = cups(4, g);
+      var butterSticks = Math.max(2, Math.round(4 * g / 12));
+      var milk = cups(6, g);
+      var items = [
+        { id: "s-turkey", sec: "Meat", name: "Whole turkey", qty: p.lb + " lb" },
+        { id: "s-ham", sec: "Meat", name: "Ham steak or smoked ham (optional, for the beans)", qty: scale(8, g) + " oz" },
+        { id: "s-yams", sec: "Produce", name: "Yams or sweet potatoes", qty: yams + " lb" },
+        { id: "s-onion", sec: "Produce", name: "Yellow onions", qty: scale(3, g) + "" },
+        { id: "s-garlic", sec: "Produce", name: "Garlic", qty: "1 head" },
+        { id: "s-herbs", sec: "Produce", name: "Fresh thyme, rosemary, or sage", qty: "1 bunch" },
+        { id: "s-lemon", sec: "Produce", name: "Lemons", qty: String(scale(2, g)) },
+        { id: "s-pepper", sec: "Produce", name: "Cubanelle or bell pepper (for sofrito, if not using jarred)", qty: String(scale(2, g)) },
+        { id: "s-cilantro", sec: "Produce", name: "Cilantro or recao", qty: "1 bunch" },
+        { id: "s-eggplant", sec: "Produce", name: "Large eggplants", qty: String(eggplant) },
+        { id: "s-butter", sec: "Dairy & eggs", name: "Unsalted butter", qty: butterSticks + " sticks" },
+        { id: "s-milk", sec: "Dairy & eggs", name: "Whole milk", qty: milk + " cups" },
+        { id: "s-cheese", sec: "Dairy & eggs", name: "Sharp cheddar (and a little Monterey Jack or mozzarella), shredded", qty: cheese + " lb" },
+        { id: "s-mozz", sec: "Dairy & eggs", name: "Mozzarella for eggplant Parm", qty: mozzarella + " lb" },
+        { id: "s-parm", sec: "Dairy & eggs", name: "Parmesan, grated", qty: cups(1.5, g) + " cups" },
+        { id: "s-eggs", sec: "Dairy & eggs", name: "Eggs", qty: String(Math.max(4, scale(6, g))) },
+        { id: "s-sour", sec: "Dairy & eggs", name: "Sour cream or evaporated milk (for mac & cheese)", qty: cups(1, g) + " cup" },
+        { id: "s-pasta", sec: "Dry goods & baking", name: "Elbow macaroni", qty: macaroni + " lb" },
+        { id: "s-rice", sec: "Dry goods & baking", name: "Long-grain white rice", qty: rice + " cups, dry" },
+        { id: "s-flour", sec: "Dry goods & baking", name: "All-purpose flour", qty: "1 box (you need a few cups)" },
+        { id: "s-crumbs", sec: "Dry goods & baking", name: "Breadcrumbs", qty: cups(3, g) + " cups" },
+        { id: "s-sugar", sec: "Dry goods & baking", name: "Brown sugar", qty: cups(1.5, g) + " cups" },
+        { id: "s-broth", sec: "Canned & jarred", name: "Chicken or turkey broth (for gravy and rice)", qty: scale(2, g) + " cartons" },
+        { id: "s-beans", sec: "Canned & jarred", name: "Pink beans (habichuelas rosadas), or 1 lb dried", qty: beansCans + " cans (15 oz)" },
+        { id: "s-sofrito", sec: "Canned & jarred", name: "Sofrito (jarred is fine)", qty: cups(1, g) + " cup" },
+        { id: "s-sauce", sec: "Canned & jarred", name: "Tomato sauce", qty: "1 can (8–15 oz)" },
+        { id: "s-olives", sec: "Canned & jarred", name: "Manzanilla olives (optional)", qty: "1 small jar" },
+        { id: "s-marinara", sec: "Canned & jarred", name: "Marinara sauce", qty: marinara + " cups" },
+        { id: "s-oil", sec: "Canned & jarred", name: "Olive or vegetable oil", qty: "1 bottle" },
+        { id: "s-sazon", sec: "Spices", name: "Sazón with achiote, adobo, cumin, oregano, cinnamon, nutmeg, paprika, salt, black pepper", qty: "what you don’t already have" },
+        { id: "s-vanilla", sec: "Spices", name: "Vanilla extract", qty: "1 bottle (you need 1 tsp)" },
+        { id: "s-mallow", sec: "Other", name: "Mini marshmallows or pecans for the yams (optional)", qty: "1 bag" },
+        { id: "s-foil", sec: "Other", name: "Foil, a roasting pan, and a meat thermometer (165°F)", qty: "if you don’t have them" }
+      ];
+      if (p.pies) {
+        items.push({ id: "s-pumpkin", sec: "Canned & jarred", name: "Canned pumpkin (not pie filling)", qty: p.pies + (p.pies === 1 ? " can (15 oz)" : " cans (15 oz)") });
+        items.push({ id: "s-evap", sec: "Canned & jarred", name: "Evaporated milk", qty: p.pies + (p.pies === 1 ? " can" : " cans") });
+        items.push({ id: "s-crust", sec: "Other", name: "Refrigerated or frozen pie crusts (or homemade)", qty: String(p.pies) });
+        items.push({ id: "s-psugar", sec: "Dry goods & baking", name: "Granulated sugar (for pie)", qty: (p.pies === 1 ? "¾ cup" : "1½ cups") });
+        items.push({ id: "s-pspice", sec: "Spices", name: "Pumpkin pie spice, or cinnamon plus ginger and cloves", qty: "1 jar" });
+      }
+      return items;
+    }
+
+    var SEC_ORDER = ["Meat", "Produce", "Dairy & eggs", "Canned & jarred", "Dry goods & baking", "Spices", "Other"];
+
+    function renderShop(p) {
+      var items = shopItems(p);
+      var groups = {};
+      items.forEach(function (it) {
+        (groups[it.sec] || (groups[it.sec] = [])).push(it);
+      });
+      var html = "";
+      var done = 0;
+      SEC_ORDER.forEach(function (sec) {
+        var list = groups[sec];
+        if (!list) return;
+        html += '<div class="shop-group"><h3>' + sec + "</h3>";
+        list.forEach(function (it) {
+          var on = !!state.checks[it.id];
+          if (on) done++;
+          html += '<label class="shop-item' + (on ? " is-done" : "") + '">' +
+            '<input type="checkbox" data-check="' + it.id + '"' + (on ? " checked" : "") + ">" +
+            '<span class="name"><span class="qty">' + it.qty + "</span> " + it.name + "</span></label>";
+        });
+        html += "</div>";
+      });
+      document.getElementById("shopList").innerHTML = html;
+      document.getElementById("shopCount").textContent = done + " of " + items.length + " checked";
+    }
+
+    function recipeHtml(p) {
+      var g = p.g;
+      var candy = escapeHtml(state.candyNote);
+      var turkey = '<details class="dish" open><summary>Roast turkey</summary><div class="dish-body">' +
+        '<p class="dish-meta">For ' + g + " people: one " + p.lb + " lb turkey. Oven 325°F for about " + Math.floor(p.roast/60) + " hr " + (p.roast%60) + " min, then rest 40 minutes. Safe temperature: 165°F.</p>" +
+        "<h3 style=\"font-family:var(--sans);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin:0 0 8px\">Ingredients</h3>" +
+        "<ul class=\"ing\">" +
+        "<li>" + p.lb + " lb whole turkey, giblets removed</li>" +
+        "<li>4–6 tbsp softened butter, or olive oil</li>" +
+        "<li>Kosher salt and black pepper; adobo if you like</li>" +
+        "<li>4 garlic cloves, 1 onion, 1 lemon, and a few herb sprigs</li>" +
+        "<li>1–2 cups broth in the bottom of the pan</li>" +
+        "</ul>" +
+        "<h3 style=\"font-family:var(--sans);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin:12px 0 8px\">Steps</h3>" +
+        "<ol class=\"steps\">" +
+        "<li><strong>Thaw safely.</strong> Fridge: 24 hours for every 4–5 lb — about " + p.fridgeDays + " days for this bird, on a tray. If it is still frozen, use cold water: about " + p.coldHours + " hours, turkey in a leakproof bag, submerged in cold water, changing the water every 30 minutes. Do not thaw on the counter.</li>" +
+        "<li>Pat the turkey dry. Season inside and out with salt, pepper, and butter under and over the skin. Put onion, lemon, garlic, and herbs in the cavity. Do not stuff with dressing.</li>" +
+        "<li>Roast at 325°F, breast up, starting at " + fmt(p.turkeyIn) + ". Plan about 14 minutes per pound, " + (p.lb * 14) + " minutes total.</li>" +
+        "<li>Begin checking 30 minutes early. The turkey is done at <strong>165°F</strong> in the thickest part of the thigh, not touching bone. If the skin is dark, tent with foil.</li>" +
+        "<li>Rest, tented, for 40 minutes before carving. Make gravy from the pan drippings with a little flour and broth while it rests.</li>" +
+        "</ol></div></details>";
+
+      var mac = '<details class="dish"><summary>Mac & cheese</summary><div class="dish-body">' +
+        '<p class="dish-meta">Bakes 30 minutes at 375°F once the turkey is out. Prep the pan while the turkey roasts.</p>' +
+        "<ul class=\"ing\">" +
+        "<li>" + lbs(2, g, 1) + " lb elbow macaroni</li>" +
+        "<li>" + lbs(2, g, 1) + " lb shredded sharp cheddar (mix in a little Jack or mozzarella)</li>" +
+        "<li>6 tbsp butter and 6 tbsp flour (scale the roux if you changed the headcount)</li>" +
+        "<li>" + cups(6, g) + " cups milk, plus " + cups(1, g) + " cup sour cream or evaporated milk</li>" +
+        "<li>Salt, pepper, paprika, and a handful of breadcrumbs for the top</li>" +
+        "</ul>" +
+        "<ol class=\"steps\">" +
+        "<li>Boil the pasta 1–2 minutes shy of done. Drain.</li>" +
+        "<li>Melt the butter, whisk in the flour for 1 minute, then slowly whisk in the milk until thick and smooth. Season well. Stir in the sour cream and most of the cheese off the heat.</li>" +
+        "<li>Fold in the pasta, spread in a buttered pan, and top with the rest of the cheese, breadcrumbs, and paprika.</li>" +
+        "<li>Bake at 375°F for 25–30 minutes, until bubbling and golden. Rest 5 minutes before serving.</li>" +
+        "</ol></div></details>";
+
+      var yams = '<details class="dish"><summary>Candied yams</summary><div class="dish-body">' +
+        '<p class="dish-meta">Jim said “candy, yams” — this treats that as candied yams. If you also wanted a candy or dessert treat, jot it in the note below.</p>' +
+        "<ul class=\"ing\">" +
+        "<li>" + lbs(6, g, 3) + " lb yams or sweet potatoes, peeled and cut into chunks</li>" +
+        "<li>1 stick butter (use more for a bigger pan)</li>" +
+        "<li>" + cups(1.5, g) + " cups brown sugar</li>" +
+        "<li>1 tsp cinnamon, a pinch of nutmeg, 1 tsp vanilla, pinch of salt</li>" +
+        "<li>Optional: mini marshmallows or chopped pecans for the last 8 minutes</li>" +
+        "</ul>" +
+        "<ol class=\"steps\">" +
+        "<li>Boil the yams in salted water until just tender, 12–15 minutes, then drain. (Or roast the raw chunks 20 minutes first if you prefer not to boil.)</li>" +
+        "<li>Toss with melted butter, brown sugar, vanilla, and spices. Spread in a buttered baking dish.</li>" +
+        "<li>Bake at 375°F for 30–40 minutes, basting once, until syrupy and caramelized. Add marshmallows or pecans near the end if you want them.</li>" +
+        "</ol>" +
+        '<div class="field note-field"><label for="candyNote">Or a candy / dessert treat</label>' +
+        '<input type="text" id="candyNote" maxlength="200" placeholder="If “candy” meant something else, write it here" value="' + candy + '"></div>' +
+        "</div></details>";
+
+      var rice = '<details class="dish"><summary>Rice and beans</summary><div class="dish-body">' +
+        '<p class="dish-meta">Default is Puerto Rican-style arroz blanco with habichuelas guisadas — white rice and stewed pink beans. Change this if your family does it differently.</p>' +
+        "<ul class=\"ing\">" +
+        "<li>" + cups(4, g) + " cups long-grain white rice</li>" +
+        "<li>" + scale(3, g) + " cans pink beans (habichuelas rosadas), or 1 lb dried, cooked until tender</li>" +
+        "<li>" + cups(1, g) + " cup sofrito (jarred is fine)</li>" +
+        "<li>1 can tomato sauce, 1–2 packets sazón with achiote, adobo or salt, oregano, a bay leaf</li>" +
+        "<li>Optional: diced ham, olives, a cubed potato or calabaza in the beans</li>" +
+        "<li>Oil, onion, and garlic if you are making sofrito fresh</li>" +
+        "</ul>" +
+        "<ol class=\"steps\">" +
+        "<li>For the beans: warm oil in a pot, add ham if using, then sofrito. Cook until fragrant, 3–4 minutes. Stir in tomato sauce, sazón, olives, and the beans with some of their liquid. Simmer 20–30 minutes, adding water if they get dry. Taste for salt.</li>" +
+        "<li>For the rice: rinse until the water runs clearer. In a caldero or pot, warm a little oil, add the rice, and stir. Add water (about 1½–2 cups water per cup of rice), salt, and a pinch of sazón if you like. Bring to a boil, then cover and cook on low 18–20 minutes. Rest 5 minutes and fluff.</li>" +
+        "<li>Serve the beans over or beside the rice. You can start the beans while the turkey roasts and cook the rice near dinner time so it stays fluffy.</li>" +
+        "</ol></div></details>";
+
+      var eggplant = '<details class="dish"><summary>Eggplant Parm</summary><div class="dish-body">' +
+        '<p class="dish-meta">Prep tonight; bake 30–40 minutes at 375°F with the other sides.</p>' +
+        "<ul class=\"ing\">" +
+        "<li>" + Math.max(2, Math.round(3 * g / 12)) + " large eggplants, sliced ½-inch thick</li>" +
+        "<li>" + cups(3, g) + " cups breadcrumbs, " + Math.max(3, scale(4, g)) + " eggs, and a little flour</li>" +
+        "<li>" + cups(4, g) + " cups marinara</li>" +
+        "<li>" + lbs(1.5, g, 1) + " lb mozzarella and " + cups(1.5, g) + " cups grated Parmesan</li>" +
+        "<li>Oil, salt, pepper, and a little dried oregano</li>" +
+        "</ul>" +
+        "<ol class=\"steps\">" +
+        "<li>Tonight: salt the slices and let them sit 20–30 minutes, then pat dry. This keeps them from going watery.</li>" +
+        "<li>Dredge in flour, dip in beaten egg, then breadcrumbs. Brown in a little oil, in batches, until golden — or bake the breaded slices at 425°F for 15–20 minutes if you would rather not fry.</li>" +
+        "<li>Layer sauce, eggplant, mozzarella, and Parmesan in a baking dish. Finish with sauce and cheese. Cover and refrigerate overnight if you want.</li>" +
+        "<li>Bake at 375°F, uncovered, 30–40 minutes, until bubbling and browned. Rest 10 minutes so it slices cleanly.</li>" +
+        "</ol></div></details>";
+
+      var pie = "";
+      if (p.pies) {
+        pie = '<details class="dish"><summary>Pumpkin pie' + (p.pies > 1 ? "s" : "") + '</summary><div class="dish-body">' +
+          '<p class="dish-meta">Bake Wednesday night. ' + (p.pies === 1 ? "One 9-inch pie." : "Two 9-inch pies, so there is enough for " + g + ".") + " Store-bought crust is fine.</p>" +
+          "<ul class=\"ing\">" +
+          "<li>" + p.pies + " unbaked 9-inch pie crust" + (p.pies > 1 ? "s" : "") + "</li>" +
+          "<li>" + p.pies + " can" + (p.pies > 1 ? "s" : "") + " (15 oz) pumpkin puree</li>" +
+          "<li>" + p.pies + " can" + (p.pies > 1 ? "s" : "") + " evaporated milk</li>" +
+          "<li>" + (p.pies === 1 ? "¾" : "1½") + " cup sugar, " + (p.pies === 1 ? "2" : "4") + " eggs, 1–2 tsp pumpkin pie spice, pinch of salt</li>" +
+          "</ul>" +
+          "<ol class=\"steps\">" +
+          "<li>Heat the oven to 425°F. Whisk pumpkin, sugar, spice, salt, eggs, and evaporated milk until smooth. Pour into the crust" + (p.pies > 1 ? "s" : "") + ".</li>" +
+          "<li>Bake 15 minutes at 425°F, then lower to 350°F and bake 35–45 minutes more, until the center is just set and a knife near the middle comes out mostly clean.</li>" +
+          "<li>Cool completely, then refrigerate. Serve tomorrow, with whipped cream if you have it.</li>" +
+          "</ol></div></details>";
+      }
+
+      document.getElementById("recipeList").innerHTML = turkey + mac + yams + rice + eggplant + pie;
+      var note = document.getElementById("candyNote");
+      if (note) {
+        note.addEventListener("input", function () {
+          state.candyNote = note.value.slice(0, 200);
+          save();
+        });
+      }
+    }
+
+    function escapeHtml(s) {
+      return String(s || "").replace(/[&<>"']/g, function (c) {
+        return ({ "&": "&", "<": "<", ">": ">", '"': """, "'": "&#39;" })[c];
+      });
+    }
+
+    function render() {
+      var p = plan();
+      renderStats(p);
+      renderTonight(p);
+      renderToday(p);
+      renderShop(p);
+      recipeHtml(p);
+    }
+
+    function bindChecks(root) {
+      root.addEventListener("change", function (ev) {
+        var t = ev.target;
+        if (t && t.getAttribute && t.getAttribute("data-check")) {
+          setCheck(t.getAttribute("data-check"), t.checked);
+          var p = plan();
+          if (t.closest("#tonight")) renderTonight(p);
+          else if (t.closest("#today")) renderToday(p);
+          else if (t.closest("#shop")) renderShop(p);
+        }
+      });
+    }
+
+    load();
+    var dinnerEl = document.getElementById("dinnerTime");
+    var guestsEl = document.getElementById("guests");
+    var pieEl = document.getElementById("pieOn");
+    dinnerEl.value = state.dinner;
+    guestsEl.value = String(state.guests);
+    pieEl.checked = state.pie;
+
+    function readFields() {
+      var d = dinnerEl.value || "16:00";
+      var g = parseInt(guestsEl.value, 10);
+      if (isNaN(g) || g < 2) g = 2;
+      if (g > 40) g = 40;
+      state.dinner = d;
+      state.guests = g;
+      state.pie = !!pieEl.checked;
+      save();
+      render();
+    }
+    dinnerEl.addEventListener("change", readFields);
+    dinnerEl.addEventListener("input", readFields);
+    guestsEl.addEventListener("change", readFields);
+    guestsEl.addEventListener("input", readFields);
+    pieEl.addEventListener("change", readFields);
+
+    render();
+    bindChecks(document.getElementById("tonight"));
+    bindChecks(document.getElementById("today"));
+    bindChecks(document.getElementById("shop"));
+
+    var openBtn = document.getElementById("swTalkOpen");
+    var form = document.getElementById("swAskForm");
+    var input = document.getElementById("swAskInput");
+    var sendBtn = document.getElementById("swAskSend");
+    var statusEl = document.getElementById("swAskStatus");
+    var done = document.getElementById("swAskDone");
+    var again = document.getElementById("swAskAgain");
+
+    function resetForm() {
+      form.hidden = false;
+      if (done) done.hidden = true;
+      statusEl.textContent = "";
+      statusEl.classList.remove("is-error");
+      sendBtn.disabled = false;
+      sendBtn.textContent = "Send";
+    }
+    if (openBtn) {
+      openBtn.addEventListener("click", function () {
+        document.getElementById("talk").scrollIntoView({ behavior: "smooth", block: "start" });
+        resetForm();
+        setTimeout(function () { input.focus(); }, 300);
+      });
+    }
+    if (again) again.addEventListener("click", function () {
+      input.value = "";
+      resetForm();
+      input.focus();
+    });
+    form.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      var text = (input.value || "").trim();
+      if (!text) {
+        statusEl.textContent = "Type a short message first.";
+        statusEl.classList.add("is-error");
+        input.focus();
+        return;
+      }
+      if (typeof window.swTalk !== "function") {
+        statusEl.textContent = "The send path is not ready yet. Please try again in a moment.";
+        statusEl.classList.add("is-error");
+        return;
+      }
+      sendBtn.disabled = true;
+      sendBtn.textContent = "Sending…";
+      statusEl.textContent = "";
+      statusEl.classList.remove("is-error");
+      window.swTalk({ from: "Taina", text: text }).then(function (res) {
+        if (res && res.ok === false) throw new Error(res.error || "send failed");
+        form.hidden = true;
+        if (done) done.hidden = false;
+        sendBtn.disabled = false;
+        sendBtn.textContent = "Send";
+      }).catch(function () {
+        sendBtn.disabled = false;
+        sendBtn.textContent = "Send";
+        statusEl.textContent = "That didn’t go through. Please try again.";
+        statusEl.classList.add("is-error");
+      });
+    });
+  })();
+  </script>
+</body>
+</html>
