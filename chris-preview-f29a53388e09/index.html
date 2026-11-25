@@ -1455,6 +1455,82 @@
     }
     .sw-drawer[hidden] { display: none; }
     body.sw-drawer-open #fab { opacity: 0; pointer-events: none; }
+
+    /* ===== Server-backed "From Jim" messages panel (cross-device) ===== */
+    .jim-panel {
+      margin: 0 0 16px;
+      padding: 14px;
+      border-radius: 14px;
+      background: #0D1F38;
+      border: 1.5px solid #2A4A7A;
+    }
+    .jim-panel[hidden] { display: none; }
+    .jim-panel-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    .jim-panel-kicker {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--cyan);
+    }
+    .jim-panel-live {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--muted);
+    }
+    .jim-posts { display: grid; gap: 10px; }
+    .jim-post {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px 14px;
+    }
+    .jim-post-who {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+    .jim-post-time {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 400;
+      color: var(--muted);
+      margin-left: auto;
+    }
+    .jim-post-text {
+      font-size: 15px;
+      line-height: 1.5;
+      color: var(--ink);
+      margin: 0;
+    }
+    .jim-post-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 9px;
+      padding: 8px 12px;
+      border-radius: 10px;
+      background: rgba(34, 211, 238, 0.12);
+      border: 1px solid rgba(34, 211, 238, 0.45);
+      color: var(--cyan);
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      word-break: break-word;
+    }
+    .jim-post-link:hover { background: rgba(34, 211, 238, 0.2); }
+
     .sw-drawer-head {
       display: flex;
       align-items: center;
@@ -1959,6 +2035,13 @@
           <span class="person"><span class="av j">J</span>Jim</span>
           <span class="person"><span class="av a">A</span>Angel</span>
           <span class="person"><span class="av s">S</span>Chris's SuperWho</span>
+        </div>
+        <div class="jim-panel" id="fromJimPanel" hidden role="region" aria-labelledby="fromJimHeading">
+          <div class="jim-panel-head">
+            <span class="jim-panel-kicker" id="fromJimHeading">From Jim</span>
+            <span class="jim-panel-live">All devices</span>
+          </div>
+          <div class="jim-posts" id="fromJimPosts"></div>
         </div>
         <div class="thread" id="thread">
           <p class="thread-empty" id="threadEmpty">No messages yet. When you write one, it's saved for the team.</p>
@@ -2480,14 +2563,72 @@
           if (text != null) n.textContent = text;
           return n;
         }
+        var hiddenIds = { "chris-5054280d5eeb": 1 };
+        function isHiddenEntry(en) {
+          if (!en) return true;
+          if (String(en.status || "").toLowerCase() === "ignored") return true;
+          if (en.id && hiddenIds[en.id]) return true;
+          return false;
+        }
+        function renderFromJim(posts) {
+          var panel = $("fromJimPanel");
+          var box = $("fromJimPosts");
+          if (!panel || !box) return;
+          box.innerHTML = "";
+          var items = Array.isArray(posts) ? posts : [];
+          if (!items.length) { panel.hidden = true; return; }
+          items.forEach(function (p) {
+            if (!p || !p.text) return;
+            var card = el("div", "jim-post");
+            var who = el("div", "jim-post-who");
+            who.appendChild(el("span", "av j", (p.author || "J").charAt(0).toUpperCase()));
+            who.appendChild(el("span", "", p.author || "Jim"));
+            if (p.sentAt) who.appendChild(el("span", "jim-post-time", p.sentAt));
+            card.appendChild(who);
+            card.appendChild(el("p", "jim-post-text", p.text));
+            if (p.link && /^https:\/\//i.test(String(p.link))) {
+              var a = document.createElement("a");
+              a.className = "jim-post-link";
+              a.href = p.link;
+              a.target = "_blank";
+              a.rel = "noopener noreferrer";
+              a.textContent = p.linkLabel || p.link;
+              card.appendChild(a);
+            }
+            box.appendChild(card);
+          });
+          panel.hidden = !box.children.length;
+        }
+        function loadFromJim() {
+          fetch("from-jim.json?t=" + Date.now(), { cache: "no-store", credentials: "omit" })
+            .then(function (r) { return r.ok ? r.json() : null; })
+            .then(function (data) {
+              if (!data) return;
+              if (Array.isArray(data.hiddenIds)) {
+                data.hiddenIds.forEach(function (id) { if (id) hiddenIds[String(id)] = 1; });
+                var cur = list();
+                var kept = cur.filter(function (en) { return !isHiddenEntry(en); });
+                if (kept.length !== cur.length) { store(kept); render(); }
+              }
+              renderFromJim(data.posts || []);
+            })
+            .catch(function () {});
+        }
         function render() {
           var thread = $("thread");
           if (!thread) return;
-          var l = list();
+          var l = list().filter(function (en) { return !isHiddenEntry(en); });
           var empty = $("threadEmpty");
-          if (!l.length) return;
-          if (empty) empty.remove();
           thread.querySelectorAll("[data-rb]").forEach(function (n) { n.remove(); });
+          if (!l.length) {
+            if (!empty) {
+              var p = el("p", "thread-empty", "No messages yet. When you write one, it's saved for the team.");
+              p.id = "threadEmpty";
+              thread.appendChild(p);
+            }
+            return;
+          }
+          if (empty) empty.remove();
           l.forEach(function (en) {
             var mine = el("div", "bubble");
             mine.setAttribute("data-rb", "1");
@@ -2522,7 +2663,7 @@
         function poll() {
           if (!SUBMIT_URL || polling) return;
           if (document.visibilityState && document.visibilityState === "hidden") return;
-          var ids = list().filter(function (en) { return en.id; }).map(function (en) { return en.id; }).slice(-50);
+          var ids = list().filter(function (en) { return en.id && !isHiddenEntry(en); }).map(function (en) { return en.id; }).slice(-50);
           if (!ids.length) return;
           polling = true;
           post({ action: "status", key: SHARED_KEY, ids: ids }).then(function (res) {
@@ -2536,10 +2677,16 @@
                 en.progress = it.progress || ""; en.reply = it.reply || ""; en.status = it.status; changed = true;
               }
             });
-            if (changed) { store(l); render(); }
+            var filtered = l.filter(function (en) { return !isHiddenEntry(en); });
+            if (filtered.length !== l.length) changed = true;
+            if (changed) { store(filtered); render(); }
           }).catch(function () {}).then(function () { polling = false; });
         }
         render();
+        loadFromJim();
+        setInterval(loadFromJim, POLL_MS);
+        window.addEventListener("focus", loadFromJim);
+        document.addEventListener("visibilitychange", function () { if (document.visibilityState === "visible") loadFromJim(); });
         setInterval(poll, POLL_MS);
         window.addEventListener("focus", poll);
         document.addEventListener("visibilitychange", function () { if (document.visibilityState === "visible") poll(); });
