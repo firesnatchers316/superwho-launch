@@ -2229,7 +2229,7 @@
         <div class="wow-item">
           <div class="badge" style="background:var(--green)">Ready now</div>
           <h3>Your Skool groups, handled</h3>
-          <p>Posts, member questions, and engagement get handled so you don't have to. Your Skool management SuperWho is ready to begin building your page for Dr. Jill and to manage for Dr. Gina.</p>
+          <p>Posts, member questions, and engagement get handled so you don't have to. Your Skool management SuperWho is ready to begin building your page for Dr. Jill once she approves our pending request, and to manage for Dr. Gina once we're added as an admin.</p>
         </div>
         <div class="wow-item">
           <div class="badge" style="background:var(--green)">Ready now</div>
@@ -2667,9 +2667,11 @@
           return;
         }
 
-        pointTo(doneBtn);
+        if (hint) hint.hidden = true;
+        copyBtn.classList.remove("is-next");
+        doneBtn.classList.add("is-next");
         copyBtn.addEventListener("click", function () {
-          pointTo(doneBtn);
+          doneBtn.classList.add("is-next");
         });
 
         doneBtn.addEventListener("click", function () {
