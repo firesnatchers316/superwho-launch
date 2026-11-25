@@ -1569,7 +1569,8 @@
       padding: 14px;
     }
     .sw-drawer[hidden] { display: none; }
-    body.sw-drawer-open #fab { opacity: 0; pointer-events: none; }
+    body.sw-drawer-open #fab,
+    body.sw-voice-live #fab { opacity: 0; pointer-events: none; }
 
     /* ===== Server-backed "From Jim" messages panel (cross-device) ===== */
     .jim-panel {
@@ -3142,18 +3143,26 @@
         function envelopeAt(t) {
           if (!ENV || !ENV.samples || !ENV.samples.length) return 0;
           var i = Math.round((t * 1000) / (ENV.hopMs || 20));
-          i = Math.max(0, Math.min(ENV.samples.length - 1, i));
-          return ENV.samples[i] / 255;
+          var peak = 0, r = 3;
+          for (var k = i - r; k <= i + r; k++) {
+            if (k >= 0 && k < ENV.samples.length) peak = Math.max(peak, ENV.samples[k] / 255);
+          }
+          return peak;
         }
 
+        var peakHold = 0;
         function currentLevel() {
+          var env = envelopeAt(video.currentTime || 0);
+          var live = 0;
           if (audioHooked && analyser && freqData && !video.paused) {
             analyser.getByteFrequencyData(freqData);
             var sum = 0, n = Math.min(freqData.length, 48);
             for (var i = 0; i < n; i++) sum += freqData[i];
-            return Math.min(1, (sum / (n * 255)) * 1.55);
+            live = Math.min(1, (sum / (n * 255)) * 1.55);
           }
-          return envelopeAt(video.currentTime || 0);
+          var raw = Math.max(live, env);
+          peakHold = Math.max(raw, peakHold * 0.84);
+          return peakHold;
         }
 
         function drawSiriWave(level, speaker) {
@@ -3210,7 +3219,7 @@
         function applyGlow(level, speaker) {
           var color = COLORS[speaker] || "#22D3EE";
           if (nowWrap) {
-            nowWrap.style.setProperty("--sw-level", String(0.2 + level * 0.95));
+            nowWrap.style.setProperty("--sw-level", String(0.35 + level * 0.85));
             nowWrap.style.setProperty("--sw-glow", color);
           }
           if (nowAv) {
@@ -3269,16 +3278,16 @@
           if (!capText) return;
           var spans = capText.querySelectorAll(".sw-word");
           if (!spans.length) return;
-          var active = -1;
+          var active = -1, lastPast = -1;
           for (var i = 0; i < spans.length; i++) {
             var s = parseFloat(spans[i].getAttribute("data-start"));
             var e = parseFloat(spans[i].getAttribute("data-end"));
-            if (t >= s - 0.02 && t <= e + 0.06) active = i;
-            else if (active === -1 && t >= s) active = i;
+            if (t >= s - 0.02 && t <= e + 0.08) active = i;
+            if (t >= e + 0.08) lastPast = i;
           }
           for (var j = 0; j < spans.length; j++) {
             spans[j].classList.toggle("is-on", j === active);
-            spans[j].classList.toggle("is-past", active !== -1 && j < active);
+            spans[j].classList.toggle("is-past", active === -1 ? j <= lastPast : j < active);
           }
         }
 
@@ -3325,6 +3334,7 @@
           var live = !!speaker;
           if (rosterEl) rosterEl.classList.toggle("is-live", live);
           if (shellEl) shellEl.classList.toggle("is-live", live);
+          document.body.classList.toggle("sw-voice-live", live);
           rosterBtns.forEach(function (btn) {
             var name = btn.getAttribute("data-agent");
             var on = speaker && name === speaker;
