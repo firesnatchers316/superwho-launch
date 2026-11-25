@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0B1A2E">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="SuperWho">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon-180.png">
+  <title>SuperWho app setup · test</title>
+  <style>
+    :root {
+      --navy: #0B1A2E; --card: #122640; --blue: #3D6BFF; --cyan: #22D3EE;
+      --green: #22C55E; --amber: #FBBF24; --ink: #F3F5F8; --muted: #9FB0C8;
+      --track: #0A1424; --line: #1E3352;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Schibsted Grotesk", sans-serif;
+      --mono: ui-monospace, "IBM Plex Mono", SFMono-Regular, Menlo, monospace;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: var(--navy); color: var(--ink); font-family: var(--sans); -webkit-text-size-adjust: 100%; }
+    body { padding: 20px 20px 64px; padding-left: max(20px, env(safe-area-inset-left)); padding-right: max(20px, env(safe-area-inset-right)); padding-bottom: max(64px, env(safe-area-inset-bottom)); }
+    .wrap { max-width: 680px; margin: 0 auto; }
+    .banner { font-family: var(--mono); font-size: 11px; letter-spacing: 1.4px; text-transform: uppercase; text-align: center; color: var(--amber); background: #1A2740; border-bottom: 1px solid var(--line); margin: -20px -20px 20px; margin-left: calc(0px - max(20px, env(safe-area-inset-left))); margin-right: calc(0px - max(20px, env(safe-area-inset-right))); padding: 8px 16px; padding-top: max(8px, env(safe-area-inset-top)); }
+    .brand { font-family: var(--mono); font-size: 12px; font-weight: 600; letter-spacing: 2px; color: var(--cyan); text-transform: uppercase; margin: 8px 0 18px; }
+    .sw-name { text-transform: none; font-variant: small-caps; font-variant-caps: small-caps; }
+    h1 { font-size: 28px; letter-spacing: -0.03em; line-height: 1.15; margin: 0 0 10px; }
+    .lead { font-size: 16px; line-height: 1.5; color: var(--muted); margin: 0 0 22px; }
+    .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 18px 16px; margin: 0 0 18px; }
+    .kicker { font-family: var(--mono); font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--cyan); margin: 0 0 6px; }
+    .push-onboard, .push-card { background: linear-gradient(155deg, rgba(61,107,255,0.14), rgba(18,38,64,0.96)); border: 1px solid rgba(34,211,238,0.34); border-radius: 16px; padding: 18px 16px; margin: 0 0 20px; }
+    .push-head { margin: 0 0 6px; font-size: 20px; font-weight: 700; line-height: 1.25; letter-spacing: -0.02em; }
+    .push-sub { margin: 0 0 14px; font-size: 15px; line-height: 1.45; color: var(--muted); }
+    .push-tabs { display: inline-flex; gap: 4px; background: var(--track); border: 1px solid var(--line); border-radius: 10px; padding: 3px; margin: 0 0 12px; }
+    .push-tab { appearance: none; border: 0; background: transparent; color: var(--muted); font-family: var(--sans); font-size: 13px; font-weight: 600; padding: 7px 11px; border-radius: 7px; cursor: pointer; }
+    .push-tab[aria-selected="true"] { background: var(--blue); color: #fff; }
+    .push-steps { margin: 0 0 14px; padding: 0 0 0 20px; font-size: 15px; line-height: 1.45; }
+    .push-steps li { margin: 0 0 6px; }
+    .pill { display: inline-block; padding: 0 6px; border-radius: 5px; background: var(--track); border: 1px solid var(--line); font-family: var(--mono); font-size: 12px; }
+    .push-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+    .push-btn, .btn { appearance: none; border: 0; border-radius: 12px; background: var(--blue); color: #fff; font-family: var(--sans); font-size: 15px; font-weight: 650; padding: 12px 18px; min-height: 46px; cursor: pointer; }
+    .push-btn:disabled, .btn:disabled { opacity: 0.55; cursor: default; }
+    .push-btn-ghost { appearance: none; border: 1px solid var(--line); border-radius: 10px; background: transparent; color: var(--ink); font-family: var(--sans); font-size: 14px; font-weight: 600; padding: 9px 13px; cursor: pointer; }
+    .push-guide-link { color: var(--cyan); font-size: 14px; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+    .push-link-muted { appearance: none; border: 0; background: transparent; color: var(--muted); font-family: var(--sans); font-size: 13px; text-decoration: underline; cursor: pointer; padding: 4px 0; }
+    .push-status-pill { display: inline-flex; align-items: center; gap: 7px; padding: 5px 11px; border-radius: 999px; background: rgba(34,197,94,0.14); border: 1px solid rgba(34,197,94,0.45); color: var(--green); font-family: var(--mono); font-size: 12px; font-weight: 600; }
+    .push-status-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); }
+    .push-note { margin: 10px 0 0; font-size: 13px; line-height: 1.4; color: var(--muted); }
+    .thread { background: var(--track); border: 1px solid var(--line); border-radius: 12px; padding: 12px; min-height: 80px; margin: 0 0 12px; }
+    .bubble { background: #1A3358; border-radius: 12px; padding: 10px 12px; margin: 0 0 10px; }
+    .bubble.them { background: #17324A; }
+    .bubble p { margin: 0 0 6px; font-size: 15px; line-height: 1.4; }
+    .bubble p:last-child { margin: 0; }
+    .who { font-size: 12px; color: var(--cyan); font-weight: 600; margin: 0 0 6px; }
+    .meta { font-size: 12px; color: var(--muted); margin-top: 6px; }
+    .composer { display: flex; gap: 8px; }
+    textarea { flex: 1; background: var(--track); border: 1px solid var(--line); border-radius: 12px; color: var(--ink); font-family: var(--sans); font-size: 16px; padding: 12px; min-height: 52px; resize: vertical; }
+    .save-note { font-size: 13px; color: var(--muted); min-height: 18px; }
+    footer { text-align: center; color: var(--muted); font-size: 13px; margin-top: 28px; }
+  </style>
+</head>
+<body>
+  <div class="banner">SuperWho test page · not a client workspace</div>
+  <div class="wrap">
+    <div class="brand"><span class="sw-name">SuperWho</span> · App setup test</div>
+    <h1>Set up your SuperWho app without an App Store download.</h1>
+    <p class="lead">It's simple and gets you going in just 90 seconds. You'll also have a SuperWho app icon on your phone for easy access to your SuperWho page or dashboard — and you'll hear from your team the moment something's ready.</p>
+
+    <div class="push-onboard" id="welcome-push" data-push-widget="welcome">
+      <p class="kicker">90-second app setup</p>
+      <h2 class="push-head">Add SuperWho to your phone, then turn on alerts.</h2>
+      <p class="push-sub">This is a test page. Once phone alerts are on, send a message below — you'll get a test reply and a real phone ping.</p>
+      <div class="push-mount"></div>
+    </div>
+
+    <div class="card" id="messages">
+      <p class="kicker">Messages</p>
+      <h2 class="push-head" style="font-size:20px">Try the full loop</h2>
+      <p class="push-sub">Write anything and send it. SuperWho posts a test reply and pings your phone.</p>
+      <div class="thread" id="thread">
+        <p class="meta" id="threadEmpty">No messages yet.</p>
+      </div>
+      <form class="composer" id="composer">
+        <label class="sr-only" for="mtext" style="position:absolute;left:-9999px">Write a message</label>
+        <textarea id="mtext" rows="2" placeholder="Write a test message"></textarea>
+        <button class="btn" type="submit" id="msend">Send</button>
+      </form>
+      <p class="save-note" id="mSaved" aria-live="polite"></p>
+    </div>
+
+    <footer><strong>SuperWho</strong> · FireSnatchers · test only</footer>
+  </div>
+
+  <script src="config.js"></script>
+  <script>
+  (function () {
+    var cfg = window.SW_PUSH_CONFIG || {};
+    if (!cfg.vapidPublicKey) return;
+    var PREFIX = cfg.storagePrefix || 'sw-push';
+    var SENT_KEY = PREFIX + '-sent';
+
+    function getDeviceId() {
+      var id = '';
+      try { id = localStorage.getItem('swDeviceId') || ''; } catch (e) {}
+      if (!id) {
+        id = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() : ('d' + Date.now().toString(36));
+        try { localStorage.setItem('swDeviceId', id); } catch (e) {}
+      }
+      return id;
+    }
+    function detectPlatform() {
+      var ua = navigator.userAgent || '';
+      if (/iPhone|iPad|iPod/.test(ua)) return 'iphone';
+      if (/Android/.test(ua)) return 'android';
+      return 'desktop';
+    }
+    function isStandalone() {
+      return !!(window.navigator.standalone || (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches));
+    }
+    function urlBase64ToUint8Array(base64String) {
+      var padding = '='.repeat((4 - (base64String.length % 4)) % 4);
+      var base64 = (base64String + padding).replace(/-/g, '+').replace(/_/g, '/');
+      var rawData = atob(base64);
+      var outputArray = new Uint8Array(rawData.length);
+      for (var i = 0; i < rawData.length; ++i) outputArray[i] = rawData.charCodeAt(i);
+      return outputArray;
+    }
+    function post(payload) {
+      if (!cfg.submitUrl) return Promise.reject(new Error('no url'));
+      payload.key = cfg.sharedKey;
+      return fetch(cfg.submitUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(payload)
+      }).then(function (r) { return r.json(); });
+    }
+
+    var state = {
+      selectedTab: detectPlatform(),
+      realPlatform: detectPlatform(),
+      standalone: isStandalone(),
+      supported: ('serviceWorker' in navigator && 'PushManager' in window && 'Notification' in window),
+      permission: (typeof Notification !== 'undefined' && Notification.permission) ? Notification.permission : 'default',
+      subscribed: false,
+      busy: false,
+      statusMsg: '',
+      reg: null
+    };
+
+    function stepsHtml(tab) {
+      if (tab === 'iphone') {
+        return '<ol class="push-steps">' +
+          '<li>Tap <span class="pill">Share □↑</span> at the bottom of Safari.</li>' +
+          '<li>Tap <span class="pill">Add to Home Screen</span> → <span class="pill">Add</span>.</li>' +
+          '<li>Open the new <span class="pill">SuperWho</span> icon and tap <strong>Turn on notifications</strong>.</li>' +
+        '</ol>';
+      }
+      if (tab === 'android') {
+        return '<ol class="push-steps">' +
+          '<li>Tap <strong>Turn on notifications</strong> below, then tap <span class="pill">Allow</span>.</li>' +
+          '<li>Optional: tap Chrome’s <span class="pill">Install app</span> (or <span class="pill">⋮</span> → Add to Home screen).</li>' +
+        '</ol>';
+      }
+      return '<ol class="push-steps">' +
+        '<li>Click <strong>Turn on notifications</strong> below, then choose <span class="pill">Allow</span>.</li>' +
+        '<li>Open this page on your phone too so you can test a real lock-screen ping.</li>' +
+      '</ol>';
+    }
+
+    function enablePush() {
+      if (!state.supported) {
+        state.statusMsg = (state.realPlatform === 'iphone' && !state.standalone)
+          ? 'First add this page to your Home Screen (steps 1–2 above), then open the SuperWho icon.'
+          : 'Notifications are not supported in this browser.';
+        renderAll();
+        return;
+      }
+      state.busy = true; state.statusMsg = ''; renderAll();
+      Notification.requestPermission().then(function (perm) {
+        state.permission = perm;
+        if (perm !== 'granted') {
+          state.busy = false;
+          state.statusMsg = perm === 'denied'
+            ? 'Permission was blocked. Allow notifications in your browser or phone settings, then try again.'
+            : 'Tap Allow when asked so SuperWho can alert you.';
+          renderAll();
+          return;
+        }
+        return (state.reg ? Promise.resolve(state.reg) : navigator.serviceWorker.register('./sw.js', { scope: './' })).then(function (reg) {
+          state.reg = reg;
+          return reg.pushManager.getSubscription().then(function (existing) {
+            if (existing) return existing;
+            return reg.pushManager.subscribe({
+              userVisibleOnly: true,
+              applicationServerKey: urlBase64ToUint8Array(cfg.vapidPublicKey)
+            });
+          });
+        }).then(function (sub) {
+          return post({
+            action: 'push_subscribe',
+            subscription: sub.toJSON(),
+            platform: state.realPlatform + (state.standalone ? '-app' : ''),
+            deviceId: getDeviceId()
+          });
+        }).then(function (res) {
+          state.busy = false;
+          if (res && res.ok) {
+            state.subscribed = true;
+            state.statusMsg = "You're all set. Send a test message below, or tap Send a live test ping.";
+          } else {
+            state.statusMsg = 'Could not save alert setup. Please try again.';
+          }
+          renderAll();
+        });
+      }).catch(function () {
+        state.busy = false;
+        state.statusMsg = 'Could not turn on alerts here. Open the 90-second guide for quick steps.';
+        renderAll();
+      });
+    }
+
+    function liveTestPing() {
+      state.busy = true; renderAll();
+      post({ action: 'push_selftest', text: 'If you see this on your phone, push alerts are working.' }).then(function (res) {
+        state.busy = false;
+        var sent = res && res.result && res.result.sent;
+        state.statusMsg = sent ? 'Live test ping sent. Check your lock screen.' :
+          (res && res.result && res.result.reason === 'no active subscriptions'
+            ? 'No saved subscription yet. Turn on notifications first.'
+            : 'Ping was sent, but your device may not have received it.');
+        renderAll();
+      }).catch(function () {
+        state.busy = false;
+        state.statusMsg = 'Could not reach the test service. Try again in a moment.';
+        renderAll();
+      });
+    }
+
+    function renderMount(mount) {
+      mount.innerHTML = '';
+      if (state.subscribed && state.permission === 'granted') {
+        var pill = document.createElement('div');
+        pill.className = 'push-status-pill';
+        pill.innerHTML = '<span class="push-status-dot"></span><span>Phone alerts are on</span>';
+        mount.appendChild(pill);
+        var act = document.createElement('div');
+        act.className = 'push-actions';
+        act.style.marginTop = '12px';
+        var live = document.createElement('button');
+        live.type = 'button'; live.className = 'push-btn'; live.disabled = state.busy;
+        live.textContent = state.busy ? 'Sending…' : 'Send a live test ping';
+        live.addEventListener('click', liveTestPing);
+        act.appendChild(live);
+        if (cfg.guideUrl) {
+          var g = document.createElement('a');
+          g.className = 'push-guide-link';
+          g.href = cfg.guideUrl + (cfg.guideUrl.indexOf('?') >= 0 ? '&' : '?') + 'device=' + encodeURIComponent(state.selectedTab);
+          g.textContent = '90-second video & guide →';
+          act.appendChild(g);
+        }
+        mount.appendChild(act);
+        if (state.statusMsg) {
+          var p = document.createElement('p'); p.className = 'push-note'; p.textContent = state.statusMsg; mount.appendChild(p);
+        }
+        return;
+      }
+      var tabs = document.createElement('div');
+      tabs.className = 'push-tabs'; tabs.setAttribute('role', 'tablist');
+      [['iphone','iPhone'],['android','Android'],['desktop','Computer']].forEach(function (pair) {
+        var b = document.createElement('button');
+        b.type = 'button'; b.className = 'push-tab'; b.setAttribute('role', 'tab');
+        b.setAttribute('aria-selected', state.selectedTab === pair[0] ? 'true' : 'false');
+        b.textContent = pair[1];
+        b.addEventListener('click', function () { state.selectedTab = pair[0]; renderAll(); });
+        tabs.appendChild(b);
+      });
+      mount.appendChild(tabs);
+      var steps = document.createElement('div'); steps.innerHTML = stepsHtml(state.selectedTab); mount.appendChild(steps);
+      var act = document.createElement('div'); act.className = 'push-actions';
+      var btn = document.createElement('button');
+      btn.type = 'button'; btn.className = 'push-btn'; btn.disabled = state.busy;
+      var needHome = (state.realPlatform === 'iphone' && !state.standalone && !state.supported);
+      btn.textContent = state.busy ? 'Turning on…' : (needHome ? 'Already on Home Screen? Turn on alerts' : 'Turn on notifications');
+      btn.addEventListener('click', enablePush);
+      act.appendChild(btn);
+      if (cfg.guideUrl) {
+        var guide = document.createElement('a');
+        guide.className = 'push-guide-link';
+        guide.href = cfg.guideUrl + (cfg.guideUrl.indexOf('?') >= 0 ? '&' : '?') + 'device=' + encodeURIComponent(state.selectedTab);
+        guide.textContent = '90-second video & guide →';
+        act.appendChild(guide);
+      }
+      mount.appendChild(act);
+      if (state.statusMsg) {
+        var note = document.createElement('p'); note.className = 'push-note'; note.textContent = state.statusMsg; mount.appendChild(note);
+      } else if (state.realPlatform === 'iphone' && !state.standalone) {
+        var hint = document.createElement('p'); hint.className = 'push-note';
+        hint.textContent = 'On iPhone, notifications activate as soon as you open the SuperWho icon from your Home Screen.';
+        mount.appendChild(hint);
+      }
+    }
+    function renderAll() {
+      document.querySelectorAll('[data-push-widget]').forEach(function (box) {
+        var mount = box.querySelector('.push-mount');
+        if (mount) renderMount(mount);
+      });
+    }
+
+    function loadSent() {
+      try { return JSON.parse(localStorage.getItem(SENT_KEY) || '[]'); } catch (e) { return []; }
+    }
+    function saveSent(list) { try { localStorage.setItem(SENT_KEY, JSON.stringify(list)); } catch (e) {} }
+    function renderThread() {
+      var thread = document.getElementById('thread');
+      var list = loadSent();
+      thread.innerHTML = '';
+      if (!list.length) {
+        var empty = document.createElement('p'); empty.className = 'meta'; empty.id = 'threadEmpty'; empty.textContent = 'No messages yet.';
+        thread.appendChild(empty); return;
+      }
+      list.forEach(function (en) {
+        var mine = document.createElement('div'); mine.className = 'bubble';
+        var p = document.createElement('p'); p.textContent = en.text || ''; mine.appendChild(p);
+        var meta = document.createElement('div'); meta.className = 'meta'; meta.textContent = 'You · ' + (en.receivedAt || 'sending…');
+        mine.appendChild(meta); thread.appendChild(mine);
+        if (en.reply) {
+          var them = document.createElement('div'); them.className = 'bubble them';
+          var who = document.createElement('div'); who.className = 'who'; who.textContent = 'SuperWho';
+          them.appendChild(who);
+          var rp = document.createElement('p'); rp.textContent = en.reply; them.appendChild(rp);
+          thread.appendChild(them);
+        }
+      });
+    }
+    function poll() {
+      var ids = loadSent().filter(function (e) { return e.id; }).map(function (e) { return e.id; });
+      if (!ids.length || !cfg.submitUrl) return;
+      post({ action: 'status', ids: ids }).then(function (res) {
+        var byId = {};
+        (res.items || []).forEach(function (it) { byId[it.id] = it; });
+        var list = loadSent(), changed = false;
+        list.forEach(function (en) {
+          var it = en.id && byId[en.id];
+          if (!it) return;
+          if ((it.reply || '') !== (en.reply || '')) { en.reply = it.reply; changed = true; }
+        });
+        if (changed) { saveSent(list); renderThread(); }
+      }).catch(function () {});
+    }
+
+    document.getElementById('composer').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var text = document.getElementById('mtext').value.trim();
+      if (!text) return;
+      document.getElementById('mtext').value = '';
+      var list = loadSent();
+      var entry = { text: text, pending: true };
+      list.push(entry); saveSent(list); renderThread();
+      post({ kind: 'message', from: 'Jim', text: text, sentAt: new Date().toISOString() }).then(function (res) {
+        entry.id = res.id; entry.receivedAt = res.receivedAt; entry.pending = false;
+        if (res.autoReply) {
+          /* Status poll will pick up the reply in a moment. */
+        }
+        saveSent(list);
+        document.getElementById('mSaved').textContent = 'Sent. A test reply (and phone ping) should follow.';
+        setTimeout(poll, 600);
+        setTimeout(poll, 2000);
+      }).catch(function () {
+        document.getElementById('mSaved').textContent = "Couldn't send. Check your connection and try again.";
+      });
+    });
+
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js', { scope: './' }).then(function (reg) {
+        state.reg = reg;
+        return reg.pushManager && reg.pushManager.getSubscription();
+      }).then(function (sub) {
+        state.subscribed = !!sub;
+        state.permission = (typeof Notification !== 'undefined') ? Notification.permission : 'default';
+        renderAll();
+      }).catch(function () { renderAll(); });
+      navigator.serviceWorker.addEventListener('message', function (ev) {
+        if (ev.data && ev.data.type === 'superwho-push-open') {
+          var m = document.getElementById('messages');
+          if (m && m.scrollIntoView) m.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          poll();
+        }
+      });
+    } else {
+      renderAll();
+    }
+    renderThread();
+  })();
+  </script>
+</body>
+</html>
