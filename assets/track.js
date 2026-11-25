@@ -126,4 +126,45 @@
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
   else boot();
+
+  /**
+   * Send a Talk-to message through the same engagement receiver
+   * already used for page-open beacons. No additional URL or key.
+   * Returns a promise of { ok, id, test, status } when readable.
+   */
+  window.swTalk = function (opts) {
+    opts = opts || {};
+    var text = String(opts.text || "").trim();
+    var page = String((opts.page || PAGE || "")).toLowerCase().trim();
+    if (!URL || !page || !text) {
+      return Promise.reject(new Error("missing"));
+    }
+    var test = isTest();
+    if (opts.test === true) test = true;
+    var body = JSON.stringify({
+      action: "talk",
+      page: page,
+      slug: SLUG || "",
+      from: String(opts.from || "").trim(),
+      text: text.slice(0, 4000),
+      sentAt: new Date().toISOString(),
+      device: deviceId(),
+      ua: uaFamily(),
+      deviceType: deviceType(),
+      test: test
+    });
+    return fetch(URL, {
+      method: "POST",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: body,
+      credentials: "omit",
+      redirect: "follow"
+    }).then(function (r) {
+      return r.json().catch(function () { return {}; }).then(function (j) {
+        if (j && j.ok) return j;
+        if (!r.ok) throw new Error((j && j.error) || "send failed");
+        return j && Object.keys(j).length ? j : { ok: true, test: test };
+      });
+    });
+  };
 })();
