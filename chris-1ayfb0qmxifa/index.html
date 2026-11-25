@@ -1528,11 +1528,160 @@
     .sw-caption-box[data-speaker="Maya"] { --sw-word-glow: #22D3EE; }
     .sw-caption-box[data-speaker="Reed"] { --sw-word-glow: #22C55E; }
     .sw-caption-box[data-speaker="Olivia"] { --sw-word-glow: #FBBF24; }
+
+    /* ===== Orb decorations (preview): Maya SM orbit, Reed Skool orbit, Olivia galaxy ===== */
+    .sw-orbit {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 2;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.4s ease, visibility 0.4s ease;
+    }
+    .sw-now-av-wrap[data-agent="Maya"] .sw-orbit-maya,
+    .sw-now-av-wrap[data-agent="Reed"] .sw-orbit-reed {
+      opacity: 1;
+      visibility: visible;
+    }
+    .sw-orbit-spin {
+      position: absolute;
+      inset: 0;
+      animation: swOrbitSpin 24s linear infinite;
+      will-change: transform;
+    }
+    .sw-orbit-reed .sw-orbit-spin {
+      animation-duration: 32s;
+      animation-direction: reverse;
+    }
+    .sw-orbit-item {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 26px;
+      height: 26px;
+      margin: -13px 0 0 -13px;
+      transform: rotate(calc(var(--i) * 1deg)) translateY(-64px);
+    }
+    .sw-orbit-reed .sw-orbit-item {
+      width: 54px;
+      height: 22px;
+      margin: -11px 0 0 -27px;
+      transform: rotate(calc(var(--i) * 1deg)) translateY(-64px);
+    }
+    .sw-orbit-fix {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      place-items: center;
+      transform: rotate(calc(var(--i) * -1deg));
+    }
+    .sw-orbit-face {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(11, 26, 46, 0.92);
+      border: 1.5px solid color-mix(in srgb, var(--sw-glow, #22D3EE) 75%, #fff);
+      box-shadow: 0 0 10px color-mix(in srgb, var(--sw-glow, #22D3EE) 50%, transparent);
+      color: var(--sw-glow, #22D3EE);
+      animation: swOrbitFace 24s linear infinite;
+      will-change: transform;
+    }
+    .sw-orbit-reed .sw-orbit-face {
+      animation-duration: 32s;
+      animation-direction: reverse;
+      border-radius: 7px;
+      background: #0A0A0A;
+      color: #F4F5F5;
+      border-color: color-mix(in srgb, var(--green) 70%, #fff);
+      box-shadow: 0 0 10px color-mix(in srgb, var(--green) 45%, transparent);
+    }
+    .sw-orbit-face svg {
+      width: 15px;
+      height: 15px;
+      display: block;
+    }
+    .sw-skool-mark {
+      font-family: var(--sans);
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 0.02em;
+      line-height: 1;
+      color: #F4F5F5;
+      text-transform: lowercase;
+      transform: translateY(0.5px);
+    }
+    @keyframes swOrbitSpin {
+      to { transform: rotate(360deg); }
+    }
+    @keyframes swOrbitFace {
+      to { transform: rotate(-360deg); }
+    }
+
+    .sw-now-letter {
+      position: relative;
+      z-index: 1;
+      line-height: 1;
+      transition: opacity 0.35s ease;
+    }
+    .sw-olivia-core {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 2;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.4s ease, visibility 0.4s ease;
+    }
+    .sw-now-av-wrap[data-agent="Olivia"] .sw-olivia-core {
+      opacity: 1;
+      visibility: visible;
+    }
+    .sw-now-av-wrap[data-agent="Olivia"] .sw-now-letter {
+      opacity: 0;
+    }
+    .sw-now-av[data-agent="Olivia"] {
+      background: radial-gradient(circle at 38% 32%, #4A2E7A 0%, #1C1438 48%, #0B1A2E 78%);
+    }
+    .sw-olivia-galaxy {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .sw-olivia-brain {
+      position: absolute;
+      inset: 7%;
+      width: 86%;
+      height: 86%;
+      overflow: visible;
+      filter: drop-shadow(0 0 3px rgba(251, 191, 36, 0.65));
+    }
+    .sw-olivia-brain .brain-outline {
+      fill: none;
+      stroke: #FBBF24;
+      stroke-width: 1.7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .sw-olivia-brain .brain-fold {
+      fill: none;
+      stroke: rgba(251, 191, 36, 0.72);
+      stroke-width: 1.05;
+      stroke-linecap: round;
+    }
+
     @media (prefers-reduced-motion: reduce) {
       .sw-now-ripple, .sw-now-ripple.is-on { animation: none !important; opacity: 0 !important; }
       .sw-now-av { transform: none !important; }
       .sw-roster.is-live .sw-agent,
       .sw-roster.is-live .sw-agent.is-speaking { transition: none; }
+      .sw-orbit-spin, .sw-orbit-face { animation: none !important; }
     }
 
     .sw-talk-head {
@@ -1925,13 +2074,69 @@
 
       <div class="sw-video-shell" id="swVideoShell">
         <div class="sw-now-stage" id="swNowStage" aria-live="polite">
-          <div class="sw-now-av-wrap" id="swNowWrap">
+          <div class="sw-now-av-wrap" id="swNowWrap" data-agent="Maya">
             <div class="sw-now-glow" id="swNowGlow" aria-hidden="true"></div>
             <span class="sw-now-ripple" data-r="0" aria-hidden="true"></span>
             <span class="sw-now-ripple" data-r="1" aria-hidden="true"></span>
             <span class="sw-now-ripple" data-r="2" aria-hidden="true"></span>
-            <div class="sw-now-av" id="swNowAv" data-agent="Maya">M</div>
+
+            <div class="sw-orbit sw-orbit-maya" aria-hidden="true">
+              <div class="sw-orbit-spin">
+                <span class="sw-orbit-item" style="--i:0">
+                  <span class="sw-orbit-fix"><span class="sw-orbit-face" title="Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.2"/><circle cx="12" cy="12" r="4"/><circle cx="17.25" cy="6.75" r="1.2" fill="currentColor" stroke="none"/></svg>
+                  </span></span>
+                </span>
+                <span class="sw-orbit-item" style="--i:72">
+                  <span class="sw-orbit-fix"><span class="sw-orbit-face" title="Facebook">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.6 21v-7.15h2.4l.36-2.8h-2.76V9.3c0-.81.22-1.36 1.38-1.36h1.47V5.2C15.7 5.14 14.68 5 13.54 5 11.18 5 9.56 6.45 9.56 9.02v2.03H7.2v2.8h2.36V21h4.04z"/></svg>
+                  </span></span>
+                </span>
+                <span class="sw-orbit-item" style="--i:144">
+                  <span class="sw-orbit-fix"><span class="sw-orbit-face" title="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="6.1" cy="6.3" r="2"/><rect x="4.3" y="9.4" width="3.6" height="10.4" rx="0.4"/><path d="M11.1 9.4h3.45v1.55c.6-1.05 1.7-1.85 3.35-1.85 2.85 0 4.2 1.85 4.2 5.15v5.55h-3.55v-5.15c0-1.55-.5-2.6-1.9-2.6-1.1 0-1.75.75-2.05 1.45-.1.25-.15.6-.15.95v5.35H11.1V9.4z"/></svg>
+                  </span></span>
+                </span>
+                <span class="sw-orbit-item" style="--i:216">
+                  <span class="sw-orbit-fix"><span class="sw-orbit-face" title="YouTube">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="1.6" y="5.8" width="20.8" height="12.4" rx="3.6" stroke="currentColor" stroke-width="2"/><path d="M10 9.2v5.6L16 12z" fill="currentColor"/></svg>
+                  </span></span>
+                </span>
+                <span class="sw-orbit-item" style="--i:288">
+                  <span class="sw-orbit-fix"><span class="sw-orbit-face" title="TikTok">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.2 3.2v10.4c0 2.35-1.85 4.2-4.25 4.2-2.35 0-4.15-1.7-4.15-4.05 0-2.3 1.85-4.1 4.15-4.1.5 0 1 .1 1.45.28V7.7A6.3 6.3 0 0 0 9 7.5c-3.55 0-6.4 2.8-6.4 6.25S5.45 20 9 20c3.6 0 6.45-2.9 6.45-6.4V8.35c1.2 1.15 2.8 1.9 4.6 2.05V7.55c-1.95-.25-3.55-1.5-4.15-3.35h-2.7z"/></svg>
+                  </span></span>
+                </span>
+              </div>
+            </div>
+
+            <div class="sw-orbit sw-orbit-reed" aria-hidden="true">
+              <div class="sw-orbit-spin">
+                <span class="sw-orbit-item" style="--i:0">
+                  <span class="sw-orbit-fix"><span class="sw-orbit-face" title="Skool"><span class="sw-skool-mark">skool</span></span></span>
+                </span>
+                <span class="sw-orbit-item" style="--i:180">
+                  <span class="sw-orbit-fix"><span class="sw-orbit-face" title="Skool"><span class="sw-skool-mark">skool</span></span></span>
+                </span>
+              </div>
+            </div>
+
+            <div class="sw-now-av" id="swNowAv" data-agent="Maya">
+              <span class="sw-now-letter" id="swNowLetter">M</span>
+              <div class="sw-olivia-core" id="swOliviaCore" aria-hidden="true">
+                <canvas class="sw-olivia-galaxy" id="swOliviaGalaxy" width="152" height="152"></canvas>
+                <svg class="sw-olivia-brain" viewBox="0 0 76 76" fill="none">
+                  <path class="brain-outline" d="M28.5 18.5c-2.2-4.2-7.4-5.2-11.2-2.8-4 2.5-5.3 7.6-3.4 11.7-3.6 1.4-5.8 5.2-5.4 9.3.4 4.4 3.6 7.8 7.6 8.8-1.4 3.6-.4 8 2.8 10.4 3.4 2.6 8.2 2.2 11.2-.6 1.8 3.6 6 5.6 10 4.6 3.2-.8 5.6-3.4 6.4-6.6 3.2 1.6 7.4.8 9.8-2.2 2.6-3.2 2.4-8-.4-10.8 2.8-2 4.2-5.6 3.4-9-1-4.2-4.8-7-9-7 0-4.2-3.2-8-7.6-8.6-3.2-.4-6.2.8-8.2 3.2-1.6-2.2-4.2-3.6-7-3.4-2 .1-3.8.9-5 2.2z"/>
+                  <path class="brain-fold" d="M37.5 20.5c-.4 5.2.2 10.6 2.4 15.2 1.6 3.4 3.2 6.2 3.2 10.2"/>
+                  <path class="brain-fold" d="M22 28.5c4.2 1.2 8.2 4 10.6 8 2.6 4.4 3.2 9.6 2.8 14.6"/>
+                  <path class="brain-fold" d="M18.5 42.5c4.6.6 9.2 0 13.4-2.2"/>
+                  <path class="brain-fold" d="M45 28c3.6 2.2 6.6 5.6 8 9.8 1 3.2.8 6.8-.4 9.8"/>
+                  <path class="brain-fold" d="M48.5 24.5c2.4 1 4.2 3 5 5.4"/>
+                </svg>
+              </div>
+            </div>
           </div>
+
           <div class="sw-now-name" id="swNowName">Maya</div>
           <div class="sw-now-role" id="swNowRole">Social Media SuperWho</div>
         </div>
@@ -3347,10 +3552,14 @@
             var color = COLORS[speaker] || "#22D3EE";
             if (nowAv) {
               nowAv.setAttribute("data-agent", speaker);
-              nowAv.textContent = speaker.charAt(0);
+              var letter = document.getElementById("swNowLetter");
+              if (letter) letter.textContent = speaker.charAt(0);
               nowAv.style.setProperty("--sw-glow", color);
             }
-            if (nowWrap) nowWrap.style.setProperty("--sw-glow", color);
+            if (nowWrap) {
+              nowWrap.setAttribute("data-agent", speaker);
+              nowWrap.style.setProperty("--sw-glow", color);
+            }
             if (nowName) nowName.textContent = speaker;
             if (nowRole) nowRole.textContent = ROLES[speaker] || "SuperWho";
             if (captionBox) captionBox.setAttribute("data-speaker", speaker);
@@ -3673,6 +3882,196 @@
       }
     })();
   </script>
+
+  <script>
+    /* Olivia orb: galaxy-like nodes and connections inside the brain. */
+    (function () {
+      var canvas = document.getElementById("swOliviaGalaxy");
+      var wrap = document.getElementById("swNowWrap");
+      var shell = document.getElementById("swVideoShell");
+      if (!canvas || !wrap) return;
+      var prefersLess = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var ctx = canvas.getContext("2d");
+      var SIZE = 76;
+      var dpr = Math.min(2, window.devicePixelRatio || 1);
+      function resize() {
+        dpr = Math.min(2, window.devicePixelRatio || 1);
+        canvas.width = Math.round(SIZE * dpr);
+        canvas.height = Math.round(SIZE * dpr);
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      }
+      resize();
+
+      // Nodes sit inside the brain outline (76x76 viewBox, canvas is full orb).
+      var nodes = [
+        { x: 28, y: 26, r: 1.5, ph: 0.0, hue: 0 },
+        { x: 38, y: 22, r: 1.3, ph: 0.7, hue: 1 },
+        { x: 50, y: 27, r: 1.6, ph: 1.4, hue: 0 },
+        { x: 22, y: 38, r: 1.4, ph: 2.1, hue: 2 },
+        { x: 36, y: 36, r: 1.8, ph: 2.8, hue: 1 },
+        { x: 51, y: 40, r: 1.4, ph: 3.5, hue: 0 },
+        { x: 27, y: 50, r: 1.3, ph: 4.2, hue: 2 },
+        { x: 41, y: 52, r: 1.6, ph: 4.9, hue: 1 },
+        { x: 55, y: 50, r: 1.3, ph: 5.6, hue: 0 },
+        { x: 34, y: 44, r: 1.2, ph: 1.1, hue: 2 }
+      ];
+      var edges = [
+        [0, 1], [1, 2], [0, 4], [1, 4], [2, 4], [2, 5],
+        [3, 0], [3, 4], [3, 6], [4, 7], [4, 5], [5, 8],
+        [6, 7], [7, 8], [6, 9], [9, 4], [9, 7], [5, 7]
+      ];
+      var sparks = [];
+      for (var s = 0; s < 8; s++) {
+        sparks.push({
+          e: s % edges.length,
+          t: (s * 0.13) % 1,
+          sp: 0.22 + (s % 4) * 0.06
+        });
+      }
+      var COLORS = [
+        [251, 191, 36],
+        [196, 168, 255],
+        [125, 211, 252]
+      ];
+      var raf = 0;
+      var drawnStatic = false;
+
+      function visible() {
+        if (wrap.getAttribute("data-agent") !== "Olivia") return false;
+        return !!(shell && shell.classList.contains("is-live"));
+      }
+
+      function rgba(c, a) {
+        return "rgba(" + c[0] + "," + c[1] + "," + c[2] + "," + a + ")";
+      }
+
+      function draw(now, motion) {
+        ctx.clearRect(0, 0, SIZE, SIZE);
+        // Soft nebula
+        var t = motion ? now * 0.0004 : 0;
+        var g1 = ctx.createRadialGradient(30 + Math.sin(t) * 3, 28, 2, 32, 34, 36);
+        g1.addColorStop(0, "rgba(180,140,255,0.28)");
+        g1.addColorStop(0.45, "rgba(88,50,150,0.14)");
+        g1.addColorStop(1, "rgba(11,26,46,0)");
+        ctx.fillStyle = g1;
+        ctx.fillRect(0, 0, SIZE, SIZE);
+        var g2 = ctx.createRadialGradient(50, 48, 1, 48, 46, 24);
+        g2.addColorStop(0, "rgba(251,191,36,0.22)");
+        g2.addColorStop(1, "rgba(251,191,36,0)");
+        ctx.fillStyle = g2;
+        ctx.fillRect(0, 0, SIZE, SIZE);
+
+        var pulse = motion ? (0.55 + 0.45 * Math.sin(now * 0.0025)) : 0.7;
+
+        // Connections
+        for (var i = 0; i < edges.length; i++) {
+          var a = nodes[edges[i][0]], b = nodes[edges[i][1]];
+          var mid = (a.ph + b.ph) / 2;
+          var glow = motion ? (0.28 + 0.32 * (0.5 + 0.5 * Math.sin(now * 0.003 + mid))) : 0.4;
+          ctx.beginPath();
+          ctx.moveTo(a.x, a.y);
+          ctx.lineTo(b.x, b.y);
+          ctx.strokeStyle = "rgba(196,168,255," + glow + ")";
+          ctx.lineWidth = 0.7;
+          ctx.stroke();
+          ctx.beginPath();
+          ctx.moveTo(a.x, a.y);
+          ctx.lineTo(b.x, b.y);
+          ctx.strokeStyle = "rgba(251,191,36," + (glow * 0.55) + ")";
+          ctx.lineWidth = 0.35;
+          ctx.stroke();
+        }
+
+        // Traveling sparks
+        if (motion) {
+          for (var k = 0; k < sparks.length; k++) {
+            var sp = sparks[k];
+            sp.t += sp.sp * 0.016;
+            if (sp.t > 1) sp.t -= 1;
+            var e = edges[sp.e];
+            var na = nodes[e[0]], nb = nodes[e[1]];
+            var x = na.x + (nb.x - na.x) * sp.t;
+            var y = na.y + (nb.y - na.y) * sp.t;
+            var sg = ctx.createRadialGradient(x, y, 0, x, y, 3.2);
+            sg.addColorStop(0, "rgba(255,255,255,0.95)");
+            sg.addColorStop(0.4, "rgba(251,191,36,0.7)");
+            sg.addColorStop(1, "rgba(251,191,36,0)");
+            ctx.fillStyle = sg;
+            ctx.beginPath();
+            ctx.arc(x, y, 3.2, 0, Math.PI * 2);
+            ctx.fill();
+          }
+        }
+
+        // Nodes
+        for (var n = 0; n < nodes.length; n++) {
+          var nd = nodes[n];
+          var pr = nd.r + (motion ? 0.6 * (0.5 + 0.5 * Math.sin(now * 0.004 + nd.ph)) : 0.3);
+          var c = COLORS[nd.hue];
+          var ng = ctx.createRadialGradient(nd.x, nd.y, 0, nd.x, nd.y, pr * 3.4);
+          ng.addColorStop(0, rgba(c, 0.95));
+          ng.addColorStop(0.4, rgba(c, 0.55 * pulse));
+          ng.addColorStop(1, rgba(c, 0));
+          ctx.fillStyle = ng;
+          ctx.beginPath();
+          ctx.arc(nd.x, nd.y, pr * 3.4, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.fillStyle = "#fff";
+          ctx.beginPath();
+          ctx.arc(nd.x, nd.y, pr, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+
+      function loop(now) {
+        raf = 0;
+        if (!visible()) return;
+        if (prefersLess) {
+          if (!drawnStatic) { draw(0, false); drawnStatic = true; }
+          return;
+        }
+        draw(now, true);
+        raf = requestAnimationFrame(loop);
+      }
+
+      function sync() {
+        var on = visible();
+        if (on) {
+          drawnStatic = false;
+          if (prefersLess) {
+            draw(0, false);
+            drawnStatic = true;
+          } else if (!raf) {
+            raf = requestAnimationFrame(loop);
+          }
+        } else if (raf) {
+          cancelAnimationFrame(raf);
+          raf = 0;
+        }
+      }
+
+      var mo = new MutationObserver(sync);
+      mo.observe(wrap, { attributes: true, attributeFilter: ["data-agent"] });
+      if (shell) mo.observe(shell, { attributes: true, attributeFilter: ["class"] });
+      window.addEventListener("resize", function () {
+        resize();
+        drawnStatic = false;
+        if (visible() && prefersLess) draw(0, false);
+      });
+      if (window.matchMedia) {
+        try {
+          window.matchMedia("(prefers-reduced-motion: reduce)").addEventListener("change", function (ev) {
+            prefersLess = ev.matches;
+            drawnStatic = false;
+            if (raf) { cancelAnimationFrame(raf); raf = 0; }
+            sync();
+          });
+        } catch (e) {}
+      }
+      sync();
+    })();
+  </script>
+
   <script>
     window.swLog = window.swLog || function () {};
     window.SW_TRACK = { page: "chris", slug: "chris-1ayfb0qmxifa" };
