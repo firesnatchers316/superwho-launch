@@ -474,6 +474,348 @@
     }
 
     .hidden { display: none !important; }
+
+    /* ===== Sazón intro video (tap to play, no controls) ===== */
+    .sw-video-shell {
+      background: linear-gradient(180deg, var(--card-2), var(--card));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 12px;
+      margin: 0 0 16px;
+    }
+    .sw-video-kicker {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin: 0 0 10px;
+      padding: 0 2px;
+    }
+    .sw-video-stage {
+      position: relative;
+      width: 100%;
+      min-height: 470px;
+      border-radius: 16px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 50% 28%, rgba(232,184,74,0.22), transparent 42%),
+        radial-gradient(circle at 50% 100%, rgba(224,101,58,0.16), #1A120C 70%);
+    }
+    .sw-video-stage video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.42;
+      pointer-events: none;
+      background: #1A120C;
+    }
+    .sw-video-stage video::-webkit-media-controls,
+    .sw-video-stage video::-webkit-media-controls-panel,
+    .sw-video-stage video::-webkit-media-controls-start-playback-button,
+    .sw-video-stage video::-webkit-media-controls-enclosure,
+    .sw-video-stage video::-webkit-media-controls-overlay-play-button,
+    .sw-video-stage video::-webkit-media-controls-overlay-enclosure,
+    .sw-video-stage video::-webkit-media-controls-play-button {
+      display: none !important;
+      visibility: hidden !important;
+      opacity: 0 !important;
+      -webkit-appearance: none;
+      appearance: none;
+      pointer-events: none !important;
+      width: 0 !important;
+      height: 0 !important;
+    }
+    .sw-now-stage {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      padding: 18px 12px 8px;
+    }
+    .sw-now-av-wrap {
+      position: relative;
+      width: 92px;
+      height: 92px;
+    }
+    .sw-now-glow {
+      position: absolute;
+      inset: -14px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,184,74,0.45), rgba(224,101,58,0.0) 70%);
+      opacity: 0.4;
+      pointer-events: none;
+    }
+    .sw-now-ripple {
+      position: absolute;
+      inset: 6px;
+      border-radius: 50%;
+      border: 2px solid rgba(243,212,138,0.0);
+      pointer-events: none;
+    }
+    .sw-now-ripple.is-on {
+      animation: swRipple 1.1s ease-out forwards;
+    }
+    @keyframes swRipple {
+      0% { transform: scale(0.85); opacity: 0.7; border-color: rgba(243,212,138,0.7); }
+      100% { transform: scale(1.85); opacity: 0; border-color: rgba(243,212,138,0); }
+    }
+    .sw-now-av {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: radial-gradient(circle at 30% 25%, #F3D48A, #E0653A 55%, #8A2C12);
+      color: #fff;
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 42px;
+      box-shadow: 0 0 0 2px rgba(232,184,74,0.4), 0 10px 24px rgba(0,0,0,0.35);
+      will-change: transform;
+    }
+    .sw-illos {
+      position: relative;
+      z-index: 2;
+      min-height: 168px;
+      margin: 4px 12px 0;
+    }
+    .sw-illo { display: none; }
+    .sw-illo.is-on { display: block; }
+    .sw-illo-kicker {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin: 0 0 8px;
+      text-align: center;
+    }
+    .sw-illo-check { display: flex; flex-direction: column; gap: 6px; }
+    .sw-illo-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(26,18,12,0.55);
+      border: 1px solid var(--line-soft);
+      border-radius: 10px;
+      padding: 7px 10px;
+      font-size: 13.5px;
+      color: var(--muted);
+    }
+    .sw-illo-box {
+      flex: 0 0 16px;
+      width: 16px;
+      height: 16px;
+      border-radius: 4px;
+      border: 2px solid var(--gold);
+    }
+    .sw-illos[data-lit="1"] .sw-illo-row[data-n="1"],
+    .sw-illos[data-lit="2"] .sw-illo-row[data-n="1"],
+    .sw-illos[data-lit="2"] .sw-illo-row[data-n="2"],
+    .sw-illos[data-lit="3"] .sw-illo-row[data-n="1"],
+    .sw-illos[data-lit="3"] .sw-illo-row[data-n="2"],
+    .sw-illos[data-lit="3"] .sw-illo-row[data-n="3"],
+    .sw-illos[data-lit="4"] .sw-illo-row {
+      color: var(--ink);
+      border-color: rgba(143,188,122,0.45);
+    }
+    .sw-illos[data-lit="1"] .sw-illo-row[data-n="1"] .sw-illo-box,
+    .sw-illos[data-lit="2"] .sw-illo-row[data-n="1"] .sw-illo-box,
+    .sw-illos[data-lit="2"] .sw-illo-row[data-n="2"] .sw-illo-box,
+    .sw-illos[data-lit="3"] .sw-illo-row[data-n="1"] .sw-illo-box,
+    .sw-illos[data-lit="3"] .sw-illo-row[data-n="2"] .sw-illo-box,
+    .sw-illos[data-lit="3"] .sw-illo-row[data-n="3"] .sw-illo-box,
+    .sw-illos[data-lit="4"] .sw-illo-row .sw-illo-box {
+      background: var(--sage);
+      border-color: var(--sage);
+    }
+    .sw-illo-times { display: flex; flex-direction: column; gap: 6px; }
+    .sw-illo-time {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      background: rgba(26,18,12,0.55);
+      border: 1px solid var(--line-soft);
+      border-radius: 10px;
+      padding: 8px 10px;
+      font-size: 13.5px;
+    }
+    .sw-illo-time b { color: var(--gold-soft); font-family: var(--serif); }
+    .sw-illo-chip {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-radius: 999px;
+      padding: 3px 7px;
+      color: var(--gold);
+      border: 1px solid rgba(232,184,74,0.3);
+    }
+    .sw-illo-chip.stove { color: var(--sage); border-color: rgba(143,188,122,0.35); }
+    .sw-illo-note {
+      text-align: center;
+      color: var(--muted);
+      font-size: 12.5px;
+      margin: 8px 2px 0;
+    }
+    .sw-illo-tiles {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+    }
+    .sw-illo-tile {
+      background: rgba(26,18,12,0.55);
+      border: 1px solid var(--line-soft);
+      border-radius: 10px;
+      padding: 8px 8px 7px;
+      font-size: 12px;
+      color: var(--ink);
+      font-weight: 700;
+    }
+    .sw-illo-tile span { display: block; color: var(--muted); font-weight: 600; font-size: 11px; margin-top: 2px; }
+    .sw-illo-temp {
+      margin-top: 6px;
+      text-align: center;
+      font-family: var(--serif);
+      font-size: 22px;
+      color: var(--gold-soft);
+    }
+    .sw-illo-temp span { display: block; font-family: var(--sans); font-size: 11px; color: var(--muted); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+    .sw-illo-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      background: rgba(26,18,12,0.55);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 10px 12px;
+      font-weight: 700;
+    }
+    .sw-illo-switch {
+      width: 36px;
+      height: 22px;
+      border-radius: 999px;
+      background: var(--sage);
+      position: relative;
+      flex: 0 0 36px;
+    }
+    .sw-illo-switch::after {
+      content: "";
+      position: absolute;
+      top: 3px;
+      right: 3px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #fff;
+    }
+    .sw-illo-hint {
+      margin-top: 8px;
+      border: 1px dashed var(--line);
+      border-radius: 10px;
+      padding: 8px 10px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .sw-illo-talk {
+      border: 1px solid rgba(232,184,74,0.5);
+      box-shadow: 0 0 18px rgba(232,184,74,0.18);
+      border-radius: 14px;
+      padding: 12px;
+      background: rgba(26,18,12,0.6);
+      animation: talkGlow 2.8s ease-in-out infinite;
+    }
+    .sw-illo-talk b { display: block; font-family: var(--serif); font-size: 18px; margin-bottom: 6px; }
+    .sw-illo-talk span {
+      display: block;
+      background: #1A120C;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 10px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .sw-illo-close {
+      text-align: center;
+      padding: 10px 6px 0;
+    }
+    .sw-illo-close p { color: var(--muted); font-size: 14px; margin: 0 0 8px; }
+    .sw-illo-close strong {
+      display: block;
+      font-family: var(--serif);
+      font-size: 22px;
+      color: var(--gold-soft);
+    }
+    .sw-caption-box {
+      position: relative;
+      z-index: 2;
+      margin: 10px 12px 14px;
+      min-height: 72px;
+      text-align: center;
+    }
+    .sw-caption-who {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin: 0 0 6px;
+    }
+    .sw-caption-text {
+      font-size: 16px;
+      line-height: 1.4;
+      color: var(--ink);
+    }
+    .sw-caption-text .w {
+      display: inline;
+      color: rgba(247,239,228,0.55);
+    }
+    .sw-caption-text .w.is-past { color: var(--ink); }
+    .sw-caption-text .w.is-on {
+      color: #fff;
+      text-shadow: 0 0 10px rgba(232,184,74,0.65);
+    }
+    .sw-play-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 5;
+      border: 0;
+      background: linear-gradient(180deg, rgba(26,18,12,0.08) 30%, rgba(26,18,12,0.78) 78%);
+      color: var(--ink);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+      cursor: pointer;
+      font-family: var(--sans);
+      padding: 0 16px 22px;
+    }
+    .sw-play-overlay[hidden] { display: none; }
+    .sw-play-circle {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: linear-gradient(180deg, #F3B24A, #E8B84A 40%, #C9922A);
+      color: #2A1A08;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+    }
+    .sw-play-circle svg { width: 26px; height: 26px; margin-left: 3px; }
+    .sw-play-label {
+      font-weight: 800;
+      font-size: 16px;
+    }
+    .sw-play-sub { color: var(--muted); font-size: 13px; }
+    @media (prefers-reduced-motion: reduce) {
+      .sw-now-ripple.is-on, .sw-illo-talk { animation: none !important; }
+      .sw-now-av { transform: none !important; }
+    }
   </style>
 </head>
 <body>
@@ -489,6 +831,81 @@
       <h1>We’ve got Thanksgiving.</h1>
       <p class="welcome">Hi Taina — I’m <strong>Sazón</strong>, your SuperWho for tomorrow’s dinner. Jim and his team developed me to help you cook this meal with a clear plan, not a pile of tabs. Change the time or the headcount and I’ll redo the schedule and the shopping list.</p>
     </header>
+
+    <section class="sw-video-shell" id="swVideoShell">
+      <p class="sw-video-kicker">A short walkthrough from Sazón</p>
+      <div class="sw-video-stage" id="swVideoStage">
+        <video id="sazonVideo" playsinline webkit-playsinline preload="metadata" disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback" x-webkit-airplay="deny"></video>
+        <div class="sw-now-stage">
+          <div class="sw-now-av-wrap" id="swNowWrap">
+            <div class="sw-now-glow" id="swNowGlow" aria-hidden="true"></div>
+            <span class="sw-now-ripple" data-r="0" aria-hidden="true"></span>
+            <span class="sw-now-ripple" data-r="1" aria-hidden="true"></span>
+            <span class="sw-now-ripple" data-r="2" aria-hidden="true"></span>
+            <div class="sw-now-av" id="swNowAv" aria-hidden="true">S</div>
+          </div>
+        </div>
+        <div class="sw-illos" id="swIllos" data-active="" data-lit="0" hidden aria-hidden="true">
+          <div class="sw-illo" data-illo="intro">
+            <p class="sw-illo-kicker">Your SuperWho</p>
+            <div class="sw-illo-close"><strong>Sazón</strong><p>Developed by Jim, your dad, and his team.</p></div>
+          </div>
+          <div class="sw-illo" data-illo="tonight">
+            <p class="sw-illo-kicker">Wednesday night</p>
+            <div class="sw-illo-check">
+              <div class="sw-illo-row" data-n="1"><span class="sw-illo-box"></span>Check the turkey thaw</div>
+              <div class="sw-illo-row" data-n="2"><span class="sw-illo-box"></span>Season the turkey</div>
+              <div class="sw-illo-row" data-n="3"><span class="sw-illo-box"></span>Bake the pie tonight</div>
+              <div class="sw-illo-row" data-n="4"><span class="sw-illo-box"></span>Prep the eggplant</div>
+            </div>
+          </div>
+          <div class="sw-illo" data-illo="timeline">
+            <p class="sw-illo-kicker">Thursday, backward from dinner</p>
+            <div class="sw-illo-times">
+              <div class="sw-illo-time"><b>Turkey in</b><span class="sw-illo-chip">Oven</span></div>
+              <div class="sw-illo-time"><b>Turkey rests</b><span class="sw-illo-chip">40 min</span></div>
+              <div class="sw-illo-time"><b>Sides bake</b><span class="sw-illo-chip stove">Then oven</span></div>
+            </div>
+            <p class="sw-illo-note">Change the time or the headcount, and I redo the plan.</p>
+          </div>
+          <div class="sw-illo" data-illo="shop">
+            <p class="sw-illo-kicker">Shopping and recipes</p>
+            <div class="sw-illo-tiles">
+              <div class="sw-illo-tile">Meat<span>Turkey, scaled</span></div>
+              <div class="sw-illo-tile">Produce<span>Yams, eggplant</span></div>
+              <div class="sw-illo-tile">Dairy<span>Cheese, butter</span></div>
+              <div class="sw-illo-tile">Pantry<span>Rice, beans, spices</span></div>
+            </div>
+            <div class="sw-illo-temp">165°F<span>Safe turkey temperature</span></div>
+          </div>
+          <div class="sw-illo" data-illo="pie">
+            <p class="sw-illo-kicker">Your extras</p>
+            <div class="sw-illo-toggle"><span>Include pumpkin pie</span><span class="sw-illo-switch" aria-hidden="true"></span></div>
+            <div class="sw-illo-hint">Or a candy / dessert treat — there’s a note you can edit.</div>
+          </div>
+          <div class="sw-illo" data-illo="talk">
+            <p class="sw-illo-kicker">Need a change?</p>
+            <div class="sw-illo-talk"><b>Talk to your SuperWho</b><span>Ask a question or request a change…</span></div>
+          </div>
+          <div class="sw-illo" data-illo="close">
+            <p class="sw-illo-kicker">And later on</p>
+            <div class="sw-illo-close">
+              <p>This SuperWho can also help with your Airbnb cleaning work.</p>
+              <strong>You’ve got this.</strong>
+            </div>
+          </div>
+        </div>
+        <div class="sw-caption-box" id="swCaption" aria-live="polite">
+          <div class="sw-caption-who" id="swCaptionWho">Sazón · your SuperWho</div>
+          <div class="sw-caption-text" id="swCaptionText">Tap to hear how tomorrow comes together.</div>
+        </div>
+        <button type="button" class="sw-play-overlay" id="swPlayOverlay">
+          <span class="sw-play-circle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.14v13.72L19 12 8 5.14z"/></svg></span>
+          <span class="sw-play-label" id="swPlayLabel">Tap to hear Sazón</span>
+          <span class="sw-play-sub">About a minute · no need to watch to use the page</span>
+        </button>
+      </div>
+    </section>
 
     <section class="card" id="plan">
       <h2>Your table</h2>
@@ -1084,6 +1501,316 @@
         statusEl.textContent = "That didn’t go through. Please try again.";
         statusEl.classList.add("is-error");
       });
+    });
+  })();
+  </script>
+  <script>
+  (function () {
+    var video = document.getElementById("sazonVideo");
+    var overlay = document.getElementById("swPlayOverlay");
+    var playLabel = document.getElementById("swPlayLabel");
+    var capWho = document.getElementById("swCaptionWho");
+    var capText = document.getElementById("swCaptionText");
+    var illos = document.getElementById("swIllos");
+    var nowAv = document.getElementById("swNowAv");
+    var nowGlow = document.getElementById("swNowGlow");
+    var ripples = document.querySelectorAll("#swNowWrap .sw-now-ripple");
+    if (!video || !overlay) return;
+
+    var CUES = [];
+    var CAP_BY_CUE = {};
+    var ENV = null;
+    var videoBlobUrl = null;
+    var videoPromise = null;
+    var lastCueIdx = -1;
+    var rafId = 0;
+    var prefersLessMotion = false;
+    try { prefersLessMotion = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches); } catch (e) {}
+
+    var audioHooked = false, audioHookFailed = false, audioCtx = null, mediaSrc = null, analyser = null, freqData = null;
+    var peakHold = 0, smoothLevel = 0.12, rippleIdx = 0, lastRipple = 0;
+
+    function $(id) { return document.getElementById(id); }
+
+    fetch("audio-envelope.json", { cache: "force-cache" }).then(function (r) {
+      return r.ok ? r.json() : null;
+    }).then(function (d) { if (d) ENV = d; }).catch(function () {});
+
+    fetch("word-cues.json", { cache: "force-cache" }).then(function (r) {
+      return r.ok ? r.json() : null;
+    }).then(function (d) {
+      if (!d) return;
+      if (d.cues) CUES = d.cues;
+      if (d.captionByCue) CAP_BY_CUE = d.captionByCue;
+    }).catch(function () {});
+
+    function b64ToBytes(b64) {
+      var bin = atob(b64);
+      var arr = new Uint8Array(bin.length);
+      for (var i = 0; i < bin.length; i++) arr[i] = bin.charCodeAt(i);
+      return arr;
+    }
+    function concatBytes(parts) {
+      var total = 0, i;
+      for (i = 0; i < parts.length; i++) total += parts[i].length;
+      var out = new Uint8Array(total), off = 0;
+      for (i = 0; i < parts.length; i++) { out.set(parts[i], off); off += parts[i].length; }
+      return out;
+    }
+
+    function ensureVideoLoaded() {
+      if (videoBlobUrl) return Promise.resolve(videoBlobUrl);
+      if (videoPromise) return videoPromise;
+      var chunks = ["v1.b64", "v2.b64", "v3.b64"];
+      videoPromise = Promise.all(chunks.map(function (c) {
+        return fetch(c, { cache: "force-cache" }).then(function (r) {
+          if (!r.ok) throw new Error("chunk " + c);
+          return r.text();
+        });
+      })).then(function (parts) {
+        // Decode each padded chunk on its own, then join the bytes.
+        var bytes = concatBytes(parts.map(b64ToBytes));
+        var blob = new Blob([bytes], { type: "video/mp4" });
+        videoBlobUrl = URL.createObjectURL(blob);
+        video.src = videoBlobUrl;
+        video.load();
+        lockNativeControls();
+        return videoBlobUrl;
+      }).catch(function (err) {
+        if (capText) capText.textContent = "Tap again to load the walkthrough.";
+        videoPromise = null;
+        return null;
+      });
+      return videoPromise;
+    }
+    setTimeout(ensureVideoLoaded, 150);
+
+    function lockNativeControls() {
+      try {
+        video.controls = false;
+        video.removeAttribute("controls");
+        video.setAttribute("controlslist", "nodownload nofullscreen noremoteplayback");
+        video.disablePictureInPicture = true;
+      } catch (e) {}
+    }
+    lockNativeControls();
+    video.addEventListener("loadedmetadata", lockNativeControls);
+    video.addEventListener("webkitbeginfullscreen", function (ev) {
+      ev.preventDefault();
+      try { if (video.webkitExitFullscreen) video.webkitExitFullscreen(); } catch (e) {}
+    });
+
+    function hookAudio() {
+      if (audioHooked || audioHookFailed) {
+        if (audioCtx && audioCtx.state === "suspended") audioCtx.resume().catch(function () {});
+        return;
+      }
+      try {
+        var AC = window.AudioContext || window.webkitAudioContext;
+        if (!AC) { audioHookFailed = true; return; }
+        audioCtx = audioCtx || new AC();
+        if (audioCtx.state === "suspended") audioCtx.resume().catch(function () {});
+        if (!mediaSrc) {
+          mediaSrc = audioCtx.createMediaElementSource(video);
+          analyser = audioCtx.createAnalyser();
+          analyser.fftSize = 256;
+          mediaSrc.connect(analyser);
+          analyser.connect(audioCtx.destination);
+          freqData = new Uint8Array(analyser.frequencyBinCount);
+        }
+        audioHooked = true;
+      } catch (e) {
+        audioHookFailed = true;
+      }
+    }
+
+    function envelopeAt(t) {
+      if (!ENV || !ENV.samples || !ENV.samples.length) return 0;
+      var i = Math.round((t * 1000) / (ENV.hopMs || 20));
+      var peak = 0, r = 3;
+      for (var k = i - r; k <= i + r; k++) {
+        if (k >= 0 && k < ENV.samples.length) peak = Math.max(peak, ENV.samples[k] / 255);
+      }
+      return peak;
+    }
+    function currentLevel() {
+      var env = envelopeAt(video.currentTime || 0);
+      var live = 0;
+      if (audioHooked && analyser && freqData && !video.paused) {
+        analyser.getByteFrequencyData(freqData);
+        var sum = 0, n = Math.min(freqData.length, 48);
+        for (var i = 0; i < n; i++) sum += freqData[i];
+        live = Math.min(1, (sum / (n * 255)) * 1.45);
+      }
+      var raw = Math.max(live, env);
+      peakHold = Math.max(raw, peakHold * 0.9);
+      return Math.min(1, peakHold);
+    }
+    function fireRipple() {
+      if (prefersLessMotion || !ripples.length) return;
+      var el = ripples[rippleIdx % ripples.length];
+      rippleIdx += 1;
+      el.classList.remove("is-on");
+      void el.offsetWidth;
+      el.classList.add("is-on");
+    }
+    function applyGlow(level) {
+      if (prefersLessMotion) return;
+      var s = 1 + level * 0.16;
+      if (nowAv) nowAv.style.transform = "scale(" + s + ")";
+      if (nowGlow) {
+        nowGlow.style.opacity = String(0.35 + level * 0.65);
+        nowGlow.style.transform = "scale(" + (1 + level * 0.45) + ")";
+      }
+      var now = performance.now();
+      if (level > 0.58 && now - lastRipple > 420) {
+        lastRipple = now;
+        fireRipple();
+      }
+    }
+
+    function escHtml(s) {
+      return String(s).replace(/[&<>"']/g, function (c) {
+        if (c === "&") return "&#38;";
+        if (c === "<") return "&#60;";
+        if (c === ">") return "&#62;";
+        if (c === '"') return "&#34;";
+        return "&#39;";
+      });
+    }
+    function renderCueWords(cue) {
+      if (!capText) return;
+      var list = CAP_BY_CUE[String(cue.i)] || [];
+      if (!list.length) {
+        capText.textContent = cue.text || "";
+        return;
+      }
+      capText.innerHTML = list.map(function (w, idx) {
+        return '<span class="w" data-i="' + idx + '">' + escHtml(w.word) + "</span>";
+      }).join(" ");
+    }
+    function highlightWords(t) {
+      if (!capText) return;
+      var cue = lastCueIdx >= 0 ? CUES[lastCueIdx] : null;
+      var list = cue ? (CAP_BY_CUE[String(cue.i)] || []) : [];
+      var spans = capText.querySelectorAll(".w");
+      for (var i = 0; i < spans.length; i++) {
+        var w = list[i];
+        spans[i].classList.remove("is-on", "is-past");
+        if (!w) continue;
+        if (t >= w.end - 0.02) spans[i].classList.add("is-past");
+        else if (t >= w.start - 0.05) spans[i].classList.add("is-on");
+      }
+    }
+    function setIllo(id, t, cue) {
+      if (!illos) return;
+      illos.hidden = !id;
+      illos.setAttribute("aria-hidden", id ? "false" : "true");
+      illos.setAttribute("data-active", id || "");
+      var nodes = illos.querySelectorAll(".sw-illo");
+      for (var i = 0; i < nodes.length; i++) {
+        nodes[i].classList.toggle("is-on", nodes[i].getAttribute("data-illo") === id);
+      }
+      var lit = 0;
+      if (id === "tonight" && cue) {
+        var local = Math.max(0, t - cue.start);
+        if (local > 2.0) lit = 1;
+        if (local > 4.2) lit = 2;
+        if (local > 7.5) lit = 3;
+        if (local > 10.2) lit = 4;
+      }
+      illos.setAttribute("data-lit", String(lit));
+    }
+    function syncToTime(t) {
+      var found = -1;
+      for (var i = 0; i < CUES.length; i++) {
+        if (t >= CUES[i].start - 0.1 && t <= CUES[i].end + 0.4) { found = i; break; }
+      }
+      if (found === -1 && t > 0) {
+        for (var j = CUES.length - 1; j >= 0; j--) {
+          if (t >= CUES[j].start) { found = j; break; }
+        }
+      }
+      if (found !== -1 && found !== lastCueIdx) {
+        lastCueIdx = found;
+        var c = CUES[found];
+        if (capWho) capWho.textContent = "Sazón · your SuperWho";
+        renderCueWords(c);
+        setIllo(c.illo, t, c);
+      } else if (found !== -1) {
+        setIllo(CUES[found].illo, t, CUES[found]);
+      }
+      highlightWords(t);
+    }
+    function voiceFrame() {
+      if (video.paused) { rafId = 0; return; }
+      var level = currentLevel();
+      smoothLevel = smoothLevel * 0.7 + level * 0.3;
+      applyGlow(smoothLevel);
+      syncToTime(video.currentTime || 0);
+      rafId = requestAnimationFrame(voiceFrame);
+    }
+    function startVoiceLoop() {
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(voiceFrame);
+    }
+    function stopVoiceLoop() {
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = 0;
+      applyGlow(0.12);
+      ripples.forEach(function (el) { el.classList.remove("is-on"); });
+    }
+
+    function startPlay() {
+      hookAudio();
+      lockNativeControls();
+      video.muted = false;
+      overlay.hidden = true;
+      if (illos) illos.hidden = false;
+      function go() {
+        lockNativeControls();
+        var p = video.play();
+        if (p && p.then) {
+          p.then(function () {
+            lockNativeControls();
+            startVoiceLoop();
+          }).catch(function () {
+            overlay.hidden = false;
+            if (playLabel) playLabel.textContent = "Tap to play with sound";
+          });
+        } else {
+          startVoiceLoop();
+        }
+      }
+      if (!videoBlobUrl) {
+        if (capText) capText.textContent = "Loading…";
+        ensureVideoLoaded().then(function (url) {
+          if (!url) { overlay.hidden = false; return; }
+          hookAudio();
+          go();
+        });
+        return;
+      }
+      if (video.ended) video.currentTime = 0;
+      go();
+    }
+
+    overlay.addEventListener("click", function (ev) {
+      ev.preventDefault();
+      startPlay();
+    });
+    video.addEventListener("timeupdate", function () {
+      if (!video.paused) syncToTime(video.currentTime || 0);
+    });
+    video.addEventListener("ended", function () {
+      stopVoiceLoop();
+      lockNativeControls();
+      overlay.hidden = false;
+      if (playLabel) playLabel.textContent = "Play again";
+      lastCueIdx = -1;
+    });
+    video.addEventListener("pause", function () {
+      if (!video.ended) stopVoiceLoop();
     });
   })();
   </script>
