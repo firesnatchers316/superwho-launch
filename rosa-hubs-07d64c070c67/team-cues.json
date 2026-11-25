@@ -1,4198 +1,5986 @@
 {
-  "hope": {
-    "duration": 54.406167,
-    "cues": [
-      {
-        "i": 1,
-        "id": "h01",
-        "illo": "hope",
-        "speaker": "Hope",
-        "voice": "en-US-EmmaNeural",
-        "start": 0.0,
-        "end": 9.074,
-        "text": "Hi Rosa. I'm Hope, your SuperWho, built for Life Remodeled. Jim and his team developed me, and I'm here to take work off your plate at both Opportunity Hubs."
-      },
-      {
-        "i": 2,
-        "id": "h02",
-        "illo": "hope",
-        "speaker": "Hope",
-        "voice": "en-US-EmmaNeural",
-        "start": 9.354,
-        "end": 22.2,
-        "text": "I keep both hubs in one place, so you're not jumping between systems. You can search the tenant directory, open a group's card, and start a request from there. Announcements go to one hub or both, and you'll see who has already read them."
-      },
-      {
-        "i": 3,
-        "id": "h03",
-        "illo": "hope",
-        "speaker": "Hope",
-        "voice": "en-US-EmmaNeural",
-        "start": 22.48,
-        "end": 35.844,
-        "text": "Maintenance stays moving, from submitted, to in progress, to done, so a leaky valve or a door lock doesn't get buried in your inbox. The shared calendar and room booking keeps gyms, classrooms, and community spaces from getting double booked."
-      },
-      {
-        "i": 4,
-        "id": "h04",
-        "illo": "hope",
-        "speaker": "Hope",
-        "voice": "en-US-EmmaNeural",
-        "start": 36.124,
-        "end": 53.856,
-        "text": "When a tenant needs something, the request form on this page routes it straight in and alerts the team. This demo is free to use for now. What else would take things off your plate? I'd like you to meet my teammate, Grace. She's the Executive Assistant SuperWho for your Executive Director, and she'll walk you through what she can do."
-      }
-    ],
-    "words": [
-      {
-        "start": 0.0,
-        "end": 0.28,
-        "word": "Hi",
-        "speaker": "Hope",
-        "cue": 1
-      },
-      {
-        "start": 0.28,
-        "end": 0.6,
-        "word": "Rosa.",
-        "speaker": "Hope",
-        "cue": 1
-      },
-      {
-        "start": 1.32,
-        "end": 1.46,
-        "word": "I'm",
-        "speaker": "Hope",
-        "cue": 1
-      },
-      {
-        "start": 1.46,
-        "end": 1.62,
-        "word": "Hope,",
-        "speaker": "Hope",
-        "cue": 1
-      },
-      {
-        "start": 1.8,
-        "end": 1.88,
-        "word": "your",
-        "speaker": "Hope",
-        "cue": 1
-      },
-      {
-        "start": 1.88,
-        "end": 2.42,
-        "word": "SuperWho",
-        "speaker": "Hope",
-        "cue": 1
-      },
-      {
-        "start": 2.42,
-        "end": 2.68,
-        "word": "built",
-        "speaker": "Hope",
-        "cue": 1
-      },
-      {
-        "start": 2.68,
-        "end": 2.92,
-        "word": "for",
-        "speaker": "Hope",
-        "cue": 1
-      },
-      {
-        "start": 2.92,
-        "end": 3.1,
-        "word": "Life",
-        "speaker": "Hope",
-        "cue": 1
-      },
-      {
-        "start": 3.1,
-        "end": 3.72,
-        "word": "Remodeled.",
-        "speaker": "Hope",
-        "cue": 1
-      },
-      {
-        "start": 4.3,
-        "end": 4.4,
-        "word": "Jim",
-        "speaker": "Hope",
-        "cue": 1
-      },
-      {
-        "start": 4.4,
-        "end": 4.58,
-        "word": "and",
-        "speaker": "Hope",
-        "cue": 1
-      },
-      {
-        "start": 4.58,
-        "end": 4.78,
-        "word": "his",
-        "speaker": "Hope",
-        "cue": 1
-      },
-      {
-        "start": 4.78,
-        "end": 5.02,
-        "word": "team",
-        "speaker": "Hope",
-        "cue": 1
-      },
-      {
-        "start": 5.02,
-        "end": 5.42,
-        "word": "developed",
-        "speaker": "Hope",
-        "cue": 1
-      },
-      {
-        "start": 5.42,
-        "end": 5.74,
-        "word": "me,",
-        "speaker": "Hope",
-        "cue": 1
-      },
-      {
-        "start": 5.84,
-        "end": 5.98,
-        "word": "and",
-        "speaker": "Hope",
-        "cue": 1
-      },
-      {
-        "start": 5.98,
-        "end": 6.12,
-        "word": "I'm",
-        "speaker": "Hope",
-        "cue": 1
-      },
-      {
-        "start": 6.12,
-        "end": 6.26,
-        "word": "here",
-        "speaker": "Hope",
-        "cue": 1
-      },
-      {
-        "start": 6.26,
-        "end": 6.44,
-        "word": "to",
-        "speaker": "Hope",
-        "cue": 1
-      },
-      {
-        "start": 6.44,
-        "end": 6.6,
-        "word": "take",
-        "speaker": "Hope",
-        "cue": 1
-      },
-      {
-        "start": 6.6,
-        "end": 6.84,
-        "word": "work",
-        "speaker": "Hope",
-        "cue": 1
-      },
-      {
-        "start": 6.84,
-        "end": 7.02,
-        "word": "off",
-        "speaker": "Hope",
-        "cue": 1
-      },
-      {
-        "start": 7.02,
-        "end": 7.2,
-        "word": "your",
-        "speaker": "Hope",
-        "cue": 1
-      },
-      {
-        "start": 7.2,
-        "end": 7.4,
-        "word": "plate",
-        "speaker": "Hope",
-        "cue": 1
-      },
-      {
-        "start": 7.4,
-        "end": 7.56,
-        "word": "at",
-        "speaker": "Hope",
-        "cue": 1
-      },
-      {
-        "start": 7.56,
-        "end": 7.74,
-        "word": "both",
-        "speaker": "Hope",
-        "cue": 1
-      },
-      {
-        "start": 7.74,
-        "end": 8.26,
-        "word": "opportunity",
-        "speaker": "Hope",
-        "cue": 1
-      },
-      {
-        "start": 8.26,
-        "end": 8.66,
-        "word": "hubs.",
-        "speaker": "Hope",
-        "cue": 1
-      },
-      {
-        "start": 9.5,
-        "end": 9.6,
-        "word": "I",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 9.6,
-        "end": 9.8,
-        "word": "keep",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 9.8,
-        "end": 10.06,
-        "word": "both",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 10.06,
-        "end": 10.28,
-        "word": "hubs",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 10.28,
-        "end": 10.46,
-        "word": "in",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 10.46,
-        "end": 10.64,
-        "word": "one",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 10.64,
-        "end": 10.9,
-        "word": "place,",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 11.06,
-        "end": 11.26,
-        "word": "so",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 11.26,
-        "end": 11.44,
-        "word": "you're",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 11.44,
-        "end": 11.6,
-        "word": "not",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 11.6,
-        "end": 11.92,
-        "word": "jumping",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 11.92,
-        "end": 12.28,
-        "word": "between",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 12.28,
-        "end": 12.74,
-        "word": "systems.",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 13.4,
-        "end": 13.54,
-        "word": "You",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 13.54,
-        "end": 13.68,
-        "word": "can",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 13.68,
-        "end": 13.88,
-        "word": "search",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 13.88,
-        "end": 14.12,
-        "word": "the",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 14.12,
-        "end": 14.32,
-        "word": "tenant",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 14.32,
-        "end": 14.88,
-        "word": "directory,",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 15.12,
-        "end": 15.36,
-        "word": "open",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 15.36,
-        "end": 15.52,
-        "word": "a",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 15.52,
-        "end": 15.84,
-        "word": "group's",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 15.84,
-        "end": 16.1,
-        "word": "card,",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 16.32,
-        "end": 16.46,
-        "word": "and",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 16.46,
-        "end": 16.74,
-        "word": "start",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 16.74,
-        "end": 16.86,
-        "word": "a",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 16.86,
-        "end": 17.14,
-        "word": "request",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 17.14,
-        "end": 17.4,
-        "word": "from",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 17.4,
-        "end": 17.7,
-        "word": "there.",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 18.5,
-        "end": 18.82,
-        "word": "Announcements",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 18.82,
-        "end": 19.04,
-        "word": "go",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 19.04,
-        "end": 19.22,
-        "word": "to",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 19.22,
-        "end": 19.4,
-        "word": "one",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 19.4,
-        "end": 19.64,
-        "word": "hub",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 19.64,
-        "end": 19.88,
-        "word": "or",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 19.88,
-        "end": 20.14,
-        "word": "both,",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 20.32,
-        "end": 20.5,
-        "word": "and",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 20.5,
-        "end": 20.7,
-        "word": "you'll",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 20.7,
-        "end": 20.84,
-        "word": "see",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 20.84,
-        "end": 21.02,
-        "word": "who",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 21.02,
-        "end": 21.16,
-        "word": "has",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 21.16,
-        "end": 21.46,
-        "word": "already",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 21.46,
-        "end": 21.7,
-        "word": "read",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 21.7,
-        "end": 22.02,
-        "word": "them.",
-        "speaker": "Hope",
-        "cue": 2
-      },
-      {
-        "start": 22.68,
-        "end": 22.94,
-        "word": "Maintenance",
-        "speaker": "Hope",
-        "cue": 3
-      },
-      {
-        "start": 22.94,
-        "end": 23.34,
-        "word": "stays",
-        "speaker": "Hope",
-        "cue": 3
-      },
-      {
-        "start": 23.34,
-        "end": 23.7,
-        "word": "moving",
-        "speaker": "Hope",
-        "cue": 3
-      },
-      {
-        "start": 23.7,
-        "end": 24.04,
-        "word": "from",
-        "speaker": "Hope",
-        "cue": 3
-      },
-      {
-        "start": 24.04,
-        "end": 24.44,
-        "word": "submitted",
-        "speaker": "Hope",
-        "cue": 3
-      },
-      {
-        "start": 24.44,
-        "end": 24.78,
-        "word": "to",
-        "speaker": "Hope",
-        "cue": 3
-      },
-      {
-        "start": 24.78,
-        "end": 24.9,
-        "word": "in",
-        "speaker": "Hope",
-        "cue": 3
-      },
-      {
-        "start": 24.9,
-        "end": 25.18,
-        "word": "progress",
-        "speaker": "Hope",
-        "cue": 3
-      },
-      {
-        "start": 25.18,
-        "end": 25.64,
-        "word": "to",
-        "speaker": "Hope",
-        "cue": 3
-      },
-      {
-        "start": 25.64,
-        "end": 25.88,
-        "word": "done,",
-        "speaker": "Hope",
-        "cue": 3
-      },
-      {
-        "start": 26.02,
-        "end": 26.24,
-        "word": "so",
-        "speaker": "Hope",
-        "cue": 3
-      },
-      {
-        "start": 26.24,
-        "end": 26.42,
-        "word": "a",
-        "speaker": "Hope",
-        "cue": 3
-      },
-      {
-        "start": 26.42,
-        "end": 26.76,
-        "word": "leaky",
-        "speaker": "Hope",
-        "cue": 3
-      },
-      {
-        "start": 26.76,
-        "end": 26.96,
-        "word": "valve",
-        "speaker": "Hope",
-        "cue": 3
-      },
-      {
-        "start": 26.96,
-        "end": 27.28,
-        "word": "or",
-        "speaker": "Hope",
-        "cue": 3
-      },
-      {
-        "start": 27.28,
-        "end": 27.54,
-        "word": "door",
-        "speaker": "Hope",
-        "cue": 3
-      },
-      {
-        "start": 27.54,
-        "end": 27.82,
-        "word": "lock",
-        "speaker": "Hope",
-        "cue": 3
-      },
-      {
-        "start": 27.82,
-        "end": 28.22,
-        "word": "doesn't",
-        "speaker": "Hope",
-        "cue": 3
-      },
-      {
-        "start": 28.22,
-        "end": 28.38,
-        "word": "get",
-        "speaker": "Hope",
-        "cue": 3
-      },
-      {
-        "start": 28.38,
-        "end": 28.62,
-        "word": "buried",
-        "speaker": "Hope",
-        "cue": 3
-      },
-      {
-        "start": 28.62,
-        "end": 28.86,
-        "word": "in",
-        "speaker": "Hope",
-        "cue": 3
-      },
-      {
-        "start": 28.86,
-        "end": 29.02,
-        "word": "your",
-        "speaker": "Hope",
-        "cue": 3
-      },
-      {
-        "start": 29.02,
-        "end": 29.38,
-        "word": "inbox.",
-        "speaker": "Hope",
-        "cue": 3
-      },
-      {
-        "start": 30.0,
-        "end": 30.24,
-        "word": "The",
-        "speaker": "Hope",
-        "cue": 3
-      },
-      {
-        "start": 30.24,
-        "end": 30.48,
-        "word": "shared",
-        "speaker": "Hope",
-        "cue": 3
-      },
-      {
-        "start": 30.48,
-        "end": 30.94,
-        "word": "calendar",
-        "speaker": "Hope",
-        "cue": 3
-      },
-      {
-        "start": 30.94,
-        "end": 31.22,
-        "word": "and",
-        "speaker": "Hope",
-        "cue": 3
-      },
-      {
-        "start": 31.22,
-        "end": 31.42,
-        "word": "room",
-        "speaker": "Hope",
-        "cue": 3
-      },
-      {
-        "start": 31.42,
-        "end": 31.7,
-        "word": "booking",
-        "speaker": "Hope",
-        "cue": 3
-      },
-      {
-        "start": 31.7,
-        "end": 32.06,
-        "word": "keeps",
-        "speaker": "Hope",
-        "cue": 3
-      },
-      {
-        "start": 32.06,
-        "end": 32.52,
-        "word": "gyms,",
-        "speaker": "Hope",
-        "cue": 3
-      },
-      {
-        "start": 32.72,
-        "end": 33.04,
-        "word": "classrooms,",
-        "speaker": "Hope",
-        "cue": 3
-      },
-      {
-        "start": 33.4,
-        "end": 33.48,
-        "word": "and",
-        "speaker": "Hope",
-        "cue": 3
-      },
-      {
-        "start": 33.48,
-        "end": 33.82,
-        "word": "community",
-        "speaker": "Hope",
-        "cue": 3
-      },
-      {
-        "start": 33.82,
-        "end": 34.34,
-        "word": "spaces",
-        "speaker": "Hope",
-        "cue": 3
-      },
-      {
-        "start": 34.34,
-        "end": 34.64,
-        "word": "from",
-        "speaker": "Hope",
-        "cue": 3
-      },
-      {
-        "start": 34.64,
-        "end": 34.9,
-        "word": "getting",
-        "speaker": "Hope",
-        "cue": 3
-      },
-      {
-        "start": 34.9,
-        "end": 35.24,
-        "word": "double",
-        "speaker": "Hope",
-        "cue": 3
-      },
-      {
-        "start": 35.24,
-        "end": 35.74,
-        "word": "-booked.",
-        "speaker": "Hope",
-        "cue": 3
-      },
-      {
-        "start": 36.18,
-        "end": 36.36,
-        "word": "When",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 36.36,
-        "end": 36.46,
-        "word": "a",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 36.46,
-        "end": 36.64,
-        "word": "tenant",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 36.64,
-        "end": 36.92,
-        "word": "needs",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 36.92,
-        "end": 37.34,
-        "word": "something,",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 37.54,
-        "end": 37.66,
-        "word": "the",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 37.66,
-        "end": 38.0,
-        "word": "request",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 38.0,
-        "end": 38.3,
-        "word": "form",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 38.3,
-        "end": 38.48,
-        "word": "on",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 38.48,
-        "end": 38.68,
-        "word": "this",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 38.68,
-        "end": 38.94,
-        "word": "page",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 38.94,
-        "end": 39.22,
-        "word": "routes",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 39.22,
-        "end": 39.4,
-        "word": "it",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 39.4,
-        "end": 39.66,
-        "word": "straight",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 39.66,
-        "end": 39.84,
-        "word": "in",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 39.84,
-        "end": 40.02,
-        "word": "and",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 40.02,
-        "end": 40.3,
-        "word": "alerts",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 40.3,
-        "end": 40.56,
-        "word": "the",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 40.56,
-        "end": 40.84,
-        "word": "team.",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 41.4,
-        "end": 41.56,
-        "word": "This",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 41.56,
-        "end": 41.82,
-        "word": "demo",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 41.82,
-        "end": 42.08,
-        "word": "is",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 42.08,
-        "end": 42.3,
-        "word": "free",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 42.3,
-        "end": 42.46,
-        "word": "to",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 42.46,
-        "end": 42.64,
-        "word": "use",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 42.64,
-        "end": 42.82,
-        "word": "for",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 42.82,
-        "end": 43.1,
-        "word": "now.",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 43.64,
-        "end": 43.74,
-        "word": "What",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 43.74,
-        "end": 43.9,
-        "word": "else",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 43.9,
-        "end": 44.1,
-        "word": "would",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 44.1,
-        "end": 44.28,
-        "word": "take",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 44.28,
-        "end": 44.56,
-        "word": "things",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 44.56,
-        "end": 44.74,
-        "word": "off",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 44.74,
-        "end": 44.92,
-        "word": "your",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 44.92,
-        "end": 45.18,
-        "word": "plate?",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 45.84,
-        "end": 46.0,
-        "word": "I'd",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 46.0,
-        "end": 46.12,
-        "word": "like",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 46.12,
-        "end": 46.32,
-        "word": "you",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 46.32,
-        "end": 46.44,
-        "word": "to",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 46.44,
-        "end": 46.56,
-        "word": "meet",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 46.56,
-        "end": 46.74,
-        "word": "my",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 46.74,
-        "end": 47.1,
-        "word": "teammate,",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 47.28,
-        "end": 47.44,
-        "word": "Grace.",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 48.16,
-        "end": 48.4,
-        "word": "She's",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 48.4,
-        "end": 48.54,
-        "word": "the",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 48.54,
-        "end": 48.96,
-        "word": "executive",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 48.96,
-        "end": 49.52,
-        "word": "assistant",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 49.52,
-        "end": 50.14,
-        "word": "SuperWho",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 50.14,
-        "end": 50.32,
-        "word": "for",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 50.32,
-        "end": 50.46,
-        "word": "your",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 50.46,
-        "end": 50.98,
-        "word": "executive",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 50.98,
-        "end": 51.52,
-        "word": "director,",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 51.78,
-        "end": 51.94,
-        "word": "and",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 51.94,
-        "end": 52.22,
-        "word": "she'll",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 52.22,
-        "end": 52.4,
-        "word": "walk",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 52.4,
-        "end": 52.64,
-        "word": "you",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 52.64,
-        "end": 52.82,
-        "word": "through",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 52.82,
-        "end": 53.02,
-        "word": "what",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 53.02,
-        "end": 53.18,
-        "word": "she",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 53.18,
-        "end": 53.36,
-        "word": "can",
-        "speaker": "Hope",
-        "cue": 4
-      },
-      {
-        "start": 53.36,
-        "end": 53.6,
-        "word": "do.",
-        "speaker": "Hope",
-        "cue": 4
-      }
-    ],
-    "byCue": {
-      "1": [
-        {
-          "start": 0.0,
-          "end": 0.28,
-          "word": "Hi"
-        },
-        {
-          "start": 0.28,
-          "end": 0.6,
-          "word": "Rosa."
-        },
-        {
-          "start": 1.32,
-          "end": 1.46,
-          "word": "I'm"
-        },
-        {
-          "start": 1.46,
-          "end": 1.62,
-          "word": "Hope,"
-        },
-        {
-          "start": 1.8,
-          "end": 1.88,
-          "word": "your"
-        },
-        {
-          "start": 1.88,
-          "end": 2.42,
-          "word": "SuperWho"
-        },
-        {
-          "start": 2.42,
-          "end": 2.68,
-          "word": "built"
-        },
-        {
-          "start": 2.68,
-          "end": 2.92,
-          "word": "for"
-        },
-        {
-          "start": 2.92,
-          "end": 3.1,
-          "word": "Life"
-        },
-        {
-          "start": 3.1,
-          "end": 3.72,
-          "word": "Remodeled."
-        },
-        {
-          "start": 4.3,
-          "end": 4.4,
-          "word": "Jim"
-        },
-        {
-          "start": 4.4,
-          "end": 4.58,
-          "word": "and"
-        },
-        {
-          "start": 4.58,
-          "end": 4.78,
-          "word": "his"
-        },
-        {
-          "start": 4.78,
-          "end": 5.02,
-          "word": "team"
-        },
-        {
-          "start": 5.02,
-          "end": 5.42,
-          "word": "developed"
-        },
-        {
-          "start": 5.42,
-          "end": 5.74,
-          "word": "me,"
-        },
-        {
-          "start": 5.84,
-          "end": 5.98,
-          "word": "and"
-        },
-        {
-          "start": 5.98,
-          "end": 6.12,
-          "word": "I'm"
-        },
-        {
-          "start": 6.12,
-          "end": 6.26,
-          "word": "here"
-        },
-        {
-          "start": 6.26,
-          "end": 6.44,
-          "word": "to"
-        },
-        {
-          "start": 6.44,
-          "end": 6.6,
-          "word": "take"
-        },
-        {
-          "start": 6.6,
-          "end": 6.84,
-          "word": "work"
-        },
-        {
-          "start": 6.84,
-          "end": 7.02,
-          "word": "off"
-        },
-        {
-          "start": 7.02,
-          "end": 7.2,
-          "word": "your"
-        },
-        {
-          "start": 7.2,
-          "end": 7.4,
-          "word": "plate"
-        },
-        {
-          "start": 7.4,
-          "end": 7.56,
-          "word": "at"
-        },
-        {
-          "start": 7.56,
-          "end": 7.74,
-          "word": "both"
-        },
-        {
-          "start": 7.74,
-          "end": 8.26,
-          "word": "opportunity"
-        },
-        {
-          "start": 8.26,
-          "end": 8.66,
-          "word": "hubs."
-        }
-      ],
-      "2": [
-        {
-          "start": 9.5,
-          "end": 9.6,
-          "word": "I"
-        },
-        {
-          "start": 9.6,
-          "end": 9.8,
-          "word": "keep"
-        },
-        {
-          "start": 9.8,
-          "end": 10.06,
-          "word": "both"
-        },
-        {
-          "start": 10.06,
-          "end": 10.28,
-          "word": "hubs"
-        },
-        {
-          "start": 10.28,
-          "end": 10.46,
-          "word": "in"
-        },
-        {
-          "start": 10.46,
-          "end": 10.64,
-          "word": "one"
-        },
-        {
-          "start": 10.64,
-          "end": 10.9,
-          "word": "place,"
-        },
-        {
-          "start": 11.06,
-          "end": 11.26,
-          "word": "so"
-        },
-        {
-          "start": 11.26,
-          "end": 11.44,
-          "word": "you're"
-        },
-        {
-          "start": 11.44,
-          "end": 11.6,
-          "word": "not"
-        },
-        {
-          "start": 11.6,
-          "end": 11.92,
-          "word": "jumping"
-        },
-        {
-          "start": 11.92,
-          "end": 12.28,
-          "word": "between"
-        },
-        {
-          "start": 12.28,
-          "end": 12.74,
-          "word": "systems."
-        },
-        {
-          "start": 13.4,
-          "end": 13.54,
-          "word": "You"
-        },
-        {
-          "start": 13.54,
-          "end": 13.68,
-          "word": "can"
-        },
-        {
-          "start": 13.68,
-          "end": 13.88,
-          "word": "search"
-        },
-        {
-          "start": 13.88,
-          "end": 14.12,
-          "word": "the"
-        },
-        {
-          "start": 14.12,
-          "end": 14.32,
-          "word": "tenant"
-        },
-        {
-          "start": 14.32,
-          "end": 14.88,
-          "word": "directory,"
-        },
-        {
-          "start": 15.12,
-          "end": 15.36,
-          "word": "open"
-        },
-        {
-          "start": 15.36,
-          "end": 15.52,
-          "word": "a"
-        },
-        {
-          "start": 15.52,
-          "end": 15.84,
-          "word": "group's"
-        },
-        {
-          "start": 15.84,
-          "end": 16.1,
-          "word": "card,"
-        },
-        {
-          "start": 16.32,
-          "end": 16.46,
-          "word": "and"
-        },
-        {
-          "start": 16.46,
-          "end": 16.74,
-          "word": "start"
-        },
-        {
-          "start": 16.74,
-          "end": 16.86,
-          "word": "a"
-        },
-        {
-          "start": 16.86,
-          "end": 17.14,
-          "word": "request"
-        },
-        {
-          "start": 17.14,
-          "end": 17.4,
-          "word": "from"
-        },
-        {
-          "start": 17.4,
-          "end": 17.7,
-          "word": "there."
-        },
-        {
-          "start": 18.5,
-          "end": 18.82,
-          "word": "Announcements"
-        },
-        {
-          "start": 18.82,
-          "end": 19.04,
-          "word": "go"
-        },
-        {
-          "start": 19.04,
-          "end": 19.22,
-          "word": "to"
-        },
-        {
-          "start": 19.22,
-          "end": 19.4,
-          "word": "one"
-        },
-        {
-          "start": 19.4,
-          "end": 19.64,
-          "word": "hub"
-        },
-        {
-          "start": 19.64,
-          "end": 19.88,
-          "word": "or"
-        },
-        {
-          "start": 19.88,
-          "end": 20.14,
-          "word": "both,"
-        },
-        {
-          "start": 20.32,
-          "end": 20.5,
-          "word": "and"
-        },
-        {
-          "start": 20.5,
-          "end": 20.7,
-          "word": "you'll"
-        },
-        {
-          "start": 20.7,
-          "end": 20.84,
-          "word": "see"
-        },
-        {
-          "start": 20.84,
-          "end": 21.02,
-          "word": "who"
-        },
-        {
-          "start": 21.02,
-          "end": 21.16,
-          "word": "has"
-        },
-        {
-          "start": 21.16,
-          "end": 21.46,
-          "word": "already"
-        },
-        {
-          "start": 21.46,
-          "end": 21.7,
-          "word": "read"
-        },
-        {
-          "start": 21.7,
-          "end": 22.02,
-          "word": "them."
-        }
-      ],
-      "3": [
-        {
-          "start": 22.68,
-          "end": 22.94,
-          "word": "Maintenance"
-        },
-        {
-          "start": 22.94,
-          "end": 23.34,
-          "word": "stays"
-        },
-        {
-          "start": 23.34,
-          "end": 23.7,
-          "word": "moving"
-        },
-        {
-          "start": 23.7,
-          "end": 24.04,
-          "word": "from"
-        },
-        {
-          "start": 24.04,
-          "end": 24.44,
-          "word": "submitted"
-        },
-        {
-          "start": 24.44,
-          "end": 24.78,
-          "word": "to"
-        },
-        {
-          "start": 24.78,
-          "end": 24.9,
-          "word": "in"
-        },
-        {
-          "start": 24.9,
-          "end": 25.18,
-          "word": "progress"
-        },
-        {
-          "start": 25.18,
-          "end": 25.64,
-          "word": "to"
-        },
-        {
-          "start": 25.64,
-          "end": 25.88,
-          "word": "done,"
-        },
-        {
-          "start": 26.02,
-          "end": 26.24,
-          "word": "so"
-        },
-        {
-          "start": 26.24,
-          "end": 26.42,
-          "word": "a"
-        },
-        {
-          "start": 26.42,
-          "end": 26.76,
-          "word": "leaky"
-        },
-        {
-          "start": 26.76,
-          "end": 26.96,
-          "word": "valve"
-        },
-        {
-          "start": 26.96,
-          "end": 27.28,
-          "word": "or"
-        },
-        {
-          "start": 27.28,
-          "end": 27.54,
-          "word": "door"
-        },
-        {
-          "start": 27.54,
-          "end": 27.82,
-          "word": "lock"
-        },
-        {
-          "start": 27.82,
-          "end": 28.22,
-          "word": "doesn't"
-        },
-        {
-          "start": 28.22,
-          "end": 28.38,
-          "word": "get"
-        },
-        {
-          "start": 28.38,
-          "end": 28.62,
-          "word": "buried"
-        },
-        {
-          "start": 28.62,
-          "end": 28.86,
-          "word": "in"
-        },
-        {
-          "start": 28.86,
-          "end": 29.02,
-          "word": "your"
-        },
-        {
-          "start": 29.02,
-          "end": 29.38,
-          "word": "inbox."
-        },
-        {
-          "start": 30.0,
-          "end": 30.24,
-          "word": "The"
-        },
-        {
-          "start": 30.24,
-          "end": 30.48,
-          "word": "shared"
-        },
-        {
-          "start": 30.48,
-          "end": 30.94,
-          "word": "calendar"
-        },
-        {
-          "start": 30.94,
-          "end": 31.22,
-          "word": "and"
-        },
-        {
-          "start": 31.22,
-          "end": 31.42,
-          "word": "room"
-        },
-        {
-          "start": 31.42,
-          "end": 31.7,
-          "word": "booking"
-        },
-        {
-          "start": 31.7,
-          "end": 32.06,
-          "word": "keeps"
-        },
-        {
-          "start": 32.06,
-          "end": 32.52,
-          "word": "gyms,"
-        },
-        {
-          "start": 32.72,
-          "end": 33.04,
-          "word": "classrooms,"
-        },
-        {
-          "start": 33.4,
-          "end": 33.48,
-          "word": "and"
-        },
-        {
-          "start": 33.48,
-          "end": 33.82,
-          "word": "community"
-        },
-        {
-          "start": 33.82,
-          "end": 34.34,
-          "word": "spaces"
-        },
-        {
-          "start": 34.34,
-          "end": 34.64,
-          "word": "from"
-        },
-        {
-          "start": 34.64,
-          "end": 34.9,
-          "word": "getting"
-        },
-        {
-          "start": 34.9,
-          "end": 35.24,
-          "word": "double"
-        },
-        {
-          "start": 35.24,
-          "end": 35.74,
-          "word": "-booked."
-        }
-      ],
-      "4": [
-        {
-          "start": 36.18,
-          "end": 36.36,
-          "word": "When"
-        },
-        {
-          "start": 36.36,
-          "end": 36.46,
-          "word": "a"
-        },
-        {
-          "start": 36.46,
-          "end": 36.64,
-          "word": "tenant"
-        },
-        {
-          "start": 36.64,
-          "end": 36.92,
-          "word": "needs"
-        },
-        {
-          "start": 36.92,
-          "end": 37.34,
-          "word": "something,"
-        },
-        {
-          "start": 37.54,
-          "end": 37.66,
-          "word": "the"
-        },
-        {
-          "start": 37.66,
-          "end": 38.0,
-          "word": "request"
-        },
-        {
-          "start": 38.0,
-          "end": 38.3,
-          "word": "form"
-        },
-        {
-          "start": 38.3,
-          "end": 38.48,
-          "word": "on"
-        },
-        {
-          "start": 38.48,
-          "end": 38.68,
-          "word": "this"
-        },
-        {
-          "start": 38.68,
-          "end": 38.94,
-          "word": "page"
-        },
-        {
-          "start": 38.94,
-          "end": 39.22,
-          "word": "routes"
-        },
-        {
-          "start": 39.22,
-          "end": 39.4,
-          "word": "it"
-        },
-        {
-          "start": 39.4,
-          "end": 39.66,
-          "word": "straight"
-        },
-        {
-          "start": 39.66,
-          "end": 39.84,
-          "word": "in"
-        },
-        {
-          "start": 39.84,
-          "end": 40.02,
-          "word": "and"
-        },
-        {
-          "start": 40.02,
-          "end": 40.3,
-          "word": "alerts"
-        },
-        {
-          "start": 40.3,
-          "end": 40.56,
-          "word": "the"
-        },
-        {
-          "start": 40.56,
-          "end": 40.84,
-          "word": "team."
-        },
-        {
-          "start": 41.4,
-          "end": 41.56,
-          "word": "This"
-        },
-        {
-          "start": 41.56,
-          "end": 41.82,
-          "word": "demo"
-        },
-        {
-          "start": 41.82,
-          "end": 42.08,
-          "word": "is"
-        },
-        {
-          "start": 42.08,
-          "end": 42.3,
-          "word": "free"
-        },
-        {
-          "start": 42.3,
-          "end": 42.46,
-          "word": "to"
-        },
-        {
-          "start": 42.46,
-          "end": 42.64,
-          "word": "use"
-        },
-        {
-          "start": 42.64,
-          "end": 42.82,
-          "word": "for"
-        },
-        {
-          "start": 42.82,
-          "end": 43.1,
-          "word": "now."
-        },
-        {
-          "start": 43.64,
-          "end": 43.74,
-          "word": "What"
-        },
-        {
-          "start": 43.74,
-          "end": 43.9,
-          "word": "else"
-        },
-        {
-          "start": 43.9,
-          "end": 44.1,
-          "word": "would"
-        },
-        {
-          "start": 44.1,
-          "end": 44.28,
-          "word": "take"
-        },
-        {
-          "start": 44.28,
-          "end": 44.56,
-          "word": "things"
-        },
-        {
-          "start": 44.56,
-          "end": 44.74,
-          "word": "off"
-        },
-        {
-          "start": 44.74,
-          "end": 44.92,
-          "word": "your"
-        },
-        {
-          "start": 44.92,
-          "end": 45.18,
-          "word": "plate?"
-        },
-        {
-          "start": 45.84,
-          "end": 46.0,
-          "word": "I'd"
-        },
-        {
-          "start": 46.0,
-          "end": 46.12,
-          "word": "like"
-        },
-        {
-          "start": 46.12,
-          "end": 46.32,
-          "word": "you"
-        },
-        {
-          "start": 46.32,
-          "end": 46.44,
-          "word": "to"
-        },
-        {
-          "start": 46.44,
-          "end": 46.56,
-          "word": "meet"
-        },
-        {
-          "start": 46.56,
-          "end": 46.74,
-          "word": "my"
-        },
-        {
-          "start": 46.74,
-          "end": 47.1,
-          "word": "teammate,"
-        },
-        {
-          "start": 47.28,
-          "end": 47.44,
-          "word": "Grace."
-        },
-        {
-          "start": 48.16,
-          "end": 48.4,
-          "word": "She's"
-        },
-        {
-          "start": 48.4,
-          "end": 48.54,
-          "word": "the"
-        },
-        {
-          "start": 48.54,
-          "end": 48.96,
-          "word": "executive"
-        },
-        {
-          "start": 48.96,
-          "end": 49.52,
-          "word": "assistant"
-        },
-        {
-          "start": 49.52,
-          "end": 50.14,
-          "word": "SuperWho"
-        },
-        {
-          "start": 50.14,
-          "end": 50.32,
-          "word": "for"
-        },
-        {
-          "start": 50.32,
-          "end": 50.46,
-          "word": "your"
-        },
-        {
-          "start": 50.46,
-          "end": 50.98,
-          "word": "executive"
-        },
-        {
-          "start": 50.98,
-          "end": 51.52,
-          "word": "director,"
-        },
-        {
-          "start": 51.78,
-          "end": 51.94,
-          "word": "and"
-        },
-        {
-          "start": 51.94,
-          "end": 52.22,
-          "word": "she'll"
-        },
-        {
-          "start": 52.22,
-          "end": 52.4,
-          "word": "walk"
-        },
-        {
-          "start": 52.4,
-          "end": 52.64,
-          "word": "you"
-        },
-        {
-          "start": 52.64,
-          "end": 52.82,
-          "word": "through"
-        },
-        {
-          "start": 52.82,
-          "end": 53.02,
-          "word": "what"
-        },
-        {
-          "start": 53.02,
-          "end": 53.18,
-          "word": "she"
-        },
-        {
-          "start": 53.18,
-          "end": 53.36,
-          "word": "can"
-        },
-        {
-          "start": 53.36,
-          "end": 53.6,
-          "word": "do."
-        }
-      ]
+ "hope": {
+  "duration": 82.745625,
+  "cues": [
+   {
+    "i": 1,
+    "id": "h01",
+    "illo": "hope",
+    "speaker": "Hope",
+    "voice": "en-US-AvaMultilingualNeural",
+    "start": 0.0,
+    "end": 11.835,
+    "text": "Hi there, Rosa! I'm Hope, and I'm so glad to finally meet you. I'm your SuperWho. Jim and his team built me just for you, and for the work you're doing at Life Remodeled."
+   },
+   {
+    "i": 2,
+    "id": "h02",
+    "illo": "hope",
+    "speaker": "Hope",
+    "voice": "en-US-AvaMultilingualNeural",
+    "start": 12.255,
+    "end": 28.868,
+    "text": "I know you've got a lot on your plate right now. The Durfee Innovation Society welcomed more than twenty-three thousand Detroiters last year, and now Anchor Detroit has opened its doors on the east side. That's two buildings, a whole lot of partners, and a lot of people counting on you."
+   },
+   {
+    "i": 3,
+    "id": "h03",
+    "illo": "hope",
+    "speaker": "Hope",
+    "voice": "en-US-AvaMultilingualNeural",
+    "start": 29.288,
+    "end": 49.802,
+    "text": "So here's how I can help. I keep both hubs in one place, so you're not digging through texts, emails, and spreadsheets just to find out what's going on. When a partner reports a leak or a door that won't lock, it doesn't get lost anymore. You'll see what's open, what's in progress, and what's done, across both buildings, at a glance."
+   },
+   {
+    "i": 4,
+    "id": "h04",
+    "illo": "hope",
+    "speaker": "Hope",
+    "voice": "en-US-AvaMultilingualNeural",
+    "start": 50.222,
+    "end": 63.458,
+    "text": "I'll also keep the calendar straight, so the gym, the auditorium, and the classrooms never get double booked. And when you need to reach every partner, you write the notice once, and you can actually see who's read it."
+   },
+   {
+    "i": 5,
+    "id": "h05",
+    "illo": "hope",
+    "speaker": "Hope",
+    "voice": "en-US-AvaMultilingualNeural",
+    "start": 63.878,
+    "end": 70.285,
+    "text": "The best part? It's all free for you to use right now, so you can try it out and see how it fits the way you work."
+   },
+   {
+    "i": 6,
+    "id": "h06",
+    "illo": "hope",
+    "speaker": "Hope",
+    "voice": "en-US-AvaMultilingualNeural",
+    "start": 70.705,
+    "end": 82.146,
+    "text": "Now, I'd love for you to meet my teammate, Grace. She's the Executive Assistant SuperWho we'd build for Diallo Smith. Between the two of us, we've got you covered. Grace?"
+   }
+  ],
+  "words": [
+   {
+    "start": 0.0,
+    "end": 0.4,
+    "word": "Hi",
+    "speaker": "Hope",
+    "cue": 1
+   },
+   {
+    "start": 0.4,
+    "end": 0.72,
+    "word": "there,",
+    "speaker": "Hope",
+    "cue": 1
+   },
+   {
+    "start": 1.1,
+    "end": 1.22,
+    "word": "Rosa!",
+    "speaker": "Hope",
+    "cue": 1
+   },
+   {
+    "start": 1.94,
+    "end": 2.08,
+    "word": "I'm",
+    "speaker": "Hope",
+    "cue": 1
+   },
+   {
+    "start": 2.08,
+    "end": 2.32,
+    "word": "Hope,",
+    "speaker": "Hope",
+    "cue": 1
+   },
+   {
+    "start": 2.7,
+    "end": 2.76,
+    "word": "and",
+    "speaker": "Hope",
+    "cue": 1
+   },
+   {
+    "start": 2.76,
+    "end": 2.96,
+    "word": "I'm",
+    "speaker": "Hope",
+    "cue": 1
+   },
+   {
+    "start": 2.96,
+    "end": 3.4,
+    "word": "so",
+    "speaker": "Hope",
+    "cue": 1
+   },
+   {
+    "start": 3.4,
+    "end": 3.7,
+    "word": "glad",
+    "speaker": "Hope",
+    "cue": 1
+   },
+   {
+    "start": 3.7,
+    "end": 3.94,
+    "word": "to",
+    "speaker": "Hope",
+    "cue": 1
+   },
+   {
+    "start": 3.94,
+    "end": 4.18,
+    "word": "finally",
+    "speaker": "Hope",
+    "cue": 1
+   },
+   {
+    "start": 4.18,
+    "end": 4.48,
+    "word": "meet",
+    "speaker": "Hope",
+    "cue": 1
+   },
+   {
+    "start": 4.48,
+    "end": 4.74,
+    "word": "you.",
+    "speaker": "Hope",
+    "cue": 1
+   },
+   {
+    "start": 5.2,
+    "end": 5.36,
+    "word": "I'm",
+    "speaker": "Hope",
+    "cue": 1
+   },
+   {
+    "start": 5.36,
+    "end": 5.46,
+    "word": "your",
+    "speaker": "Hope",
+    "cue": 1
+   },
+   {
+    "start": 5.52,
+    "end": 6.05,
+    "word": "SuperWho.",
+    "speaker": "Hope",
+    "cue": 1
+   },
+   {
+    "start": 6.64,
+    "end": 6.8,
+    "word": "Jim",
+    "speaker": "Hope",
+    "cue": 1
+   },
+   {
+    "start": 6.8,
+    "end": 7.2,
+    "word": "and",
+    "speaker": "Hope",
+    "cue": 1
+   },
+   {
+    "start": 7.2,
+    "end": 7.42,
+    "word": "his",
+    "speaker": "Hope",
+    "cue": 1
+   },
+   {
+    "start": 7.42,
+    "end": 7.72,
+    "word": "team",
+    "speaker": "Hope",
+    "cue": 1
+   },
+   {
+    "start": 7.72,
+    "end": 7.96,
+    "word": "built",
+    "speaker": "Hope",
+    "cue": 1
+   },
+   {
+    "start": 7.96,
+    "end": 8.18,
+    "word": "me",
+    "speaker": "Hope",
+    "cue": 1
+   },
+   {
+    "start": 8.18,
+    "end": 8.4,
+    "word": "just",
+    "speaker": "Hope",
+    "cue": 1
+   },
+   {
+    "start": 8.4,
+    "end": 8.62,
+    "word": "for",
+    "speaker": "Hope",
+    "cue": 1
+   },
+   {
+    "start": 8.62,
+    "end": 8.88,
+    "word": "you,",
+    "speaker": "Hope",
+    "cue": 1
+   },
+   {
+    "start": 9.2,
+    "end": 9.56,
+    "word": "and",
+    "speaker": "Hope",
+    "cue": 1
+   },
+   {
+    "start": 9.56,
+    "end": 9.74,
+    "word": "for",
+    "speaker": "Hope",
+    "cue": 1
+   },
+   {
+    "start": 9.74,
+    "end": 9.84,
+    "word": "the",
+    "speaker": "Hope",
+    "cue": 1
+   },
+   {
+    "start": 9.84,
+    "end": 10.0,
+    "word": "work",
+    "speaker": "Hope",
+    "cue": 1
+   },
+   {
+    "start": 10.0,
+    "end": 10.42,
+    "word": "you're",
+    "speaker": "Hope",
+    "cue": 1
+   },
+   {
+    "start": 10.42,
+    "end": 10.42,
+    "word": "doing",
+    "speaker": "Hope",
+    "cue": 1
+   },
+   {
+    "start": 10.42,
+    "end": 10.56,
+    "word": "at",
+    "speaker": "Hope",
+    "cue": 1
+   },
+   {
+    "start": 10.56,
+    "end": 10.8,
+    "word": "Life",
+    "speaker": "Hope",
+    "cue": 1
+   },
+   {
+    "start": 10.8,
+    "end": 11.34,
+    "word": "Remodeled.",
+    "speaker": "Hope",
+    "cue": 1
+   },
+   {
+    "start": 12.26,
+    "end": 12.54,
+    "word": "I",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 12.54,
+    "end": 12.76,
+    "word": "know",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 12.76,
+    "end": 13.0,
+    "word": "you've",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 13.0,
+    "end": 13.16,
+    "word": "got",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 13.16,
+    "end": 13.38,
+    "word": "a",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 13.38,
+    "end": 13.64,
+    "word": "lot",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 13.64,
+    "end": 13.8,
+    "word": "on",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 13.8,
+    "end": 13.92,
+    "word": "your",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 13.92,
+    "end": 14.12,
+    "word": "plate",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 14.12,
+    "end": 14.32,
+    "word": "right",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 14.32,
+    "end": 14.76,
+    "word": "now.",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 15.16,
+    "end": 15.28,
+    "word": "The",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 15.28,
+    "end": 15.68,
+    "word": "Durfee",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 15.68,
+    "end": 16.08,
+    "word": "Innovation",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 16.08,
+    "end": 16.74,
+    "word": "Society",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 16.74,
+    "end": 17.14,
+    "word": "welcomed",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 17.14,
+    "end": 17.54,
+    "word": "more",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 17.54,
+    "end": 17.77,
+    "word": "than",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 17.81,
+    "end": 18.14,
+    "word": "twenty-three",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 18.18,
+    "end": 18.51,
+    "word": "thousand",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 18.88,
+    "end": 19.38,
+    "word": "Detroiters",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 19.38,
+    "end": 19.62,
+    "word": "last",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 19.62,
+    "end": 20.0,
+    "word": "year,",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 20.27,
+    "end": 20.64,
+    "word": "and",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 20.64,
+    "end": 20.92,
+    "word": "now",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 20.92,
+    "end": 21.26,
+    "word": "Anchor",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 21.26,
+    "end": 21.6,
+    "word": "Detroit",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 21.6,
+    "end": 22.14,
+    "word": "has",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 22.14,
+    "end": 22.44,
+    "word": "opened",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 22.44,
+    "end": 22.62,
+    "word": "its",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 22.62,
+    "end": 22.9,
+    "word": "doors",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 22.9,
+    "end": 23.16,
+    "word": "on",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 23.16,
+    "end": 23.26,
+    "word": "the",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 23.26,
+    "end": 23.38,
+    "word": "east",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 23.38,
+    "end": 23.82,
+    "word": "side.",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 24.28,
+    "end": 24.58,
+    "word": "That's",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 24.58,
+    "end": 24.8,
+    "word": "two",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 24.8,
+    "end": 25.18,
+    "word": "buildings,",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 25.48,
+    "end": 25.5,
+    "word": "a",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 25.5,
+    "end": 25.76,
+    "word": "whole",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 25.76,
+    "end": 25.94,
+    "word": "lot",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 25.94,
+    "end": 26.06,
+    "word": "of",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 26.06,
+    "end": 26.36,
+    "word": "partners,",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 26.64,
+    "end": 26.9,
+    "word": "and",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 26.9,
+    "end": 27.1,
+    "word": "a",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 27.1,
+    "end": 27.28,
+    "word": "lot",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 27.28,
+    "end": 27.42,
+    "word": "of",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 27.42,
+    "end": 27.58,
+    "word": "people",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 27.58,
+    "end": 27.92,
+    "word": "counting",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 27.92,
+    "end": 28.14,
+    "word": "on",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 28.14,
+    "end": 28.34,
+    "word": "you.",
+    "speaker": "Hope",
+    "cue": 2
+   },
+   {
+    "start": 29.29,
+    "end": 29.69,
+    "word": "So",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 29.75,
+    "end": 30.15,
+    "word": "here's",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 30.15,
+    "end": 30.27,
+    "word": "how",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 30.27,
+    "end": 30.39,
+    "word": "I",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 30.39,
+    "end": 30.51,
+    "word": "can",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 30.51,
+    "end": 30.79,
+    "word": "help.",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 31.31,
+    "end": 31.43,
+    "word": "I",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 31.43,
+    "end": 31.69,
+    "word": "keep",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 31.69,
+    "end": 31.93,
+    "word": "both",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 31.93,
+    "end": 32.15,
+    "word": "hubs",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 32.15,
+    "end": 32.33,
+    "word": "in",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 32.33,
+    "end": 32.51,
+    "word": "one",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 32.51,
+    "end": 32.81,
+    "word": "place,",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 33.01,
+    "end": 33.13,
+    "word": "so",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 33.13,
+    "end": 33.27,
+    "word": "you're",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 33.27,
+    "end": 33.47,
+    "word": "not",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 33.47,
+    "end": 33.69,
+    "word": "digging",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 33.69,
+    "end": 33.97,
+    "word": "through",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 33.97,
+    "end": 34.41,
+    "word": "texts,",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 34.81,
+    "end": 35.09,
+    "word": "emails,",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 35.65,
+    "end": 35.71,
+    "word": "and",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 35.71,
+    "end": 36.43,
+    "word": "spreadsheets",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 36.43,
+    "end": 36.93,
+    "word": "just",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 36.93,
+    "end": 37.15,
+    "word": "to",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 37.15,
+    "end": 37.33,
+    "word": "find",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 37.33,
+    "end": 37.51,
+    "word": "out",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 37.51,
+    "end": 37.73,
+    "word": "what's",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 37.73,
+    "end": 37.87,
+    "word": "going",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 37.87,
+    "end": 38.23,
+    "word": "on.",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 38.61,
+    "end": 38.75,
+    "word": "When",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 38.75,
+    "end": 38.87,
+    "word": "a",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 38.87,
+    "end": 39.09,
+    "word": "partner",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 39.09,
+    "end": 39.49,
+    "word": "reports",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 39.49,
+    "end": 39.71,
+    "word": "a",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 39.71,
+    "end": 39.93,
+    "word": "leak",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 39.93,
+    "end": 40.25,
+    "word": "or",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 40.25,
+    "end": 40.39,
+    "word": "a",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 40.39,
+    "end": 40.61,
+    "word": "door",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 40.61,
+    "end": 40.83,
+    "word": "that",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 40.83,
+    "end": 41.09,
+    "word": "won't",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 41.09,
+    "end": 41.39,
+    "word": "lock,",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 41.83,
+    "end": 42.07,
+    "word": "it",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 42.07,
+    "end": 42.33,
+    "word": "doesn't",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 42.33,
+    "end": 42.45,
+    "word": "get",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 42.45,
+    "end": 42.75,
+    "word": "lost",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 42.75,
+    "end": 43.11,
+    "word": "anymore.",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 43.75,
+    "end": 43.97,
+    "word": "You'll",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 43.97,
+    "end": 44.23,
+    "word": "see",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 44.23,
+    "end": 44.51,
+    "word": "what's",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 44.51,
+    "end": 44.91,
+    "word": "open,",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 45.37,
+    "end": 45.61,
+    "word": "what's",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 45.61,
+    "end": 45.73,
+    "word": "in",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 45.73,
+    "end": 46.15,
+    "word": "progress,",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 46.45,
+    "end": 46.55,
+    "word": "and",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 46.55,
+    "end": 46.85,
+    "word": "what's",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 46.85,
+    "end": 47.15,
+    "word": "done,",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 47.15,
+    "end": 47.71,
+    "word": "across",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 47.71,
+    "end": 48.03,
+    "word": "both",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 48.03,
+    "end": 48.43,
+    "word": "buildings,",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 48.43,
+    "end": 48.73,
+    "word": "at",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 48.73,
+    "end": 48.83,
+    "word": "a",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 48.83,
+    "end": 49.07,
+    "word": "glance.",
+    "speaker": "Hope",
+    "cue": 3
+   },
+   {
+    "start": 50.22,
+    "end": 50.52,
+    "word": "I'll",
+    "speaker": "Hope",
+    "cue": 4
+   },
+   {
+    "start": 50.52,
+    "end": 50.8,
+    "word": "also",
+    "speaker": "Hope",
+    "cue": 4
+   },
+   {
+    "start": 50.8,
+    "end": 51.0,
+    "word": "keep",
+    "speaker": "Hope",
+    "cue": 4
+   },
+   {
+    "start": 51.0,
+    "end": 51.14,
+    "word": "the",
+    "speaker": "Hope",
+    "cue": 4
+   },
+   {
+    "start": 51.14,
+    "end": 51.44,
+    "word": "calendar",
+    "speaker": "Hope",
+    "cue": 4
+   },
+   {
+    "start": 51.44,
+    "end": 51.88,
+    "word": "straight,",
+    "speaker": "Hope",
+    "cue": 4
+   },
+   {
+    "start": 52.28,
+    "end": 52.38,
+    "word": "so",
+    "speaker": "Hope",
+    "cue": 4
+   },
+   {
+    "start": 52.38,
+    "end": 52.52,
+    "word": "the",
+    "speaker": "Hope",
+    "cue": 4
+   },
+   {
+    "start": 52.52,
+    "end": 52.82,
+    "word": "gym,",
+    "speaker": "Hope",
+    "cue": 4
+   },
+   {
+    "start": 53.36,
+    "end": 53.4,
+    "word": "the",
+    "speaker": "Hope",
+    "cue": 4
+   },
+   {
+    "start": 53.4,
+    "end": 54.16,
+    "word": "auditorium,",
+    "speaker": "Hope",
+    "cue": 4
+   },
+   {
+    "start": 54.44,
+    "end": 54.66,
+    "word": "and",
+    "speaker": "Hope",
+    "cue": 4
+   },
+   {
+    "start": 54.66,
+    "end": 54.8,
+    "word": "the",
+    "speaker": "Hope",
+    "cue": 4
+   },
+   {
+    "start": 54.8,
+    "end": 55.28,
+    "word": "classrooms",
+    "speaker": "Hope",
+    "cue": 4
+   },
+   {
+    "start": 55.28,
+    "end": 55.78,
+    "word": "never",
+    "speaker": "Hope",
+    "cue": 4
+   },
+   {
+    "start": 55.78,
+    "end": 56.04,
+    "word": "get",
+    "speaker": "Hope",
+    "cue": 4
+   },
+   {
+    "start": 56.04,
+    "end": 56.32,
+    "word": "double",
+    "speaker": "Hope",
+    "cue": 4
+   },
+   {
+    "start": 56.32,
+    "end": 56.8,
+    "word": "booked.",
+    "speaker": "Hope",
+    "cue": 4
+   },
+   {
+    "start": 57.18,
+    "end": 57.36,
+    "word": "And",
+    "speaker": "Hope",
+    "cue": 4
+   },
+   {
+    "start": 57.36,
+    "end": 57.5,
+    "word": "when",
+    "speaker": "Hope",
+    "cue": 4
+   },
+   {
+    "start": 57.5,
+    "end": 57.66,
+    "word": "you",
+    "speaker": "Hope",
+    "cue": 4
+   },
+   {
+    "start": 57.66,
+    "end": 57.78,
+    "word": "need",
+    "speaker": "Hope",
+    "cue": 4
+   },
+   {
+    "start": 57.78,
+    "end": 57.92,
+    "word": "to",
+    "speaker": "Hope",
+    "cue": 4
+   },
+   {
+    "start": 57.92,
+    "end": 58.18,
+    "word": "reach",
+    "speaker": "Hope",
+    "cue": 4
+   },
+   {
+    "start": 58.18,
+    "end": 58.6,
+    "word": "every",
+    "speaker": "Hope",
+    "cue": 4
+   },
+   {
+    "start": 58.6,
+    "end": 59.0,
+    "word": "partner,",
+    "speaker": "Hope",
+    "cue": 4
+   },
+   {
+    "start": 59.54,
+    "end": 59.74,
+    "word": "you",
+    "speaker": "Hope",
+    "cue": 4
+   },
+   {
+    "start": 59.74,
+    "end": 59.9,
+    "word": "write",
+    "speaker": "Hope",
+    "cue": 4
+   },
+   {
+    "start": 59.9,
+    "end": 60.06,
+    "word": "the",
+    "speaker": "Hope",
+    "cue": 4
+   },
+   {
+    "start": 60.06,
+    "end": 60.3,
+    "word": "notice",
+    "speaker": "Hope",
+    "cue": 4
+   },
+   {
+    "start": 60.3,
+    "end": 60.6,
+    "word": "once,",
+    "speaker": "Hope",
+    "cue": 4
+   },
+   {
+    "start": 61.06,
+    "end": 61.3,
+    "word": "and",
+    "speaker": "Hope",
+    "cue": 4
+   },
+   {
+    "start": 61.3,
+    "end": 61.42,
+    "word": "you",
+    "speaker": "Hope",
+    "cue": 4
+   },
+   {
+    "start": 61.42,
+    "end": 61.54,
+    "word": "can",
+    "speaker": "Hope",
+    "cue": 4
+   },
+   {
+    "start": 61.54,
+    "end": 61.9,
+    "word": "actually",
+    "speaker": "Hope",
+    "cue": 4
+   },
+   {
+    "start": 61.9,
+    "end": 62.3,
+    "word": "see",
+    "speaker": "Hope",
+    "cue": 4
+   },
+   {
+    "start": 62.3,
+    "end": 62.58,
+    "word": "who's",
+    "speaker": "Hope",
+    "cue": 4
+   },
+   {
+    "start": 62.58,
+    "end": 62.78,
+    "word": "read",
+    "speaker": "Hope",
+    "cue": 4
+   },
+   {
+    "start": 62.78,
+    "end": 62.96,
+    "word": "it.",
+    "speaker": "Hope",
+    "cue": 4
+   },
+   {
+    "start": 63.88,
+    "end": 64.12,
+    "word": "The",
+    "speaker": "Hope",
+    "cue": 5
+   },
+   {
+    "start": 64.12,
+    "end": 64.34,
+    "word": "best",
+    "speaker": "Hope",
+    "cue": 5
+   },
+   {
+    "start": 64.34,
+    "end": 64.66,
+    "word": "part?",
+    "speaker": "Hope",
+    "cue": 5
+   },
+   {
+    "start": 65.08,
+    "end": 65.34,
+    "word": "It's",
+    "speaker": "Hope",
+    "cue": 5
+   },
+   {
+    "start": 65.34,
+    "end": 65.56,
+    "word": "all",
+    "speaker": "Hope",
+    "cue": 5
+   },
+   {
+    "start": 65.56,
+    "end": 65.84,
+    "word": "free",
+    "speaker": "Hope",
+    "cue": 5
+   },
+   {
+    "start": 65.84,
+    "end": 66.0,
+    "word": "for",
+    "speaker": "Hope",
+    "cue": 5
+   },
+   {
+    "start": 66.0,
+    "end": 66.14,
+    "word": "you",
+    "speaker": "Hope",
+    "cue": 5
+   },
+   {
+    "start": 66.14,
+    "end": 66.3,
+    "word": "to",
+    "speaker": "Hope",
+    "cue": 5
+   },
+   {
+    "start": 66.3,
+    "end": 66.44,
+    "word": "use",
+    "speaker": "Hope",
+    "cue": 5
+   },
+   {
+    "start": 66.44,
+    "end": 66.6,
+    "word": "right",
+    "speaker": "Hope",
+    "cue": 5
+   },
+   {
+    "start": 66.6,
+    "end": 66.9,
+    "word": "now,",
+    "speaker": "Hope",
+    "cue": 5
+   },
+   {
+    "start": 67.04,
+    "end": 67.16,
+    "word": "so",
+    "speaker": "Hope",
+    "cue": 5
+   },
+   {
+    "start": 67.16,
+    "end": 67.3,
+    "word": "you",
+    "speaker": "Hope",
+    "cue": 5
+   },
+   {
+    "start": 67.3,
+    "end": 67.44,
+    "word": "can",
+    "speaker": "Hope",
+    "cue": 5
+   },
+   {
+    "start": 67.44,
+    "end": 67.66,
+    "word": "try",
+    "speaker": "Hope",
+    "cue": 5
+   },
+   {
+    "start": 67.66,
+    "end": 67.78,
+    "word": "it",
+    "speaker": "Hope",
+    "cue": 5
+   },
+   {
+    "start": 67.78,
+    "end": 68.0,
+    "word": "out",
+    "speaker": "Hope",
+    "cue": 5
+   },
+   {
+    "start": 68.0,
+    "end": 68.24,
+    "word": "and",
+    "speaker": "Hope",
+    "cue": 5
+   },
+   {
+    "start": 68.24,
+    "end": 68.52,
+    "word": "see",
+    "speaker": "Hope",
+    "cue": 5
+   },
+   {
+    "start": 68.52,
+    "end": 68.72,
+    "word": "how",
+    "speaker": "Hope",
+    "cue": 5
+   },
+   {
+    "start": 68.72,
+    "end": 68.84,
+    "word": "it",
+    "speaker": "Hope",
+    "cue": 5
+   },
+   {
+    "start": 68.84,
+    "end": 69.04,
+    "word": "fits",
+    "speaker": "Hope",
+    "cue": 5
+   },
+   {
+    "start": 69.04,
+    "end": 69.22,
+    "word": "the",
+    "speaker": "Hope",
+    "cue": 5
+   },
+   {
+    "start": 69.22,
+    "end": 69.32,
+    "word": "way",
+    "speaker": "Hope",
+    "cue": 5
+   },
+   {
+    "start": 69.32,
+    "end": 69.44,
+    "word": "you",
+    "speaker": "Hope",
+    "cue": 5
+   },
+   {
+    "start": 69.44,
+    "end": 69.7,
+    "word": "work.",
+    "speaker": "Hope",
+    "cue": 5
+   },
+   {
+    "start": 70.7,
+    "end": 71.1,
+    "word": "Now,",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 71.3,
+    "end": 71.5,
+    "word": "I'd",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 71.5,
+    "end": 71.64,
+    "word": "love",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 71.64,
+    "end": 71.84,
+    "word": "for",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 71.84,
+    "end": 71.98,
+    "word": "you",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 71.98,
+    "end": 72.14,
+    "word": "to",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 72.14,
+    "end": 72.28,
+    "word": "meet",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 72.28,
+    "end": 72.48,
+    "word": "my",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 72.48,
+    "end": 72.9,
+    "word": "teammate,",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 73.12,
+    "end": 73.26,
+    "word": "Grace.",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 73.98,
+    "end": 74.4,
+    "word": "She's",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 74.4,
+    "end": 74.52,
+    "word": "the",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 74.52,
+    "end": 74.94,
+    "word": "Executive",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 74.94,
+    "end": 75.38,
+    "word": "Assistant",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 75.43,
+    "end": 75.84,
+    "word": "SuperWho",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 76.3,
+    "end": 76.53,
+    "word": "we'd",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 76.53,
+    "end": 76.74,
+    "word": "build",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 76.74,
+    "end": 76.96,
+    "word": "for",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 76.96,
+    "end": 77.34,
+    "word": "Diallo",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 77.34,
+    "end": 77.66,
+    "word": "Smith.",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 78.53,
+    "end": 78.6,
+    "word": "Between",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 78.6,
+    "end": 78.76,
+    "word": "the",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 78.76,
+    "end": 78.94,
+    "word": "two",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 78.94,
+    "end": 79.08,
+    "word": "of",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 79.08,
+    "end": 79.36,
+    "word": "us,",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 79.82,
+    "end": 80.0,
+    "word": "we've",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 80.0,
+    "end": 80.1,
+    "word": "got",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 80.1,
+    "end": 80.28,
+    "word": "you",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 80.28,
+    "end": 80.6,
+    "word": "covered.",
+    "speaker": "Hope",
+    "cue": 6
+   },
+   {
+    "start": 81.24,
+    "end": 81.42,
+    "word": "Grace?",
+    "speaker": "Hope",
+    "cue": 6
+   }
+  ],
+  "byCue": {
+   "1": [
+    {
+     "start": 0.0,
+     "end": 0.4,
+     "word": "Hi"
     },
-    "transcript": "Hi Rosa. I'm Hope, your SuperWho built for Life Remodeled. Jim and his team developed me, and I'm here to take work off your plate at both opportunity hubs. I keep both hubs in one place, so you're not jumping between systems. You can search the tenant directory, open a group's card, and start a request from there. Announcements go to one hub or both, and you'll see who has already read them. Maintenance stays moving from submitted to in progress to done, so a leaky valve or door lock doesn't get buried in your inbox. The shared calendar and room booking keeps gyms, classrooms, and community spaces from getting double -booked. When a tenant needs something, the request form on this page routes it straight in and alerts the team. This demo is free to use for now. What else would take things off your plate? I'd like you to meet my teammate, Grace. She's the executive assistant SuperWho for your executive director, and she'll walk you through what she can do."
+    {
+     "start": 0.4,
+     "end": 0.72,
+     "word": "there,"
+    },
+    {
+     "start": 1.1,
+     "end": 1.22,
+     "word": "Rosa!"
+    },
+    {
+     "start": 1.94,
+     "end": 2.08,
+     "word": "I'm"
+    },
+    {
+     "start": 2.08,
+     "end": 2.32,
+     "word": "Hope,"
+    },
+    {
+     "start": 2.7,
+     "end": 2.76,
+     "word": "and"
+    },
+    {
+     "start": 2.76,
+     "end": 2.96,
+     "word": "I'm"
+    },
+    {
+     "start": 2.96,
+     "end": 3.4,
+     "word": "so"
+    },
+    {
+     "start": 3.4,
+     "end": 3.7,
+     "word": "glad"
+    },
+    {
+     "start": 3.7,
+     "end": 3.94,
+     "word": "to"
+    },
+    {
+     "start": 3.94,
+     "end": 4.18,
+     "word": "finally"
+    },
+    {
+     "start": 4.18,
+     "end": 4.48,
+     "word": "meet"
+    },
+    {
+     "start": 4.48,
+     "end": 4.74,
+     "word": "you."
+    },
+    {
+     "start": 5.2,
+     "end": 5.36,
+     "word": "I'm"
+    },
+    {
+     "start": 5.36,
+     "end": 5.46,
+     "word": "your"
+    },
+    {
+     "start": 5.52,
+     "end": 6.05,
+     "word": "SuperWho."
+    },
+    {
+     "start": 6.64,
+     "end": 6.8,
+     "word": "Jim"
+    },
+    {
+     "start": 6.8,
+     "end": 7.2,
+     "word": "and"
+    },
+    {
+     "start": 7.2,
+     "end": 7.42,
+     "word": "his"
+    },
+    {
+     "start": 7.42,
+     "end": 7.72,
+     "word": "team"
+    },
+    {
+     "start": 7.72,
+     "end": 7.96,
+     "word": "built"
+    },
+    {
+     "start": 7.96,
+     "end": 8.18,
+     "word": "me"
+    },
+    {
+     "start": 8.18,
+     "end": 8.4,
+     "word": "just"
+    },
+    {
+     "start": 8.4,
+     "end": 8.62,
+     "word": "for"
+    },
+    {
+     "start": 8.62,
+     "end": 8.88,
+     "word": "you,"
+    },
+    {
+     "start": 9.2,
+     "end": 9.56,
+     "word": "and"
+    },
+    {
+     "start": 9.56,
+     "end": 9.74,
+     "word": "for"
+    },
+    {
+     "start": 9.74,
+     "end": 9.84,
+     "word": "the"
+    },
+    {
+     "start": 9.84,
+     "end": 10.0,
+     "word": "work"
+    },
+    {
+     "start": 10.0,
+     "end": 10.42,
+     "word": "you're"
+    },
+    {
+     "start": 10.42,
+     "end": 10.42,
+     "word": "doing"
+    },
+    {
+     "start": 10.42,
+     "end": 10.56,
+     "word": "at"
+    },
+    {
+     "start": 10.56,
+     "end": 10.8,
+     "word": "Life"
+    },
+    {
+     "start": 10.8,
+     "end": 11.34,
+     "word": "Remodeled."
+    }
+   ],
+   "2": [
+    {
+     "start": 12.26,
+     "end": 12.54,
+     "word": "I"
+    },
+    {
+     "start": 12.54,
+     "end": 12.76,
+     "word": "know"
+    },
+    {
+     "start": 12.76,
+     "end": 13.0,
+     "word": "you've"
+    },
+    {
+     "start": 13.0,
+     "end": 13.16,
+     "word": "got"
+    },
+    {
+     "start": 13.16,
+     "end": 13.38,
+     "word": "a"
+    },
+    {
+     "start": 13.38,
+     "end": 13.64,
+     "word": "lot"
+    },
+    {
+     "start": 13.64,
+     "end": 13.8,
+     "word": "on"
+    },
+    {
+     "start": 13.8,
+     "end": 13.92,
+     "word": "your"
+    },
+    {
+     "start": 13.92,
+     "end": 14.12,
+     "word": "plate"
+    },
+    {
+     "start": 14.12,
+     "end": 14.32,
+     "word": "right"
+    },
+    {
+     "start": 14.32,
+     "end": 14.76,
+     "word": "now."
+    },
+    {
+     "start": 15.16,
+     "end": 15.28,
+     "word": "The"
+    },
+    {
+     "start": 15.28,
+     "end": 15.68,
+     "word": "Durfee"
+    },
+    {
+     "start": 15.68,
+     "end": 16.08,
+     "word": "Innovation"
+    },
+    {
+     "start": 16.08,
+     "end": 16.74,
+     "word": "Society"
+    },
+    {
+     "start": 16.74,
+     "end": 17.14,
+     "word": "welcomed"
+    },
+    {
+     "start": 17.14,
+     "end": 17.54,
+     "word": "more"
+    },
+    {
+     "start": 17.54,
+     "end": 17.77,
+     "word": "than"
+    },
+    {
+     "start": 17.81,
+     "end": 18.14,
+     "word": "twenty-three"
+    },
+    {
+     "start": 18.18,
+     "end": 18.51,
+     "word": "thousand"
+    },
+    {
+     "start": 18.88,
+     "end": 19.38,
+     "word": "Detroiters"
+    },
+    {
+     "start": 19.38,
+     "end": 19.62,
+     "word": "last"
+    },
+    {
+     "start": 19.62,
+     "end": 20.0,
+     "word": "year,"
+    },
+    {
+     "start": 20.27,
+     "end": 20.64,
+     "word": "and"
+    },
+    {
+     "start": 20.64,
+     "end": 20.92,
+     "word": "now"
+    },
+    {
+     "start": 20.92,
+     "end": 21.26,
+     "word": "Anchor"
+    },
+    {
+     "start": 21.26,
+     "end": 21.6,
+     "word": "Detroit"
+    },
+    {
+     "start": 21.6,
+     "end": 22.14,
+     "word": "has"
+    },
+    {
+     "start": 22.14,
+     "end": 22.44,
+     "word": "opened"
+    },
+    {
+     "start": 22.44,
+     "end": 22.62,
+     "word": "its"
+    },
+    {
+     "start": 22.62,
+     "end": 22.9,
+     "word": "doors"
+    },
+    {
+     "start": 22.9,
+     "end": 23.16,
+     "word": "on"
+    },
+    {
+     "start": 23.16,
+     "end": 23.26,
+     "word": "the"
+    },
+    {
+     "start": 23.26,
+     "end": 23.38,
+     "word": "east"
+    },
+    {
+     "start": 23.38,
+     "end": 23.82,
+     "word": "side."
+    },
+    {
+     "start": 24.28,
+     "end": 24.58,
+     "word": "That's"
+    },
+    {
+     "start": 24.58,
+     "end": 24.8,
+     "word": "two"
+    },
+    {
+     "start": 24.8,
+     "end": 25.18,
+     "word": "buildings,"
+    },
+    {
+     "start": 25.48,
+     "end": 25.5,
+     "word": "a"
+    },
+    {
+     "start": 25.5,
+     "end": 25.76,
+     "word": "whole"
+    },
+    {
+     "start": 25.76,
+     "end": 25.94,
+     "word": "lot"
+    },
+    {
+     "start": 25.94,
+     "end": 26.06,
+     "word": "of"
+    },
+    {
+     "start": 26.06,
+     "end": 26.36,
+     "word": "partners,"
+    },
+    {
+     "start": 26.64,
+     "end": 26.9,
+     "word": "and"
+    },
+    {
+     "start": 26.9,
+     "end": 27.1,
+     "word": "a"
+    },
+    {
+     "start": 27.1,
+     "end": 27.28,
+     "word": "lot"
+    },
+    {
+     "start": 27.28,
+     "end": 27.42,
+     "word": "of"
+    },
+    {
+     "start": 27.42,
+     "end": 27.58,
+     "word": "people"
+    },
+    {
+     "start": 27.58,
+     "end": 27.92,
+     "word": "counting"
+    },
+    {
+     "start": 27.92,
+     "end": 28.14,
+     "word": "on"
+    },
+    {
+     "start": 28.14,
+     "end": 28.34,
+     "word": "you."
+    }
+   ],
+   "3": [
+    {
+     "start": 29.29,
+     "end": 29.69,
+     "word": "So"
+    },
+    {
+     "start": 29.75,
+     "end": 30.15,
+     "word": "here's"
+    },
+    {
+     "start": 30.15,
+     "end": 30.27,
+     "word": "how"
+    },
+    {
+     "start": 30.27,
+     "end": 30.39,
+     "word": "I"
+    },
+    {
+     "start": 30.39,
+     "end": 30.51,
+     "word": "can"
+    },
+    {
+     "start": 30.51,
+     "end": 30.79,
+     "word": "help."
+    },
+    {
+     "start": 31.31,
+     "end": 31.43,
+     "word": "I"
+    },
+    {
+     "start": 31.43,
+     "end": 31.69,
+     "word": "keep"
+    },
+    {
+     "start": 31.69,
+     "end": 31.93,
+     "word": "both"
+    },
+    {
+     "start": 31.93,
+     "end": 32.15,
+     "word": "hubs"
+    },
+    {
+     "start": 32.15,
+     "end": 32.33,
+     "word": "in"
+    },
+    {
+     "start": 32.33,
+     "end": 32.51,
+     "word": "one"
+    },
+    {
+     "start": 32.51,
+     "end": 32.81,
+     "word": "place,"
+    },
+    {
+     "start": 33.01,
+     "end": 33.13,
+     "word": "so"
+    },
+    {
+     "start": 33.13,
+     "end": 33.27,
+     "word": "you're"
+    },
+    {
+     "start": 33.27,
+     "end": 33.47,
+     "word": "not"
+    },
+    {
+     "start": 33.47,
+     "end": 33.69,
+     "word": "digging"
+    },
+    {
+     "start": 33.69,
+     "end": 33.97,
+     "word": "through"
+    },
+    {
+     "start": 33.97,
+     "end": 34.41,
+     "word": "texts,"
+    },
+    {
+     "start": 34.81,
+     "end": 35.09,
+     "word": "emails,"
+    },
+    {
+     "start": 35.65,
+     "end": 35.71,
+     "word": "and"
+    },
+    {
+     "start": 35.71,
+     "end": 36.43,
+     "word": "spreadsheets"
+    },
+    {
+     "start": 36.43,
+     "end": 36.93,
+     "word": "just"
+    },
+    {
+     "start": 36.93,
+     "end": 37.15,
+     "word": "to"
+    },
+    {
+     "start": 37.15,
+     "end": 37.33,
+     "word": "find"
+    },
+    {
+     "start": 37.33,
+     "end": 37.51,
+     "word": "out"
+    },
+    {
+     "start": 37.51,
+     "end": 37.73,
+     "word": "what's"
+    },
+    {
+     "start": 37.73,
+     "end": 37.87,
+     "word": "going"
+    },
+    {
+     "start": 37.87,
+     "end": 38.23,
+     "word": "on."
+    },
+    {
+     "start": 38.61,
+     "end": 38.75,
+     "word": "When"
+    },
+    {
+     "start": 38.75,
+     "end": 38.87,
+     "word": "a"
+    },
+    {
+     "start": 38.87,
+     "end": 39.09,
+     "word": "partner"
+    },
+    {
+     "start": 39.09,
+     "end": 39.49,
+     "word": "reports"
+    },
+    {
+     "start": 39.49,
+     "end": 39.71,
+     "word": "a"
+    },
+    {
+     "start": 39.71,
+     "end": 39.93,
+     "word": "leak"
+    },
+    {
+     "start": 39.93,
+     "end": 40.25,
+     "word": "or"
+    },
+    {
+     "start": 40.25,
+     "end": 40.39,
+     "word": "a"
+    },
+    {
+     "start": 40.39,
+     "end": 40.61,
+     "word": "door"
+    },
+    {
+     "start": 40.61,
+     "end": 40.83,
+     "word": "that"
+    },
+    {
+     "start": 40.83,
+     "end": 41.09,
+     "word": "won't"
+    },
+    {
+     "start": 41.09,
+     "end": 41.39,
+     "word": "lock,"
+    },
+    {
+     "start": 41.83,
+     "end": 42.07,
+     "word": "it"
+    },
+    {
+     "start": 42.07,
+     "end": 42.33,
+     "word": "doesn't"
+    },
+    {
+     "start": 42.33,
+     "end": 42.45,
+     "word": "get"
+    },
+    {
+     "start": 42.45,
+     "end": 42.75,
+     "word": "lost"
+    },
+    {
+     "start": 42.75,
+     "end": 43.11,
+     "word": "anymore."
+    },
+    {
+     "start": 43.75,
+     "end": 43.97,
+     "word": "You'll"
+    },
+    {
+     "start": 43.97,
+     "end": 44.23,
+     "word": "see"
+    },
+    {
+     "start": 44.23,
+     "end": 44.51,
+     "word": "what's"
+    },
+    {
+     "start": 44.51,
+     "end": 44.91,
+     "word": "open,"
+    },
+    {
+     "start": 45.37,
+     "end": 45.61,
+     "word": "what's"
+    },
+    {
+     "start": 45.61,
+     "end": 45.73,
+     "word": "in"
+    },
+    {
+     "start": 45.73,
+     "end": 46.15,
+     "word": "progress,"
+    },
+    {
+     "start": 46.45,
+     "end": 46.55,
+     "word": "and"
+    },
+    {
+     "start": 46.55,
+     "end": 46.85,
+     "word": "what's"
+    },
+    {
+     "start": 46.85,
+     "end": 47.15,
+     "word": "done,"
+    },
+    {
+     "start": 47.15,
+     "end": 47.71,
+     "word": "across"
+    },
+    {
+     "start": 47.71,
+     "end": 48.03,
+     "word": "both"
+    },
+    {
+     "start": 48.03,
+     "end": 48.43,
+     "word": "buildings,"
+    },
+    {
+     "start": 48.43,
+     "end": 48.73,
+     "word": "at"
+    },
+    {
+     "start": 48.73,
+     "end": 48.83,
+     "word": "a"
+    },
+    {
+     "start": 48.83,
+     "end": 49.07,
+     "word": "glance."
+    }
+   ],
+   "4": [
+    {
+     "start": 50.22,
+     "end": 50.52,
+     "word": "I'll"
+    },
+    {
+     "start": 50.52,
+     "end": 50.8,
+     "word": "also"
+    },
+    {
+     "start": 50.8,
+     "end": 51.0,
+     "word": "keep"
+    },
+    {
+     "start": 51.0,
+     "end": 51.14,
+     "word": "the"
+    },
+    {
+     "start": 51.14,
+     "end": 51.44,
+     "word": "calendar"
+    },
+    {
+     "start": 51.44,
+     "end": 51.88,
+     "word": "straight,"
+    },
+    {
+     "start": 52.28,
+     "end": 52.38,
+     "word": "so"
+    },
+    {
+     "start": 52.38,
+     "end": 52.52,
+     "word": "the"
+    },
+    {
+     "start": 52.52,
+     "end": 52.82,
+     "word": "gym,"
+    },
+    {
+     "start": 53.36,
+     "end": 53.4,
+     "word": "the"
+    },
+    {
+     "start": 53.4,
+     "end": 54.16,
+     "word": "auditorium,"
+    },
+    {
+     "start": 54.44,
+     "end": 54.66,
+     "word": "and"
+    },
+    {
+     "start": 54.66,
+     "end": 54.8,
+     "word": "the"
+    },
+    {
+     "start": 54.8,
+     "end": 55.28,
+     "word": "classrooms"
+    },
+    {
+     "start": 55.28,
+     "end": 55.78,
+     "word": "never"
+    },
+    {
+     "start": 55.78,
+     "end": 56.04,
+     "word": "get"
+    },
+    {
+     "start": 56.04,
+     "end": 56.32,
+     "word": "double"
+    },
+    {
+     "start": 56.32,
+     "end": 56.8,
+     "word": "booked."
+    },
+    {
+     "start": 57.18,
+     "end": 57.36,
+     "word": "And"
+    },
+    {
+     "start": 57.36,
+     "end": 57.5,
+     "word": "when"
+    },
+    {
+     "start": 57.5,
+     "end": 57.66,
+     "word": "you"
+    },
+    {
+     "start": 57.66,
+     "end": 57.78,
+     "word": "need"
+    },
+    {
+     "start": 57.78,
+     "end": 57.92,
+     "word": "to"
+    },
+    {
+     "start": 57.92,
+     "end": 58.18,
+     "word": "reach"
+    },
+    {
+     "start": 58.18,
+     "end": 58.6,
+     "word": "every"
+    },
+    {
+     "start": 58.6,
+     "end": 59.0,
+     "word": "partner,"
+    },
+    {
+     "start": 59.54,
+     "end": 59.74,
+     "word": "you"
+    },
+    {
+     "start": 59.74,
+     "end": 59.9,
+     "word": "write"
+    },
+    {
+     "start": 59.9,
+     "end": 60.06,
+     "word": "the"
+    },
+    {
+     "start": 60.06,
+     "end": 60.3,
+     "word": "notice"
+    },
+    {
+     "start": 60.3,
+     "end": 60.6,
+     "word": "once,"
+    },
+    {
+     "start": 61.06,
+     "end": 61.3,
+     "word": "and"
+    },
+    {
+     "start": 61.3,
+     "end": 61.42,
+     "word": "you"
+    },
+    {
+     "start": 61.42,
+     "end": 61.54,
+     "word": "can"
+    },
+    {
+     "start": 61.54,
+     "end": 61.9,
+     "word": "actually"
+    },
+    {
+     "start": 61.9,
+     "end": 62.3,
+     "word": "see"
+    },
+    {
+     "start": 62.3,
+     "end": 62.58,
+     "word": "who's"
+    },
+    {
+     "start": 62.58,
+     "end": 62.78,
+     "word": "read"
+    },
+    {
+     "start": 62.78,
+     "end": 62.96,
+     "word": "it."
+    }
+   ],
+   "5": [
+    {
+     "start": 63.88,
+     "end": 64.12,
+     "word": "The"
+    },
+    {
+     "start": 64.12,
+     "end": 64.34,
+     "word": "best"
+    },
+    {
+     "start": 64.34,
+     "end": 64.66,
+     "word": "part?"
+    },
+    {
+     "start": 65.08,
+     "end": 65.34,
+     "word": "It's"
+    },
+    {
+     "start": 65.34,
+     "end": 65.56,
+     "word": "all"
+    },
+    {
+     "start": 65.56,
+     "end": 65.84,
+     "word": "free"
+    },
+    {
+     "start": 65.84,
+     "end": 66.0,
+     "word": "for"
+    },
+    {
+     "start": 66.0,
+     "end": 66.14,
+     "word": "you"
+    },
+    {
+     "start": 66.14,
+     "end": 66.3,
+     "word": "to"
+    },
+    {
+     "start": 66.3,
+     "end": 66.44,
+     "word": "use"
+    },
+    {
+     "start": 66.44,
+     "end": 66.6,
+     "word": "right"
+    },
+    {
+     "start": 66.6,
+     "end": 66.9,
+     "word": "now,"
+    },
+    {
+     "start": 67.04,
+     "end": 67.16,
+     "word": "so"
+    },
+    {
+     "start": 67.16,
+     "end": 67.3,
+     "word": "you"
+    },
+    {
+     "start": 67.3,
+     "end": 67.44,
+     "word": "can"
+    },
+    {
+     "start": 67.44,
+     "end": 67.66,
+     "word": "try"
+    },
+    {
+     "start": 67.66,
+     "end": 67.78,
+     "word": "it"
+    },
+    {
+     "start": 67.78,
+     "end": 68.0,
+     "word": "out"
+    },
+    {
+     "start": 68.0,
+     "end": 68.24,
+     "word": "and"
+    },
+    {
+     "start": 68.24,
+     "end": 68.52,
+     "word": "see"
+    },
+    {
+     "start": 68.52,
+     "end": 68.72,
+     "word": "how"
+    },
+    {
+     "start": 68.72,
+     "end": 68.84,
+     "word": "it"
+    },
+    {
+     "start": 68.84,
+     "end": 69.04,
+     "word": "fits"
+    },
+    {
+     "start": 69.04,
+     "end": 69.22,
+     "word": "the"
+    },
+    {
+     "start": 69.22,
+     "end": 69.32,
+     "word": "way"
+    },
+    {
+     "start": 69.32,
+     "end": 69.44,
+     "word": "you"
+    },
+    {
+     "start": 69.44,
+     "end": 69.7,
+     "word": "work."
+    }
+   ],
+   "6": [
+    {
+     "start": 70.7,
+     "end": 71.1,
+     "word": "Now,"
+    },
+    {
+     "start": 71.3,
+     "end": 71.5,
+     "word": "I'd"
+    },
+    {
+     "start": 71.5,
+     "end": 71.64,
+     "word": "love"
+    },
+    {
+     "start": 71.64,
+     "end": 71.84,
+     "word": "for"
+    },
+    {
+     "start": 71.84,
+     "end": 71.98,
+     "word": "you"
+    },
+    {
+     "start": 71.98,
+     "end": 72.14,
+     "word": "to"
+    },
+    {
+     "start": 72.14,
+     "end": 72.28,
+     "word": "meet"
+    },
+    {
+     "start": 72.28,
+     "end": 72.48,
+     "word": "my"
+    },
+    {
+     "start": 72.48,
+     "end": 72.9,
+     "word": "teammate,"
+    },
+    {
+     "start": 73.12,
+     "end": 73.26,
+     "word": "Grace."
+    },
+    {
+     "start": 73.98,
+     "end": 74.4,
+     "word": "She's"
+    },
+    {
+     "start": 74.4,
+     "end": 74.52,
+     "word": "the"
+    },
+    {
+     "start": 74.52,
+     "end": 74.94,
+     "word": "Executive"
+    },
+    {
+     "start": 74.94,
+     "end": 75.38,
+     "word": "Assistant"
+    },
+    {
+     "start": 75.43,
+     "end": 75.84,
+     "word": "SuperWho"
+    },
+    {
+     "start": 76.3,
+     "end": 76.53,
+     "word": "we'd"
+    },
+    {
+     "start": 76.53,
+     "end": 76.74,
+     "word": "build"
+    },
+    {
+     "start": 76.74,
+     "end": 76.96,
+     "word": "for"
+    },
+    {
+     "start": 76.96,
+     "end": 77.34,
+     "word": "Diallo"
+    },
+    {
+     "start": 77.34,
+     "end": 77.66,
+     "word": "Smith."
+    },
+    {
+     "start": 78.53,
+     "end": 78.6,
+     "word": "Between"
+    },
+    {
+     "start": 78.6,
+     "end": 78.76,
+     "word": "the"
+    },
+    {
+     "start": 78.76,
+     "end": 78.94,
+     "word": "two"
+    },
+    {
+     "start": 78.94,
+     "end": 79.08,
+     "word": "of"
+    },
+    {
+     "start": 79.08,
+     "end": 79.36,
+     "word": "us,"
+    },
+    {
+     "start": 79.82,
+     "end": 80.0,
+     "word": "we've"
+    },
+    {
+     "start": 80.0,
+     "end": 80.1,
+     "word": "got"
+    },
+    {
+     "start": 80.1,
+     "end": 80.28,
+     "word": "you"
+    },
+    {
+     "start": 80.28,
+     "end": 80.6,
+     "word": "covered."
+    },
+    {
+     "start": 81.24,
+     "end": 81.42,
+     "word": "Grace?"
+    }
+   ]
   },
-  "grace": {
-    "duration": 60.694708,
-    "cues": [
-      {
-        "i": 1,
-        "id": "g01",
-        "illo": "grace",
-        "speaker": "Grace",
-        "voice": "en-US-JennyNeural",
-        "start": 0.0,
-        "end": 5.83,
-        "text": "Hi Rosa. I'm Grace, the Executive Assistant SuperWho for your Executive Director."
-      },
-      {
-        "i": 2,
-        "id": "g02",
-        "illo": "grace",
-        "speaker": "Grace",
-        "voice": "en-US-JennyNeural",
-        "start": 5.93,
-        "end": 15.628,
-        "text": "I can run the calendar and scheduling, book flights, send texts, draft emails and manage the inbox, prepare reports, and handle monitoring and analytics."
-      },
-      {
-        "i": 3,
-        "id": "g03",
-        "illo": "grace",
-        "speaker": "Grace",
-        "voice": "en-US-JennyNeural",
-        "start": 15.728,
-        "end": 25.407,
-        "text": "I can keep Google Drive organized, run social media on Instagram, Facebook, X, LinkedIn, TikTok, and YouTube, and handle voicemail and answering."
-      },
-      {
-        "i": 4,
-        "id": "g04",
-        "illo": "grace",
-        "speaker": "Grace",
-        "voice": "en-US-JennyNeural",
-        "start": 25.507,
-        "end": 31.845,
-        "text": "I can also do market research for the next location, plus community outreach campaigns and client relations."
-      },
-      {
-        "i": 5,
-        "id": "g05",
-        "illo": "grace",
-        "speaker": "Grace",
-        "voice": "en-US-JennyNeural",
-        "start": 31.945,
-        "end": 42.658,
-        "text": "All of that would sit in one executive dashboard, so every responsibility is in one place. Hope and I talk to each other across the platform, and the work keeps moving around the clock."
-      },
-      {
-        "i": 6,
-        "id": "g06",
-        "illo": "grace",
-        "speaker": "Grace",
-        "voice": "en-US-JennyNeural",
-        "start": 42.758,
-        "end": 50.751,
-        "text": "You and your director would get a short report each morning and at the end of the day. It would cost a fraction of hiring an executive assistant."
-      },
-      {
-        "i": 7,
-        "id": "g07",
-        "illo": "grace",
-        "speaker": "Grace",
-        "voice": "en-US-JennyNeural",
-        "start": 50.851,
-        "end": 60.395,
-        "text": "Jim's banking and business experience is built into how I'm designed, and we get smarter every day. Did we leave anything out? You can ask anytime."
-      }
-    ],
-    "words": [
-      {
-        "start": 0.0,
-        "end": 0.28,
-        "word": "Hi",
-        "speaker": "Grace",
-        "cue": 1
-      },
-      {
-        "start": 0.28,
-        "end": 0.68,
-        "word": "Rosa.",
-        "speaker": "Grace",
-        "cue": 1
-      },
-      {
-        "start": 1.88,
-        "end": 1.98,
-        "word": "I'm",
-        "speaker": "Grace",
-        "cue": 1
-      },
-      {
-        "start": 1.98,
-        "end": 2.28,
-        "word": "Grace,",
-        "speaker": "Grace",
-        "cue": 1
-      },
-      {
-        "start": 2.58,
-        "end": 2.68,
-        "word": "the",
-        "speaker": "Grace",
-        "cue": 1
-      },
-      {
-        "start": 2.68,
-        "end": 3.08,
-        "word": "Executive",
-        "speaker": "Grace",
-        "cue": 1
-      },
-      {
-        "start": 3.08,
-        "end": 3.6,
-        "word": "Assistant",
-        "speaker": "Grace",
-        "cue": 1
-      },
-      {
-        "start": 3.6,
-        "end": 4.22,
-        "word": "SuperWho",
-        "speaker": "Grace",
-        "cue": 1
-      },
-      {
-        "start": 4.22,
-        "end": 4.38,
-        "word": "for",
-        "speaker": "Grace",
-        "cue": 1
-      },
-      {
-        "start": 4.38,
-        "end": 4.56,
-        "word": "your",
-        "speaker": "Grace",
-        "cue": 1
-      },
-      {
-        "start": 4.56,
-        "end": 4.98,
-        "word": "Executive",
-        "speaker": "Grace",
-        "cue": 1
-      },
-      {
-        "start": 4.98,
-        "end": 5.42,
-        "word": "Director.",
-        "speaker": "Grace",
-        "cue": 1
-      },
-      {
-        "start": 6.06,
-        "end": 6.16,
-        "word": "I",
-        "speaker": "Grace",
-        "cue": 2
-      },
-      {
-        "start": 6.16,
-        "end": 6.32,
-        "word": "can",
-        "speaker": "Grace",
-        "cue": 2
-      },
-      {
-        "start": 6.32,
-        "end": 6.48,
-        "word": "run",
-        "speaker": "Grace",
-        "cue": 2
-      },
-      {
-        "start": 6.48,
-        "end": 6.68,
-        "word": "the",
-        "speaker": "Grace",
-        "cue": 2
-      },
-      {
-        "start": 6.68,
-        "end": 6.92,
-        "word": "calendar",
-        "speaker": "Grace",
-        "cue": 2
-      },
-      {
-        "start": 6.92,
-        "end": 7.28,
-        "word": "and",
-        "speaker": "Grace",
-        "cue": 2
-      },
-      {
-        "start": 7.28,
-        "end": 7.78,
-        "word": "scheduling,",
-        "speaker": "Grace",
-        "cue": 2
-      },
-      {
-        "start": 8.12,
-        "end": 8.26,
-        "word": "book",
-        "speaker": "Grace",
-        "cue": 2
-      },
-      {
-        "start": 8.26,
-        "end": 8.68,
-        "word": "flights,",
-        "speaker": "Grace",
-        "cue": 2
-      },
-      {
-        "start": 9.0,
-        "end": 9.26,
-        "word": "send",
-        "speaker": "Grace",
-        "cue": 2
-      },
-      {
-        "start": 9.26,
-        "end": 9.74,
-        "word": "texts,",
-        "speaker": "Grace",
-        "cue": 2
-      },
-      {
-        "start": 10.12,
-        "end": 10.32,
-        "word": "draft",
-        "speaker": "Grace",
-        "cue": 2
-      },
-      {
-        "start": 10.32,
-        "end": 10.7,
-        "word": "emails",
-        "speaker": "Grace",
-        "cue": 2
-      },
-      {
-        "start": 10.7,
-        "end": 11.1,
-        "word": "and",
-        "speaker": "Grace",
-        "cue": 2
-      },
-      {
-        "start": 11.1,
-        "end": 11.4,
-        "word": "manage",
-        "speaker": "Grace",
-        "cue": 2
-      },
-      {
-        "start": 11.4,
-        "end": 11.62,
-        "word": "the",
-        "speaker": "Grace",
-        "cue": 2
-      },
-      {
-        "start": 11.62,
-        "end": 11.96,
-        "word": "inbox,",
-        "speaker": "Grace",
-        "cue": 2
-      },
-      {
-        "start": 12.36,
-        "end": 12.64,
-        "word": "prepare",
-        "speaker": "Grace",
-        "cue": 2
-      },
-      {
-        "start": 12.64,
-        "end": 13.12,
-        "word": "reports,",
-        "speaker": "Grace",
-        "cue": 2
-      },
-      {
-        "start": 13.46,
-        "end": 13.6,
-        "word": "and",
-        "speaker": "Grace",
-        "cue": 2
-      },
-      {
-        "start": 13.6,
-        "end": 13.9,
-        "word": "handle",
-        "speaker": "Grace",
-        "cue": 2
-      },
-      {
-        "start": 13.9,
-        "end": 14.3,
-        "word": "monitoring",
-        "speaker": "Grace",
-        "cue": 2
-      },
-      {
-        "start": 14.3,
-        "end": 14.68,
-        "word": "and",
-        "speaker": "Grace",
-        "cue": 2
-      },
-      {
-        "start": 14.68,
-        "end": 15.14,
-        "word": "analytics.",
-        "speaker": "Grace",
-        "cue": 2
-      },
-      {
-        "start": 15.8,
-        "end": 15.96,
-        "word": "I",
-        "speaker": "Grace",
-        "cue": 3
-      },
-      {
-        "start": 15.96,
-        "end": 16.14,
-        "word": "can",
-        "speaker": "Grace",
-        "cue": 3
-      },
-      {
-        "start": 16.14,
-        "end": 16.36,
-        "word": "keep",
-        "speaker": "Grace",
-        "cue": 3
-      },
-      {
-        "start": 16.36,
-        "end": 16.64,
-        "word": "Google",
-        "speaker": "Grace",
-        "cue": 3
-      },
-      {
-        "start": 16.64,
-        "end": 16.96,
-        "word": "Drive",
-        "speaker": "Grace",
-        "cue": 3
-      },
-      {
-        "start": 16.96,
-        "end": 17.44,
-        "word": "organized,",
-        "speaker": "Grace",
-        "cue": 3
-      },
-      {
-        "start": 17.88,
-        "end": 18.06,
-        "word": "run",
-        "speaker": "Grace",
-        "cue": 3
-      },
-      {
-        "start": 18.06,
-        "end": 18.36,
-        "word": "social",
-        "speaker": "Grace",
-        "cue": 3
-      },
-      {
-        "start": 18.36,
-        "end": 18.72,
-        "word": "media",
-        "speaker": "Grace",
-        "cue": 3
-      },
-      {
-        "start": 18.72,
-        "end": 19.0,
-        "word": "on",
-        "speaker": "Grace",
-        "cue": 3
-      },
-      {
-        "start": 19.0,
-        "end": 19.42,
-        "word": "Instagram,",
-        "speaker": "Grace",
-        "cue": 3
-      },
-      {
-        "start": 19.86,
-        "end": 20.22,
-        "word": "Facebook,",
-        "speaker": "Grace",
-        "cue": 3
-      },
-      {
-        "start": 20.7,
-        "end": 20.8,
-        "word": "X,",
-        "speaker": "Grace",
-        "cue": 3
-      },
-      {
-        "start": 21.18,
-        "end": 21.36,
-        "word": "LinkedIn,",
-        "speaker": "Grace",
-        "cue": 3
-      },
-      {
-        "start": 21.94,
-        "end": 22.32,
-        "word": "TikTok,",
-        "speaker": "Grace",
-        "cue": 3
-      },
-      {
-        "start": 22.66,
-        "end": 22.8,
-        "word": "and",
-        "speaker": "Grace",
-        "cue": 3
-      },
-      {
-        "start": 22.8,
-        "end": 23.06,
-        "word": "YouTube,",
-        "speaker": "Grace",
-        "cue": 3
-      },
-      {
-        "start": 23.52,
-        "end": 23.62,
-        "word": "and",
-        "speaker": "Grace",
-        "cue": 3
-      },
-      {
-        "start": 23.62,
-        "end": 23.94,
-        "word": "handle",
-        "speaker": "Grace",
-        "cue": 3
-      },
-      {
-        "start": 23.94,
-        "end": 24.4,
-        "word": "voicemail",
-        "speaker": "Grace",
-        "cue": 3
-      },
-      {
-        "start": 24.4,
-        "end": 24.66,
-        "word": "and",
-        "speaker": "Grace",
-        "cue": 3
-      },
-      {
-        "start": 24.66,
-        "end": 25.06,
-        "word": "answering.",
-        "speaker": "Grace",
-        "cue": 3
-      },
-      {
-        "start": 25.54,
-        "end": 25.72,
-        "word": "I",
-        "speaker": "Grace",
-        "cue": 4
-      },
-      {
-        "start": 25.72,
-        "end": 25.88,
-        "word": "can",
-        "speaker": "Grace",
-        "cue": 4
-      },
-      {
-        "start": 25.88,
-        "end": 26.1,
-        "word": "also",
-        "speaker": "Grace",
-        "cue": 4
-      },
-      {
-        "start": 26.1,
-        "end": 26.36,
-        "word": "do",
-        "speaker": "Grace",
-        "cue": 4
-      },
-      {
-        "start": 26.36,
-        "end": 26.6,
-        "word": "market",
-        "speaker": "Grace",
-        "cue": 4
-      },
-      {
-        "start": 26.6,
-        "end": 27.06,
-        "word": "research",
-        "speaker": "Grace",
-        "cue": 4
-      },
-      {
-        "start": 27.06,
-        "end": 27.32,
-        "word": "for",
-        "speaker": "Grace",
-        "cue": 4
-      },
-      {
-        "start": 27.32,
-        "end": 27.42,
-        "word": "the",
-        "speaker": "Grace",
-        "cue": 4
-      },
-      {
-        "start": 27.42,
-        "end": 27.66,
-        "word": "next",
-        "speaker": "Grace",
-        "cue": 4
-      },
-      {
-        "start": 27.66,
-        "end": 28.24,
-        "word": "location,",
-        "speaker": "Grace",
-        "cue": 4
-      },
-      {
-        "start": 28.24,
-        "end": 28.76,
-        "word": "plus",
-        "speaker": "Grace",
-        "cue": 4
-      },
-      {
-        "start": 28.76,
-        "end": 29.24,
-        "word": "community",
-        "speaker": "Grace",
-        "cue": 4
-      },
-      {
-        "start": 29.24,
-        "end": 29.68,
-        "word": "outreach",
-        "speaker": "Grace",
-        "cue": 4
-      },
-      {
-        "start": 29.68,
-        "end": 30.28,
-        "word": "campaigns",
-        "speaker": "Grace",
-        "cue": 4
-      },
-      {
-        "start": 30.28,
-        "end": 30.58,
-        "word": "and",
-        "speaker": "Grace",
-        "cue": 4
-      },
-      {
-        "start": 30.58,
-        "end": 30.86,
-        "word": "client",
-        "speaker": "Grace",
-        "cue": 4
-      },
-      {
-        "start": 30.86,
-        "end": 31.56,
-        "word": "relations.",
-        "speaker": "Grace",
-        "cue": 4
-      },
-      {
-        "start": 32.1,
-        "end": 32.2,
-        "word": "All",
-        "speaker": "Grace",
-        "cue": 5
-      },
-      {
-        "start": 32.2,
-        "end": 32.34,
-        "word": "of",
-        "speaker": "Grace",
-        "cue": 5
-      },
-      {
-        "start": 32.34,
-        "end": 32.46,
-        "word": "that",
-        "speaker": "Grace",
-        "cue": 5
-      },
-      {
-        "start": 32.46,
-        "end": 32.6,
-        "word": "would",
-        "speaker": "Grace",
-        "cue": 5
-      },
-      {
-        "start": 32.6,
-        "end": 32.82,
-        "word": "sit",
-        "speaker": "Grace",
-        "cue": 5
-      },
-      {
-        "start": 32.82,
-        "end": 33.0,
-        "word": "in",
-        "speaker": "Grace",
-        "cue": 5
-      },
-      {
-        "start": 33.0,
-        "end": 33.16,
-        "word": "one",
-        "speaker": "Grace",
-        "cue": 5
-      },
-      {
-        "start": 33.16,
-        "end": 33.64,
-        "word": "executive",
-        "speaker": "Grace",
-        "cue": 5
-      },
-      {
-        "start": 33.64,
-        "end": 34.24,
-        "word": "dashboard,",
-        "speaker": "Grace",
-        "cue": 5
-      },
-      {
-        "start": 34.6,
-        "end": 34.8,
-        "word": "so",
-        "speaker": "Grace",
-        "cue": 5
-      },
-      {
-        "start": 34.8,
-        "end": 35.1,
-        "word": "every",
-        "speaker": "Grace",
-        "cue": 5
-      },
-      {
-        "start": 35.1,
-        "end": 35.74,
-        "word": "responsibility",
-        "speaker": "Grace",
-        "cue": 5
-      },
-      {
-        "start": 35.74,
-        "end": 36.16,
-        "word": "is",
-        "speaker": "Grace",
-        "cue": 5
-      },
-      {
-        "start": 36.16,
-        "end": 36.3,
-        "word": "in",
-        "speaker": "Grace",
-        "cue": 5
-      },
-      {
-        "start": 36.3,
-        "end": 36.5,
-        "word": "one",
-        "speaker": "Grace",
-        "cue": 5
-      },
-      {
-        "start": 36.5,
-        "end": 37.02,
-        "word": "place.",
-        "speaker": "Grace",
-        "cue": 5
-      },
-      {
-        "start": 38.18,
-        "end": 38.24,
-        "word": "Hope",
-        "speaker": "Grace",
-        "cue": 5
-      },
-      {
-        "start": 38.24,
-        "end": 38.38,
-        "word": "and",
-        "speaker": "Grace",
-        "cue": 5
-      },
-      {
-        "start": 38.38,
-        "end": 38.52,
-        "word": "I",
-        "speaker": "Grace",
-        "cue": 5
-      },
-      {
-        "start": 38.52,
-        "end": 38.68,
-        "word": "talk",
-        "speaker": "Grace",
-        "cue": 5
-      },
-      {
-        "start": 38.68,
-        "end": 38.86,
-        "word": "to",
-        "speaker": "Grace",
-        "cue": 5
-      },
-      {
-        "start": 38.86,
-        "end": 39.02,
-        "word": "each",
-        "speaker": "Grace",
-        "cue": 5
-      },
-      {
-        "start": 39.02,
-        "end": 39.16,
-        "word": "other",
-        "speaker": "Grace",
-        "cue": 5
-      },
-      {
-        "start": 39.16,
-        "end": 39.5,
-        "word": "across",
-        "speaker": "Grace",
-        "cue": 5
-      },
-      {
-        "start": 39.5,
-        "end": 39.72,
-        "word": "the",
-        "speaker": "Grace",
-        "cue": 5
-      },
-      {
-        "start": 39.72,
-        "end": 40.18,
-        "word": "platform,",
-        "speaker": "Grace",
-        "cue": 5
-      },
-      {
-        "start": 40.5,
-        "end": 40.68,
-        "word": "and",
-        "speaker": "Grace",
-        "cue": 5
-      },
-      {
-        "start": 40.68,
-        "end": 40.78,
-        "word": "the",
-        "speaker": "Grace",
-        "cue": 5
-      },
-      {
-        "start": 40.78,
-        "end": 40.98,
-        "word": "work",
-        "speaker": "Grace",
-        "cue": 5
-      },
-      {
-        "start": 40.98,
-        "end": 41.24,
-        "word": "keeps",
-        "speaker": "Grace",
-        "cue": 5
-      },
-      {
-        "start": 41.24,
-        "end": 41.58,
-        "word": "moving",
-        "speaker": "Grace",
-        "cue": 5
-      },
-      {
-        "start": 41.58,
-        "end": 41.84,
-        "word": "around",
-        "speaker": "Grace",
-        "cue": 5
-      },
-      {
-        "start": 41.84,
-        "end": 42.02,
-        "word": "the",
-        "speaker": "Grace",
-        "cue": 5
-      },
-      {
-        "start": 42.02,
-        "end": 42.36,
-        "word": "clock.",
-        "speaker": "Grace",
-        "cue": 5
-      },
-      {
-        "start": 42.88,
-        "end": 43.08,
-        "word": "You",
-        "speaker": "Grace",
-        "cue": 6
-      },
-      {
-        "start": 43.08,
-        "end": 43.22,
-        "word": "and",
-        "speaker": "Grace",
-        "cue": 6
-      },
-      {
-        "start": 43.22,
-        "end": 43.36,
-        "word": "your",
-        "speaker": "Grace",
-        "cue": 6
-      },
-      {
-        "start": 43.36,
-        "end": 43.7,
-        "word": "director",
-        "speaker": "Grace",
-        "cue": 6
-      },
-      {
-        "start": 43.7,
-        "end": 43.96,
-        "word": "would",
-        "speaker": "Grace",
-        "cue": 6
-      },
-      {
-        "start": 43.96,
-        "end": 44.1,
-        "word": "get",
-        "speaker": "Grace",
-        "cue": 6
-      },
-      {
-        "start": 44.1,
-        "end": 44.26,
-        "word": "a",
-        "speaker": "Grace",
-        "cue": 6
-      },
-      {
-        "start": 44.26,
-        "end": 44.44,
-        "word": "short",
-        "speaker": "Grace",
-        "cue": 6
-      },
-      {
-        "start": 44.44,
-        "end": 44.78,
-        "word": "report",
-        "speaker": "Grace",
-        "cue": 6
-      },
-      {
-        "start": 44.78,
-        "end": 45.02,
-        "word": "each",
-        "speaker": "Grace",
-        "cue": 6
-      },
-      {
-        "start": 45.02,
-        "end": 45.4,
-        "word": "morning",
-        "speaker": "Grace",
-        "cue": 6
-      },
-      {
-        "start": 45.4,
-        "end": 45.68,
-        "word": "and",
-        "speaker": "Grace",
-        "cue": 6
-      },
-      {
-        "start": 45.68,
-        "end": 45.82,
-        "word": "at",
-        "speaker": "Grace",
-        "cue": 6
-      },
-      {
-        "start": 45.82,
-        "end": 45.94,
-        "word": "the",
-        "speaker": "Grace",
-        "cue": 6
-      },
-      {
-        "start": 45.94,
-        "end": 46.06,
-        "word": "end",
-        "speaker": "Grace",
-        "cue": 6
-      },
-      {
-        "start": 46.06,
-        "end": 46.2,
-        "word": "of",
-        "speaker": "Grace",
-        "cue": 6
-      },
-      {
-        "start": 46.2,
-        "end": 46.3,
-        "word": "the",
-        "speaker": "Grace",
-        "cue": 6
-      },
-      {
-        "start": 46.3,
-        "end": 46.58,
-        "word": "day.",
-        "speaker": "Grace",
-        "cue": 6
-      },
-      {
-        "start": 47.56,
-        "end": 47.7,
-        "word": "It",
-        "speaker": "Grace",
-        "cue": 6
-      },
-      {
-        "start": 47.7,
-        "end": 47.84,
-        "word": "would",
-        "speaker": "Grace",
-        "cue": 6
-      },
-      {
-        "start": 47.84,
-        "end": 48.06,
-        "word": "cost",
-        "speaker": "Grace",
-        "cue": 6
-      },
-      {
-        "start": 48.06,
-        "end": 48.26,
-        "word": "a",
-        "speaker": "Grace",
-        "cue": 6
-      },
-      {
-        "start": 48.26,
-        "end": 48.52,
-        "word": "fraction",
-        "speaker": "Grace",
-        "cue": 6
-      },
-      {
-        "start": 48.52,
-        "end": 48.82,
-        "word": "of",
-        "speaker": "Grace",
-        "cue": 6
-      },
-      {
-        "start": 48.82,
-        "end": 49.1,
-        "word": "hiring",
-        "speaker": "Grace",
-        "cue": 6
-      },
-      {
-        "start": 49.1,
-        "end": 49.38,
-        "word": "an",
-        "speaker": "Grace",
-        "cue": 6
-      },
-      {
-        "start": 49.38,
-        "end": 49.82,
-        "word": "executive",
-        "speaker": "Grace",
-        "cue": 6
-      },
-      {
-        "start": 49.82,
-        "end": 50.4,
-        "word": "assistant.",
-        "speaker": "Grace",
-        "cue": 6
-      },
-      {
-        "start": 51.06,
-        "end": 51.3,
-        "word": "Jim's",
-        "speaker": "Grace",
-        "cue": 7
-      },
-      {
-        "start": 51.3,
-        "end": 51.54,
-        "word": "banking",
-        "speaker": "Grace",
-        "cue": 7
-      },
-      {
-        "start": 51.54,
-        "end": 51.82,
-        "word": "and",
-        "speaker": "Grace",
-        "cue": 7
-      },
-      {
-        "start": 51.82,
-        "end": 52.12,
-        "word": "business",
-        "speaker": "Grace",
-        "cue": 7
-      },
-      {
-        "start": 52.12,
-        "end": 52.52,
-        "word": "experience",
-        "speaker": "Grace",
-        "cue": 7
-      },
-      {
-        "start": 52.52,
-        "end": 52.92,
-        "word": "is",
-        "speaker": "Grace",
-        "cue": 7
-      },
-      {
-        "start": 52.92,
-        "end": 53.14,
-        "word": "built",
-        "speaker": "Grace",
-        "cue": 7
-      },
-      {
-        "start": 53.14,
-        "end": 53.34,
-        "word": "into",
-        "speaker": "Grace",
-        "cue": 7
-      },
-      {
-        "start": 53.34,
-        "end": 53.54,
-        "word": "how",
-        "speaker": "Grace",
-        "cue": 7
-      },
-      {
-        "start": 53.54,
-        "end": 53.74,
-        "word": "I'm",
-        "speaker": "Grace",
-        "cue": 7
-      },
-      {
-        "start": 53.74,
-        "end": 54.1,
-        "word": "designed,",
-        "speaker": "Grace",
-        "cue": 7
-      },
-      {
-        "start": 54.42,
-        "end": 54.58,
-        "word": "and",
-        "speaker": "Grace",
-        "cue": 7
-      },
-      {
-        "start": 54.58,
-        "end": 54.7,
-        "word": "we",
-        "speaker": "Grace",
-        "cue": 7
-      },
-      {
-        "start": 54.7,
-        "end": 54.88,
-        "word": "get",
-        "speaker": "Grace",
-        "cue": 7
-      },
-      {
-        "start": 54.88,
-        "end": 55.2,
-        "word": "smarter",
-        "speaker": "Grace",
-        "cue": 7
-      },
-      {
-        "start": 55.2,
-        "end": 55.58,
-        "word": "every",
-        "speaker": "Grace",
-        "cue": 7
-      },
-      {
-        "start": 55.58,
-        "end": 55.94,
-        "word": "day.",
-        "speaker": "Grace",
-        "cue": 7
-      },
-      {
-        "start": 55.94,
-        "end": 57.0,
-        "word": "Did",
-        "speaker": "Grace",
-        "cue": 7
-      },
-      {
-        "start": 57.0,
-        "end": 57.18,
-        "word": "we",
-        "speaker": "Grace",
-        "cue": 7
-      },
-      {
-        "start": 57.18,
-        "end": 57.36,
-        "word": "leave",
-        "speaker": "Grace",
-        "cue": 7
-      },
-      {
-        "start": 57.36,
-        "end": 57.7,
-        "word": "anything",
-        "speaker": "Grace",
-        "cue": 7
-      },
-      {
-        "start": 57.7,
-        "end": 58.04,
-        "word": "out?",
-        "speaker": "Grace",
-        "cue": 7
-      },
-      {
-        "start": 59.04,
-        "end": 59.18,
-        "word": "You",
-        "speaker": "Grace",
-        "cue": 7
-      },
-      {
-        "start": 59.18,
-        "end": 59.32,
-        "word": "can",
-        "speaker": "Grace",
-        "cue": 7
-      },
-      {
-        "start": 59.32,
-        "end": 59.54,
-        "word": "ask",
-        "speaker": "Grace",
-        "cue": 7
-      },
-      {
-        "start": 59.54,
-        "end": 59.76,
-        "word": "any",
-        "speaker": "Grace",
-        "cue": 7
-      },
-      {
-        "start": 59.76,
-        "end": 60.16,
-        "word": "time.",
-        "speaker": "Grace",
-        "cue": 7
-      }
-    ],
-    "byCue": {
-      "1": [
-        {
-          "start": 0.0,
-          "end": 0.28,
-          "word": "Hi"
-        },
-        {
-          "start": 0.28,
-          "end": 0.68,
-          "word": "Rosa."
-        },
-        {
-          "start": 1.88,
-          "end": 1.98,
-          "word": "I'm"
-        },
-        {
-          "start": 1.98,
-          "end": 2.28,
-          "word": "Grace,"
-        },
-        {
-          "start": 2.58,
-          "end": 2.68,
-          "word": "the"
-        },
-        {
-          "start": 2.68,
-          "end": 3.08,
-          "word": "Executive"
-        },
-        {
-          "start": 3.08,
-          "end": 3.6,
-          "word": "Assistant"
-        },
-        {
-          "start": 3.6,
-          "end": 4.22,
-          "word": "SuperWho"
-        },
-        {
-          "start": 4.22,
-          "end": 4.38,
-          "word": "for"
-        },
-        {
-          "start": 4.38,
-          "end": 4.56,
-          "word": "your"
-        },
-        {
-          "start": 4.56,
-          "end": 4.98,
-          "word": "Executive"
-        },
-        {
-          "start": 4.98,
-          "end": 5.42,
-          "word": "Director."
-        }
-      ],
-      "2": [
-        {
-          "start": 6.06,
-          "end": 6.16,
-          "word": "I"
-        },
-        {
-          "start": 6.16,
-          "end": 6.32,
-          "word": "can"
-        },
-        {
-          "start": 6.32,
-          "end": 6.48,
-          "word": "run"
-        },
-        {
-          "start": 6.48,
-          "end": 6.68,
-          "word": "the"
-        },
-        {
-          "start": 6.68,
-          "end": 6.92,
-          "word": "calendar"
-        },
-        {
-          "start": 6.92,
-          "end": 7.28,
-          "word": "and"
-        },
-        {
-          "start": 7.28,
-          "end": 7.78,
-          "word": "scheduling,"
-        },
-        {
-          "start": 8.12,
-          "end": 8.26,
-          "word": "book"
-        },
-        {
-          "start": 8.26,
-          "end": 8.68,
-          "word": "flights,"
-        },
-        {
-          "start": 9.0,
-          "end": 9.26,
-          "word": "send"
-        },
-        {
-          "start": 9.26,
-          "end": 9.74,
-          "word": "texts,"
-        },
-        {
-          "start": 10.12,
-          "end": 10.32,
-          "word": "draft"
-        },
-        {
-          "start": 10.32,
-          "end": 10.7,
-          "word": "emails"
-        },
-        {
-          "start": 10.7,
-          "end": 11.1,
-          "word": "and"
-        },
-        {
-          "start": 11.1,
-          "end": 11.4,
-          "word": "manage"
-        },
-        {
-          "start": 11.4,
-          "end": 11.62,
-          "word": "the"
-        },
-        {
-          "start": 11.62,
-          "end": 11.96,
-          "word": "inbox,"
-        },
-        {
-          "start": 12.36,
-          "end": 12.64,
-          "word": "prepare"
-        },
-        {
-          "start": 12.64,
-          "end": 13.12,
-          "word": "reports,"
-        },
-        {
-          "start": 13.46,
-          "end": 13.6,
-          "word": "and"
-        },
-        {
-          "start": 13.6,
-          "end": 13.9,
-          "word": "handle"
-        },
-        {
-          "start": 13.9,
-          "end": 14.3,
-          "word": "monitoring"
-        },
-        {
-          "start": 14.3,
-          "end": 14.68,
-          "word": "and"
-        },
-        {
-          "start": 14.68,
-          "end": 15.14,
-          "word": "analytics."
-        }
-      ],
-      "3": [
-        {
-          "start": 15.8,
-          "end": 15.96,
-          "word": "I"
-        },
-        {
-          "start": 15.96,
-          "end": 16.14,
-          "word": "can"
-        },
-        {
-          "start": 16.14,
-          "end": 16.36,
-          "word": "keep"
-        },
-        {
-          "start": 16.36,
-          "end": 16.64,
-          "word": "Google"
-        },
-        {
-          "start": 16.64,
-          "end": 16.96,
-          "word": "Drive"
-        },
-        {
-          "start": 16.96,
-          "end": 17.44,
-          "word": "organized,"
-        },
-        {
-          "start": 17.88,
-          "end": 18.06,
-          "word": "run"
-        },
-        {
-          "start": 18.06,
-          "end": 18.36,
-          "word": "social"
-        },
-        {
-          "start": 18.36,
-          "end": 18.72,
-          "word": "media"
-        },
-        {
-          "start": 18.72,
-          "end": 19.0,
-          "word": "on"
-        },
-        {
-          "start": 19.0,
-          "end": 19.42,
-          "word": "Instagram,"
-        },
-        {
-          "start": 19.86,
-          "end": 20.22,
-          "word": "Facebook,"
-        },
-        {
-          "start": 20.7,
-          "end": 20.8,
-          "word": "X,"
-        },
-        {
-          "start": 21.18,
-          "end": 21.36,
-          "word": "LinkedIn,"
-        },
-        {
-          "start": 21.94,
-          "end": 22.32,
-          "word": "TikTok,"
-        },
-        {
-          "start": 22.66,
-          "end": 22.8,
-          "word": "and"
-        },
-        {
-          "start": 22.8,
-          "end": 23.06,
-          "word": "YouTube,"
-        },
-        {
-          "start": 23.52,
-          "end": 23.62,
-          "word": "and"
-        },
-        {
-          "start": 23.62,
-          "end": 23.94,
-          "word": "handle"
-        },
-        {
-          "start": 23.94,
-          "end": 24.4,
-          "word": "voicemail"
-        },
-        {
-          "start": 24.4,
-          "end": 24.66,
-          "word": "and"
-        },
-        {
-          "start": 24.66,
-          "end": 25.06,
-          "word": "answering."
-        }
-      ],
-      "4": [
-        {
-          "start": 25.54,
-          "end": 25.72,
-          "word": "I"
-        },
-        {
-          "start": 25.72,
-          "end": 25.88,
-          "word": "can"
-        },
-        {
-          "start": 25.88,
-          "end": 26.1,
-          "word": "also"
-        },
-        {
-          "start": 26.1,
-          "end": 26.36,
-          "word": "do"
-        },
-        {
-          "start": 26.36,
-          "end": 26.6,
-          "word": "market"
-        },
-        {
-          "start": 26.6,
-          "end": 27.06,
-          "word": "research"
-        },
-        {
-          "start": 27.06,
-          "end": 27.32,
-          "word": "for"
-        },
-        {
-          "start": 27.32,
-          "end": 27.42,
-          "word": "the"
-        },
-        {
-          "start": 27.42,
-          "end": 27.66,
-          "word": "next"
-        },
-        {
-          "start": 27.66,
-          "end": 28.24,
-          "word": "location,"
-        },
-        {
-          "start": 28.24,
-          "end": 28.76,
-          "word": "plus"
-        },
-        {
-          "start": 28.76,
-          "end": 29.24,
-          "word": "community"
-        },
-        {
-          "start": 29.24,
-          "end": 29.68,
-          "word": "outreach"
-        },
-        {
-          "start": 29.68,
-          "end": 30.28,
-          "word": "campaigns"
-        },
-        {
-          "start": 30.28,
-          "end": 30.58,
-          "word": "and"
-        },
-        {
-          "start": 30.58,
-          "end": 30.86,
-          "word": "client"
-        },
-        {
-          "start": 30.86,
-          "end": 31.56,
-          "word": "relations."
-        }
-      ],
-      "5": [
-        {
-          "start": 32.1,
-          "end": 32.2,
-          "word": "All"
-        },
-        {
-          "start": 32.2,
-          "end": 32.34,
-          "word": "of"
-        },
-        {
-          "start": 32.34,
-          "end": 32.46,
-          "word": "that"
-        },
-        {
-          "start": 32.46,
-          "end": 32.6,
-          "word": "would"
-        },
-        {
-          "start": 32.6,
-          "end": 32.82,
-          "word": "sit"
-        },
-        {
-          "start": 32.82,
-          "end": 33.0,
-          "word": "in"
-        },
-        {
-          "start": 33.0,
-          "end": 33.16,
-          "word": "one"
-        },
-        {
-          "start": 33.16,
-          "end": 33.64,
-          "word": "executive"
-        },
-        {
-          "start": 33.64,
-          "end": 34.24,
-          "word": "dashboard,"
-        },
-        {
-          "start": 34.6,
-          "end": 34.8,
-          "word": "so"
-        },
-        {
-          "start": 34.8,
-          "end": 35.1,
-          "word": "every"
-        },
-        {
-          "start": 35.1,
-          "end": 35.74,
-          "word": "responsibility"
-        },
-        {
-          "start": 35.74,
-          "end": 36.16,
-          "word": "is"
-        },
-        {
-          "start": 36.16,
-          "end": 36.3,
-          "word": "in"
-        },
-        {
-          "start": 36.3,
-          "end": 36.5,
-          "word": "one"
-        },
-        {
-          "start": 36.5,
-          "end": 37.02,
-          "word": "place."
-        },
-        {
-          "start": 38.18,
-          "end": 38.24,
-          "word": "Hope"
-        },
-        {
-          "start": 38.24,
-          "end": 38.38,
-          "word": "and"
-        },
-        {
-          "start": 38.38,
-          "end": 38.52,
-          "word": "I"
-        },
-        {
-          "start": 38.52,
-          "end": 38.68,
-          "word": "talk"
-        },
-        {
-          "start": 38.68,
-          "end": 38.86,
-          "word": "to"
-        },
-        {
-          "start": 38.86,
-          "end": 39.02,
-          "word": "each"
-        },
-        {
-          "start": 39.02,
-          "end": 39.16,
-          "word": "other"
-        },
-        {
-          "start": 39.16,
-          "end": 39.5,
-          "word": "across"
-        },
-        {
-          "start": 39.5,
-          "end": 39.72,
-          "word": "the"
-        },
-        {
-          "start": 39.72,
-          "end": 40.18,
-          "word": "platform,"
-        },
-        {
-          "start": 40.5,
-          "end": 40.68,
-          "word": "and"
-        },
-        {
-          "start": 40.68,
-          "end": 40.78,
-          "word": "the"
-        },
-        {
-          "start": 40.78,
-          "end": 40.98,
-          "word": "work"
-        },
-        {
-          "start": 40.98,
-          "end": 41.24,
-          "word": "keeps"
-        },
-        {
-          "start": 41.24,
-          "end": 41.58,
-          "word": "moving"
-        },
-        {
-          "start": 41.58,
-          "end": 41.84,
-          "word": "around"
-        },
-        {
-          "start": 41.84,
-          "end": 42.02,
-          "word": "the"
-        },
-        {
-          "start": 42.02,
-          "end": 42.36,
-          "word": "clock."
-        }
-      ],
-      "6": [
-        {
-          "start": 42.88,
-          "end": 43.08,
-          "word": "You"
-        },
-        {
-          "start": 43.08,
-          "end": 43.22,
-          "word": "and"
-        },
-        {
-          "start": 43.22,
-          "end": 43.36,
-          "word": "your"
-        },
-        {
-          "start": 43.36,
-          "end": 43.7,
-          "word": "director"
-        },
-        {
-          "start": 43.7,
-          "end": 43.96,
-          "word": "would"
-        },
-        {
-          "start": 43.96,
-          "end": 44.1,
-          "word": "get"
-        },
-        {
-          "start": 44.1,
-          "end": 44.26,
-          "word": "a"
-        },
-        {
-          "start": 44.26,
-          "end": 44.44,
-          "word": "short"
-        },
-        {
-          "start": 44.44,
-          "end": 44.78,
-          "word": "report"
-        },
-        {
-          "start": 44.78,
-          "end": 45.02,
-          "word": "each"
-        },
-        {
-          "start": 45.02,
-          "end": 45.4,
-          "word": "morning"
-        },
-        {
-          "start": 45.4,
-          "end": 45.68,
-          "word": "and"
-        },
-        {
-          "start": 45.68,
-          "end": 45.82,
-          "word": "at"
-        },
-        {
-          "start": 45.82,
-          "end": 45.94,
-          "word": "the"
-        },
-        {
-          "start": 45.94,
-          "end": 46.06,
-          "word": "end"
-        },
-        {
-          "start": 46.06,
-          "end": 46.2,
-          "word": "of"
-        },
-        {
-          "start": 46.2,
-          "end": 46.3,
-          "word": "the"
-        },
-        {
-          "start": 46.3,
-          "end": 46.58,
-          "word": "day."
-        },
-        {
-          "start": 47.56,
-          "end": 47.7,
-          "word": "It"
-        },
-        {
-          "start": 47.7,
-          "end": 47.84,
-          "word": "would"
-        },
-        {
-          "start": 47.84,
-          "end": 48.06,
-          "word": "cost"
-        },
-        {
-          "start": 48.06,
-          "end": 48.26,
-          "word": "a"
-        },
-        {
-          "start": 48.26,
-          "end": 48.52,
-          "word": "fraction"
-        },
-        {
-          "start": 48.52,
-          "end": 48.82,
-          "word": "of"
-        },
-        {
-          "start": 48.82,
-          "end": 49.1,
-          "word": "hiring"
-        },
-        {
-          "start": 49.1,
-          "end": 49.38,
-          "word": "an"
-        },
-        {
-          "start": 49.38,
-          "end": 49.82,
-          "word": "executive"
-        },
-        {
-          "start": 49.82,
-          "end": 50.4,
-          "word": "assistant."
-        }
-      ],
-      "7": [
-        {
-          "start": 51.06,
-          "end": 51.3,
-          "word": "Jim's"
-        },
-        {
-          "start": 51.3,
-          "end": 51.54,
-          "word": "banking"
-        },
-        {
-          "start": 51.54,
-          "end": 51.82,
-          "word": "and"
-        },
-        {
-          "start": 51.82,
-          "end": 52.12,
-          "word": "business"
-        },
-        {
-          "start": 52.12,
-          "end": 52.52,
-          "word": "experience"
-        },
-        {
-          "start": 52.52,
-          "end": 52.92,
-          "word": "is"
-        },
-        {
-          "start": 52.92,
-          "end": 53.14,
-          "word": "built"
-        },
-        {
-          "start": 53.14,
-          "end": 53.34,
-          "word": "into"
-        },
-        {
-          "start": 53.34,
-          "end": 53.54,
-          "word": "how"
-        },
-        {
-          "start": 53.54,
-          "end": 53.74,
-          "word": "I'm"
-        },
-        {
-          "start": 53.74,
-          "end": 54.1,
-          "word": "designed,"
-        },
-        {
-          "start": 54.42,
-          "end": 54.58,
-          "word": "and"
-        },
-        {
-          "start": 54.58,
-          "end": 54.7,
-          "word": "we"
-        },
-        {
-          "start": 54.7,
-          "end": 54.88,
-          "word": "get"
-        },
-        {
-          "start": 54.88,
-          "end": 55.2,
-          "word": "smarter"
-        },
-        {
-          "start": 55.2,
-          "end": 55.58,
-          "word": "every"
-        },
-        {
-          "start": 55.58,
-          "end": 55.94,
-          "word": "day."
-        },
-        {
-          "start": 55.94,
-          "end": 57.0,
-          "word": "Did"
-        },
-        {
-          "start": 57.0,
-          "end": 57.18,
-          "word": "we"
-        },
-        {
-          "start": 57.18,
-          "end": 57.36,
-          "word": "leave"
-        },
-        {
-          "start": 57.36,
-          "end": 57.7,
-          "word": "anything"
-        },
-        {
-          "start": 57.7,
-          "end": 58.04,
-          "word": "out?"
-        },
-        {
-          "start": 59.04,
-          "end": 59.18,
-          "word": "You"
-        },
-        {
-          "start": 59.18,
-          "end": 59.32,
-          "word": "can"
-        },
-        {
-          "start": 59.32,
-          "end": 59.54,
-          "word": "ask"
-        },
-        {
-          "start": 59.54,
-          "end": 59.76,
-          "word": "any"
-        },
-        {
-          "start": 59.76,
-          "end": 60.16,
-          "word": "time."
-        }
-      ]
+  "transcript": "Hi there, Rosa! I'm Hope, and I'm so glad to finally meet you. I'm your SuperWho. Jim and his team built me just for you, and for the work you're doing at Life Remodeled. I know you've got a lot on your plate right now. The Durfee Innovation Society welcomed more than twenty-three thousand Detroiters last year, and now Anchor Detroit has opened its doors on the east side. That's two buildings, a whole lot of partners, and a lot of people counting on you. So here's how I can help. I keep both hubs in one place, so you're not digging through texts, emails, and spreadsheets just to find out what's going on. When a partner reports a leak or a door that won't lock, it doesn't get lost anymore. You'll see what's open, what's in progress, and what's done, across both buildings, at a glance. I'll also keep the calendar straight, so the gym, the auditorium, and the classrooms never get double booked. And when you need to reach every partner, you write the notice once, and you can actually see who's read it. The best part? It's all free for you to use right now, so you can try it out and see how it fits the way you work. Now, I'd love for you to meet my teammate, Grace. She's the Executive Assistant SuperWho we'd build for Diallo Smith. Between the two of us, we've got you covered. Grace?"
+ },
+ "grace": {
+  "duration": 87.517125,
+  "cues": [
+   {
+    "i": 1,
+    "id": "g01",
+    "illo": "grace",
+    "speaker": "Grace",
+    "voice": "en-US-EmmaMultilingualNeural",
+    "start": 0.0,
+    "end": 8.623,
+    "text": "Thanks, Hope! Hi Rosa, I'm Grace, and I'm really happy to meet you. I'm the Executive Assistant SuperWho for Diallo Smith."
+   },
+   {
+    "i": 2,
+    "id": "g02",
+    "illo": "grace",
+    "speaker": "Grace",
+    "voice": "en-US-EmmaMultilingualNeural",
+    "start": 9.003,
+    "end": 25.058,
+    "text": "Leading Life Remodeled means Diallo's day gets pulled in a hundred directions. So I'd take the busy work off his desk. I'd manage his calendar and scheduling, book his flights, handle texts and voicemail, draft his emails, and keep his inbox under control."
+   },
+   {
+    "i": 3,
+    "id": "g03",
+    "illo": "grace",
+    "speaker": "Grace",
+    "voice": "en-US-EmmaMultilingualNeural",
+    "start": 25.438,
+    "end": 44.822,
+    "text": "I can also pull together reports, keep an eye on the numbers, keep your Google Drive organized, and run your social media on Instagram, Facebook, X, LinkedIn, TikTok, and YouTube. And when it's time to look at the next location, I'll handle the market research, plus community outreach and partner relationships."
+   },
+   {
+    "i": 4,
+    "id": "g04",
+    "illo": "grace",
+    "speaker": "Grace",
+    "voice": "en-US-EmmaMultilingualNeural",
+    "start": 45.202,
+    "end": 65.963,
+    "text": "Here's what that means for both of you. Everything lives in one executive dashboard, and Hope and I talk to each other, so nothing slips between the hubs and the front office. We don't sleep, so the work keeps moving while you're out in the community. And every morning and every evening, you'll each get a short report, so you always know where things stand."
+   },
+   {
+    "i": 5,
+    "id": "g05",
+    "illo": "grace",
+    "speaker": "Grace",
+    "voice": "en-US-EmmaMultilingualNeural",
+    "start": 66.343,
+    "end": 76.203,
+    "text": "It costs a fraction of what you'd pay to hire an assistant, and Jim's years in banking and business are built right into how we work. We get a little smarter every day."
+   },
+   {
+    "i": 6,
+    "id": "g06",
+    "illo": "grace",
+    "speaker": "Grace",
+    "voice": "en-US-EmmaMultilingualNeural",
+    "start": 76.583,
+    "end": 86.917,
+    "text": "Did we leave anything out? You can ask us anything, anytime. And Rosa, what's been weighing on you most lately? Tell us, and we'll take it off your plate."
+   }
+  ],
+  "words": [
+   {
+    "start": 0.0,
+    "end": 0.4,
+    "word": "Thanks,",
+    "speaker": "Grace",
+    "cue": 1
+   },
+   {
+    "start": 0.4,
+    "end": 0.78,
+    "word": "Hope!",
+    "speaker": "Grace",
+    "cue": 1
+   },
+   {
+    "start": 1.5,
+    "end": 1.52,
+    "word": "Hi",
+    "speaker": "Grace",
+    "cue": 1
+   },
+   {
+    "start": 1.52,
+    "end": 1.86,
+    "word": "Rosa,",
+    "speaker": "Grace",
+    "cue": 1
+   },
+   {
+    "start": 2.16,
+    "end": 2.28,
+    "word": "I'm",
+    "speaker": "Grace",
+    "cue": 1
+   },
+   {
+    "start": 2.28,
+    "end": 2.54,
+    "word": "Grace,",
+    "speaker": "Grace",
+    "cue": 1
+   },
+   {
+    "start": 2.98,
+    "end": 3.04,
+    "word": "and",
+    "speaker": "Grace",
+    "cue": 1
+   },
+   {
+    "start": 3.04,
+    "end": 3.22,
+    "word": "I'm",
+    "speaker": "Grace",
+    "cue": 1
+   },
+   {
+    "start": 3.22,
+    "end": 3.42,
+    "word": "really",
+    "speaker": "Grace",
+    "cue": 1
+   },
+   {
+    "start": 3.42,
+    "end": 3.7,
+    "word": "happy",
+    "speaker": "Grace",
+    "cue": 1
+   },
+   {
+    "start": 3.7,
+    "end": 3.98,
+    "word": "to",
+    "speaker": "Grace",
+    "cue": 1
+   },
+   {
+    "start": 3.98,
+    "end": 4.14,
+    "word": "meet",
+    "speaker": "Grace",
+    "cue": 1
+   },
+   {
+    "start": 4.14,
+    "end": 4.44,
+    "word": "you.",
+    "speaker": "Grace",
+    "cue": 1
+   },
+   {
+    "start": 4.98,
+    "end": 5.1,
+    "word": "I'm",
+    "speaker": "Grace",
+    "cue": 1
+   },
+   {
+    "start": 5.1,
+    "end": 5.2,
+    "word": "the",
+    "speaker": "Grace",
+    "cue": 1
+   },
+   {
+    "start": 5.2,
+    "end": 5.68,
+    "word": "Executive",
+    "speaker": "Grace",
+    "cue": 1
+   },
+   {
+    "start": 5.68,
+    "end": 6.18,
+    "word": "Assistant",
+    "speaker": "Grace",
+    "cue": 1
+   },
+   {
+    "start": 6.22,
+    "end": 6.59,
+    "word": "SuperWho",
+    "speaker": "Grace",
+    "cue": 1
+   },
+   {
+    "start": 7.0,
+    "end": 7.2,
+    "word": "for",
+    "speaker": "Grace",
+    "cue": 1
+   },
+   {
+    "start": 7.2,
+    "end": 7.64,
+    "word": "Diallo",
+    "speaker": "Grace",
+    "cue": 1
+   },
+   {
+    "start": 7.64,
+    "end": 7.98,
+    "word": "Smith.",
+    "speaker": "Grace",
+    "cue": 1
+   },
+   {
+    "start": 9.0,
+    "end": 9.42,
+    "word": "Leading",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 9.42,
+    "end": 9.7,
+    "word": "Life",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 9.7,
+    "end": 10.3,
+    "word": "Remodeled",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 10.3,
+    "end": 10.6,
+    "word": "means",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 10.6,
+    "end": 11.22,
+    "word": "Diallo's",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 11.22,
+    "end": 11.4,
+    "word": "day",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 11.4,
+    "end": 11.64,
+    "word": "gets",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 11.64,
+    "end": 11.96,
+    "word": "pulled",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 11.96,
+    "end": 12.16,
+    "word": "in",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 12.16,
+    "end": 12.28,
+    "word": "a",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 12.28,
+    "end": 12.52,
+    "word": "hundred",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 12.52,
+    "end": 13.1,
+    "word": "directions.",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 13.84,
+    "end": 14.06,
+    "word": "So",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 14.06,
+    "end": 14.28,
+    "word": "I'd",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 14.28,
+    "end": 14.42,
+    "word": "take",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 14.42,
+    "end": 14.62,
+    "word": "the",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 14.62,
+    "end": 14.88,
+    "word": "busy",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 14.88,
+    "end": 15.16,
+    "word": "work",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 15.16,
+    "end": 15.34,
+    "word": "off",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 15.34,
+    "end": 15.56,
+    "word": "his",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 15.56,
+    "end": 15.96,
+    "word": "desk.",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 16.56,
+    "end": 16.72,
+    "word": "I'd",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 16.72,
+    "end": 17.0,
+    "word": "manage",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 17.0,
+    "end": 17.26,
+    "word": "his",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 17.26,
+    "end": 17.62,
+    "word": "calendar",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 17.62,
+    "end": 17.94,
+    "word": "and",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 17.94,
+    "end": 18.44,
+    "word": "scheduling,",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 18.88,
+    "end": 19.06,
+    "word": "book",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 19.06,
+    "end": 19.28,
+    "word": "his",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 19.28,
+    "end": 19.62,
+    "word": "flights,",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 19.9,
+    "end": 20.12,
+    "word": "handle",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 20.12,
+    "end": 20.48,
+    "word": "texts",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 20.48,
+    "end": 20.74,
+    "word": "and",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 20.74,
+    "end": 21.3,
+    "word": "voicemail,",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 21.84,
+    "end": 21.9,
+    "word": "draft",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 21.9,
+    "end": 22.16,
+    "word": "his",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 22.16,
+    "end": 22.52,
+    "word": "emails,",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 22.52,
+    "end": 22.92,
+    "word": "and",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 22.92,
+    "end": 23.12,
+    "word": "keep",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 23.12,
+    "end": 23.32,
+    "word": "his",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 23.32,
+    "end": 23.68,
+    "word": "inbox",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 23.68,
+    "end": 24.04,
+    "word": "under",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 24.04,
+    "end": 24.48,
+    "word": "control.",
+    "speaker": "Grace",
+    "cue": 2
+   },
+   {
+    "start": 25.44,
+    "end": 25.7,
+    "word": "I",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 25.7,
+    "end": 25.84,
+    "word": "can",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 25.84,
+    "end": 26.12,
+    "word": "also",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 26.12,
+    "end": 26.36,
+    "word": "pull",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 26.36,
+    "end": 26.74,
+    "word": "together",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 26.74,
+    "end": 27.3,
+    "word": "reports,",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 27.64,
+    "end": 27.76,
+    "word": "keep",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 27.76,
+    "end": 27.92,
+    "word": "an",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 27.92,
+    "end": 28.04,
+    "word": "eye",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 28.04,
+    "end": 28.2,
+    "word": "on",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 28.2,
+    "end": 28.32,
+    "word": "the",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 28.32,
+    "end": 28.66,
+    "word": "numbers,",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 29.08,
+    "end": 29.26,
+    "word": "keep",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 29.26,
+    "end": 29.46,
+    "word": "your",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 29.46,
+    "end": 29.68,
+    "word": "Google",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 29.68,
+    "end": 30.06,
+    "word": "Drive",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 30.06,
+    "end": 30.58,
+    "word": "organized,",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 30.58,
+    "end": 30.98,
+    "word": "and",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 30.98,
+    "end": 31.18,
+    "word": "run",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 31.18,
+    "end": 31.36,
+    "word": "your",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 31.36,
+    "end": 31.66,
+    "word": "social",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 31.66,
+    "end": 31.94,
+    "word": "media",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 31.94,
+    "end": 32.22,
+    "word": "on",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 32.22,
+    "end": 32.8,
+    "word": "Instagram,",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 33.32,
+    "end": 33.72,
+    "word": "Facebook,",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 34.22,
+    "end": 34.32,
+    "word": "X,",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 34.52,
+    "end": 34.74,
+    "word": "LinkedIn,",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 35.1,
+    "end": 35.5,
+    "word": "TikTok,",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 35.86,
+    "end": 35.94,
+    "word": "and",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 35.94,
+    "end": 36.22,
+    "word": "YouTube.",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 36.96,
+    "end": 37.06,
+    "word": "And",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 37.06,
+    "end": 37.22,
+    "word": "when",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 37.22,
+    "end": 37.46,
+    "word": "it's",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 37.46,
+    "end": 37.64,
+    "word": "time",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 37.64,
+    "end": 37.86,
+    "word": "to",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 37.86,
+    "end": 38.02,
+    "word": "look",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 38.02,
+    "end": 38.18,
+    "word": "at",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 38.18,
+    "end": 38.3,
+    "word": "the",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 38.3,
+    "end": 38.52,
+    "word": "next",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 38.52,
+    "end": 39.14,
+    "word": "location,",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 39.6,
+    "end": 39.76,
+    "word": "I'll",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 39.76,
+    "end": 40.02,
+    "word": "handle",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 40.02,
+    "end": 40.22,
+    "word": "the",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 40.22,
+    "end": 40.48,
+    "word": "market",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 40.48,
+    "end": 41.08,
+    "word": "research,",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 41.64,
+    "end": 41.72,
+    "word": "plus",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 41.72,
+    "end": 42.22,
+    "word": "community",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 42.22,
+    "end": 42.72,
+    "word": "outreach",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 42.72,
+    "end": 43.02,
+    "word": "and",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 43.02,
+    "end": 43.34,
+    "word": "partner",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 43.34,
+    "end": 44.08,
+    "word": "relationships.",
+    "speaker": "Grace",
+    "cue": 3
+   },
+   {
+    "start": 45.2,
+    "end": 45.62,
+    "word": "Here's",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 45.62,
+    "end": 45.76,
+    "word": "what",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 45.76,
+    "end": 45.96,
+    "word": "that",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 45.96,
+    "end": 46.18,
+    "word": "means",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 46.18,
+    "end": 46.44,
+    "word": "for",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 46.44,
+    "end": 46.66,
+    "word": "both",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 46.66,
+    "end": 46.84,
+    "word": "of",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 46.84,
+    "end": 47.14,
+    "word": "you.",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 47.62,
+    "end": 47.96,
+    "word": "Everything",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 47.96,
+    "end": 48.32,
+    "word": "lives",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 48.32,
+    "end": 48.6,
+    "word": "in",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 48.6,
+    "end": 48.8,
+    "word": "one",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 48.8,
+    "end": 49.32,
+    "word": "executive",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 49.32,
+    "end": 49.98,
+    "word": "dashboard,",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 50.38,
+    "end": 50.52,
+    "word": "and",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 50.52,
+    "end": 50.7,
+    "word": "Hope",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 50.7,
+    "end": 50.84,
+    "word": "and",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 50.84,
+    "end": 51.02,
+    "word": "I",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 51.02,
+    "end": 51.2,
+    "word": "talk",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 51.2,
+    "end": 51.44,
+    "word": "to",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 51.44,
+    "end": 51.62,
+    "word": "each",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 51.62,
+    "end": 51.86,
+    "word": "other,",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 52.2,
+    "end": 52.42,
+    "word": "so",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 52.42,
+    "end": 52.74,
+    "word": "nothing",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 52.74,
+    "end": 53.1,
+    "word": "slips",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 53.1,
+    "end": 53.52,
+    "word": "between",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 53.52,
+    "end": 53.72,
+    "word": "the",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 53.72,
+    "end": 53.9,
+    "word": "hubs",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 53.9,
+    "end": 54.14,
+    "word": "and",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 54.14,
+    "end": 54.28,
+    "word": "the",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 54.28,
+    "end": 54.48,
+    "word": "front",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 54.48,
+    "end": 54.9,
+    "word": "office.",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 55.52,
+    "end": 55.68,
+    "word": "We",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 55.68,
+    "end": 55.96,
+    "word": "don't",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 55.96,
+    "end": 56.28,
+    "word": "sleep,",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 56.54,
+    "end": 56.78,
+    "word": "so",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 56.78,
+    "end": 56.92,
+    "word": "the",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 56.92,
+    "end": 57.14,
+    "word": "work",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 57.14,
+    "end": 57.42,
+    "word": "keeps",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 57.42,
+    "end": 57.8,
+    "word": "moving",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 57.8,
+    "end": 58.08,
+    "word": "while",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 58.08,
+    "end": 58.26,
+    "word": "you're",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 58.26,
+    "end": 58.42,
+    "word": "out",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 58.42,
+    "end": 58.58,
+    "word": "in",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 58.58,
+    "end": 58.7,
+    "word": "the",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 58.7,
+    "end": 59.12,
+    "word": "community.",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 59.78,
+    "end": 59.9,
+    "word": "And",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 59.9,
+    "end": 60.2,
+    "word": "every",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 60.2,
+    "end": 60.56,
+    "word": "morning",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 60.56,
+    "end": 60.8,
+    "word": "and",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 60.8,
+    "end": 61.12,
+    "word": "every",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 61.12,
+    "end": 61.54,
+    "word": "evening,",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 61.92,
+    "end": 62.12,
+    "word": "you'll",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 62.12,
+    "end": 62.28,
+    "word": "each",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 62.28,
+    "end": 62.48,
+    "word": "get",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 62.48,
+    "end": 62.66,
+    "word": "a",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 62.66,
+    "end": 62.84,
+    "word": "short",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 62.84,
+    "end": 63.32,
+    "word": "report,",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 63.68,
+    "end": 63.86,
+    "word": "so",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 63.86,
+    "end": 64.0,
+    "word": "you",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 64.0,
+    "end": 64.34,
+    "word": "always",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 64.34,
+    "end": 64.58,
+    "word": "know",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 64.58,
+    "end": 64.76,
+    "word": "where",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 64.76,
+    "end": 64.98,
+    "word": "things",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 64.98,
+    "end": 65.42,
+    "word": "stand.",
+    "speaker": "Grace",
+    "cue": 4
+   },
+   {
+    "start": 66.34,
+    "end": 66.6,
+    "word": "It",
+    "speaker": "Grace",
+    "cue": 5
+   },
+   {
+    "start": 66.6,
+    "end": 66.84,
+    "word": "costs",
+    "speaker": "Grace",
+    "cue": 5
+   },
+   {
+    "start": 66.84,
+    "end": 67.06,
+    "word": "a",
+    "speaker": "Grace",
+    "cue": 5
+   },
+   {
+    "start": 67.06,
+    "end": 67.34,
+    "word": "fraction",
+    "speaker": "Grace",
+    "cue": 5
+   },
+   {
+    "start": 67.34,
+    "end": 67.68,
+    "word": "of",
+    "speaker": "Grace",
+    "cue": 5
+   },
+   {
+    "start": 67.68,
+    "end": 67.86,
+    "word": "what",
+    "speaker": "Grace",
+    "cue": 5
+   },
+   {
+    "start": 67.86,
+    "end": 68.06,
+    "word": "you'd",
+    "speaker": "Grace",
+    "cue": 5
+   },
+   {
+    "start": 68.06,
+    "end": 68.22,
+    "word": "pay",
+    "speaker": "Grace",
+    "cue": 5
+   },
+   {
+    "start": 68.22,
+    "end": 68.38,
+    "word": "to",
+    "speaker": "Grace",
+    "cue": 5
+   },
+   {
+    "start": 68.38,
+    "end": 68.62,
+    "word": "hire",
+    "speaker": "Grace",
+    "cue": 5
+   },
+   {
+    "start": 68.62,
+    "end": 68.84,
+    "word": "an",
+    "speaker": "Grace",
+    "cue": 5
+   },
+   {
+    "start": 68.84,
+    "end": 69.3,
+    "word": "assistant,",
+    "speaker": "Grace",
+    "cue": 5
+   },
+   {
+    "start": 69.66,
+    "end": 69.88,
+    "word": "and",
+    "speaker": "Grace",
+    "cue": 5
+   },
+   {
+    "start": 69.88,
+    "end": 70.26,
+    "word": "Jim's",
+    "speaker": "Grace",
+    "cue": 5
+   },
+   {
+    "start": 70.26,
+    "end": 70.4,
+    "word": "years",
+    "speaker": "Grace",
+    "cue": 5
+   },
+   {
+    "start": 70.4,
+    "end": 70.66,
+    "word": "in",
+    "speaker": "Grace",
+    "cue": 5
+   },
+   {
+    "start": 70.66,
+    "end": 70.94,
+    "word": "banking",
+    "speaker": "Grace",
+    "cue": 5
+   },
+   {
+    "start": 70.94,
+    "end": 71.24,
+    "word": "and",
+    "speaker": "Grace",
+    "cue": 5
+   },
+   {
+    "start": 71.24,
+    "end": 71.6,
+    "word": "business",
+    "speaker": "Grace",
+    "cue": 5
+   },
+   {
+    "start": 71.6,
+    "end": 71.9,
+    "word": "are",
+    "speaker": "Grace",
+    "cue": 5
+   },
+   {
+    "start": 71.9,
+    "end": 72.1,
+    "word": "built",
+    "speaker": "Grace",
+    "cue": 5
+   },
+   {
+    "start": 72.1,
+    "end": 72.38,
+    "word": "right",
+    "speaker": "Grace",
+    "cue": 5
+   },
+   {
+    "start": 72.38,
+    "end": 72.68,
+    "word": "into",
+    "speaker": "Grace",
+    "cue": 5
+   },
+   {
+    "start": 72.68,
+    "end": 72.86,
+    "word": "how",
+    "speaker": "Grace",
+    "cue": 5
+   },
+   {
+    "start": 72.86,
+    "end": 73.02,
+    "word": "we",
+    "speaker": "Grace",
+    "cue": 5
+   },
+   {
+    "start": 73.02,
+    "end": 73.32,
+    "word": "work.",
+    "speaker": "Grace",
+    "cue": 5
+   },
+   {
+    "start": 73.9,
+    "end": 74.0,
+    "word": "We",
+    "speaker": "Grace",
+    "cue": 5
+   },
+   {
+    "start": 74.0,
+    "end": 74.16,
+    "word": "get",
+    "speaker": "Grace",
+    "cue": 5
+   },
+   {
+    "start": 74.16,
+    "end": 74.28,
+    "word": "a",
+    "speaker": "Grace",
+    "cue": 5
+   },
+   {
+    "start": 74.28,
+    "end": 74.48,
+    "word": "little",
+    "speaker": "Grace",
+    "cue": 5
+   },
+   {
+    "start": 74.48,
+    "end": 74.92,
+    "word": "smarter",
+    "speaker": "Grace",
+    "cue": 5
+   },
+   {
+    "start": 74.92,
+    "end": 75.32,
+    "word": "every",
+    "speaker": "Grace",
+    "cue": 5
+   },
+   {
+    "start": 75.32,
+    "end": 75.64,
+    "word": "day.",
+    "speaker": "Grace",
+    "cue": 5
+   },
+   {
+    "start": 76.58,
+    "end": 76.84,
+    "word": "Did",
+    "speaker": "Grace",
+    "cue": 6
+   },
+   {
+    "start": 76.84,
+    "end": 77.02,
+    "word": "we",
+    "speaker": "Grace",
+    "cue": 6
+   },
+   {
+    "start": 77.02,
+    "end": 77.22,
+    "word": "leave",
+    "speaker": "Grace",
+    "cue": 6
+   },
+   {
+    "start": 77.22,
+    "end": 77.62,
+    "word": "anything",
+    "speaker": "Grace",
+    "cue": 6
+   },
+   {
+    "start": 77.62,
+    "end": 78.0,
+    "word": "out?",
+    "speaker": "Grace",
+    "cue": 6
+   },
+   {
+    "start": 78.58,
+    "end": 78.66,
+    "word": "You",
+    "speaker": "Grace",
+    "cue": 6
+   },
+   {
+    "start": 78.66,
+    "end": 78.82,
+    "word": "can",
+    "speaker": "Grace",
+    "cue": 6
+   },
+   {
+    "start": 78.82,
+    "end": 79.08,
+    "word": "ask",
+    "speaker": "Grace",
+    "cue": 6
+   },
+   {
+    "start": 79.08,
+    "end": 79.26,
+    "word": "us",
+    "speaker": "Grace",
+    "cue": 6
+   },
+   {
+    "start": 79.26,
+    "end": 79.74,
+    "word": "anything,",
+    "speaker": "Grace",
+    "cue": 6
+   },
+   {
+    "start": 79.98,
+    "end": 80.32,
+    "word": "anytime.",
+    "speaker": "Grace",
+    "cue": 6
+   },
+   {
+    "start": 81.1,
+    "end": 81.22,
+    "word": "And",
+    "speaker": "Grace",
+    "cue": 6
+   },
+   {
+    "start": 81.22,
+    "end": 81.52,
+    "word": "Rosa,",
+    "speaker": "Grace",
+    "cue": 6
+   },
+   {
+    "start": 82.14,
+    "end": 82.36,
+    "word": "what's",
+    "speaker": "Grace",
+    "cue": 6
+   },
+   {
+    "start": 82.36,
+    "end": 82.5,
+    "word": "been",
+    "speaker": "Grace",
+    "cue": 6
+   },
+   {
+    "start": 82.5,
+    "end": 82.72,
+    "word": "weighing",
+    "speaker": "Grace",
+    "cue": 6
+   },
+   {
+    "start": 82.72,
+    "end": 82.94,
+    "word": "on",
+    "speaker": "Grace",
+    "cue": 6
+   },
+   {
+    "start": 82.94,
+    "end": 83.1,
+    "word": "you",
+    "speaker": "Grace",
+    "cue": 6
+   },
+   {
+    "start": 83.1,
+    "end": 83.3,
+    "word": "most",
+    "speaker": "Grace",
+    "cue": 6
+   },
+   {
+    "start": 83.3,
+    "end": 83.72,
+    "word": "lately?",
+    "speaker": "Grace",
+    "cue": 6
+   },
+   {
+    "start": 84.34,
+    "end": 84.48,
+    "word": "Tell",
+    "speaker": "Grace",
+    "cue": 6
+   },
+   {
+    "start": 84.48,
+    "end": 84.78,
+    "word": "us,",
+    "speaker": "Grace",
+    "cue": 6
+   },
+   {
+    "start": 85.0,
+    "end": 85.12,
+    "word": "and",
+    "speaker": "Grace",
+    "cue": 6
+   },
+   {
+    "start": 85.12,
+    "end": 85.32,
+    "word": "we'll",
+    "speaker": "Grace",
+    "cue": 6
+   },
+   {
+    "start": 85.32,
+    "end": 85.48,
+    "word": "take",
+    "speaker": "Grace",
+    "cue": 6
+   },
+   {
+    "start": 85.48,
+    "end": 85.62,
+    "word": "it",
+    "speaker": "Grace",
+    "cue": 6
+   },
+   {
+    "start": 85.62,
+    "end": 85.78,
+    "word": "off",
+    "speaker": "Grace",
+    "cue": 6
+   },
+   {
+    "start": 85.78,
+    "end": 85.98,
+    "word": "your",
+    "speaker": "Grace",
+    "cue": 6
+   },
+   {
+    "start": 85.98,
+    "end": 86.26,
+    "word": "plate.",
+    "speaker": "Grace",
+    "cue": 6
+   }
+  ],
+  "byCue": {
+   "1": [
+    {
+     "start": 0.0,
+     "end": 0.4,
+     "word": "Thanks,"
     },
-    "transcript": "Hi Rosa. I'm Grace, the Executive Assistant SuperWho for your Executive Director. I can run the calendar and scheduling, book flights, send texts, draft emails and manage the inbox, prepare reports, and handle monitoring and analytics. I can keep Google Drive organized, run social media on Instagram, Facebook, X, LinkedIn, TikTok, and YouTube, and handle voicemail and answering. I can also do market research for the next location, plus community outreach campaigns and client relations. All of that would sit in one executive dashboard, so every responsibility is in one place. Hope and I talk to each other across the platform, and the work keeps moving around the clock. You and your director would get a short report each morning and at the end of the day. It would cost a fraction of hiring an executive assistant. Jim's banking and business experience is built into how I'm designed, and we get smarter every day. Did we leave anything out? You can ask any time."
-  }
+    {
+     "start": 0.4,
+     "end": 0.78,
+     "word": "Hope!"
+    },
+    {
+     "start": 1.5,
+     "end": 1.52,
+     "word": "Hi"
+    },
+    {
+     "start": 1.52,
+     "end": 1.86,
+     "word": "Rosa,"
+    },
+    {
+     "start": 2.16,
+     "end": 2.28,
+     "word": "I'm"
+    },
+    {
+     "start": 2.28,
+     "end": 2.54,
+     "word": "Grace,"
+    },
+    {
+     "start": 2.98,
+     "end": 3.04,
+     "word": "and"
+    },
+    {
+     "start": 3.04,
+     "end": 3.22,
+     "word": "I'm"
+    },
+    {
+     "start": 3.22,
+     "end": 3.42,
+     "word": "really"
+    },
+    {
+     "start": 3.42,
+     "end": 3.7,
+     "word": "happy"
+    },
+    {
+     "start": 3.7,
+     "end": 3.98,
+     "word": "to"
+    },
+    {
+     "start": 3.98,
+     "end": 4.14,
+     "word": "meet"
+    },
+    {
+     "start": 4.14,
+     "end": 4.44,
+     "word": "you."
+    },
+    {
+     "start": 4.98,
+     "end": 5.1,
+     "word": "I'm"
+    },
+    {
+     "start": 5.1,
+     "end": 5.2,
+     "word": "the"
+    },
+    {
+     "start": 5.2,
+     "end": 5.68,
+     "word": "Executive"
+    },
+    {
+     "start": 5.68,
+     "end": 6.18,
+     "word": "Assistant"
+    },
+    {
+     "start": 6.22,
+     "end": 6.59,
+     "word": "SuperWho"
+    },
+    {
+     "start": 7.0,
+     "end": 7.2,
+     "word": "for"
+    },
+    {
+     "start": 7.2,
+     "end": 7.64,
+     "word": "Diallo"
+    },
+    {
+     "start": 7.64,
+     "end": 7.98,
+     "word": "Smith."
+    }
+   ],
+   "2": [
+    {
+     "start": 9.0,
+     "end": 9.42,
+     "word": "Leading"
+    },
+    {
+     "start": 9.42,
+     "end": 9.7,
+     "word": "Life"
+    },
+    {
+     "start": 9.7,
+     "end": 10.3,
+     "word": "Remodeled"
+    },
+    {
+     "start": 10.3,
+     "end": 10.6,
+     "word": "means"
+    },
+    {
+     "start": 10.6,
+     "end": 11.22,
+     "word": "Diallo's"
+    },
+    {
+     "start": 11.22,
+     "end": 11.4,
+     "word": "day"
+    },
+    {
+     "start": 11.4,
+     "end": 11.64,
+     "word": "gets"
+    },
+    {
+     "start": 11.64,
+     "end": 11.96,
+     "word": "pulled"
+    },
+    {
+     "start": 11.96,
+     "end": 12.16,
+     "word": "in"
+    },
+    {
+     "start": 12.16,
+     "end": 12.28,
+     "word": "a"
+    },
+    {
+     "start": 12.28,
+     "end": 12.52,
+     "word": "hundred"
+    },
+    {
+     "start": 12.52,
+     "end": 13.1,
+     "word": "directions."
+    },
+    {
+     "start": 13.84,
+     "end": 14.06,
+     "word": "So"
+    },
+    {
+     "start": 14.06,
+     "end": 14.28,
+     "word": "I'd"
+    },
+    {
+     "start": 14.28,
+     "end": 14.42,
+     "word": "take"
+    },
+    {
+     "start": 14.42,
+     "end": 14.62,
+     "word": "the"
+    },
+    {
+     "start": 14.62,
+     "end": 14.88,
+     "word": "busy"
+    },
+    {
+     "start": 14.88,
+     "end": 15.16,
+     "word": "work"
+    },
+    {
+     "start": 15.16,
+     "end": 15.34,
+     "word": "off"
+    },
+    {
+     "start": 15.34,
+     "end": 15.56,
+     "word": "his"
+    },
+    {
+     "start": 15.56,
+     "end": 15.96,
+     "word": "desk."
+    },
+    {
+     "start": 16.56,
+     "end": 16.72,
+     "word": "I'd"
+    },
+    {
+     "start": 16.72,
+     "end": 17.0,
+     "word": "manage"
+    },
+    {
+     "start": 17.0,
+     "end": 17.26,
+     "word": "his"
+    },
+    {
+     "start": 17.26,
+     "end": 17.62,
+     "word": "calendar"
+    },
+    {
+     "start": 17.62,
+     "end": 17.94,
+     "word": "and"
+    },
+    {
+     "start": 17.94,
+     "end": 18.44,
+     "word": "scheduling,"
+    },
+    {
+     "start": 18.88,
+     "end": 19.06,
+     "word": "book"
+    },
+    {
+     "start": 19.06,
+     "end": 19.28,
+     "word": "his"
+    },
+    {
+     "start": 19.28,
+     "end": 19.62,
+     "word": "flights,"
+    },
+    {
+     "start": 19.9,
+     "end": 20.12,
+     "word": "handle"
+    },
+    {
+     "start": 20.12,
+     "end": 20.48,
+     "word": "texts"
+    },
+    {
+     "start": 20.48,
+     "end": 20.74,
+     "word": "and"
+    },
+    {
+     "start": 20.74,
+     "end": 21.3,
+     "word": "voicemail,"
+    },
+    {
+     "start": 21.84,
+     "end": 21.9,
+     "word": "draft"
+    },
+    {
+     "start": 21.9,
+     "end": 22.16,
+     "word": "his"
+    },
+    {
+     "start": 22.16,
+     "end": 22.52,
+     "word": "emails,"
+    },
+    {
+     "start": 22.52,
+     "end": 22.92,
+     "word": "and"
+    },
+    {
+     "start": 22.92,
+     "end": 23.12,
+     "word": "keep"
+    },
+    {
+     "start": 23.12,
+     "end": 23.32,
+     "word": "his"
+    },
+    {
+     "start": 23.32,
+     "end": 23.68,
+     "word": "inbox"
+    },
+    {
+     "start": 23.68,
+     "end": 24.04,
+     "word": "under"
+    },
+    {
+     "start": 24.04,
+     "end": 24.48,
+     "word": "control."
+    }
+   ],
+   "3": [
+    {
+     "start": 25.44,
+     "end": 25.7,
+     "word": "I"
+    },
+    {
+     "start": 25.7,
+     "end": 25.84,
+     "word": "can"
+    },
+    {
+     "start": 25.84,
+     "end": 26.12,
+     "word": "also"
+    },
+    {
+     "start": 26.12,
+     "end": 26.36,
+     "word": "pull"
+    },
+    {
+     "start": 26.36,
+     "end": 26.74,
+     "word": "together"
+    },
+    {
+     "start": 26.74,
+     "end": 27.3,
+     "word": "reports,"
+    },
+    {
+     "start": 27.64,
+     "end": 27.76,
+     "word": "keep"
+    },
+    {
+     "start": 27.76,
+     "end": 27.92,
+     "word": "an"
+    },
+    {
+     "start": 27.92,
+     "end": 28.04,
+     "word": "eye"
+    },
+    {
+     "start": 28.04,
+     "end": 28.2,
+     "word": "on"
+    },
+    {
+     "start": 28.2,
+     "end": 28.32,
+     "word": "the"
+    },
+    {
+     "start": 28.32,
+     "end": 28.66,
+     "word": "numbers,"
+    },
+    {
+     "start": 29.08,
+     "end": 29.26,
+     "word": "keep"
+    },
+    {
+     "start": 29.26,
+     "end": 29.46,
+     "word": "your"
+    },
+    {
+     "start": 29.46,
+     "end": 29.68,
+     "word": "Google"
+    },
+    {
+     "start": 29.68,
+     "end": 30.06,
+     "word": "Drive"
+    },
+    {
+     "start": 30.06,
+     "end": 30.58,
+     "word": "organized,"
+    },
+    {
+     "start": 30.58,
+     "end": 30.98,
+     "word": "and"
+    },
+    {
+     "start": 30.98,
+     "end": 31.18,
+     "word": "run"
+    },
+    {
+     "start": 31.18,
+     "end": 31.36,
+     "word": "your"
+    },
+    {
+     "start": 31.36,
+     "end": 31.66,
+     "word": "social"
+    },
+    {
+     "start": 31.66,
+     "end": 31.94,
+     "word": "media"
+    },
+    {
+     "start": 31.94,
+     "end": 32.22,
+     "word": "on"
+    },
+    {
+     "start": 32.22,
+     "end": 32.8,
+     "word": "Instagram,"
+    },
+    {
+     "start": 33.32,
+     "end": 33.72,
+     "word": "Facebook,"
+    },
+    {
+     "start": 34.22,
+     "end": 34.32,
+     "word": "X,"
+    },
+    {
+     "start": 34.52,
+     "end": 34.74,
+     "word": "LinkedIn,"
+    },
+    {
+     "start": 35.1,
+     "end": 35.5,
+     "word": "TikTok,"
+    },
+    {
+     "start": 35.86,
+     "end": 35.94,
+     "word": "and"
+    },
+    {
+     "start": 35.94,
+     "end": 36.22,
+     "word": "YouTube."
+    },
+    {
+     "start": 36.96,
+     "end": 37.06,
+     "word": "And"
+    },
+    {
+     "start": 37.06,
+     "end": 37.22,
+     "word": "when"
+    },
+    {
+     "start": 37.22,
+     "end": 37.46,
+     "word": "it's"
+    },
+    {
+     "start": 37.46,
+     "end": 37.64,
+     "word": "time"
+    },
+    {
+     "start": 37.64,
+     "end": 37.86,
+     "word": "to"
+    },
+    {
+     "start": 37.86,
+     "end": 38.02,
+     "word": "look"
+    },
+    {
+     "start": 38.02,
+     "end": 38.18,
+     "word": "at"
+    },
+    {
+     "start": 38.18,
+     "end": 38.3,
+     "word": "the"
+    },
+    {
+     "start": 38.3,
+     "end": 38.52,
+     "word": "next"
+    },
+    {
+     "start": 38.52,
+     "end": 39.14,
+     "word": "location,"
+    },
+    {
+     "start": 39.6,
+     "end": 39.76,
+     "word": "I'll"
+    },
+    {
+     "start": 39.76,
+     "end": 40.02,
+     "word": "handle"
+    },
+    {
+     "start": 40.02,
+     "end": 40.22,
+     "word": "the"
+    },
+    {
+     "start": 40.22,
+     "end": 40.48,
+     "word": "market"
+    },
+    {
+     "start": 40.48,
+     "end": 41.08,
+     "word": "research,"
+    },
+    {
+     "start": 41.64,
+     "end": 41.72,
+     "word": "plus"
+    },
+    {
+     "start": 41.72,
+     "end": 42.22,
+     "word": "community"
+    },
+    {
+     "start": 42.22,
+     "end": 42.72,
+     "word": "outreach"
+    },
+    {
+     "start": 42.72,
+     "end": 43.02,
+     "word": "and"
+    },
+    {
+     "start": 43.02,
+     "end": 43.34,
+     "word": "partner"
+    },
+    {
+     "start": 43.34,
+     "end": 44.08,
+     "word": "relationships."
+    }
+   ],
+   "4": [
+    {
+     "start": 45.2,
+     "end": 45.62,
+     "word": "Here's"
+    },
+    {
+     "start": 45.62,
+     "end": 45.76,
+     "word": "what"
+    },
+    {
+     "start": 45.76,
+     "end": 45.96,
+     "word": "that"
+    },
+    {
+     "start": 45.96,
+     "end": 46.18,
+     "word": "means"
+    },
+    {
+     "start": 46.18,
+     "end": 46.44,
+     "word": "for"
+    },
+    {
+     "start": 46.44,
+     "end": 46.66,
+     "word": "both"
+    },
+    {
+     "start": 46.66,
+     "end": 46.84,
+     "word": "of"
+    },
+    {
+     "start": 46.84,
+     "end": 47.14,
+     "word": "you."
+    },
+    {
+     "start": 47.62,
+     "end": 47.96,
+     "word": "Everything"
+    },
+    {
+     "start": 47.96,
+     "end": 48.32,
+     "word": "lives"
+    },
+    {
+     "start": 48.32,
+     "end": 48.6,
+     "word": "in"
+    },
+    {
+     "start": 48.6,
+     "end": 48.8,
+     "word": "one"
+    },
+    {
+     "start": 48.8,
+     "end": 49.32,
+     "word": "executive"
+    },
+    {
+     "start": 49.32,
+     "end": 49.98,
+     "word": "dashboard,"
+    },
+    {
+     "start": 50.38,
+     "end": 50.52,
+     "word": "and"
+    },
+    {
+     "start": 50.52,
+     "end": 50.7,
+     "word": "Hope"
+    },
+    {
+     "start": 50.7,
+     "end": 50.84,
+     "word": "and"
+    },
+    {
+     "start": 50.84,
+     "end": 51.02,
+     "word": "I"
+    },
+    {
+     "start": 51.02,
+     "end": 51.2,
+     "word": "talk"
+    },
+    {
+     "start": 51.2,
+     "end": 51.44,
+     "word": "to"
+    },
+    {
+     "start": 51.44,
+     "end": 51.62,
+     "word": "each"
+    },
+    {
+     "start": 51.62,
+     "end": 51.86,
+     "word": "other,"
+    },
+    {
+     "start": 52.2,
+     "end": 52.42,
+     "word": "so"
+    },
+    {
+     "start": 52.42,
+     "end": 52.74,
+     "word": "nothing"
+    },
+    {
+     "start": 52.74,
+     "end": 53.1,
+     "word": "slips"
+    },
+    {
+     "start": 53.1,
+     "end": 53.52,
+     "word": "between"
+    },
+    {
+     "start": 53.52,
+     "end": 53.72,
+     "word": "the"
+    },
+    {
+     "start": 53.72,
+     "end": 53.9,
+     "word": "hubs"
+    },
+    {
+     "start": 53.9,
+     "end": 54.14,
+     "word": "and"
+    },
+    {
+     "start": 54.14,
+     "end": 54.28,
+     "word": "the"
+    },
+    {
+     "start": 54.28,
+     "end": 54.48,
+     "word": "front"
+    },
+    {
+     "start": 54.48,
+     "end": 54.9,
+     "word": "office."
+    },
+    {
+     "start": 55.52,
+     "end": 55.68,
+     "word": "We"
+    },
+    {
+     "start": 55.68,
+     "end": 55.96,
+     "word": "don't"
+    },
+    {
+     "start": 55.96,
+     "end": 56.28,
+     "word": "sleep,"
+    },
+    {
+     "start": 56.54,
+     "end": 56.78,
+     "word": "so"
+    },
+    {
+     "start": 56.78,
+     "end": 56.92,
+     "word": "the"
+    },
+    {
+     "start": 56.92,
+     "end": 57.14,
+     "word": "work"
+    },
+    {
+     "start": 57.14,
+     "end": 57.42,
+     "word": "keeps"
+    },
+    {
+     "start": 57.42,
+     "end": 57.8,
+     "word": "moving"
+    },
+    {
+     "start": 57.8,
+     "end": 58.08,
+     "word": "while"
+    },
+    {
+     "start": 58.08,
+     "end": 58.26,
+     "word": "you're"
+    },
+    {
+     "start": 58.26,
+     "end": 58.42,
+     "word": "out"
+    },
+    {
+     "start": 58.42,
+     "end": 58.58,
+     "word": "in"
+    },
+    {
+     "start": 58.58,
+     "end": 58.7,
+     "word": "the"
+    },
+    {
+     "start": 58.7,
+     "end": 59.12,
+     "word": "community."
+    },
+    {
+     "start": 59.78,
+     "end": 59.9,
+     "word": "And"
+    },
+    {
+     "start": 59.9,
+     "end": 60.2,
+     "word": "every"
+    },
+    {
+     "start": 60.2,
+     "end": 60.56,
+     "word": "morning"
+    },
+    {
+     "start": 60.56,
+     "end": 60.8,
+     "word": "and"
+    },
+    {
+     "start": 60.8,
+     "end": 61.12,
+     "word": "every"
+    },
+    {
+     "start": 61.12,
+     "end": 61.54,
+     "word": "evening,"
+    },
+    {
+     "start": 61.92,
+     "end": 62.12,
+     "word": "you'll"
+    },
+    {
+     "start": 62.12,
+     "end": 62.28,
+     "word": "each"
+    },
+    {
+     "start": 62.28,
+     "end": 62.48,
+     "word": "get"
+    },
+    {
+     "start": 62.48,
+     "end": 62.66,
+     "word": "a"
+    },
+    {
+     "start": 62.66,
+     "end": 62.84,
+     "word": "short"
+    },
+    {
+     "start": 62.84,
+     "end": 63.32,
+     "word": "report,"
+    },
+    {
+     "start": 63.68,
+     "end": 63.86,
+     "word": "so"
+    },
+    {
+     "start": 63.86,
+     "end": 64.0,
+     "word": "you"
+    },
+    {
+     "start": 64.0,
+     "end": 64.34,
+     "word": "always"
+    },
+    {
+     "start": 64.34,
+     "end": 64.58,
+     "word": "know"
+    },
+    {
+     "start": 64.58,
+     "end": 64.76,
+     "word": "where"
+    },
+    {
+     "start": 64.76,
+     "end": 64.98,
+     "word": "things"
+    },
+    {
+     "start": 64.98,
+     "end": 65.42,
+     "word": "stand."
+    }
+   ],
+   "5": [
+    {
+     "start": 66.34,
+     "end": 66.6,
+     "word": "It"
+    },
+    {
+     "start": 66.6,
+     "end": 66.84,
+     "word": "costs"
+    },
+    {
+     "start": 66.84,
+     "end": 67.06,
+     "word": "a"
+    },
+    {
+     "start": 67.06,
+     "end": 67.34,
+     "word": "fraction"
+    },
+    {
+     "start": 67.34,
+     "end": 67.68,
+     "word": "of"
+    },
+    {
+     "start": 67.68,
+     "end": 67.86,
+     "word": "what"
+    },
+    {
+     "start": 67.86,
+     "end": 68.06,
+     "word": "you'd"
+    },
+    {
+     "start": 68.06,
+     "end": 68.22,
+     "word": "pay"
+    },
+    {
+     "start": 68.22,
+     "end": 68.38,
+     "word": "to"
+    },
+    {
+     "start": 68.38,
+     "end": 68.62,
+     "word": "hire"
+    },
+    {
+     "start": 68.62,
+     "end": 68.84,
+     "word": "an"
+    },
+    {
+     "start": 68.84,
+     "end": 69.3,
+     "word": "assistant,"
+    },
+    {
+     "start": 69.66,
+     "end": 69.88,
+     "word": "and"
+    },
+    {
+     "start": 69.88,
+     "end": 70.26,
+     "word": "Jim's"
+    },
+    {
+     "start": 70.26,
+     "end": 70.4,
+     "word": "years"
+    },
+    {
+     "start": 70.4,
+     "end": 70.66,
+     "word": "in"
+    },
+    {
+     "start": 70.66,
+     "end": 70.94,
+     "word": "banking"
+    },
+    {
+     "start": 70.94,
+     "end": 71.24,
+     "word": "and"
+    },
+    {
+     "start": 71.24,
+     "end": 71.6,
+     "word": "business"
+    },
+    {
+     "start": 71.6,
+     "end": 71.9,
+     "word": "are"
+    },
+    {
+     "start": 71.9,
+     "end": 72.1,
+     "word": "built"
+    },
+    {
+     "start": 72.1,
+     "end": 72.38,
+     "word": "right"
+    },
+    {
+     "start": 72.38,
+     "end": 72.68,
+     "word": "into"
+    },
+    {
+     "start": 72.68,
+     "end": 72.86,
+     "word": "how"
+    },
+    {
+     "start": 72.86,
+     "end": 73.02,
+     "word": "we"
+    },
+    {
+     "start": 73.02,
+     "end": 73.32,
+     "word": "work."
+    },
+    {
+     "start": 73.9,
+     "end": 74.0,
+     "word": "We"
+    },
+    {
+     "start": 74.0,
+     "end": 74.16,
+     "word": "get"
+    },
+    {
+     "start": 74.16,
+     "end": 74.28,
+     "word": "a"
+    },
+    {
+     "start": 74.28,
+     "end": 74.48,
+     "word": "little"
+    },
+    {
+     "start": 74.48,
+     "end": 74.92,
+     "word": "smarter"
+    },
+    {
+     "start": 74.92,
+     "end": 75.32,
+     "word": "every"
+    },
+    {
+     "start": 75.32,
+     "end": 75.64,
+     "word": "day."
+    }
+   ],
+   "6": [
+    {
+     "start": 76.58,
+     "end": 76.84,
+     "word": "Did"
+    },
+    {
+     "start": 76.84,
+     "end": 77.02,
+     "word": "we"
+    },
+    {
+     "start": 77.02,
+     "end": 77.22,
+     "word": "leave"
+    },
+    {
+     "start": 77.22,
+     "end": 77.62,
+     "word": "anything"
+    },
+    {
+     "start": 77.62,
+     "end": 78.0,
+     "word": "out?"
+    },
+    {
+     "start": 78.58,
+     "end": 78.66,
+     "word": "You"
+    },
+    {
+     "start": 78.66,
+     "end": 78.82,
+     "word": "can"
+    },
+    {
+     "start": 78.82,
+     "end": 79.08,
+     "word": "ask"
+    },
+    {
+     "start": 79.08,
+     "end": 79.26,
+     "word": "us"
+    },
+    {
+     "start": 79.26,
+     "end": 79.74,
+     "word": "anything,"
+    },
+    {
+     "start": 79.98,
+     "end": 80.32,
+     "word": "anytime."
+    },
+    {
+     "start": 81.1,
+     "end": 81.22,
+     "word": "And"
+    },
+    {
+     "start": 81.22,
+     "end": 81.52,
+     "word": "Rosa,"
+    },
+    {
+     "start": 82.14,
+     "end": 82.36,
+     "word": "what's"
+    },
+    {
+     "start": 82.36,
+     "end": 82.5,
+     "word": "been"
+    },
+    {
+     "start": 82.5,
+     "end": 82.72,
+     "word": "weighing"
+    },
+    {
+     "start": 82.72,
+     "end": 82.94,
+     "word": "on"
+    },
+    {
+     "start": 82.94,
+     "end": 83.1,
+     "word": "you"
+    },
+    {
+     "start": 83.1,
+     "end": 83.3,
+     "word": "most"
+    },
+    {
+     "start": 83.3,
+     "end": 83.72,
+     "word": "lately?"
+    },
+    {
+     "start": 84.34,
+     "end": 84.48,
+     "word": "Tell"
+    },
+    {
+     "start": 84.48,
+     "end": 84.78,
+     "word": "us,"
+    },
+    {
+     "start": 85.0,
+     "end": 85.12,
+     "word": "and"
+    },
+    {
+     "start": 85.12,
+     "end": 85.32,
+     "word": "we'll"
+    },
+    {
+     "start": 85.32,
+     "end": 85.48,
+     "word": "take"
+    },
+    {
+     "start": 85.48,
+     "end": 85.62,
+     "word": "it"
+    },
+    {
+     "start": 85.62,
+     "end": 85.78,
+     "word": "off"
+    },
+    {
+     "start": 85.78,
+     "end": 85.98,
+     "word": "your"
+    },
+    {
+     "start": 85.98,
+     "end": 86.26,
+     "word": "plate."
+    }
+   ]
+  },
+  "transcript": "Thanks, Hope! Hi Rosa, I'm Grace, and I'm really happy to meet you. I'm the Executive Assistant SuperWho for Diallo Smith. Leading Life Remodeled means Diallo's day gets pulled in a hundred directions. So I'd take the busy work off his desk. I'd manage his calendar and scheduling, book his flights, handle texts and voicemail, draft his emails, and keep his inbox under control. I can also pull together reports, keep an eye on the numbers, keep your Google Drive organized, and run your social media on Instagram, Facebook, X, LinkedIn, TikTok, and YouTube. And when it's time to look at the next location, I'll handle the market research, plus community outreach and partner relationships. Here's what that means for both of you. Everything lives in one executive dashboard, and Hope and I talk to each other, so nothing slips between the hubs and the front office. We don't sleep, so the work keeps moving while you're out in the community. And every morning and every evening, you'll each get a short report, so you always know where things stand. It costs a fraction of what you'd pay to hire an assistant, and Jim's years in banking and business are built right into how we work. We get a little smarter every day. Did we leave anything out? You can ask us anything, anytime. And Rosa, what's been weighing on you most lately? Tell us, and we'll take it off your plate."
+ }
 }
