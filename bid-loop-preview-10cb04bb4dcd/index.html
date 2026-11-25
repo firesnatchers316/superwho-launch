@@ -466,6 +466,43 @@
       line-height: 1.5;
       color: var(--green-dark);
     }
+
+    .demo-video {
+      display: flex; align-items: center; gap: 12px;
+      margin-top: 4px;
+    }
+    .play-demo {
+      flex: 0 0 auto;
+      width: 52px; height: 52px; border-radius: 50%;
+      border: 0; background: var(--green); color: #fff;
+      font-size: 18px; font-weight: 700; cursor: default;
+    }
+    .play-demo[aria-pressed="true"] { background: var(--green-dark); }
+    .cal-row {
+      display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px;
+      margin-top: 10px;
+    }
+    .cal-day {
+      border: 1.5px solid var(--line);
+      background: #FAFAF7;
+      border-radius: 10px;
+      padding: 8px 0 6px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--ink);
+    }
+    .cal-day small { display: block; font-size: 9px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+    .cal-day.is-on { border-color: var(--green); background: #E7F3E3; font-weight: 700; }
+    .pay-opts { display: grid; gap: 10px; margin-top: 8px; }
+    .pay-opt { text-align: left; width: 100%; }
+    .pay-opt .opt-title { font-weight: 700; font-size: 15px; margin: 0 0 2px; color: var(--green-dark); }
+    .pay-opt .opt-sub { margin: 0; font-size: 13px; color: var(--muted); }
+    .sample-chip {
+      display: inline-block;
+      font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--green); background: #E7F3E3; border-radius: 999px; padding: 2px 7px;
+      margin-left: 6px; vertical-align: middle;
+    }
   </style>
 </head>
 <body>
@@ -622,7 +659,7 @@
     <section class="screen" id="screen-shared" data-screen="shared">
       <p class="sw-mark">SuperWho · sample bid workflow</p>
       <h1>It’s with the crew, and with the customer.</h1>
-      <p class="lede">Once you approve, the offer goes to both. You or the crew member on site can talk this through with them.</p>
+      <p class="lede">Once you approve, the offer goes to both. Your crew member on site can explain it, you can, or I can — including a short, interactive video like this one.</p>
       <div class="split">
         <div class="card">
           <div class="label">Crew on site</div>
@@ -634,8 +671,82 @@
         </div>
       </div>
       <div class="actions">
-        <button type="button" class="btn" id="btn-to-customer">See the customer offer</button>
+        <button type="button" class="btn" id="btn-to-bidview">See a sample bid for the customer</button>
         <p class="note">In this sample, nothing was sent.</p>
+      </div>
+    </section>
+
+
+    <section class="screen" id="screen-bidview" data-screen="bidview">
+      <p class="sw-mark">SuperWho · sample customer bid</p>
+      <h1>I can walk them through it, too.</h1>
+      <p class="lede">Your crew member on site can explain the bid, you can, or I can. I can make a quick, simple, interactive video like this one. Then, based on what the customer says is most comfortable, I put the payment options on <span data-smart-name></span>.</p>
+      <p class="banner">Sample bid view only. These are the same sample numbers as the offer you just approved. Nothing is billed, booked, or sent. These buttons are a demo.</p>
+
+      <div class="card">
+        <div class="label">A short walkthrough of this bid <span class="sample-chip">Sample</span></div>
+        <div class="demo-video">
+          <button type="button" class="play-demo" id="btn-play-bid-video" aria-pressed="false" aria-label="Sample play control. Nothing is sent.">▶</button>
+          <div>
+            <p style="margin:0 0 4px;font-weight:700;color:var(--green-dark)">Play a sample walkthrough</p>
+            <p class="note" style="margin:0" id="bid-video-note">In a live bid, a short video would walk them through the work and the price. This control is a demo — it does not play out to a customer, and it has no payment link.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="label">Sample offer · Sample property 7</div>
+        <p class="prop-sub" style="margin-bottom:12px">From Big South Lawn & Landscape · sample figures only, not a real invoice</p>
+        <div class="photos">
+          <figure>
+            <img data-kind="oaks" alt="Two live oaks hanging over a roofline." width="1000" height="750">
+            <figcaption>Oaks off the roofline</figcaption>
+          </figure>
+          <figure>
+            <img data-kind="irrigation" alt="Irrigation heads and a dry patch in the back bed." width="1000" height="750">
+            <figcaption>Back bed irrigation</figcaption>
+          </figure>
+        </div>
+        <ul class="lines">
+          <li><span>Trim two live oaks off the roofline and haul the cuttings</span><span class="amt">$2,450</span></li>
+          <li><span>Replace two irrigation heads and adjust coverage in the back bed</span><span class="amt">$680</span></li>
+        </ul>
+        <div class="total-row"><span>Sample total</span><span class="amt">$3,130</span></div>
+        <p class="save">Or $2,980 if paid in full (save $150). Sample figures only.</p>
+      </div>
+
+      <div class="card">
+        <div class="label">Payment options on your Smart Page <span class="sample-chip">Sample</span></div>
+        <p class="note" style="margin:0 0 8px">I put these together based on what’s most comfortable, then bring them back to you for a final approval. In this demo, the buttons only highlight a choice. They do not take payment.</p>
+        <div class="pay-opts">
+          <button type="button" class="choice pay-opt" id="btn-opt-plan" aria-pressed="false">
+            <p class="opt-title">Deposit + payment plan</p>
+            <p class="opt-sub">A $1,043 deposit, then two payments of $1,043. Same sample figures as the 3-payment plan.</p>
+          </button>
+          <button type="button" class="choice pay-opt" id="btn-opt-full" aria-pressed="false">
+            <p class="opt-title">Pay in full, save $150</p>
+            <p class="opt-sub">$2,980 versus the $3,130 sample total. Sample discount only.</p>
+          </button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="label">Or pick a date on the calendar <span class="sample-chip">Sample</span></div>
+        <p class="note" style="margin:0">Sample week only. Tapping a date highlights it here. It does not book a visit or notify the crew.</p>
+        <div class="cal-row" id="demo-cal">
+          <button type="button" class="cal-day" data-cal="1"><small>Mon</small>2</button>
+          <button type="button" class="cal-day" data-cal="2"><small>Tue</small>3</button>
+          <button type="button" class="cal-day" data-cal="3"><small>Wed</small>4</button>
+          <button type="button" class="cal-day" data-cal="4"><small>Thu</small>5</button>
+          <button type="button" class="cal-day" data-cal="5"><small>Fri</small>6</button>
+          <button type="button" class="cal-day" data-cal="6"><small>Sat</small>7</button>
+          <button type="button" class="cal-day" data-cal="7"><small>Sun</small>8</button>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button type="button" class="btn" id="btn-to-customer">Continue the sample walkthrough</button>
+        <p class="note">No payment links on this page. Nothing is billed, scheduled, or sent.</p>
       </div>
     </section>
 
@@ -751,6 +862,7 @@
       <button type="button" data-jump="intro" id="jump-intro">Hello</button>
       <button type="button" data-jump="crew" id="jump-crew">Crew</button>
       <button type="button" data-jump="review" id="jump-review">Owner review</button>
+      <button type="button" data-jump="bidview" id="jump-bidview">Bid view</button>
       <button type="button" data-jump="customer" id="jump-customer">Customer</button>
       <button type="button" data-jump="board" id="jump-board">Board</button>
       <button type="button" data-jump="picture" id="jump-picture">Picture</button>
@@ -796,7 +908,7 @@
       { id: "p14", label: "Sample property 14",kind: "HOA landscape refresh",      amount: 2530, status: "pending",  fulfill: "crew",       thumb: "commercial" }
     ];
 
-    var screens = ["intro", "crew", "drafting", "review", "shared", "customer", "board", "picture"];
+    var screens = ["intro", "crew", "drafting", "review", "shared", "bidview", "customer", "board", "picture"];
     var current = "intro";
     var origin = "crew";
     var timing = "";
@@ -981,7 +1093,8 @@
       if (current === "intro") return { el: document.getElementById("btn-to-demo"), title: "Tap here next", sub: "See what the team designed." };
       if (current === "crew") return { el: document.getElementById("btn-send"), title: "Tap here next", sub: "Send the photos and note." };
       if (current === "review") return { el: document.getElementById("btn-approve"), title: "Tap here next", sub: "Approve with one tap." };
-      if (current === "shared") return { el: document.getElementById("btn-to-customer"), title: "Tap here next", sub: "See the customer offer." };
+      if (current === "shared") return { el: document.getElementById("btn-to-bidview"), title: "Tap here next", sub: "See a sample bid for the customer." };
+      if (current === "bidview") return { el: document.getElementById("btn-to-customer"), title: "Tap here next", sub: "Continue the sample walkthrough." };
       if (current === "customer" && !customerResult) {
         if (!timing) return { el: document.getElementById("btn-timing-now"), title: "Tap here next", sub: "Do it while the crew is here." };
         if (!payment) return { el: document.getElementById("btn-pay-full"), title: "Tap here next", sub: "Pay in full and save $150." };
@@ -1070,6 +1183,7 @@
     document.getElementById("btn-play").addEventListener("click", function () { logTap("tap", "btn-play"); playVoice(); });
     document.getElementById("btn-send").addEventListener("click", function () { logTap("tap", "btn-send"); showScreen("drafting"); runDrafting(); });
     document.getElementById("btn-approve").addEventListener("click", function () { logTap("tap", "btn-approve"); showScreen("shared"); });
+    document.getElementById("btn-to-bidview").addEventListener("click", function () { logTap("tap", "btn-to-bidview"); showScreen("bidview"); });
     document.getElementById("btn-to-customer").addEventListener("click", function () { logTap("tap", "btn-to-customer"); showScreen("customer"); });
     document.getElementById("btn-to-picture").addEventListener("click", function () { logTap("tap", "btn-to-picture"); showScreen("picture"); });
     document.getElementById("btn-to-demo").addEventListener("click", function () { logTap("tap", "btn-to-demo"); showScreen("crew"); });
@@ -1124,6 +1238,31 @@
     document.addEventListener("scroll", function () {
       if (!document.getElementById("guide").hidden) placeGuide();
     }, true);
+
+
+    document.getElementById("btn-play-bid-video").addEventListener("click", function () {
+      var b = document.getElementById("btn-play-bid-video");
+      var on = b.getAttribute("aria-pressed") === "true";
+      b.setAttribute("aria-pressed", on ? "false" : "true");
+      b.textContent = on ? "▶" : "■";
+      document.getElementById("bid-video-note").textContent = on
+        ? "In a live bid, a short video would walk them through the work and the price. This control is a demo — it does not play out to a customer, and it has no payment link."
+        : "Sample only. A live walkthrough would play here for the customer. Nothing is sent, and there is no payment link.";
+      logTap("tap", "btn-play-bid-video");
+    });
+    function setPayOpt(which) {
+      document.getElementById("btn-opt-plan").setAttribute("aria-pressed", which === "plan" ? "true" : "false");
+      document.getElementById("btn-opt-full").setAttribute("aria-pressed", which === "full" ? "true" : "false");
+    }
+    document.getElementById("btn-opt-plan").addEventListener("click", function () { setPayOpt("plan"); logTap("tap", "opt-plan"); });
+    document.getElementById("btn-opt-full").addEventListener("click", function () { setPayOpt("full"); logTap("tap", "opt-full"); });
+    document.getElementById("demo-cal").addEventListener("click", function (e) {
+      var day = e.target.closest && e.target.closest("[data-cal]");
+      if (!day) return;
+      document.querySelectorAll("#demo-cal .cal-day").forEach(function (el) { el.classList.remove("is-on"); });
+      day.classList.add("is-on");
+      logTap("tap", "cal-" + day.getAttribute("data-cal"));
+    });
 
     function startFromHash() {
       var h = (location.hash || "").replace("#", "");
