@@ -1875,9 +1875,10 @@
       (function openPing(){
         try {
           var q = new URLSearchParams(location.search);
-          if (q.has("test") || q.has("notrack") || q.has("preview") || q.get("selftest") === "1") return;
+          if (q.has("notrack") || q.has("preview")) return;
           if (location.pathname.indexOf("/pj-0g1dpfefytsv/") !== 0) return; // previews never ping
-          if (navigator.webdriver || /HeadlessChrome/.test(navigator.userAgent || "")) return;
+          var isTestOpen = q.has("test") || q.get("selftest") === "1";
+          if (!isTestOpen && (navigator.webdriver || /HeadlessChrome/.test(navigator.userAgent || ""))) return;
           if (!SUBMIT_URL || !SHARED_KEY) return;
           var storeKey = "swPageOpenAt-pj";
           var now = Date.now();
@@ -1892,7 +1893,7 @@
             keepalive: true,
             credentials: "omit",
             headers: { "Content-Type": "text/plain;charset=utf-8" },
-            body: JSON.stringify({ key: SHARED_KEY, action: "open", page: location.pathname + location.hash })
+            body: JSON.stringify({ key: SHARED_KEY, action: "open", page: location.pathname + location.hash, test: !!isTestOpen, note: isTestOpen ? "TEST from Chief selftest" : "" })
           }).catch(function () {});
         } catch (e) {}
       })();
@@ -1965,8 +1966,9 @@
     sent[dedupe] = 1;
     var slug = SLUG;
     try {
-      if (new URLSearchParams(location.search).get("selftest") === "1") {
-        slug = SLUG ? SLUG + "__selftest" : "selftest";
+      var qq = new URLSearchParams(location.search);
+      if (qq.get("selftest") === "1" || qq.has("test")) {
+        slug = SLUG ? SLUG + "__test" : "test";
       }
     } catch (e) {}
     var body = JSON.stringify({
@@ -2001,7 +2003,7 @@
       var q = new URLSearchParams(location.search);
       if (q.get("src") === "push" || q.get("from") === "notification") swLog("notification_tapped");
     } catch (e) {}
-    swLog("open");
+    // Opens: /assets/track.js with the correct live or preview slug.
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
   else boot();
@@ -2277,5 +2279,15 @@
 })();
 
   </script>
+  <script id="sw-track-cfg">
+    (function () {
+      var live = location.pathname.indexOf("/pj-0g1dpfefytsv/") === 0;
+      var preview = location.pathname.indexOf("/pj-launch-preview-5a84a8793a28/") === 0;
+      if (live) window.SW_TRACK = { page: "pj", slug: "pj-0g1dpfefytsv" };
+      else if (preview) window.SW_TRACK = { page: "pjpreview", slug: "pj-launch-preview-5a84a8793a28" };
+      else window.SW_TRACK = { page: "", slug: "" };
+    })();
+  </script>
+  <script src="/assets/track.js" defer></script>
 </body>
 </html>
