@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0B1A2E">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>Set up your SuperWho app · SuperWho</title>
+  <style>
+    :root {
+      --navy: #0B1A2E;
+      --card: #122640;
+      --blue: #3D6BFF;
+      --cyan: #22D3EE;
+      --green: #22C55E;
+      --amber: #FBBF24;
+      --ink: #F3F5F8;
+      --muted: #9FB0C8;
+      --line: #1E3352;
+      --sans: "Schibsted Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--navy);
+      color: var(--ink);
+      font-family: var(--sans);
+      -webkit-text-size-adjust: 100%;
+    }
+    body {
+      padding: 24px 20px 64px;
+      padding-left: max(20px, env(safe-area-inset-left));
+      padding-right: max(20px, env(safe-area-inset-right));
+      padding-bottom: max(64px, env(safe-area-inset-bottom));
+    }
+    .wrap { max-width: 680px; margin: 0 auto; }
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+    .brand {
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: var(--cyan);
+      text-transform: uppercase;
+    }
+    .sw-name {
+      text-transform: none;
+      font-variant: small-caps;
+      font-variant-caps: small-caps;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .back-link:hover { border-color: var(--cyan); }
+    h1 {
+      font-size: 30px;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin: 0 0 10px;
+    }
+    .lead {
+      font-size: 17px;
+      line-height: 1.5;
+      color: var(--muted);
+      margin: 0 0 22px;
+    }
+    .benefit-box {
+      background: linear-gradient(135deg, rgba(61, 107, 255, 0.16), rgba(34, 211, 238, 0.08));
+      border: 1px solid rgba(34, 211, 238, 0.35);
+      border-radius: 16px;
+      padding: 18px 18px;
+      margin-bottom: 24px;
+    }
+    .benefit-box strong {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 6px;
+      color: var(--ink);
+    }
+    .benefit-box p {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.5;
+      color: var(--muted);
+    }
+    .tabs {
+      display: inline-flex;
+      gap: 8px;
+      background: #0A1424;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 4px;
+      margin-bottom: 20px;
+    }
+    .tab {
+      appearance: none;
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      font-family: var(--sans);
+      font-size: 15px;
+      font-weight: 600;
+      padding: 10px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .tab[aria-selected="true"] {
+      background: var(--blue);
+      color: #fff;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 18px;
+    }
+    .kicker {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin: 0 0 8px;
+    }
+    h2 {
+      font-size: 21px;
+      margin: 0 0 12px;
+      letter-spacing: -0.02em;
+    }
+    .steps {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      counter-reset: step;
+    }
+    .steps li {
+      counter-increment: step;
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+      align-items: start;
+    }
+    .steps li:last-child { border-bottom: 0; padding-bottom: 0; }
+    .steps li::before {
+      content: counter(step);
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: rgba(61, 107, 255, 0.22);
+      border: 1px solid rgba(61, 107, 255, 0.55);
+      color: var(--cyan);
+      font-family: var(--mono);
+      font-size: 14px;
+      font-weight: 700;
+      display: grid;
+      place-items: center;
+    }
+    .step-title {
+      font-size: 16px;
+      font-weight: 700;
+      margin: 0 0 3px;
+      color: var(--ink);
+    }
+    .step-desc {
+      font-size: 15px;
+      line-height: 1.45;
+      color: var(--muted);
+      margin: 0;
+    }
+    .pill {
+      display: inline-block;
+      padding: 1px 7px;
+      border-radius: 6px;
+      background: #0A1424;
+      border: 1px solid var(--line);
+      color: var(--ink);
+      font-family: var(--mono);
+      font-size: 13px;
+    }
+    .video-wrap {
+      margin-top: 14px;
+      background: #081221;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    .video-badge {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 12px;
+      background: #1A2740;
+      border-bottom: 1px solid var(--line);
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--amber);
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+    video {
+      display: block;
+      width: 100%;
+      max-height: 540px;
+      background: #0B1A2E;
+    }
+    .faq-item {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .faq-item:last-child { border-bottom: 0; padding-bottom: 0; }
+    .faq-q { font-weight: 700; margin: 0 0 4px; font-size: 15px; }
+    .faq-a { margin: 0; font-size: 14px; line-height: 1.45; color: var(--muted); }
+    footer {
+      margin-top: 28px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    [hidden] { display: none !important; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand"><span class="sw-name">SuperWho</span> · App Setup Guide</div>
+      <a class="back-link" id="backLink" href="./">← Back to your page</a>
+    </div>
+
+    <h1>Set up your SuperWho app without an App Store download.</h1>
+    <p class="lead">It's simple and gets you going in just 90 seconds. You'll also have a SuperWho app icon on your phone for easy access to your SuperWho page or dashboard.</p>
+
+    <div class="benefit-box">
+      <strong>You'll hear from your team the moment something's ready.</strong>
+      <p>No checking email, no hunting for links. Your SuperWho icon sits right on your Home Screen and pings your phone the second your team posts an update, reply, or draft to approve.</p>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Choose your device">
+      <button class="tab" type="button" role="tab" id="tab-iphone" aria-selected="true" aria-controls="panel-iphone">iPhone / iPad</button>
+      <button class="tab" type="button" role="tab" id="tab-android" aria-selected="false" aria-controls="panel-android">Android</button>
+      <button class="tab" type="button" role="tab" id="tab-desktop" aria-selected="false" aria-controls="panel-desktop">Computer</button>
+    </div>
+
+    <section class="card" id="panel-iphone" role="tabpanel" aria-labelledby="tab-iphone">
+      <p class="kicker">iPhone &amp; iPad · ~90 seconds</p>
+      <h2>3 quick steps in Safari</h2>
+      <ol class="steps">
+        <li>
+          <div>
+            <p class="step-title">Tap <span class="pill">Share □↑</span> at the bottom of Safari</p>
+            <p class="step-desc">If your page opened inside Mail or Messages, tap the Safari compass first.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p class="step-title">Tap <span class="pill">Add to Home Screen</span> → <span class="pill">Add</span></p>
+            <p class="step-desc">This puts your SuperWho app icon right on your Home Screen — no App Store needed.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p class="step-title">Open <span class="pill">SuperWho</span> from your Home Screen &amp; tap <span class="pill">Allow</span></p>
+            <p class="step-desc">Tap the new icon, tap <strong>Turn on notifications</strong>, then tap <strong>Allow</strong>.</p>
+          </div>
+        </li>
+      </ol>
+      <div class="video-wrap">
+        <div class="video-badge">
+          <span>Quick Walkthrough</span>
+          <span>EXAMPLE SCREENFLOW</span>
+        </div>
+        <video controls playsinline muted loop preload="metadata">
+          <source src="videos/iphone-guide.mp4" type="video/mp4">
+        </video>
+      </div>
+    </section>
+
+    <section class="card" id="panel-android" role="tabpanel" aria-labelledby="tab-android" hidden>
+      <p class="kicker">Android · ~30 seconds</p>
+      <h2>2 quick steps on Android</h2>
+      <ol class="steps">
+        <li>
+          <div>
+            <p class="step-title">Tap <span class="pill">Turn on notifications</span> → <span class="pill">Allow</span></p>
+            <p class="step-desc">You'll see this button on your welcome screen and in Messages. Your phone alerts are live right away.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p class="step-title">Tap <span class="pill">⋮</span> → <span class="pill">Add to Home screen</span></p>
+            <p class="step-desc">Adds the SuperWho app icon to your Home Screen — no Play Store download needed.</p>
+          </div>
+        </li>
+      </ol>
+      <div class="video-wrap">
+        <div class="video-badge">
+          <span>Quick Walkthrough</span>
+          <span>EXAMPLE SCREENFLOW</span>
+        </div>
+        <video controls playsinline muted loop preload="metadata">
+          <source src="videos/android-guide.mp4" type="video/mp4">
+        </video>
+      </div>
+    </section>
+
+    <section class="card" id="panel-desktop" role="tabpanel" aria-labelledby="tab-desktop" hidden>
+      <p class="kicker">Mac &amp; Windows · ~15 seconds</p>
+      <h2>1 click on your computer</h2>
+      <ol class="steps">
+        <li>
+          <div>
+            <p class="step-title">Click <span class="pill">Turn on notifications</span> → <span class="pill">Allow</span></p>
+            <p class="step-desc">Updates pop up on your screen whenever your browser is open.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p class="step-title">Do the 90-second setup on your phone too</p>
+            <p class="step-desc">Open your same page link on your iPhone or Android phone so alerts reach you anywhere.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <p class="kicker">Quick fixes</p>
+      <h2>If something doesn't pop up</h2>
+      <div class="faq-item">
+        <p class="faq-q">I don't see "Add to Home Screen" on iPhone</p>
+        <p class="faq-a">Open your link in <strong>Safari</strong> (tap the bottom-right compass icon if you're viewing it inside Mail or Messages).</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">I tapped "Don't Allow" earlier</p>
+        <p class="faq-a">On iPhone: <strong>Settings → Notifications → SuperWho → Allow Notifications</strong>. On Android: tap the icon next to the web address → <strong>Permissions → Notifications → Allow</strong>.</p>
+      </div>
+    </section>
+
+    <footer><strong>SuperWho</strong> · FireSnatchers</footer>
+  </div>
+
+  <script>
+    (function () {
+      var tabs = {
+        iphone: document.getElementById('tab-iphone'),
+        android: document.getElementById('tab-android'),
+        desktop: document.getElementById('tab-desktop')
+      };
+      var panels = {
+        iphone: document.getElementById('panel-iphone'),
+        android: document.getElementById('panel-android'),
+        desktop: document.getElementById('panel-desktop')
+      };
+      function select(kind) {
+        if (!panels[kind]) kind = 'iphone';
+        Object.keys(tabs).forEach(function (k) {
+          var on = k === kind;
+          tabs[k].setAttribute('aria-selected', on ? 'true' : 'false');
+          panels[k].hidden = !on;
+        });
+      }
+      Object.keys(tabs).forEach(function (k) {
+        tabs[k].addEventListener('click', function () { select(k); });
+      });
+
+      var params = new URLSearchParams(location.search);
+      var back = params.get('back');
+      var backLink = document.getElementById('backLink');
+      if (back && /^(\.\/|\/[A-Za-z0-9_.-]+\/?)/.test(back)) {
+        backLink.href = back;
+      }
+
+      var requested = (params.get('device') || '').toLowerCase();
+      if (panels[requested]) {
+        select(requested);
+      } else {
+        var ua = navigator.userAgent || '';
+        if (/iPhone|iPad|iPod/.test(ua)) select('iphone');
+        else if (/Android/.test(ua)) select('android');
+        else select('desktop');
+      }
+    })();
+  </script>
+</body>
+</html>
