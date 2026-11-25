@@ -970,7 +970,7 @@
 
     function escapeHtml(s) {
       return String(s || "").replace(/[&<>"']/g, function (c) {
-        return ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': """, "'": "&#39;" })[c];
+        return ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&#34;", "'": "&#39;" })[c];
       });
     }
 
