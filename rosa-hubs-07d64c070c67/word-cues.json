@@ -1,0 +1,2201 @@
+{
+  "duration": 58.937917,
+  "cues": [
+    {
+      "i": 1,
+      "id": "p01",
+      "illo": "intro",
+      "speaker": "Your SuperWho",
+      "voice": "en-US-EmmaNeural",
+      "start": 0.0,
+      "end": 8.903,
+      "text": "Hi Rosa \u2014 I\u2019m your SuperWho, built for Life Remodeled. Jim, your dad, and his team developed me to bring both Opportunity Hubs into one place."
+    },
+    {
+      "i": 2,
+      "id": "p02",
+      "illo": "stats",
+      "speaker": "Your SuperWho",
+      "voice": "en-US-EmmaNeural",
+      "start": 9.253,
+      "end": 20.289,
+      "text": "Instead of juggling spreadsheets, email threads, and ten-thousand-dollar property software, your dashboard tracks active nonprofits, open maintenance work, and this week\u2019s room schedule at a glance."
+    },
+    {
+      "i": 3,
+      "id": "p03",
+      "illo": "tenants",
+      "speaker": "Your SuperWho",
+      "voice": "en-US-EmmaNeural",
+      "start": 20.639,
+      "end": 30.053,
+      "text": "Switch between Hub 1 and Hub 2, or view both together. You can search the tenant directory, send hub-wide announcements, and see which organizations have seen them."
+    },
+    {
+      "i": 4,
+      "id": "p04",
+      "illo": "maintenance",
+      "speaker": "Your SuperWho",
+      "voice": "en-US-EmmaNeural",
+      "start": 30.403,
+      "end": 39.554,
+      "text": "Maintenance requests stay moving from submitted to in progress to done \u2014 so no leaky valve, door lock, or HVAC ticket gets buried in your inbox."
+    },
+    {
+      "i": 5,
+      "id": "p05",
+      "illo": "events",
+      "speaker": "Your SuperWho",
+      "voice": "en-US-EmmaNeural",
+      "start": 39.904,
+      "end": 47.325,
+      "text": "Your shared calendar and room booking view keeps gyms, classrooms, and community spaces clear of double-bookings across both buildings."
+    },
+    {
+      "i": 6,
+      "id": "p06",
+      "illo": "form",
+      "speaker": "Your SuperWho",
+      "voice": "en-US-EmmaNeural",
+      "start": 47.675,
+      "end": 58.038,
+      "text": "When a tenant needs something, the request form on this page routes it straight in and alerts the team right away. Everything here uses labeled sample data so you can test it safely before your meeting."
+    }
+  ],
+  "words": [
+    {
+      "start": 0.0,
+      "end": 0.32,
+      "word": "Hi",
+      "speaker": "Your SuperWho",
+      "cue": 1,
+      "illo": "intro"
+    },
+    {
+      "start": 0.32,
+      "end": 0.64,
+      "word": "Rosa,",
+      "speaker": "Your SuperWho",
+      "cue": 1,
+      "illo": "intro"
+    },
+    {
+      "start": 1.22,
+      "end": 1.46,
+      "word": "I'm",
+      "speaker": "Your SuperWho",
+      "cue": 1,
+      "illo": "intro"
+    },
+    {
+      "start": 1.46,
+      "end": 1.6,
+      "word": "your",
+      "speaker": "Your SuperWho",
+      "cue": 1,
+      "illo": "intro"
+    },
+    {
+      "start": 1.6,
+      "end": 1.86,
+      "word": "super",
+      "speaker": "Your SuperWho",
+      "cue": 1,
+      "illo": "intro"
+    },
+    {
+      "start": 1.86,
+      "end": 2.14,
+      "word": "who,",
+      "speaker": "Your SuperWho",
+      "cue": 1,
+      "illo": "intro"
+    },
+    {
+      "start": 2.36,
+      "end": 2.46,
+      "word": "built",
+      "speaker": "Your SuperWho",
+      "cue": 1,
+      "illo": "intro"
+    },
+    {
+      "start": 2.46,
+      "end": 2.68,
+      "word": "for",
+      "speaker": "Your SuperWho",
+      "cue": 1,
+      "illo": "intro"
+    },
+    {
+      "start": 2.68,
+      "end": 2.88,
+      "word": "life",
+      "speaker": "Your SuperWho",
+      "cue": 1,
+      "illo": "intro"
+    },
+    {
+      "start": 2.88,
+      "end": 3.5,
+      "word": "remodeled.",
+      "speaker": "Your SuperWho",
+      "cue": 1,
+      "illo": "intro"
+    },
+    {
+      "start": 4.06,
+      "end": 4.18,
+      "word": "Jim,",
+      "speaker": "Your SuperWho",
+      "cue": 1,
+      "illo": "intro"
+    },
+    {
+      "start": 4.36,
+      "end": 4.48,
+      "word": "your",
+      "speaker": "Your SuperWho",
+      "cue": 1,
+      "illo": "intro"
+    },
+    {
+      "start": 4.48,
+      "end": 4.74,
+      "word": "dad,",
+      "speaker": "Your SuperWho",
+      "cue": 1,
+      "illo": "intro"
+    },
+    {
+      "start": 4.92,
+      "end": 5.1,
+      "word": "and",
+      "speaker": "Your SuperWho",
+      "cue": 1,
+      "illo": "intro"
+    },
+    {
+      "start": 5.1,
+      "end": 5.3,
+      "word": "his",
+      "speaker": "Your SuperWho",
+      "cue": 1,
+      "illo": "intro"
+    },
+    {
+      "start": 5.3,
+      "end": 5.54,
+      "word": "team",
+      "speaker": "Your SuperWho",
+      "cue": 1,
+      "illo": "intro"
+    },
+    {
+      "start": 5.54,
+      "end": 5.9,
+      "word": "developed",
+      "speaker": "Your SuperWho",
+      "cue": 1,
+      "illo": "intro"
+    },
+    {
+      "start": 5.9,
+      "end": 6.18,
+      "word": "me",
+      "speaker": "Your SuperWho",
+      "cue": 1,
+      "illo": "intro"
+    },
+    {
+      "start": 6.18,
+      "end": 6.34,
+      "word": "to",
+      "speaker": "Your SuperWho",
+      "cue": 1,
+      "illo": "intro"
+    },
+    {
+      "start": 6.34,
+      "end": 6.52,
+      "word": "bring",
+      "speaker": "Your SuperWho",
+      "cue": 1,
+      "illo": "intro"
+    },
+    {
+      "start": 6.52,
+      "end": 6.8,
+      "word": "both",
+      "speaker": "Your SuperWho",
+      "cue": 1,
+      "illo": "intro"
+    },
+    {
+      "start": 6.8,
+      "end": 7.32,
+      "word": "opportunity",
+      "speaker": "Your SuperWho",
+      "cue": 1,
+      "illo": "intro"
+    },
+    {
+      "start": 7.32,
+      "end": 7.7,
+      "word": "hubs",
+      "speaker": "Your SuperWho",
+      "cue": 1,
+      "illo": "intro"
+    },
+    {
+      "start": 7.7,
+      "end": 7.98,
+      "word": "into",
+      "speaker": "Your SuperWho",
+      "cue": 1,
+      "illo": "intro"
+    },
+    {
+      "start": 7.98,
+      "end": 8.24,
+      "word": "one",
+      "speaker": "Your SuperWho",
+      "cue": 1,
+      "illo": "intro"
+    },
+    {
+      "start": 8.24,
+      "end": 8.6,
+      "word": "place.",
+      "speaker": "Your SuperWho",
+      "cue": 1,
+      "illo": "intro"
+    },
+    {
+      "start": 9.4,
+      "end": 9.74,
+      "word": "Instead",
+      "speaker": "Your SuperWho",
+      "cue": 2,
+      "illo": "stats"
+    },
+    {
+      "start": 9.74,
+      "end": 9.92,
+      "word": "of",
+      "speaker": "Your SuperWho",
+      "cue": 2,
+      "illo": "stats"
+    },
+    {
+      "start": 9.92,
+      "end": 10.26,
+      "word": "juggling",
+      "speaker": "Your SuperWho",
+      "cue": 2,
+      "illo": "stats"
+    },
+    {
+      "start": 10.26,
+      "end": 11.0,
+      "word": "spreadsheets,",
+      "speaker": "Your SuperWho",
+      "cue": 2,
+      "illo": "stats"
+    },
+    {
+      "start": 11.28,
+      "end": 11.46,
+      "word": "email",
+      "speaker": "Your SuperWho",
+      "cue": 2,
+      "illo": "stats"
+    },
+    {
+      "start": 11.46,
+      "end": 11.82,
+      "word": "threads,",
+      "speaker": "Your SuperWho",
+      "cue": 2,
+      "illo": "stats"
+    },
+    {
+      "start": 12.02,
+      "end": 12.12,
+      "word": "and",
+      "speaker": "Your SuperWho",
+      "cue": 2,
+      "illo": "stats"
+    },
+    {
+      "start": 12.12,
+      "end": 12.36,
+      "word": "$10",
+      "speaker": "Your SuperWho",
+      "cue": 2,
+      "illo": "stats"
+    },
+    {
+      "start": 12.36,
+      "end": 12.76,
+      "word": ",000",
+      "speaker": "Your SuperWho",
+      "cue": 2,
+      "illo": "stats"
+    },
+    {
+      "start": 12.76,
+      "end": 13.36,
+      "word": "property",
+      "speaker": "Your SuperWho",
+      "cue": 2,
+      "illo": "stats"
+    },
+    {
+      "start": 13.36,
+      "end": 13.96,
+      "word": "software,",
+      "speaker": "Your SuperWho",
+      "cue": 2,
+      "illo": "stats"
+    },
+    {
+      "start": 14.3,
+      "end": 14.44,
+      "word": "your",
+      "speaker": "Your SuperWho",
+      "cue": 2,
+      "illo": "stats"
+    },
+    {
+      "start": 14.44,
+      "end": 14.78,
+      "word": "dashboard",
+      "speaker": "Your SuperWho",
+      "cue": 2,
+      "illo": "stats"
+    },
+    {
+      "start": 14.78,
+      "end": 15.24,
+      "word": "tracks",
+      "speaker": "Your SuperWho",
+      "cue": 2,
+      "illo": "stats"
+    },
+    {
+      "start": 15.24,
+      "end": 15.62,
+      "word": "active",
+      "speaker": "Your SuperWho",
+      "cue": 2,
+      "illo": "stats"
+    },
+    {
+      "start": 15.62,
+      "end": 15.88,
+      "word": "non",
+      "speaker": "Your SuperWho",
+      "cue": 2,
+      "illo": "stats"
+    },
+    {
+      "start": 15.88,
+      "end": 16.3,
+      "word": "-profits,",
+      "speaker": "Your SuperWho",
+      "cue": 2,
+      "illo": "stats"
+    },
+    {
+      "start": 16.74,
+      "end": 17.02,
+      "word": "open",
+      "speaker": "Your SuperWho",
+      "cue": 2,
+      "illo": "stats"
+    },
+    {
+      "start": 17.02,
+      "end": 17.38,
+      "word": "maintenance",
+      "speaker": "Your SuperWho",
+      "cue": 2,
+      "illo": "stats"
+    },
+    {
+      "start": 17.38,
+      "end": 17.78,
+      "word": "work,",
+      "speaker": "Your SuperWho",
+      "cue": 2,
+      "illo": "stats"
+    },
+    {
+      "start": 18.06,
+      "end": 18.22,
+      "word": "and",
+      "speaker": "Your SuperWho",
+      "cue": 2,
+      "illo": "stats"
+    },
+    {
+      "start": 18.22,
+      "end": 18.44,
+      "word": "this",
+      "speaker": "Your SuperWho",
+      "cue": 2,
+      "illo": "stats"
+    },
+    {
+      "start": 18.44,
+      "end": 18.74,
+      "word": "week's",
+      "speaker": "Your SuperWho",
+      "cue": 2,
+      "illo": "stats"
+    },
+    {
+      "start": 18.74,
+      "end": 18.9,
+      "word": "room",
+      "speaker": "Your SuperWho",
+      "cue": 2,
+      "illo": "stats"
+    },
+    {
+      "start": 18.9,
+      "end": 19.26,
+      "word": "schedule",
+      "speaker": "Your SuperWho",
+      "cue": 2,
+      "illo": "stats"
+    },
+    {
+      "start": 19.26,
+      "end": 19.48,
+      "word": "at",
+      "speaker": "Your SuperWho",
+      "cue": 2,
+      "illo": "stats"
+    },
+    {
+      "start": 19.48,
+      "end": 19.6,
+      "word": "a",
+      "speaker": "Your SuperWho",
+      "cue": 2,
+      "illo": "stats"
+    },
+    {
+      "start": 19.6,
+      "end": 19.94,
+      "word": "glance.",
+      "speaker": "Your SuperWho",
+      "cue": 2,
+      "illo": "stats"
+    },
+    {
+      "start": 20.74,
+      "end": 21.06,
+      "word": "Switch",
+      "speaker": "Your SuperWho",
+      "cue": 3,
+      "illo": "tenants"
+    },
+    {
+      "start": 21.06,
+      "end": 21.52,
+      "word": "between",
+      "speaker": "Your SuperWho",
+      "cue": 3,
+      "illo": "tenants"
+    },
+    {
+      "start": 21.52,
+      "end": 21.72,
+      "word": "Hub",
+      "speaker": "Your SuperWho",
+      "cue": 3,
+      "illo": "tenants"
+    },
+    {
+      "start": 21.72,
+      "end": 21.96,
+      "word": "1",
+      "speaker": "Your SuperWho",
+      "cue": 3,
+      "illo": "tenants"
+    },
+    {
+      "start": 21.96,
+      "end": 22.16,
+      "word": "and",
+      "speaker": "Your SuperWho",
+      "cue": 3,
+      "illo": "tenants"
+    },
+    {
+      "start": 22.16,
+      "end": 22.34,
+      "word": "Hub",
+      "speaker": "Your SuperWho",
+      "cue": 3,
+      "illo": "tenants"
+    },
+    {
+      "start": 22.34,
+      "end": 22.68,
+      "word": "2,",
+      "speaker": "Your SuperWho",
+      "cue": 3,
+      "illo": "tenants"
+    },
+    {
+      "start": 22.88,
+      "end": 23.06,
+      "word": "or",
+      "speaker": "Your SuperWho",
+      "cue": 3,
+      "illo": "tenants"
+    },
+    {
+      "start": 23.06,
+      "end": 23.24,
+      "word": "view",
+      "speaker": "Your SuperWho",
+      "cue": 3,
+      "illo": "tenants"
+    },
+    {
+      "start": 23.24,
+      "end": 23.46,
+      "word": "both",
+      "speaker": "Your SuperWho",
+      "cue": 3,
+      "illo": "tenants"
+    },
+    {
+      "start": 23.46,
+      "end": 23.84,
+      "word": "together.",
+      "speaker": "Your SuperWho",
+      "cue": 3,
+      "illo": "tenants"
+    },
+    {
+      "start": 24.36,
+      "end": 24.54,
+      "word": "You",
+      "speaker": "Your SuperWho",
+      "cue": 3,
+      "illo": "tenants"
+    },
+    {
+      "start": 24.54,
+      "end": 24.7,
+      "word": "can",
+      "speaker": "Your SuperWho",
+      "cue": 3,
+      "illo": "tenants"
+    },
+    {
+      "start": 24.7,
+      "end": 24.92,
+      "word": "search",
+      "speaker": "Your SuperWho",
+      "cue": 3,
+      "illo": "tenants"
+    },
+    {
+      "start": 24.92,
+      "end": 25.16,
+      "word": "the",
+      "speaker": "Your SuperWho",
+      "cue": 3,
+      "illo": "tenants"
+    },
+    {
+      "start": 25.16,
+      "end": 25.36,
+      "word": "tenant",
+      "speaker": "Your SuperWho",
+      "cue": 3,
+      "illo": "tenants"
+    },
+    {
+      "start": 25.36,
+      "end": 25.92,
+      "word": "directory,",
+      "speaker": "Your SuperWho",
+      "cue": 3,
+      "illo": "tenants"
+    },
+    {
+      "start": 26.12,
+      "end": 26.36,
+      "word": "send",
+      "speaker": "Your SuperWho",
+      "cue": 3,
+      "illo": "tenants"
+    },
+    {
+      "start": 26.36,
+      "end": 26.62,
+      "word": "hub",
+      "speaker": "Your SuperWho",
+      "cue": 3,
+      "illo": "tenants"
+    },
+    {
+      "start": 26.62,
+      "end": 26.84,
+      "word": "-wide",
+      "speaker": "Your SuperWho",
+      "cue": 3,
+      "illo": "tenants"
+    },
+    {
+      "start": 26.84,
+      "end": 27.3,
+      "word": "announcements,",
+      "speaker": "Your SuperWho",
+      "cue": 3,
+      "illo": "tenants"
+    },
+    {
+      "start": 27.3,
+      "end": 27.84,
+      "word": "and",
+      "speaker": "Your SuperWho",
+      "cue": 3,
+      "illo": "tenants"
+    },
+    {
+      "start": 27.84,
+      "end": 28.06,
+      "word": "see",
+      "speaker": "Your SuperWho",
+      "cue": 3,
+      "illo": "tenants"
+    },
+    {
+      "start": 28.06,
+      "end": 28.28,
+      "word": "which",
+      "speaker": "Your SuperWho",
+      "cue": 3,
+      "illo": "tenants"
+    },
+    {
+      "start": 28.28,
+      "end": 28.8,
+      "word": "organizations",
+      "speaker": "Your SuperWho",
+      "cue": 3,
+      "illo": "tenants"
+    },
+    {
+      "start": 28.8,
+      "end": 29.26,
+      "word": "have",
+      "speaker": "Your SuperWho",
+      "cue": 3,
+      "illo": "tenants"
+    },
+    {
+      "start": 29.26,
+      "end": 29.52,
+      "word": "seen",
+      "speaker": "Your SuperWho",
+      "cue": 3,
+      "illo": "tenants"
+    },
+    {
+      "start": 29.52,
+      "end": 29.9,
+      "word": "them.",
+      "speaker": "Your SuperWho",
+      "cue": 3,
+      "illo": "tenants"
+    },
+    {
+      "start": 31.0,
+      "end": 31.0,
+      "word": "Maintenance",
+      "speaker": "Your SuperWho",
+      "cue": 4,
+      "illo": "maintenance"
+    },
+    {
+      "start": 31.0,
+      "end": 31.4,
+      "word": "requests",
+      "speaker": "Your SuperWho",
+      "cue": 4,
+      "illo": "maintenance"
+    },
+    {
+      "start": 31.4,
+      "end": 31.76,
+      "word": "stay",
+      "speaker": "Your SuperWho",
+      "cue": 4,
+      "illo": "maintenance"
+    },
+    {
+      "start": 31.76,
+      "end": 32.0,
+      "word": "moving",
+      "speaker": "Your SuperWho",
+      "cue": 4,
+      "illo": "maintenance"
+    },
+    {
+      "start": 32.0,
+      "end": 32.34,
+      "word": "from",
+      "speaker": "Your SuperWho",
+      "cue": 4,
+      "illo": "maintenance"
+    },
+    {
+      "start": 32.34,
+      "end": 32.7,
+      "word": "submitted",
+      "speaker": "Your SuperWho",
+      "cue": 4,
+      "illo": "maintenance"
+    },
+    {
+      "start": 32.7,
+      "end": 32.98,
+      "word": "to",
+      "speaker": "Your SuperWho",
+      "cue": 4,
+      "illo": "maintenance"
+    },
+    {
+      "start": 32.98,
+      "end": 33.1,
+      "word": "in",
+      "speaker": "Your SuperWho",
+      "cue": 4,
+      "illo": "maintenance"
+    },
+    {
+      "start": 33.1,
+      "end": 33.44,
+      "word": "progress",
+      "speaker": "Your SuperWho",
+      "cue": 4,
+      "illo": "maintenance"
+    },
+    {
+      "start": 33.44,
+      "end": 33.7,
+      "word": "to",
+      "speaker": "Your SuperWho",
+      "cue": 4,
+      "illo": "maintenance"
+    },
+    {
+      "start": 33.7,
+      "end": 33.92,
+      "word": "done,",
+      "speaker": "Your SuperWho",
+      "cue": 4,
+      "illo": "maintenance"
+    },
+    {
+      "start": 34.28,
+      "end": 34.46,
+      "word": "so",
+      "speaker": "Your SuperWho",
+      "cue": 4,
+      "illo": "maintenance"
+    },
+    {
+      "start": 34.46,
+      "end": 34.68,
+      "word": "no",
+      "speaker": "Your SuperWho",
+      "cue": 4,
+      "illo": "maintenance"
+    },
+    {
+      "start": 34.68,
+      "end": 35.08,
+      "word": "leaky",
+      "speaker": "Your SuperWho",
+      "cue": 4,
+      "illo": "maintenance"
+    },
+    {
+      "start": 35.08,
+      "end": 35.3,
+      "word": "valve,",
+      "speaker": "Your SuperWho",
+      "cue": 4,
+      "illo": "maintenance"
+    },
+    {
+      "start": 35.54,
+      "end": 35.68,
+      "word": "door",
+      "speaker": "Your SuperWho",
+      "cue": 4,
+      "illo": "maintenance"
+    },
+    {
+      "start": 35.68,
+      "end": 35.98,
+      "word": "lock,",
+      "speaker": "Your SuperWho",
+      "cue": 4,
+      "illo": "maintenance"
+    },
+    {
+      "start": 36.3,
+      "end": 36.46,
+      "word": "or",
+      "speaker": "Your SuperWho",
+      "cue": 4,
+      "illo": "maintenance"
+    },
+    {
+      "start": 36.46,
+      "end": 37.36,
+      "word": "HVAC",
+      "speaker": "Your SuperWho",
+      "cue": 4,
+      "illo": "maintenance"
+    },
+    {
+      "start": 37.36,
+      "end": 37.74,
+      "word": "ticket",
+      "speaker": "Your SuperWho",
+      "cue": 4,
+      "illo": "maintenance"
+    },
+    {
+      "start": 37.74,
+      "end": 38.06,
+      "word": "gets",
+      "speaker": "Your SuperWho",
+      "cue": 4,
+      "illo": "maintenance"
+    },
+    {
+      "start": 38.06,
+      "end": 38.34,
+      "word": "buried",
+      "speaker": "Your SuperWho",
+      "cue": 4,
+      "illo": "maintenance"
+    },
+    {
+      "start": 38.34,
+      "end": 38.58,
+      "word": "in",
+      "speaker": "Your SuperWho",
+      "cue": 4,
+      "illo": "maintenance"
+    },
+    {
+      "start": 38.58,
+      "end": 38.7,
+      "word": "your",
+      "speaker": "Your SuperWho",
+      "cue": 4,
+      "illo": "maintenance"
+    },
+    {
+      "start": 38.7,
+      "end": 39.1,
+      "word": "inbox.",
+      "speaker": "Your SuperWho",
+      "cue": 4,
+      "illo": "maintenance"
+    },
+    {
+      "start": 40.08,
+      "end": 40.22,
+      "word": "Your",
+      "speaker": "Your SuperWho",
+      "cue": 5,
+      "illo": "events"
+    },
+    {
+      "start": 40.22,
+      "end": 40.5,
+      "word": "shared",
+      "speaker": "Your SuperWho",
+      "cue": 5,
+      "illo": "events"
+    },
+    {
+      "start": 40.5,
+      "end": 40.94,
+      "word": "calendar",
+      "speaker": "Your SuperWho",
+      "cue": 5,
+      "illo": "events"
+    },
+    {
+      "start": 40.94,
+      "end": 41.22,
+      "word": "and",
+      "speaker": "Your SuperWho",
+      "cue": 5,
+      "illo": "events"
+    },
+    {
+      "start": 41.22,
+      "end": 41.42,
+      "word": "room",
+      "speaker": "Your SuperWho",
+      "cue": 5,
+      "illo": "events"
+    },
+    {
+      "start": 41.42,
+      "end": 41.7,
+      "word": "booking",
+      "speaker": "Your SuperWho",
+      "cue": 5,
+      "illo": "events"
+    },
+    {
+      "start": 41.7,
+      "end": 41.96,
+      "word": "view",
+      "speaker": "Your SuperWho",
+      "cue": 5,
+      "illo": "events"
+    },
+    {
+      "start": 41.96,
+      "end": 42.26,
+      "word": "keeps",
+      "speaker": "Your SuperWho",
+      "cue": 5,
+      "illo": "events"
+    },
+    {
+      "start": 42.26,
+      "end": 42.7,
+      "word": "gyms,",
+      "speaker": "Your SuperWho",
+      "cue": 5,
+      "illo": "events"
+    },
+    {
+      "start": 42.9,
+      "end": 43.22,
+      "word": "classrooms,",
+      "speaker": "Your SuperWho",
+      "cue": 5,
+      "illo": "events"
+    },
+    {
+      "start": 43.6,
+      "end": 43.68,
+      "word": "and",
+      "speaker": "Your SuperWho",
+      "cue": 5,
+      "illo": "events"
+    },
+    {
+      "start": 43.68,
+      "end": 44.08,
+      "word": "community",
+      "speaker": "Your SuperWho",
+      "cue": 5,
+      "illo": "events"
+    },
+    {
+      "start": 44.08,
+      "end": 44.62,
+      "word": "spaces",
+      "speaker": "Your SuperWho",
+      "cue": 5,
+      "illo": "events"
+    },
+    {
+      "start": 44.62,
+      "end": 44.94,
+      "word": "clear",
+      "speaker": "Your SuperWho",
+      "cue": 5,
+      "illo": "events"
+    },
+    {
+      "start": 44.94,
+      "end": 45.14,
+      "word": "of",
+      "speaker": "Your SuperWho",
+      "cue": 5,
+      "illo": "events"
+    },
+    {
+      "start": 45.14,
+      "end": 45.4,
+      "word": "double",
+      "speaker": "Your SuperWho",
+      "cue": 5,
+      "illo": "events"
+    },
+    {
+      "start": 45.4,
+      "end": 45.84,
+      "word": "bookings",
+      "speaker": "Your SuperWho",
+      "cue": 5,
+      "illo": "events"
+    },
+    {
+      "start": 45.84,
+      "end": 46.12,
+      "word": "across",
+      "speaker": "Your SuperWho",
+      "cue": 5,
+      "illo": "events"
+    },
+    {
+      "start": 46.12,
+      "end": 46.46,
+      "word": "both",
+      "speaker": "Your SuperWho",
+      "cue": 5,
+      "illo": "events"
+    },
+    {
+      "start": 46.46,
+      "end": 46.9,
+      "word": "buildings.",
+      "speaker": "Your SuperWho",
+      "cue": 5,
+      "illo": "events"
+    },
+    {
+      "start": 47.82,
+      "end": 47.94,
+      "word": "When",
+      "speaker": "Your SuperWho",
+      "cue": 6,
+      "illo": "form"
+    },
+    {
+      "start": 47.94,
+      "end": 48.08,
+      "word": "a",
+      "speaker": "Your SuperWho",
+      "cue": 6,
+      "illo": "form"
+    },
+    {
+      "start": 48.08,
+      "end": 48.24,
+      "word": "tenant",
+      "speaker": "Your SuperWho",
+      "cue": 6,
+      "illo": "form"
+    },
+    {
+      "start": 48.24,
+      "end": 48.54,
+      "word": "needs",
+      "speaker": "Your SuperWho",
+      "cue": 6,
+      "illo": "form"
+    },
+    {
+      "start": 48.54,
+      "end": 48.96,
+      "word": "something,",
+      "speaker": "Your SuperWho",
+      "cue": 6,
+      "illo": "form"
+    },
+    {
+      "start": 49.14,
+      "end": 49.24,
+      "word": "the",
+      "speaker": "Your SuperWho",
+      "cue": 6,
+      "illo": "form"
+    },
+    {
+      "start": 49.24,
+      "end": 49.58,
+      "word": "request",
+      "speaker": "Your SuperWho",
+      "cue": 6,
+      "illo": "form"
+    },
+    {
+      "start": 49.58,
+      "end": 49.88,
+      "word": "form",
+      "speaker": "Your SuperWho",
+      "cue": 6,
+      "illo": "form"
+    },
+    {
+      "start": 49.88,
+      "end": 50.06,
+      "word": "on",
+      "speaker": "Your SuperWho",
+      "cue": 6,
+      "illo": "form"
+    },
+    {
+      "start": 50.06,
+      "end": 50.26,
+      "word": "this",
+      "speaker": "Your SuperWho",
+      "cue": 6,
+      "illo": "form"
+    },
+    {
+      "start": 50.26,
+      "end": 50.52,
+      "word": "page",
+      "speaker": "Your SuperWho",
+      "cue": 6,
+      "illo": "form"
+    },
+    {
+      "start": 50.52,
+      "end": 50.8,
+      "word": "routes",
+      "speaker": "Your SuperWho",
+      "cue": 6,
+      "illo": "form"
+    },
+    {
+      "start": 50.8,
+      "end": 50.98,
+      "word": "it",
+      "speaker": "Your SuperWho",
+      "cue": 6,
+      "illo": "form"
+    },
+    {
+      "start": 50.98,
+      "end": 51.22,
+      "word": "straight",
+      "speaker": "Your SuperWho",
+      "cue": 6,
+      "illo": "form"
+    },
+    {
+      "start": 51.22,
+      "end": 51.42,
+      "word": "in",
+      "speaker": "Your SuperWho",
+      "cue": 6,
+      "illo": "form"
+    },
+    {
+      "start": 51.42,
+      "end": 51.58,
+      "word": "and",
+      "speaker": "Your SuperWho",
+      "cue": 6,
+      "illo": "form"
+    },
+    {
+      "start": 51.58,
+      "end": 51.88,
+      "word": "alerts",
+      "speaker": "Your SuperWho",
+      "cue": 6,
+      "illo": "form"
+    },
+    {
+      "start": 51.88,
+      "end": 52.14,
+      "word": "the",
+      "speaker": "Your SuperWho",
+      "cue": 6,
+      "illo": "form"
+    },
+    {
+      "start": 52.14,
+      "end": 52.36,
+      "word": "team",
+      "speaker": "Your SuperWho",
+      "cue": 6,
+      "illo": "form"
+    },
+    {
+      "start": 52.36,
+      "end": 52.58,
+      "word": "right",
+      "speaker": "Your SuperWho",
+      "cue": 6,
+      "illo": "form"
+    },
+    {
+      "start": 52.58,
+      "end": 52.88,
+      "word": "away.",
+      "speaker": "Your SuperWho",
+      "cue": 6,
+      "illo": "form"
+    },
+    {
+      "start": 53.46,
+      "end": 53.76,
+      "word": "Everything",
+      "speaker": "Your SuperWho",
+      "cue": 6,
+      "illo": "form"
+    },
+    {
+      "start": 53.76,
+      "end": 54.04,
+      "word": "here",
+      "speaker": "Your SuperWho",
+      "cue": 6,
+      "illo": "form"
+    },
+    {
+      "start": 54.04,
+      "end": 54.4,
+      "word": "uses",
+      "speaker": "Your SuperWho",
+      "cue": 6,
+      "illo": "form"
+    },
+    {
+      "start": 54.4,
+      "end": 54.74,
+      "word": "labeled",
+      "speaker": "Your SuperWho",
+      "cue": 6,
+      "illo": "form"
+    },
+    {
+      "start": 54.74,
+      "end": 55.1,
+      "word": "sample",
+      "speaker": "Your SuperWho",
+      "cue": 6,
+      "illo": "form"
+    },
+    {
+      "start": 55.1,
+      "end": 55.42,
+      "word": "data",
+      "speaker": "Your SuperWho",
+      "cue": 6,
+      "illo": "form"
+    },
+    {
+      "start": 55.42,
+      "end": 55.7,
+      "word": "so",
+      "speaker": "Your SuperWho",
+      "cue": 6,
+      "illo": "form"
+    },
+    {
+      "start": 55.7,
+      "end": 55.86,
+      "word": "you",
+      "speaker": "Your SuperWho",
+      "cue": 6,
+      "illo": "form"
+    },
+    {
+      "start": 55.86,
+      "end": 56.0,
+      "word": "can",
+      "speaker": "Your SuperWho",
+      "cue": 6,
+      "illo": "form"
+    },
+    {
+      "start": 56.0,
+      "end": 56.22,
+      "word": "test",
+      "speaker": "Your SuperWho",
+      "cue": 6,
+      "illo": "form"
+    },
+    {
+      "start": 56.22,
+      "end": 56.4,
+      "word": "it",
+      "speaker": "Your SuperWho",
+      "cue": 6,
+      "illo": "form"
+    },
+    {
+      "start": 56.4,
+      "end": 56.74,
+      "word": "safely",
+      "speaker": "Your SuperWho",
+      "cue": 6,
+      "illo": "form"
+    },
+    {
+      "start": 56.74,
+      "end": 57.18,
+      "word": "before",
+      "speaker": "Your SuperWho",
+      "cue": 6,
+      "illo": "form"
+    },
+    {
+      "start": 57.18,
+      "end": 57.38,
+      "word": "your",
+      "speaker": "Your SuperWho",
+      "cue": 6,
+      "illo": "form"
+    },
+    {
+      "start": 57.38,
+      "end": 57.66,
+      "word": "meeting.",
+      "speaker": "Your SuperWho",
+      "cue": 6,
+      "illo": "form"
+    }
+  ],
+  "byCue": {
+    "1": [
+      {
+        "start": 0.0,
+        "end": 0.32,
+        "word": "Hi"
+      },
+      {
+        "start": 0.32,
+        "end": 0.64,
+        "word": "Rosa,"
+      },
+      {
+        "start": 1.22,
+        "end": 1.46,
+        "word": "I'm"
+      },
+      {
+        "start": 1.46,
+        "end": 1.6,
+        "word": "your"
+      },
+      {
+        "start": 1.6,
+        "end": 1.86,
+        "word": "super"
+      },
+      {
+        "start": 1.86,
+        "end": 2.14,
+        "word": "who,"
+      },
+      {
+        "start": 2.36,
+        "end": 2.46,
+        "word": "built"
+      },
+      {
+        "start": 2.46,
+        "end": 2.68,
+        "word": "for"
+      },
+      {
+        "start": 2.68,
+        "end": 2.88,
+        "word": "life"
+      },
+      {
+        "start": 2.88,
+        "end": 3.5,
+        "word": "remodeled."
+      },
+      {
+        "start": 4.06,
+        "end": 4.18,
+        "word": "Jim,"
+      },
+      {
+        "start": 4.36,
+        "end": 4.48,
+        "word": "your"
+      },
+      {
+        "start": 4.48,
+        "end": 4.74,
+        "word": "dad,"
+      },
+      {
+        "start": 4.92,
+        "end": 5.1,
+        "word": "and"
+      },
+      {
+        "start": 5.1,
+        "end": 5.3,
+        "word": "his"
+      },
+      {
+        "start": 5.3,
+        "end": 5.54,
+        "word": "team"
+      },
+      {
+        "start": 5.54,
+        "end": 5.9,
+        "word": "developed"
+      },
+      {
+        "start": 5.9,
+        "end": 6.18,
+        "word": "me"
+      },
+      {
+        "start": 6.18,
+        "end": 6.34,
+        "word": "to"
+      },
+      {
+        "start": 6.34,
+        "end": 6.52,
+        "word": "bring"
+      },
+      {
+        "start": 6.52,
+        "end": 6.8,
+        "word": "both"
+      },
+      {
+        "start": 6.8,
+        "end": 7.32,
+        "word": "opportunity"
+      },
+      {
+        "start": 7.32,
+        "end": 7.7,
+        "word": "hubs"
+      },
+      {
+        "start": 7.7,
+        "end": 7.98,
+        "word": "into"
+      },
+      {
+        "start": 7.98,
+        "end": 8.24,
+        "word": "one"
+      },
+      {
+        "start": 8.24,
+        "end": 8.6,
+        "word": "place."
+      }
+    ],
+    "2": [
+      {
+        "start": 9.4,
+        "end": 9.74,
+        "word": "Instead"
+      },
+      {
+        "start": 9.74,
+        "end": 9.92,
+        "word": "of"
+      },
+      {
+        "start": 9.92,
+        "end": 10.26,
+        "word": "juggling"
+      },
+      {
+        "start": 10.26,
+        "end": 11.0,
+        "word": "spreadsheets,"
+      },
+      {
+        "start": 11.28,
+        "end": 11.46,
+        "word": "email"
+      },
+      {
+        "start": 11.46,
+        "end": 11.82,
+        "word": "threads,"
+      },
+      {
+        "start": 12.02,
+        "end": 12.12,
+        "word": "and"
+      },
+      {
+        "start": 12.12,
+        "end": 12.36,
+        "word": "$10"
+      },
+      {
+        "start": 12.36,
+        "end": 12.76,
+        "word": ",000"
+      },
+      {
+        "start": 12.76,
+        "end": 13.36,
+        "word": "property"
+      },
+      {
+        "start": 13.36,
+        "end": 13.96,
+        "word": "software,"
+      },
+      {
+        "start": 14.3,
+        "end": 14.44,
+        "word": "your"
+      },
+      {
+        "start": 14.44,
+        "end": 14.78,
+        "word": "dashboard"
+      },
+      {
+        "start": 14.78,
+        "end": 15.24,
+        "word": "tracks"
+      },
+      {
+        "start": 15.24,
+        "end": 15.62,
+        "word": "active"
+      },
+      {
+        "start": 15.62,
+        "end": 15.88,
+        "word": "non"
+      },
+      {
+        "start": 15.88,
+        "end": 16.3,
+        "word": "-profits,"
+      },
+      {
+        "start": 16.74,
+        "end": 17.02,
+        "word": "open"
+      },
+      {
+        "start": 17.02,
+        "end": 17.38,
+        "word": "maintenance"
+      },
+      {
+        "start": 17.38,
+        "end": 17.78,
+        "word": "work,"
+      },
+      {
+        "start": 18.06,
+        "end": 18.22,
+        "word": "and"
+      },
+      {
+        "start": 18.22,
+        "end": 18.44,
+        "word": "this"
+      },
+      {
+        "start": 18.44,
+        "end": 18.74,
+        "word": "week's"
+      },
+      {
+        "start": 18.74,
+        "end": 18.9,
+        "word": "room"
+      },
+      {
+        "start": 18.9,
+        "end": 19.26,
+        "word": "schedule"
+      },
+      {
+        "start": 19.26,
+        "end": 19.48,
+        "word": "at"
+      },
+      {
+        "start": 19.48,
+        "end": 19.6,
+        "word": "a"
+      },
+      {
+        "start": 19.6,
+        "end": 19.94,
+        "word": "glance."
+      }
+    ],
+    "3": [
+      {
+        "start": 20.74,
+        "end": 21.06,
+        "word": "Switch"
+      },
+      {
+        "start": 21.06,
+        "end": 21.52,
+        "word": "between"
+      },
+      {
+        "start": 21.52,
+        "end": 21.72,
+        "word": "Hub"
+      },
+      {
+        "start": 21.72,
+        "end": 21.96,
+        "word": "1"
+      },
+      {
+        "start": 21.96,
+        "end": 22.16,
+        "word": "and"
+      },
+      {
+        "start": 22.16,
+        "end": 22.34,
+        "word": "Hub"
+      },
+      {
+        "start": 22.34,
+        "end": 22.68,
+        "word": "2,"
+      },
+      {
+        "start": 22.88,
+        "end": 23.06,
+        "word": "or"
+      },
+      {
+        "start": 23.06,
+        "end": 23.24,
+        "word": "view"
+      },
+      {
+        "start": 23.24,
+        "end": 23.46,
+        "word": "both"
+      },
+      {
+        "start": 23.46,
+        "end": 23.84,
+        "word": "together."
+      },
+      {
+        "start": 24.36,
+        "end": 24.54,
+        "word": "You"
+      },
+      {
+        "start": 24.54,
+        "end": 24.7,
+        "word": "can"
+      },
+      {
+        "start": 24.7,
+        "end": 24.92,
+        "word": "search"
+      },
+      {
+        "start": 24.92,
+        "end": 25.16,
+        "word": "the"
+      },
+      {
+        "start": 25.16,
+        "end": 25.36,
+        "word": "tenant"
+      },
+      {
+        "start": 25.36,
+        "end": 25.92,
+        "word": "directory,"
+      },
+      {
+        "start": 26.12,
+        "end": 26.36,
+        "word": "send"
+      },
+      {
+        "start": 26.36,
+        "end": 26.62,
+        "word": "hub"
+      },
+      {
+        "start": 26.62,
+        "end": 26.84,
+        "word": "-wide"
+      },
+      {
+        "start": 26.84,
+        "end": 27.3,
+        "word": "announcements,"
+      },
+      {
+        "start": 27.3,
+        "end": 27.84,
+        "word": "and"
+      },
+      {
+        "start": 27.84,
+        "end": 28.06,
+        "word": "see"
+      },
+      {
+        "start": 28.06,
+        "end": 28.28,
+        "word": "which"
+      },
+      {
+        "start": 28.28,
+        "end": 28.8,
+        "word": "organizations"
+      },
+      {
+        "start": 28.8,
+        "end": 29.26,
+        "word": "have"
+      },
+      {
+        "start": 29.26,
+        "end": 29.52,
+        "word": "seen"
+      },
+      {
+        "start": 29.52,
+        "end": 29.9,
+        "word": "them."
+      }
+    ],
+    "4": [
+      {
+        "start": 31.0,
+        "end": 31.0,
+        "word": "Maintenance"
+      },
+      {
+        "start": 31.0,
+        "end": 31.4,
+        "word": "requests"
+      },
+      {
+        "start": 31.4,
+        "end": 31.76,
+        "word": "stay"
+      },
+      {
+        "start": 31.76,
+        "end": 32.0,
+        "word": "moving"
+      },
+      {
+        "start": 32.0,
+        "end": 32.34,
+        "word": "from"
+      },
+      {
+        "start": 32.34,
+        "end": 32.7,
+        "word": "submitted"
+      },
+      {
+        "start": 32.7,
+        "end": 32.98,
+        "word": "to"
+      },
+      {
+        "start": 32.98,
+        "end": 33.1,
+        "word": "in"
+      },
+      {
+        "start": 33.1,
+        "end": 33.44,
+        "word": "progress"
+      },
+      {
+        "start": 33.44,
+        "end": 33.7,
+        "word": "to"
+      },
+      {
+        "start": 33.7,
+        "end": 33.92,
+        "word": "done,"
+      },
+      {
+        "start": 34.28,
+        "end": 34.46,
+        "word": "so"
+      },
+      {
+        "start": 34.46,
+        "end": 34.68,
+        "word": "no"
+      },
+      {
+        "start": 34.68,
+        "end": 35.08,
+        "word": "leaky"
+      },
+      {
+        "start": 35.08,
+        "end": 35.3,
+        "word": "valve,"
+      },
+      {
+        "start": 35.54,
+        "end": 35.68,
+        "word": "door"
+      },
+      {
+        "start": 35.68,
+        "end": 35.98,
+        "word": "lock,"
+      },
+      {
+        "start": 36.3,
+        "end": 36.46,
+        "word": "or"
+      },
+      {
+        "start": 36.46,
+        "end": 37.36,
+        "word": "HVAC"
+      },
+      {
+        "start": 37.36,
+        "end": 37.74,
+        "word": "ticket"
+      },
+      {
+        "start": 37.74,
+        "end": 38.06,
+        "word": "gets"
+      },
+      {
+        "start": 38.06,
+        "end": 38.34,
+        "word": "buried"
+      },
+      {
+        "start": 38.34,
+        "end": 38.58,
+        "word": "in"
+      },
+      {
+        "start": 38.58,
+        "end": 38.7,
+        "word": "your"
+      },
+      {
+        "start": 38.7,
+        "end": 39.1,
+        "word": "inbox."
+      }
+    ],
+    "5": [
+      {
+        "start": 40.08,
+        "end": 40.22,
+        "word": "Your"
+      },
+      {
+        "start": 40.22,
+        "end": 40.5,
+        "word": "shared"
+      },
+      {
+        "start": 40.5,
+        "end": 40.94,
+        "word": "calendar"
+      },
+      {
+        "start": 40.94,
+        "end": 41.22,
+        "word": "and"
+      },
+      {
+        "start": 41.22,
+        "end": 41.42,
+        "word": "room"
+      },
+      {
+        "start": 41.42,
+        "end": 41.7,
+        "word": "booking"
+      },
+      {
+        "start": 41.7,
+        "end": 41.96,
+        "word": "view"
+      },
+      {
+        "start": 41.96,
+        "end": 42.26,
+        "word": "keeps"
+      },
+      {
+        "start": 42.26,
+        "end": 42.7,
+        "word": "gyms,"
+      },
+      {
+        "start": 42.9,
+        "end": 43.22,
+        "word": "classrooms,"
+      },
+      {
+        "start": 43.6,
+        "end": 43.68,
+        "word": "and"
+      },
+      {
+        "start": 43.68,
+        "end": 44.08,
+        "word": "community"
+      },
+      {
+        "start": 44.08,
+        "end": 44.62,
+        "word": "spaces"
+      },
+      {
+        "start": 44.62,
+        "end": 44.94,
+        "word": "clear"
+      },
+      {
+        "start": 44.94,
+        "end": 45.14,
+        "word": "of"
+      },
+      {
+        "start": 45.14,
+        "end": 45.4,
+        "word": "double"
+      },
+      {
+        "start": 45.4,
+        "end": 45.84,
+        "word": "bookings"
+      },
+      {
+        "start": 45.84,
+        "end": 46.12,
+        "word": "across"
+      },
+      {
+        "start": 46.12,
+        "end": 46.46,
+        "word": "both"
+      },
+      {
+        "start": 46.46,
+        "end": 46.9,
+        "word": "buildings."
+      }
+    ],
+    "6": [
+      {
+        "start": 47.82,
+        "end": 47.94,
+        "word": "When"
+      },
+      {
+        "start": 47.94,
+        "end": 48.08,
+        "word": "a"
+      },
+      {
+        "start": 48.08,
+        "end": 48.24,
+        "word": "tenant"
+      },
+      {
+        "start": 48.24,
+        "end": 48.54,
+        "word": "needs"
+      },
+      {
+        "start": 48.54,
+        "end": 48.96,
+        "word": "something,"
+      },
+      {
+        "start": 49.14,
+        "end": 49.24,
+        "word": "the"
+      },
+      {
+        "start": 49.24,
+        "end": 49.58,
+        "word": "request"
+      },
+      {
+        "start": 49.58,
+        "end": 49.88,
+        "word": "form"
+      },
+      {
+        "start": 49.88,
+        "end": 50.06,
+        "word": "on"
+      },
+      {
+        "start": 50.06,
+        "end": 50.26,
+        "word": "this"
+      },
+      {
+        "start": 50.26,
+        "end": 50.52,
+        "word": "page"
+      },
+      {
+        "start": 50.52,
+        "end": 50.8,
+        "word": "routes"
+      },
+      {
+        "start": 50.8,
+        "end": 50.98,
+        "word": "it"
+      },
+      {
+        "start": 50.98,
+        "end": 51.22,
+        "word": "straight"
+      },
+      {
+        "start": 51.22,
+        "end": 51.42,
+        "word": "in"
+      },
+      {
+        "start": 51.42,
+        "end": 51.58,
+        "word": "and"
+      },
+      {
+        "start": 51.58,
+        "end": 51.88,
+        "word": "alerts"
+      },
+      {
+        "start": 51.88,
+        "end": 52.14,
+        "word": "the"
+      },
+      {
+        "start": 52.14,
+        "end": 52.36,
+        "word": "team"
+      },
+      {
+        "start": 52.36,
+        "end": 52.58,
+        "word": "right"
+      },
+      {
+        "start": 52.58,
+        "end": 52.88,
+        "word": "away."
+      },
+      {
+        "start": 53.46,
+        "end": 53.76,
+        "word": "Everything"
+      },
+      {
+        "start": 53.76,
+        "end": 54.04,
+        "word": "here"
+      },
+      {
+        "start": 54.04,
+        "end": 54.4,
+        "word": "uses"
+      },
+      {
+        "start": 54.4,
+        "end": 54.74,
+        "word": "labeled"
+      },
+      {
+        "start": 54.74,
+        "end": 55.1,
+        "word": "sample"
+      },
+      {
+        "start": 55.1,
+        "end": 55.42,
+        "word": "data"
+      },
+      {
+        "start": 55.42,
+        "end": 55.7,
+        "word": "so"
+      },
+      {
+        "start": 55.7,
+        "end": 55.86,
+        "word": "you"
+      },
+      {
+        "start": 55.86,
+        "end": 56.0,
+        "word": "can"
+      },
+      {
+        "start": 56.0,
+        "end": 56.22,
+        "word": "test"
+      },
+      {
+        "start": 56.22,
+        "end": 56.4,
+        "word": "it"
+      },
+      {
+        "start": 56.4,
+        "end": 56.74,
+        "word": "safely"
+      },
+      {
+        "start": 56.74,
+        "end": 57.18,
+        "word": "before"
+      },
+      {
+        "start": 57.18,
+        "end": 57.38,
+        "word": "your"
+      },
+      {
+        "start": 57.38,
+        "end": 57.66,
+        "word": "meeting."
+      }
+    ]
+  },
+  "transcript": "Hi Rosa, I'm your super who, built for life remodeled. Jim, your dad, and his team developed me to bring both opportunity hubs into one place. Instead of juggling spreadsheets, email threads, and $10 ,000 property software, your dashboard tracks active non -profits, open maintenance work, and this week's room schedule at a glance. Switch between Hub 1 and Hub 2, or view both together. You can search the tenant directory, send hub -wide announcements, and see which organizations have seen them. Maintenance requests stay moving from submitted to in progress to done, so no leaky valve, door lock, or HVAC ticket gets buried in your inbox. Your shared calendar and room booking view keeps gyms, classrooms, and community spaces clear of double bookings across both buildings. When a tenant needs something, the request form on this page routes it straight in and alerts the team right away. Everything here uses labeled sample data so you can test it safely before your meeting."
+}

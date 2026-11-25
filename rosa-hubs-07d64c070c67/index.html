@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#08111E">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="description" content="SuperWho Opportunity Hubs demo for Rosa — two hubs in one place: tenant directory, announcements, maintenance tracking, room booking, and tenant requests.">
+  <title>Opportunity Hubs · Your SuperWho</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #08111E;
+      --bg-2: #0D192B;
+      --card: #101F35;
+      --card-2: #152844;
+      --ink: #F4F7FB;
+      --muted: #9FB2C9;
+      --line: rgba(255, 255, 255, 0.10);
+      --line-strong: rgba(255, 255, 255, 0.18);
+      --emerald: #34D399;
+      --emerald-dim: rgba(52, 211, 153, 0.14);
+      --sky: #38BDF8;
+      --sky-dim: rgba(56, 189, 248, 0.14);
+      --amber: #FBBF24;
+      --amber-dim: rgba(251, 191, 36, 0.14);
+      --rose: #FB7185;
+      --rose-dim: rgba(251, 113, 133, 0.14);
+      --sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 15px;
+      line-height: 1.5;
+      -webkit-text-size-adjust: 100%;
+      overflow-x: hidden;
+    }
+    body {
+      min-height: 100vh;
+      background:
+        radial-gradient(900px 420px at 85% -6%, rgba(56, 189, 248, 0.14), transparent 58%),
+        radial-gradient(760px 380px at -10% 12%, rgba(52, 211, 153, 0.12), transparent 55%),
+        var(--bg);
+      padding-bottom: calc(88px + env(safe-area-inset-bottom, 0px));
+    }
+    button, input, select, textarea { font: inherit; color: inherit; }
+    h1, h2, h3 { margin: 0; line-height: 1.2; letter-spacing: -0.02em; }
+    p { margin: 0; }
+
+    .sample-bar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(11, 23, 41, 0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      text-align: center;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 8px 14px;
+    }
+    .sample-bar b { color: var(--amber); font-weight: 700; }
+
+    .wrap {
+      width: min(1040px, 100%);
+      margin: 0 auto;
+      padding: 20px 16px 24px;
+    }
+    @media (min-width: 760px) {
+      .wrap { padding: 28px 24px 32px; }
+    }
+
+    /* Header */
+    .hero {
+      display: grid;
+      gap: 18px;
+      margin-bottom: 20px;
+    }
+    @media (min-width: 860px) {
+      .hero {
+        grid-template-columns: 1.25fr 0.95fr;
+        align-items: start;
+        gap: 24px;
+      }
+    }
+    .brand-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .brand-orb {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: radial-gradient(circle at 30% 25%, #6EE7B7, #10B981 55%, #065F46);
+      color: #041510;
+      font-weight: 800;
+      font-size: 20px;
+      box-shadow: 0 0 0 2px rgba(52, 211, 153, 0.35), 0 0 24px rgba(52, 211, 153, 0.25);
+      flex: 0 0 auto;
+    }
+    .kicker {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      color: var(--sky);
+    }
+    .brand-sub {
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    .hero h1 {
+      font-size: clamp(26px, 4vw, 36px);
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    .hero-copy {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.6;
+      max-width: 60ch;
+    }
+    .hero-copy strong { color: var(--ink); }
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--line);
+      color: var(--ink);
+      white-space: nowrap;
+      flex: 0 0 auto;
+    }
+    .pill.emerald { background: var(--emerald-dim); border-color: rgba(52, 211, 153, 0.35); color: #86EFAC; }
+    .pill.sky { background: var(--sky-dim); border-color: rgba(56, 189, 248, 0.35); color: #7DD3FC; }
+    .pill.amber { background: var(--amber-dim); border-color: rgba(251, 191, 36, 0.35); color: #FDE68A; }
+    .pill.rose { background: var(--rose-dim); border-color: rgba(251, 113, 133, 0.35); color: #FDA4AF; }
+
+    /* Meet-the-team voice player card */
+    .card {
+      background: linear-gradient(180deg, var(--card-2), var(--card));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+    }
+    .meet-card {
+      position: relative;
+      overflow: hidden;
+    }
+    .meet-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .meet-title {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .meet-quote {
+      font-size: 13.5px;
+      color: var(--muted);
+      line-height: 1.5;
+      margin-bottom: 14px;
+    }
+    .sw-video-stage {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--line-strong);
+      background: #07101C;
+      min-height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 16px 14px;
+    }
+    .sw-video-stage video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.42;
+      pointer-events: none;
+    }
+    .sw-video-stage video::-webkit-media-controls { display: none !important; }
+    .sw-now-stage {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 6px;
+    }
+    .sw-now-av-wrap {
+      position: relative;
+      width: 78px;
+      height: 78px;
+      display: grid;
+      place-items: center;
+    }
+    .sw-now-glow {
+      position: absolute;
+      inset: -14px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(52, 211, 153, 0.45), transparent 70%);
+      opacity: var(--sw-glow-op, 0.45);
+      transform: scale(var(--sw-glow-scale, 1));
+      transition: transform 0.08s linear;
+    }
+    .sw-now-ripple {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      border: 1px solid rgba(52, 211, 153, 0.5);
+      opacity: 0;
+      pointer-events: none;
+    }
+    .sw-now-ripple.is-on {
+      animation: sw-ripple 1.5s ease-out forwards;
+    }
+    @keyframes sw-ripple {
+      0% { transform: scale(1); opacity: 0.65; }
+      100% { transform: scale(1.9); opacity: 0; }
+    }
+    .sw-now-av {
+      position: relative;
+      z-index: 2;
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: radial-gradient(circle at 30% 25%, #6EE7B7, #10B981 58%, #065F46);
+      color: #03150F;
+      font-weight: 800;
+      font-size: 28px;
+      box-shadow: 0 0 0 2px rgba(52, 211, 153, 0.45), 0 0 26px rgba(52, 211, 153, 0.35);
+      transform: scale(var(--sw-breathe, 1));
+    }
+    .sw-caption-box {
+      position: relative;
+      z-index: 2;
+      margin-top: 12px;
+      min-height: 72px;
+      text-align: center;
+      background: rgba(8, 17, 30, 0.72);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 10px 12px;
+    }
+    .sw-caption-who {
+      font-family: var(--mono);
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--emerald);
+      margin-bottom: 4px;
+    }
+    .sw-caption-text {
+      font-size: 13.5px;
+      line-height: 1.45;
+      color: var(--ink);
+    }
+    .sw-caption-text .w { color: rgba(244, 247, 251, 0.52); }
+    .sw-caption-text .w.is-past { color: var(--ink); }
+    .sw-caption-text .w.is-on { color: #FFFFFF; text-shadow: 0 0 10px rgba(52, 211, 153, 0.75); }
+    .sw-play-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 4;
+      border: 0;
+      background: linear-gradient(180deg, rgba(8, 17, 30, 0.08) 28%, rgba(8, 17, 30, 0.96) 62%);
+      color: var(--ink);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 6px;
+      padding: 16px;
+      cursor: pointer;
+    }
+    .sw-play-overlay[hidden] { display: none; }
+    .sw-play-circle {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: linear-gradient(180deg, #6EE7B7, #34D399);
+      color: #03150F;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+    }
+    .sw-play-circle svg { width: 22px; height: 22px; margin-left: 2px; }
+    .sw-play-label { font-weight: 700; font-size: 14px; }
+    .sw-play-sub { font-size: 12px; color: var(--muted); }
+
+    /* Hub switcher */
+    .hub-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: rgba(16, 31, 53, 0.85);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 10px 14px;
+      margin-bottom: 18px;
+    }
+    .hub-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .tab-btn {
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--muted);
+      padding: 7px 13px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .tab-btn:hover { color: var(--ink); border-color: var(--line-strong); }
+    .tab-btn.is-active {
+      background: var(--emerald);
+      color: #041711;
+      border-color: var(--emerald);
+    }
+    .hub-note {
+      font-size: 12.5px;
+      color: var(--muted);
+    }
+
+    /* Quick stats */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    @media (min-width: 720px) {
+      .stats-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+    .stat-card {
+      background: linear-gradient(180deg, var(--card-2), var(--card));
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px 16px;
+    }
+    .stat-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    .stat-val {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--ink);
+      line-height: 1.1;
+    }
+    .stat-sub {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* Main dashboard grid */
+    .dash-grid {
+      display: grid;
+      gap: 18px;
+    }
+    @media (min-width: 860px) {
+      .dash-grid {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+      }
+      .span-2 { grid-column: 1 / -1; }
+    }
+
+    .sec-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .sec-head h2 {
+      font-size: 19px;
+      font-weight: 700;
+    }
+    .sec-sub {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    /* Inputs & buttons */
+    .ctrl-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .input, .select, .textarea {
+      width: 100%;
+      background: rgba(8, 17, 30, 0.75);
+      border: 1px solid var(--line-strong);
+      border-radius: 10px;
+      padding: 9px 12px;
+      font-size: 14px;
+      color: var(--ink);
+      outline: none;
+    }
+    .input:focus, .select:focus, .textarea:focus {
+      border-color: var(--sky);
+      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.16);
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      border: 0;
+      border-radius: 10px;
+      padding: 9px 14px;
+      font-size: 13.5px;
+      font-weight: 700;
+      cursor: pointer;
+      background: var(--emerald);
+      color: #041711;
+      transition: transform 0.1s ease, opacity 0.15s ease;
+    }
+    .btn:hover { opacity: 0.94; }
+    .btn:active { transform: translateY(1px); }
+    .btn.secondary {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--ink);
+      border: 1px solid var(--line);
+    }
+    .btn.sm {
+      padding: 5px 10px;
+      font-size: 12px;
+      border-radius: 8px;
+    }
+    .btn:disabled { opacity: 0.55; cursor: not-allowed; }
+
+    /* Lists & rows */
+    .list {
+      display: grid;
+      gap: 10px;
+    }
+    .item {
+      background: rgba(8, 17, 30, 0.58);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px 13px;
+    }
+    .item-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .item-title {
+      font-weight: 700;
+      font-size: 14.5px;
+      color: var(--ink);
+    }
+    .item-meta {
+      font-size: 12.5px;
+      color: var(--muted);
+      margin-top: 3px;
+    }
+    .item-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-top: 10px;
+      padding-top: 8px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .empty {
+      padding: 18px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13.5px;
+      border: 1px dashed var(--line);
+      border-radius: 12px;
+    }
+
+    /* Form grid */
+    .form-grid {
+      display: grid;
+      gap: 10px;
+    }
+    @media (min-width: 620px) {
+      .form-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+      .form-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+    }
+    .field label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+    .status-msg {
+      font-size: 13px;
+      margin-top: 8px;
+      min-height: 20px;
+    }
+    .status-msg.ok { color: #86EFAC; }
+    .status-msg.err { color: #FDA4AF; }
+    .receipt {
+      background: rgba(52, 211, 153, 0.10);
+      border: 1px solid rgba(52, 211, 153, 0.35);
+      border-radius: 12px;
+      padding: 14px;
+      margin-top: 10px;
+    }
+    .receipt p { font-size: 14px; color: var(--ink); margin-bottom: 10px; }
+
+    /* Sticky bottom jump button */
+    .sticky-jump {
+      position: fixed;
+      right: 16px;
+      bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+      z-index: 45;
+      border: 0;
+      border-radius: 999px;
+      padding: 11px 18px;
+      background: linear-gradient(180deg, #6EE7B7, #34D399);
+      color: #03150F;
+      font-weight: 800;
+      font-size: 13.5px;
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.45);
+      cursor: pointer;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+    .sticky-jump.is-hidden { opacity: 0; pointer-events: none; transform: translateY(10px); }
+
+    footer {
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      text-align: center;
+      font-size: 12.5px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="sample-bar">
+    <b>SuperWho Demo · Sample Data Only</b> — Example tenants, rooms, and tickets only. No real names, phone numbers, or addresses.
+  </div>
+
+  <div class="wrap">
+    <section class="hero">
+      <div>
+        <div class="brand-row">
+          <div class="brand-orb" aria-hidden="true">S</div>
+          <div>
+            <div class="kicker">Your SuperWho · Life Remodeled</div>
+            <div class="brand-sub">Prepared for Rosa · Director of Opportunity Hubs</div>
+          </div>
+        </div>
+        <h1>Two Opportunity Hubs. One place.</h1>
+        <p class="hero-copy">
+          One workspace to coordinate <strong>tenant communication, maintenance, events, and room booking</strong> across both converted school hubs — replacing scattered spreadsheets and ~$10k/yr property software.
+        </p>
+        <div class="hero-badges">
+          <span class="pill emerald">Hub 1 + Hub 2 unified</span>
+          <span class="pill sky">~20 sample partner slots</span>
+          <span class="pill amber">Instant request routing</span>
+        </div>
+      </div>
+
+      <div class="card meet-card" id="meetTeam">
+        <div class="meet-head">
+          <span class="kicker">Meet your SuperWho</span>
+          <span class="pill emerald">0:58 walkthrough</span>
+        </div>
+        <div class="meet-title">First-person intro for Rosa</div>
+        <p class="meet-quote">
+          “Hi Rosa — I’m your SuperWho, built for Life Remodeled. Jim, your dad, and his team developed me to bring both Opportunity Hubs into one place.”
+        </p>
+        <div class="sw-video-stage" id="swVideoStage">
+          <video id="rosaIntroVideo" playsinline webkit-playsinline preload="metadata" disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback" x-webkit-airplay="deny"></video>
+          <div class="sw-now-stage">
+            <div class="sw-now-av-wrap" id="swNowWrap">
+              <div class="sw-now-glow" id="swNowGlow" aria-hidden="true"></div>
+              <span class="sw-now-ripple" data-r="0" aria-hidden="true"></span>
+              <span class="sw-now-ripple" data-r="1" aria-hidden="true"></span>
+              <span class="sw-now-ripple" data-r="2" aria-hidden="true"></span>
+              <div class="sw-now-av" id="swNowAv" aria-hidden="true">S</div>
+            </div>
+          </div>
+          <div class="sw-caption-box" aria-live="polite">
+            <div class="sw-caption-who" id="swCaptionWho">Your SuperWho · Opportunity Hubs</div>
+            <div class="sw-caption-text" id="swCaptionText">Tap play to hear how both hubs come together in one workspace.</div>
+          </div>
+          <button type="button" class="sw-play-overlay" id="swPlayOverlay">
+            <span class="sw-play-circle" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </span>
+            <span class="sw-play-label" id="swPlayLabel">Tap to hear your SuperWho</span>
+            <span class="sw-play-sub">About 1 minute · no need to play to use the demo</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="hub-bar">
+      <div class="hub-tabs" role="tablist" aria-label="Filter by Opportunity Hub">
+        <button type="button" class="tab-btn is-active" data-hub="all" role="tab" aria-selected="true">All Hubs (2)</button>
+        <button type="button" class="tab-btn" data-hub="hub1" role="tab" aria-selected="false">Hub 1 · Original</button>
+        <button type="button" class="tab-btn" data-hub="hub2" role="tab" aria-selected="false">Hub 2 · New Hub</button>
+      </div>
+      <div class="hub-note" id="hubNote">Showing combined view across Hub 1 and Hub 2</div>
+    </div>
+
+    <section class="stats-grid" aria-label="Quick stats">
+      <div class="stat-card">
+        <div class="stat-label">Sample Tenants</div>
+        <div class="stat-val" id="statTenants">20</div>
+        <div class="stat-sub" id="statTenantsSub">12 in Hub 1 · 8 in Hub 2</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Open Maintenance</div>
+        <div class="stat-val" id="statMaint">3</div>
+        <div class="stat-sub" id="statMaintSub">Submitted or in progress</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Events This Week</div>
+        <div class="stat-val" id="statEvents">5</div>
+        <div class="stat-sub" id="statEventsSub">Shared spaces across 2 hubs</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Notices Read</div>
+        <div class="stat-val" id="statRead">90%</div>
+        <div class="stat-sub" id="statReadSub">18 of 20 orgs acknowledged</div>
+      </div>
+    </section>
+
+    <main class="dash-grid">
+      <!-- Tenant directory & announcements -->
+      <section class="card" id="secTenants">
+        <div class="sec-head">
+          <h2>Tenant directory</h2>
+          <span class="pill sky" id="tenantCountPill">8 featured · 20 total</span>
+        </div>
+        <p class="sec-sub">Clearly labeled sample nonprofits and community groups — no real names, phone numbers, or addresses.</p>
+        <div class="ctrl-row">
+          <input type="search" class="input" id="tenantSearch" placeholder="Search sample tenant, focus area, or suite…" aria-label="Search sample tenants">
+        </div>
+        <div class="list" id="tenantList"></div>
+        <div style="margin-top:10px; display:flex; justify-content:space-between; align-items:center; gap:8px; flex-wrap:wrap;">
+          <button type="button" class="btn secondary sm" id="toggleAllTenants">Show all 20 sample slots</button>
+          <span style="font-size:12px; color:var(--muted);">Click any tenant to prefill a request</span>
+        </div>
+      </section>
+
+      <section class="card" id="secAnnouncements">
+        <div class="sec-head">
+          <h2>Messages &amp; announcements</h2>
+          <span class="pill emerald">Broadcast + read tracking</span>
+        </div>
+        <p class="sec-sub">Send one notice to Hub 1, Hub 2, or both hubs at once and track acknowledgments.</p>
+        <form id="annForm" class="ctrl-row" style="margin-bottom:14px;">
+          <select class="select" id="annHub" aria-label="Target hub" style="flex:0 0 130px;">
+            <option value="all">Both Hubs</option>
+            <option value="hub1">Hub 1</option>
+            <option value="hub2">Hub 2</option>
+          </select>
+          <input type="text" class="input" id="annText" maxlength="200" placeholder="Post a sample hub announcement…" style="flex:1 1 200px;">
+          <button type="submit" class="btn sm">Post demo notice</button>
+        </form>
+        <div class="list" id="annList"></div>
+      </section>
+
+      <!-- Maintenance tracker -->
+      <section class="card" id="secMaintenance">
+        <div class="sec-head">
+          <h2>Maintenance requests</h2>
+          <div style="display:flex; gap:6px; flex-wrap:wrap;" id="maintFilters">
+            <button type="button" class="tab-btn is-active" data-mstatus="all" style="padding:4px 10px; font-size:12px;">All</button>
+            <button type="button" class="tab-btn" data-mstatus="submitted" style="padding:4px 10px; font-size:12px;">Submitted</button>
+            <button type="button" class="tab-btn" data-mstatus="in_progress" style="padding:4px 10px; font-size:12px;">In Progress</button>
+            <button type="button" class="tab-btn" data-mstatus="done" style="padding:4px 10px; font-size:12px;">Done</button>
+          </div>
+        </div>
+        <p class="sec-sub">Track every work order from <strong>Submitted</strong> → <strong>In Progress</strong> → <strong>Done</strong>. Tap an action button to test advancing a status.</p>
+        <div class="list" id="maintList"></div>
+      </section>
+
+      <!-- Event calendar & room booking -->
+      <section class="card" id="secEvents">
+        <div class="sec-head">
+          <h2>Event calendar &amp; room booking</h2>
+          <span class="pill amber">Conflict-checked</span>
+        </div>
+        <p class="sec-sub">Shared rooms across both buildings in one schedule. Test booking a room below.</p>
+        <form id="bookForm" class="form-grid cols-2" style="margin-bottom:14px; background:rgba(8,17,30,0.45); padding:12px; border-radius:12px; border:1px solid var(--line);">
+          <div class="field">
+            <label for="bookHub">Hub &amp; Room</label>
+            <select id="bookHub" class="select">
+              <option value="hub1|Multipurpose Gym">Hub 1 · Multipurpose Gym</option>
+              <option value="hub1|Room 108">Hub 1 · Room 108</option>
+              <option value="hub1|Auditorium">Hub 1 · Auditorium</option>
+              <option value="hub2|Community Commons">Hub 2 · Community Commons</option>
+              <option value="hub2|Training Lab B">Hub 2 · Training Lab B</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="bookTenant">Sample Tenant</label>
+            <select id="bookTenant" class="select">
+              <option value="Example tenant A">Example tenant A</option>
+              <option value="Example tenant B">Example tenant B</option>
+              <option value="Example tenant C">Example tenant C</option>
+              <option value="Example tenant D">Example tenant D</option>
+              <option value="Example tenant E">Example tenant E</option>
+              <option value="Example tenant F">Example tenant F</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="bookSlot">Day &amp; Time</label>
+            <select id="bookSlot" class="select">
+              <option value="Thu · 4:00 PM">Thu · 4:00 PM</option>
+              <option value="Fri · 11:00 AM">Fri · 11:00 AM</option>
+              <option value="Sat · 2:00 PM">Sat · 2:00 PM</option>
+              <option value="Mon · 10:00 AM">Mon · 10:00 AM</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="bookTitle">Event Name</label>
+            <input type="text" id="bookTitle" class="input" maxlength="80" placeholder="e.g. Partner Pantry Intake">
+          </div>
+          <div style="grid-column: 1 / -1; display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap;">
+            <span id="bookMsg" style="font-size:12.5px; color:var(--muted);">Adds a sample reservation to this calendar</span>
+            <button type="submit" class="btn sm">Reserve sample slot</button>
+          </div>
+        </form>
+        <div class="list" id="eventList"></div>
+      </section>
+
+      <!-- Live tenant request form -->
+      <section class="card span-2" id="request-form">
+        <div class="sec-head">
+          <h2>Tenant &amp; hub request form</h2>
+          <span class="pill emerald">Live SuperWho routing</span>
+        </div>
+        <p class="sec-sub">
+          Submit a maintenance issue, room request, or hub question. Real submissions save to the SuperWho inbox and trigger an instant alert to Jim’s team (nothing sensitive is stored in the page source).
+        </p>
+        <form id="tenantReqForm" class="form-grid">
+          <div class="form-grid cols-3">
+            <div class="field">
+              <label for="reqHub">Opportunity Hub</label>
+              <select id="reqHub" class="select">
+                <option value="Hub 1 (Original)">Hub 1 (Original)</option>
+                <option value="Hub 2 (New Hub)">Hub 2 (New Hub)</option>
+                <option value="Both Hubs">Both Hubs</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="reqType">Request Type</label>
+              <select id="reqType" class="select">
+                <option value="Maintenance">Maintenance</option>
+                <option value="Room Booking">Room Booking</option>
+                <option value="Tenant Message">Tenant Message</option>
+                <option value="Feedback for Jim's team">Feedback for Jim's team</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="reqFrom">From (Sample Tenant or Name)</label>
+              <input type="text" id="reqFrom" class="input" maxlength="80" value="Example tenant A" placeholder="Example tenant A or Rosa">
+            </div>
+          </div>
+          <div class="field">
+            <label for="reqText">Details</label>
+            <textarea id="reqText" class="textarea" rows="3" maxlength="2000" required placeholder="Describe the maintenance issue, room need, or update…"></textarea>
+          </div>
+          <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
+            <button type="submit" class="btn" id="reqSubmitBtn">Send request</button>
+            <span class="status-msg" id="reqStatus" role="status" aria-live="polite" style="margin:0;"></span>
+          </div>
+        </form>
+        <div class="receipt" id="reqReceipt" hidden>
+          <p id="reqReceiptText">Request received — Jim’s team was alerted right away.</p>
+          <button type="button" class="btn secondary sm" id="reqResetBtn">Send another request</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      Opportunity Hubs demo · Developed for Rosa by your SuperWho and Jim’s team · Sample data only.
+    </footer>
+  </div>
+
+  <button type="button" class="sticky-jump" id="jumpReqBtn">Tenant request form</button>
+
+  <script>
+    window.SW_TRACK = { page: "rosa", slug: "rosa-hubs-07d64c070c67" };
+  </script>
+  <script src="/assets/track.js"></script>
+  <script>
+  (function () {
+    "use strict";
+
+    var state = {
+      hub: "all",
+      maintFilter: "all",
+      showAllTenants: false,
+      search: ""
+    };
+
+    var tenants = [
+      { id: "t1", name: "Example tenant A", focus: "Youth Literacy Program", hub: "hub1", suite: "Suite 102", status: "Active" },
+      { id: "t2", name: "Example tenant B", focus: "Community Health Clinic", hub: "hub1", suite: "Suite 108", status: "Active" },
+      { id: "t3", name: "Example tenant C", focus: "Workforce Training Center", hub: "hub1", suite: "Wing B", status: "Active" },
+      { id: "t4", name: "Example tenant D", focus: "Neighborhood Food Pantry", hub: "hub1", suite: "Ground Floor", status: "Active" },
+      { id: "t5", name: "Example tenant E", focus: "Family Resource Hub", hub: "hub2", suite: "Suite 201", status: "Active" },
+      { id: "t6", name: "Example tenant F", focus: "Legal Aid Drop-In", hub: "hub2", suite: "Suite 204", status: "Active" },
+      { id: "t7", name: "Example tenant G", focus: "Youth Arts Collective", hub: "hub2", suite: "Room 210", status: "Active" },
+      { id: "t8", name: "Example tenant H", focus: "Small Business Incubator", hub: "hub2", suite: "Suite 215", status: "Active" }
+    ];
+    for (var i = 9; i <= 20; i++) {
+      var h = i <= 16 ? "hub1" : "hub2";
+      tenants.push({
+        id: "t" + i,
+        name: "Example tenant " + String.fromCharCode(64 + i),
+        focus: i % 2 === 0 ? "Community Partner Slot" : "Nonprofit Program Suite",
+        hub: h,
+        suite: (h === "hub1" ? "Suite 1" : "Suite 2") + (10 + i),
+        status: "Active"
+      });
+    }
+
+    var announcements = [
+      { id: "a1", hub: "all", title: "Winter entry schedule & snow-day alert protocol", when: "Today · 9:15 AM", read: 18, total: 20, ack: true },
+      { id: "a2", hub: "hub2", title: "Hub 2 loading dock & keycard hours updated", when: "Yesterday · 3:40 PM", read: 7, total: 8, ack: true },
+      { id: "a3", hub: "hub1", title: "Hub 1 shared kitchen deep-clean Friday 4–6 PM", when: "Tue · 11:00 AM", read: 11, total: 12, ack: false }
+    ];
+
+    var maintenance = [
+      { id: "M-104", hub: "hub1", where: "Suite 108 · Example tenant B", issue: "Exam room thermostat not holding set temp", priority: "High", status: "submitted", updated: "1 hr ago" },
+      { id: "M-103", hub: "hub2", where: "Commons Main Entry", issue: "Exterior door closer sticking in cold weather", priority: "Normal", status: "in_progress", updated: "Yesterday" },
+      { id: "M-102", hub: "hub1", where: "Gym Corridor", issue: "Replace two flickering LED ballast fixtures", priority: "Normal", status: "in_progress", updated: "2 days ago" },
+      { id: "M-101", hub: "hub2", where: "Suite 204 · Example tenant F", issue: "Restroom sink faucet drip repaired", priority: "Low", status: "done", updated: "Mon" }
+    ];
+
+    var events = [
+      { id: "e1", hub: "hub1", room: "Multipurpose Gym", slot: "Thu · 10:00 AM", title: "Youth Career Fair Setup", org: "Example tenant C" },
+      { id: "e2", hub: "hub2", room: "Community Commons", slot: "Thu · 2:00 PM", title: "New Hub Partner Orientation", org: "Hub Operations" },
+      { id: "e3", hub: "hub1", room: "Room 108", slot: "Fri · 9:30 AM", title: "Monthly Nonprofit Directors Sync", org: "All Hub 1 Tenants" },
+      { id: "e4", hub: "hub2", room: "Training Lab B", slot: "Fri · 1:00 PM", title: "Community Resume Workshop", org: "Example tenant E" },
+      { id: "e5", hub: "hub1", room: "Auditorium", slot: "Sat · 11:00 AM", title: "Winter Coat & Family Resource Day", org: "Example tenant D" }
+    ];
+
+    function hubLabel(h) {
+      if (h === "hub1") return "Hub 1";
+      if (h === "hub2") return "Hub 2";
+      return "Both Hubs";
+    }
+
+    function esc(s) {
+      return String(s || "").replace(/[&<>"']/g, function (c) {
+        return ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c];
+      });
+    }
+
+    function matchesHub(itemHub) {
+      return state.hub === "all" || itemHub === "all" || itemHub === state.hub;
+    }
+
+    function renderStats() {
+      var tList = tenants.filter(function (t) { return matchesHub(t.hub); });
+      var openM = maintenance.filter(function (m) { return matchesHub(m.hub) && m.status !== "done"; });
+      var evList = events.filter(function (e) { return matchesHub(e.hub); });
+      var ann = announcements.filter(function (a) { return matchesHub(a.hub); })[0];
+
+      document.getElementById("statTenants").textContent = String(tList.length);
+      document.getElementById("statTenantsSub").textContent =
+        state.hub === "all" ? "12 in Hub 1 · 8 in Hub 2" : (hubLabel(state.hub) + " sample partner orgs");
+
+      document.getElementById("statMaint").textContent = String(openM.length);
+      var subCount = openM.filter(function (m) { return m.status === "submitted"; }).length;
+      var progCount = openM.filter(function (m) { return m.status === "in_progress"; }).length;
+      document.getElementById("statMaintSub").textContent = subCount + " submitted · " + progCount + " in progress";
+
+      document.getElementById("statEvents").textContent = String(evList.length);
+      document.getElementById("statEventsSub").textContent =
+        state.hub === "all" ? "Shared spaces across 2 hubs" : (hubLabel(state.hub) + " rooms booked");
+
+      if (ann) {
+        var pct = Math.round((ann.read / ann.total) * 100);
+        document.getElementById("statRead").textContent = pct + "%";
+        document.getElementById("statReadSub").textContent = ann.read + " of " + ann.total + " orgs acknowledged";
+      }
+    }
+
+    function renderTenants() {
+      var q = state.search.trim().toLowerCase();
+      var list = tenants.filter(function (t) {
+        if (!matchesHub(t.hub)) return false;
+        if (!q) return true;
+        return (t.name + " " + t.focus + " " + t.suite + " " + hubLabel(t.hub)).toLowerCase().indexOf(q) !== -1;
+      });
+      var limit = state.showAllTenants || q ? list.length : 6;
+      var shown = list.slice(0, limit);
+      var pill = document.getElementById("tenantCountPill");
+      if (pill) pill.textContent = shown.length + " shown · " + list.length + " in view";
+
+      var el = document.getElementById("tenantList");
+      if (!shown.length) {
+        el.innerHTML = '<div class="empty">No sample tenants match that filter.</div>';
+        return;
+      }
+      el.innerHTML = shown.map(function (t) {
+        return '<div class="item">' +
+          '<div class="item-top">' +
+            '<div>' +
+              '<div class="item-title">' + esc(t.name) + ' · <span style="color:var(--sky);font-weight:600;">' + esc(t.focus) + '</span></div>' +
+              '<div class="item-meta">' + esc(hubLabel(t.hub)) + ' · ' + esc(t.suite) + ' · Sample org</div>' +
+            '</div>' +
+            '<span class="pill emerald">' + esc(t.status) + '</span>' +
+          '</div>' +
+          '<div class="item-actions">' +
+            '<span style="font-size:12px;color:var(--muted);">Directory slot · ' + esc(t.id.toUpperCase()) + '</span>' +
+            '<button type="button" class="btn secondary sm js-prefill" data-from="' + esc(t.name) + '" data-hub="' + esc(t.hub === "hub1" ? "Hub 1 (Original)" : "Hub 2 (New Hub)") + '">Start request</button>' +
+          '</div>' +
+        '</div>';
+      }).join("");
+    }
+
+    function renderAnnouncements() {
+      var list = announcements.filter(function (a) { return matchesHub(a.hub); });
+      var el = document.getElementById("annList");
+      if (!list.length) {
+        el.innerHTML = '<div class="empty">No announcements for this hub filter yet.</div>';
+        return;
+      }
+      el.innerHTML = list.map(function (a) {
+        return '<div class="item">' +
+          '<div class="item-top">' +
+            '<div>' +
+              '<div class="item-title">' + esc(a.title) + '</div>' +
+              '<div class="item-meta">' + esc(hubLabel(a.hub)) + ' · ' + esc(a.when) + '</div>' +
+            '</div>' +
+            '<span class="pill ' + (a.ack ? "emerald" : "amber") + '">' + a.read + '/' + a.total + ' read</span>' +
+          '</div>' +
+        '</div>';
+      }).join("");
+    }
+
+    function renderMaintenance() {
+      var list = maintenance.filter(function (m) {
+        if (!matchesHub(m.hub)) return false;
+        if (state.maintFilter !== "all" && m.status !== state.maintFilter) return false;
+        return true;
+      });
+      var el = document.getElementById("maintList");
+      if (!list.length) {
+        el.innerHTML = '<div class="empty">No tickets in this status.</div>';
+        return;
+      }
+      el.innerHTML = list.map(function (m) {
+        var badgeCls = m.status === "done" ? "emerald" : (m.status === "in_progress" ? "sky" : "amber");
+        var statusLabel = m.status === "done" ? "Done" : (m.status === "in_progress" ? "In Progress" : "Submitted");
+        var nextBtn = m.status === "submitted"
+          ? '<button type="button" class="btn secondary sm js-mstep" data-id="' + esc(m.id) + '" data-next="in_progress">Start work</button>'
+          : (m.status === "in_progress"
+            ? '<button type="button" class="btn sm js-mstep" data-id="' + esc(m.id) + '" data-next="done">Mark done</button>'
+            : '<button type="button" class="btn secondary sm js-mstep" data-id="' + esc(m.id) + '" data-next="submitted">Reopen</button>');
+        return '<div class="item">' +
+          '<div class="item-top">' +
+            '<div>' +
+              '<div class="item-title">' + esc(m.id) + ' · ' + esc(m.issue) + '</div>' +
+              '<div class="item-meta">' + esc(hubLabel(m.hub)) + ' · ' + esc(m.where) + ' · Priority: ' + esc(m.priority) + '</div>' +
+            '</div>' +
+            '<span class="pill ' + badgeCls + '">' + statusLabel + '</span>' +
+          '</div>' +
+          '<div class="item-actions">' +
+            '<span style="font-size:12px;color:var(--muted);">Updated ' + esc(m.updated) + '</span>' +
+            nextBtn +
+          '</div>' +
+        '</div>';
+      }).join("");
+    }
+
+    function renderEvents() {
+      var list = events.filter(function (e) { return matchesHub(e.hub); });
+      var el = document.getElementById("eventList");
+      if (!list.length) {
+        el.innerHTML = '<div class="empty">No scheduled events for this hub filter.</div>';
+        return;
+      }
+      el.innerHTML = list.map(function (e) {
+        return '<div class="item">' +
+          '<div class="item-top">' +
+            '<div>' +
+              '<div class="item-title">' + esc(e.title) + '</div>' +
+              '<div class="item-meta">' + esc(hubLabel(e.hub)) + ' · ' + esc(e.room) + ' · ' + esc(e.org) + '</div>' +
+            '</div>' +
+            '<span class="pill sky">' + esc(e.slot) + '</span>' +
+          '</div>' +
+        '</div>';
+      }).join("");
+    }
+
+    function renderAll() {
+      renderStats();
+      renderTenants();
+      renderAnnouncements();
+      renderMaintenance();
+      renderEvents();
+    }
+
+    // Hub switcher
+    document.querySelectorAll(".hub-tabs .tab-btn").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        document.querySelectorAll(".hub-tabs .tab-btn").forEach(function (b) {
+          b.classList.remove("is-active");
+          b.setAttribute("aria-selected", "false");
+        });
+        btn.classList.add("is-active");
+        btn.setAttribute("aria-selected", "true");
+        state.hub = btn.getAttribute("data-hub");
+        var note = document.getElementById("hubNote");
+        if (state.hub === "all") note.textContent = "Showing combined view across Hub 1 and Hub 2";
+        else if (state.hub === "hub1") note.textContent = "Filtered to Hub 1 · Original Opportunity Hub";
+        else note.textContent = "Filtered to Hub 2 · Second Opportunity Hub";
+        renderAll();
+      });
+    });
+
+    // Tenant search + show all + prefill
+    document.getElementById("tenantSearch").addEventListener("input", function (ev) {
+      state.search = ev.target.value || "";
+      renderTenants();
+    });
+    document.getElementById("toggleAllTenants").addEventListener("click", function (ev) {
+      state.showAllTenants = !state.showAllTenants;
+      ev.target.textContent = state.showAllTenants ? "Show featured sample slots" : "Show all 20 sample slots";
+      renderTenants();
+    });
+    document.getElementById("tenantList").addEventListener("click", function (ev) {
+      var btn = ev.target.closest(".js-prefill");
+      if (!btn) return;
+      document.getElementById("reqFrom").value = btn.getAttribute("data-from") || "Example tenant A";
+      document.getElementById("reqHub").value = btn.getAttribute("data-hub") || "Hub 1 (Original)";
+      document.getElementById("request-form").scrollIntoView({ behavior: "smooth", block: "start" });
+      setTimeout(function () { document.getElementById("reqText").focus(); }, 300);
+    });
+
+    // Demo announcement
+    document.getElementById("annForm").addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      var txt = (document.getElementById("annText").value || "").trim();
+      var hub = document.getElementById("annHub").value;
+      if (!txt) return;
+      var total = hub === "hub1" ? 12 : (hub === "hub2" ? 8 : 20);
+      announcements.unshift({
+        id: "a" + Date.now(),
+        hub: hub,
+        title: txt,
+        when: "Just now (demo preview)",
+        read: 1,
+        total: total,
+        ack: true
+      });
+      document.getElementById("annText").value = "";
+      renderStats();
+      renderAnnouncements();
+    });
+
+    // Maintenance filter + status transitions
+    document.getElementById("maintFilters").addEventListener("click", function (ev) {
+      var btn = ev.target.closest("[data-mstatus]");
+      if (!btn) return;
+      document.querySelectorAll("#maintFilters .tab-btn").forEach(function (b) { b.classList.remove("is-active"); });
+      btn.classList.add("is-active");
+      state.maintFilter = btn.getAttribute("data-mstatus");
+      renderMaintenance();
+    });
+    document.getElementById("maintList").addEventListener("click", function (ev) {
+      var btn = ev.target.closest(".js-mstep");
+      if (!btn) return;
+      var id = btn.getAttribute("data-id");
+      var next = btn.getAttribute("data-next");
+      maintenance.forEach(function (m) {
+        if (m.id === id) {
+          m.status = next;
+          m.updated = "Just now";
+        }
+      });
+      renderStats();
+      renderMaintenance();
+    });
+
+    // Room booking demo
+    document.getElementById("bookForm").addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      var parts = (document.getElementById("bookHub").value || "hub1|Multipurpose Gym").split("|");
+      var hub = parts[0], room = parts[1];
+      var org = document.getElementById("bookTenant").value;
+      var slot = document.getElementById("bookSlot").value;
+      var title = (document.getElementById("bookTitle").value || "").trim() || "Sample Partner Session";
+      var msg = document.getElementById("bookMsg");
+      var clash = events.some(function (e) { return e.hub === hub && e.room === room && e.slot === slot; });
+      if (clash) {
+        msg.style.color = "#FDA4AF";
+        msg.textContent = "Conflict: " + room + " is already booked for " + slot + ".";
+        return;
+      }
+      events.unshift({ id: "e" + Date.now(), hub: hub, room: room, slot: slot, title: title, org: org });
+      document.getElementById("bookTitle").value = "";
+      msg.style.color = "#86EFAC";
+      msg.textContent = "Booked " + room + " (" + slot + ") for " + org + ".";
+      renderStats();
+      renderEvents();
+    });
+
+    // Jump button (shows after scrolling past hero, hides when form is visible)
+    var jumpBtn = document.getElementById("jumpReqBtn");
+    function syncJumpBtn() {
+      var formEl = document.getElementById("request-form");
+      var r = formEl ? formEl.getBoundingClientRect() : null;
+      var formVisible = r && r.top < window.innerHeight - 80 && r.bottom > 80;
+      var nearTop = window.scrollY < 220;
+      jumpBtn.classList.toggle("is-hidden", !!(nearTop || formVisible));
+    }
+    window.addEventListener("scroll", syncJumpBtn, { passive: true });
+    syncJumpBtn();
+    jumpBtn.addEventListener("click", function () {
+      document.getElementById("request-form").scrollIntoView({ behavior: "smooth", block: "start" });
+      setTimeout(function () { document.getElementById("reqText").focus(); }, 300);
+    });
+
+    // Live Tenant Request Form -> window.swTalk (no keys in page source)
+    var reqForm = document.getElementById("tenantReqForm");
+    var reqStatus = document.getElementById("reqStatus");
+    var reqBtn = document.getElementById("reqSubmitBtn");
+    var reqReceipt = document.getElementById("reqReceipt");
+    var reqReceiptText = document.getElementById("reqReceiptText");
+    var reqReset = document.getElementById("reqResetBtn");
+
+    reqReset.addEventListener("click", function () {
+      reqReceipt.hidden = true;
+      reqForm.hidden = false;
+      document.getElementById("reqText").value = "";
+      reqStatus.textContent = "";
+      reqStatus.className = "status-msg";
+      document.getElementById("reqText").focus();
+    });
+
+    reqForm.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      var hub = document.getElementById("reqHub").value;
+      var kind = document.getElementById("reqType").value;
+      var from = (document.getElementById("reqFrom").value || "Example tenant A").trim();
+      var details = (document.getElementById("reqText").value || "").trim();
+      if (!details) {
+        reqStatus.className = "status-msg err";
+        reqStatus.textContent = "Enter request details first.";
+        document.getElementById("reqText").focus();
+        return;
+      }
+      if (typeof window.swTalk !== "function") {
+        reqStatus.className = "status-msg err";
+        reqStatus.textContent = "Request routing is still loading — try again in a second.";
+        return;
+      }
+      reqBtn.disabled = true;
+      reqBtn.textContent = "Sending…";
+      reqStatus.textContent = "";
+      reqStatus.className = "status-msg";
+
+      var payloadText = "[" + hub + " · " + kind + "] " + details;
+      window.swTalk({
+        from: from + " (Opportunity Hubs Demo)",
+        text: payloadText
+      }).then(function (res) {
+        if (res && res.ok === false) throw new Error(res.error || "send failed");
+        reqBtn.disabled = false;
+        reqBtn.textContent = "Send request";
+        reqForm.hidden = true;
+        reqReceipt.hidden = false;
+        var rid = res && res.id ? " (" + res.id + ")" : "";
+        reqReceiptText.textContent = "Saved" + rid + " — routed to the SuperWho inbox with an instant alert to Jim's team.";
+        if (kind === "Maintenance" && details.indexOf("TEST from Chief selftest") === -1) {
+          maintenance.unshift({
+            id: "M-" + String(Math.floor(105 + Math.random() * 90)),
+            hub: hub.indexOf("Hub 2") !== -1 ? "hub2" : "hub1",
+            where: from,
+            issue: details.slice(0, 90),
+            priority: "Normal",
+            status: "submitted",
+            updated: "Just now"
+          });
+          renderStats();
+          renderMaintenance();
+        }
+      }).catch(function () {
+        reqBtn.disabled = false;
+        reqBtn.textContent = "Send request";
+        reqStatus.className = "status-msg err";
+        reqStatus.textContent = "That did not go through. Please try again.";
+      });
+    });
+
+    renderAll();
+
+    // Voice walkthrough player (audio-reactive orb + live word cues)
+    (function initVoicePlayer() {
+      var video = document.getElementById("rosaIntroVideo");
+      var overlay = document.getElementById("swPlayOverlay");
+      var playLabel = document.getElementById("swPlayLabel");
+      var capText = document.getElementById("swCaptionText");
+      var nowAv = document.getElementById("swNowAv");
+      var nowGlow = document.getElementById("swNowGlow");
+      var ripples = document.querySelectorAll("#swNowWrap .sw-now-ripple");
+      if (!video || !overlay) return;
+
+      var CUES = [];
+      var BY_CUE = {};
+      var ENV = null;
+      var videoBlobUrl = null;
+      var videoPromise = null;
+      var lastCueIdx = -1;
+      var rafId = 0;
+      var smoothLevel = 0.14;
+      var rippleIdx = 0;
+      var lastRipple = 0;
+
+      fetch("audio-envelope.json", { cache: "force-cache" }).then(function (r) {
+        return r.ok ? r.json() : null;
+      }).then(function (d) { if (d) ENV = d; }).catch(function () {});
+
+      fetch("word-cues.json", { cache: "force-cache" }).then(function (r) {
+        return r.ok ? r.json() : null;
+      }).then(function (d) {
+        if (!d) return;
+        if (d.cues) CUES = d.cues;
+        if (d.byCue) BY_CUE = d.byCue;
+      }).catch(function () {});
+
+      function b64ToBytes(b64) {
+        var bin = atob(b64);
+        var arr = new Uint8Array(bin.length);
+        for (var i = 0; i < bin.length; i++) arr[i] = bin.charCodeAt(i);
+        return arr;
+      }
+
+      function ensureVideoLoaded() {
+        if (videoBlobUrl) return Promise.resolve(videoBlobUrl);
+        if (videoPromise) return videoPromise;
+        var chunks = ["v1.b64", "v2.b64", "v3.b64"];
+        videoPromise = Promise.all(chunks.map(function (c) {
+          return fetch(c, { cache: "force-cache" }).then(function (r) {
+            if (!r.ok) throw new Error("chunk " + c);
+            return r.text();
+          });
+        })).then(function (parts) {
+          var bytes = b64ToBytes(parts.join(""));
+          var blob = new Blob([bytes], { type: "video/mp4" });
+          videoBlobUrl = URL.createObjectURL(blob);
+          video.src = videoBlobUrl;
+          video.load();
+          return videoBlobUrl;
+        }).catch(function () {
+          videoPromise = null;
+          return null;
+        });
+        return videoPromise;
+      }
+
+      function currentLevel() {
+        if (ENV && ENV.samples && ENV.samples.length) {
+          var idx = Math.floor((video.currentTime || 0) * 1000 / (ENV.hopMs || 20));
+          if (idx >= 0 && idx < ENV.samples.length) return ENV.samples[idx] / 255;
+        }
+        return 0.25;
+      }
+
+      function applyGlow(lvl) {
+        if (nowAv) nowAv.style.setProperty("--sw-breathe", (1 + lvl * 0.09).toFixed(4));
+        if (nowGlow) {
+          nowGlow.style.setProperty("--sw-glow-scale", (1 + lvl * 0.35).toFixed(3));
+          nowGlow.style.setProperty("--sw-glow-op", (0.32 + lvl * 0.55).toFixed(3));
+        }
+        var now = performance.now();
+        if (lvl > 0.52 && now - lastRipple > 420 && ripples.length) {
+          var r = ripples[rippleIdx % ripples.length];
+          rippleIdx++;
+          lastRipple = now;
+          r.classList.remove("is-on");
+          void r.offsetWidth;
+          r.classList.add("is-on");
+        }
+      }
+
+      function renderCueWords(c) {
+        if (!capText) return;
+        var ws = BY_CUE[String(c.i)] || [];
+        if (!ws.length) { capText.textContent = c.text || ""; return; }
+        capText.innerHTML = ws.map(function (w, idx) {
+          return '<span class="w" data-wi="' + idx + '">' + esc(w.word) + '</span>';
+        }).join(" ");
+      }
+
+      function syncToTime(t) {
+        var found = -1;
+        for (var i = 0; i < CUES.length; i++) {
+          if (t >= CUES[i].start - 0.1 && t <= CUES[i].end + 0.4) { found = i; break; }
+        }
+        if (found !== -1 && found !== lastCueIdx) {
+          lastCueIdx = found;
+          renderCueWords(CUES[found]);
+        }
+        if (found !== -1 && capText) {
+          var ws = BY_CUE[String(CUES[found].i)] || [];
+          var spans = capText.querySelectorAll(".w");
+          for (var j = 0; j < spans.length; j++) {
+            spans[j].classList.remove("is-on", "is-past");
+            var w = ws[j];
+            if (!w) continue;
+            if (t >= w.end - 0.02) spans[j].classList.add("is-past");
+            else if (t >= w.start - 0.05) spans[j].classList.add("is-on");
+          }
+        }
+      }
+
+      function voiceFrame() {
+        if (video.paused) { rafId = 0; return; }
+        var lvl = currentLevel();
+        smoothLevel = smoothLevel * 0.72 + lvl * 0.28;
+        applyGlow(smoothLevel);
+        syncToTime(video.currentTime || 0);
+        rafId = requestAnimationFrame(voiceFrame);
+      }
+
+      overlay.addEventListener("click", function (ev) {
+        ev.preventDefault();
+        overlay.hidden = true;
+        if (!videoBlobUrl && capText) capText.textContent = "Loading walkthrough…";
+        ensureVideoLoaded().then(function (url) {
+          if (!url) {
+            overlay.hidden = false;
+            if (capText) capText.textContent = "Couldn't load audio. Tap to try again.";
+            return;
+          }
+          if (video.ended) video.currentTime = 0;
+          video.muted = false;
+          var p = video.play();
+          if (p && p.then) {
+            p.then(function () {
+              if (rafId) cancelAnimationFrame(rafId);
+              rafId = requestAnimationFrame(voiceFrame);
+            }).catch(function () {
+              overlay.hidden = false;
+            });
+          }
+        });
+      });
+
+      video.addEventListener("ended", function () {
+        if (rafId) { cancelAnimationFrame(rafId); rafId = 0; }
+        applyGlow(0.14);
+        overlay.hidden = false;
+        if (playLabel) playLabel.textContent = "Play walkthrough again";
+        lastCueIdx = -1;
+      });
+      video.addEventListener("pause", function () {
+        if (!video.ended && rafId) { cancelAnimationFrame(rafId); rafId = 0; }
+      });
+    })();
+  })();
+  </script>
+</body>
+</html>
