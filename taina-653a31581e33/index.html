@@ -875,7 +875,7 @@
         "<li>Rest, tented, for 40 minutes before carving. Make gravy from the pan drippings with a little flour and broth while it rests.</li>" +
         "</ol></div></details>";
 
-      var mac = '<details class="dish"><summary>Mac & cheese</summary><div class="dish-body">' +
+      var mac = '<details class="dish"><summary>Mac &amp; cheese</summary><div class="dish-body">' +
         '<p class="dish-meta">Bakes 30 minutes at 375°F once the turkey is out. Prep the pan while the turkey roasts.</p>' +
         "<ul class=\"ing\">" +
         "<li>" + lbs(2, g, 1) + " lb elbow macaroni</li>" +
@@ -970,7 +970,7 @@
 
     function escapeHtml(s) {
       return String(s || "").replace(/[&<>"']/g, function (c) {
-        return ({ "&": "&", "<": "<", ">": ">", '"': """, "'": "&#39;" })[c];
+        return ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': """, "'": "&#39;" })[c];
       });
     }
 
