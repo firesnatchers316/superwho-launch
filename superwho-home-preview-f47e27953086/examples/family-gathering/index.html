@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#08111E">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>Thanksgiving family page · Sample Smart Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #08111E;
+      --bg-2: #0D192B;
+      --card: #101F35;
+      --card-2: #152844;
+      --ink: #F4F7FB;
+      --muted: #9FB2C9;
+      --line: rgba(255, 255, 255, 0.10);
+      --line-strong: rgba(255, 255, 255, 0.18);
+      --gold: #F0C040;
+      --gold-deep: #E09010;
+      --gold-ink: #1A1200;
+      --accent: #FBBF24;
+      --accent-dim: rgba(251, 191, 36, 0.18);
+      --sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0; padding: 0;
+      background: var(--bg); color: var(--ink);
+      font-family: var(--sans); font-size: 16px; line-height: 1.55;
+      -webkit-text-size-adjust: 100%;
+    }
+    body {
+      min-height: 100vh;
+      background:
+        radial-gradient(800px 380px at 90% -8%, var(--accent-dim), transparent 58%),
+        var(--bg);
+      padding-bottom: 40px;
+    }
+    h1, h2, h3 { margin: 0; line-height: 1.2; letter-spacing: -0.02em; }
+    p { margin: 0; }
+    a { color: var(--gold); }
+    :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+    .sample-bar {
+      position: sticky; top: 0; z-index: 20;
+      background: rgba(11, 23, 41, 0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      text-align: center;
+      font-size: 12.5px;
+      font-weight: 500;
+      padding: 8px 14px;
+    }
+    .sample-bar b { color: var(--gold); }
+    .wrap { width: min(720px, 100%); margin: 0 auto; padding: 20px 16px 32px; }
+    .back {
+      display: inline-flex; align-items: center; gap: 6px;
+      color: var(--muted); text-decoration: none; font-size: 13.5px; font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+    .brand img {
+      width: 44px; height: 44px; border-radius: 12px; display: block;
+      box-shadow: 0 0 0 1px rgba(240, 192, 64, 0.25);
+    }
+    .kicker {
+      font-family: var(--mono); font-size: 11px; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent);
+    }
+    .brand-sub { font-size: 13px; color: var(--muted); font-weight: 600; }
+    h1 { font-size: clamp(26px, 6vw, 36px); font-weight: 800; margin-bottom: 10px; }
+    .lede { color: var(--muted); font-size: 16.5px; line-height: 1.65; margin-bottom: 20px; max-width: 58ch; }
+    .card {
+      background: linear-gradient(180deg, var(--card-2), var(--card));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+      margin-bottom: 12px;
+    }
+    .card h2 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+    .card p, .card li { color: var(--muted); font-size: 14.5px; }
+    .card ul { margin: 8px 0 0; padding: 0 0 0 18px; }
+    .card li { margin: 0 0 6px; }
+    .row { display: grid; gap: 12px; }
+    @media (min-width: 600px) { .row.two { grid-template-columns: 1fr 1fr; } }
+    .stat {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px 14px;
+    }
+    .stat b { display: block; font-size: 22px; font-weight: 800; color: var(--ink); }
+    .stat span { color: var(--muted); font-size: 12.5px; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      border: 0; border-radius: 12px; padding: 13px 20px;
+      font-size: 16px; font-weight: 800; text-decoration: none;
+      background: linear-gradient(180deg, #F6D25A, var(--gold-deep));
+      color: var(--gold-ink); min-height: 48px;
+    }
+    .cta {
+      margin-top: 8px;
+      text-align: left;
+    }
+    .cta p { color: var(--muted); font-size: 14.5px; margin-bottom: 12px; }
+    footer {
+      margin-top: 20px; padding-top: 14px; border-top: 1px solid var(--line);
+      text-align: center; font-size: 12.5px; color: var(--muted);
+    }
+    .item {
+      display: flex; justify-content: space-between; gap: 10px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 14.5px;
+    }
+    .item:last-child { border-bottom: 0; padding-bottom: 0; }
+    .item .meta { color: var(--muted); font-size: 13px; white-space: nowrap; }
+    .tag {
+      display: inline-block; font-size: 11px; font-weight: 700;
+      letter-spacing: 0.04em; text-transform: uppercase;
+      padding: 3px 8px; border-radius: 999px;
+      background: var(--accent-dim); color: var(--ink);
+    }
+</style>
+</head>
+<body>
+  <div class="sample-bar">This is a <b>sample Smart Page</b> with made-up details. It is not a real client page.</div>
+  <div class="wrap">
+    <a class="back" href="../../#examples">← Back to SuperWho</a>
+    <header class="brand">
+      <img src="data:image/jpeg;base64,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" width="44" height="44" alt="SuperWho">
+      <div>
+        <div class="kicker">Sample Smart Page</div>
+        <div class="brand-sub">A family gathering</div>
+      </div>
+    </header>
+    <h1>Thanksgiving, all in one place.</h1>
+    <p class="lede">Who is coming, who is bringing what, when to arrive, and a kind place to leave a note. The family names and dishes below are made up for this sample.</p>
+    
+    <section class="card">
+      <h2>When and where</h2>
+      <div class="item"><span>Thursday, 2:00 p.m.</span><span class="meta">Dinner at 3:00</span></div>
+      <div class="item"><span>The house with the red door, on Maple</span><span class="meta">Sample address</span></div>
+    </section>
+    <section class="card">
+      <h2>Who is bringing what</h2>
+      <div class="item"><span>Aunt Mara — the turkey and gravy</span><span class="meta">Main</span></div>
+      <div class="item"><span>The twins — two pies and whipped cream</span><span class="meta">Dessert</span></div>
+      <div class="item"><span>Uncle Ben — rolls, butter, and a folding table</span><span class="meta">Sides</span></div>
+      <div class="item"><span>Jordan — a big salad and sparkling water</span><span class="meta">Sides</span></div>
+    </section>
+    <section class="card">
+      <h2>Leave a note</h2>
+      <p>If you will be late, if you have a dish to add, or if you just want to say you are coming, send a short note on this page. Everyone who needs to see it, will.</p>
+    </section>
+    
+    <section class="card cta">
+      <h2>Want a page like this?</h2>
+      <p>This sample is here so you can feel what a Smart Page is like. If you want one for your own work, request help and we will take it from there.</p>
+      <a class="btn" href="../../#request">Request help</a>
+    </section>
+    <footer>Sample Smart Page · Made-up details only · SuperWho draft preview</footer>
+  </div>
+</body>
+</html>
