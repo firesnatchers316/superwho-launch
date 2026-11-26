@@ -468,10 +468,93 @@
       pointer-events: none;
       transform: translateY(10px);
     }
+  
+    .demo-card { padding: 0; overflow: hidden; }
+    .demo-head {
+      display: flex; align-items: flex-start; gap: 12px;
+      padding: 16px 18px 12px;
+      border-bottom: 1px solid var(--line);
+    }
+    .demo-head img {
+      width: 40px; height: 40px; border-radius: 10px; flex: 0 0 auto;
+    }
+    .demo-head h2 { font-size: 17px; font-weight: 800; margin-bottom: 4px; }
+    .demo-label {
+      font-size: 13px; color: var(--muted); line-height: 1.45;
+    }
+    .demo-label b { color: #FDE68A; font-weight: 700; }
+    .chat {
+      padding: 16px 18px 18px;
+      display: flex; flex-direction: column; gap: 10px;
+      min-height: 220px;
+    }
+    .bubble {
+      max-width: 92%;
+      padding: 11px 14px;
+      border-radius: 14px;
+      font-size: 15px;
+      line-height: 1.55;
+    }
+    .bubble.bot {
+      align-self: flex-start;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--line);
+      border-top-left-radius: 4px;
+    }
+    .bubble.user {
+      align-self: flex-end;
+      background: var(--gold-dim);
+      border: 1px solid rgba(240, 192, 64, 0.35);
+      color: #FDE68A;
+      border-top-right-radius: 4px;
+      font-weight: 600;
+    }
+    .demo-choices {
+      display: flex; flex-wrap: wrap; gap: 8px;
+      padding: 0 18px 16px;
+    }
+    .demo-choices .choice { flex: 1 1 140px; }
+    .chat-actions { padding: 0 18px 18px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+
+    .books { display: grid; gap: 12px; }
+    @media (min-width: 700px) { .books { grid-template-columns: 1fr 1fr; } }
+    .book { padding: 18px; }
+    .book h3 { font-size: 18px; font-weight: 800; margin-bottom: 4px; }
+    .book .authors { font-size: 13.5px; color: #FDE68A; font-weight: 600; margin-bottom: 10px; }
+    .book p { color: var(--muted); font-size: 14.5px; }
+    .book-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .book-links a {
+      display: inline-flex; align-items: center;
+      padding: 8px 12px; border-radius: 10px;
+      border: 1px solid var(--line-strong);
+      background: rgba(255,255,255,0.05);
+      color: var(--ink); text-decoration: none;
+      font-size: 13.5px; font-weight: 700;
+    }
+    .book-links a:hover { border-color: rgba(240, 192, 64, 0.45); }
+    .disclosure {
+      margin-top: 14px; color: var(--muted); font-size: 13px; line-height: 1.5;
+    }
+
+    .quotes { display: grid; gap: 12px; }
+    @media (min-width: 800px) { .quotes { grid-template-columns: 1fr 1fr 1fr; } }
+    .quote {
+      background: linear-gradient(180deg, var(--card-2), var(--card));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+    }
+    .quote p {
+      font-size: 15px; line-height: 1.55;
+      margin-bottom: 10px;
+    }
+    .quote-attr { color: var(--muted); font-size: 12.5px; line-height: 1.5; }
+    .ideas-note { color: var(--muted); font-size: 14px; margin-top: 12px; max-width: 72ch; }
+
   </style>
 </head>
 <body>
-  <div class="preview-bar">This is a <b>draft preview</b> of the SuperWho home and request-help path. It is not the live SuperWho.io homepage yet.</div>
+  <div class="preview-bar">This is a <b>draft preview</b> of the SuperWho home (v2). The public site will live at SuperWho.io once the domain is pointed there.</div>
   <div class="wrap">
     <header class="brand-row">
       <img src="data:image/jpeg;base64,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" width="52" height="52" alt="SuperWho">
@@ -484,7 +567,8 @@
     <div class="hero">
       <div>
         <h1>Get out of the weeds, and back to the work you believe God is calling you to.</h1>
-        <p class="hero-copy">If you are running a business, a ministry, or both, the work in front of you can crowd out the work you were actually called to. SuperWho builds a living page — and the help around it — so the day-to-day can move without you living in it.</p>
+        <p class="hero-copy">SuperWho makes two ideas real: <strong>Who Not How</strong> and <strong>10x Is Easier Than 2x</strong>, from Dr. Benjamin Hardy, written with Dan Sullivan. When you need something done, the better question is not “How do I do this myself?” It is “Who can do this with me?” Your Who can be a person, and it can also be a virtual SuperWho, so 10x can happen faster, and more simply, than doing every part of the work yourself.</p>
+        <p class="hero-copy">If you are running a business, a ministry, or both, the work in front of you can crowd out the work you were actually called to. Tell us what’s keeping you in the weeds, and we will help you put a Who on it.</p>
         <div class="question">
           <p>What’s keeping you in the weeds instead of where you believe God is calling you in business and in life?</p>
           <div class="choices" role="group" aria-label="What's keeping you in the weeds">
@@ -497,6 +581,7 @@
         </div>
         <div class="hero-actions">
           <a class="btn" href="#request" id="heroCta">Request help</a>
+          <a class="btn secondary" href="#demo" id="demoCta">Try a demo SuperWho</a>
           <a class="btn secondary" href="#examples">See sample Smart Pages</a>
         </div>
       </div>
@@ -547,6 +632,80 @@
         </div>
       </section>
     </div>
+
+
+    <section class="section" id="demo">
+      <div class="sec-head">
+        <h2>Talk with a demo SuperWho</h2>
+        <span class="pill">Scripted demo</span>
+      </div>
+      <p class="sec-sub">This is a short, guided demo, running here on the page. It is not a live person, and it is not listening to you. It asks Jim’s question, reflects your answer, and then opens the Request help form with your choice already filled in.</p>
+      <div class="card demo-card">
+        <div class="demo-head">
+          <img src="data:image/jpeg;base64,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" width="40" height="40" alt="">
+          <div>
+            <h2>A demo SuperWho</h2>
+            <p class="demo-label">Clearly a <b>demo</b> — a friendly, scripted walk-through, not a real SuperWho session.</p>
+          </div>
+        </div>
+        <div class="chat" id="demoChat" aria-live="polite"></div>
+        <div class="demo-choices" id="demoChoices" role="group" aria-label="What's keeping you in the weeds" hidden></div>
+        <div class="chat-actions" id="demoActions" hidden></div>
+      </div>
+    </section>
+
+
+    <section class="section" id="books">
+      <div class="sec-head">
+        <h2>The two books behind this</h2>
+        <span class="pill">Ideas we build on</span>
+      </div>
+      <p class="sec-sub">SuperWho is how we put these ideas to work for kingdom-minded owners. We do not embed or play the audiobooks here. The links go to each book’s official Amazon and Audible pages, where you can use the publisher’s own Look Inside or Listen to sample buttons.</p>
+      <div class="books">
+        <article class="card book">
+          <h3>Who Not How</h3>
+          <div class="authors">Dr. Benjamin Hardy, with Dan Sullivan</div>
+          <p>The shift is simple, and it changes the work: stop asking how you will do it all yourself, and start asking who can do it with you. SuperWho makes that Who real — human people and virtual SuperWhos, working together.</p>
+          <div class="book-links">
+            <a data-amazon-asin="1401960588" href="https://www.amazon.com/dp/1401960588/?tag=TAG_PENDING" target="_blank" rel="noopener noreferrer">Amazon (Look Inside)</a>
+            <a href="https://www.audible.com/pd/Who-Not-How-Audiobook/1401960774" target="_blank" rel="noopener noreferrer">Audible (Listen to sample)</a>
+          </div>
+        </article>
+        <article class="card book">
+          <h3>10x Is Easier Than 2x</h3>
+          <div class="authors">Dr. Benjamin Hardy, with Dan Sullivan</div>
+          <p>10x is not about doing ten times the work. It is a simpler filter: keep what can actually move you that far, and let the rest go. With the right Whos — including virtual ones — that kind of leap can happen faster, and with less strain, than trying to inch forward alone.</p>
+          <div class="book-links">
+            <a data-amazon-asin="1401969950" href="https://www.amazon.com/dp/1401969950/?tag=TAG_PENDING" target="_blank" rel="noopener noreferrer">Amazon (Look Inside)</a>
+            <a href="https://www.audible.com/pd/10x-Is-Easier-than-2x-Audiobook/B0C2J8VZZ3" target="_blank" rel="noopener noreferrer">Audible (Listen to sample)</a>
+          </div>
+        </article>
+      </div>
+      <p class="disclosure">As an Amazon Associate we earn from qualifying purchases.</p>
+    </section>
+
+    <section class="section" id="ideas">
+      <div class="sec-head">
+        <h2>Ideas we build on</h2>
+        <span class="pill">Not endorsements</span>
+      </div>
+      <p class="sec-sub">These short lines are from the people who said them. We share them as ideas we work from, not as endorsements of SuperWho, and not as a claim that these authors or builders are affiliated with us.</p>
+      <div class="quotes">
+        <blockquote class="quote">
+          <p>“When I want to accomplish something, I’ve stopped asking, ‘How can I do this?’ Instead, I ask, ‘Who can do this for me?’”</p>
+          <footer class="quote-attr">Dan Sullivan, writing about the Who Not How philosophy (April 2024). The same question is in the official Who Not How book description from Hay House and Penguin Random House.</footer>
+        </blockquote>
+        <blockquote class="quote">
+          <p>“10X is not the outcome; it’s a counterintuitive process you can apply every time you want exponential growth in your life and business.”</p>
+          <footer class="quote-attr">Dan Sullivan and Dr. Benjamin Hardy, from the official publisher description of 10x Is Easier Than 2x (Hay House Business; Penguin Random House, 2023).</footer>
+        </blockquote>
+        <blockquote class="quote">
+          <p>“I think it’s also important to reason from first principles rather than by analogy… boil things down to the most fundamental truths… and then reason up from there.”</p>
+          <footer class="quote-attr">Elon Musk, Foundation interview with Kevin Rose, September 8, 2012. We use this as a way of thinking, not as an endorsement.</footer>
+        </blockquote>
+      </div>
+      <p class="ideas-note">No logos or marks from these authors, publishers, or companies are used here, so nothing on this page should be read as a partnership or affiliation.</p>
+    </section>
 
     <section class="section" id="how">
       <div class="sec-head">
@@ -695,7 +854,7 @@
     </section>
 
     <footer>
-      SuperWho · Draft home preview · Sample pages use made-up details only · Nothing on this preview changes the live SuperWho.io homepage.
+      SuperWho · Draft home preview (v2) · Sample pages use made-up details only · As an Amazon Associate we earn from qualifying purchases.
     </footer>
   </div>
 
@@ -704,7 +863,7 @@
   <script>
     window.SW_TRACK = { page: "superwho", slug: "superwho-home-preview-f47e27953086" };
   </script>
-  <script src="/assets/track.js?v=swtrack2"></script>
+  <script src="/assets/track.js?v=swtrack3"></script>
   <script>
   (function () {
     "use strict";
@@ -780,7 +939,106 @@
       return (document.getElementById(id).value || "").trim();
     }
 
-    form.addEventListener("submit", function (ev) {
+
+    var AMAZON_TAG = "TAG_PENDING"; // Jim's Associates tag drops in here later
+    document.querySelectorAll("a[data-amazon-asin]").forEach(function (a) {
+      var asin = a.getAttribute("data-amazon-asin");
+      if (!asin) return;
+      a.href = "https://www.amazon.com/dp/" + encodeURIComponent(asin) + "/?tag=" + encodeURIComponent(AMAZON_TAG);
+    });
+
+    var BENEFITS = {
+      "Lead gen": "When a Who is watching for the right people, you can stay with the work only you can do.",
+      "Revenue": "A clearer path from interest to income means you are not carrying every follow-up yourself.",
+      "Operations / back office": "When the back office keeps moving, you get time back for the work you were actually called to.",
+      "Social media": "Your presence can stay warm and consistent, without you living in the apps.",
+      "Other": "Whatever is in the weeds, the first step is just telling us, in your own words."
+    };
+    var DEMO_CHOICES = ["Lead gen", "Revenue", "Operations / back office", "Social media", "Other"];
+    var demoStarted = false;
+    var demoChat = document.getElementById("demoChat");
+    var demoChoices = document.getElementById("demoChoices");
+    var demoActions = document.getElementById("demoActions");
+
+    function addBubble(text, who) {
+      var b = document.createElement("div");
+      b.className = "bubble " + who;
+      b.textContent = text;
+      demoChat.appendChild(b);
+    }
+
+    function startDemo(fromClick) {
+      if (demoStarted) {
+        if (fromClick) document.getElementById("demo").scrollIntoView({ behavior: "smooth", block: "start" });
+        return;
+      }
+      demoStarted = true;
+      track("demo_start");
+      addBubble("Hi — I am a demo SuperWho. I’m a short, scripted guide on this page, not a live person. I can help you get started.", "bot");
+      addBubble("What’s keeping you in the weeds instead of where you believe God is calling you in business and in life?", "bot");
+      demoChoices.innerHTML = "";
+      DEMO_CHOICES.forEach(function (label) {
+        var btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "choice";
+        btn.textContent = label;
+        btn.setAttribute("data-value", label);
+        btn.addEventListener("click", function () { pickDemo(label); });
+        demoChoices.appendChild(btn);
+      });
+      demoChoices.hidden = false;
+      if (fromClick) document.getElementById("demo").scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    function pickDemo(label) {
+      demoChoices.hidden = true;
+      addBubble(label, "user");
+      var benefit = BENEFITS[label] || BENEFITS["Other"];
+      addBubble(benefit, "bot");
+      addBubble("If you want help with that, I’ll put this choice in the Request help form. You just add your name, and how to reach you.", "bot");
+      demoActions.innerHTML = "";
+      var go = document.createElement("button");
+      go.type = "button";
+      go.className = "btn";
+      go.id = "demoCompleteBtn";
+      go.textContent = "Continue to Request help";
+      go.addEventListener("click", function () {
+        track("demo_complete");
+        weeds.value = label;
+        document.querySelectorAll(".choice").forEach(function (b) {
+          b.setAttribute("aria-pressed", b.getAttribute("data-value") === label ? "true" : "false");
+        });
+        var el = document.getElementById("request");
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+        setTimeout(function () {
+          var name = document.getElementById("name");
+          if (name) name.focus();
+        }, 300);
+      });
+      demoActions.appendChild(go);
+      demoActions.hidden = false;
+    }
+
+    document.getElementById("demoCta").addEventListener("click", function (ev) {
+      ev.preventDefault();
+      startDemo(true);
+    });
+    // Start the scripted greeting once the demo is in view, or immediately if already visible.
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            startDemo(false);
+            io.disconnect();
+          }
+        });
+      }, { threshold: 0.35 });
+      io.observe(document.getElementById("demo"));
+    } else {
+      startDemo(false);
+    }
+
+        form.addEventListener("submit", function (ev) {
       ev.preventDefault();
       var name = val("name");
       var email = val("email");
