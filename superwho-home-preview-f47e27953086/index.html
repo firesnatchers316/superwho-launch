@@ -552,6 +552,30 @@
     .quote-attr { color: var(--muted); font-size: 12.5px; line-height: 1.5; }
     .ideas-note { color: var(--muted); font-size: 14px; margin-top: 12px; max-width: 72ch; }
 
+  
+    .stories { display: grid; gap: 12px; }
+    @media (min-width: 700px) { .stories { grid-template-columns: 1fr 1fr; } }
+    .story {
+      background: linear-gradient(180deg, var(--card-2), var(--card));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px;
+    }
+    .story h3 { font-size: 17px; font-weight: 800; margin-bottom: 8px; }
+    .story p { color: var(--muted); font-size: 14.5px; line-height: 1.6; }
+    .story-source {
+      margin-top: 10px;
+      font-size: 12px;
+      line-height: 1.45;
+      color: var(--muted);
+    }
+    .story-source a { color: #FDE68A; word-break: break-word; }
+    .turn {
+      margin-top: 16px;
+    }
+    .turn h3 { font-size: 22px; font-weight: 800; margin-bottom: 8px; }
+    .turn p { color: var(--muted); font-size: 15.5px; line-height: 1.6; margin-bottom: 14px; max-width: 62ch; }
+
   </style>
 </head>
 <body>
@@ -655,77 +679,6 @@
       </div>
     </section>
 
-
-    <section class="section" id="books">
-      <div class="sec-head">
-        <h2>Books we build on</h2>
-        <span class="pill">Recommended reading</span>
-      </div>
-      <p class="sec-sub">SuperWho is how we put these ideas to work for kingdom-minded owners. The first two books are the Who Not How and 10x ideas behind the work. The third is recommended reading for the first-principles, big-goals thinking in the Musk quote below. The fourth is about the courage to ask, and to keep going when the answer is no. We do not embed or play the audiobooks here. The links go to each book’s official Amazon and Audible pages, where you can use the publisher’s own Look Inside or Hear the sample buttons. These are recommendations, not endorsements, and not a claim that the authors, builders, or publishers are affiliated with us.</p>
-      <div class="books">
-        <article class="card book">
-          <h3>Who Not How</h3>
-          <div class="authors">Dr. Benjamin Hardy, with Dan Sullivan</div>
-          <p>The shift is simple, and it changes the work: stop asking how you will do it all yourself, and start asking who can do it with you. SuperWho makes that Who real — human people and virtual SuperWhos, working together.</p>
-          <div class="book-links">
-            <a data-amazon-asin="1401960588" href="https://www.amazon.com/dp/1401960588/?tag=TAG_PENDING" target="_blank" rel="noopener noreferrer">Amazon (Look Inside)</a>
-            <a href="https://www.audible.com/pd/1401960774" target="_blank" rel="noopener noreferrer">Hear the sample</a>
-          </div>
-        </article>
-        <article class="card book">
-          <h3>10x Is Easier Than 2x</h3>
-          <div class="authors">Dr. Benjamin Hardy, with Dan Sullivan</div>
-          <p>10x is not about doing ten times the work. It is a simpler filter: keep what can actually move you that far, and let the rest go. With the right Whos — including virtual ones — that kind of leap can happen faster, and with less strain, than trying to inch forward alone.</p>
-          <div class="book-links">
-            <a data-amazon-asin="1401969950" href="https://www.amazon.com/dp/1401969950/?tag=TAG_PENDING" target="_blank" rel="noopener noreferrer">Amazon (Look Inside)</a>
-            <a href="https://www.audible.com/pd/B0C2J8VZZ3" target="_blank" rel="noopener noreferrer">Hear the sample</a>
-          </div>
-        </article>
-        <article class="card book">
-          <h3>Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future</h3>
-          <div class="authors">Ashlee Vance</div>
-          <p>Recommended reading alongside the Musk quote on this page, about reasoning from first principles and going after ambitious goals. This is Ashlee Vance’s biography, not a book by Elon Musk, and it is not an endorsement of SuperWho.</p>
-          <div class="book-links">
-            <a data-amazon-asin="0062301233" href="https://www.amazon.com/dp/0062301233/?tag=TAG_PENDING" target="_blank" rel="noopener noreferrer">Amazon (Look Inside)</a>
-            <a href="https://www.audible.com/pd/B00UX8ODPM" target="_blank" rel="noopener noreferrer">Hear the sample</a>
-          </div>
-        </article>
-        <article class="card book">
-          <h3>Go for No! Yes Is the Destination, No Is How You Get There</h3>
-          <div class="authors">Richard Fenton and Andrea Waltz</div>
-          <p>Recommended reading for the courage to ask, and for outreach that doesn’t stall when someone says no. Asking is how you get there. Your SuperWho can handle the follow-up, so a no never has to stop you.</p>
-          <p class="book-quote">“Yes is the destination, No is how you get there.”</p>
-          <div class="book-links">
-            <a data-amazon-asin="0966398130" href="https://www.amazon.com/dp/0966398130/?tag=TAG_PENDING" target="_blank" rel="noopener noreferrer">Amazon (Look Inside)</a>
-            <a href="https://www.audible.com/pd/B00LMDAPM2" target="_blank" rel="noopener noreferrer">Hear the sample</a>
-          </div>
-        </article>
-      </div>
-      <p class="disclosure">As an Amazon Associate we earn from qualifying purchases.</p>
-    </section>
-
-    <section class="section" id="ideas">
-      <div class="sec-head">
-        <h2>Ideas we build on</h2>
-        <span class="pill">Not endorsements</span>
-      </div>
-      <p class="sec-sub">These short lines are from the people who said them. We share them as ideas we work from, not as endorsements of SuperWho, and not as a claim that these authors or builders are affiliated with us.</p>
-      <div class="quotes">
-        <blockquote class="quote">
-          <p>“When I want to accomplish something, I’ve stopped asking, ‘How can I do this?’ Instead, I ask, ‘Who can do this for me?’”</p>
-          <footer class="quote-attr">Dan Sullivan, writing about the Who Not How philosophy (April 2024). The same question is in the official Who Not How book description from Hay House and Penguin Random House.</footer>
-        </blockquote>
-        <blockquote class="quote">
-          <p>“10X is not the outcome; it’s a counterintuitive process you can apply every time you want exponential growth in your life and business.”</p>
-          <footer class="quote-attr">Dan Sullivan and Dr. Benjamin Hardy, from the official publisher description of 10x Is Easier Than 2x (Hay House Business; Penguin Random House, 2023).</footer>
-        </blockquote>
-        <blockquote class="quote">
-          <p>“I think it’s also important to reason from first principles rather than by analogy… boil things down to the most fundamental truths… and then reason up from there.”</p>
-          <footer class="quote-attr">Elon Musk, Foundation interview with Kevin Rose, September 8, 2012. We use this as a way of thinking, not as an endorsement.</footer>
-        </blockquote>
-      </div>
-      <p class="ideas-note">No logos or marks from these authors, publishers, or companies are used here, so nothing on this page should be read as a partnership or affiliation.</p>
-    </section>
 
     <section class="section" id="how">
       <div class="sec-head">
@@ -867,6 +820,118 @@
       <p class="tier-note">Prices for Business Builder, 10X Growth Executive, and Multi-Team CEO/COO have not been set yet, so they are not listed here. The names above are working names.</p>
     </section>
 
+    <section class="section" id="books">
+      <div class="sec-head">
+        <h2>Books we build on</h2>
+        <span class="pill">Recommended reading</span>
+      </div>
+      <p class="sec-sub">SuperWho is how we put these ideas to work for kingdom-minded owners. The first two books are the Who Not How and 10x ideas behind the work. The third is recommended reading for the first-principles, big-goals thinking in the Musk quote below. The fourth is about the courage to ask, and to keep going when the answer is no. We do not embed or play the audiobooks here. The links go to each book’s official Amazon and Audible pages, where you can use the publisher’s own Look Inside or Hear the sample buttons. These are recommendations, not endorsements, and not a claim that the authors, builders, or publishers are affiliated with us.</p>
+      <div class="books">
+        <article class="card book">
+          <h3>Who Not How</h3>
+          <div class="authors">Dr. Benjamin Hardy, with Dan Sullivan</div>
+          <p>The shift is simple, and it changes the work: stop asking how you will do it all yourself, and start asking who can do it with you. SuperWho makes that Who real — human people and virtual SuperWhos, working together.</p>
+          <div class="book-links">
+            <a data-amazon-asin="1401960588" href="https://www.amazon.com/dp/1401960588/?tag=TAG_PENDING" target="_blank" rel="noopener noreferrer">Amazon (Look Inside)</a>
+            <a href="https://www.audible.com/pd/1401960774" target="_blank" rel="noopener noreferrer">Hear the sample</a>
+          </div>
+        </article>
+        <article class="card book">
+          <h3>10x Is Easier Than 2x</h3>
+          <div class="authors">Dr. Benjamin Hardy, with Dan Sullivan</div>
+          <p>10x is not about doing ten times the work. It is a simpler filter: keep what can actually move you that far, and let the rest go. With the right Whos — including virtual ones — that kind of leap can happen faster, and with less strain, than trying to inch forward alone.</p>
+          <div class="book-links">
+            <a data-amazon-asin="1401969950" href="https://www.amazon.com/dp/1401969950/?tag=TAG_PENDING" target="_blank" rel="noopener noreferrer">Amazon (Look Inside)</a>
+            <a href="https://www.audible.com/pd/B0C2J8VZZ3" target="_blank" rel="noopener noreferrer">Hear the sample</a>
+          </div>
+        </article>
+        <article class="card book">
+          <h3>Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future</h3>
+          <div class="authors">Ashlee Vance</div>
+          <p>Recommended reading alongside the Musk quote on this page, about reasoning from first principles and going after ambitious goals. This is Ashlee Vance’s biography, not a book by Elon Musk, and it is not an endorsement of SuperWho.</p>
+          <div class="book-links">
+            <a data-amazon-asin="0062301233" href="https://www.amazon.com/dp/0062301233/?tag=TAG_PENDING" target="_blank" rel="noopener noreferrer">Amazon (Look Inside)</a>
+            <a href="https://www.audible.com/pd/B00UX8ODPM" target="_blank" rel="noopener noreferrer">Hear the sample</a>
+          </div>
+        </article>
+        <article class="card book">
+          <h3>Go for No! Yes Is the Destination, No Is How You Get There</h3>
+          <div class="authors">Richard Fenton and Andrea Waltz</div>
+          <p>Recommended reading for the courage to ask, and for outreach that doesn’t stall when someone says no. Asking is how you get there. Your SuperWho can handle the follow-up, so a no never has to stop you.</p>
+          <p class="book-quote">“Yes is the destination, No is how you get there.”</p>
+          <div class="book-links">
+            <a data-amazon-asin="0966398130" href="https://www.amazon.com/dp/0966398130/?tag=TAG_PENDING" target="_blank" rel="noopener noreferrer">Amazon (Look Inside)</a>
+            <a href="https://www.audible.com/pd/B00LMDAPM2" target="_blank" rel="noopener noreferrer">Hear the sample</a>
+          </div>
+        </article>
+      </div>
+      <p class="disclosure">As an Amazon Associate we earn from qualifying purchases.</p>
+    </section>
+
+    <section class="section" id="ideas">
+      <div class="sec-head">
+        <h2>Ideas we build on</h2>
+        <span class="pill">Not endorsements</span>
+      </div>
+      <p class="sec-sub">These short lines are from the people who said them. We share them as ideas we work from, not as endorsements of SuperWho, and not as a claim that these authors or builders are affiliated with us.</p>
+      <div class="quotes">
+        <blockquote class="quote">
+          <p>“When I want to accomplish something, I’ve stopped asking, ‘How can I do this?’ Instead, I ask, ‘Who can do this for me?’”</p>
+          <footer class="quote-attr">Dan Sullivan, writing about the Who Not How philosophy (April 2024). The same question is in the official Who Not How book description from Hay House and Penguin Random House.</footer>
+        </blockquote>
+        <blockquote class="quote">
+          <p>“10X is not the outcome; it’s a counterintuitive process you can apply every time you want exponential growth in your life and business.”</p>
+          <footer class="quote-attr">Dan Sullivan and Dr. Benjamin Hardy, from the official publisher description of 10x Is Easier Than 2x (Hay House Business; Penguin Random House, 2023).</footer>
+        </blockquote>
+        <blockquote class="quote">
+          <p>“I think it’s also important to reason from first principles rather than by analogy… boil things down to the most fundamental truths… and then reason up from there.”</p>
+          <footer class="quote-attr">Elon Musk, Foundation interview with Kevin Rose, September 8, 2012. We use this as a way of thinking, not as an endorsement.</footer>
+        </blockquote>
+      </div>
+      <p class="ideas-note">No logos or marks from these authors, publishers, or companies are used here, so nothing on this page should be read as a partnership or affiliation.</p>
+    </section>
+
+
+    <section class="section" id="history">
+      <div class="sec-head">
+        <h2>What history shows</h2>
+        <span class="pill">A Who who takes on the How</span>
+      </div>
+      <p class="sec-sub">Again and again, a respected leader reached much further because a trusted partner took on the How. These are stories from the public record. They are not endorsements of SuperWho, and not a claim that these people are affiliated with us. We do not use their photographs or logos here.</p>
+      <div class="stories">
+        <article class="story">
+          <h3>Warren Buffett and Charlie Munger</h3>
+          <p>Buffett was already skilled at buying cheap, “cigar-butt” companies, the way Benjamin Graham had taught him. Munger, his longtime partner, kept pressing a different How: buy wonderful businesses at fair prices, because the old method would not scale. Buffett later wrote that it took Charlie to set that course, that Berkshire was built to Charlie’s blueprint, and that Charlie was the architect of the Berkshire we know today.</p>
+          <p class="story-source">Source: Warren Buffett, Berkshire Hathaway letters, <a href="https://www.berkshirehathaway.com/SpecialLetters/WEB%20past%20present%20future%202014.pdf" target="_blank" rel="noopener noreferrer">2014</a> and <a href="https://www.berkshirehathaway.com/letters/2023ltr.pdf" target="_blank" rel="noopener noreferrer">2023</a>.</p>
+        </article>
+        <article class="story">
+          <h3>Walt Disney and Roy Disney</h3>
+          <p>When Walt Disney won a cartoon contract in 1923, he asked his brother Roy, who was recovering in a veterans’ hospital, to go into business with him. Roy took on the finance and business side so Walt could lead the creative work. After Walt’s death, Roy led the company through the building of Walt Disney World, which opened in 1971 with the company carrying no outstanding debt.</p>
+          <p class="story-source">Source: <a href="https://www.waltdisney.org/blog/100-years-ago-first-disney-bros-movie" target="_blank" rel="noopener noreferrer">Walt Disney Family Museum</a>; <a href="https://d23.com/a-to-z/disney-roy-oliver/" target="_blank" rel="noopener noreferrer">D23, The Official Disney Encyclopedia</a>.</p>
+        </article>
+        <article class="story">
+          <h3>Elon Musk and Gwynne Shotwell</h3>
+          <p>Musk set SpaceX’s technical and strategic direction. In 2008 he asked Gwynne Shotwell, already at the company, to serve as president, focused on day-to-day operations — sales, manufacturing, launch, and finance. As president and chief operating officer she has run those operations and customer relationships; NASA has noted that she built the Falcon launch manifest to more than 100 missions, representing more than $10 billion in business.</p>
+          <p class="story-source">Source: <a href="https://spacenews.com/spacex-names-gwynne-shotwell-company-president/" target="_blank" rel="noopener noreferrer">SpaceNews, December 2008</a>; <a href="https://www.nasa.gov/people/ms-gwynne-shotwell/" target="_blank" rel="noopener noreferrer">NASA biography of Gwynne Shotwell</a>.</p>
+        </article>
+        <article class="story">
+          <h3>Dan Sullivan and Dr. Benjamin Hardy</h3>
+          <p>Sullivan had built Strategic Coach and written for his own clients, but he has said he did not have the skill, or the feel for a general audience, to write a major-market book himself. Hardy became that Who — the writer who could take the Who Not How idea to a wider public. The result was Who Not How, and then further books together, including 10x Is Easier Than 2x.</p>
+          <p class="story-source">Source: Dan Sullivan, <a href="https://www.strategiccoach.com/resources/the-multiplier-mindset-blog/create-self-expansion-dan-sullivan-dr-benjamin-hardy-discuss-their-book-who-not-how" target="_blank" rel="noopener noreferrer">Strategic Coach</a>; <a href="https://www.strategiccoach.com/resources/podcasts/podcast-payoffs/97135361/how-to-win-big-by-doing-less" target="_blank" rel="noopener noreferrer">How To Win Big By Doing Less</a>.</p>
+        </article>
+        <article class="story">
+          <h3>Dr. Benjamin Hardy found a Who, too</h3>
+          <p>Hardy has said that even after he became the writer, he got stuck: it took almost a year to get the book deal, and he could not negotiate it or get the writing moving on his own. He found Whos, including Tucker Max, who coached and edited, and Hay House, which published the book. Hardy later said Who Not How was the easiest, most powerful book he had written, because of that collaboration.</p>
+          <p class="story-source">Source: <a href="https://www.biggerpockets.com/blog/biggerpockets-podcast-425-benjamin-hardy" target="_blank" rel="noopener noreferrer">Benjamin Hardy on the BiggerPockets podcast</a>; <a href="https://www.strategiccoach.com/resources/the-multiplier-mindset-blog/create-self-expansion-dan-sullivan-dr-benjamin-hardy-discuss-their-book-who-not-how" target="_blank" rel="noopener noreferrer">Strategic Coach</a>.</p>
+        </article>
+      </div>
+      <div class="card turn">
+        <h3>Your Who no longer has to be only a person. Now it can be virtual too.</h3>
+        <p>The pattern is the same: you keep the work you are called to, and a Who takes on the How. SuperWho is how that Who can be a person, and a virtual SuperWho, working together. If that would help you get out of the weeds, just ask.</p>
+        <a class="btn" href="#request" id="historyCta">Request help</a>
+      </div>
+    </section>
+
     <section class="card close section" id="close">
       <h2>When you are ready, just ask.</h2>
       <p class="sec-sub" style="margin-bottom:16px;">You do not need a polished plan. Tell us what is keeping you in the weeds, and we will take it from there.</p>
@@ -916,6 +981,7 @@
 
     document.getElementById("heroCta").addEventListener("click", goRequest);
     document.getElementById("closeCta").addEventListener("click", goRequest);
+    document.getElementById("historyCta").addEventListener("click", goRequest);
     jumpBtn.addEventListener("click", goRequest);
 
     document.querySelectorAll(".choice").forEach(function (btn) {
