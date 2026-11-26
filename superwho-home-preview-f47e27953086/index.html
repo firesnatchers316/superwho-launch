@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#08111E">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="description" content="SuperWho helps kingdom-minded business owners get out of the weeds and back to the work they believe God is calling them to. Request help on this page.">
+  <title>SuperWho · Request help</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+
+    :root {
+      --bg: #08111E;
+      --bg-2: #0D192B;
+      --card: #101F35;
+      --card-2: #152844;
+      --ink: #F4F7FB;
+      --muted: #9FB2C9;
+      --line: rgba(255, 255, 255, 0.10);
+      --line-strong: rgba(255, 255, 255, 0.18);
+      --gold: #F0C040;
+      --gold-deep: #E09010;
+      --gold-ink: #1A1200;
+      --gold-dim: rgba(240, 192, 64, 0.16);
+      --emerald: #34D399;
+      --emerald-dim: rgba(52, 211, 153, 0.14);
+      --sky: #38BDF8;
+      --sky-dim: rgba(56, 189, 248, 0.14);
+      --amber: #FBBF24;
+      --amber-dim: rgba(251, 191, 36, 0.14);
+      --rose: #FB7185;
+      --sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.55;
+      -webkit-text-size-adjust: 100%;
+      overflow-x: hidden;
+    }
+    body {
+      min-height: 100vh;
+      background:
+        radial-gradient(900px 420px at 85% -6%, rgba(240, 192, 64, 0.16), transparent 58%),
+        radial-gradient(760px 380px at -10% 12%, rgba(56, 189, 248, 0.10), transparent 55%),
+        var(--bg);
+    }
+    button, input, select, textarea { font: inherit; color: inherit; }
+    h1, h2, h3 { margin: 0; line-height: 1.2; letter-spacing: -0.02em; }
+    p { margin: 0; }
+    a { color: var(--gold); }
+    :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+    body {
+      padding-bottom: calc(96px + env(safe-area-inset-bottom, 0px));
+    }
+    .preview-bar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(11, 23, 41, 0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      text-align: center;
+      font-size: 12.5px;
+      font-weight: 500;
+      padding: 8px 14px;
+    }
+    .preview-bar b { color: var(--gold); font-weight: 700; }
+    .wrap {
+      width: min(1080px, 100%);
+      margin: 0 auto;
+      padding: 20px 16px 24px;
+    }
+    @media (min-width: 760px) {
+      .wrap { padding: 28px 24px 40px; }
+    }
+
+    .brand-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+    .brand-row img {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display: block;
+      box-shadow: 0 0 0 1px rgba(240, 192, 64, 0.28), 0 0 24px rgba(240, 192, 64, 0.18);
+      flex: 0 0 auto;
+    }
+    .kicker {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .brand-sub {
+      font-size: 13.5px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .hero {
+      display: grid;
+      gap: 22px;
+      margin-bottom: 28px;
+    }
+    @media (min-width: 900px) {
+      .hero {
+        grid-template-columns: 1.15fr 0.85fr;
+        align-items: start;
+        gap: 28px;
+      }
+    }
+    .hero h1 {
+      font-size: clamp(28px, 5.4vw, 46px);
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+    .hero-copy {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.65;
+      max-width: 62ch;
+      margin-bottom: 22px;
+    }
+    .hero-copy strong { color: var(--ink); }
+    .question {
+      background: linear-gradient(180deg, var(--card-2), var(--card));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px 16px 14px;
+      margin-bottom: 16px;
+    }
+    .question p {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.4;
+      letter-spacing: -0.01em;
+    }
+    .choices {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 14px;
+    }
+    @media (min-width: 560px) {
+      .choices { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    }
+    .choice {
+      appearance: none;
+      border: 1px solid var(--line-strong);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--ink);
+      border-radius: 12px;
+      padding: 10px 10px;
+      font-size: 13px;
+      font-weight: 600;
+      text-align: center;
+      cursor: pointer;
+      min-height: 44px;
+    }
+    .choice[aria-pressed="true"] {
+      background: var(--gold-dim);
+      border-color: rgba(240, 192, 64, 0.55);
+      color: #FDE68A;
+      box-shadow: 0 0 0 1px rgba(240, 192, 64, 0.25);
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      border: 0;
+      border-radius: 12px;
+      padding: 13px 20px;
+      font-size: 16px;
+      font-weight: 800;
+      cursor: pointer;
+      background: linear-gradient(180deg, #F6D25A, var(--gold-deep));
+      color: var(--gold-ink);
+      text-decoration: none;
+      transition: transform 0.1s ease, opacity 0.15s ease;
+      min-height: 48px;
+    }
+    .btn:hover { opacity: 0.94; }
+    .btn:disabled { opacity: 0.55; cursor: not-allowed; }
+    .btn.secondary {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--ink);
+      border: 1px solid var(--line);
+    }
+    .btn.sm { padding: 9px 14px; font-size: 13.5px; min-height: 40px; font-weight: 700; }
+
+    .card {
+      background: linear-gradient(180deg, var(--card-2), var(--card));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+    }
+    .form-card h2 {
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+    .form-lede {
+      color: var(--muted);
+      font-size: 14.5px;
+      margin-bottom: 16px;
+    }
+    .field { margin-bottom: 12px; }
+    .field label {
+      display: block;
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    .req { color: #FDE68A; }
+    input[type="text"], input[type="email"], input[type="tel"], select, textarea {
+      width: 100%;
+      background: rgba(8, 17, 30, 0.75);
+      border: 1px solid var(--line-strong);
+      border-radius: 10px;
+      padding: 11px 12px;
+      font-size: 16px;
+      color: var(--ink);
+      outline: none;
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: rgba(240, 192, 64, 0.65);
+    }
+    textarea { min-height: 88px; resize: vertical; }
+    .status-msg {
+      font-size: 13.5px;
+      margin: 0;
+      min-height: 20px;
+    }
+    .status-msg.err { color: #FDA4AF; }
+    .status-msg.ok { color: #86EFAC; }
+    .form-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 4px;
+    }
+    .receipt {
+      background: rgba(240, 192, 64, 0.10);
+      border: 1px solid rgba(240, 192, 64, 0.35);
+      border-radius: 12px;
+      padding: 16px;
+    }
+    .receipt p { font-size: 15px; color: var(--ink); margin-bottom: 12px; }
+
+    .section {
+      margin: 0 0 22px;
+    }
+    .sec-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+    .sec-head h2 { font-size: clamp(22px, 3vw, 28px); font-weight: 800; }
+    .sec-sub {
+      color: var(--muted);
+      font-size: 15.5px;
+      line-height: 1.65;
+      max-width: 70ch;
+      margin-bottom: 16px;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      background: var(--gold-dim);
+      border: 1px solid rgba(240, 192, 64, 0.35);
+      color: #FDE68A;
+      white-space: nowrap;
+    }
+
+    .steps {
+      display: grid;
+      gap: 12px;
+    }
+    @media (min-width: 760px) {
+      .steps { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    }
+    .step {
+      background: linear-gradient(180deg, var(--card-2), var(--card));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px;
+    }
+    .step-num {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .step h3 { font-size: 17px; font-weight: 700; margin-bottom: 8px; }
+    .step p { color: var(--muted); font-size: 14.5px; }
+
+    .examples {
+      display: grid;
+      gap: 12px;
+    }
+    @media (min-width: 700px) {
+      .examples { grid-template-columns: 1fr 1fr; }
+    }
+    .ex {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+      background: linear-gradient(180deg, var(--card-2), var(--card));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      min-height: 100%;
+      transition: border-color 0.15s ease, transform 0.15s ease;
+    }
+    .ex:hover { border-color: rgba(240, 192, 64, 0.4); transform: translateY(-1px); }
+    .ex-visual {
+      height: 128px;
+      position: relative;
+      border-bottom: 1px solid var(--line);
+      overflow: hidden;
+    }
+    .ex-body { padding: 16px 16px 18px; flex: 1; display: flex; flex-direction: column; }
+    .ex-body h3 { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
+    .ex-body p { color: var(--muted); font-size: 14px; flex: 1; }
+    .ex-link {
+      margin-top: 12px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #FDE68A;
+    }
+
+    /* Mini Smart Page mock art */
+    .mock {
+      position: absolute; inset: 0;
+      padding: 14px 16px;
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    .mock-bar { height: 8px; width: 42%; border-radius: 99px; background: rgba(255,255,255,0.18); }
+    .mock-line { height: 6px; border-radius: 99px; background: rgba(255,255,255,0.10); }
+    .mock-row { display: flex; gap: 8px; }
+    .mock-tile {
+      flex: 1; height: 36px; border-radius: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .viz-nonprofit { background: radial-gradient(80% 80% at 80% 0%, rgba(52,211,153,0.28), transparent 60%), #0B1A2C; }
+    .viz-ministry { background: radial-gradient(80% 80% at 20% 0%, rgba(56,189,248,0.28), transparent 60%), #0B1628; }
+    .viz-coaching { background: radial-gradient(80% 80% at 70% 20%, rgba(240,192,64,0.24), transparent 60%), #12181F; }
+    .viz-family { background: radial-gradient(80% 80% at 30% 0%, rgba(251,191,36,0.28), transparent 60%), #1A140E; }
+
+    .tiers {
+      display: grid;
+      gap: 12px;
+    }
+    @media (min-width: 760px) {
+      .tiers { grid-template-columns: 1fr 1fr; }
+    }
+    .tier {
+      background: linear-gradient(180deg, var(--card-2), var(--card));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px;
+    }
+    .tier.featured {
+      border-color: rgba(240, 192, 64, 0.4);
+      box-shadow: 0 0 0 1px rgba(240, 192, 64, 0.12);
+    }
+    .tier h3 { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
+    .tier .price {
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .tier p { color: var(--muted); font-size: 14.5px; }
+    .tier ul {
+      margin: 10px 0 0;
+      padding: 0 0 0 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .tier li { margin: 0 0 6px; }
+    .tier-note {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .close {
+      text-align: left;
+    }
+    .close h2 { margin-bottom: 8px; }
+
+    footer {
+      margin-top: 12px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      text-align: center;
+      font-size: 12.5px;
+      color: var(--muted);
+    }
+
+    .sticky-jump {
+      position: fixed;
+      right: 16px;
+      bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+      z-index: 45;
+      border: 0;
+      border-radius: 999px;
+      padding: 13px 20px;
+      background: linear-gradient(180deg, #F6D25A, var(--gold-deep));
+      color: var(--gold-ink);
+      font-weight: 800;
+      font-size: 15px;
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.45);
+      cursor: pointer;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+    .sticky-jump.is-hidden {
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(10px);
+    }
+  </style>
+</head>
+<body>
+  <div class="preview-bar">This is a <b>draft preview</b> of the SuperWho home and request-help path. It is not the live SuperWho.io homepage yet.</div>
+  <div class="wrap">
+    <header class="brand-row">
+      <img src="data:image/jpeg;base64,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" width="52" height="52" alt="SuperWho">
+      <div>
+        <div class="kicker">SuperWho Smart Pages</div>
+        <div class="brand-sub">For kingdom-minded business owners</div>
+      </div>
+    </header>
+
+    <div class="hero">
+      <div>
+        <h1>Get out of the weeds, and back to the work you believe God is calling you to.</h1>
+        <p class="hero-copy">If you are running a business, a ministry, or both, the work in front of you can crowd out the work you were actually called to. SuperWho builds a living page — and the help around it — so the day-to-day can move without you living in it.</p>
+        <div class="question">
+          <p>What’s keeping you in the weeds instead of where you believe God is calling you in business and in life?</p>
+          <div class="choices" role="group" aria-label="What's keeping you in the weeds">
+            <button type="button" class="choice" data-value="Lead gen" aria-pressed="false">Lead gen</button>
+            <button type="button" class="choice" data-value="Revenue" aria-pressed="false">Revenue</button>
+            <button type="button" class="choice" data-value="Operations / back office" aria-pressed="false">Operations / back office</button>
+            <button type="button" class="choice" data-value="Social media" aria-pressed="false">Social media</button>
+            <button type="button" class="choice" data-value="Other" aria-pressed="false">Other</button>
+          </div>
+        </div>
+        <div class="hero-actions">
+          <a class="btn" href="#request" id="heroCta">Request help</a>
+          <a class="btn secondary" href="#examples">See sample Smart Pages</a>
+        </div>
+      </div>
+
+      <section class="card form-card" id="request">
+        <h2>Request help</h2>
+        <p class="form-lede">Tell us a little, in your own words. Your request reaches Jim’s team right away. Phone is optional.</p>
+        <form id="helpForm" novalidate>
+          <div class="field">
+            <label for="name">Your name <span class="req">*</span></label>
+            <input type="text" id="name" name="name" autocomplete="name" required maxlength="80">
+          </div>
+          <div class="field">
+            <label for="email">Email <span class="req">*</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" required maxlength="120">
+          </div>
+          <div class="field">
+            <label for="phone">Phone <span style="text-transform:none;letter-spacing:0;font-family:var(--sans);font-weight:500;">(optional)</span></label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" maxlength="40">
+          </div>
+          <div class="field">
+            <label for="business">Business <span class="req">*</span></label>
+            <input type="text" id="business" name="business" autocomplete="organization" required maxlength="120">
+          </div>
+          <div class="field">
+            <label for="weeds">What’s keeping you in the weeds? <span class="req">*</span></label>
+            <select id="weeds" name="weeds" required>
+              <option value="">Choose one…</option>
+              <option value="Lead gen">Lead gen</option>
+              <option value="Revenue">Revenue</option>
+              <option value="Operations / back office">Operations / back office</option>
+              <option value="Social media">Social media</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="need">What do you need, in a sentence? <span class="req">*</span></label>
+            <textarea id="need" name="need" required maxlength="2000" placeholder="In one sentence, what would help you most right now?"></textarea>
+          </div>
+          <div class="form-row">
+            <button type="submit" class="btn" id="submitBtn">Send request</button>
+            <span class="status-msg" id="formStatus" role="status" aria-live="polite"></span>
+          </div>
+        </form>
+        <div class="receipt" id="receipt" hidden>
+          <p id="receiptText">We received your request, and Jim’s team was alerted right away.</p>
+          <button type="button" class="btn secondary sm" id="resetBtn">Send another request</button>
+        </div>
+      </section>
+    </div>
+
+    <section class="section" id="how">
+      <div class="sec-head">
+        <h2>How it works</h2>
+        <span class="pill">Three steps</span>
+      </div>
+      <p class="sec-sub">This is a simple front door. You ask for help. We hear you. Then we take the next step with you, only as far as you want to go.</p>
+      <div class="steps">
+        <article class="step">
+          <div class="step-num">Step 1</div>
+          <h3>Tell us what’s in the weeds</h3>
+          <p>Choose what is holding you back, and say in one sentence what you need. That is enough to start.</p>
+        </article>
+        <article class="step">
+          <div class="step-num">Step 2</div>
+          <h3>Your request reaches us instantly</h3>
+          <p>The moment you send it, the request lands in our inbox and Jim’s team is alerted. You do not have to follow up to be heard.</p>
+        </article>
+        <article class="step">
+          <div class="step-num">Step 3</div>
+          <h3>We come back with a clear next step</h3>
+          <p>Often that is a Smart Page you can open on your phone. If you want more help later, we can grow with you. If the page is enough, that is enough.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="examples">
+      <div class="sec-head">
+        <h2>What a Smart Page is</h2>
+        <span class="pill">Sample pages only</span>
+      </div>
+      <p class="sec-sub">A Smart Page is a living page made for one purpose, and it works on a phone. People can meet the work, ask for help, and keep things moving, without downloading an app or creating an account. The four pages below are samples, with made-up details. They are not real client pages, and they do not use real client names.</p>
+      <div class="examples">
+        <a class="ex" href="examples/nonprofit-hub/">
+          <div class="ex-visual viz-nonprofit" aria-hidden="true">
+            <div class="mock">
+              <div class="mock-bar" style="background:#34D399;width:36%;"></div>
+              <div class="mock-line" style="width:70%;"></div>
+              <div class="mock-row">
+                <div class="mock-tile"></div>
+                <div class="mock-tile"></div>
+                <div class="mock-tile"></div>
+              </div>
+              <div class="mock-line" style="width:88%;"></div>
+            </div>
+          </div>
+          <div class="ex-body">
+            <h3>Nonprofit hub dashboard</h3>
+            <p>One place to see tenants, announcements, maintenance, and incoming requests for a community hub, so the work does not live in a dozen inboxes.</p>
+            <div class="ex-link">Open the sample page →</div>
+          </div>
+        </a>
+        <a class="ex" href="examples/ministry-giving/">
+          <div class="ex-visual viz-ministry" aria-hidden="true">
+            <div class="mock">
+              <div class="mock-bar" style="background:#38BDF8;width:44%;"></div>
+              <div class="mock-line" style="width:62%;"></div>
+              <div class="mock-tile" style="height:48px;"></div>
+              <div class="mock-line" style="width:50%;"></div>
+            </div>
+          </div>
+          <div class="ex-body">
+            <h3>Ministry giving page</h3>
+            <p>A clear, phone-friendly page that explains the work, invites a gift, and makes it easy to ask a question without getting lost.</p>
+            <div class="ex-link">Open the sample page →</div>
+          </div>
+        </a>
+        <a class="ex" href="examples/coaching-community/">
+          <div class="ex-visual viz-coaching" aria-hidden="true">
+            <div class="mock">
+              <div class="mock-bar" style="background:#F0C040;width:40%;"></div>
+              <div class="mock-line" style="width:74%;"></div>
+              <div class="mock-row">
+                <div class="mock-tile" style="height:44px;border-radius:50%;flex:0 0 44px;"></div>
+                <div class="mock-tile" style="height:44px;border-radius:50%;flex:0 0 44px;"></div>
+                <div class="mock-tile" style="height:44px;border-radius:50%;flex:0 0 44px;"></div>
+              </div>
+            </div>
+          </div>
+          <div class="ex-body">
+            <h3>Coaching community</h3>
+            <p>A home base for a coaching community: what is happening this week, how to get in, and a simple way to ask for help.</p>
+            <div class="ex-link">Open the sample page →</div>
+          </div>
+        </a>
+        <a class="ex" href="examples/family-gathering/">
+          <div class="ex-visual viz-family" aria-hidden="true">
+            <div class="mock">
+              <div class="mock-bar" style="background:#FBBF24;width:48%;"></div>
+              <div class="mock-line" style="width:66%;"></div>
+              <div class="mock-row">
+                <div class="mock-tile"></div>
+                <div class="mock-tile"></div>
+              </div>
+            </div>
+          </div>
+          <div class="ex-body">
+            <h3>Thanksgiving family page</h3>
+            <p>A warm page for a family gathering: who is bringing what, when to arrive, and a kind place to leave a note. Sample details only.</p>
+            <div class="ex-link">Open the sample page →</div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="section" id="tiers">
+      <div class="sec-head">
+        <h2>A simple place to start</h2>
+        <span class="pill">Smart Pages</span>
+      </div>
+      <p class="sec-sub">A Smart Page can begin simply. If you want more help later, we can grow with you. We will not push a bigger system on a business that is not asking for it.</p>
+      <div class="tiers">
+        <article class="tier featured">
+          <div class="price">Free to start</div>
+          <h3>SuperWho Basic</h3>
+          <p>A living Smart Page, hosted on SuperWho.io, that introduces the work, hears people, and keeps things moving.</p>
+          <ul>
+            <li>The page itself is free, with hosting on SuperWho.io.</li>
+            <li>Optional basic management is $9 a month. We keep the page updated, track who opened it and when, alert you when someone sends a request or completes a form, and send a weekly report on what visitors actually did.</li>
+            <li>If you later want the page on your own web address, a done-for-you transfer is $97 and is completed in under 90 minutes.</li>
+          </ul>
+        </article>
+        <article class="tier">
+          <div class="price">If you want more later</div>
+          <h3>Business Builder</h3>
+          <p>The weekly system around the page: content, follow-up, and a place to see what is going on, without hiring a bigger human team yet.</p>
+        </article>
+        <article class="tier">
+          <div class="price">If growth is the next problem</div>
+          <h3>10X Growth Executive</h3>
+          <p>Help with being found by the right people, handling inquiries, and growing without standing up a traditional marketing department.</p>
+        </article>
+        <article class="tier">
+          <div class="price">For more than one team or brand</div>
+          <h3>Multi-Team CEO/COO</h3>
+          <p>A coordination layer for more than one team, brand, or community, with approval staying in your hands.</p>
+        </article>
+      </div>
+      <p class="tier-note">Prices for Business Builder, 10X Growth Executive, and Multi-Team CEO/COO have not been set yet, so they are not listed here. The names above are working names.</p>
+    </section>
+
+    <section class="card close section" id="close">
+      <h2>When you are ready, just ask.</h2>
+      <p class="sec-sub" style="margin-bottom:16px;">You do not need a polished plan. Tell us what is keeping you in the weeds, and we will take it from there.</p>
+      <a class="btn" href="#request" id="closeCta">Request help</a>
+    </section>
+
+    <footer>
+      SuperWho · Draft home preview · Sample pages use made-up details only · Nothing on this preview changes the live SuperWho.io homepage.
+    </footer>
+  </div>
+
+  <button type="button" class="sticky-jump" id="jumpBtn">Request help</button>
+
+  <script>
+    window.SW_TRACK = { page: "superwho", slug: "superwho-home-preview-f47e27953086" };
+  </script>
+  <script src="/assets/track.js?v=swtrack2"></script>
+  <script>
+  (function () {
+    "use strict";
+
+    function track(event) {
+      if (typeof window.swTrack === "function") {
+        try { return window.swTrack(event); } catch (err) { return null; }
+      }
+      return null;
+    }
+
+    var form = document.getElementById("helpForm");
+    var statusEl = document.getElementById("formStatus");
+    var submitBtn = document.getElementById("submitBtn");
+    var receipt = document.getElementById("receipt");
+    var receiptText = document.getElementById("receiptText");
+    var weeds = document.getElementById("weeds");
+    var jumpBtn = document.getElementById("jumpBtn");
+
+    function goRequest(ev) {
+      if (ev) ev.preventDefault();
+      track("tap_request");
+      var el = document.getElementById("request");
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      setTimeout(function () {
+        var name = document.getElementById("name");
+        if (name) name.focus();
+      }, 300);
+    }
+
+    document.getElementById("heroCta").addEventListener("click", goRequest);
+    document.getElementById("closeCta").addEventListener("click", goRequest);
+    jumpBtn.addEventListener("click", goRequest);
+
+    document.querySelectorAll(".choice").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        document.querySelectorAll(".choice").forEach(function (b) {
+          b.setAttribute("aria-pressed", "false");
+        });
+        btn.setAttribute("aria-pressed", "true");
+        weeds.value = btn.getAttribute("data-value") || "";
+      });
+    });
+    weeds.addEventListener("change", function () {
+      var val = weeds.value;
+      document.querySelectorAll(".choice").forEach(function (b) {
+        b.setAttribute("aria-pressed", b.getAttribute("data-value") === val ? "true" : "false");
+      });
+    });
+
+    function syncJump() {
+      var r = document.getElementById("request").getBoundingClientRect();
+      var formVisible = r.top < window.innerHeight - 80 && r.bottom > 80;
+      jumpBtn.classList.toggle("is-hidden", !!formVisible);
+    }
+    window.addEventListener("scroll", syncJump, { passive: true });
+    window.addEventListener("resize", syncJump);
+    syncJump();
+
+    document.getElementById("resetBtn").addEventListener("click", function () {
+      receipt.hidden = true;
+      form.hidden = false;
+      form.reset();
+      document.querySelectorAll(".choice").forEach(function (b) {
+        b.setAttribute("aria-pressed", "false");
+      });
+      statusEl.textContent = "";
+      statusEl.className = "status-msg";
+      document.getElementById("name").focus();
+    });
+
+    function val(id) {
+      return (document.getElementById(id).value || "").trim();
+    }
+
+    form.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      var name = val("name");
+      var email = val("email");
+      var phone = val("phone");
+      var business = val("business");
+      var choice = val("weeds");
+      var need = val("need");
+      if (!name || !email || !business || !choice || !need) {
+        statusEl.className = "status-msg err";
+        statusEl.textContent = "Please fill in the required fields, including what is keeping you in the weeds and what you need in a sentence.";
+        return;
+      }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        statusEl.className = "status-msg err";
+        statusEl.textContent = "Please enter a working email address.";
+        document.getElementById("email").focus();
+        return;
+      }
+      if (typeof window.swTalk !== "function") {
+        statusEl.className = "status-msg err";
+        statusEl.textContent = "Request routing is still loading — try again in a second.";
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending…";
+      statusEl.textContent = "";
+      statusEl.className = "status-msg";
+
+      var lines = [
+        "Request help from the SuperWho home preview",
+        "Name: " + name,
+        "Email: " + email,
+        "Phone: " + (phone || "(not given)"),
+        "Business: " + business,
+        "In the weeds: " + choice,
+        "Need: " + need
+      ];
+      track("tap_request");
+      window.swTalk({
+        from: name + " (SuperWho home preview)",
+        text: lines.join("\n")
+      }).then(function (res) {
+        if (res && res.ok === false) throw new Error(res.error || "send failed");
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Send request";
+        form.hidden = true;
+        receipt.hidden = false;
+        var rid = res && res.id ? " (" + res.id + ")" : "";
+        var testNote = res && res.test ? " This was logged as a test, so it did not send an alert." : "";
+        receiptText.textContent = "We received your request" + rid + ", and Jim’s team was alerted right away." + testNote;
+      }).catch(function () {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Send request";
+        statusEl.className = "status-msg err";
+        statusEl.textContent = "That did not go through. Please try again in a moment.";
+      });
+    });
+  })();
+  </script>
+</body>
+</html>
