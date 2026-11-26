@@ -517,7 +517,8 @@
     .chat-actions { padding: 0 18px 18px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
 
     .books { display: grid; gap: 12px; }
-    @media (min-width: 700px) { .books { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); } }
+    @media (min-width: 600px) { .books { grid-template-columns: 1fr 1fr; } }
+    .book-quote { margin-top: 10px; font-size: 14.5px; color: var(--ink); line-height: 1.45; }
     .book { padding: 18px; }
     .book h3 { font-size: 18px; font-weight: 800; margin-bottom: 4px; }
     .book .authors { font-size: 13.5px; color: #FDE68A; font-weight: 600; margin-bottom: 10px; }
@@ -588,7 +589,7 @@
 
       <section class="card form-card" id="request">
         <h2>Request help</h2>
-        <p class="form-lede">Tell us a little, in your own words. Your request reaches Jim’s team right away. Phone is optional.</p>
+        <p class="form-lede">Tell us a little, in your own words. Asking is how you get there. Your request reaches Jim’s team right away, and your SuperWho handles the follow-up, so a no never has to stop you. Phone is optional.</p>
         <form id="helpForm" novalidate>
           <div class="field">
             <label for="name">Your name <span class="req">*</span></label>
@@ -660,7 +661,7 @@
         <h2>Books we build on</h2>
         <span class="pill">Recommended reading</span>
       </div>
-      <p class="sec-sub">SuperWho is how we put these ideas to work for kingdom-minded owners. The first two books are the Who Not How and 10x ideas behind the work. The third is recommended reading if you want more of the first-principles, big-goals thinking in the Musk quote below. We do not embed or play the audiobooks here. The links go to each book’s official Amazon and Audible pages, where you can use the publisher’s own Look Inside or Hear the sample buttons. These are recommendations, not endorsements, and not a claim that the authors, builders, or publishers are affiliated with us.</p>
+      <p class="sec-sub">SuperWho is how we put these ideas to work for kingdom-minded owners. The first two books are the Who Not How and 10x ideas behind the work. The third is recommended reading for the first-principles, big-goals thinking in the Musk quote below. The fourth is about the courage to ask, and to keep going when the answer is no. We do not embed or play the audiobooks here. The links go to each book’s official Amazon and Audible pages, where you can use the publisher’s own Look Inside or Hear the sample buttons. These are recommendations, not endorsements, and not a claim that the authors, builders, or publishers are affiliated with us.</p>
       <div class="books">
         <article class="card book">
           <h3>Who Not How</h3>
@@ -687,6 +688,16 @@
           <div class="book-links">
             <a data-amazon-asin="0062301233" href="https://www.amazon.com/dp/0062301233/?tag=TAG_PENDING" target="_blank" rel="noopener noreferrer">Amazon (Look Inside)</a>
             <a href="https://www.audible.com/pd/B00UX8ODPM" target="_blank" rel="noopener noreferrer">Hear the sample</a>
+          </div>
+        </article>
+        <article class="card book">
+          <h3>Go for No! Yes Is the Destination, No Is How You Get There</h3>
+          <div class="authors">Richard Fenton and Andrea Waltz</div>
+          <p>Recommended reading for the courage to ask, and for outreach that doesn’t stall when someone says no. Asking is how you get there. Your SuperWho can handle the follow-up, so a no never has to stop you.</p>
+          <p class="book-quote">“Yes is the destination, No is how you get there.”</p>
+          <div class="book-links">
+            <a data-amazon-asin="0966398130" href="https://www.amazon.com/dp/0966398130/?tag=TAG_PENDING" target="_blank" rel="noopener noreferrer">Amazon (Look Inside)</a>
+            <a href="https://www.audible.com/pd/B00LMDAPM2" target="_blank" rel="noopener noreferrer">Hear the sample</a>
           </div>
         </article>
       </div>
