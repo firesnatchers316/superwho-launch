@@ -1,0 +1,30 @@
+name: Materialize Thanksgiving graphics
+on:
+  push:
+    paths:
+      - "assets/thanksgiving-2026/*.png.b64"
+      - ".github/workflows/materialize-thanksgiving-graphics.yml"
+  workflow_dispatch:
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Decode PNGs, commit, and remove helper files
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          cd assets/thanksgiving-2026
+          for f in *.png.b64; do
+            base64 -d "$f" > "${f%.b64}"
+            file "${f%.b64}"
+          done
+          git config user.name "firesnatchers316"
+          git config user.email "firesnatchers316@gmail.com"
+          git add *.png
+          git rm -f *.png.b64 || true
+          git rm -f ../../.github/workflows/materialize-thanksgiving-graphics.yml || true
+          git commit -m "Add Thanksgiving 2026 graphics for Blessbnb and FireSnatchers posts"
+          git push
