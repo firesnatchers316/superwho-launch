@@ -1,10 +1,10 @@
 {
-  "updated": "Tue, Nov 24 · 4:22 PM ET",
-  "now": "Your first look is built",
+  "updated": "Fri, Nov 27 · 8:27 AM ET",
+  "now": "Your first look is open",
   "launch": {
-    "label": "Your first look opens",
+    "label": "Your first look opened",
     "due": "2026-11-25T09:00:00-05:00",
-    "text": "Wednesday, November 25, 2026 · 9:00 AM ET"
+    "text": "Opened Wednesday, November 25, 2026 · 9:00 AM ET"
   },
   "steps": [
     {
@@ -36,12 +36,11 @@
       "text": "Built around corporate, medical and dental, and restaurant clients, with your gallery photos and booking up front. Spots waiting on you are clearly marked."
     },
     {
-      "state": "now",
+      "state": "done",
       "by": "By us",
       "when": "Wed, Nov 25 · 9:00 AM ET",
       "title": "Your first look",
-      "due": "2026-11-25T09:00:00-05:00",
-      "text": "Opens Wednesday at 9:00 AM ET. Tap around your draft and tell us what to change. Your site stays as it is. Nothing goes live until you say so."
+      "text": "Opened Wednesday at 9:00 AM ET. Tap around your draft and tell us what to change. Your site stays as it is. Nothing goes live until you say so."
     },
     {
       "state": "later",

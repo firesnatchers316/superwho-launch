@@ -1,0 +1,44 @@
+name: Materialize client page restores
+on:
+  push:
+    paths:
+      - "rosa-5ea120co9o32/assets/restore-images.tar.b64"
+      - ".github/workflows/materialize-client-restores.yml"
+  workflow_dispatch:
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Materialize Rosa images and PJ first-look film, then remove helpers
+        run: |
+          set -euo pipefail
+
+          mkdir -p rosa-5ea120co9o32/assets
+          base64 -d rosa-5ea120co9o32/assets/restore-images.tar.b64 | tar -x -C rosa-5ea120co9o32/assets
+          find rosa-5ea120co9o32/assets -type f ! -name '*.b64' -print -exec file {} +
+
+          python3 - <<'PY'
+          import base64, json
+          from pathlib import Path
+          root = Path("assets/pj-who-v3")
+          man = json.loads((root / "who-parts/manifest.json").read_text())
+          parts = [(root / "who-parts" / name).read_text().strip() for name in man["files"]]
+          data = base64.b64decode("".join(parts))
+          if b"ftyp" not in data[:64]:
+              raise SystemExit("decoded who.mp4 does not look like an MP4")
+          dest = root / "who.mp4"
+          dest.write_bytes(data)
+          print(f"wrote {dest} bytes={len(data)}")
+          PY
+          file assets/pj-who-v3/who.mp4
+
+          git config user.name "firesnatchers316"
+          git config user.email "firesnatchers316@gmail.com"
+          git add rosa-5ea120co9o32/assets assets/pj-who-v3/who.mp4
+          git rm -f rosa-5ea120co9o32/assets/restore-images.tar.b64
+          git rm -f .github/workflows/materialize-client-restores.yml
+          git commit -m "Restore Rosa SuperWho images and the PJ first-look film"
+          git push
