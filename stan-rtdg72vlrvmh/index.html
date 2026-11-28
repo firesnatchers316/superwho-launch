@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0B0B0B">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="description" content="A private page to write Jim a note. He and his team will get it right away.">
+  <title>Reply to Jim</title>
+  <style>
+    :root {
+      --navy: #0B0B0B;
+      --card: #1A1612;
+      --ink: #F7F1E8;
+      --muted: #B8ADA0;
+      --cyan: #E8E8E8;
+      --green: #22C55E;
+      --green-ink: #0B0B0B;
+      --amber: #FBBF24;
+      --line: #2C2C2C;
+      --cream: #F7F1E8;
+      --sans: "Schibsted Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+      --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+      --safe-t: env(safe-area-inset-top, 0px);
+      --safe-b: env(safe-area-inset-bottom, 0px);
+      --safe-l: env(safe-area-inset-left, 0px);
+      --safe-r: env(safe-area-inset-right, 0px);
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--navy);
+      color: var(--ink);
+      min-height: 100%;
+      font-family: var(--sans);
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+    body { min-height: 100svh; overflow-x: hidden; }
+    button, textarea, input, label { font-family: inherit; }
+    button {
+      -webkit-tap-highlight-color: transparent;
+      cursor: pointer;
+    }
+    .app {
+      max-width: 430px;
+      margin: 0 auto;
+      padding-top: max(20px, var(--safe-t));
+      padding-left: max(22px, var(--safe-l));
+      padding-right: max(22px, var(--safe-r));
+      padding-bottom: max(36px, var(--safe-b));
+    }
+    .wordmark {
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin: 8px 0 18px;
+    }
+
+    .sw-name,
+    .wordmark .sw-name,
+    .brand .sw-name,
+    .welcome-brand .sw-name {
+      text-transform: none;
+      font-variant: small-caps;
+      font-variant-caps: small-caps;
+    }
+    h1 {
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin: 0 0 10px;
+    }
+    .intro {
+      margin: 0 0 22px;
+      font-size: 18px;
+      line-height: 1.4;
+      color: var(--muted);
+    }
+    label.field-label {
+      display: block;
+      font-size: 15px;
+      font-weight: 600;
+      margin: 0 0 8px;
+    }
+    textarea {
+      width: 100%;
+      min-height: 160px;
+      resize: vertical;
+      background: var(--card);
+      color: var(--ink);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px 16px;
+      font-size: 18px;
+      line-height: 1.4;
+      outline: none;
+    }
+    textarea:focus { border-color: var(--amber); }
+    .actions {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .primary, .secondary {
+      width: 100%;
+      min-height: 56px;
+      border-radius: 16px;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .primary {
+      border: 0;
+      background: var(--cream);
+      color: var(--navy);
+      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.12);
+    }
+    .primary:active { transform: scale(0.98); }
+    .primary.is-good { background: var(--green); color: var(--green-ink); }
+    .secondary {
+      border: 2px solid var(--cream);
+      background: transparent;
+      color: var(--cream);
+    }
+    .secondary:active { background: #221e1a; }
+    .primary:disabled, .secondary:disabled { opacity: 0.6; cursor: default; transform: none; }
+    .upload-btn { cursor: pointer; }
+    #photo-input,
+    #follow-photo {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+    }
+
+    .reply-panel {
+      background: var(--card);
+      border: 1px solid rgba(251, 191, 36, 0.28);
+      border-radius: 20px;
+      padding: 20px 18px 22px;
+      margin: 0 0 8px;
+      box-shadow: 0 0 0 1px rgba(251, 191, 36, 0.12), 0 0 24px rgba(251, 191, 36, 0.18);
+      animation: replyGlow 3.5s ease-in-out infinite;
+    }
+    .talk-heading {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin: 0 0 14px;
+    }
+    @keyframes replyGlow {
+      0%, 100% {
+        box-shadow: 0 0 0 1px rgba(251, 191, 36, 0.10), 0 0 16px rgba(251, 191, 36, 0.10);
+      }
+      50% {
+        box-shadow: 0 0 0 1px rgba(251, 191, 36, 0.22), 0 0 36px rgba(251, 191, 36, 0.28);
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .reply-panel {
+        animation: none;
+        box-shadow: 0 0 0 1px rgba(251, 191, 36, 0.16), 0 0 24px rgba(251, 191, 36, 0.20);
+      }
+    }
+    @media (min-width: 768px) {
+      .app { max-width: 520px; }
+    }
+    .previews {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .previews[hidden], [hidden] { display: none !important; }
+    .previews img {
+      width: 64px;
+      height: 64px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      display: block;
+    }
+    .hint {
+      margin: 12px 0 0;
+      font-size: 15px;
+      line-height: 1.4;
+      color: var(--muted);
+      text-align: center;
+    }
+    .hint.is-error { color: var(--amber); }
+    .receipt {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px 16px 16px;
+      margin: 0 0 18px;
+    }
+    .status-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 12px;
+    }
+    .pill {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      padding: 5px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(251, 191, 36, 0.45);
+      background: rgba(251, 191, 36, 0.1);
+      color: var(--amber);
+    }
+    .pill.is-working {
+      border-color: rgba(232, 232, 232, 0.35);
+      background: rgba(232, 232, 232, 0.08);
+      color: var(--cyan);
+    }
+    .pill.is-answered {
+      border-color: rgba(34, 197, 94, 0.45);
+      background: rgba(34, 197, 94, 0.12);
+      color: #86efac;
+    }
+    .receipt-msg {
+      margin: 0 0 14px;
+      font-size: 18px;
+      line-height: 1.35;
+    }
+    .meta {
+      display: grid;
+      gap: 8px;
+      margin: 0;
+    }
+    .meta div {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .meta dt, .k {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .meta dd, .v {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.35;
+      word-break: break-word;
+    }
+    .summary-card {
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+    }
+    .summary-card p {
+      margin: 8px 0 0;
+      font-size: 17px;
+      line-height: 1.45;
+    }
+    .summary-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin-top: 12px;
+      display: block;
+      border: 1px solid var(--line);
+    }
+    .follow {
+      margin-top: 20px;
+    }
+    .follow textarea { min-height: 110px; }
+    .follow .actions { margin-top: 14px; }
+    .follow .primary, .follow .secondary { margin-top: 0; }
+    .footer {
+      margin: 28px 0 8px;
+      font-size: 14px;
+      line-height: 1.45;
+      color: #8a8178;
+      text-align: center;
+    }
+    .checked {
+      margin: 10px 0 0;
+      font-size: 13px;
+      color: #8a8178;
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <p class="wordmark"><span class="sw-name">SuperWho</span></p>
+
+    <section id="compose">
+      <h1>Reply to Jim</h1>
+      <p class="intro">Hi Stan — write Jim a note here, and add a photo if you want. He and his team will get it right away.</p>
+      <div class="reply-panel">
+        <h2 class="talk-heading">Talk to us here</h2>
+        <form id="compose-form" novalidate>
+          <label class="field-label" for="note">Your note</label>
+          <textarea id="note" name="note" rows="6" placeholder="Type your message…" autocomplete="off"></textarea>
+          <div class="previews" id="previews" hidden></div>
+          <input id="photo-input" type="file" accept="image/*" capture="environment">
+          <div class="actions">
+            <label class="secondary upload-btn" for="photo-input">Add a photo</label>
+            <button class="primary" type="submit" id="send-btn">Send</button>
+          </div>
+          <p class="hint" id="compose-hint" hidden></p>
+        </form>
+      </div>
+    </section>
+
+    <section id="receipt" hidden>
+      <h1>Reply to Jim</h1>
+      <div class="receipt">
+        <div class="status-row">
+          <span class="pill" id="status-pill">Received</span>
+        </div>
+        <p class="receipt-msg" id="receipt-msg">Received — Jim's team will answer shortly.</p>
+        <dl class="meta">
+          <div>
+            <dt>Reference</dt>
+            <dd id="ref-id"></dd>
+          </div>
+          <div>
+            <dt>Received</dt>
+            <dd id="ref-time"></dd>
+          </div>
+        </dl>
+        <div class="summary-card" id="answer" hidden>
+          <div class="k">Jim's reply</div>
+          <p id="answer-text"></p>
+          <img id="answer-image" alt="An update for you." hidden>
+        </div>
+        <p class="checked" id="checked" hidden></p>
+      </div>
+
+      <div class="follow reply-panel" id="follow" hidden>
+        <h2 class="talk-heading">Talk to us here</h2>
+        <label class="field-label" for="follow-note">Send a follow-up</label>
+        <textarea id="follow-note" rows="4" placeholder="Add a note or ask Jim to change something…"></textarea>
+        <div class="previews" id="follow-previews" hidden></div>
+        <input id="follow-photo" type="file" accept="image/*">
+        <div class="actions">
+          <label class="secondary upload-btn" for="follow-photo">Add a photo</label>
+          <button class="primary" type="button" id="follow-btn">Send follow-up</button>
+          <button class="secondary" type="button" id="good-btn" hidden>Looks good</button>
+        </div>
+        <p class="hint" id="follow-hint" hidden></p>
+      </div>
+
+      <button class="secondary" type="button" id="new-btn" style="margin-top:16px">Start a new note</button>
+    </section>
+
+    <p class="footer">Private page · only you and Jim's team</p>
+  </div>
+
+  <script>
+    (function () {
+      // SUBMIT_URL: the Apps Script web app URL (ends in /exec). See SETUP.md.
+      // Leave the placeholder in place until the /exec URL exists.
+      var SUBMIT_URL = 'https://script.google.com/macros/s/AKfycbzZfcnpZKrTHasHBbSVYls9pylRoOZY-q0sK--nPn2k7hEUIZ9_JHtpmjaMT-PdG92V/exec';
+      // APP_KEY: must match APP_KEY in apps-script/Code.gs (a light spam guard, not real security).
+      var APP_KEY = 'll32UdJ507kGZdhQQpmWS9F70GQuijOL';
+      var REQUEST_KEY = "stanPendingRequest";
+      var META_KEY = "stanRequestMeta";
+      var POLL_MS = 10000;
+      if (/^https?:\/\/(127\.0\.0\.1|localhost)\b/.test(SUBMIT_URL)) POLL_MS = 400;
+
+      function liveUrl() {
+        return SUBMIT_URL && SUBMIT_URL.indexOf("PASTE_") !== 0;
+      }
+
+      var compose = document.getElementById("compose");
+      var receipt = document.getElementById("receipt");
+      var note = document.getElementById("note");
+      var sendBtn = document.getElementById("send-btn");
+      var photoInput = document.getElementById("photo-input");
+      var previews = document.getElementById("previews");
+      var composeHint = document.getElementById("compose-hint");
+      var statusPill = document.getElementById("status-pill");
+      var receiptMsg = document.getElementById("receipt-msg");
+      var refId = document.getElementById("ref-id");
+      var refTime = document.getElementById("ref-time");
+      var answer = document.getElementById("answer");
+      var answerText = document.getElementById("answer-text");
+      var answerImage = document.getElementById("answer-image");
+      var checked = document.getElementById("checked");
+      var follow = document.getElementById("follow");
+      var followNote = document.getElementById("follow-note");
+      var followBtn = document.getElementById("follow-btn");
+      var followPhoto = document.getElementById("follow-photo");
+      var followPreviews = document.getElementById("follow-previews");
+      var followHint = document.getElementById("follow-hint");
+      var goodBtn = document.getElementById("good-btn");
+      var newBtn = document.getElementById("new-btn");
+      var composeForm = document.getElementById("compose-form");
+
+      var pendingFiles = [];
+      var followFiles = [];
+      var sending = false;
+      var pollTimer = null;
+
+      function getRequestId() {
+        try { return localStorage.getItem(REQUEST_KEY) || ""; } catch (e) { return ""; }
+      }
+      function setRequestId(id) {
+        try {
+          if (id) localStorage.setItem(REQUEST_KEY, id);
+          else localStorage.removeItem(REQUEST_KEY);
+        } catch (e) {}
+        if (!id) setMeta(null);
+      }
+      function getMeta() {
+        try { return JSON.parse(localStorage.getItem(META_KEY) || "null"); } catch (e) { return null; }
+      }
+      function setMeta(obj) {
+        try {
+          if (obj) localStorage.setItem(META_KEY, JSON.stringify(obj));
+          else localStorage.removeItem(META_KEY);
+        } catch (e) {}
+      }
+
+      function setHint(el, msg, isError) {
+        if (!el) return;
+        if (!msg) {
+          el.hidden = true;
+          el.textContent = "";
+          el.classList.remove("is-error");
+          return;
+        }
+        el.hidden = false;
+        el.textContent = msg;
+        el.classList.toggle("is-error", !!isError);
+      }
+
+      function formatET(ms) {
+        var d = (typeof ms === "number" && isFinite(ms) && ms > 0) ? new Date(ms) : new Date();
+        if (isNaN(d.getTime())) d = new Date();
+        try {
+          return new Intl.DateTimeFormat("en-US", {
+            timeZone: "America/New_York",
+            weekday: "short",
+            month: "short",
+            day: "numeric",
+            year: "numeric",
+            hour: "numeric",
+            minute: "2-digit",
+            timeZoneName: "short"
+          }).format(d);
+        } catch (e) {
+          return d.toLocaleString();
+        }
+      }
+
+      function labelFor(status) {
+        status = String(status || "new").toLowerCase();
+        if (status === "working") return "Working";
+        if (status === "ready" || status === "approved") return "Answered";
+        return "Received";
+      }
+      function pillClass(status) {
+        var label = labelFor(status);
+        if (label === "Working") return "pill is-working";
+        if (label === "Answered") return "pill is-answered";
+        return "pill";
+      }
+      function messageFor(status) {
+        var label = labelFor(status);
+        if (label === "Working") return "Jim's team is working on this.";
+        if (label === "Answered") return "Jim's team sent a reply.";
+        return "Received — Jim's team will answer shortly.";
+      }
+
+      function renderPreviews(el, files) {
+        el.innerHTML = "";
+        if (!files.length) { el.hidden = true; return; }
+        el.hidden = false;
+        files.forEach(function (file) {
+          var img = document.createElement("img");
+          img.alt = file.name || "Attached photo";
+          img.src = URL.createObjectURL(file);
+          el.appendChild(img);
+        });
+      }
+      function collectPhotos(input, bucket, previewEl) {
+        var files = Array.prototype.slice.call(input.files || []);
+        files.forEach(function (file) {
+          if (!file.type || file.type.indexOf("image/") !== 0) return;
+          if (bucket.length >= 8) return;
+          bucket.push(file);
+        });
+        input.value = "";
+        renderPreviews(previewEl, bucket);
+      }
+      photoInput.addEventListener("change", function () {
+        collectPhotos(photoInput, pendingFiles, previews);
+      });
+      followPhoto.addEventListener("change", function () {
+        collectPhotos(followPhoto, followFiles, followPreviews);
+      });
+
+      function readPhoto(file) {
+        return new Promise(function (resolve, reject) {
+          var reader = new FileReader();
+          reader.onerror = reject;
+          reader.onload = function () {
+            var img = new Image();
+            img.onload = function () {
+              var max = 1600;
+              var w = img.width, h = img.height;
+              if (w > max || h > max) {
+                var scale = max / Math.max(w, h);
+                w = Math.round(w * scale);
+                h = Math.round(h * scale);
+              }
+              var c = document.createElement("canvas");
+              c.width = w;
+              c.height = h;
+              c.getContext("2d").drawImage(img, 0, 0, w, h);
+              resolve(c.toDataURL("image/jpeg", 0.85));
+            };
+            img.onerror = reject;
+            img.src = reader.result;
+          };
+          reader.readAsDataURL(file);
+        });
+      }
+
+      /* sw-scrollfix-2026-11-20: never hang. If Safari (or a weak connection) blocks or stalls
+         the request, fail after a timeout so the page can show a friendly retry. */
+      function swFetch(url, opts) {
+        var big = opts && typeof opts.body === "string" && opts.body.length > 200000;
+        if (typeof AbortController === "undefined") return fetch(url, opts);
+        var ctl = new AbortController();
+        setTimeout(function () { try { ctl.abort(); } catch (e) {} }, big ? 90000 : 25000);
+        return fetch(url, Object.assign({}, opts, { signal: ctl.signal }));
+      }
+
+      function api(action, fields) {
+        if (!liveUrl()) return Promise.reject(new Error("no url"));
+        var payload = Object.assign({ action: action, key: APP_KEY }, fields || {});
+        return swFetch(SUBMIT_URL, {
+          method: "POST",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify(payload),
+          redirect: "follow"
+        }).then(function (r) {
+          return r.json().catch(function () { return {}; }).then(function (j) {
+            if (!r.ok || j.ok === false) throw new Error(j.error || ("HTTP " + r.status));
+            return j;
+          });
+        });
+      }
+
+      function showCompose() {
+        stopPoll();
+        compose.hidden = false;
+        receipt.hidden = true;
+        note.focus();
+      }
+      function showReceipt() {
+        compose.hidden = true;
+        receipt.hidden = false;
+      }
+
+      function applyReceipt(j) {
+        var id = j.id || getRequestId();
+        var status = j.status || "new";
+        var createdMs = j.createdMs || (getMeta() && getMeta().createdMs) || 0;
+        var meta = {
+          id: id,
+          status: status,
+          createdMs: createdMs,
+          created: j.created || (getMeta() && getMeta().created) || "",
+          summary: j.summary || "",
+          image: j.image || ""
+        };
+        setRequestId(id);
+        setMeta(meta);
+        refId.textContent = id;
+        refTime.textContent = formatET(createdMs);
+        statusPill.textContent = labelFor(status);
+        statusPill.className = pillClass(status);
+        receiptMsg.textContent = messageFor(status);
+        if (labelFor(status) === "Answered" && (meta.summary || meta.image)) {
+          answer.hidden = false;
+          answerText.textContent = meta.summary || "";
+          if (meta.image) {
+            answerImage.hidden = false;
+            answerImage.src = meta.image;
+          } else {
+            answerImage.hidden = true;
+            answerImage.removeAttribute("src");
+          }
+          goodBtn.hidden = (status === "approved");
+        } else {
+          answer.hidden = true;
+          goodBtn.hidden = true;
+        }
+        follow.hidden = false;
+        showReceipt();
+      }
+
+      function stopPoll() {
+        if (pollTimer) { clearInterval(pollTimer); pollTimer = null; }
+      }
+      function startPoll() {
+        stopPoll();
+        if (!liveUrl() || !getRequestId()) return;
+        pollOnce();
+        pollTimer = setInterval(pollOnce, POLL_MS);
+      }
+      function pollOnce() {
+        var id = getRequestId();
+        if (!id || !liveUrl()) return;
+        api("status", { id: id }).then(function (j) {
+          checked.hidden = false;
+          checked.textContent = "Last checked " + formatET(Date.now());
+          applyReceipt(j);
+        }).catch(function () {
+          checked.hidden = false;
+          checked.textContent = "Couldn't refresh just now — I'll try again.";
+        });
+      }
+
+      function send(action, textEl, files, hintEl, btn) {
+        if (sending) return;
+        var text = String(textEl.value || "").trim();
+        if (!text && !files.length) {
+          setHint(hintEl, "Write a note or add a photo first.", true);
+          return;
+        }
+        if (!liveUrl()) {
+          setHint(hintEl, "This page isn't connected yet. Jim will send you the live link when it's ready.", true);
+          return;
+        }
+        sending = true;
+        btn.disabled = true;
+        setHint(hintEl, "Sending…", false);
+        Promise.all(files.map(readPhoto)).then(function (photos) {
+          var fields = { text: text };
+          if (photos.length) fields.photos = photos;
+          if (action === "change") fields.id = getRequestId();
+          return api(action, fields);
+        }).then(function (j) {
+          if (window.swLog) swLog("submitted");
+          sending = false;
+          btn.disabled = false;
+          setHint(hintEl, "", false);
+          textEl.value = "";
+          if (action === "submit") {
+            pendingFiles = [];
+            renderPreviews(previews, pendingFiles);
+          } else {
+            followFiles = [];
+            renderPreviews(followPreviews, followFiles);
+          }
+          applyReceipt(j);
+          startPoll();
+        }).catch(function () {
+          sending = false;
+          btn.disabled = false;
+          setHint(hintEl, "I couldn't send that. Please try again.", true);
+        });
+      }
+
+      composeForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        send("submit", note, pendingFiles, composeHint, sendBtn);
+      });
+      followBtn.addEventListener("click", function () {
+        send("change", followNote, followFiles, followHint, followBtn);
+      });
+      if (note) {
+        note.addEventListener("input", function () {
+          if (note.value.trim() && window.swLog) swLog("reply_started");
+        });
+      }
+      if (followNote) {
+        followNote.addEventListener("input", function () {
+          if (followNote.value.trim() && window.swLog) swLog("reply_started");
+        });
+      }
+      goodBtn.addEventListener("click", function () {
+        var id = getRequestId();
+        if (!id || !liveUrl()) return;
+        goodBtn.disabled = true;
+        api("approve", { id: id }).then(function (j) {
+          goodBtn.disabled = false;
+          applyReceipt(Object.assign({}, getMeta() || {}, j, { status: "approved" }));
+        }).catch(function () {
+          goodBtn.disabled = false;
+          setHint(followHint, "I couldn't save that. Please try again.", true);
+        });
+      });
+      newBtn.addEventListener("click", function () {
+        stopPoll();
+        setRequestId("");
+        pendingFiles = [];
+        followFiles = [];
+        renderPreviews(previews, pendingFiles);
+        renderPreviews(followPreviews, followFiles);
+        note.value = "";
+        followNote.value = "";
+        setHint(composeHint, "", false);
+        setHint(followHint, "", false);
+        showCompose();
+      });
+
+      var existing = getRequestId();
+      if (existing) {
+        var meta = getMeta() || { id: existing, status: "new", createdMs: 0 };
+        applyReceipt(meta);
+        startPoll();
+      } else {
+        showCompose();
+      }
+    })();
+  </script>
+  <script>
+    window.SW_ENGAGEMENT = {
+      url: "https://script.google.com/macros/s/AKfycbxfpzhcEMOe9N7ZnR9-9wCls10IWkyVtjQ9-1z72g52Df_Pl9gvCYppLCsIUO6EsVqb/exec",
+      key: "fHzBG7o0ldvqUmahLsCItPYLtSn1PxVa",
+      page: "stan",
+      slug: "stan-rtdg72vlrvmh"
+    };
+  </script>
+  <script>
+(function () {
+  var cfg = window.SW_ENGAGEMENT || {};
+  var URL = cfg.url || "";
+  var KEY = cfg.key || "";
+  var PAGE = cfg.page || "";
+  var SLUG = cfg.slug || "";
+  var ALLOWED = {
+    open: 1,
+    welcome_seen: 1,
+    reply_started: 1,
+    talk_started: 1,
+    submitted: 1,
+    notification_tapped: 1
+  };
+  var sent = {};
+
+  function deviceId() {
+    var id = "";
+    try { id = localStorage.getItem("swDeviceId") || ""; } catch (e) {}
+    if (!id) {
+      if (window.crypto && crypto.randomUUID) id = crypto.randomUUID();
+      else id = "d" + Date.now().toString(36) + Math.random().toString(36).slice(2, 12);
+      try { localStorage.setItem("swDeviceId", id); } catch (e) {}
+    }
+    return id;
+  }
+
+  function uaFamily() {
+    var ua = navigator.userAgent || "";
+    if (/iPhone|iPad|iPod/.test(ua)) {
+      if (/CriOS/.test(ua)) return "Chrome iOS";
+      if (/FxiOS/.test(ua)) return "Firefox iOS";
+      return "Safari iOS";
+    }
+    if (/Android/.test(ua)) {
+      if (/Chrome/.test(ua)) return "Chrome Android";
+      if (/Firefox/.test(ua)) return "Firefox Android";
+      return "Android";
+    }
+    if (/Mac OS X/.test(ua) && /Safari/.test(ua) && !/Chrome|Chromium|Edg/.test(ua)) return "Safari macOS";
+    if (/Edg/.test(ua)) return "Edge";
+    if (/Chrome|Chromium/.test(ua)) return "Chrome";
+    if (/Firefox/.test(ua)) return "Firefox";
+    return "Other";
+  }
+
+  function swLog(event, onceKey) {
+    if (!URL || !KEY || !PAGE || !ALLOWED[event]) return;
+    var dedupe = onceKey || event;
+    if (event === "reply_started" || event === "talk_started") {
+      if (sent[event] || sent.reply_started || sent.talk_started) return;
+    }
+    if (onceKey && sent[dedupe]) return;
+    sent[dedupe] = 1;
+    var slug = SLUG;
+    try {
+      if (new URLSearchParams(location.search).get("selftest") === "1") {
+        slug = SLUG ? SLUG + "__selftest" : "selftest";
+      }
+    } catch (e) {}
+    var body = JSON.stringify({
+      key: KEY,
+      action: "log",
+      page: PAGE,
+      slug: slug,
+      event: event,
+      time: new Date().toISOString(),
+      device: deviceId(),
+      ua: uaFamily()
+    });
+    try {
+      var blob = new Blob([body], { type: "text/plain;charset=utf-8" });
+      if (navigator.sendBeacon && navigator.sendBeacon(URL, blob)) return;
+    } catch (e) {}
+    try {
+      fetch(URL, {
+        method: "POST",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: body,
+        keepalive: true,
+        mode: "no-cors"
+      }).catch(function () {});
+    } catch (e) {}
+  }
+
+  window.swLog = swLog;
+
+  function boot() {
+    try {
+      var q = new URLSearchParams(location.search);
+      if (q.get("src") === "push" || q.get("from") === "notification") swLog("notification_tapped");
+    } catch (e) {}
+    swLog("open");
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
+  else boot();
+})();
+  </script>
+</body>
+</html>
